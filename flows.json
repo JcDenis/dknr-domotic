@@ -1,0 +1,2763 @@
+[
+    {
+        "id": "4bc72a1112cb448c",
+        "type": "tab",
+        "label": "common",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3300684acfa472e7",
+        "type": "tab",
+        "label": "custom",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f822aa69af66c546",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "name": "common - home uri",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "025edbd02daf82d0",
+            "e121bb6441bf21e5"
+        ],
+        "x": 94,
+        "y": 159,
+        "w": 332,
+        "h": 82
+    },
+    {
+        "id": "bcc6f36c217d1643",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "name": "common - boot",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "123b4b73d0bba710",
+            "92c098c716e46e3b",
+            "b5b1483216d0643f",
+            "17190d960ca5617d",
+            "414b65f261e6840e",
+            "0d8b82affc70a074",
+            "667f445784d1b506"
+        ],
+        "x": 94,
+        "y": 39,
+        "w": 1182,
+        "h": 82
+    },
+    {
+        "id": "d15289b1932a175e",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "name": "common - ui - mqtt",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "84741ff9d386b4bb",
+            "6483959a5e73553e",
+            "490f552ee626deb7",
+            "d9dbb31a0ba1e2a5",
+            "df19be1275e79b1c",
+            "f2cd63b49ac325ec"
+        ],
+        "x": 84,
+        "y": 939,
+        "w": 872,
+        "h": 82
+    },
+    {
+        "id": "9e3dbf7ae870765f",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "name": "common - mqtt",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "4f8fb9f9243e9939",
+            "8704b93076a73d7e",
+            "b42653048b3f39e8",
+            "3fa36de74a10eac1",
+            "f60de1529c423dee",
+            "f3c41b2acb15c9ea"
+        ],
+        "x": 84,
+        "y": 399,
+        "w": 502,
+        "h": 142
+    },
+    {
+        "id": "671369a42a9b2d5c",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "name": "common - error",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "f4a2353e5f92576c",
+            "fecaee88b8c296ed",
+            "7f15feb966b47505"
+        ],
+        "x": 84,
+        "y": 579,
+        "w": 462,
+        "h": 82
+    },
+    {
+        "id": "614d71e9e019ca82",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "name": "common - ui",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "bbb6fa5ec8070fb8",
+            "911bbe32f79bec46",
+            "289e0a6cd1209c38",
+            "65a2ca5851a2cd55",
+            "708d9f4bfa95d31c",
+            "6f2775829158f825",
+            "f84d8d1314a94a72",
+            "5c9bfdd80f490de0",
+            "ab044268dd81617b",
+            "9191b0ffe980eb70"
+        ],
+        "x": 84,
+        "y": 699,
+        "w": 1092,
+        "h": 202
+    },
+    {
+        "id": "d0a23054ca93b1fb",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "name": "common - icon uri",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "306b2fee3a4b886d",
+            "80538c5af3c6a70b",
+            "3ed31290426faddb",
+            "fe3a87fa930d465d",
+            "37ef0dacd1f0e952"
+        ],
+        "x": 94,
+        "y": 279,
+        "w": 852,
+        "h": 82
+    },
+    {
+        "id": "80eb56db05239272",
+        "type": "group",
+        "z": "3300684acfa472e7",
+        "name": "custom - add",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "b9e756ce9dd6756f",
+            "bf39d2a0b6757d31",
+            "8e74082b23e26d09",
+            "f9e9e9dd56fec255",
+            "e15a1f4c9b2ebe8f",
+            "efbab03f220791d4",
+            "5d415007badd7b01"
+        ],
+        "x": 84,
+        "y": 519,
+        "w": 872,
+        "h": 142
+    },
+    {
+        "id": "f880574ac1875493",
+        "type": "group",
+        "z": "3300684acfa472e7",
+        "name": "custom - port",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "335a816d8663d573",
+            "cd522600a32e953e",
+            "3538a60e6e05ade1",
+            "d82deb0a07d618ee",
+            "0bf80703420c701e"
+        ],
+        "x": 94,
+        "y": 279,
+        "w": 432,
+        "h": 202
+    },
+    {
+        "id": "6b4c2dd3f5df77bd",
+        "type": "group",
+        "z": "3300684acfa472e7",
+        "name": "custom - detail",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "01346f67f027524a",
+            "550fd37cdd043e4d",
+            "46d41095c9cd81bb",
+            "da2b76d325ab019b",
+            "cf1550b97074514c",
+            "2cd010eee2da8e29",
+            "15d854d30f0a7418",
+            "7b29ddeea0bf459b",
+            "be9df446e8994af5",
+            "bc17c08e18a403b2",
+            "c03d7fe0c37957cf",
+            "c158788b3b968b34",
+            "263e38e78c31cbec",
+            "91dbd54711396594",
+            "f2ba5712ec8cd4b1",
+            "3fe540fa0313af8e",
+            "f7d3e7cde4634e66",
+            "775ce16511f819d8",
+            "84750319a3a2463b",
+            "9c745b2a8599abf3",
+            "f7441e7b64e4cea3",
+            "7d8de98aa71ecc40",
+            "8c1baae83dae667e",
+            "31b7a11ce646deba",
+            "0a26b25c7f5f0f97",
+            "9f279216041658c7",
+            "da492ba229cc3b36"
+        ],
+        "x": 84,
+        "y": 699,
+        "w": 2282,
+        "h": 442
+    },
+    {
+        "id": "a94f12143daa85b5",
+        "type": "group",
+        "z": "3300684acfa472e7",
+        "name": "custom - describe",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "e9a41625a93563f2",
+            "6f5df9d670b9906d",
+            "e25fbb1e61c21f99"
+        ],
+        "x": 84,
+        "y": 39,
+        "w": 412,
+        "h": 82
+    },
+    {
+        "id": "274931f4309b3257",
+        "type": "group",
+        "z": "3300684acfa472e7",
+        "name": "custom - menu",
+        "style": {
+            "stroke": "#6f2fa0",
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "70fa44d509342200",
+            "43663518deccb7c6",
+            "4841db186251fd55"
+        ],
+        "x": 84,
+        "y": 159,
+        "w": 392,
+        "h": 82
+    },
+    {
+        "id": "df7710b4b2c4e55b",
+        "type": "ui-base",
+        "name": "Tableau de bord",
+        "path": "/dashboard",
+        "appIcon": "/icon.png",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "none",
+        "navigationStyle": "none",
+        "titleBarStyle": "hidden",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "877e716e64a22cf1",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "f89655b525aee8cd",
+        "type": "ui-page",
+        "name": "detail",
+        "ui": "df7710b4b2c4e55b",
+        "path": "/",
+        "icon": "eye",
+        "layout": "notebook",
+        "theme": "877e716e64a22cf1",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "2c5e094fee5ae877",
+        "type": "mqtt-broker",
+        "name": "MQTT",
+        "broker": "192.168.0.11",
+        "port": "1883",
+        "clientid": "dkapsystems",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "8d032322dc675ac9",
+        "type": "ui-group",
+        "name": "Surveiller un onduleur",
+        "page": "f89655b525aee8cd",
+        "width": "6",
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "d6545e4541a63e3f",
+        "type": "ui-spacer",
+        "group": "8d032322dc675ac9",
+        "name": "spacer",
+        "tooltip": "",
+        "order": 5,
+        "width": "6",
+        "height": 1,
+        "className": ""
+    },
+    {
+        "id": "eb362ef870a0b497",
+        "type": "ui-spacer",
+        "group": "8d032322dc675ac9",
+        "name": "spacer",
+        "tooltip": "",
+        "order": 7,
+        "width": "6",
+        "height": 1,
+        "className": ""
+    },
+    {
+        "id": "7397e2af04d99987",
+        "type": "ui-spacer",
+        "group": "8d032322dc675ac9",
+        "name": "spacer",
+        "tooltip": "",
+        "order": 2,
+        "width": "6",
+        "height": 1,
+        "className": ""
+    },
+    {
+        "id": "c67d7082a37bfbe3",
+        "type": "ui-spacer",
+        "group": "8d032322dc675ac9",
+        "name": "spacer",
+        "tooltip": "",
+        "order": 10,
+        "width": "6",
+        "height": 1,
+        "className": ""
+    },
+    {
+        "id": "f68fd9f4a1f67eea",
+        "type": "ui-page",
+        "name": "add",
+        "ui": "df7710b4b2c4e55b",
+        "path": "/add",
+        "icon": "plus",
+        "layout": "notebook",
+        "theme": "877e716e64a22cf1",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "f081fa7a92c9aeb7",
+        "type": "ui-page",
+        "name": "mqtt",
+        "ui": "df7710b4b2c4e55b",
+        "path": "/mqtt",
+        "icon": "cog",
+        "layout": "notebook",
+        "theme": "877e716e64a22cf1",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 3,
+        "className": "",
+        "visible": true,
+        "disabled": false
+    },
+    {
+        "id": "4c116fe2697e0aa9",
+        "type": "ui-group",
+        "name": "Configurer MQTT",
+        "page": "f081fa7a92c9aeb7",
+        "width": "3",
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "c8d7c7ef32d2e43c",
+        "type": "ui-group",
+        "name": "Ajouter un onduleur",
+        "page": "f68fd9f4a1f67eea",
+        "width": "3",
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "025edbd02daf82d0",
+        "type": "http response",
+        "z": "4bc72a1112cb448c",
+        "g": "f822aa69af66c546",
+        "name": "",
+        "statusCode": "307",
+        "headers": {
+            "Location": "/dashboard"
+        },
+        "x": 340,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "e121bb6441bf21e5",
+        "type": "http in",
+        "z": "4bc72a1112cb448c",
+        "g": "f822aa69af66c546",
+        "name": "",
+        "url": "/",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 200,
+        "wires": [
+            [
+                "025edbd02daf82d0"
+            ]
+        ]
+    },
+    {
+        "id": "4f8fb9f9243e9939",
+        "type": "mqtt out",
+        "z": "4bc72a1112cb448c",
+        "g": "9e3dbf7ae870765f",
+        "name": "mqtt",
+        "topic": "",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "2c5e094fee5ae877",
+        "x": 430,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "8704b93076a73d7e",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "9e3dbf7ae870765f",
+        "name": "common - mqtt - send",
+        "links": [
+            "0bf80703420c701e"
+        ],
+        "x": 125,
+        "y": 500,
+        "wires": [
+            [
+                "b42653048b3f39e8"
+            ]
+        ]
+    },
+    {
+        "id": "f4a2353e5f92576c",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "671369a42a9b2d5c",
+        "name": "ui - display error",
+        "links": [
+            "92c098c716e46e3b",
+            "5d415007badd7b01"
+        ],
+        "x": 125,
+        "y": 620,
+        "wires": [
+            [
+                "7f15feb966b47505"
+            ]
+        ]
+    },
+    {
+        "id": "123b4b73d0bba710",
+        "type": "inject",
+        "z": "4bc72a1112cb448c",
+        "g": "bcc6f36c217d1643",
+        "name": "boot",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.5",
+        "topic": "",
+        "payload": "{}",
+        "payloadType": "jsonata",
+        "x": 190,
+        "y": 80,
+        "wires": [
+            [
+                "0d8b82affc70a074"
+            ]
+        ]
+    },
+    {
+        "id": "92c098c716e46e3b",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "bcc6f36c217d1643",
+        "name": "common - boot",
+        "mode": "link",
+        "links": [
+            "3fa36de74a10eac1",
+            "550fd37cdd043e4d",
+            "b9e756ce9dd6756f",
+            "df19be1275e79b1c",
+            "f4a2353e5f92576c"
+        ],
+        "x": 1235,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "84741ff9d386b4bb",
+        "type": "change",
+        "z": "4bc72a1112cb448c",
+        "g": "d15289b1932a175e",
+        "name": "read",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "mqtt",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 250,
+        "y": 980,
+        "wires": [
+            [
+                "d9dbb31a0ba1e2a5"
+            ]
+        ]
+    },
+    {
+        "id": "6483959a5e73553e",
+        "type": "change",
+        "z": "4bc72a1112cb448c",
+        "g": "d15289b1932a175e",
+        "name": "write",
+        "rules": [
+            {
+                "t": "set",
+                "p": "mqtt",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 980,
+        "wires": [
+            [
+                "490f552ee626deb7"
+            ]
+        ]
+    },
+    {
+        "id": "490f552ee626deb7",
+        "type": "delay",
+        "z": "4bc72a1112cb448c",
+        "g": "d15289b1932a175e",
+        "name": "50ms",
+        "pauseType": "delay",
+        "timeout": "50",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 790,
+        "y": 980,
+        "wires": [
+            [
+                "f2cd63b49ac325ec"
+            ]
+        ]
+    },
+    {
+        "id": "b42653048b3f39e8",
+        "type": "switch",
+        "z": "4bc72a1112cb448c",
+        "g": "9e3dbf7ae870765f",
+        "name": "enabled",
+        "property": "mqtt.enabled",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 260,
+        "y": 500,
+        "wires": [
+            [
+                "4f8fb9f9243e9939",
+                "f3c41b2acb15c9ea"
+            ]
+        ]
+    },
+    {
+        "id": "d9dbb31a0ba1e2a5",
+        "type": "ui-form",
+        "z": "4bc72a1112cb448c",
+        "g": "d15289b1932a175e",
+        "name": "ui - mqtt - form",
+        "group": "4c116fe2697e0aa9",
+        "label": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Adreese IP du broker",
+                "key": "host",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Port",
+                "key": "port",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Topic",
+                "key": "topic",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Utilisateur",
+                "key": "username",
+                "type": "text",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "Mot de passe",
+                "key": "password",
+                "type": "password",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "Activation",
+                "key": "enabled",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "host": "",
+            "port": "",
+            "topic": "",
+            "username": "",
+            "password": "",
+            "enabled": false
+        },
+        "payload": "",
+        "submit": "Enregistrer",
+        "cancel": "",
+        "resetOnSubmit": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": false,
+        "className": "",
+        "passthru": false,
+        "dropdownOptions": [],
+        "x": 440,
+        "y": 980,
+        "wires": [
+            [
+                "6483959a5e73553e"
+            ]
+        ]
+    },
+    {
+        "id": "df19be1275e79b1c",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "d15289b1932a175e",
+        "name": "ui - mqtt - settings",
+        "links": [
+            "92c098c716e46e3b",
+            "f2cd63b49ac325ec",
+            "911bbe32f79bec46"
+        ],
+        "x": 125,
+        "y": 980,
+        "wires": [
+            [
+                "84741ff9d386b4bb"
+            ]
+        ]
+    },
+    {
+        "id": "f2cd63b49ac325ec",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "d15289b1932a175e",
+        "name": "ui - mqtt - settings",
+        "mode": "link",
+        "links": [
+            "3fa36de74a10eac1",
+            "df19be1275e79b1c"
+        ],
+        "x": 915,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "3fa36de74a10eac1",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "9e3dbf7ae870765f",
+        "name": "common - mqtt - settings",
+        "links": [
+            "92c098c716e46e3b",
+            "f2cd63b49ac325ec"
+        ],
+        "x": 125,
+        "y": 440,
+        "wires": [
+            [
+                "f60de1529c423dee"
+            ]
+        ]
+    },
+    {
+        "id": "f60de1529c423dee",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "9e3dbf7ae870765f",
+        "name": "check",
+        "func": "msg.broker = {};\n\nlet mqtt = global.get('mqtt', 'default');\nif (typeof mqtt == 'object' && mqtt.enabled == true) {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.topic.length > 0\n    ) {\n        msg.broker.broker = mqtt.host;\n        msg.broker.port = mqtt.port;\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.broker.force = true;\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        return msg;\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'default');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n}\n\nmsg.action = 'disconnect';\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 250,
+        "y": 440,
+        "wires": [
+            [
+                "4f8fb9f9243e9939"
+            ]
+        ]
+    },
+    {
+        "id": "bbb6fa5ec8070fb8",
+        "type": "ui-control",
+        "z": "4bc72a1112cb448c",
+        "g": "614d71e9e019ca82",
+        "name": "common - ui - control",
+        "ui": "df7710b4b2c4e55b",
+        "events": "all",
+        "x": 300,
+        "y": 860,
+        "wires": [
+            [
+                "9191b0ffe980eb70"
+            ]
+        ]
+    },
+    {
+        "id": "911bbe32f79bec46",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "614d71e9e019ca82",
+        "name": "ui - control",
+        "mode": "link",
+        "links": [
+            "df19be1275e79b1c",
+            "b9e756ce9dd6756f"
+        ],
+        "x": 1135,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "289e0a6cd1209c38",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "614d71e9e019ca82",
+        "name": "ui - control",
+        "links": [],
+        "x": 125,
+        "y": 860,
+        "wires": [
+            [
+                "bbb6fa5ec8070fb8"
+            ]
+        ]
+    },
+    {
+        "id": "fecaee88b8c296ed",
+        "type": "ui-notification",
+        "z": "4bc72a1112cb448c",
+        "g": "671369a42a9b2d5c",
+        "ui": "df7710b4b2c4e55b",
+        "position": "top center",
+        "colorDefault": true,
+        "color": "#000000",
+        "displayTime": "3",
+        "showCountdown": true,
+        "outputs": 1,
+        "allowDismiss": true,
+        "dismissText": "Close",
+        "allowConfirm": false,
+        "confirmText": "Confirm",
+        "raw": false,
+        "className": "",
+        "name": "common - error",
+        "x": 440,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7f15feb966b47505",
+        "type": "switch",
+        "z": "4bc72a1112cb448c",
+        "g": "671369a42a9b2d5c",
+        "name": "empty",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 250,
+        "y": 620,
+        "wires": [
+            [
+                "fecaee88b8c296ed"
+            ]
+        ]
+    },
+    {
+        "id": "b5b1483216d0643f",
+        "type": "file in",
+        "z": "4bc72a1112cb448c",
+        "g": "bcc6f36c217d1643",
+        "name": "read project",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 770,
+        "y": 80,
+        "wires": [
+            [
+                "17190d960ca5617d"
+            ]
+        ]
+    },
+    {
+        "id": "17190d960ca5617d",
+        "type": "json",
+        "z": "4bc72a1112cb448c",
+        "g": "bcc6f36c217d1643",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 950,
+        "y": 80,
+        "wires": [
+            [
+                "414b65f261e6840e"
+            ]
+        ]
+    },
+    {
+        "id": "414b65f261e6840e",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "bcc6f36c217d1643",
+        "name": "app",
+        "func": "delete msg.filename;\n\nif (typeof msg.payload === 'object') {\n    let describe = global.get('describe', 'memoryOnly') || {};\n    describe.app = {\n        'title': msg.payload.description,\n        'version' : msg.payload.version,\n        'git': msg.payload.name\n    };\n    global.set('describe', describe, 'memoryOnly');\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 80,
+        "wires": [
+            [
+                "92c098c716e46e3b"
+            ]
+        ]
+    },
+    {
+        "id": "306b2fee3a4b886d",
+        "type": "file in",
+        "z": "4bc72a1112cb448c",
+        "g": "d0a23054ca93b1fb",
+        "name": "icon",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 530,
+        "y": 320,
+        "wires": [
+            [
+                "fe3a87fa930d465d"
+            ]
+        ]
+    },
+    {
+        "id": "80538c5af3c6a70b",
+        "type": "http in",
+        "z": "4bc72a1112cb448c",
+        "g": "d0a23054ca93b1fb",
+        "name": "",
+        "url": "/icon.png",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 320,
+        "wires": [
+            [
+                "3ed31290426faddb"
+            ]
+        ]
+    },
+    {
+        "id": "3ed31290426faddb",
+        "type": "change",
+        "z": "4bc72a1112cb448c",
+        "g": "d0a23054ca93b1fb",
+        "name": "file",
+        "rules": [
+            {
+                "t": "set",
+                "p": "filename",
+                "pt": "msg",
+                "to": "'/data/admin.png'",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 320,
+        "wires": [
+            [
+                "306b2fee3a4b886d"
+            ]
+        ]
+    },
+    {
+        "id": "fe3a87fa930d465d",
+        "type": "change",
+        "z": "4bc72a1112cb448c",
+        "g": "d0a23054ca93b1fb",
+        "name": "response",
+        "rules": [
+            {
+                "t": "set",
+                "p": "statusCode",
+                "pt": "msg",
+                "to": "200",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "buffersize",
+                "pt": "msg",
+                "to": "msg.payload.length",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{\t    'Content-Type':'image/png',\t    'Content-Length':msg.buffersize,\t    'Connection':'close'\t}",
+                "tot": "jsonata"
+            },
+            {
+                "t": "delete",
+                "p": "filename",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 320,
+        "wires": [
+            [
+                "37ef0dacd1f0e952"
+            ]
+        ]
+    },
+    {
+        "id": "37ef0dacd1f0e952",
+        "type": "http response",
+        "z": "4bc72a1112cb448c",
+        "g": "d0a23054ca93b1fb",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 870,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "65a2ca5851a2cd55",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "614d71e9e019ca82",
+        "name": "tab",
+        "func": "if (msg.payload !== '' && typeof global.get('describe.hmi[\"' + msg.payload + '\"]', 'memoryOnly') === 'string') {\n    msg.tab = msg.payload;\n    msg.name = global.get('describe.hmi[\"' + msg.payload + '\"]', 'memoryOnly');\n    msg.payload = 'change';\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 800,
+        "wires": [
+            [
+                "708d9f4bfa95d31c"
+            ]
+        ]
+    },
+    {
+        "id": "708d9f4bfa95d31c",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "614d71e9e019ca82",
+        "name": "action",
+        "func": "// on unwanted state, stop here\nif (msg.payload.match((new RegExp('^(connect|change|lost)$'))) === null) {\n    return;\n}\n\n// on connect or lost connection, go to auth page\nif (msg.payload === 'connect' || msg.payload === 'lost') {\n    msg.payload = global.get('describe.app.hmi', 'memoryOnly');;\n\n    return [null, msg];\n}\n\n// ui main\nmsg.version = global.get('describe.app.version', 'memoryOnly');\nmsg.title = global.get('describe.app.title', 'memoryOnly');\nmsg.full = msg.title + ' v' + msg.version;\nmsg.git = \"https://github.com/JcDenis/\" + global.get('describe.app.git', 'memoryOnly');\nmsg.lang = 'FR-fr';\n\n// ui menu\nmsg.menus = {};\nmsg.titles = {};\nmsg.payload = {\n    'pages': {\n        'show': [],\n        'hide': []\n    }\n};\nlet s =0;\nlet pages = global.get('describe.hmi', 'memoryOnly') || {};\nfor (const tab in pages) {\n    msg.menus[tab] = true;\n    msg.titles[tab] = pages[tab];\n    msg.payload.pages.show[s++] = tab;\n\n    if (tab === msg.tab) {\n        msg.title = msg.title + ' - ' + pages[tab];\n    }\n}\n\nreturn [msg, null];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 860,
+        "wires": [
+            [
+                "f84d8d1314a94a72",
+                "5c9bfdd80f490de0"
+            ],
+            [
+                "bbb6fa5ec8070fb8"
+            ]
+        ]
+    },
+    {
+        "id": "6f2775829158f825",
+        "type": "ui-template",
+        "z": "4bc72a1112cb448c",
+        "g": "614d71e9e019ca82",
+        "group": "",
+        "page": "",
+        "ui": "df7710b4b2c4e55b",
+        "name": "common - ui - style",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": ".v-card .remove,\n.v-card-text .remove {\n    display: none !important;\n    visibility: hidden;\n    color: transparent !important;\n}\n\n.v-table__wrapper table thead {\n    display: none !important;\n}\ntbody td[data-column-key=lbl] {\n    font-weight: bold !important;\n}\n\n.v-tab-item--selected {\n    color: #0094ce !important;\n}\n\n.v-main {\n    padding-bottom: 2em;\n}\n#app-bar-actions img {\n    margin-right: 20px;\n}\n.ui-title span {\n    font-size: 1.4rem !important;\n    font-weight: normal !important;\n    padding: 0;\n    color: #0094ce;\n}\n\n.nrdb-ui-group {\n    border-radius: 4px;\n    box-shadow: 3px 2px 2px rgba(0, 55, 77, 0.25);\n}\n.oe_nav {\n    background: rgb(var(--v-theme-navigation-background));\n}\n#oe_header {\n    border: none;\n    padding-left: 1em;\n    background: rgb(var(--v-theme-navigation-background));\n}\n.v-application {\n    border-top: 1px solid #CCCCCC;\n    margin-top: -1px;\n}",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "site:style",
+        "className": "",
+        "x": 290,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f84d8d1314a94a72",
+        "type": "delay",
+        "z": "4bc72a1112cb448c",
+        "g": "614d71e9e019ca82",
+        "name": "50ms",
+        "pauseType": "delay",
+        "timeout": "50",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1010,
+        "y": 860,
+        "wires": [
+            [
+                "911bbe32f79bec46"
+            ]
+        ]
+    },
+    {
+        "id": "0d8b82affc70a074",
+        "type": "link call",
+        "z": "4bc72a1112cb448c",
+        "g": "bcc6f36c217d1643",
+        "name": "",
+        "links": [
+            "e9a41625a93563f2"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 390,
+        "y": 80,
+        "wires": [
+            [
+                "667f445784d1b506"
+            ]
+        ]
+    },
+    {
+        "id": "667f445784d1b506",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "bcc6f36c217d1643",
+        "name": "check",
+        "func": "if (typeof msg.payload !== 'object' ||\n    typeof msg.payload.hmi !== 'object' ||\n    typeof msg.payload.project !== 'string'\n) {\n    return;\n}\n\nmsg.filename = '/data/projects/' + msg.payload.project + '/package.json'\n\nmsg.payload.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\nglobal.set('describe', msg.payload, 'memoryOnly');\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 80,
+        "wires": [
+            [
+                "b5b1483216d0643f"
+            ]
+        ]
+    },
+    {
+        "id": "5c9bfdd80f490de0",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "614d71e9e019ca82",
+        "name": "common - ui - custom",
+        "mode": "link",
+        "links": [
+            "70fa44d509342200"
+        ],
+        "x": 975,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "ab044268dd81617b",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "614d71e9e019ca82",
+        "name": "common - ui - custom",
+        "links": [
+            "43663518deccb7c6"
+        ],
+        "x": 125,
+        "y": 800,
+        "wires": [
+            [
+                "65a2ca5851a2cd55",
+                "bbb6fa5ec8070fb8"
+            ]
+        ]
+    },
+    {
+        "id": "9191b0ffe980eb70",
+        "type": "change",
+        "z": "4bc72a1112cb448c",
+        "g": "614d71e9e019ca82",
+        "name": "payload",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "name",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 860,
+        "wires": [
+            [
+                "65a2ca5851a2cd55"
+            ]
+        ]
+    },
+    {
+        "id": "f3c41b2acb15c9ea",
+        "type": "debug",
+        "z": "4bc72a1112cb448c",
+        "g": "9e3dbf7ae870765f",
+        "name": "common - mqtt",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "b9e756ce9dd6756f",
+        "type": "link in",
+        "z": "3300684acfa472e7",
+        "g": "80eb56db05239272",
+        "name": "ui - add",
+        "links": [
+            "911bbe32f79bec46",
+            "92c098c716e46e3b",
+            "8e74082b23e26d09",
+            "5d415007badd7b01"
+        ],
+        "x": 125,
+        "y": 560,
+        "wires": [
+            [
+                "e15a1f4c9b2ebe8f"
+            ]
+        ]
+    },
+    {
+        "id": "bf39d2a0b6757d31",
+        "type": "ui-form",
+        "z": "3300684acfa472e7",
+        "g": "80eb56db05239272",
+        "name": "custom - add - form",
+        "group": "c8d7c7ef32d2e43c",
+        "label": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Modèle",
+                "key": "model",
+                "type": "dropdown",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Nom",
+                "key": "name",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Emplacement",
+                "key": "location",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "IP",
+                "key": "host",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Port",
+                "key": "port",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "model": "",
+            "name": "",
+            "location": "",
+            "host": "",
+            "port": ""
+        },
+        "payload": "",
+        "submit": "Ajouter",
+        "cancel": "",
+        "resetOnSubmit": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "passthru": false,
+        "dropdownOptions": [
+            {
+                "dropdown": "model",
+                "value": "ECU-B",
+                "label": "ECU-B"
+            },
+            {
+                "dropdown": "model",
+                "value": "ECU-R",
+                "label": "ECU-R"
+            },
+            {
+                "dropdown": "model",
+                "value": "ECU-C",
+                "label": "ECU-C"
+            }
+        ],
+        "x": 450,
+        "y": 560,
+        "wires": [
+            [
+                "efbab03f220791d4"
+            ]
+        ]
+    },
+    {
+        "id": "8e74082b23e26d09",
+        "type": "link out",
+        "z": "3300684acfa472e7",
+        "g": "80eb56db05239272",
+        "name": "custom - add",
+        "mode": "link",
+        "links": [
+            "b9e756ce9dd6756f"
+        ],
+        "x": 915,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "f9e9e9dd56fec255",
+        "type": "delay",
+        "z": "3300684acfa472e7",
+        "g": "80eb56db05239272",
+        "name": "50ms",
+        "pauseType": "delay",
+        "timeout": "50",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 790,
+        "y": 560,
+        "wires": [
+            [
+                "8e74082b23e26d09"
+            ]
+        ]
+    },
+    {
+        "id": "e15a1f4c9b2ebe8f",
+        "type": "function",
+        "z": "3300684acfa472e7",
+        "g": "80eb56db05239272",
+        "name": "default",
+        "func": "let units = global.get('units', 'default') || {};\nlet size = Object.keys(units).length;\nif (size < 2) {\n    msg.class = '';\n    msg.enabled = true;\n    msg.payload = {\n        'model': 'ECU-C',\n        'name': 'ECU_' + size,\n        'location': 'Maison',\n        'host': '192.168.0.101',\n        'port': '8899'\n    }\n} else {\n    msg.class = 'remove';\n    msg.enabled = false;\n    msg.payload = {};\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 250,
+        "y": 560,
+        "wires": [
+            [
+                "bf39d2a0b6757d31"
+            ]
+        ]
+    },
+    {
+        "id": "efbab03f220791d4",
+        "type": "function",
+        "z": "3300684acfa472e7",
+        "g": "80eb56db05239272",
+        "name": "check",
+        "func": "let units = global.get('units', 'default') || {};\nif (typeof units[msg.payload.host] === 'object') {\n    msg.payload = 'Cet élément est déjà configuré'\n    node.send([null, msg]);\n} else if (msg.payload.name !== ' ' && msg.payload.location !== ' ' && msg.payload.host !== ' ' && msg.payload.port !== ' ') {\n    units[msg.payload.host] = msg.payload;\n    global.set('units', units, 'default');\n    node.send([msg, null]);\n}\n\nreturn;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 560,
+        "wires": [
+            [
+                "f9e9e9dd56fec255"
+            ],
+            [
+                "5d415007badd7b01"
+            ]
+        ]
+    },
+    {
+        "id": "5d415007badd7b01",
+        "type": "link out",
+        "z": "3300684acfa472e7",
+        "g": "80eb56db05239272",
+        "name": "custom - add - error",
+        "mode": "link",
+        "links": [
+            "b9e756ce9dd6756f",
+            "f4a2353e5f92576c"
+        ],
+        "x": 755,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "335a816d8663d573",
+        "type": "cronplus",
+        "z": "3300684acfa472e7",
+        "g": "f880574ac1875493",
+        "name": "5m",
+        "outputField": "payload",
+        "timeZone": "",
+        "storeName": "",
+        "commandResponseMsgOutput": "output1",
+        "defaultLocation": "",
+        "defaultLocationType": "default",
+        "outputs": 1,
+        "options": [
+            {
+                "name": "schedule1",
+                "topic": "gate",
+                "payloadType": "default",
+                "payload": "",
+                "expressionType": "cron",
+                "expression": "0 0,5,10,15,20,25,30,35,40,45,50,55 * * * *",
+                "location": "",
+                "offset": "0",
+                "solarType": "all",
+                "solarEvents": "sunrise,sunset"
+            }
+        ],
+        "x": 190,
+        "y": 320,
+        "wires": [
+            [
+                "3538a60e6e05ade1"
+            ]
+        ]
+    },
+    {
+        "id": "cd522600a32e953e",
+        "type": "debug",
+        "z": "3300684acfa472e7",
+        "g": "f880574ac1875493",
+        "name": "custom - port",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 410,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "3538a60e6e05ade1",
+        "type": "function",
+        "z": "3300684acfa472e7",
+        "g": "f880574ac1875493",
+        "name": "parse buffer",
+        "func": "function apsError(start) {\n    node.status('Error start at: ' + start);\n    throw new Error(`Données insuffisantes à la position ${start}`);\n}\n\nfunction apsStr(buffer, start, amount) {\n    if ((start + amount) > buffer.length) apsError(start);\n\n    return buffer.subarray(start, start + amount).toString('utf8');\n}\n\nfunction apsUid(buffer, start) {\n    if ((start + 12) > buffer.length) apsError(start);\n\n    return buffer.subarray(start, start + 12).toString('hex').slice(0, 12);\n}\n\nfunction apsInt(buffer, start) {\n    if ((start + 2) > buffer.length) apsError(start);\n\n    return buffer.readUInt16BE(start);\n}\n\nfunction apsDouble(buffer, start) {\n    if ((start + 4) > buffer.length) apsError(start);\n\n    return buffer.readUInt32BE(start);\n}\n\nfunction apsShort(buffer, start) {\n    try {\n        return parseInt(buffer.subarray(start, start + 1).toString('hex'), 8);\n    } catch (err) {\n        apsError(start);\n    }\n}\n\nif (typeof msg.data !== 'object') {\n    // Grab known ECU IP\n    let units = global.get('units', 'default');\n    if (typeof units === 'object') {\n        for (const host in units) {\n            node.send([{\n                'topic': units[host]['name'],\n                'host': host,\n                'port': '8899',\n                'payload': \"APS1100160001\" + \"END\\n\",\n                'data': {}\n            }, null]);\n        }\n    }\n\n    return;\n}\n\nif (typeof msg.data.ecu !== 'object') {\n\n    // Parse ECU data\n    let buf = Buffer.from(msg.payload);\n    node.status({ text: 'buffer length: ' + buf.length});\n\n    msg.data = {\n        'ecu': {\n            'id': '',\n            'name': msg.topic,\n            'host': msg.host,\n            'port': msg.port,\n            'type': 0,\n            'energy_total': 0,\n            'energy_total_unit': 'kWh',\n            'energy_today': 0,\n            'energy_today_unit': 'kWh',\n            'power_instant': 0,\n            'power_instant_unit': 'W',\n            'inverters_quantity': 0,\n            'inverters_online': 0\n        }\n    }\n\n    if (apsStr(buf, 9, 4) === \"0001\") {\n        msg.data.ecu.id = apsStr(buf, 13, 12);\n        msg.data.ecu.type = parseInt(apsStr(buf, 25, 2), 10); // 1 or 2\n        msg.data.ecu.energy_total = apsDouble(buf, 27) / 10;\n        msg.data.ecu.power_instant = apsDouble(buf, 31)\n        msg.data.ecu.energy_today = apsDouble(buf, 35) / 100;\n\n        if (msg.data.ecu.type === 1) {\n            msg.data.ecu.inverters_quantity = apsInt(buf, 46);\n            msg.data.ecu.inverters_online = apsInt(buf, 48);\n\n            let offset_f = parseInt(apsStr(buf, 52, 3), 10);\n            msg.data.ecu.firmware = apsStr(buf, 55, offset_f);\n            let offset_t = parseInt(apsStr(buf, 55 + offset_f, 3), 10);\n            msg.data.ecu.timezone = apsStr(buf, 58 + offset_f, offset_t);\n\n        }\n        else if (msg.data.ecu.type === 2) {\n            msg.data.ecu.inverters_quantity = apsInt(buf, 39);\n            msg.data.ecu.inverters_online = apsInt(buf, 41);\n\n            let offset_f = parseInt(apsStr(buf, 49, 3), 10);\n            msg.data.ecu.firmware = apsStr(buf, 52, offset_f);\n        }\n\n        // prepare Inverter query\n        if (msg.data.ecu.inverters_quantity > 0) {\n            msg.payload = \"APS1100280002\" + msg.data.ecu.id + \"END\\n\";\n        \n            node.send([msg, null]);\n        } else {\n            node.send([null, msg]);\n        }\n    }\n\n    return\n}\nelse {\n\n    // Parse Inverter data\n    let buf = Buffer.from(msg.payload);\n    node.status({ text: 'buffer length: ' + buf.length});\n\n    msg.data.inverters = {}\n\n    if (apsStr(buf, 9, 4) === \"0002\") {\n        let offset1 = 0;\n        let offset2 = 26;\n\n        if (apsStr(buf, 14, 2) == \"00\") {\n            while (offset1 < apsInt(buf, 17)) {\n                if (apsStr(buf, 15, 2) == \"01\") {\n\n                    msg.data.inverters[offset1] = {\n                        'id': apsUid(buf, offset2),\n                        'type': Number(apsStr(buf, offset2 + 7, 2)),\n                        'online': apsShort(buf, offset2 + 6),\n                        'temperature': 0,\n                        'power': [],\n                        'voltage': []\n                    };\n\n                    // common\n                    if (msg.data.inverters[offset1]['type'] in [1, 2, 3, 4, 5]) {\n                        msg.data.inverters[offset1]['frequency'] = apsInt(buf, offset2 + 9) / 10;\n\n                        if (msg.data.inverters[offset1]['online'] === 1) {\n                            msg.data.inverters[offset1]['temperature'] = apsInt(buf, offset2 + 11) - 100;\n                        }\n                        msg.data.inverters[offset1]['power'][0] = apsInt(buf, offset2 + 13);\n                        msg.data.inverters[offset1]['voltage'][0] = apsInt(buf, offset2 + 15);\n                    }\n\n                    if (msg.data.inverters[offset1]['type'] in [1, 4, 5]) {\n\n                        msg.data.inverters[offset1]['model'] = 'YC600/DS3D/DS3-H/DS3/DS3-L';\n                        msg.data.inverters[offset1]['chanel'] = 2;\n                        msg.data.inverters[offset1]['max'] = 2000; // YC600=600VA,DS3D=2000VA,DS3-H=960VA, DS3=880VA, DS3-L=730VA\n                        msg.data.inverters[offset1]['power'][1] = apsInt(buf, offset2 + 17);\n                        msg.data.inverters[offset1]['voltage'][1] = apsInt(buf, offset2 + 19);\n\n                        offset2 = offset2 + 21;\n                    }\n                    else if (msg.data.inverters[offset1]['type'] === 2) {\n\n                        msg.data.inverters[offset1]['model'] = 'YC1000/QT2';\n                        msg.data.inverters[offset1]['chanel'] = 4;\n                        msg.data.inverters[offset1]['max'] = 2000; // YC1000=1000VA, QT2=2000VA\n                        msg.data.inverters[offset1]['power'][1] = apsInt(buf, offset2 + 17);\n                        msg.data.inverters[offset1]['voltage'][1] = apsInt(buf, offset2 + 19);\n                        msg.data.inverters[offset1]['power'][2] = apsInt(buf, offset2 + 21);\n                        msg.data.inverters[offset1]['voltage'][2] = apsInt(buf, offset2 + 23);\n                        msg.data.inverters[offset1]['power'][3] = apsInt(buf, offset2 + 25);\n\n                        offset2 = offset2 + 27;\n                    }\n                    else if (msg.data.inverters[offset1]['type'] === 3) {\n\n                        msg.data.inverters[offset1]['model'] = 'QS1';\n                        msg.data.inverters[offset1]['chanel'] = 4;\n                        msg.data.inverters[offset1]['max'] = 1200; // QS1=1200VA\n                        msg.data.inverters[offset1]['power'][1] = apsInt(buf, offset2 + 17);\n                        msg.data.inverters[offset1]['power'][2] = apsInt(buf, offset2 + 19);\n                        msg.data.inverters[offset1]['power'][3] = apsInt(buf, offset2 + 21);\n\n                        offset2 = offset2 + 23;\n                    }\n                    else {\n                        offset2 = offset2 + 9;\n                    }\n                }\n\n                offset1++;\n            }\n        }\n    }\n\n    // CLeanup\n    delete msg.host;\n    delete msg.port;\n    msg.topic = global.get('mqtt.topic', 'default') + '/' + msg.data.ecu.id;\n    msg.payload = msg.data;\n\n    // Global\n    let controls = global.get('controls', 'memoryOnly');\n    if (typeof controls !== 'object') {\n        controls = {}\n    }\n    controls[msg.payload.ecu.host] = msg.payload;\n    global.set('controls', controls, 'memoryOnly');\n\n    node.send([null, msg]);\n\n    return;\n}\n",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 380,
+        "wires": [
+            [
+                "d82deb0a07d618ee"
+            ],
+            [
+                "cd522600a32e953e",
+                "0bf80703420c701e"
+            ]
+        ]
+    },
+    {
+        "id": "d82deb0a07d618ee",
+        "type": "tcp request",
+        "z": "3300684acfa472e7",
+        "g": "f880574ac1875493",
+        "name": "ECU Queries",
+        "server": "",
+        "port": "",
+        "out": "time",
+        "ret": "buffer",
+        "splitc": "2000",
+        "newline": "",
+        "trim": false,
+        "tls": "",
+        "x": 210,
+        "y": 440,
+        "wires": [
+            [
+                "3538a60e6e05ade1"
+            ]
+        ]
+    },
+    {
+        "id": "0bf80703420c701e",
+        "type": "link out",
+        "z": "3300684acfa472e7",
+        "g": "f880574ac1875493",
+        "name": "custom - port",
+        "mode": "link",
+        "links": [
+            "8704b93076a73d7e"
+        ],
+        "x": 355,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "01346f67f027524a",
+        "type": "delay",
+        "z": "3300684acfa472e7",
+        "g": "6b4c2dd3f5df77bd",
+        "name": "50ms",
+        "pauseType": "delay",
+        "timeout": "50",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1810,
+        "y": 740,
+        "wires": [
+            [
+                "f2ba5712ec8cd4b1"
+            ]
+        ]
+    },
+    {
+        "id": "550fd37cdd043e4d",
+        "type": "link in",
+        "z": "3300684acfa472e7",
+        "g": "6b4c2dd3f5df77bd",
+        "name": "custom - detail",
+        "links": [
+            "92c098c716e46e3b",
+            "f2ba5712ec8cd4b1"
+        ],
+        "x": 125,
+        "y": 1100,
+        "wires": [
+            [
+                "46d41095c9cd81bb",
+                "7b29ddeea0bf459b"
+            ]
+        ]
+    },
+    {
+        "id": "46d41095c9cd81bb",
+        "type": "function",
+        "z": "3300684acfa472e7",
+        "g": "6b4c2dd3f5df77bd",
+        "name": "get names",
+        "func": "flow.set('current_unit', '', 'memoryOnly');\nflow.set('current_inverter', '', 'memoryOnly');\n\nmsg.payload = '';\nmsg.class = '';\nmsg.enabled = true;\nmsg.options = [{\n    'label':'',\n    'value':'',\n    'dropdown':'name'\n}];\n\nlet i = 1;\nlet units = global.get('units', 'default');\nif (typeof units === 'object') {\n    for(const host in units) {\n        msg.options[i++] = {\n            'label': units[host]['name'] + ' - ' + units[host]['location'] + ' - ' + host,\n            'value': host,\n            'dropdown': 'name'\n        }\n    }\n}\n\nif (i == 1) {\n    node.send([null, null]);\n}\nelse if (i == 2) {\n    msg.payload = msg.options[1]['value'];\n    node.send([msg, null]);\n    msg.class = 'remove';\n    msg.enlabed = false;\n    node.send([null, msg]);\n}\nelse {\n    node.send([null, msg]);\n}\n\nreturn;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 980,
+        "wires": [
+            [
+                "2cd010eee2da8e29"
+            ],
+            [
+                "da2b76d325ab019b"
+            ]
+        ]
+    },
+    {
+        "id": "da2b76d325ab019b",
+        "type": "ui-dropdown",
+        "z": "3300684acfa472e7",
+        "g": "6b4c2dd3f5df77bd",
+        "group": "8d032322dc675ac9",
+        "name": "ui - control - name",
+        "label": "Sélectionner un onduleur",
+        "tooltip": "",
+        "order": 1,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": true,
+        "msgTrigger": "onChange",
+        "x": 510,
+        "y": 1040,
+        "wires": [
+            [
+                "cf1550b97074514c"
+            ]
+        ]
+    },
+    {
+        "id": "cf1550b97074514c",
+        "type": "switch",
+        "z": "3300684acfa472e7",
+        "g": "6b4c2dd3f5df77bd",
+        "name": "empty",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 710,
+        "y": 1040,
+        "wires": [
+            [
+                "2cd010eee2da8e29"
+            ],
+            [
+                "7b29ddeea0bf459b"
+            ]
+        ]
+    },
+    {
+        "id": "2cd010eee2da8e29",
+        "type": "switch",
+        "z": "3300684acfa472e7",
+        "g": "6b4c2dd3f5df77bd",
+        "name": "exists",
+        "property": "#:(memoryOnly)::controls",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "hask",
+                "v": "payload",
+                "vt": "msg"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 870,
+        "y": 980,
+        "wires": [
+            [
+                "c158788b3b968b34",
+                "15d854d30f0a7418"
+            ],
+            [
+                "7b29ddeea0bf459b"
+            ]
+        ]
+    },
+    {
+        "id": "15d854d30f0a7418",
+        "type": "change",
+        "z": "3300684acfa472e7",
+        "g": "6b4c2dd3f5df77bd",
+        "name": "show",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "class",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1230,
+        "y": 980,
+        "wires": [
+            [
+                "263e38e78c31cbec",
+                "31b7a11ce646deba"
+            ]
+        ]
+    },
+    {
+        "id": "7b29ddeea0bf459b",
+        "type": "change",
+        "z": "3300684acfa472e7",
+        "g": "6b4c2dd3f5df77bd",
+        "name": "hide",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "class",
+                "pt": "msg",
+                "to": "remove",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1230,
+        "y": 1100,
+        "wires": [
+            [
+                "263e38e78c31cbec",
+                "84750319a3a2463b",
+                "f7d3e7cde4634e66",
+                "f7441e7b64e4cea3",
+                "31b7a11ce646deba"
+            ]
+        ]
+    },
+    {
+        "id": "be9df446e8994af5",
+        "type": "change",
+        "z": "3300684acfa472e7",
+        "g": "6b4c2dd3f5df77bd",
+        "name": "unit",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "#:(memoryOnly)::current_unit",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 920,
+        "wires": [
+            [
+                "bc17c08e18a403b2"
+            ]
+        ]
+    },
+    {
+        "id": "bc17c08e18a403b2",
+        "type": "delay",
+        "z": "3300684acfa472e7",
+        "g": "6b4c2dd3f5df77bd",
+        "name": "1m",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 690,
+        "y": 920,
+        "wires": [
+            [
+                "c03d7fe0c37957cf"
+            ]
+        ]
+    },
+    {
+        "id": "c03d7fe0c37957cf",
+        "type": "switch",
+        "z": "3300684acfa472e7",
+        "g": "6b4c2dd3f5df77bd",
+        "name": "current",
+        "property": "#:(memoryOnly)::current_unit",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "payload",
+                "vt": "msg"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 860,
+        "y": 920,
+        "wires": [
+            [
+                "c158788b3b968b34"
+            ]
+        ]
+    },
+    {
+        "id": "c158788b3b968b34",
+        "type": "change",
+        "z": "3300684acfa472e7",
+        "g": "6b4c2dd3f5df77bd",
+        "name": "global",
+        "rules": [
+            {
+                "t": "set",
+                "p": "#:(memoryOnly)::current_unit",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "#:(memoryOnly)::current_inverter",
+                "pt": "flow",
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "#:(memoryOnly)::controls[msg.payload]",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1030,
+        "y": 920,
+        "wires": [
+            [
+                "3fe540fa0313af8e",
+                "775ce16511f819d8",
+                "9c745b2a8599abf3",
+                "be9df446e8994af5"
+            ]
+        ]
+    },
+    {
+        "id": "263e38e78c31cbec",
+        "type": "ui-button",
+        "z": "3300684acfa472e7",
+        "g": "6b4c2dd3f5df77bd",
+        "group": "8d032322dc675ac9",
+        "name": "custom - detail - delete",
+        "label": "Supprimer",
+        "order": 11,
+        "width": "3",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1440,
+        "y": 740,
+        "wires": [
+            [
+                "91dbd54711396594"
+            ]
+        ]
+    },
+    {
+        "id": "91dbd54711396594",
+        "type": "change",
+        "z": "3300684acfa472e7",
+        "g": "6b4c2dd3f5df77bd",
+        "name": "delete",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "#:(memoryOnly)::current_unit",
+                "tot": "flow"
+            },
+            {
+                "t": "delete",
+                "p": "units[msg.payload]",
+                "pt": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1650,
+        "y": 740,
+        "wires": [
+            [
+                "01346f67f027524a"
+            ]
+        ]
+    },
+    {
+        "id": "f2ba5712ec8cd4b1",
+        "type": "link out",
+        "z": "3300684acfa472e7",
+        "g": "6b4c2dd3f5df77bd",
+        "name": "custom - detail - delete",
+        "mode": "link",
+        "links": [
+            "550fd37cdd043e4d"
+        ],
+        "x": 1935,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "3fe540fa0313af8e",
+        "type": "function",
+        "z": "3300684acfa472e7",
+        "g": "6b4c2dd3f5df77bd",
+        "name": "ecu info",
+        "func": "let res = [];\nlet i = 0;\nlet exists = false;\n\nif (typeof msg.payload.ecu.id == 'string') {\n    res[i++] = {\n        'lbl': 'Identifiant',\n        'val': msg.payload.ecu.id\n    };\n    exists = true;\n}\n\nif (typeof msg.payload.ecu.firmware == 'string') {\n    res[i++] = {\n        'lbl': 'Version',\n        'val': msg.payload.ecu.firmware\n    }\n    exists = true;\n}\n\nif (typeof msg.payload.ecu.timezone == 'string') {\n    res[i++] = {\n        'lbl': 'Fuseau horaire',\n        'val': msg.payload.ecu.timezone,\n    }\n    exists = true;\n}\n\nif (typeof msg.payload.ecu.inverters_quantity == 'number') {\n    res[i++] = {\n        'lbl': \"Nombre d'onduleurs configurés\",\n        'val': msg.payload.ecu.inverters_quantity,\n    }\n    exists = true;\n}\n\nif (exists === true) {\n    msg.payload = res;\n    msg.class = '';\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1220,
+        "y": 800,
+        "wires": [
+            [
+                "f7d3e7cde4634e66"
+            ]
+        ]
+    },
+    {
+        "id": "f7d3e7cde4634e66",
+        "type": "ui-table",
+        "z": "3300684acfa472e7",
+        "g": "6b4c2dd3f5df77bd",
+        "group": "8d032322dc675ac9",
+        "name": "custom - detail - ecu info table",
+        "label": "ECU",
+        "order": 3,
+        "width": "3",
+        "height": "1",
+        "maxrows": 0,
+        "passthru": false,
+        "autocols": false,
+        "showSearch": false,
+        "deselect": true,
+        "selectionType": "click",
+        "columns": [
+            {
+                "title": "",
+                "key": "lbl",
+                "keyType": "key",
+                "type": "text",
+                "width": "40%",
+                "align": "end"
+            },
+            {
+                "title": "",
+                "key": "val",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            }
+        ],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "",
+        "x": 1470,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "775ce16511f819d8",
+        "type": "function",
+        "z": "3300684acfa472e7",
+        "g": "6b4c2dd3f5df77bd",
+        "name": "ecu energy",
+        "func": "let res = [];\nlet i = 0;\nlet exists = false;\n\nif (typeof msg.payload.ecu.energy_total == 'number') {\n    res[i++] = {\n        'lbl': 'Production totale',\n        'val': msg.payload.ecu.energy_total + ' ' + msg.payload.ecu.energy_total_unit\n    };\n    exists = true;\n}\n\nif (typeof msg.payload.ecu.energy_today == 'number') {\n    res[i++] = {\n        'lbl': 'Production du jour',\n        'val': msg.payload.ecu.energy_today + ' ' + msg.payload.ecu.energy_today_unit\n    }\n    exists = true;\n}\n\nif (typeof msg.payload.ecu.power_instant == 'number') {\n    res[i++] = {\n        'lbl': 'Puissance instantanée',\n        'val': msg.payload.ecu.power_instant + ' ' + msg.payload.ecu.power_instant_unit,\n    }\n    exists = true;\n}\n\nif (typeof msg.payload.ecu.inverters_online == 'number') {\n    res[i++] = {\n        'lbl': \"Nombre d'onduleurs en ligne\",\n        'val': msg.payload.ecu.inverters_online,\n    }\n    exists = true;\n}\n\nif (exists === true) {\n    msg.payload = res;\n    msg.class = '';\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 860,
+        "wires": [
+            [
+                "84750319a3a2463b"
+            ]
+        ]
+    },
+    {
+        "id": "84750319a3a2463b",
+        "type": "ui-table",
+        "z": "3300684acfa472e7",
+        "g": "6b4c2dd3f5df77bd",
+        "group": "8d032322dc675ac9",
+        "name": "custom - detail - ecu energy table",
+        "label": "Production",
+        "order": 4,
+        "width": "3",
+        "height": "1",
+        "maxrows": 0,
+        "passthru": false,
+        "autocols": false,
+        "showSearch": false,
+        "deselect": true,
+        "selectionType": "click",
+        "columns": [
+            {
+                "title": "",
+                "key": "lbl",
+                "keyType": "key",
+                "type": "text",
+                "width": "40%",
+                "align": "end"
+            },
+            {
+                "title": "",
+                "key": "val",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            }
+        ],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "",
+        "x": 1480,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9c745b2a8599abf3",
+        "type": "function",
+        "z": "3300684acfa472e7",
+        "g": "6b4c2dd3f5df77bd",
+        "name": "inverters",
+        "func": "flow.set('current_inverter', '', 'memoryOnly');\nlet data = msg.payload;\n\nmsg.payload = '';\nmsg.class = '';\nmsg.enabled = true;\nmsg.options = [{\n    'label':'',\n    'value':'',\n    'dropdown':'name'\n}];\n\nlet i = 1;\nlet inverters = data.inverters;\nif (typeof inverters === 'object') {\n    for(const k in inverters) {\n        msg.options[i++] = {\n            'label': inverters[k]['id'],\n            'value': inverters[k]['id'],\n            'dropdown':'name'\n        }\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1220,
+        "y": 920,
+        "wires": [
+            [
+                "f7441e7b64e4cea3"
+            ]
+        ]
+    },
+    {
+        "id": "f7441e7b64e4cea3",
+        "type": "ui-dropdown",
+        "z": "3300684acfa472e7",
+        "g": "6b4c2dd3f5df77bd",
+        "group": "8d032322dc675ac9",
+        "name": "custom - detail - inverter select",
+        "label": "Sélectionner un micro-onduleur",
+        "tooltip": "",
+        "order": 6,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": false,
+        "msgTrigger": "onChange",
+        "x": 1470,
+        "y": 920,
+        "wires": [
+            [
+                "7d8de98aa71ecc40"
+            ]
+        ]
+    },
+    {
+        "id": "7d8de98aa71ecc40",
+        "type": "function",
+        "z": "3300684acfa472e7",
+        "g": "6b4c2dd3f5df77bd",
+        "name": "inverter",
+        "func": "if (msg.payload != '') {\n    let control = flow.get('current_unit', 'memoryOnly') || '';\n    let inverters = global.get('controls[\"' + control + '\"][\"inverters\"]', 'memoryOnly') || {};\n    for(const k in inverters) {\n        if (inverters[k].id === msg.payload) {\n            msg.payload = inverters[k];\n\n            node.send([msg, null]);\n\n            return;\n        }\n    }\n}\n\nnode.send([null, msg]);\n\nreturn;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1720,
+        "y": 920,
+        "wires": [
+            [
+                "8c1baae83dae667e",
+                "9f279216041658c7"
+            ],
+            [
+                "31b7a11ce646deba"
+            ]
+        ]
+    },
+    {
+        "id": "8c1baae83dae667e",
+        "type": "function",
+        "z": "3300684acfa472e7",
+        "g": "6b4c2dd3f5df77bd",
+        "name": "inverter info",
+        "func": "let res = [];\nlet i = 0;\nlet exists = false;\n\nif (typeof msg.payload.id == 'string') {\n    res[i++] = {\n        'lbl': 'Identifiant',\n        'val': msg.payload.id\n    };\n    exists = true;\n}\n\nif (typeof msg.payload.model == 'string') {\n    res[i++] = {\n        'lbl': 'Famille de modèle',\n        'val': msg.payload.model\n    }\n    exists = true;\n}\n\nif (typeof msg.payload.chanel == 'number') {\n    res[i++] = {\n        'lbl': 'Nombre de canaux',\n        'val': msg.payload.chanel,\n    }\n    exists = true;\n}\n\nif (typeof msg.payload.online == 'number') {\n    res[i++] = {\n        'lbl': 'En ligne',\n        'val': msg.payload.online == 0 ? 'Non' : 'Oui',\n    }\n    exists = true;\n}\n\nif (typeof msg.payload.temperature == 'number') {\n    res[i++] = {\n        'lbl': 'Température',\n        'val': msg.payload.temperature + ' °C',\n    }\n    exists = true;\n}\n\nif (exists === true) {\n    msg.payload = res;\n    msg.class = '';\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 860,
+        "wires": [
+            [
+                "0a26b25c7f5f0f97"
+            ]
+        ]
+    },
+    {
+        "id": "31b7a11ce646deba",
+        "type": "change",
+        "z": "3300684acfa472e7",
+        "g": "6b4c2dd3f5df77bd",
+        "name": "hide",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "class",
+                "pt": "msg",
+                "to": "remove",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1930,
+        "y": 1100,
+        "wires": [
+            [
+                "0a26b25c7f5f0f97",
+                "da492ba229cc3b36"
+            ]
+        ]
+    },
+    {
+        "id": "0a26b25c7f5f0f97",
+        "type": "ui-table",
+        "z": "3300684acfa472e7",
+        "g": "6b4c2dd3f5df77bd",
+        "group": "8d032322dc675ac9",
+        "name": "custom - detail - inverter info table",
+        "label": "Mirco-onduleur",
+        "order": 8,
+        "width": "3",
+        "height": "1",
+        "maxrows": 0,
+        "passthru": false,
+        "autocols": false,
+        "showSearch": false,
+        "deselect": true,
+        "selectionType": "click",
+        "columns": [
+            {
+                "title": "",
+                "key": "lbl",
+                "keyType": "key",
+                "type": "text",
+                "width": "40%",
+                "align": "end"
+            },
+            {
+                "title": "",
+                "key": "val",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            }
+        ],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "",
+        "x": 2180,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9f279216041658c7",
+        "type": "function",
+        "z": "3300684acfa472e7",
+        "g": "6b4c2dd3f5df77bd",
+        "name": "panel info",
+        "func": "let res = [];\nlet i = 0;\nlet exists = false;\n\n\nif (typeof msg.payload.frequency == 'number') {\n    res[i++] = {\n        'lbl': 'Fréquence',\n        'val': msg.payload.frequency + ' Hz',\n    }\n    exists = true;\n}\n\nif (typeof msg.payload.power == 'object') {\n    let powers = 0;\n    let power = '';\n    for (const k in msg.payload.power) {\n        powers = powers + msg.payload.power[k];\n        power = power + msg.payload.power[k] + ' W, '\n    }\n    res[i++] = {\n        'lbl': 'Puissance total',\n        'val': powers + ' W'\n    };\n    res[i++] = {\n        'lbl': 'Puissance par panneau',\n        'val': power\n    };\n    exists = true;\n}\n\nif (typeof msg.payload.voltage == 'object') {\n    let voltage = '';\n    for (const k in msg.payload.voltage) {\n        voltage = voltage + msg.payload.voltage[k] + ' V, ';\n    }\n    res[i++] = {\n        'lbl': 'Voltage par panneau',\n        'val': voltage\n    };\n    exists = true;\n}\n\nif (exists === true) {\n    msg.payload = res;\n    msg.class = '';\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1920,
+        "y": 920,
+        "wires": [
+            [
+                "da492ba229cc3b36"
+            ]
+        ]
+    },
+    {
+        "id": "da492ba229cc3b36",
+        "type": "ui-table",
+        "z": "3300684acfa472e7",
+        "g": "6b4c2dd3f5df77bd",
+        "group": "8d032322dc675ac9",
+        "name": "custom - detail - inverter energy table",
+        "label": "Production",
+        "order": 9,
+        "width": "3",
+        "height": "1",
+        "maxrows": 0,
+        "passthru": false,
+        "autocols": false,
+        "showSearch": false,
+        "deselect": true,
+        "selectionType": "click",
+        "columns": [
+            {
+                "title": "",
+                "key": "lbl",
+                "keyType": "key",
+                "type": "text",
+                "width": "40%",
+                "align": "end"
+            },
+            {
+                "title": "",
+                "key": "val",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            }
+        ],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "",
+        "x": 2190,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e9a41625a93563f2",
+        "type": "link in",
+        "z": "3300684acfa472e7",
+        "g": "a94f12143daa85b5",
+        "name": "custom - describe",
+        "links": [],
+        "x": 125,
+        "y": 80,
+        "wires": [
+            [
+                "e25fbb1e61c21f99"
+            ]
+        ]
+    },
+    {
+        "id": "6f5df9d670b9906d",
+        "type": "link out",
+        "z": "3300684acfa472e7",
+        "g": "a94f12143daa85b5",
+        "name": "custom - describe",
+        "mode": "return",
+        "links": [],
+        "x": 455,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "e25fbb1e61c21f99",
+        "type": "function",
+        "z": "3300684acfa472e7",
+        "g": "a94f12143daa85b5",
+        "name": "custom - describe",
+        "func": "msg.payload.project = 'dknr-apsystems';\n\nmsg.payload.hmi = {\n    'detail': 'Surveiller',\n    'add': 'Ajouter',\n    'mqtt': 'Configurer'\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 80,
+        "wires": [
+            [
+                "6f5df9d670b9906d"
+            ]
+        ]
+    },
+    {
+        "id": "70fa44d509342200",
+        "type": "link in",
+        "z": "3300684acfa472e7",
+        "g": "274931f4309b3257",
+        "name": "custom - menu",
+        "links": [
+            "5c9bfdd80f490de0"
+        ],
+        "x": 125,
+        "y": 200,
+        "wires": [
+            [
+                "4841db186251fd55"
+            ]
+        ]
+    },
+    {
+        "id": "43663518deccb7c6",
+        "type": "link out",
+        "z": "3300684acfa472e7",
+        "g": "274931f4309b3257",
+        "name": "custom - menu",
+        "mode": "link",
+        "links": [
+            "ab044268dd81617b"
+        ],
+        "x": 435,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "4841db186251fd55",
+        "type": "ui-template",
+        "z": "3300684acfa472e7",
+        "g": "274931f4309b3257",
+        "group": "",
+        "page": "",
+        "ui": "df7710b4b2c4e55b",
+        "name": "custom - menu",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#oe_header\">\n        <v-toolbar class=\"oe_nav\"> \n        <v-btn-group variant=\"outlined\" divided>\n            <v-btn v-if=\"oe_menus.detail\" @click=\"oe_nav('detail')\" :title=\"oe_titles.detail\" icon=\"mdi-eye\"></v-btn> \n            <v-btn v-if=\"oe_menus.add\" @click=\"oe_nav('add')\" :title=\"oe_titles.add\" icon=\"mdi-plus-thick\"></v-btn> \n            <v-btn v-if=\"oe_menus.mqtt\" @click=\"oe_nav('mqtt')\" :title=\"oe_titles.mqtt\" icon=\"mdi-cog\"></v-btn> \n        </v-btn-group>\n        <v-toolbar-title :text=\"msg.title\"></v-toolbar-title>\n        <v-btn :href=\"msg.git\"><img height=\"32px\" src=\"/icon.png\" :title=\"msg.full\"></img></v-btn>\n        </v-toolbar>\n    </Teleport>\n</template>\n\n<script>\n    export default {\n        data() {\n            return {\n                oe_menus: { detail: true, add: true, mqtt: true },\n                oe_titles: { detail: '', add: '', mqtt: '' },\n                mounted: false\n            }\n        },\n        mounted() {\n            let div = document.createElement(\"div\");\n            div.id=\"oe_header\";\n            const el = document.body.querySelector(\"#app\").prepend(div);\n            this.mounted = true;\n        },\n        methods: {\n            oe_nav: function (page) {\n                this.send(page)\n            }\n        },\n        watch: {\n            msg: function (msg) {\n                document.documentElement.setAttribute(\"lang\", msg.lang);\n                document.documentElement.setAttribute(\"translate\", \"no\");\n                document.title = msg.title;\n                this.oe_menus = msg.menus;\n                this.oe_titles = msg.titles;\n            }\n        }\n    }\n\n</script>",
+        "storeOutMessages": true,
+        "passthru": false,
+        "resendOnRefresh": true,
+        "templateScope": "widget:ui",
+        "className": "",
+        "x": 280,
+        "y": 200,
+        "wires": [
+            [
+                "43663518deccb7c6"
+            ]
+        ]
+    },
+    {
+        "id": "045ef84fbc38fcac",
+        "type": "comment",
+        "z": "3300684acfa472e7",
+        "name": "Source",
+        "info": "https://github.com/fligneul/aps2mqtt/blob/main/src/aps2mqtt/apsystems/APSystemsSocket.py\nhttps://github.com/HAEdwin/homeassistant-apsystems_ecu_reader/blob/main/custom_components/apsystems_ecu_reader/ecu_api.py\n",
+        "x": 650,
+        "y": 80,
+        "wires": []
+    }
+]
