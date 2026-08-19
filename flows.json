@@ -158,12 +158,15 @@
             "8f1a54f299198096",
             "7fcb176f2e725c02",
             "b02e3c2d96304d41",
-            "afe884e8467661e5"
+            "afe884e8467661e5",
+            "b490f62e4ba2632e",
+            "9aa067029d4049a3",
+            "be56244e32363548"
         ],
-        "x": 64,
+        "x": 84,
         "y": 759,
-        "w": 1432,
-        "h": 242
+        "w": 1592,
+        "h": 209.5
     },
     {
         "id": "d0a23054ca93b1fb",
@@ -252,8 +255,8 @@
         ],
         "x": 84,
         "y": 1099,
-        "w": 1162,
-        "h": 202
+        "w": 1132,
+        "h": 142
     },
     {
         "id": "63020e9bf92f0ae3",
@@ -299,113 +302,6 @@
         "y": 1613,
         "w": 1874,
         "h": 734
-    },
-    {
-        "id": "bd007f48192aa2f3",
-        "type": "group",
-        "z": "4bc72a1112cb448c",
-        "g": "8d2869ca423714d6",
-        "name": "user - check",
-        "style": {
-            "fill": "#ff0000",
-            "fill-opacity": "0.05",
-            "label": true,
-            "stroke": "#ff0000"
-        },
-        "nodes": [
-            "fdb028158b218535",
-            "e0302181e220fb24",
-            "4b4db5a5c5bcb3c6",
-            "2dbd34bfcf7eed32",
-            "20f654f00ef52950",
-            "8cdcab5e1a00fa52",
-            "02fe29cae83d1e2a"
-        ],
-        "x": 84,
-        "y": 2179,
-        "w": 842,
-        "h": 142
-    },
-    {
-        "id": "ec05c59aee9e7dba",
-        "type": "group",
-        "z": "4bc72a1112cb448c",
-        "g": "8d2869ca423714d6",
-        "name": "user - clean",
-        "style": {
-            "fill": "#ff0000",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "0502ea2e9ef0f780",
-            "0e94cde52c021d45",
-            "670bb85f2c2aeaf5"
-        ],
-        "x": 84,
-        "y": 2059,
-        "w": 462,
-        "h": 82
-    },
-    {
-        "id": "7ea06c29d525f7ce",
-        "type": "group",
-        "z": "4bc72a1112cb448c",
-        "g": "8d2869ca423714d6",
-        "name": "user - write",
-        "style": {
-            "fill": "#ff0000",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "d1737d208c83ee99",
-            "efbcb97a4ab96940",
-            "6e614b3f0adee365",
-            "6009419e656f5fb7",
-            "f261b4c898eeec2e",
-            "166b868a64df0e9f",
-            "b75938c74c41ca5e",
-            "25946e03a69f38c2"
-        ],
-        "x": 84,
-        "y": 1879,
-        "w": 822,
-        "h": 142
-    },
-    {
-        "id": "fc6029b7d49d1e93",
-        "type": "group",
-        "z": "4bc72a1112cb448c",
-        "g": "8d2869ca423714d6",
-        "name": "user - read",
-        "style": {
-            "fill": "#ff0000",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "63e58cf7f88ce5af",
-            "0b2cf7bf91ae4d19",
-            "74dfe619e629d696",
-            "3b80cd5cae7c3642",
-            "8e12e262806af7b7",
-            "aae1f5d9a3931146",
-            "cca39ee5b2794b76",
-            "fa7160372fcfe3b2",
-            "c207171ed4430df8",
-            "44a9a10bea4cbb76",
-            "6e04acdf428261ac",
-            "7f71d2575c92f1e5",
-            "45fec39ce210f1d4",
-            "62fd5d97d37862c8",
-            "4cc3ed0d3ee8fb8d",
-            "1e31ae9f27a06bd8"
-        ],
-        "x": 84,
-        "y": 1639,
-        "w": 1822,
-        "h": 202
     },
     {
         "id": "90f47fc795048184",
@@ -594,12 +490,120 @@
             "df19be1275e79b1c",
             "f2cd63b49ac325ec",
             "fca30e25f5087f5a",
-            "12bb9e217deb1a47"
+            "12bb9e217deb1a47",
+            "df8a1dc0e990cec8"
         ],
         "x": 104,
         "y": 219,
         "w": 1232,
+        "h": 202
+    },
+    {
+        "id": "bd007f48192aa2f3",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "g": "8d2869ca423714d6",
+        "name": "user - check",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true,
+            "stroke": "#ff0000"
+        },
+        "nodes": [
+            "fdb028158b218535",
+            "e0302181e220fb24",
+            "4b4db5a5c5bcb3c6",
+            "2dbd34bfcf7eed32",
+            "20f654f00ef52950",
+            "8cdcab5e1a00fa52",
+            "02fe29cae83d1e2a"
+        ],
+        "x": 84,
+        "y": 2179,
+        "w": 842,
         "h": 142
+    },
+    {
+        "id": "ec05c59aee9e7dba",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "g": "8d2869ca423714d6",
+        "name": "user - clean",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "0502ea2e9ef0f780",
+            "0e94cde52c021d45",
+            "670bb85f2c2aeaf5"
+        ],
+        "x": 84,
+        "y": 2059,
+        "w": 462,
+        "h": 82
+    },
+    {
+        "id": "7ea06c29d525f7ce",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "g": "8d2869ca423714d6",
+        "name": "user - write",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "d1737d208c83ee99",
+            "efbcb97a4ab96940",
+            "6e614b3f0adee365",
+            "6009419e656f5fb7",
+            "f261b4c898eeec2e",
+            "166b868a64df0e9f",
+            "b75938c74c41ca5e",
+            "25946e03a69f38c2"
+        ],
+        "x": 84,
+        "y": 1879,
+        "w": 822,
+        "h": 142
+    },
+    {
+        "id": "fc6029b7d49d1e93",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "g": "8d2869ca423714d6",
+        "name": "user - read",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "63e58cf7f88ce5af",
+            "0b2cf7bf91ae4d19",
+            "74dfe619e629d696",
+            "3b80cd5cae7c3642",
+            "8e12e262806af7b7",
+            "aae1f5d9a3931146",
+            "cca39ee5b2794b76",
+            "fa7160372fcfe3b2",
+            "c207171ed4430df8",
+            "44a9a10bea4cbb76",
+            "6e04acdf428261ac",
+            "7f71d2575c92f1e5",
+            "45fec39ce210f1d4",
+            "62fd5d97d37862c8",
+            "4cc3ed0d3ee8fb8d",
+            "1e31ae9f27a06bd8"
+        ],
+        "x": 84,
+        "y": 1639,
+        "w": 1822,
+        "h": 202
     },
     {
         "id": "df7710b4b2c4e55b",
@@ -645,7 +649,7 @@
         "name": "Default Theme",
         "colors": {
             "surface": "#ffffff",
-            "primary": "#0094CE",
+            "primary": "#0094ce",
             "bgPage": "#eeeeee",
             "groupBg": "#ffffff",
             "groupOutline": "#cccccc"
@@ -728,11 +732,11 @@
     {
         "id": "4c116fe2697e0aa9",
         "type": "ui-group",
-        "name": "Configurer MQTT",
+        "name": "config_mqtt",
         "page": "f081fa7a92c9aeb7",
         "width": "3",
         "height": 1,
-        "order": 1,
+        "order": 2,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -890,6 +894,20 @@
         "groupType": "default"
     },
     {
+        "id": "2fc7561a0f910b0a",
+        "type": "ui-group",
+        "name": "config_main",
+        "page": "f081fa7a92c9aeb7",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
         "id": "025edbd02daf82d0",
         "type": "http response",
         "z": "4bc72a1112cb448c",
@@ -1019,7 +1037,8 @@
             "7374df2eb856c2bc",
             "4131c78a07d0bd44",
             "d7bc8fc74bfc07cb",
-            "289e0a6cd1209c38"
+            "289e0a6cd1209c38",
+            "9aa067029d4049a3"
         ],
         "x": 1615,
         "y": 80,
@@ -1097,7 +1116,7 @@
         "name": "common - ui - control",
         "ui": "df7710b4b2c4e55b",
         "events": "all",
-        "x": 280,
+        "x": 300,
         "y": 920,
         "wires": [
             [
@@ -1110,16 +1129,16 @@
         "type": "link out",
         "z": "4bc72a1112cb448c",
         "g": "614d71e9e019ca82",
-        "name": "ui - control",
+        "name": "common - ui",
         "mode": "link",
         "links": [
-            "bf3da41c4b5bd219",
-            "d7bc8fc74bfc07cb",
             "4131c78a07d0bd44",
-            "7374df2eb856c2bc"
+            "7374df2eb856c2bc",
+            "bf3da41c4b5bd219",
+            "d7bc8fc74bfc07cb"
         ],
-        "x": 1455,
-        "y": 920,
+        "x": 1635,
+        "y": 860,
         "wires": []
     },
     {
@@ -1127,14 +1146,14 @@
         "type": "link in",
         "z": "4bc72a1112cb448c",
         "g": "614d71e9e019ca82",
-        "name": "ui - control",
+        "name": "common - ui",
         "links": [
-            "bb71762ba2269b75",
-            "b02e3c2d96304d41",
             "92c098c716e46e3b",
-            "afe884e8467661e5"
+            "afe884e8467661e5",
+            "b02e3c2d96304d41",
+            "bb71762ba2269b75"
         ],
-        "x": 105,
+        "x": 125,
         "y": 920,
         "wires": [
             [
@@ -1390,7 +1409,7 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": ".app-bar-actions-title {\n    font-size: 1.4em;\n    margin: 0.25em;\n}\n\n.v-card .remove,\n.v-card-text .remove {\n    display: none !important;\n    visibility: hidden;\n    color: transparent !important;\n}\n\n.v-table__wrapper table thead {\n    display: none !important;\n}\ntbody td[data-column-key=lbl] {\n    font-weight: bold !important;\n}\n\n.v-tab-item--selected {\n    color: #0094ce !important;\n}\n\n.v-main {\n    padding-bottom: 2em;\n}\n.ui-title span {\n    font-size: 1.4rem !important;\n    font-weight: normal !important;\n    padding: 0;\n    color: #0094ce;\n}\n\n.nrdb-ui-group {\n    border-radius: 4px;\n    box-shadow: 3px 2px 2px rgba(0, 55, 77, 0.25);\n}\n.v-application {\n    border-top: 1px solid #CCCCCC;\n    margin-top: -1px;\n}",
+        "format": ".app-bar-actions-title {\n    font-size: 1.4em;\n    color: #0094ce;\n    margin: 0.25em;\n    text-shadow: #cccccc 1px 1px 3px;\n}\n\n.v-card .remove,\n.v-card-text .remove {\n    display: none !important;\n    visibility: hidden;\n    color: transparent !important;\n}\n\n.v-table__wrapper table thead {\n    display: none !important;\n}\ntbody td[data-column-key=lbl] {\n    font-weight: bold !important;\n}\n\n.v-tab-item--selected {\n    color: #0094ce !important;\n}\n\n.v-main {\n    padding-bottom: 2em;\n}\n.ui-title span {\n    font-size: 1.4rem !important;\n    font-weight: normal !important;\n    padding: 0;\n    color: #0094ce;\n}\n\n.nrdb-ui-group {\n    border-radius: 4px;\n    box-shadow: 3px 2px 2px rgba(0, 55, 77, 0.25);\n}\n.v-application {\n    border-top: 1px solid #CCCCCC;\n    margin-top: -1px;\n}",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
@@ -1427,7 +1446,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "check",
-        "func": "// Check custom values\nif (typeof msg.payload !== 'object' ||\n    typeof msg.payload.project !== 'string'\n) {\n    return;\n}\n\nif (typeof msg.payload.pages !== 'object') {\n    msg.payload.pages = {};\n}\n\n// Set default app values\nmsg.payload.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\nmsg.payload.pages['home'] = {\n    'tab': 0,\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\nmsg.payload.pages['config'] = {\n    'tab': 1,\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\nmsg.payload.pages['auth'] = {\n    'tab': 2,\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// save config\nglobal.set('describe', msg.payload, 'memoryOnly');\n\n// Clear user and more\nglobal.set('auth',{},'memoryOnly');\nglobal.set('user',{},'memoryOnly');\nglobal.set('form',{},'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/projects/' + msg.payload.project + '/package.json'\n};",
+        "func": "// Check custom values\nif (typeof msg.payload !== 'object' ||\n    typeof msg.payload.project !== 'string'\n) {\n    return;\n}\n\nif (typeof msg.payload.pages !== 'object') {\n    msg.payload.pages = {};\n}\n\n// Set default app values\nmsg.payload.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\nmsg.payload.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\nmsg.payload.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\nmsg.payload.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// save config\nglobal.set('describe', msg.payload, 'memoryOnly');\n\n// Clear user and more\nglobal.set('auth',{},'memoryOnly');\nglobal.set('user',{},'memoryOnly');\nglobal.set('form',{},'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/projects/' + msg.payload.project + '/package.json'\n};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1446,14 +1465,13 @@
         "id": "5c9bfdd80f490de0",
         "type": "link out",
         "z": "4bc72a1112cb448c",
-        "d": true,
         "g": "614d71e9e019ca82",
         "name": "common - ui - custom",
         "mode": "link",
         "links": [
             "70fa44d509342200"
         ],
-        "x": 815,
+        "x": 835,
         "y": 800,
         "wires": []
     },
@@ -1461,14 +1479,12 @@
         "id": "ab044268dd81617b",
         "type": "link in",
         "z": "4bc72a1112cb448c",
-        "d": true,
         "g": "614d71e9e019ca82",
         "name": "common - ui - custom",
         "links": [
-            "43663518deccb7c6",
-            "df169d9922ceef6d"
+            "43663518deccb7c6"
         ],
-        "x": 945,
+        "x": 1125,
         "y": 800,
         "wires": [
             [
@@ -1507,13 +1523,13 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-actions\">\n        <span class=\"app-bar-actions-title\">{{ msg.page_title }}</span>\n        <v-btn :href=\"msg.git\"><img height=\"32px\" src=\"/icon.png\" :title=\"msg.full\"></img></v-btn>\n    </Teleport>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-title\">\n        <v-btn-group variant=\"outlined\" divided>\n            <v-btn v-if=\"oe_menus.home\" @click=\"oe_nav('home')\" :title=\"oe_titles.home\" icon=\"mdi-home\"></v-btn> \n            <v-btn v-if=\"oe_menus.config\" @click=\"oe_nav('config')\" :title=\"oe_titles.config\" icon=\"mdi-cog\"></v-btn> \n            <v-btn v-if=\"oe_menus.auth\" @click=\"oe_nav('auth')\" :title=\"oe_titles.auth\" icon=\"mdi-account\"></v-btn> \n        </v-btn-group>\n    </Teleport>\n</template>\n\n<script>\n    export default {\n        data() {\n            return {\n                oe_menus: {  },\n                oe_titles: {  },\n                mounted: false\n            }\n        },\n        mounted() {\n            const blang = navigator.language || navigator.userLanguage;\n            this.send(blang);\n            this.mounted = true;\n        },\n        methods: {\n            oe_nav: function (page) {\n                this.send(page)\n            }\n        },\n        watch: {\n            msg: function (msg) {\n                document.documentElement.setAttribute(\"lang\", msg.page_lang);\n                document.documentElement.setAttribute(\"translate\", \"no\");\n                document.title = msg.title;\n                this.oe_menus = msg.menus;\n                this.oe_titles = msg.titles;\n            }\n        }\n    }\n\n</script>",
+        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-actions\">\n        <span class=\"app-bar-actions-title\">{{ msg.page_title }}</span>\n        <v-btn :href=\"msg.git\"><img height=\"32px\" src=\"/icon.png\" :title=\"msg.full\"></img></v-btn>\n    </Teleport>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-title\">\n        <v-btn-group variant=\"outlined\" divided>\n            <v-btn v-if=\"oe_menus.home\" @click=\"oe_nav('home')\" :title=\"oe_titles.home\" icon=\"mdi-home\"></v-btn> \n            <v-btn v-if=\"oe_menus.config\" @click=\"oe_nav('config')\" :title=\"oe_titles.config\" icon=\"mdi-cog\"></v-btn> \n            <v-btn v-if=\"oe_menus.auth\" @click=\"oe_nav('auth')\" :title=\"oe_titles.auth\" icon=\"mdi-login\"></v-btn> \n        </v-btn-group>\n    </Teleport>\n</template>\n\n<script>\n    export default {\n        data() {\n            return {\n                oe_menus: {  },\n                oe_titles: {  },\n                mounted: false\n            }\n        },\n        mounted() {\n            const blang = navigator.language || navigator.userLanguage;\n            this.send(blang);\n            this.mounted = true;\n        },\n        methods: {\n            oe_nav: function (page) {\n                this.send(page)\n            }\n        },\n        watch: {\n            msg: function (msg) {\n                document.documentElement.setAttribute(\"lang\", msg.page_lang);\n                document.documentElement.setAttribute(\"translate\", \"no\");\n                document.title = msg.title;\n                this.oe_menus = msg.menus;\n                this.oe_titles = msg.titles;\n            }\n        }\n    }\n\n</script>",
         "storeOutMessages": true,
         "passthru": false,
         "resendOnRefresh": true,
         "templateScope": "widget:ui",
         "className": "",
-        "x": 880,
+        "x": 1060,
         "y": 860,
         "wires": [
             [
@@ -1544,7 +1560,7 @@
         "name": "kernel - hmi",
         "mode": "return",
         "links": [],
-        "x": 1205,
+        "x": 1175,
         "y": 1200,
         "wires": []
     },
@@ -1577,7 +1593,7 @@
                 "t": "set",
                 "p": "dictionary",
                 "pt": "msg",
-                "to": "$merge([msg.dictionary, {\t    'lang': 'en',\t    'option_page': {\t        'home': 'Accueil',\t        'config': 'Configuration',\t        'auth': 'Authentication'\t    },\t    'option_level': {\t        'visitor': 'Visiteur',\t        'child':  'Enfant',\t        'parent':'Parent',\t        'admin': 'Administrator'\t    },\t    'option_team': {\t        'm': 'Maint',\t        'a': 'Après-midi',\t        'n': 'Nuit',\t        'd': 'Journée',\t        's': 'Samedi',\t        'w': 'Weekend'\t    },\t    'option_lang': {\t        'en': 'English',\t        'fr': 'French'\t    },\t    'common_notice_file_write_success': 'Saved file successfully',\t    'common_notice_file_write_fail': 'Failed to save file'\t}])",
+                "to": "$merge([msg.dictionary, {\t    'lang': 'fr',\t    'option_page': {\t        'home': 'Accueil',\t        'config': 'Configuration',\t        'auth': 'Authentification'\t    },\t    'option_level': {\t        'visitor': 'Visiteur',\t        'child':  'Enfant',\t        'parent':'Parent',\t        'admin': 'Administrateur'\t    },\t    'option_team': {\t        'm': 'Maint',\t        'a': 'Après-midi',\t        'n': 'Nuit',\t        'd': 'Journée',\t        's': 'Samedi',\t        'w': 'Weekend'\t    },\t    'option_lang': {\t        'en': 'English',\t        'fr': 'French'\t    },\t\t    'common_notice_file_write_success': 'Fichier sauvegardé avec suucès',\t    'common_notice_file_write_fail': 'Impossiblde de sauvegarder le fichier',\t    'common_notice_login_fail': \"Mauvais nom d'utilisateur ou de mot de passe\",\t\t    'group_auth_login': 'Identifiant',\t    'group_auth_pass': 'Mot de passe',\t    'group_auth_user': 'Utilisateur',\t\t    'group_config_mqtt_title': 'Configuration MQTT',\t    'group_config_mqtt_host': 'Adresse IP du broker',\t    'group_config_mqtt_port': 'Port',\t    'group_config_mqtt_topic': 'Topic',\t    'group_config_mqtt_username': 'Utilisateur',\t    'group_config_mqtt_password': 'Mot de passe',\t    'group_config_mqtt_discovery': 'Home Assistant Discovery topic',\t    'group_config_mqtt_enabled': 'Activer MQTT'\t}])",
                 "tot": "jsonata"
             }
         ],
@@ -1605,7 +1621,7 @@
                 "t": "set",
                 "p": "dictionary",
                 "pt": "msg",
-                "to": "{\t    'lang': 'en',\t    'option_page': {\t        'home': 'Home',\t        'config': 'Configuration',\t        'auth': 'Authentication'\t    },\t    'option_level': {\t        'visitor': 'Visitor',\t        'child':  'Child',\t        'parent':'Parent',\t        'admin': 'Administrator'\t    },\t    'option_team': {\t        'm': 'Morning',\t        'a': 'Afternoon',\t        'n': 'Night',\t        'd': 'Day',\t        'w': 'Weekend',\t        's': 'Saturday'\t    },\t    'option_lang': {\t        'en': 'English',\t        'fr': 'French'\t    },\t    'option_color': {\t        'on': '#008000',\t        'off': '#FF0000',\t        'median': '#F08000',\t        'none': '#808000',\t        'theme': '#0094CE',\t        'empty': '#CCCCCC'\t    },\t    'common_notice_file_write_success': 'Saved file successfully',\t    'common_notice_file_write_fail': 'Failed to save file',\t    'common_notice_login_fail': 'Wrong username or password',\t\t    'group_auth_login': 'Login',\t    'group_auth_pass': 'Password'\t}",
+                "to": "{\t    'lang': 'en',\t    'option_page': {\t        'home': 'Home',\t        'config': 'Configuration',\t        'auth': 'Authentication'\t    },\t    'option_level': {\t        'visitor': 'Visitor',\t        'child':  'Child',\t        'parent':'Parent',\t        'admin': 'Administrator'\t    },\t    'option_team': {\t        'm': 'Morning',\t        'a': 'Afternoon',\t        'n': 'Night',\t        'd': 'Day',\t        'w': 'Weekend',\t        's': 'Saturday'\t    },\t    'option_lang': {\t        'en': 'English',\t        'fr': 'French'\t    },\t    'option_color': {\t        'on': '#008000',\t        'off': '#FF0000',\t        'median': '#F08000',\t        'none': '#808000',\t        'theme': '#0094CE',\t        'empty': '#CCCCCC'\t    },\t    'common_notice_file_write_success': 'Saved file successfully',\t    'common_notice_file_write_fail': 'Failed to save file',\t    'common_notice_login_fail': 'Wrong username or password',\t\t    'group_auth_login': 'Login',\t    'group_auth_pass': 'Password',\t    'group_auth_user': 'User',\t\t    'group_config_mqtt_title': 'MQTT configuration',\t    'group_config_mqtt_host': 'Broker IP address',\t    'group_config_mqtt_port': 'Port',\t    'group_config_mqtt_topic': 'Topic',\t    'group_config_mqtt_username': 'Username',\t    'group_config_mqtt_password': 'Password',\t    'group_config_mqtt_discovery': 'Home Assistant Discovery topic',\t    'group_config_mqtt_enabled': 'Enable MQTT'\t}",
                 "tot": "jsonata"
             }
         ],
@@ -1628,7 +1644,7 @@
         "z": "4bc72a1112cb448c",
         "g": "8cc9a474d6cd27ec",
         "name": "hmi",
-        "func": "if (typeof msg.hmi === 'undefined') {\n    msg.hmi = {\n        'tab': 99,\n        'page': '',\n        'id': '',\n        'login': '',\n        'level': '',\n        'lang': 'en',\n        'time': Date.now()\n    };\n}\n\nif (typeof msg.tab === 'number' && typeof msg.name === 'string') {\n    msg.hmi.tab = msg.tab;\n    msg.hmi.page = msg.name;\n    delete msg.tab;\n    delete msg.name;\n}\n\nif (typeof msg._client === 'object' && typeof msg._client.socketId === 'string') {\n    let browser_lang = global.get('browser[\"' + msg._client.socketId + '\"][\"lang\"]', 'memoryOnly');\n    if (typeof browser_lang === 'string') {\n        msg.hmi.lang = browser_lang;\n    }\n    msg.hmi.id = msg._client.socketId;\n\n    let user = global.get('user[\"' + msg.hmi.id + '\"]', 'memoryOnly');\n    if (typeof user === 'object') {\n        global.set('user[\"' + msg.hmi.id + '\"][\"time\"]', Date.now(), 'memoryOnly');\n        msg.hmi = Object.assign({}, msg.hmi, user);\n    }\n}\n\nif (msg.tab === 99) {\n    global.set('form', {}, 'memoryOnly');\n}\n\ndelete msg.reset; //???\n\nif (msg.hmi.lang === 'fr') {\n\n    return [msg, null];\n} else {\n\n    return [null, msg];\n}",
+        "func": "if (typeof msg.hmi === 'undefined') {\n    msg.hmi = {\n        'name': '',\n        'id': '',\n        'login': '',\n        'level': '',\n        'lang': 'en',\n        'time': Date.now()\n    };\n}\n\nif (typeof msg.name === 'string') {\n    msg.hmi.name = msg.name;\n    delete msg.name;\n}\n\nif (typeof msg._client === 'object' && typeof msg._client.socketId === 'string') {\n    let browser_lang = global.get('browser[\"' + msg._client.socketId + '\"][\"lang\"]', 'memoryOnly');\n    if (typeof browser_lang === 'string') {\n        msg.hmi.lang = browser_lang;\n    }\n    msg.hmi.id = msg._client.socketId;\n\n    let user = global.get('user[\"' + msg.hmi.id + '\"]', 'memoryOnly');\n    if (typeof user === 'object') {\n        global.set('user[\"' + msg.hmi.id + '\"][\"time\"]', Date.now(), 'memoryOnly');\n        msg.hmi = Object.assign({}, msg.hmi, user);\n    }\n}\n\nif (msg.tab === 99) {\n    global.set('form', {}, 'memoryOnly');\n}\n\ndelete msg.reset; //???\n\nif (msg.hmi.lang === 'fr') {\n\n    return [msg, null];\n} else {\n\n    return [null, msg];\n}",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -1663,7 +1679,7 @@
         "wires": [
             [
                 "01242cef4de43778",
-                "7214e26c1a5974bd"
+                "de40eb2988f94b7b"
             ]
         ]
     },
@@ -1698,9 +1714,11 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1010,
-        "y": 1260,
+        "y": 1200,
         "wires": [
-            []
+            [
+                "7214e26c1a5974bd"
+            ]
         ]
     },
     {
@@ -2585,7 +2603,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 510,
+        "x": 530,
         "y": 920,
         "wires": [
             [
@@ -2599,19 +2617,19 @@
         "z": "4bc72a1112cb448c",
         "g": "614d71e9e019ca82",
         "name": "action",
-        "func": "// on unwanted state, stop here\nif (msg.payload.match((new RegExp('^(connect|change|lost)$'))) === null) {\n    if (typeof msg.hmi.id === 'string' && msg.hmi.id !== '') {\n        global.set('user[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n        global.set('form[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n    }\n\n    return;\n}\n\n// on connect or lost connection, go to auth page\nif (msg.payload === 'connect' || msg.payload === 'lost') {\n    msg.payload = global.get('describe.pages.auth.name', 'memoryOnly') || '';\n\n    return [null, null, msg];\n}\n\n// prepare\nmsg.menus = {};\nmsg.titles = {};\nmsg.payload = {\n    'pages': {\n        'show': [],\n        'hide': []\n    }\n};\n\nlet pages = global.get('describe.pages', 'memoryOnly');\nif (typeof pages !== 'object') {\n    return;\n}\n\n// check user page right\nlet allowed = false;\nlet s = 0;\nlet h = 0;\nfor (const page in pages) {\n    if (typeof pages[page]['level'][msg.hmi.level] === 'boolean') {\n        if (pages[page]['level'][msg.hmi.level] === true) {\n            msg.menus[page] = true;\n            msg.payload.pages.show[s++] = pages[page]['name'];\n        } else {\n            msg.menus[page] = false;\n            msg.payload.pages.hide[h++] = pages[page]['name'];\n        }\n    } else {\n        if (global.get('describe.pages.auth.tab', 'memoryOnly') === pages[page]['tab']) {\n            msg.menus[page] = true;\n            msg.payload.pages.show[s++] = pages[page]['name'];\n        } else {\n            msg.menus[page] = false;\n            msg.payload.pages.hide[h++] = pages[page]['name'];\n        }\n    }\n    msg.titles[page] = msg.dictionary.option_page[page];\n\n    if (pages[page]['tab'] === msg.hmi.tab) {\n        msg.page_title = msg.dictionary.option_page[page];\n        msg.page_lang = msg.dictionary.lang;\n    }\n\n    if (pages[page]['tab'] === msg.hmi.tab && pages[page]['level'][msg.hmi.level] === true) {\n        allowed = true;\n    }\n}\n\nif (allowed === false) {\n    msg.hmi.tab = global.get('describe.pages.auth.tab', 'memoryOnly');\n    msg.hmi.page = global.get('describe.pages.auth.name', 'memoryOnly');\n    msg.page_title = msg.dictionary.option_page.auth;\n    msg.page_lang = msg.dictionary.lang;\n}\n\n// user plant\nglobal.set('form[\"' + msg.hmi.id + '\"][\"ts\"]', Date.now(), 'memoryOnly');\n\n// page process\nlet newMsg = {\n    'topic': '',\n    'payload': msg.hmi.page,\n    'options': [{ 'label': '', 'value': '' }],\n    'hmi': msg.hmi,\n    'dictionary': msg.dictionary,\n    '_client': msg._client\n};\n\n// ui menu\nmsg.version = global.get('describe.app.version', 'memoryOnly') || '0.0.0';\nmsg.title = msg.page_title + ' - ' + global.get('describe.app.title', 'memoryOnly');\nmsg.full = msg.title + ' v' + msg.version + ' for ' + msg.vendor;\n\ndelete msg.dictionary;\n\nreturn [msg, newMsg, null];",
+        "func": "delete msg.tag; // use msg.name only\n\n// On unwanted state, stop here\nif (msg.payload.match((new RegExp('^(connect|change|lost)$'))) === null) {\n    if (typeof msg.hmi.id === 'string' && msg.hmi.id !== '') {\n        global.set('user[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n        global.set('form[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n    }\n\n    return;\n}\n\n// On connect or lost connection, go to auth page\nif (msg.payload === 'connect' || msg.payload === 'lost') {\n    msg.payload = global.get('describe.pages.auth.name', 'memoryOnly') || '';\n\n    return [null, null, msg];\n}\n\n// Prepare ui\nmsg.menus = {};\nmsg.titles = {};\nmsg.payload = {\n    'pages': {\n        'show': [],\n        'hide': []\n    }\n};\n\nlet pages = global.get('describe.pages', 'memoryOnly');\nif (typeof pages !== 'object') {\n    return;\n}\n\n// check user page right\nlet allowed = false;\nlet s = 0;\nlet h = 0;\nfor (const page in pages) {\n    if (typeof pages[page]['level'][msg.hmi.level] === 'boolean') {\n        if (pages[page]['level'][msg.hmi.level] === true) {\n            msg.menus[page] = true;\n            msg.payload.pages.show[s++] = pages[page]['name'];\n        } else {\n            msg.menus[page] = false;\n            msg.payload.pages.hide[h++] = pages[page]['name'];\n        }\n    } else {\n        if (global.get('describe.pages.auth.name', 'memoryOnly') === pages[page]['name']) {\n            msg.menus[page] = true;\n            msg.payload.pages.show[s++] = pages[page]['name'];\n        } else {\n            msg.menus[page] = false;\n            msg.payload.pages.hide[h++] = pages[page]['name'];\n        }\n    }\n    msg.titles[page] = msg.dictionary.option_page[page];\n\n    if (pages[page]['name'] === msg.hmi.name) {\n        msg.page_title = msg.dictionary.option_page[page];\n        msg.page_lang = msg.dictionary.lang;\n    }\n\n    if (pages[page]['name'] === msg.hmi.name && pages[page]['level'][msg.hmi.level] === true) {\n        allowed = true;\n    }\n}\n\nif (allowed === false) {\n    msg.hmi.name = global.get('describe.pages.auth.name', 'memoryOnly');\n    msg.page_title = msg.dictionary.option_page.auth;\n    msg.page_lang = msg.dictionary.lang;\n}\n\n// user plant\nglobal.set('form[\"' + msg.hmi.id + '\"][\"ts\"]', Date.now(), 'memoryOnly');\n\n// page process\nlet newMsg = {\n    'topic': '',\n    'payload': msg.hmi.name,\n    'options': [{ 'label': '', 'value': '' }],\n    'hmi': msg.hmi,\n    'dictionary': msg.dictionary,\n    '_client': msg._client\n};\n\n// ui menu\nmsg.version = global.get('describe.app.version', 'memoryOnly') || '0.0.0';\nmsg.title = msg.page_title + ' - ' + global.get('describe.app.title', 'memoryOnly');\nmsg.full = msg.title + ' v' + msg.version + ' for ' + msg.vendor;\n\ndelete msg.dictionary;\n\nreturn [msg, newMsg, null];",
         "outputs": 3,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 690,
+        "x": 710,
         "y": 920,
         "wires": [
             [
-                "5c9bfdd80f490de0",
-                "4841db186251fd55"
+                "be56244e32363548",
+                "5c9bfdd80f490de0"
             ],
             [
                 "911bbe32f79bec46"
@@ -2627,15 +2645,15 @@
         "z": "4bc72a1112cb448c",
         "g": "614d71e9e019ca82",
         "name": "tab & browser",
-        "func": "if (msg.payload !== '' && typeof global.get('describe.pages[\"' + msg.payload + '\"][\"name\"]', 'memoryOnly') === 'string') {\n    msg.tab = global.get('describe.pages[\"' + msg.payload + '\"][\"tab\"]', 'memoryOnly');\n    msg.name = global.get('describe.pages[\"' + msg.payload + '\"][\"name\"]', 'memoryOnly');\n    msg.payload = msg.name;\n\n    return msg;\n} else {\n    let default_browser = {\n        'lang': msg.payload,\n        'time': Date.now()\n    }\n    global.set('browser[\"' + msg._client.socketId + '\"]', default_browser, 'memoryOnly');\n\n    let time = Date.now() - 60000;\n    let browsers = global.get('browser', 'memoryOnly') || {};\n    for (const browser in browsers) {\n        if (browsers[browser]['time'] < time) {\n            global.set('browser[\"' + browser + '\"]', undefined, 'memoryOnly');\n        }\n    }\n\n    return;\n}",
+        "func": "if (msg.payload !== '' && typeof global.get('describe.pages[\"' + msg.payload + '\"][\"name\"]', 'memoryOnly') === 'string') {\n    msg.name = global.get('describe.pages[\"' + msg.payload + '\"][\"name\"]', 'memoryOnly');\n    msg.payload = msg.name;\n\n    return msg;\n} else {\n    let default_browser = {\n        'lang': msg.payload,\n        'time': Date.now()\n    }\n    global.set('browser[\"' + msg._client.socketId + '\"]', default_browser, 'memoryOnly');\n\n    let time = Date.now() - 60000;\n    let browsers = global.get('browser', 'memoryOnly') || {};\n    for (const browser in browsers) {\n        if (browsers[browser]['time'] < time) {\n            global.set('browser[\"' + browser + '\"]', undefined, 'memoryOnly');\n        }\n    }\n\n    return;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1100,
-        "y": 860,
+        "x": 1280,
+        "y": 800,
         "wires": [
             [
                 "7fcb176f2e725c02"
@@ -2653,8 +2671,8 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1310,
-        "y": 860,
+        "x": 1490,
+        "y": 800,
         "wires": [
             [
                 "b02e3c2d96304d41"
@@ -2688,7 +2706,7 @@
         "z": "4bc72a1112cb448c",
         "g": "5621e43ca08d7164",
         "name": "tab &  level",
-        "func": "msg.topic = '';\nmsg.payload = ''; \nmsg.class = 'remove';\nmsg.enabled = false;\n\nnode.send(msg);\n\nif (typeof msg.check === 'string'\n    && msg.hmi.level !== ''\n    && msg.hmi.tab === global.get('describe.pages[\"' + msg.check + '\"][\"tab\"]', 'memoryOnly')\n    && global.get('describe.pages[\"' + msg.check + '\"][\"level\"][\"' + msg.hmi.level + '\"]', 'memoryOnly') === true\n) {\n    msg.class = '';\n    msg.enabled = true;\n\n    //global.set('form[\"' + msg.hmi.id + '\"][\"tab\"]', msg.check, 'memoryOnly');\n\n    delete msg.check;\n\n    await new Promise(resolve => setTimeout(resolve, 50)); // wait 50ms\n\n    return msg;\n} else {\n    //global.set('form[\"' + msg.hmi.id + '\"][\"tab\"]', '', 'memoryOnly');\n}",
+        "func": "msg.topic = '';\nmsg.payload = ''; \nmsg.class = 'remove';\nmsg.enabled = false;\n\nnode.send(msg);\n\nif (typeof msg.check === 'string'\n    && msg.hmi.level !== ''\n    && msg.hmi.name === global.get('describe.pages[\"' + msg.check + '\"][\"name\"]', 'memoryOnly')\n    && global.get('describe.pages[\"' + msg.check + '\"][\"level\"][\"' + msg.hmi.level + '\"]', 'memoryOnly') === true\n) {\n    msg.class = '';\n    msg.enabled = true;\n\n    //global.set('form[\"' + msg.hmi.id + '\"][\"tab\"]', msg.check, 'memoryOnly');\n\n    delete msg.check;\n\n    await new Promise(resolve => setTimeout(resolve, 50)); // wait 50ms\n\n    return msg;\n} else {\n    //global.set('form[\"' + msg.hmi.id + '\"][\"name\"]', '', 'memoryOnly');\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2735,13 +2753,13 @@
         "type": "link out",
         "z": "4bc72a1112cb448c",
         "g": "614d71e9e019ca82",
-        "name": "link out 1",
+        "name": "common - ui - loop",
         "mode": "link",
         "links": [
             "289e0a6cd1209c38"
         ],
-        "x": 1455,
-        "y": 860,
+        "x": 1635,
+        "y": 800,
         "wires": []
     },
     {
@@ -2749,14 +2767,83 @@
         "type": "link out",
         "z": "4bc72a1112cb448c",
         "g": "614d71e9e019ca82",
-        "name": "link out 2",
+        "name": "common - ui - auth",
         "mode": "link",
         "links": [
             "289e0a6cd1209c38"
         ],
-        "x": 815,
-        "y": 960,
+        "x": 1635,
+        "y": 920,
         "wires": []
+    },
+    {
+        "id": "b490f62e4ba2632e",
+        "type": "ui-template",
+        "z": "4bc72a1112cb448c",
+        "g": "614d71e9e019ca82",
+        "group": "",
+        "page": "",
+        "ui": "df7710b4b2c4e55b",
+        "name": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<script>\ndocument.addEventListener('keydown', (e) => {\n    e = e || window.event;\n    if(e.keyCode == 116) { //} || (e.ctrlKey && e.keyCode == 82)){\n        e.preventDefault();\n    }\n});\n</script>\n",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "widget:ui",
+        "className": "",
+        "x": 260,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9aa067029d4049a3",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "614d71e9e019ca82",
+        "name": "common - ui - style",
+        "links": [
+            "92c098c716e46e3b"
+        ],
+        "x": 125,
+        "y": 800,
+        "wires": [
+            [
+                "b490f62e4ba2632e",
+                "6f2775829158f825"
+            ]
+        ]
+    },
+    {
+        "id": "be56244e32363548",
+        "type": "delay",
+        "z": "4bc72a1112cb448c",
+        "g": "614d71e9e019ca82",
+        "name": "50ms",
+        "pauseType": "delay",
+        "timeout": "200",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 870,
+        "y": 860,
+        "wires": [
+            [
+                "4841db186251fd55"
+            ]
+        ]
     },
     {
         "id": "e9a41625a93563f2",
@@ -2791,7 +2878,7 @@
         "z": "3300684acfa472e7",
         "g": "a94f12143daa85b5",
         "name": "custom - describe",
-        "func": "msg.payload.project = 'dknr-domotic';\n\nmsg.payload.pages = {\n    'test': {\n        'tab': 3,\n        'id': 'a9acb2e8c23ee7ca',\n        'name': 'test',\n        'level': {\n            'admin': true,\n            'parent': true,\n            'child': false,\n            'visitor': false\n        }\n    }\n}\n\nreturn msg;",
+        "func": "msg.payload.project = 'dknr-domotic';\n\nmsg.payload.pages = {\n    'test': {\n        'id': 'a9acb2e8c23ee7ca',\n        'name': 'test',\n        'level': {\n            'admin': true,\n            'parent': true,\n            'child': false,\n            'visitor': false\n        }\n    }\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2810,7 +2897,6 @@
         "id": "70fa44d509342200",
         "type": "link in",
         "z": "3300684acfa472e7",
-        "d": true,
         "g": "274931f4309b3257",
         "name": "custom - menu",
         "links": [
@@ -2828,7 +2914,6 @@
         "id": "43663518deccb7c6",
         "type": "link out",
         "z": "3300684acfa472e7",
-        "d": true,
         "g": "274931f4309b3257",
         "name": "custom - menu",
         "mode": "link",
@@ -2843,7 +2928,6 @@
         "id": "1108c088331d2278",
         "type": "ui-template",
         "z": "3300684acfa472e7",
-        "d": true,
         "g": "274931f4309b3257",
         "group": "",
         "page": "",
@@ -2853,7 +2937,7 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-title\">\n        <v-btn-group variant=\"outlined\" divided>\n            <v-btn @click=\"oe_nav('test')\" :title=\"oe_titles.test\" icon=\"mdi-dev-to\"></v-btn> \n        </v-btn-group>\n    </Teleport>\n</template>\n\n<script>\n    export default {\n        data() {\n            return {\n                oe_menus: {  },\n                oe_titles: {  },\n                mounted: false\n            }\n        },\n        mounted() {\n            this.mounted = true;\n        },\n        methods: {\n            oe_nav: function (page) {\n                this.send(page)\n            }\n        },\n        watch: {\n            msg: function (msg) {\n                this.oe_menus = msg.menus;\n                this.oe_titles = msg.titles;\n            }\n        }\n    }\n\n</script>",
+        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-title\">\n        <v-btn-group variant=\"outlined\" divided>\n            <v-btn v-if=\"oe_menus.test\" @click=\"oe_nav('test')\" :title=\"oe_titles.test\" icon=\"mdi-dev-to\"></v-btn> \n        </v-btn-group>\n    </Teleport>\n</template>\n\n<script>\n    export default {\n        data() {\n            return {\n                oe_menus: {  },\n                oe_titles: {  },\n                mounted: false\n            }\n        },\n        mounted() {\n            this.mounted = true;\n        },\n        methods: {\n            oe_nav: function (page) {\n                this.send(page)\n            }\n        },\n        watch: {\n            msg: function (msg) {\n                this.oe_menus = msg.menus;\n                this.oe_titles = msg.titles;\n            }\n        }\n    }\n\n</script>",
         "storeOutMessages": true,
         "passthru": false,
         "resendOnRefresh": true,
@@ -3055,7 +3139,7 @@
         "type": "ui-text",
         "z": "d90937c9d5b88b24",
         "g": "0e7b47930ae0fa5a",
-        "group": "703dbc1ce9d4713b",
+        "group": "2fc7561a0f910b0a",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -3136,6 +3220,13 @@
                 "pt": "msg",
                 "to": "mqtt",
                 "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "ui_update",
+                "pt": "msg",
+                "to": "{\t    'options': [\t        {\t            \"type\": \"text\",\t            \"label\": msg.dictionary.group_config_mqtt_host,\t            \"key\": \"host\",\t            \"required\": true\t        },\t        {\t            \"type\": \"number\",\t            \"label\": msg.dictionary.group_config_mqtt_port,\t            \"key\": \"port\",\t            \"required\": true\t        },\t        {\t            \"type\": \"text\",\t            \"label\": msg.dictionary.group_config_mqtt_topic,\t            \"key\": \"topic\",\t            \"required\": true\t        },\t        {\t            \"type\": \"text\",\t            \"label\": msg.dictionary.group_config_mqtt_username,\t            \"key\": \"username\",\t            \"required\": false\t        },\t        {\t            \"type\": \"password\",\t            \"label\": msg.dictionary.group_config_mqtt_password,\t            \"key\": \"password\",\t            \"required\": false\t        },\t        {\t            \"type\": \"text\",\t            \"label\": msg.dictionary.group_config_mqtt_discovery,\t            \"key\": \"discovery\",\t            \"required\": false\t        },\t        {\t            \"type\": \"checkbox\",\t            \"label\": msg.dictionary.group_config_mqtt_enabled,\t            \"key\": \"enabled\",\t            \"required\": false\t        }\t    ]\t}",
+                "tot": "jsonata"
             }
         ],
         "action": "",
@@ -3144,7 +3235,7 @@
         "to": "",
         "reg": false,
         "x": 430,
-        "y": 320,
+        "y": 380,
         "wires": [
             [
                 "d9dbb31a0ba1e2a5"
@@ -3172,7 +3263,7 @@
         "to": "",
         "reg": false,
         "x": 1010,
-        "y": 260,
+        "y": 320,
         "wires": [
             [
                 "490f552ee626deb7"
@@ -3198,7 +3289,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1170,
-        "y": 260,
+        "y": 320,
         "wires": [
             [
                 "f2cd63b49ac325ec"
@@ -3213,7 +3304,7 @@
         "name": "ui - mqtt - form",
         "group": "4c116fe2697e0aa9",
         "label": "",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "options": [
@@ -3279,7 +3370,7 @@
         "passthru": false,
         "dropdownOptions": [],
         "x": 620,
-        "y": 260,
+        "y": 320,
         "wires": [
             [
                 "12bb9e217deb1a47"
@@ -3297,7 +3388,7 @@
             "fa8da6e72a733b2f"
         ],
         "x": 145,
-        "y": 260,
+        "y": 320,
         "wires": [
             [
                 "fca30e25f5087f5a"
@@ -3316,7 +3407,7 @@
             "df19be1275e79b1c"
         ],
         "x": 1295,
-        "y": 260,
+        "y": 320,
         "wires": []
     },
     {
@@ -3333,13 +3424,15 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 260,
+        "y": 320,
         "wires": [
             [
-                "d9dbb31a0ba1e2a5"
+                "d9dbb31a0ba1e2a5",
+                "df8a1dc0e990cec8"
             ],
             [
-                "84741ff9d386b4bb"
+                "84741ff9d386b4bb",
+                "df8a1dc0e990cec8"
             ]
         ]
     },
@@ -3355,12 +3448,37 @@
         "linkType": "static",
         "timeout": "30",
         "x": 830,
-        "y": 260,
+        "y": 320,
         "wires": [
             [
                 "6483959a5e73553e"
             ]
         ]
+    },
+    {
+        "id": "df8a1dc0e990cec8",
+        "type": "ui-text",
+        "z": "d90937c9d5b88b24",
+        "g": "d15289b1932a175e",
+        "group": "4c116fe2697e0aa9",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "config - title",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "ui-title",
+        "value": "dictionary.group_config_mqtt_title",
+        "valueType": "msg",
+        "x": 610,
+        "y": 260,
+        "wires": []
     },
     {
         "id": "9833ea0e831ff8c7",
@@ -3833,7 +3951,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "#:(memoryOnly)::describe.pages.home.tab",
+                "to": "#:(memoryOnly)::describe.pages.home.name",
                 "tot": "global"
             }
         ],
@@ -3923,8 +4041,7 @@
         "wires": [
             [
                 "9e178d959d47228f",
-                "46ceb67930f2f206",
-                "6bf4860c46ccf1c4"
+                "46ceb67930f2f206"
             ]
         ]
     },
@@ -3970,23 +4087,6 @@
         ]
     },
     {
-        "id": "6bf4860c46ccf1c4",
-        "type": "debug",
-        "z": "22abd94e2980c094",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 280,
-        "y": 380,
-        "wires": []
-    },
-    {
         "id": "4131c78a07d0bd44",
         "type": "link in",
         "z": "ab13cf34b214d4b6",
@@ -4022,7 +4122,7 @@
         "z": "ab13cf34b214d4b6",
         "g": "fbbd122ee9ce22d8",
         "group": "703dbc1ce9d4713b",
-        "order": 2,
+        "order": 1,
         "width": 0,
         "height": 0,
         "name": "test - title",
