@@ -40,6 +40,14 @@
         "env": []
     },
     {
+        "id": "560376d6bba621ec",
+        "type": "tab",
+        "label": "R_room",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "ab13cf34b214d4b6",
         "type": "tab",
         "label": "R_test",
@@ -606,6 +614,28 @@
         "h": 202
     },
     {
+        "id": "68879a4b30c8475f",
+        "type": "group",
+        "z": "560376d6bba621ec",
+        "name": "room - page",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "e0e64bf3607382ef",
+            "5241685ca99b7bc4",
+            "7d40a7ae15a1cd97",
+            "6032c172166c64ad",
+            "ca90fa81b5d76007"
+        ],
+        "x": 104,
+        "y": 39,
+        "w": 602,
+        "h": 142
+    },
+    {
         "id": "df7710b4b2c4e55b",
         "type": "ui-base",
         "name": "Tableau de bord",
@@ -724,7 +754,7 @@
                 "cols": "12"
             }
         ],
-        "order": 2,
+        "order": 3,
         "className": "",
         "visible": true,
         "disabled": false
@@ -782,7 +812,7 @@
     {
         "id": "950b05cd455c3a56",
         "type": "ui-group",
-        "name": "Summary",
+        "name": "home_main",
         "page": "ba855b55e831d2b6",
         "width": 6,
         "height": 1,
@@ -824,7 +854,7 @@
                 "cols": "12"
             }
         ],
-        "order": 3,
+        "order": 4,
         "className": "",
         "visible": true,
         "disabled": false
@@ -832,7 +862,7 @@
     {
         "id": "db49fb380ab7d7fb",
         "type": "ui-group",
-        "name": "Authentification",
+        "name": "auth_main",
         "page": "5e643d262f1ac894",
         "width": 6,
         "height": 1,
@@ -874,7 +904,7 @@
                 "cols": "12"
             }
         ],
-        "order": 4,
+        "order": 5,
         "className": "",
         "visible": true,
         "disabled": false
@@ -882,7 +912,7 @@
     {
         "id": "703dbc1ce9d4713b",
         "type": "ui-group",
-        "name": "Test",
+        "name": "test_main",
         "page": "a9acb2e8c23ee7ca",
         "width": 6,
         "height": 1,
@@ -898,6 +928,56 @@
         "type": "ui-group",
         "name": "config_main",
         "page": "f081fa7a92c9aeb7",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "be3da16eb83104f6",
+        "type": "ui-page",
+        "name": "room",
+        "ui": "df7710b4b2c4e55b",
+        "path": "/room",
+        "icon": "door",
+        "layout": "notebook",
+        "theme": "877e716e64a22cf1",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": true,
+        "disabled": false
+    },
+    {
+        "id": "dbf1f2065ded8405",
+        "type": "ui-group",
+        "name": "room_main",
+        "page": "be3da16eb83104f6",
         "width": 6,
         "height": 1,
         "order": 1,
@@ -1038,7 +1118,8 @@
             "4131c78a07d0bd44",
             "d7bc8fc74bfc07cb",
             "289e0a6cd1209c38",
-            "9aa067029d4049a3"
+            "9aa067029d4049a3",
+            "e0e64bf3607382ef"
         ],
         "x": 1615,
         "y": 80,
@@ -1135,7 +1216,8 @@
             "4131c78a07d0bd44",
             "7374df2eb856c2bc",
             "bf3da41c4b5bd219",
-            "d7bc8fc74bfc07cb"
+            "d7bc8fc74bfc07cb",
+            "e0e64bf3607382ef"
         ],
         "x": 1635,
         "y": 860,
@@ -1446,7 +1528,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "check",
-        "func": "// Check custom values\nif (typeof msg.payload !== 'object' ||\n    typeof msg.payload.project !== 'string'\n) {\n    return;\n}\n\nif (typeof msg.payload.pages !== 'object') {\n    msg.payload.pages = {};\n}\n\n// Set default app values\nmsg.payload.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\nmsg.payload.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\nmsg.payload.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\nmsg.payload.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// save config\nglobal.set('describe', msg.payload, 'memoryOnly');\n\n// Clear user and more\nglobal.set('auth',{},'memoryOnly');\nglobal.set('user',{},'memoryOnly');\nglobal.set('form',{},'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/projects/' + msg.payload.project + '/package.json'\n};",
+        "func": "// Check custom values\nif (typeof msg.payload !== 'object' ||\n    typeof msg.payload.project !== 'string'\n) {\n    return;\n}\n\nif (typeof msg.payload.pages !== 'object') {\n    msg.payload.pages = {};\n}\n\n// Set default app values\nmsg.payload.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\nmsg.payload.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\nmsg.payload.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\nmsg.payload.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\nmsg.payload.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// save config\nglobal.set('describe', msg.payload, 'memoryOnly');\n\n// Clear user and more\nglobal.set('auth',{},'memoryOnly');\nglobal.set('user',{},'memoryOnly');\nglobal.set('form',{},'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/projects/' + msg.payload.project + '/package.json'\n};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1523,7 +1605,7 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-actions\">\n        <span class=\"app-bar-actions-title\">{{ msg.page_title }}</span>\n        <v-btn :href=\"msg.git\"><img height=\"32px\" src=\"/icon.png\" :title=\"msg.full\"></img></v-btn>\n    </Teleport>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-title\">\n        <v-btn-group variant=\"outlined\" divided>\n            <v-btn v-if=\"oe_menus.home\" @click=\"oe_nav('home')\" :title=\"oe_titles.home\" icon=\"mdi-home\"></v-btn> \n            <v-btn v-if=\"oe_menus.config\" @click=\"oe_nav('config')\" :title=\"oe_titles.config\" icon=\"mdi-cog\"></v-btn> \n            <v-btn v-if=\"oe_menus.auth\" @click=\"oe_nav('auth')\" :title=\"oe_titles.auth\" icon=\"mdi-login\"></v-btn> \n        </v-btn-group>\n    </Teleport>\n</template>\n\n<script>\n    export default {\n        data() {\n            return {\n                oe_menus: {  },\n                oe_titles: {  },\n                mounted: false\n            }\n        },\n        mounted() {\n            const blang = navigator.language || navigator.userLanguage;\n            this.send(blang);\n            this.mounted = true;\n        },\n        methods: {\n            oe_nav: function (page) {\n                this.send(page)\n            }\n        },\n        watch: {\n            msg: function (msg) {\n                document.documentElement.setAttribute(\"lang\", msg.page_lang);\n                document.documentElement.setAttribute(\"translate\", \"no\");\n                document.title = msg.title;\n                this.oe_menus = msg.menus;\n                this.oe_titles = msg.titles;\n            }\n        }\n    }\n\n</script>",
+        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-actions\">\n        <span class=\"app-bar-actions-title\">{{ msg.page_title }}</span>\n        <v-btn :href=\"msg.git\"><img height=\"32px\" src=\"/icon.png\" :title=\"msg.full\"></img></v-btn>\n    </Teleport>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-title\">\n        <v-btn-group variant=\"outlined\" divided>\n            <v-btn v-if=\"oe_menus.home\" @click=\"oe_nav('home')\" :title=\"oe_titles.home\" icon=\"mdi-home\"></v-btn> \n            <v-btn v-if=\"oe_menus.room\" @click=\"oe_nav('room')\" :title=\"oe_titles.room\" icon=\"mdi-home-search\"></v-btn> \n            <v-btn v-if=\"oe_menus.config\" @click=\"oe_nav('config')\" :title=\"oe_titles.config\" icon=\"mdi-cog\"></v-btn> \n            <v-btn v-if=\"oe_menus.auth\" @click=\"oe_nav('auth')\" :title=\"oe_titles.auth\" icon=\"mdi-login\"></v-btn> \n        </v-btn-group>\n    </Teleport>\n</template>\n\n<script>\n    export default {\n        data() {\n            return {\n                oe_menus: {  },\n                oe_titles: {  },\n                mounted: false\n            }\n        },\n        mounted() {\n            const blang = navigator.language || navigator.userLanguage;\n            this.send(blang);\n            this.mounted = true;\n        },\n        methods: {\n            oe_nav: function (page) {\n                this.send(page)\n            }\n        },\n        watch: {\n            msg: function (msg) {\n                document.documentElement.setAttribute(\"lang\", msg.page_lang);\n                document.documentElement.setAttribute(\"translate\", \"no\");\n                document.title = msg.title;\n                this.oe_menus = msg.menus;\n                this.oe_titles = msg.titles;\n            }\n        }\n    }\n\n</script>",
         "storeOutMessages": true,
         "passthru": false,
         "resendOnRefresh": true,
@@ -1593,7 +1675,7 @@
                 "t": "set",
                 "p": "dictionary",
                 "pt": "msg",
-                "to": "$merge([msg.dictionary, {\t    'lang': 'fr',\t    'option_page': {\t        'home': 'Accueil',\t        'config': 'Configuration',\t        'auth': 'Authentification'\t    },\t    'option_level': {\t        'visitor': 'Visiteur',\t        'child':  'Enfant',\t        'parent':'Parent',\t        'admin': 'Administrateur'\t    },\t    'option_team': {\t        'm': 'Maint',\t        'a': 'Après-midi',\t        'n': 'Nuit',\t        'd': 'Journée',\t        's': 'Samedi',\t        'w': 'Weekend'\t    },\t    'option_lang': {\t        'en': 'English',\t        'fr': 'French'\t    },\t\t    'common_notice_file_write_success': 'Fichier sauvegardé avec suucès',\t    'common_notice_file_write_fail': 'Impossiblde de sauvegarder le fichier',\t    'common_notice_login_fail': \"Mauvais nom d'utilisateur ou de mot de passe\",\t\t    'group_auth_login': 'Identifiant',\t    'group_auth_pass': 'Mot de passe',\t    'group_auth_user': 'Utilisateur',\t\t    'group_config_mqtt_title': 'Configuration MQTT',\t    'group_config_mqtt_host': 'Adresse IP du broker',\t    'group_config_mqtt_port': 'Port',\t    'group_config_mqtt_topic': 'Topic',\t    'group_config_mqtt_username': 'Utilisateur',\t    'group_config_mqtt_password': 'Mot de passe',\t    'group_config_mqtt_discovery': 'Home Assistant Discovery topic',\t    'group_config_mqtt_enabled': 'Activer MQTT'\t}])",
+                "to": "$merge([msg.dictionary, {\t    'lang': 'fr',\t    'option_page': {\t        'home': 'Accueil',\t        'room': 'Pièces',\t        'config': 'Configuration',\t        'auth': 'Authentification'\t    },\t    'option_level': {\t        'visitor': 'Visiteur',\t        'child':  'Enfant',\t        'parent':'Parent',\t        'admin': 'Administrateur'\t    },\t    'option_team': {\t        'm': 'Maint',\t        'a': 'Après-midi',\t        'n': 'Nuit',\t        'd': 'Journée',\t        's': 'Samedi',\t        'w': 'Weekend'\t    },\t    'option_lang': {\t        'en': 'English',\t        'fr': 'French'\t    },\t\t    'common_notice_file_write_success': 'Fichier sauvegardé avec suucès',\t    'common_notice_file_write_fail': 'Impossiblde de sauvegarder le fichier',\t    'common_notice_login_fail': \"Mauvais nom d'utilisateur ou de mot de passe\",\t\t    'group_auth_login': 'Identifiant',\t    'group_auth_pass': 'Mot de passe',\t    'group_auth_user': 'Utilisateur',\t\t    'group_config_mqtt_title': 'Configuration MQTT',\t    'group_config_mqtt_host': 'Adresse IP du broker',\t    'group_config_mqtt_port': 'Port',\t    'group_config_mqtt_topic': 'Topic',\t    'group_config_mqtt_username': 'Utilisateur',\t    'group_config_mqtt_password': 'Mot de passe',\t    'group_config_mqtt_discovery': 'Home Assistant Discovery topic',\t    'group_config_mqtt_enabled': 'Activer MQTT'\t}])",
                 "tot": "jsonata"
             }
         ],
@@ -1621,7 +1703,7 @@
                 "t": "set",
                 "p": "dictionary",
                 "pt": "msg",
-                "to": "{\t    'lang': 'en',\t    'option_page': {\t        'home': 'Home',\t        'config': 'Configuration',\t        'auth': 'Authentication'\t    },\t    'option_level': {\t        'visitor': 'Visitor',\t        'child':  'Child',\t        'parent':'Parent',\t        'admin': 'Administrator'\t    },\t    'option_team': {\t        'm': 'Morning',\t        'a': 'Afternoon',\t        'n': 'Night',\t        'd': 'Day',\t        'w': 'Weekend',\t        's': 'Saturday'\t    },\t    'option_lang': {\t        'en': 'English',\t        'fr': 'French'\t    },\t    'option_color': {\t        'on': '#008000',\t        'off': '#FF0000',\t        'median': '#F08000',\t        'none': '#808000',\t        'theme': '#0094CE',\t        'empty': '#CCCCCC'\t    },\t    'common_notice_file_write_success': 'Saved file successfully',\t    'common_notice_file_write_fail': 'Failed to save file',\t    'common_notice_login_fail': 'Wrong username or password',\t\t    'group_auth_login': 'Login',\t    'group_auth_pass': 'Password',\t    'group_auth_user': 'User',\t\t    'group_config_mqtt_title': 'MQTT configuration',\t    'group_config_mqtt_host': 'Broker IP address',\t    'group_config_mqtt_port': 'Port',\t    'group_config_mqtt_topic': 'Topic',\t    'group_config_mqtt_username': 'Username',\t    'group_config_mqtt_password': 'Password',\t    'group_config_mqtt_discovery': 'Home Assistant Discovery topic',\t    'group_config_mqtt_enabled': 'Enable MQTT'\t}",
+                "to": "{\t    'lang': 'en',\t    'option_page': {\t        'home': 'Home',\t        'room': 'Rooms',\t        'config': 'Configuration',\t        'auth': 'Authentication'\t    },\t    'option_level': {\t        'visitor': 'Visitor',\t        'child':  'Child',\t        'parent':'Parent',\t        'admin': 'Administrator'\t    },\t    'option_team': {\t        'm': 'Morning',\t        'a': 'Afternoon',\t        'n': 'Night',\t        'd': 'Day',\t        'w': 'Weekend',\t        's': 'Saturday'\t    },\t    'option_lang': {\t        'en': 'English',\t        'fr': 'French'\t    },\t    'option_color': {\t        'on': '#008000',\t        'off': '#FF0000',\t        'median': '#F08000',\t        'none': '#808000',\t        'theme': '#0094CE',\t        'empty': '#CCCCCC'\t    },\t    'common_notice_file_write_success': 'Saved file successfully',\t    'common_notice_file_write_fail': 'Failed to save file',\t    'common_notice_login_fail': 'Wrong username or password',\t\t    'group_auth_login': 'Login',\t    'group_auth_pass': 'Password',\t    'group_auth_user': 'User',\t\t    'group_config_mqtt_title': 'MQTT configuration',\t    'group_config_mqtt_host': 'Broker IP address',\t    'group_config_mqtt_port': 'Port',\t    'group_config_mqtt_topic': 'Topic',\t    'group_config_mqtt_username': 'Username',\t    'group_config_mqtt_password': 'Password',\t    'group_config_mqtt_discovery': 'Home Assistant Discovery topic',\t    'group_config_mqtt_enabled': 'Enable MQTT'\t}",
                 "tot": "jsonata"
             }
         ],
@@ -2824,9 +2906,9 @@
         "type": "delay",
         "z": "4bc72a1112cb448c",
         "g": "614d71e9e019ca82",
-        "name": "50ms",
+        "name": "250ms",
         "pauseType": "delay",
-        "timeout": "200",
+        "timeout": "250",
         "timeoutUnits": "milliseconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -4083,6 +4165,109 @@
         "wires": [
             [
                 "be3b97df6b45470f"
+            ]
+        ]
+    },
+    {
+        "id": "e0e64bf3607382ef",
+        "type": "link in",
+        "z": "560376d6bba621ec",
+        "g": "68879a4b30c8475f",
+        "name": "room - page",
+        "links": [
+            "911bbe32f79bec46",
+            "92c098c716e46e3b"
+        ],
+        "x": 145,
+        "y": 140,
+        "wires": [
+            [
+                "6032c172166c64ad"
+            ]
+        ]
+    },
+    {
+        "id": "5241685ca99b7bc4",
+        "type": "link out",
+        "z": "560376d6bba621ec",
+        "g": "68879a4b30c8475f",
+        "name": "home - page",
+        "mode": "link",
+        "links": [],
+        "x": 555,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "7d40a7ae15a1cd97",
+        "type": "ui-text",
+        "z": "560376d6bba621ec",
+        "g": "68879a4b30c8475f",
+        "group": "dbf1f2065ded8405",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "room - title",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "ui-title",
+        "value": "dictionary.option_page.room",
+        "valueType": "msg",
+        "x": 610,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "6032c172166c64ad",
+        "type": "change",
+        "z": "560376d6bba621ec",
+        "g": "68879a4b30c8475f",
+        "name": "tab",
+        "rules": [
+            {
+                "t": "set",
+                "p": "check",
+                "pt": "msg",
+                "to": "room",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 270,
+        "y": 140,
+        "wires": [
+            [
+                "ca90fa81b5d76007"
+            ]
+        ]
+    },
+    {
+        "id": "ca90fa81b5d76007",
+        "type": "link call",
+        "z": "560376d6bba621ec",
+        "g": "68879a4b30c8475f",
+        "name": "",
+        "links": [
+            "88c5aeadbe80be20"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 430,
+        "y": 140,
+        "wires": [
+            [
+                "7d40a7ae15a1cd97",
+                "5241685ca99b7bc4"
             ]
         ]
     },
