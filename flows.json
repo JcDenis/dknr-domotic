@@ -75,11 +75,12 @@
             "17190d960ca5617d",
             "414b65f261e6840e",
             "0d8b82affc70a074",
-            "667f445784d1b506"
+            "667f445784d1b506",
+            "8597e9ed0f7d9f49"
         ],
         "x": 94,
         "y": 39,
-        "w": 1182,
+        "w": 1382,
         "h": 82
     },
     {
@@ -236,8 +237,55 @@
             "1108c088331d2278"
         ],
         "x": 84,
-        "y": 159,
+        "y": 279,
         "w": 392,
+        "h": 82
+    },
+    {
+        "id": "8cc9a474d6cd27ec",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "name": "kernel - hmi",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "56e6a7b9b0e66451",
+            "7214e26c1a5974bd",
+            "01242cef4de43778",
+            "579b7304f4b11a0f",
+            "d90814f6a6612373",
+            "89bd63c1cca31299",
+            "bc7921fbe0a00154",
+            "de40eb2988f94b7b"
+        ],
+        "x": 84,
+        "y": 1099,
+        "w": 1162,
+        "h": 142
+    },
+    {
+        "id": "63020e9bf92f0ae3",
+        "type": "group",
+        "z": "3300684acfa472e7",
+        "name": "custom -dictionary",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "8f5682bd562c3cac",
+            "d64c367b0ea65b4f",
+            "32ebf9c622f2a51f"
+        ],
+        "x": 84,
+        "y": 159,
+        "w": 412,
         "h": 82
     },
     {
@@ -641,7 +689,7 @@
             "df19be1275e79b1c",
             "f4a2353e5f92576c"
         ],
-        "x": 1235,
+        "x": 1435,
         "y": 80,
         "wires": []
     },
@@ -1045,7 +1093,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "app",
-        "func": "delete msg.filename;\n\nif (typeof msg.payload === 'object') {\n    let describe = global.get('describe', 'memoryOnly') || {};\n    describe.app = {\n        'title': msg.payload.description.slice(5),\n        'version' : msg.payload.version,\n        'git': msg.payload.name\n    };\n    global.set('describe', describe, 'memoryOnly');\n}\nreturn msg;",
+        "func": "delete msg.filename;\n\nif (typeof msg.payload === 'object') {\n    let describe = global.get('describe', 'memoryOnly') || {};\n    describe.app = {\n        'title': msg.payload.description.slice(5),\n        'version' : msg.payload.version,\n        'git': msg.payload.name\n    };\n    global.set('describe', describe, 'memoryOnly');\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1056,7 +1104,7 @@
         "y": 80,
         "wires": [
             [
-                "92c098c716e46e3b"
+                "8597e9ed0f7d9f49"
             ]
         ]
     },
@@ -1310,7 +1358,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "check",
-        "func": "// Check custom values\nif (typeof msg.payload !== 'object' ||\n    typeof msg.payload.hmi !== 'object' ||\n    typeof msg.payload.project !== 'string'\n) {\n    return;\n}\n\nif (typeof msg.payload.pages !== 'object') {\n    msg.payload.pages = {};\n}\n\n// Grab app values\nmsg.filename = '/data/projects/' + msg.payload.project + '/package.json'\nmsg.payload.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common hmi\nmsg.payload.hmi['home'] = 'Accueil';\nmsg.payload.hmi['config'] = 'Configurer';\nmsg.payload.hmi['auth'] = 'Authentifier';\n\n// Set common pages rights\nmsg.payload.pages['home'] = {\n    'tab': 0,\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\nmsg.payload.pages['config'] = {\n    'tab': 1,\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\nmsg.payload.pages['auth'] = {\n    'tab': 2,\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// save config\nglobal.set('describe', msg.payload, 'memoryOnly');\n\nreturn msg;",
+        "func": "// Check custom values\nif (typeof msg.payload !== 'object' ||\n    typeof msg.payload.project !== 'string'\n) {\n    return;\n}\n\nif (typeof msg.payload.hmi !== 'object') {\n    msg.payload.hmi = {};\n}\nif (typeof msg.payload.pages !== 'object') {\n    msg.payload.pages = {};\n}\n\n// Set default app values\nmsg.payload.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\nmsg.payload.pages['home'] = {\n    'tab': 0,\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\nmsg.payload.pages['config'] = {\n    'tab': 1,\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\nmsg.payload.pages['auth'] = {\n    'tab': 2,\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// save config\nglobal.set('describe', msg.payload, 'memoryOnly');\n\n// Clear user and more\nglobal.set('auth',{},'memoryOnly');\nglobal.set('user',{},'memoryOnly');\nglobal.set('form',{},'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/projects/' + msg.payload.project + '/package.json'\n};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1432,6 +1480,190 @@
         ]
     },
     {
+        "id": "56e6a7b9b0e66451",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "8cc9a474d6cd27ec",
+        "name": "kernel - hmi",
+        "links": [],
+        "x": 125,
+        "y": 1200,
+        "wires": [
+            [
+                "d90814f6a6612373"
+            ]
+        ]
+    },
+    {
+        "id": "7214e26c1a5974bd",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "8cc9a474d6cd27ec",
+        "name": "kernel - hmi",
+        "mode": "return",
+        "links": [],
+        "x": 1205,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "01242cef4de43778",
+        "type": "debug",
+        "z": "4bc72a1112cb448c",
+        "g": "8cc9a474d6cd27ec",
+        "name": "kernel - hmi",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 990,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "579b7304f4b11a0f",
+        "type": "change",
+        "z": "4bc72a1112cb448c",
+        "g": "8cc9a474d6cd27ec",
+        "name": "dictionary fr",
+        "rules": [
+            {
+                "t": "set",
+                "p": "dictionary",
+                "pt": "msg",
+                "to": "$merge([msg.dictionary, {\t    'lang': 'en',\t    'option_page': {\t        'home': 'Accueil',\t        'config': 'Configuration',\t        'auth': 'Authentication'\t    },\t    'option_level': {\t        'visitor': 'Visiteur',\t        'child':  'Enfant',\t        'parent':'Parent',\t        'admin': 'Administrator'\t    },\t    'option_team': {\t        'm': 'Maint',\t        'a': 'Après-midi',\t        'n': 'Nuit',\t        'd': 'Journée',\t        's': 'Samedi',\t        'w': 'Weekend'\t    },\t    'option_lang': {\t        'en': 'English',\t        'fr': 'French'\t    }\t}])",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 1140,
+        "wires": [
+            [
+                "bc7921fbe0a00154"
+            ]
+        ]
+    },
+    {
+        "id": "d90814f6a6612373",
+        "type": "change",
+        "z": "4bc72a1112cb448c",
+        "g": "8cc9a474d6cd27ec",
+        "name": "dictionary en",
+        "rules": [
+            {
+                "t": "set",
+                "p": "dictionary",
+                "pt": "msg",
+                "to": "{\t    'lang': 'en',\t    'option_page': {\t        'home': 'Home',\t        'config': 'Configuration',\t        'auth': 'Authentication'\t    },\t    'option_level': {\t        'visitor': 'Visitor',\t        'child':  'Child',\t        'parent':'Parent',\t        'admin': 'Administrator'\t    },\t    'option_team': {\t        'm': 'Morning',\t        'a': 'Afternoon',\t        'n': 'Night',\t        'd': 'Day',\t        'w': 'Weekend',\t        's': 'Saturday'\t    },\t    'option_lang': {\t        'en': 'English',\t        'fr': 'French'\t    },\t    'option_color': {\t        'on': '#008000',\t        'off': '#FF0000',\t        'median': '#F08000',\t        'none': '#808000',\t        'theme': '#0094CE',\t        'empty': '#CCCCCC'\t    }\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 270,
+        "y": 1200,
+        "wires": [
+            [
+                "89bd63c1cca31299"
+            ]
+        ]
+    },
+    {
+        "id": "89bd63c1cca31299",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "8cc9a474d6cd27ec",
+        "name": "hmi",
+        "func": "if (typeof msg.hmi === 'undefined') {\n    msg.hmi = {\n        'tab': 99,\n        'page': '',\n        'id': '',\n        'login': '',\n        'level': '',\n        'lang': 'en',\n        'time': Date.now()\n    };\n}\n\nif (typeof msg.tab === 'number' && typeof msg.name === 'string') {\n    msg.hmi.tab = msg.tab;\n    msg.hmi.page = msg.name;\n    delete msg.tab;\n    delete msg.name;\n}\n\nif (typeof msg._client?.socketId === 'string') {\n    let browser_lang = global.get('browser[\"' + msg._client.socketId + '\"][\"lang\"]', 'memoryOnly');\n    if (typeof browser_lang === 'string') {\n        msg.hmi.lang = browser_lang;\n    }\n    msg.hmi.id = msg._client.socketId;\n\n    let user = global.get('user[\"' + msg.hmi.id + '\"]', 'memoryOnly');\n    if (typeof user === 'object') {\n        global.set('user[\"' + msg.hmi.id + '\"][\"time\"]', Date.now(), 'memoryOnly');\n        msg.hmi = Object.assign({}, msg.hmi, user);\n    }\n}\n\nif (msg.tab === 99) {\n    global.set('form', {}, 'memoryOnly');\n}\n\ndelete msg.reset; //???\n\nif (msg.hmi.lang === 'fr') {\n\n    return [msg, null];\n} else {\n\n    return [null, msg];\n}",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 1200,
+        "wires": [
+            [
+                "579b7304f4b11a0f"
+            ],
+            [
+                "bc7921fbe0a00154"
+            ]
+        ]
+    },
+    {
+        "id": "bc7921fbe0a00154",
+        "type": "change",
+        "z": "4bc72a1112cb448c",
+        "g": "8cc9a474d6cd27ec",
+        "name": "-",
+        "rules": [],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 1200,
+        "wires": [
+            [
+                "01242cef4de43778",
+                "de40eb2988f94b7b"
+            ]
+        ]
+    },
+    {
+        "id": "8597e9ed0f7d9f49",
+        "type": "link call",
+        "z": "4bc72a1112cb448c",
+        "g": "bcc6f36c217d1643",
+        "name": "",
+        "links": [
+            "56e6a7b9b0e66451"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1290,
+        "y": 80,
+        "wires": [
+            [
+                "92c098c716e46e3b"
+            ]
+        ]
+    },
+    {
+        "id": "de40eb2988f94b7b",
+        "type": "link call",
+        "z": "4bc72a1112cb448c",
+        "g": "8cc9a474d6cd27ec",
+        "name": "",
+        "links": [
+            "8f5682bd562c3cac"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1010,
+        "y": 1200,
+        "wires": [
+            [
+                "7214e26c1a5974bd"
+            ]
+        ]
+    },
+    {
         "id": "e9a41625a93563f2",
         "type": "link in",
         "z": "3300684acfa472e7",
@@ -1464,7 +1696,7 @@
         "z": "3300684acfa472e7",
         "g": "a94f12143daa85b5",
         "name": "custom - describe",
-        "func": "msg.payload.project = 'dknr-domotic';\n\nmsg.payload.hmi = {\n    'test': 'Essai'\n};\nmsg.payload.pages = {\n    'tab': 3,\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'test',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n}\n\nreturn msg;",
+        "func": "msg.payload.project = 'dknr-domotic';\n\nmsg.payload.pages = {\n    'tab': 3,\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'test',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1489,7 +1721,7 @@
             "5c9bfdd80f490de0"
         ],
         "x": 125,
-        "y": 200,
+        "y": 320,
         "wires": [
             [
                 "1108c088331d2278"
@@ -1507,7 +1739,7 @@
             "ab044268dd81617b"
         ],
         "x": 435,
-        "y": 200,
+        "y": 320,
         "wires": []
     },
     {
@@ -1530,10 +1762,58 @@
         "templateScope": "widget:ui",
         "className": "",
         "x": 280,
-        "y": 200,
+        "y": 320,
         "wires": [
             [
                 "43663518deccb7c6"
+            ]
+        ]
+    },
+    {
+        "id": "8f5682bd562c3cac",
+        "type": "link in",
+        "z": "3300684acfa472e7",
+        "g": "63020e9bf92f0ae3",
+        "name": "custom - dictionary",
+        "links": [],
+        "x": 125,
+        "y": 200,
+        "wires": [
+            [
+                "32ebf9c622f2a51f"
+            ]
+        ]
+    },
+    {
+        "id": "d64c367b0ea65b4f",
+        "type": "link out",
+        "z": "3300684acfa472e7",
+        "g": "63020e9bf92f0ae3",
+        "name": "custom - dictionary",
+        "mode": "return",
+        "links": [],
+        "x": 455,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "32ebf9c622f2a51f",
+        "type": "function",
+        "z": "3300684acfa472e7",
+        "g": "63020e9bf92f0ae3",
+        "name": "custom - dictionary",
+        "func": "if (msg.dictionary.lang === 'fr') {\n    msg.dictionary['option_page']['test'] = 'Essai';\n} else {\n    msg.dictionary['option_page']['test'] = 'Test';\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 200,
+        "wires": [
+            [
+                "d64c367b0ea65b4f"
             ]
         ]
     },
