@@ -8,14 +8,6 @@
         "env": []
     },
     {
-        "id": "3300684acfa472e7",
-        "type": "tab",
-        "label": "custom",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "10a4e1188aad61a2",
         "type": "tab",
         "label": "R_home",
@@ -106,11 +98,14 @@
             "26b401d093a20ea0",
             "0adfbcb74fd13b1f",
             "9563d3bc895a825a",
-            "755b262907010fd2"
+            "755b262907010fd2",
+            "18ea6555f6dbc2f5",
+            "afa71edf80d855b7",
+            "be5125506e979ff9"
         ],
         "x": 94,
         "y": 39,
-        "w": 2882,
+        "w": 3422,
         "h": 82
     },
     {
@@ -190,26 +185,6 @@
         "y": 699,
         "w": 1712,
         "h": 209.5
-    },
-    {
-        "id": "a94f12143daa85b5",
-        "type": "group",
-        "z": "3300684acfa472e7",
-        "name": "custom - describe",
-        "style": {
-            "fill": "#ff0000",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "e9a41625a93563f2",
-            "6f5df9d670b9906d",
-            "e25fbb1e61c21f99"
-        ],
-        "x": 84,
-        "y": 39,
-        "w": 372,
-        "h": 82
     },
     {
         "id": "8cc9a474d6cd27ec",
@@ -294,7 +269,7 @@
         ],
         "x": 104,
         "y": 39,
-        "w": 2062,
+        "w": 2222,
         "h": 262
     },
     {
@@ -360,7 +335,7 @@
         ],
         "x": 104,
         "y": 39,
-        "w": 602,
+        "w": 682,
         "h": 142
     },
     {
@@ -404,7 +379,7 @@
         ],
         "x": 104,
         "y": 39,
-        "w": 582,
+        "w": 662,
         "h": 142
     },
     {
@@ -425,14 +400,14 @@
         ],
         "x": 104,
         "y": 99,
-        "w": 492,
+        "w": 572,
         "h": 82
     },
     {
         "id": "d15289b1932a175e",
         "type": "group",
         "z": "d90937c9d5b88b24",
-        "name": "common - ui - mqtt",
+        "name": "config - mqtt",
         "style": {
             "fill": "#6f2fa0",
             "fill-opacity": "0.05",
@@ -453,7 +428,7 @@
         ],
         "x": 104,
         "y": 219,
-        "w": 1432,
+        "w": 1532,
         "h": 142
     },
     {
@@ -475,7 +450,7 @@
         ],
         "x": 104,
         "y": 39,
-        "w": 602,
+        "w": 682,
         "h": 142
     },
     {
@@ -1124,7 +1099,7 @@
             "9aa067029d4049a3",
             "e0e64bf3607382ef"
         ],
-        "x": 2935,
+        "x": 3475,
         "y": 80,
         "wires": []
     },
@@ -1308,7 +1283,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 2230,
+        "x": 2770,
         "y": 80,
         "wires": [
             [
@@ -1325,7 +1300,7 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 2410,
+        "x": 2950,
         "y": 80,
         "wires": [
             [
@@ -1339,14 +1314,14 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "app",
-        "func": "delete msg.filename;\n\nif (typeof msg.payload === 'object') {\n    let describe = global.get('describe', 'memoryOnly') || {};\n    describe.app = {\n        'title': msg.payload.description.slice(5),\n        'version' : msg.payload.version,\n        'git': msg.payload.name\n    };\n    global.set('describe', describe, 'memoryOnly');\n}\n\nmsg.payload = '';\n\nreturn msg;",
+        "func": "delete msg.filename;\n\nif (typeof msg.payload === 'object') {\n    let describe = global.get('describe', 'memoryOnly') || {};\n    describe.app = {\n        'project': msg.payload.name,\n        'title': msg.payload.description.slice(5),\n        'version' : msg.payload.version,\n        'git': msg.payload.name\n    };\n    global.set('describe', describe, 'memoryOnly');\n}\n\nmsg.payload = '';\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2570,
+        "x": 3110,
         "y": 80,
         "wires": [
             [
@@ -1512,7 +1487,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "common",
-        "func": "let describe = global.get('describe', 'memoryOnly') || {};\nif (typeof describe !== 'object') {\n    describe = {};\n}\nif (typeof describe.pages !== 'object') {\n    describe.pages = {};\n}\n\n// Project ident is required\nif (typeof describe.project !== 'string' || describe.project === '') {\n    return;\n}\n\n// Set default app values\ndescribe.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\ndescribe.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\ndescribe.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// save config\nglobal.set('describe', describe, 'memoryOnly');\n\n// Clear user and more\nglobal.set('auth',{},'memoryOnly');\nglobal.set('user',{},'memoryOnly');\nglobal.set('form',{},'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/projects/' + describe.project + '/package.json'\n};",
+        "func": "let describe = global.get('describe', 'memoryOnly') || {};\nif (typeof describe !== 'object') {\n    describe = {};\n}\nif (typeof describe.pages !== 'object') {\n    describe.pages = {};\n}\n\n// Set default app values\ndescribe.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\ndescribe.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\ndescribe.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// save config\nglobal.set('describe', describe, 'memoryOnly');\n\n// Clear user and more\nglobal.set('auth',{},'memoryOnly');\nglobal.set('user',{},'memoryOnly');\nglobal.set('form',{},'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/.config.projects.json'\n};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1523,7 +1498,7 @@
         "y": 80,
         "wires": [
             [
-                "b5b1483216d0643f"
+                "18ea6555f6dbc2f5"
             ]
         ]
     },
@@ -1641,7 +1616,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 2770,
+        "x": 3310,
         "y": 80,
         "wires": [
             [
@@ -2812,7 +2787,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "check",
-        "func": "if (typeof msg.payload !== 'object') {\n    msg.payload = {};\n}\nif (typeof msg.payload.pages !== 'object') {\n    msg.payload.pages = {};\n}\nif (typeof msg.payload.dictionary !== 'object') {\n    msg.payload.dictionary = {};\n}\n\nlet describe = global.get('describe', 'memoryOnly') || {};\nfor (const page in msg.payload.pages) {\n    describe.pages[page] = msg.payload.pages[page];\n}\n\nif (typeof msg.payload.project === 'string' && msg.payload.project !== '') {\n    describe.project = msg.payload.project;\n}\n\nglobal.set('describe', describe, 'memoryOnly');\n\nlet dictionary = global.get('dictionary', 'memoryOnly') || {};\nfor (const lang in msg.payload.dictionary) {\n    if (typeof dictionary[lang] !== 'object') {\n        dictionary[lang] = {};\n    }\n    if (typeof msg.payload.dictionary[lang] === 'object') {\n        for (const group in msg.payload.dictionary[lang]) {\n            if (typeof dictionary[lang][group] !== 'object') {\n                dictionary[lang][group] = {};\n            }\n            if (typeof msg.payload.dictionary[lang][group] === 'object') {\n                // custom sentence overwrite default ones\n                dictionary[lang][group] = { ...dictionary[lang][group], ...msg.payload.dictionary[lang][group] };\n            }\n        }\n    }\n}\n\nglobal.set('dictionary', dictionary, 'memoryOnly');\n\nreturn msg;",
+        "func": "if (typeof msg.payload !== 'object') {\n    msg.payload = {};\n}\nif (typeof msg.payload.pages !== 'object') {\n    msg.payload.pages = {};\n}\nif (typeof msg.payload.dictionary !== 'object') {\n    msg.payload.dictionary = {};\n}\n\nlet describe = global.get('describe', 'memoryOnly') || {};\nfor (const page in msg.payload.pages) {\n    describe.pages[page] = msg.payload.pages[page];\n}\n\nglobal.set('describe', describe, 'memoryOnly');\n\nlet dictionary = global.get('dictionary', 'memoryOnly') || {};\nfor (const lang in msg.payload.dictionary) {\n    if (typeof dictionary[lang] !== 'object') {\n        dictionary[lang] = {};\n    }\n    if (typeof msg.payload.dictionary[lang] === 'object') {\n        for (const group in msg.payload.dictionary[lang]) {\n            if (typeof dictionary[lang][group] !== 'object') {\n                dictionary[lang][group] = {};\n            }\n            if (typeof msg.payload.dictionary[lang][group] === 'object') {\n                // custom sentence overwrite default ones\n                dictionary[lang][group] = { ...dictionary[lang][group], ...msg.payload.dictionary[lang][group] };\n            }\n        }\n    }\n}\n\nglobal.set('dictionary', dictionary, 'memoryOnly');\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3006,54 +2981,61 @@
         ]
     },
     {
-        "id": "e9a41625a93563f2",
-        "type": "link in",
-        "z": "3300684acfa472e7",
-        "g": "a94f12143daa85b5",
-        "name": "custom - init",
-        "links": [
-            "26bca8d17b597ed1"
-        ],
-        "x": 125,
+        "id": "18ea6555f6dbc2f5",
+        "type": "file in",
+        "z": "4bc72a1112cb448c",
+        "g": "bcc6f36c217d1643",
+        "name": "find project",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 2230,
         "y": 80,
         "wires": [
             [
-                "e25fbb1e61c21f99"
+                "afa71edf80d855b7"
             ]
         ]
     },
     {
-        "id": "6f5df9d670b9906d",
-        "type": "link out",
-        "z": "3300684acfa472e7",
-        "g": "a94f12143daa85b5",
-        "name": "custom - init",
-        "mode": "link",
-        "links": [
-            "73f3212ba921a620"
-        ],
-        "x": 415,
+        "id": "afa71edf80d855b7",
+        "type": "json",
+        "z": "4bc72a1112cb448c",
+        "g": "bcc6f36c217d1643",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 2410,
         "y": 80,
-        "wires": []
+        "wires": [
+            [
+                "be5125506e979ff9"
+            ]
+        ]
     },
     {
-        "id": "e25fbb1e61c21f99",
+        "id": "be5125506e979ff9",
         "type": "function",
-        "z": "3300684acfa472e7",
-        "g": "a94f12143daa85b5",
-        "name": "custom - init",
-        "func": "msg.payload.project = 'dknr-domotic';\n\nreturn msg;",
+        "z": "4bc72a1112cb448c",
+        "g": "bcc6f36c217d1643",
+        "name": "filename",
+        "func": "// Prepare project query\nif (typeof msg.payload.activeProject === 'string') {\n    return {\n        'topic': '',\n        'payload': '',\n        'filename': '/data/projects/' + msg.payload.activeProject + '/package.json'\n    };\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 270,
+        "x": 2580,
         "y": 80,
         "wires": [
             [
-                "6f5df9d670b9906d"
+                "b5b1483216d0643f"
             ]
         ]
     },
@@ -3083,7 +3065,7 @@
         "name": "home - page",
         "mode": "link",
         "links": [],
-        "x": 555,
+        "x": 635,
         "y": 140,
         "wires": []
     },
@@ -3108,7 +3090,7 @@
         "className": "ui-title",
         "value": "dictionary.option_page.home",
         "valueType": "msg",
-        "x": 610,
+        "x": 690,
         "y": 80,
         "wires": []
     },
@@ -3151,7 +3133,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 430,
+        "x": 470,
         "y": 140,
         "wires": [
             [
@@ -3188,7 +3170,7 @@
         "links": [
             "df19be1275e79b1c"
         ],
-        "x": 555,
+        "x": 635,
         "y": 140,
         "wires": []
     },
@@ -3231,7 +3213,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 430,
+        "x": 470,
         "y": 140,
         "wires": [
             [
@@ -3266,7 +3248,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 630,
+        "x": 690,
         "y": 260,
         "wires": [
             [
@@ -3294,7 +3276,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1210,
+        "x": 1310,
         "y": 260,
         "wires": [
             [
@@ -3320,7 +3302,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1370,
+        "x": 1470,
         "y": 260,
         "wires": [
             [
@@ -3401,7 +3383,7 @@
         "className": "",
         "passthru": false,
         "dropdownOptions": [],
-        "x": 820,
+        "x": 880,
         "y": 260,
         "wires": [
             [
@@ -3414,7 +3396,7 @@
         "type": "link in",
         "z": "d90937c9d5b88b24",
         "g": "d15289b1932a175e",
-        "name": "ui - mqtt - settings",
+        "name": "config - mqtt",
         "links": [
             "f2cd63b49ac325ec",
             "fa8da6e72a733b2f"
@@ -3432,13 +3414,13 @@
         "type": "link out",
         "z": "d90937c9d5b88b24",
         "g": "d15289b1932a175e",
-        "name": "ui - mqtt - settings",
+        "name": "config - mqtt",
         "mode": "link",
         "links": [
             "3fa36de74a10eac1",
             "df19be1275e79b1c"
         ],
-        "x": 1495,
+        "x": 1595,
         "y": 260,
         "wires": []
     },
@@ -3453,7 +3435,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1040,
+        "x": 1110,
         "y": 260,
         "wires": [
             [
@@ -3482,7 +3464,7 @@
         "className": "ui-title",
         "value": "dictionary.group_config.mqtt_title",
         "valueType": "msg",
-        "x": 810,
+        "x": 870,
         "y": 320,
         "wires": []
     },
@@ -3497,7 +3479,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 460,
+        "x": 490,
         "y": 320,
         "wires": [
             [
@@ -3517,7 +3499,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 460,
+        "x": 490,
         "y": 260,
         "wires": [
             [
@@ -3588,7 +3570,7 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 810,
+        "x": 870,
         "y": 140,
         "wires": [
             [
@@ -3617,7 +3599,7 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 790,
+        "x": 850,
         "y": 200,
         "wires": []
     },
@@ -3644,7 +3626,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1030,
+        "x": 1090,
         "y": 140,
         "wires": [
             [
@@ -3662,7 +3644,7 @@
         "links": [
             "289e0a6cd1209c38"
         ],
-        "x": 1995,
+        "x": 2155,
         "y": 140,
         "wires": []
     },
@@ -3680,7 +3662,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2050,
+        "x": 2210,
         "y": 200,
         "wires": []
     },
@@ -3702,7 +3684,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1870,
+        "x": 2030,
         "y": 140,
         "wires": [
             [
@@ -3722,7 +3704,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1370,
+        "x": 1500,
         "y": 260,
         "wires": [
             [
@@ -3751,7 +3733,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 450,
+        "x": 510,
         "y": 260,
         "wires": [
             [
@@ -3775,7 +3757,7 @@
         "links": [
             "f4a2353e5f92576c"
         ],
-        "x": 1835,
+        "x": 1995,
         "y": 260,
         "wires": []
     },
@@ -3820,7 +3802,7 @@
         "className": "",
         "passthru": false,
         "dropdownOptions": [],
-        "x": 790,
+        "x": 850,
         "y": 260,
         "wires": [
             [
@@ -3862,7 +3844,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1180,
+        "x": 1280,
         "y": 260,
         "wires": [
             [
@@ -3890,7 +3872,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 610,
+        "x": 670,
         "y": 140,
         "wires": [
             [
@@ -3925,7 +3907,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 610,
+        "x": 670,
         "y": 200,
         "wires": [
             [
@@ -3953,7 +3935,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 610,
+        "x": 670,
         "y": 260,
         "wires": [
             [
@@ -3982,7 +3964,7 @@
         "className": "ui-title",
         "value": "dictionary.option_page.auth",
         "valueType": "msg",
-        "x": 620,
+        "x": 680,
         "y": 80,
         "wires": []
     },
@@ -3993,7 +3975,7 @@
         "g": "90f47fc795048184",
         "name": "non authenticated users get language from browser. see ui-template",
         "info": "",
-        "x": 960,
+        "x": 1020,
         "y": 80,
         "wires": []
     },
@@ -4008,7 +3990,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1000,
+        "x": 1070,
         "y": 260,
         "wires": [
             [
@@ -4036,7 +4018,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1710,
+        "x": 1870,
         "y": 200,
         "wires": [
             [
@@ -4063,7 +4045,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1550,
+        "x": 1710,
         "y": 260,
         "wires": [
             [
@@ -4094,7 +4076,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1710,
+        "x": 1870,
         "y": 260,
         "wires": [
             [
@@ -4107,7 +4089,7 @@
         "type": "link in",
         "z": "22abd94e2980c094",
         "g": "90f47fc795048184",
-        "name": "auth - page",
+        "name": "auth - form",
         "links": [
             "911bbe32f79bec46",
             "92c098c716e46e3b"
@@ -4132,7 +4114,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 440,
+        "x": 470,
         "y": 140,
         "wires": [
             [
@@ -4154,7 +4136,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 280,
+        "x": 310,
         "y": 260,
         "wires": [
             [
@@ -4188,7 +4170,7 @@
         "name": "home - page",
         "mode": "link",
         "links": [],
-        "x": 555,
+        "x": 635,
         "y": 140,
         "wires": []
     },
@@ -4213,7 +4195,7 @@
         "className": "ui-title",
         "value": "dictionary.option_page.room",
         "valueType": "msg",
-        "x": 610,
+        "x": 690,
         "y": 80,
         "wires": []
     },
@@ -4256,7 +4238,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 430,
+        "x": 470,
         "y": 140,
         "wires": [
             [
@@ -4291,7 +4273,7 @@
         "name": "test - page",
         "mode": "link",
         "links": [],
-        "x": 555,
+        "x": 635,
         "y": 140,
         "wires": []
     },
@@ -4316,7 +4298,7 @@
         "className": "ui-title",
         "value": "dictionary.option_page.test",
         "valueType": "msg",
-        "x": 600,
+        "x": 680,
         "y": 80,
         "wires": []
     },
@@ -4359,7 +4341,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 430,
+        "x": 470,
         "y": 140,
         "wires": [
             [
