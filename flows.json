@@ -147,15 +147,15 @@
             "8704b93076a73d7e",
             "b42653048b3f39e8",
             "3fa36de74a10eac1",
-            "f60de1529c423dee",
             "f3c41b2acb15c9ea",
             "07e96d88edbef793",
             "6bb58f3ec75915c5",
-            "4e8306ceb80ac08b"
+            "4e8306ceb80ac08b",
+            "c32279aefb65c368"
         ],
         "x": 104,
         "y": 339,
-        "w": 512,
+        "w": 582,
         "h": 202
     },
     {
@@ -175,7 +175,7 @@
             "7f15feb966b47505"
         ],
         "x": 104,
-        "y": 639,
+        "y": 699,
         "w": 502,
         "h": 82
     },
@@ -209,7 +209,7 @@
             "be56244e32363548"
         ],
         "x": 104,
-        "y": 759,
+        "y": 819,
         "w": 1712,
         "h": 209.5
     },
@@ -231,7 +231,7 @@
             "d1b1e789f412bd08"
         ],
         "x": 104,
-        "y": 1239,
+        "y": 1299,
         "w": 332,
         "h": 82
     },
@@ -255,7 +255,7 @@
             "fc6029b7d49d1e93"
         ],
         "x": 78,
-        "y": 1453,
+        "y": 1573,
         "w": 1934,
         "h": 734
     },
@@ -317,7 +317,7 @@
             "2a9a03dea7e40994"
         ],
         "x": 104,
-        "y": 999,
+        "y": 1059,
         "w": 332,
         "h": 82
     },
@@ -339,7 +339,7 @@
             "89643fc02bcb1d58"
         ],
         "x": 104,
-        "y": 1119,
+        "y": 1179,
         "w": 332,
         "h": 82
     },
@@ -383,7 +383,7 @@
             "c026a3bb27b7e4d4"
         ],
         "x": 104,
-        "y": 1359,
+        "y": 1419,
         "w": 332,
         "h": 82
     },
@@ -502,7 +502,7 @@
             "02fe29cae83d1e2a"
         ],
         "x": 104,
-        "y": 2019,
+        "y": 2139,
         "w": 902,
         "h": 142
     },
@@ -523,7 +523,7 @@
             "670bb85f2c2aeaf5"
         ],
         "x": 104,
-        "y": 1899,
+        "y": 2019,
         "w": 622,
         "h": 82
     },
@@ -549,7 +549,7 @@
             "25946e03a69f38c2"
         ],
         "x": 104,
-        "y": 1719,
+        "y": 1839,
         "w": 882,
         "h": 142
     },
@@ -583,7 +583,7 @@
             "1e31ae9f27a06bd8"
         ],
         "x": 104,
-        "y": 1479,
+        "y": 1599,
         "w": 1882,
         "h": 202
     },
@@ -650,7 +650,7 @@
             "5621e43ca08d7164"
         ],
         "x": 78,
-        "y": 613,
+        "y": 673,
         "w": 1764,
         "h": 854
     },
@@ -816,11 +816,11 @@
         "name": "MQTT",
         "broker": "192.168.0.11",
         "port": "1883",
-        "clientid": "dkapsystems",
+        "clientid": "dkdomotic",
         "autoConnect": false,
         "usetls": false,
         "protocolVersion": 4,
-        "keepalive": 60,
+        "keepalive": "120",
         "cleansession": true,
         "autoUnsubscribe": true,
         "birthTopic": "",
@@ -1304,7 +1304,7 @@
         "expiry": "",
         "broker": "2c5e094fee5ae877",
         "x": 460,
-        "y": 380,
+        "y": 440,
         "wires": []
     },
     {
@@ -1313,7 +1313,9 @@
         "z": "4bc72a1112cb448c",
         "g": "9e3dbf7ae870765f",
         "name": "common - mqtt",
-        "links": [],
+        "links": [
+            "ef33a0199d61fffa"
+        ],
         "x": 145,
         "y": 500,
         "wires": [
@@ -1335,7 +1337,7 @@
             "9e0b692686687926"
         ],
         "x": 145,
-        "y": 680,
+        "y": 740,
         "wires": [
             [
                 "7f15feb966b47505"
@@ -1437,29 +1439,7 @@
         "y": 380,
         "wires": [
             [
-                "f60de1529c423dee",
                 "07e96d88edbef793"
-            ]
-        ]
-    },
-    {
-        "id": "f60de1529c423dee",
-        "type": "function",
-        "z": "4bc72a1112cb448c",
-        "g": "9e3dbf7ae870765f",
-        "name": "check",
-        "func": "msg.broker = {};\n\nlet mqtt = global.get('mqtt', 'default');\nif (typeof mqtt == 'object' && mqtt.enabled == true) {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.topic.length > 0\n    ) {\n        msg.broker.broker = mqtt.host;\n        msg.broker.port = mqtt.port;\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.broker.force = true;\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        return msg;\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'default');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n}\n\nmsg.action = 'disconnect';\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 270,
-        "y": 380,
-        "wires": [
-            [
-                "4f8fb9f9243e9939"
             ]
         ]
     },
@@ -1472,7 +1452,7 @@
         "ui": "df7710b4b2c4e55b",
         "events": "all",
         "x": 320,
-        "y": 920,
+        "y": 980,
         "wires": [
             [
                 "7651e96c4502dada"
@@ -1497,7 +1477,7 @@
             "c96e931494936766"
         ],
         "x": 1775,
-        "y": 860,
+        "y": 920,
         "wires": []
     },
     {
@@ -1513,7 +1493,7 @@
             "bb71762ba2269b75"
         ],
         "x": 145,
-        "y": 920,
+        "y": 980,
         "wires": [
             [
                 "bbb6fa5ec8070fb8"
@@ -1540,7 +1520,7 @@
         "className": "",
         "name": "common - ui - notice",
         "x": 480,
-        "y": 680,
+        "y": 740,
         "wires": [
             []
         ]
@@ -1562,7 +1542,7 @@
         "repair": false,
         "outputs": 1,
         "x": 270,
-        "y": 680,
+        "y": 740,
         "wires": [
             [
                 "fecaee88b8c296ed"
@@ -1775,7 +1755,7 @@
         "templateScope": "site:style",
         "className": "",
         "x": 310,
-        "y": 800,
+        "y": 860,
         "wires": [
             []
         ]
@@ -1812,7 +1792,7 @@
             "70fa44d509342200"
         ],
         "x": 895,
-        "y": 800,
+        "y": 860,
         "wires": []
     },
     {
@@ -1825,7 +1805,7 @@
             "43663518deccb7c6"
         ],
         "x": 1225,
-        "y": 800,
+        "y": 860,
         "wires": [
             [
                 "8f1a54f299198096"
@@ -1870,7 +1850,7 @@
         "templateScope": "widget:ui",
         "className": "",
         "x": 1140,
-        "y": 860,
+        "y": 920,
         "wires": [
             [
                 "8f1a54f299198096"
@@ -1885,7 +1865,7 @@
         "name": "common - ui - hmi",
         "links": [],
         "x": 145,
-        "y": 1280,
+        "y": 1340,
         "wires": [
             [
                 "d1b1e789f412bd08"
@@ -1901,7 +1881,7 @@
         "mode": "return",
         "links": [],
         "x": 395,
-        "y": 1280,
+        "y": 1340,
         "wires": []
     },
     {
@@ -1931,7 +1911,7 @@
         "name": "common - user - check",
         "links": [],
         "x": 145,
-        "y": 2120,
+        "y": 2240,
         "wires": [
             [
                 "20f654f00ef52950"
@@ -1953,7 +1933,7 @@
         "outputs": 2,
         "rounds": 10,
         "x": 440,
-        "y": 2060,
+        "y": 2180,
         "wires": [
             [
                 "8cdcab5e1a00fa52"
@@ -1972,7 +1952,7 @@
         "mode": "return",
         "links": [],
         "x": 775,
-        "y": 2060,
+        "y": 2180,
         "wires": []
     },
     {
@@ -1990,7 +1970,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 860,
-        "y": 2120,
+        "y": 2240,
         "wires": []
     },
     {
@@ -2007,7 +1987,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 2120,
+        "y": 2240,
         "wires": [
             [
                 "e0302181e220fb24"
@@ -2031,7 +2011,7 @@
         "finalize": "",
         "libs": [],
         "x": 620,
-        "y": 2060,
+        "y": 2180,
         "wires": [
             [
                 "4b4db5a5c5bcb3c6"
@@ -2052,7 +2032,7 @@
         "finalize": "",
         "libs": [],
         "x": 630,
-        "y": 2120,
+        "y": 2240,
         "wires": [
             [
                 "4b4db5a5c5bcb3c6",
@@ -2068,7 +2048,7 @@
         "name": "common - user - clean",
         "links": [],
         "x": 145,
-        "y": 1940,
+        "y": 2060,
         "wires": [
             [
                 "670bb85f2c2aeaf5"
@@ -2090,7 +2070,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 580,
-        "y": 1940,
+        "y": 2060,
         "wires": []
     },
     {
@@ -2107,7 +2087,7 @@
         "finalize": "",
         "libs": [],
         "x": 320,
-        "y": 1940,
+        "y": 2060,
         "wires": [
             [
                 "0e94cde52c021d45"
@@ -2140,7 +2120,7 @@
         "to": "",
         "reg": false,
         "x": 280,
-        "y": 1760,
+        "y": 1880,
         "wires": [
             [
                 "efbcb97a4ab96940"
@@ -2160,7 +2140,7 @@
         "overwriteFile": "true",
         "encoding": "none",
         "x": 450,
-        "y": 1760,
+        "y": 1880,
         "wires": [
             [
                 "6e614b3f0adee365"
@@ -2188,7 +2168,7 @@
         "to": "",
         "reg": false,
         "x": 630,
-        "y": 1760,
+        "y": 1880,
         "wires": [
             [
                 "166b868a64df0e9f",
@@ -2207,7 +2187,7 @@
         ],
         "uncaught": false,
         "x": 460,
-        "y": 1820,
+        "y": 1940,
         "wires": [
             [
                 "f261b4c898eeec2e"
@@ -2235,7 +2215,7 @@
         "to": "",
         "reg": false,
         "x": 630,
-        "y": 1820,
+        "y": 1940,
         "wires": [
             [
                 "25946e03a69f38c2",
@@ -2258,7 +2238,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 840,
-        "y": 1820,
+        "y": 1940,
         "wires": []
     },
     {
@@ -2271,7 +2251,7 @@
             "44a9a10bea4cbb76"
         ],
         "x": 145,
-        "y": 1760,
+        "y": 1880,
         "wires": [
             [
                 "d1737d208c83ee99"
@@ -2287,7 +2267,7 @@
         "mode": "link",
         "links": [],
         "x": 755,
-        "y": 1760,
+        "y": 1880,
         "wires": []
     },
     {
@@ -2304,7 +2284,7 @@
         "encoding": "none",
         "allProps": false,
         "x": 450,
-        "y": 1580,
+        "y": 1700,
         "wires": [
             [
                 "0b2cf7bf91ae4d19"
@@ -2321,7 +2301,7 @@
         "action": "",
         "pretty": false,
         "x": 630,
-        "y": 1580,
+        "y": 1700,
         "wires": [
             [
                 "4cc3ed0d3ee8fb8d"
@@ -2339,7 +2319,7 @@
         ],
         "uncaught": false,
         "x": 460,
-        "y": 1640,
+        "y": 1760,
         "wires": [
             [
                 "cca39ee5b2794b76"
@@ -2356,7 +2336,7 @@
             "92c098c716e46e3b"
         ],
         "x": 145,
-        "y": 1580,
+        "y": 1700,
         "wires": [
             [
                 "1e31ae9f27a06bd8"
@@ -2383,7 +2363,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1130,
-        "y": 1580,
+        "y": 1700,
         "wires": [
             [
                 "62fd5d97d37862c8"
@@ -2408,7 +2388,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1840,
-        "y": 1580,
+        "y": 1700,
         "wires": []
     },
     {
@@ -2432,7 +2412,7 @@
         "to": "",
         "reg": false,
         "x": 1310,
-        "y": 1640,
+        "y": 1760,
         "wires": [
             [
                 "fa7160372fcfe3b2"
@@ -2454,7 +2434,7 @@
         "outputs": 1,
         "rounds": 10,
         "x": 1470,
-        "y": 1640,
+        "y": 1760,
         "wires": [
             [
                 "c207171ed4430df8"
@@ -2494,7 +2474,7 @@
         "to": "",
         "reg": false,
         "x": 1630,
-        "y": 1640,
+        "y": 1760,
         "wires": [
             [
                 "44a9a10bea4cbb76",
@@ -2513,7 +2493,7 @@
             "b75938c74c41ca5e"
         ],
         "x": 1755,
-        "y": 1640,
+        "y": 1760,
         "wires": []
     },
     {
@@ -2539,7 +2519,7 @@
         "payload": "",
         "payloadType": "str",
         "x": 1140,
-        "y": 1520,
+        "y": 1640,
         "wires": [
             [
                 "cca39ee5b2794b76"
@@ -2554,7 +2534,7 @@
         "name": "reset users, set main user as admin/admin",
         "info": "",
         "x": 1420,
-        "y": 1520,
+        "y": 1640,
         "wires": []
     },
     {
@@ -2576,7 +2556,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 950,
-        "y": 1580,
+        "y": 1700,
         "wires": [
             [
                 "8e12e262806af7b7"
@@ -2602,7 +2582,7 @@
         "to": "",
         "reg": false,
         "x": 1310,
-        "y": 1580,
+        "y": 1700,
         "wires": [
             [
                 "aae1f5d9a3931146"
@@ -2623,7 +2603,7 @@
         "finalize": "",
         "libs": [],
         "x": 790,
-        "y": 1580,
+        "y": 1700,
         "wires": [
             [
                 "45fec39ce210f1d4"
@@ -2649,7 +2629,7 @@
         "to": "",
         "reg": false,
         "x": 280,
-        "y": 1580,
+        "y": 1700,
         "wires": [
             [
                 "63e58cf7f88ce5af"
@@ -2664,7 +2644,7 @@
         "name": "common - ui - show",
         "links": [],
         "x": 145,
-        "y": 1040,
+        "y": 1100,
         "wires": [
             [
                 "2a9a03dea7e40994"
@@ -2680,7 +2660,7 @@
         "mode": "return",
         "links": [],
         "x": 395,
-        "y": 1040,
+        "y": 1100,
         "wires": []
     },
     {
@@ -2718,7 +2698,7 @@
         "to": "",
         "reg": false,
         "x": 270,
-        "y": 1040,
+        "y": 1100,
         "wires": [
             [
                 "af676f21bca27752"
@@ -2733,7 +2713,7 @@
         "name": "common - ui - hide",
         "links": [],
         "x": 145,
-        "y": 1160,
+        "y": 1220,
         "wires": [
             [
                 "89643fc02bcb1d58"
@@ -2749,7 +2729,7 @@
         "mode": "return",
         "links": [],
         "x": 395,
-        "y": 1160,
+        "y": 1220,
         "wires": []
     },
     {
@@ -2787,7 +2767,7 @@
         "to": "",
         "reg": false,
         "x": 270,
-        "y": 1160,
+        "y": 1220,
         "wires": [
             [
                 "b78acc27f4a55cb0"
@@ -2806,7 +2786,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 570,
-        "y": 920,
+        "y": 980,
         "wires": [
             [
                 "fd39d13ae9c195f3"
@@ -2827,7 +2807,7 @@
         "finalize": "",
         "libs": [],
         "x": 770,
-        "y": 920,
+        "y": 980,
         "wires": [
             [
                 "be56244e32363548",
@@ -2855,7 +2835,7 @@
         "finalize": "",
         "libs": [],
         "x": 1380,
-        "y": 800,
+        "y": 860,
         "wires": [
             [
                 "7fcb176f2e725c02"
@@ -2874,7 +2854,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1610,
-        "y": 800,
+        "y": 860,
         "wires": [
             [
                 "b02e3c2d96304d41"
@@ -2916,7 +2896,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 1400,
+        "y": 1460,
         "wires": [
             [
                 "c026a3bb27b7e4d4"
@@ -2931,7 +2911,7 @@
         "name": "common - ui - tab",
         "links": [],
         "x": 145,
-        "y": 1400,
+        "y": 1460,
         "wires": [
             [
                 "8c540395a0e469f7"
@@ -2947,7 +2927,7 @@
         "mode": "return",
         "links": [],
         "x": 395,
-        "y": 1400,
+        "y": 1460,
         "wires": []
     },
     {
@@ -2961,7 +2941,7 @@
             "289e0a6cd1209c38"
         ],
         "x": 1775,
-        "y": 800,
+        "y": 860,
         "wires": []
     },
     {
@@ -2975,7 +2955,7 @@
             "289e0a6cd1209c38"
         ],
         "x": 1775,
-        "y": 920,
+        "y": 980,
         "wires": []
     },
     {
@@ -2998,7 +2978,7 @@
         "templateScope": "widget:ui",
         "className": "",
         "x": 320,
-        "y": 860,
+        "y": 920,
         "wires": [
             []
         ]
@@ -3013,7 +2993,7 @@
             "92c098c716e46e3b"
         ],
         "x": 145,
-        "y": 800,
+        "y": 860,
         "wires": [
             [
                 "b490f62e4ba2632e",
@@ -3040,7 +3020,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 930,
-        "y": 860,
+        "y": 920,
         "wires": [
             [
                 "4841db186251fd55"
@@ -3272,7 +3252,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 1280,
+        "y": 1340,
         "wires": [
             [
                 "7214e26c1a5974bd"
@@ -3353,10 +3333,11 @@
         "rh": 0,
         "inputs": 1,
         "x": 450,
-        "y": 440,
+        "y": 380,
         "wires": [
             [
-                "4e8306ceb80ac08b"
+                "4e8306ceb80ac08b",
+                "c32279aefb65c368"
             ]
         ]
     },
@@ -3365,16 +3346,16 @@
         "type": "function",
         "z": "4bc72a1112cb448c",
         "g": "9e3dbf7ae870765f",
-        "name": "check",
-        "func": "msg.broker = {};\n\nlet mqtt = global.get('mqtt', 'default');\nif (typeof mqtt == 'object' && mqtt.enabled == true) {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.topic.length > 0\n    ) {\n        msg.broker.broker = mqtt.host;\n        msg.broker.port = mqtt.port;\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.broker.force = true;\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.topic + '/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'default');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
+        "name": "data",
+        "func": "msg.broker = {};\n\nlet mqtt = global.get('mqtt', 'default');\nif (typeof mqtt == 'object' && mqtt.enabled == true) {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.topic.length > 0\n    ) {\n        msg.broker = {\n            'broker': mqtt.host,\n            'port': mqtt.port,\n            'clientid': global.get('describe.app.project', 'memoryOnly') || 'dknr',\n            'birth': {\n                'topic': mqtt.topic + '/kernel/state',\n                'payload': 'online',\n                'qos': 0,\n                'retain': false\n            },\n            'close': {\n                'topic': mqtt.topic + '/kernel/state',\n                'payload': 'offline',\n                'qos': 0,\n                'retain': false\n            },\n            'will': {\n                'topic': mqtt.topic + '/kernel/state',\n                'payload': 'will',\n                'qos': 0,\n                'retain': false\n            },\n            'force': true\n        };\n\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.topic + '/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'default');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 270,
-        "y": 440,
+        "x": 290,
+        "y": 380,
         "wires": [
             [
                 "6bb58f3ec75915c5"
@@ -3392,6 +3373,92 @@
         "x": 575,
         "y": 440,
         "wires": []
+    },
+    {
+        "id": "6d42b4aa1e5935e0",
+        "type": "inject",
+        "z": "4bc72a1112cb448c",
+        "name": "ping",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "domotic/kernel/ping",
+        "payload": "",
+        "payloadType": "date",
+        "x": 970,
+        "y": 400,
+        "wires": [
+            [
+                "ef33a0199d61fffa"
+            ]
+        ]
+    },
+    {
+        "id": "ef33a0199d61fffa",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "8704b93076a73d7e"
+        ],
+        "x": 1095,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "c32279aefb65c368",
+        "type": "trigger",
+        "z": "4bc72a1112cb448c",
+        "g": "9e3dbf7ae870765f",
+        "name": "10m",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "str",
+        "duration": "10",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 610,
+        "y": 380,
+        "wires": [
+            [
+                "07e96d88edbef793"
+            ]
+        ]
+    },
+    {
+        "id": "98492dc009e30bd0",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "name": "dknr",
+        "func": "let dknr = {\n    'target': '',\n    'source': '',\n    'bucket': '',\n    'measurement': '',\n    'field': '',\n    'tags': {},\n    'value': '',\n    'unit': '',\n    'repeat': false\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 460,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "d7bc8fc74bfc07cb",
@@ -3698,8 +3765,7 @@
         "y": 280,
         "wires": [
             [
-                "67bbdcaaa57baf32",
-                "2714f7a68d41398c"
+                "67bbdcaaa57baf32"
             ]
         ]
     },
@@ -3726,8 +3792,7 @@
         "y": 340,
         "wires": [
             [
-                "67bbdcaaa57baf32",
-                "05b99fe4383256ae"
+                "67bbdcaaa57baf32"
             ]
         ]
     },
@@ -3764,39 +3829,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "2714f7a68d41398c",
-        "type": "debug",
-        "z": "560376d6bba621ec",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 860,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "05b99fe4383256ae",
-        "type": "debug",
-        "z": "560376d6bba621ec",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 860,
-        "y": 480,
-        "wires": []
     },
     {
         "id": "c96e931494936766",
