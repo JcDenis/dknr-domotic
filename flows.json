@@ -16,6 +16,38 @@
         "env": []
     },
     {
+        "id": "560376d6bba621ec",
+        "type": "tab",
+        "label": "R_room",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "63b4849a4acfad4b",
+        "type": "tab",
+        "label": "R_tuning",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "56c0b44ca387382c",
+        "type": "tab",
+        "label": "R_scene",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3d7897ba0ee14173",
+        "type": "tab",
+        "label": "R_entity",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "d90937c9d5b88b24",
         "type": "tab",
         "label": "R_config",
@@ -27,14 +59,6 @@
         "id": "22abd94e2980c094",
         "type": "tab",
         "label": "R_auth",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "560376d6bba621ec",
-        "type": "tab",
-        "label": "R_room",
         "disabled": false,
         "info": "",
         "env": []
@@ -124,12 +148,15 @@
             "b42653048b3f39e8",
             "3fa36de74a10eac1",
             "f60de1529c423dee",
-            "f3c41b2acb15c9ea"
+            "f3c41b2acb15c9ea",
+            "07e96d88edbef793",
+            "6bb58f3ec75915c5",
+            "4e8306ceb80ac08b"
         ],
         "x": 104,
         "y": 339,
-        "w": 502,
-        "h": 142
+        "w": 512,
+        "h": 202
     },
     {
         "id": "671369a42a9b2d5c",
@@ -148,7 +175,7 @@
             "7f15feb966b47505"
         ],
         "x": 104,
-        "y": 579,
+        "y": 639,
         "w": 502,
         "h": 82
     },
@@ -182,7 +209,7 @@
             "be56244e32363548"
         ],
         "x": 104,
-        "y": 699,
+        "y": 759,
         "w": 1712,
         "h": 209.5
     },
@@ -204,7 +231,7 @@
             "d1b1e789f412bd08"
         ],
         "x": 104,
-        "y": 1179,
+        "y": 1239,
         "w": 332,
         "h": 82
     },
@@ -290,7 +317,7 @@
             "2a9a03dea7e40994"
         ],
         "x": 104,
-        "y": 939,
+        "y": 999,
         "w": 332,
         "h": 82
     },
@@ -312,7 +339,7 @@
             "89643fc02bcb1d58"
         ],
         "x": 104,
-        "y": 1059,
+        "y": 1119,
         "w": 332,
         "h": 82
     },
@@ -356,7 +383,7 @@
             "c026a3bb27b7e4d4"
         ],
         "x": 104,
-        "y": 1299,
+        "y": 1359,
         "w": 332,
         "h": 82
     },
@@ -428,7 +455,7 @@
         ],
         "x": 104,
         "y": 219,
-        "w": 1532,
+        "w": 1552,
         "h": 142
     },
     {
@@ -623,9 +650,108 @@
             "5621e43ca08d7164"
         ],
         "x": 78,
-        "y": 553,
+        "y": 613,
         "w": 1764,
         "h": 854
+    },
+    {
+        "id": "a56547820620b9a4",
+        "type": "group",
+        "z": "56c0b44ca387382c",
+        "name": "scene - page",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "7179cc22cb3792c0",
+            "278344d6e03041b4",
+            "7138cc0f966c3077",
+            "74f44e0347a943ab",
+            "02555175cc9a9cae"
+        ],
+        "x": 104,
+        "y": 39,
+        "w": 682,
+        "h": 142
+    },
+    {
+        "id": "60852e59b1e83a40",
+        "type": "group",
+        "z": "3d7897ba0ee14173",
+        "name": "entity - page",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "ab17703b4908cbf8",
+            "b3e8adf92527c468",
+            "e813aab31bc25ddd",
+            "c3d03d916dec1420"
+        ],
+        "x": 104,
+        "y": 99,
+        "w": 572,
+        "h": 82
+    },
+    {
+        "id": "3a6d56b6dcd8540a",
+        "type": "group",
+        "z": "3d7897ba0ee14173",
+        "name": "entity - room",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "ad848617eded124c",
+            "d3b7417ee68351e1",
+            "c842eaa5192d32e5",
+            "51b6e97ff76ed6e4",
+            "f5d83f7f58e28145",
+            "009f5658297ac269",
+            "893d313d3699806f",
+            "1f6ea442bbd4d849",
+            "ad48804fec92e759",
+            "9e0b692686687926",
+            "27c3f33db4e79a46",
+            "1b6877453ad938ee",
+            "1e5dd3712a1d6e5d",
+            "e56daf17aa5fb143",
+            "d6082b7d11736655",
+            "a5b60bb102d09ad6",
+            "ac565fdcf378de0e"
+        ],
+        "x": 104,
+        "y": 219,
+        "w": 1592,
+        "h": 322
+    },
+    {
+        "id": "67bb4dde6230953b",
+        "type": "group",
+        "z": "63b4849a4acfad4b",
+        "name": "tuning - page",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "c96e931494936766",
+            "b05a0af23ff18afa",
+            "67f67dd422bc4785",
+            "bb11c3ff56cfd491",
+            "251d196761ccc5df"
+        ],
+        "x": 104,
+        "y": 39,
+        "w": 682,
+        "h": 142
     },
     {
         "id": "df7710b4b2c4e55b",
@@ -677,11 +803,11 @@
             "groupOutline": "#cccccc"
         },
         "sizes": {
-            "density": "default",
-            "pagePadding": "12px",
-            "groupGap": "12px",
+            "density": "comfortable",
+            "pagePadding": "6px",
+            "groupGap": "8px",
             "groupBorderRadius": "4px",
-            "widgetGap": "12px"
+            "widgetGap": "10px"
         }
     },
     {
@@ -691,7 +817,7 @@
         "broker": "192.168.0.11",
         "port": "1883",
         "clientid": "dkapsystems",
-        "autoConnect": true,
+        "autoConnect": false,
         "usetls": false,
         "protocolVersion": 4,
         "keepalive": 60,
@@ -746,7 +872,7 @@
                 "cols": "12"
             }
         ],
-        "order": 3,
+        "order": 6,
         "className": "",
         "visible": true,
         "disabled": false
@@ -758,7 +884,7 @@
         "page": "f081fa7a92c9aeb7",
         "width": "3",
         "height": 1,
-        "order": 2,
+        "order": 1,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -772,7 +898,7 @@
         "ui": "df7710b4b2c4e55b",
         "path": "/home",
         "icon": "home",
-        "layout": "grid",
+        "layout": "notebook",
         "theme": "877e716e64a22cf1",
         "breakpoints": [
             {
@@ -798,8 +924,8 @@
         ],
         "order": 1,
         "className": "",
-        "visible": true,
-        "disabled": false
+        "visible": "true",
+        "disabled": "false"
     },
     {
         "id": "950b05cd455c3a56",
@@ -846,7 +972,7 @@
                 "cols": "12"
             }
         ],
-        "order": 4,
+        "order": 7,
         "className": "",
         "visible": true,
         "disabled": false
@@ -896,7 +1022,7 @@
                 "cols": "12"
             }
         ],
-        "order": 5,
+        "order": 8,
         "className": "",
         "visible": true,
         "disabled": false
@@ -966,6 +1092,170 @@
         "groupType": "default"
     },
     {
+        "id": "fa076f843950d108",
+        "type": "ui-group",
+        "name": "entity_room",
+        "page": "2b12391aa314ef62",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "1e9f5bde9636a371",
+        "type": "ui-page",
+        "name": "scene",
+        "ui": "df7710b4b2c4e55b",
+        "path": "/scene",
+        "icon": "toy-brick",
+        "layout": "notebook",
+        "theme": "877e716e64a22cf1",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 4,
+        "className": "",
+        "visible": true,
+        "disabled": false
+    },
+    {
+        "id": "3a30762508b6edae",
+        "type": "ui-group",
+        "name": "scene_main",
+        "page": "1e9f5bde9636a371",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "2b12391aa314ef62",
+        "type": "ui-page",
+        "name": "entity",
+        "ui": "df7710b4b2c4e55b",
+        "path": "/entity",
+        "icon": "auto-fix",
+        "layout": "notebook",
+        "theme": "877e716e64a22cf1",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 5,
+        "className": "",
+        "visible": true,
+        "disabled": false
+    },
+    {
+        "id": "73c6d9f7f62493d8",
+        "type": "ui-group",
+        "name": "config_backup",
+        "page": "f081fa7a92c9aeb7",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "1c3c77208d684dc0",
+        "type": "ui-page",
+        "name": "tuning",
+        "ui": "df7710b4b2c4e55b",
+        "path": "/tuning",
+        "icon": "wrench",
+        "layout": "notebook",
+        "theme": "877e716e64a22cf1",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 3,
+        "className": "",
+        "visible": true,
+        "disabled": false
+    },
+    {
+        "id": "9142850a35391440",
+        "type": "ui-group",
+        "name": "tuning_main",
+        "page": "1c3c77208d684dc0",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
         "id": "025edbd02daf82d0",
         "type": "http response",
         "z": "4bc72a1112cb448c",
@@ -1003,7 +1293,7 @@
         "type": "mqtt out",
         "z": "4bc72a1112cb448c",
         "g": "9e3dbf7ae870765f",
-        "name": "mqtt",
+        "name": "mqtt out",
         "topic": "",
         "qos": "0",
         "retain": "false",
@@ -1013,7 +1303,7 @@
         "correl": "",
         "expiry": "",
         "broker": "2c5e094fee5ae877",
-        "x": 450,
+        "x": 460,
         "y": 380,
         "wires": []
     },
@@ -1022,10 +1312,10 @@
         "type": "link in",
         "z": "4bc72a1112cb448c",
         "g": "9e3dbf7ae870765f",
-        "name": "common - mqtt - send",
+        "name": "common - mqtt",
         "links": [],
         "x": 145,
-        "y": 440,
+        "y": 500,
         "wires": [
             [
                 "b42653048b3f39e8"
@@ -1040,10 +1330,12 @@
         "name": "common - ui - notice",
         "links": [
             "0cf63361a578f787",
-            "92c098c716e46e3b"
+            "92c098c716e46e3b",
+            "04788c98da9d0f9d",
+            "9e0b692686687926"
         ],
         "x": 145,
-        "y": 620,
+        "y": 680,
         "wires": [
             [
                 "7f15feb966b47505"
@@ -1097,7 +1389,10 @@
             "d7bc8fc74bfc07cb",
             "289e0a6cd1209c38",
             "9aa067029d4049a3",
-            "e0e64bf3607382ef"
+            "e0e64bf3607382ef",
+            "7179cc22cb3792c0",
+            "ab17703b4908cbf8",
+            "c96e931494936766"
         ],
         "x": 3475,
         "y": 80,
@@ -1120,7 +1415,7 @@
         "repair": false,
         "outputs": 1,
         "x": 280,
-        "y": 440,
+        "y": 500,
         "wires": [
             [
                 "4f8fb9f9243e9939",
@@ -1142,7 +1437,8 @@
         "y": 380,
         "wires": [
             [
-                "f60de1529c423dee"
+                "f60de1529c423dee",
+                "07e96d88edbef793"
             ]
         ]
     },
@@ -1176,7 +1472,7 @@
         "ui": "df7710b4b2c4e55b",
         "events": "all",
         "x": 320,
-        "y": 860,
+        "y": 920,
         "wires": [
             [
                 "7651e96c4502dada"
@@ -1195,10 +1491,13 @@
             "7374df2eb856c2bc",
             "bf3da41c4b5bd219",
             "d7bc8fc74bfc07cb",
-            "e0e64bf3607382ef"
+            "e0e64bf3607382ef",
+            "7179cc22cb3792c0",
+            "ab17703b4908cbf8",
+            "c96e931494936766"
         ],
         "x": 1775,
-        "y": 800,
+        "y": 860,
         "wires": []
     },
     {
@@ -1214,7 +1513,7 @@
             "bb71762ba2269b75"
         ],
         "x": 145,
-        "y": 860,
+        "y": 920,
         "wires": [
             [
                 "bbb6fa5ec8070fb8"
@@ -1241,7 +1540,7 @@
         "className": "",
         "name": "common - ui - notice",
         "x": 480,
-        "y": 620,
+        "y": 680,
         "wires": [
             []
         ]
@@ -1263,7 +1562,7 @@
         "repair": false,
         "outputs": 1,
         "x": 270,
-        "y": 620,
+        "y": 680,
         "wires": [
             [
                 "fecaee88b8c296ed"
@@ -1469,14 +1768,14 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": ".app-bar-actions-title {\n    font-size: 1.4em;\n    color: #0094ce;\n    margin: 0.25em;\n    text-shadow: #cccccc 1px 1px 3px;\n}\n\n.v-card .remove,\n.v-card-text .remove {\n    display: none !important;\n    visibility: hidden;\n    color: transparent !important;\n}\n\n.v-table__wrapper table thead {\n    display: none !important;\n}\ntbody td[data-column-key=lbl] {\n    font-weight: bold !important;\n}\n\n.v-tab-item--selected {\n    color: #0094ce !important;\n}\n\n.v-main {\n    padding-bottom: 2em;\n}\n.ui-title span {\n    font-size: 1.4rem !important;\n    font-weight: normal !important;\n    padding: 0;\n    color: #0094ce;\n}\n\n.nrdb-ui-group {\n    border-radius: 4px;\n    box-shadow: 3px 2px 2px rgba(0, 55, 77, 0.25);\n}\n.v-application {\n    border-top: 1px solid #CCCCCC;\n    margin-top: -1px;\n}",
+        "format": ".app-bar-actions-title {\n    margin: auto;\n    text-shadow: rgb(var(--v-theme-background)) 2px 2px 1px;\n}\n\n.v-card .remove,\n.v-card-text .remove {\n    display: none !important;\n    visibility: hidden;\n    color: transparent !important;\n}\n\n.v-table__wrapper table thead {\n    display: none !important;\n}\ntbody td[data-column-key=lbl] {\n    font-weight: bold !important;\n}\n\n.v-tab-item--selected {\n    color: rgb(var(--v-theme-primary)) !important;\n}\n\n.v-main {\n    padding-bottom: 2em;\n}\n.ui-title span {\n    font-size: 1.4rem !important;\n    font-weight: normal !important;\n    padding: 0;\n    color: rgb(var(--v-theme-primary)) !important;\n}\n\n.nrdb-ui-group {\n    border-radius: 4px;\n    box-shadow: 3px 2px 2px rgba(var(--v-theme-group-outline));\n}\n.v-application {\n    border-top: 1px solid rgba(var(--v-theme-group-outline));\n    margin-top: -1px;\n}\n",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
         "templateScope": "site:style",
         "className": "",
         "x": 310,
-        "y": 740,
+        "y": 800,
         "wires": [
             []
         ]
@@ -1487,7 +1786,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "common",
-        "func": "let describe = global.get('describe', 'memoryOnly') || {};\nif (typeof describe !== 'object') {\n    describe = {};\n}\nif (typeof describe.pages !== 'object') {\n    describe.pages = {};\n}\n\n// Set default app values\ndescribe.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\ndescribe.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\ndescribe.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// save config\nglobal.set('describe', describe, 'memoryOnly');\n\n// Clear user and more\nglobal.set('auth',{},'memoryOnly');\nglobal.set('user',{},'memoryOnly');\nglobal.set('form',{},'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/.config.projects.json'\n};",
+        "func": "let describe = global.get('describe', 'memoryOnly') || {};\nif (typeof describe !== 'object') {\n    describe = {};\n}\nif (typeof describe.pages !== 'object') {\n    describe.pages = {};\n}\n\n// Set default app values\ndescribe.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\ndescribe.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\ndescribe.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['tuning'] = {\n    'id': '1c3c77208d684dc0',\n    'name': 'tuning',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['scene'] = {\n    'id': '1e9f5bde9636a371',\n    'name': 'scene',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['entity'] = {\n    'id': '2b12391aa314ef62',\n    'name': 'entity',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': false,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// save config\nglobal.set('describe', describe, 'memoryOnly');\n\n// Clear user and more\nglobal.set('auth',{},'memoryOnly');\nglobal.set('user',{},'memoryOnly');\nglobal.set('form',{},'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/.config.projects.json'\n};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1513,7 +1812,7 @@
             "70fa44d509342200"
         ],
         "x": 895,
-        "y": 740,
+        "y": 800,
         "wires": []
     },
     {
@@ -1526,7 +1825,7 @@
             "43663518deccb7c6"
         ],
         "x": 1225,
-        "y": 740,
+        "y": 800,
         "wires": [
             [
                 "8f1a54f299198096"
@@ -1548,7 +1847,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 480,
-        "y": 440,
+        "y": 500,
         "wires": []
     },
     {
@@ -1564,14 +1863,14 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-actions\">\n        <span class=\"app-bar-actions-title\">{{ msg.page_title }}</span>\n        <v-btn :href=\"msg.git\"><img height=\"32px\" src=\"/icon.png\" :title=\"msg.full\"></img></v-btn>\n    </Teleport>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-title\">\n        <v-btn-group variant=\"outlined\" divided>\n            <v-btn v-if=\"oe_menus.home\" @click=\"oe_nav('home')\" :title=\"oe_titles.home\" icon=\"mdi-home\"></v-btn> \n            <v-btn v-if=\"oe_menus.room\" @click=\"oe_nav('room')\" :title=\"oe_titles.room\" icon=\"mdi-home-search\"></v-btn> \n            <v-btn v-if=\"oe_menus.config\" @click=\"oe_nav('config')\" :title=\"oe_titles.config\" icon=\"mdi-cog\"></v-btn> \n            <v-btn v-if=\"oe_menus.auth\" @click=\"oe_nav('auth')\" :title=\"oe_titles.auth\" icon=\"mdi-login\"></v-btn> \n        </v-btn-group>\n        <v-btn-group variant=\"outlined\" divided id=\"app-bar-title-more\"></v-btn-group>\n    </Teleport>\n</template>\n\n<script>\n    export default {\n        data() {\n            return {\n                oe_menus: {  },\n                oe_titles: {  },\n                mounted: false\n            }\n        },\n        mounted() {\n            const blang = navigator.language || navigator.userLanguage;\n            this.send(blang);\n            this.mounted = true;\n        },\n        methods: {\n            oe_nav: function (page) {\n                this.send(page)\n            }\n        },\n        watch: {\n            msg: function (msg) {\n                document.documentElement.setAttribute(\"lang\", msg.page_lang);\n                document.documentElement.setAttribute(\"translate\", \"no\");\n                document.title = msg.title;\n                this.oe_menus = msg.menus;\n                this.oe_titles = msg.titles;\n            }\n        }\n    }\n\n</script>",
+        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-actions\">\n        <v-btn :href=\"msg.git\"><img height=\"32px\" src=\"/icon.png\" :title=\"msg.full\"></img></v-btn>\n    </Teleport>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-title\">\n        <v-btn-group variant=\"outlined\" divided>\n            <v-btn v-if=\"oe_menus.home\" @click=\"oe_nav('home')\" :title=\"oe_titles.home\" icon=\"mdi-home\"></v-btn> \n            <v-btn v-if=\"oe_menus.room\" @click=\"oe_nav('room')\" :title=\"oe_titles.room\" icon=\"mdi-home-search\"></v-btn> \n            <v-btn v-if=\"oe_menus.tuning\" @click=\"oe_nav('tuning')\" :title=\"oe_titles.tuning\" icon=\"mdi-wrench\"></v-btn> \n            <v-btn v-if=\"oe_menus.scene\" @click=\"oe_nav('scene')\" :title=\"oe_titles.scene\" icon=\"mdi-toy-brick\"></v-btn> \n            <v-btn v-if=\"oe_menus.entity\" @click=\"oe_nav('entity')\" :title=\"oe_titles.entity\" icon=\"mdi-auto-fix\"></v-btn> \n            <v-btn v-if=\"oe_menus.config\" @click=\"oe_nav('config')\" :title=\"oe_titles.config\" icon=\"mdi-cog\"></v-btn> \n            <v-btn v-if=\"oe_menus.auth\" @click=\"oe_nav('auth')\" :title=\"oe_titles.auth\" icon=\"mdi-login\"></v-btn> \n        </v-btn-group>\n        <v-btn-group variant=\"outlined\" divided id=\"app-bar-title-more\"></v-btn-group>\n        <span class=\"app-bar-actions-title\">{{ msg.page_title }}</span>\n    </Teleport>\n</template>\n\n<script>\n    export default {\n        data() {\n            return {\n                oe_menus: {  },\n                oe_titles: {  },\n                mounted: false\n            }\n        },\n        mounted() {\n            const blang = navigator.language || navigator.userLanguage;\n            this.send(blang);\n            this.mounted = true;\n        },\n        methods: {\n            oe_nav: function (page) {\n                this.send(page)\n            }\n        },\n        watch: {\n            msg: function (msg) {\n                document.documentElement.setAttribute(\"lang\", msg.page_lang);\n                document.documentElement.setAttribute(\"translate\", \"no\");\n                document.title = msg.title;\n                this.oe_menus = msg.menus;\n                this.oe_titles = msg.titles;\n            }\n        }\n    }\n\n</script>",
         "storeOutMessages": true,
         "passthru": false,
         "resendOnRefresh": true,
         "templateScope": "widget:ui",
         "className": "",
         "x": 1140,
-        "y": 800,
+        "y": 860,
         "wires": [
             [
                 "8f1a54f299198096"
@@ -1586,7 +1885,7 @@
         "name": "common - ui - hmi",
         "links": [],
         "x": 145,
-        "y": 1220,
+        "y": 1280,
         "wires": [
             [
                 "d1b1e789f412bd08"
@@ -1602,7 +1901,7 @@
         "mode": "return",
         "links": [],
         "x": 395,
-        "y": 1220,
+        "y": 1280,
         "wires": []
     },
     {
@@ -2365,7 +2664,7 @@
         "name": "common - ui - show",
         "links": [],
         "x": 145,
-        "y": 980,
+        "y": 1040,
         "wires": [
             [
                 "2a9a03dea7e40994"
@@ -2381,7 +2680,7 @@
         "mode": "return",
         "links": [],
         "x": 395,
-        "y": 980,
+        "y": 1040,
         "wires": []
     },
     {
@@ -2419,7 +2718,7 @@
         "to": "",
         "reg": false,
         "x": 270,
-        "y": 980,
+        "y": 1040,
         "wires": [
             [
                 "af676f21bca27752"
@@ -2434,7 +2733,7 @@
         "name": "common - ui - hide",
         "links": [],
         "x": 145,
-        "y": 1100,
+        "y": 1160,
         "wires": [
             [
                 "89643fc02bcb1d58"
@@ -2450,7 +2749,7 @@
         "mode": "return",
         "links": [],
         "x": 395,
-        "y": 1100,
+        "y": 1160,
         "wires": []
     },
     {
@@ -2488,7 +2787,7 @@
         "to": "",
         "reg": false,
         "x": 270,
-        "y": 1100,
+        "y": 1160,
         "wires": [
             [
                 "b78acc27f4a55cb0"
@@ -2507,7 +2806,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 570,
-        "y": 860,
+        "y": 920,
         "wires": [
             [
                 "fd39d13ae9c195f3"
@@ -2520,7 +2819,7 @@
         "z": "4bc72a1112cb448c",
         "g": "614d71e9e019ca82",
         "name": "action",
-        "func": "delete msg.tag; // use msg.name only\n\n// On unwanted state, stop here\nif (msg.payload.match((new RegExp('^(connect|change|lost)$'))) === null) {\n    if (typeof msg.hmi.id === 'string' && msg.hmi.id !== '') {\n        global.set('user[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n        global.set('form[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n    }\n\n    return;\n}\n\n// On connect or lost connection, go to auth page\nif (msg.payload === 'connect' || msg.payload === 'lost') {\n    msg.payload = global.get('describe.pages.auth.name', 'memoryOnly') || '';\n\n    return [null, null, msg];\n}\n\n// Prepare ui\nmsg.menus = {};\nmsg.titles = {};\nmsg.payload = {\n    'pages': {\n        'show': [],\n        'hide': []\n    }\n};\n\nlet pages = global.get('describe.pages', 'memoryOnly');\nif (typeof pages !== 'object') {\n    return;\n}\n\n// check user page right\nlet allowed = false;\nlet s = 0;\nlet h = 0;\nfor (const page in pages) {\n    if (typeof pages[page]['level'][msg.hmi.level] === 'boolean') {\n        if (pages[page]['level'][msg.hmi.level] === true) {\n            msg.menus[page] = true;\n            msg.payload.pages.show[s++] = pages[page]['name'];\n        } else {\n            msg.menus[page] = false;\n            msg.payload.pages.hide[h++] = pages[page]['name'];\n        }\n    } else {\n        if (global.get('describe.pages.auth.name', 'memoryOnly') === pages[page]['name']) {\n            msg.menus[page] = true;\n            msg.payload.pages.show[s++] = pages[page]['name'];\n        } else {\n            msg.menus[page] = false;\n            msg.payload.pages.hide[h++] = pages[page]['name'];\n        }\n    }\n    msg.titles[page] = msg.dictionary.option_page[page];\n\n    if (pages[page]['name'] === msg.hmi.name) {\n        msg.page_title = msg.dictionary.option_page[page];\n        msg.page_lang = msg.hmi.lang;\n    }\n\n    if (pages[page]['name'] === msg.hmi.name && pages[page]['level'][msg.hmi.level] === true) {\n        allowed = true;\n    }\n}\n\nif (allowed === false) {\n    msg.hmi.name = global.get('describe.pages.auth.name', 'memoryOnly');\n    msg.page_title = msg.dictionary.option_page.auth;\n    msg.page_lang = msg.hmi.lang;\n}\n\n// user plant\nglobal.set('form[\"' + msg.hmi.id + '\"][\"ts\"]', Date.now(), 'memoryOnly');\n\n// page process\nlet newMsg = {\n    'topic': '',\n    'payload': msg.hmi.name,\n    'options': [{ 'label': '', 'value': '' }],\n    'hmi': msg.hmi,\n    'dictionary': msg.dictionary,\n    '_client': msg._client\n};\n\n// ui menu\nmsg.version = global.get('describe.app.version', 'memoryOnly') || '0.0.0';\nmsg.title = msg.page_title + ' - ' + global.get('describe.app.title', 'memoryOnly');\nmsg.full = msg.title + ' v' + msg.version + ' for ' + msg.vendor;\n\ndelete msg.dictionary;\n\nreturn [msg, newMsg, null];",
+        "func": "delete msg.tag; // use msg.name only\n\n// On unwanted state, stop here\nif (msg.payload.match((new RegExp('^(connect|change|lost)$'))) === null) {\n    if (typeof msg.hmi.id === 'string' && msg.hmi.id !== '') {\n        global.set('user[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n        global.set('form[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n    }\n\n    return;\n}\n\n// On connect or lost connection, go to auth page\nif (msg.payload === 'connect' || msg.payload === 'lost') {\n    msg.payload = global.get('describe.pages.auth.name', 'memoryOnly') || '';\n\n    return [null, null, msg];\n}\n\n// Prepare ui\nmsg.menus = {};\nmsg.titles = {};\nmsg.payload = {\n    'pages': {\n        'show': [],\n        'hide': []\n    }\n};\n\nlet pages = global.get('describe.pages', 'memoryOnly');\nif (typeof pages !== 'object') {\n    return;\n}\n\n// check user page right\nlet allowed = false;\nlet s = 0;\nlet h = 0;\nfor (const page in pages) {\n    if (typeof pages[page]['level'][msg.hmi.level] === 'boolean') {\n        if (pages[page]['level'][msg.hmi.level] === true) {\n            msg.menus[page] = true;\n            msg.payload.pages.show[s++] = pages[page]['name'];\n        } else {\n            msg.menus[page] = false;\n            msg.payload.pages.hide[h++] = pages[page]['name'];\n        }\n    } else {\n        if (global.get('describe.pages.auth.name', 'memoryOnly') === pages[page]['name']) {\n            msg.menus[page] = true;\n            msg.payload.pages.show[s++] = pages[page]['name'];\n        } else {\n            msg.menus[page] = false;\n            msg.payload.pages.hide[h++] = pages[page]['name'];\n        }\n    }\n    msg.titles[page] = msg.dictionary.option_page[page];\n\n    if (pages[page]['name'] === msg.hmi.name) {\n        msg.page_title = msg.dictionary.option_page[page];\n        msg.page_lang = msg.hmi.lang;\n    }\n\n    if (pages[page]['name'] === msg.hmi.name && pages[page]['level'][msg.hmi.level] === true) {\n        allowed = true;\n    }\n}\n\nif (allowed === false) {\n    msg.hmi.name = global.get('describe.pages.auth.name', 'memoryOnly');\n    msg.page_title = msg.dictionary.option_page.auth;\n    msg.page_lang = msg.hmi.lang;\n}\n\n// user plant\nglobal.set('form[\"' + msg.hmi.id + '\"][\"ts\"]', Date.now(), 'memoryOnly');\n\n// page process\nlet newMsg = {\n    'topic': '',\n    'payload': msg.hmi.name,\n    'hmi': msg.hmi,\n    'dictionary': msg.dictionary,\n    '_client': msg._client\n};\n\n// ui menu\nmsg.version = global.get('describe.app.version', 'memoryOnly') || '0.0.0';\nmsg.title = msg.page_title + ' - ' + global.get('describe.app.title', 'memoryOnly');\nmsg.full = msg.title + ' v' + msg.version + ' for ' + msg.vendor;\n\ndelete msg.dictionary;\n\nreturn [msg, newMsg, null];",
         "outputs": 3,
         "timeout": 0,
         "noerr": 0,
@@ -2528,7 +2827,7 @@
         "finalize": "",
         "libs": [],
         "x": 770,
-        "y": 860,
+        "y": 920,
         "wires": [
             [
                 "be56244e32363548",
@@ -2556,7 +2855,7 @@
         "finalize": "",
         "libs": [],
         "x": 1380,
-        "y": 740,
+        "y": 800,
         "wires": [
             [
                 "7fcb176f2e725c02"
@@ -2575,7 +2874,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1610,
-        "y": 740,
+        "y": 800,
         "wires": [
             [
                 "b02e3c2d96304d41"
@@ -2617,7 +2916,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 1340,
+        "y": 1400,
         "wires": [
             [
                 "c026a3bb27b7e4d4"
@@ -2632,7 +2931,7 @@
         "name": "common - ui - tab",
         "links": [],
         "x": 145,
-        "y": 1340,
+        "y": 1400,
         "wires": [
             [
                 "8c540395a0e469f7"
@@ -2648,7 +2947,7 @@
         "mode": "return",
         "links": [],
         "x": 395,
-        "y": 1340,
+        "y": 1400,
         "wires": []
     },
     {
@@ -2662,7 +2961,7 @@
             "289e0a6cd1209c38"
         ],
         "x": 1775,
-        "y": 740,
+        "y": 800,
         "wires": []
     },
     {
@@ -2676,7 +2975,7 @@
             "289e0a6cd1209c38"
         ],
         "x": 1775,
-        "y": 860,
+        "y": 920,
         "wires": []
     },
     {
@@ -2699,7 +2998,7 @@
         "templateScope": "widget:ui",
         "className": "",
         "x": 320,
-        "y": 800,
+        "y": 860,
         "wires": [
             []
         ]
@@ -2714,7 +3013,7 @@
             "92c098c716e46e3b"
         ],
         "x": 145,
-        "y": 740,
+        "y": 800,
         "wires": [
             [
                 "b490f62e4ba2632e",
@@ -2741,7 +3040,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 930,
-        "y": 800,
+        "y": 860,
         "wires": [
             [
                 "4841db186251fd55"
@@ -2787,7 +3086,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "check",
-        "func": "if (typeof msg.payload !== 'object') {\n    msg.payload = {};\n}\nif (typeof msg.payload.pages !== 'object') {\n    msg.payload.pages = {};\n}\nif (typeof msg.payload.dictionary !== 'object') {\n    msg.payload.dictionary = {};\n}\n\nlet describe = global.get('describe', 'memoryOnly') || {};\nfor (const page in msg.payload.pages) {\n    describe.pages[page] = msg.payload.pages[page];\n}\n\nglobal.set('describe', describe, 'memoryOnly');\n\nlet dictionary = global.get('dictionary', 'memoryOnly') || {};\nfor (const lang in msg.payload.dictionary) {\n    if (typeof dictionary[lang] !== 'object') {\n        dictionary[lang] = {};\n    }\n    if (typeof msg.payload.dictionary[lang] === 'object') {\n        for (const group in msg.payload.dictionary[lang]) {\n            if (typeof dictionary[lang][group] !== 'object') {\n                dictionary[lang][group] = {};\n            }\n            if (typeof msg.payload.dictionary[lang][group] === 'object') {\n                // custom sentence overwrite default ones\n                dictionary[lang][group] = { ...dictionary[lang][group], ...msg.payload.dictionary[lang][group] };\n            }\n        }\n    }\n}\n\nglobal.set('dictionary', dictionary, 'memoryOnly');\n\nreturn msg;",
+        "func": "if (typeof msg.payload !== 'object') {\n    msg.payload = {};\n}\nif (typeof msg.payload.pages !== 'object') {\n    msg.payload.pages = {};\n}\nif (typeof msg.payload.dictionary !== 'object') {\n    msg.payload.dictionary = {};\n}\n\nlet describe = global.get('describe', 'memoryOnly') || {};\nfor (const page in msg.payload.pages) {\n    describe.pages[page] = msg.payload.pages[page];\n}\n\nglobal.set('describe', describe, 'memoryOnly');\n\nlet dictionary = global.get('dictionary', 'memoryOnly') || {};\nfor (const lang in msg.payload.dictionary) {\n    if (typeof dictionary[lang] !== 'object') {\n        dictionary[lang] = {};\n    }\n    if (typeof msg.payload.dictionary[lang] === 'object') {\n        for (const group in msg.payload.dictionary[lang]) {\n            if (typeof dictionary[lang][group] !== 'object') {\n                dictionary[lang][group] = {};\n            }\n            if (typeof msg.payload.dictionary[lang][group] === 'object') {\n                for (const sentence in msg.payload.dictionary[lang][group]) {\n                    // custom sentence overwrite existing ones\n                    dictionary[lang][group][sentence] = msg.payload.dictionary[lang][group][sentence];\n                }\n            }\n        }\n    }\n}\n\nglobal.set('dictionary', dictionary, 'memoryOnly');\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2865,7 +3164,7 @@
                 "t": "set",
                 "p": "payload.en",
                 "pt": "msg",
-                "to": "{\t    'option_page': {\t        'home': 'Home',\t        'room': 'Rooms',\t        'config': 'Configuration',\t        'auth': 'Authentication'\t    },\t    'option_level': {\t        'visitor': 'Visitor',\t        'child':  'Child',\t        'parent':'Parent',\t        'admin': 'Administrator'\t    },\t    'option_team': {\t        'm': 'Morning',\t        'a': 'Afternoon',\t        'n': 'Night',\t        'd': 'Day',\t        'w': 'Weekend',\t        's': 'Saturday'\t    },\t    'option_lang': {\t        'en': 'English',\t        'fr': 'French'\t    },\t    'option_color': {\t        'on': '#008000',\t        'off': '#FF0000',\t        'median': '#F08000',\t        'none': '#808000',\t        'theme': '#0094CE',\t        'empty': '#CCCCCC'\t    },\t    'notice': {\t        'file_write_success': 'Saved file successfully',\t        'file_write_fail': 'Failed to save file',\t        'login_fail': 'Wrong username or password'\t    },\t    'group_auth': {\t        'login': 'Login',\t        'pass': 'Password',\t        'auth_user': 'User'\t    },\t    'group_config': {\t        'mqtt_title': 'MQTT configuration',\t        'mqtt_host': 'Broker IP address',\t        'mqtt_port': 'Port',\t        'mqtt_topic': 'Topic',\t        'mqtt_username': 'Username',\t        'mqtt_password': 'Password',\t        'mqtt_discovery': 'Home Assistant Discovery topic',\t        'mqtt_enabled': 'Enable MQTT'\t    }\t}",
+                "to": "{\t    'option_page': {\t        'home': 'Home',\t        'room': 'Rooms',\t        'tuning': 'Adjustments',\t        'scene': 'Scenes',\t        'entity': 'Entities',\t        'config': 'Configuration',\t        'auth': 'Authentication'\t    },\t    'option_level': {\t        'visitor': 'Visitor',\t        'child':  'Child',\t        'parent':'Parent',\t        'admin': 'Administrator'\t    },\t    'option_team': {\t        'm': 'Morning',\t        'a': 'Afternoon',\t        'n': 'Night',\t        'd': 'Day',\t        'w': 'Weekend',\t        's': 'Saturday'\t    },\t    'option_lang': {\t        'en': 'English',\t        'fr': 'French'\t    },\t    'option_color': {\t        'on': '#008000',\t        'off': '#FF0000',\t        'median': '#F08000',\t        'none': '#808000',\t        'theme': '#0094CE',\t        'empty': '#CCCCCC'\t    },\t    'notice': {\t        'file_write_success': 'Saved file successfully',\t        'file_write_fail': 'Failed to save file',\t        'login_fail': 'Wrong username or password',\t        'save_success': 'Successfully saved'\t    },\t    'group_room': {\t        'room_select': 'Select a room'\t    },\t    'group_entity': {\t        'room_title': 'Rooms configuration',\t        'room_add': 'Add or edit a room',\t        'room_del': 'Delete a room',\t        'room_id': 'Ident',\t        'room_name': 'Name'\t    },\t    'group_config': {\t        'mqtt_title': 'MQTT configuration',\t        'mqtt_host': 'Broker IP address',\t        'mqtt_port': 'Port',\t        'mqtt_topic': 'Topic',\t        'mqtt_username': 'Username',\t        'mqtt_password': 'Password',\t        'mqtt_discovery': 'Home Assistant Discovery topic',\t        'mqtt_enabled': 'Enable MQTT',\t\t        'backup_title': 'Backup configuration',\t        'backup_room': 'Rooms',\t        'backup_entity': 'Entities',\t        'backup_scene': 'Scenes',\t        'backup_user': 'Users',\t        'backup_mqtt': 'MQTT'\t    },\t    'group_auth': {\t        'login': 'Login',\t        'pass': 'Password',\t        'auth_user': 'User'\t    }\t}",
                 "tot": "jsonata"
             }
         ],
@@ -2888,7 +3187,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "dictionary",
-        "func": "let dictionary = global.get('dictionary', 'memoryOnly') || {};\nfor (const lang in msg.payload) {\n    if (typeof dictionary[lang] !== 'object') {\n        dictionary[lang] = {};\n    }\n    if (typeof msg.payload[lang] === 'object') {\n        for (const group in msg.payload[lang]) {\n            if (typeof dictionary[lang][group] !== 'object') {\n                dictionary[lang][group] = {};\n            }\n            if (typeof msg.payload[lang][group] === 'object') {\n                // default sentence does not overwrite custom ones\n                dictionary[lang][group] = { ...msg.payload[lang][group], ...dictionary[lang][group] };\n            }\n        }\n    }\n}\n\nglobal.set('dictionary', dictionary, 'memoryOnly');\n\n//await new Promise(resolve => setTimeout(resolve, 10));\n\nmsg.payload = '';\n\nreturn msg;",
+        "func": "let dictionary = global.get('dictionary', 'memoryOnly') || {};\n\n// First clean up \"en\"\nif (typeof msg.payload['en'] === 'object') {\n    for (const group in msg.payload['en']) {\n        if (typeof dictionary['en'][group] !== 'object') {\n            dictionary['en'][group] = {};\n        }\n        if (typeof msg.payload['en'][group] === 'object') {\n            for (const sentence in msg.payload['en'][group]) {\n                // custom sentence overwrite existing ones\n                dictionary['en'][group][sentence] = msg.payload['en'][group][sentence];\n            }\n        }\n    }\n}\n\n// then fill all others langs\nfor (const lang in msg.payload) {\n    if (lang !== 'en') {\n        if (typeof dictionary[lang] !== 'object') {\n            dictionary[lang] = {};\n        }\n\n        // fisrt fill current lang qith \"en\" sentences\n        for (const group in dictionary['en']) {\n            if (typeof dictionary[lang][group] !== 'object') {\n                dictionary[lang][group] = {};\n            }\n            for (const sentence in dictionary['en'][group]) {\n                // custom sentence overwrite existing ones\n                dictionary[lang][group][sentence] = dictionary['en'][group][sentence];\n            }\n        }\n\n        // then fill current lang with custom sentences\n        if (typeof msg.payload[lang] === 'object') {\n            for (const group in msg.payload[lang]) {\n                if (typeof dictionary[lang][group] !== 'object') {\n                    dictionary[lang][group] = {};\n                }\n                if (typeof msg.payload[lang][group] === 'object') {\n                    for (const sentence in msg.payload[lang][group]) {\n                        // custom sentence overwrite existing ones\n                        dictionary[lang][group][sentence] = msg.payload[lang][group][sentence];\n                    }\n                }\n            }\n        }\n    }\n}\n\nglobal.set('dictionary', dictionary, 'memoryOnly');\n\n//await new Promise(resolve => setTimeout(resolve, 10));\n\nmsg.payload = '';\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2914,7 +3213,7 @@
                 "t": "set",
                 "p": "payload.fr",
                 "pt": "msg",
-                "to": "{\t    'option_page': {\t        'home': 'Accueil',\t        'room': 'Pièces',\t        'config': 'Configuration',\t        'auth': 'Authentification'\t    },\t    'option_level': {\t        'visitor': 'Visiteur',\t        'child':  'Enfant',\t        'parent':'Parent',\t        'admin': 'Administrateur'\t    },\t    'option_team': {\t        'm': 'Maint',\t        'a': 'Après-midi',\t        'n': 'Nuit',\t        'd': 'Journée',\t        's': 'Samedi',\t        'w': 'Weekend'\t    },\t    'option_lang': {\t        'en': 'English',\t        'fr': 'French'\t    },\t    'notice': {\t        'file_write_success': 'Fichier sauvegardé avec suucès',\t        'file_write_fail': 'Impossiblde de sauvegarder le fichier',\t        'login_fail': \"Mauvais nom d'utilisateur ou de mot de passe\"\t    },\t    'group_auth': {\t        'login': 'Identifiant',\t        'pass': 'Mot de passe',\t        'user': 'Utilisateur'\t    },\t    'group_config': {\t        'mqtt_title': 'Configuration MQTT',\t        'mqtt_host': 'Adresse IP du broker',\t        'mqtt_port': 'Port',\t        'mqtt_topic': 'Topic',\t        'mqtt_username': 'Utilisateur',\t        'mqtt_password': 'Mot de passe',\t        'mqtt_discovery': 'Home Assistant Discovery topic',\t        'mqtt_enabled': 'Activer MQTT'\t    }\t}",
+                "to": "{\t    'option_page': {\t        'home': 'Accueil',\t        'room': 'Pièces',\t        'tuning': 'Ajustements',\t        'scene': 'Scènes',\t        'entity': 'Entités',\t        'config': 'Configuration',\t        'auth': 'Authentification'\t    },\t    'option_level': {\t        'visitor': 'Visiteur',\t        'child':  'Enfant',\t        'parent':'Parent',\t        'admin': 'Administrateur'\t    },\t    'option_team': {\t        'm': 'Maint',\t        'a': 'Après-midi',\t        'n': 'Nuit',\t        'd': 'Journée',\t        's': 'Samedi',\t        'w': 'Weekend'\t    },\t    'option_lang': {\t        'en': 'English',\t        'fr': 'French'\t    },\t    'notice': {\t        'file_write_success': 'Fichier sauvegardé avec suucès',\t        'file_write_fail': 'Impossiblde de sauvegarder le fichier',\t        'login_fail': \"Mauvais nom d'utilisateur ou de mot de passe\",\t        'save_success': 'Sauvergardé avec succès'\t    },\t    'group_room': {\t        'room_select': 'Sélectionner une pièce'\t    },\t    'group_entity': {\t        'room_title': 'Configuration des pièces',\t        'room_add': 'Ajouter ou modifier une pièce',\t        'room_del': 'Supprimer une pièce',\t        'room_id': 'Identifant',\t        'room_name': 'Nom'\t    },\t    'group_config': {\t        'mqtt_title': 'Configuration MQTT',\t        'mqtt_host': 'Adresse IP du broker',\t        'mqtt_port': 'Port',\t        'mqtt_topic': 'Topic',\t        'mqtt_username': 'Utilisateur',\t        'mqtt_password': 'Mot de passe',\t        'mqtt_discovery': 'Home Assistant Discovery topic',\t        'mqtt_enabled': 'Activer MQTT',\t\t        'backup_title': \"Configuration d'une sauvergarde\",\t        'backup_room': 'Pièces',\t        'backup_entity': 'Entités',\t        'backup_scene': 'Scènes',\t        'backup_user': 'Utilisateurs',\t        'backup_mqtt': 'MQTT'\t    },\t    'group_auth': {\t        'login': 'Identifiant',\t        'pass': 'Mot de passe',\t        'user': 'Utilisateur'\t    }\t}",
                 "tot": "jsonata"
             }
         ],
@@ -2973,7 +3272,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 1220,
+        "y": 1280,
         "wires": [
             [
                 "7214e26c1a5974bd"
@@ -3038,6 +3337,61 @@
                 "b5b1483216d0643f"
             ]
         ]
+    },
+    {
+        "id": "6bb58f3ec75915c5",
+        "type": "mqtt in",
+        "z": "4bc72a1112cb448c",
+        "g": "9e3dbf7ae870765f",
+        "name": "mqtt in",
+        "topic": "",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2c5e094fee5ae877",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 450,
+        "y": 440,
+        "wires": [
+            [
+                "4e8306ceb80ac08b"
+            ]
+        ]
+    },
+    {
+        "id": "07e96d88edbef793",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "9e3dbf7ae870765f",
+        "name": "check",
+        "func": "msg.broker = {};\n\nlet mqtt = global.get('mqtt', 'default');\nif (typeof mqtt == 'object' && mqtt.enabled == true) {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.topic.length > 0\n    ) {\n        msg.broker.broker = mqtt.host;\n        msg.broker.port = mqtt.port;\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.broker.force = true;\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.topic + '/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'default');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 440,
+        "wires": [
+            [
+                "6bb58f3ec75915c5"
+            ]
+        ]
+    },
+    {
+        "id": "4e8306ceb80ac08b",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "9e3dbf7ae870765f",
+        "name": "common - mqtt",
+        "mode": "link",
+        "links": [],
+        "x": 575,
+        "y": 440,
+        "wires": []
     },
     {
         "id": "d7bc8fc74bfc07cb",
@@ -3143,6 +3497,1028 @@
         ]
     },
     {
+        "id": "e0e64bf3607382ef",
+        "type": "link in",
+        "z": "560376d6bba621ec",
+        "g": "68879a4b30c8475f",
+        "name": "room - page",
+        "links": [
+            "911bbe32f79bec46",
+            "92c098c716e46e3b"
+        ],
+        "x": 145,
+        "y": 140,
+        "wires": [
+            [
+                "6032c172166c64ad"
+            ]
+        ]
+    },
+    {
+        "id": "5241685ca99b7bc4",
+        "type": "link out",
+        "z": "560376d6bba621ec",
+        "g": "68879a4b30c8475f",
+        "name": "home - page",
+        "mode": "link",
+        "links": [
+            "d1d7ca12d01768ca"
+        ],
+        "x": 635,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "7d40a7ae15a1cd97",
+        "type": "ui-text",
+        "z": "560376d6bba621ec",
+        "g": "68879a4b30c8475f",
+        "group": "dbf1f2065ded8405",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "room - title",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "ui-title",
+        "value": "dictionary.option_page.room",
+        "valueType": "msg",
+        "x": 690,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "6032c172166c64ad",
+        "type": "change",
+        "z": "560376d6bba621ec",
+        "g": "68879a4b30c8475f",
+        "name": "tab",
+        "rules": [
+            {
+                "t": "set",
+                "p": "check",
+                "pt": "msg",
+                "to": "room",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 270,
+        "y": 140,
+        "wires": [
+            [
+                "ca90fa81b5d76007"
+            ]
+        ]
+    },
+    {
+        "id": "ca90fa81b5d76007",
+        "type": "link call",
+        "z": "560376d6bba621ec",
+        "g": "68879a4b30c8475f",
+        "name": "",
+        "links": [
+            "88c5aeadbe80be20"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 470,
+        "y": 140,
+        "wires": [
+            [
+                "7d40a7ae15a1cd97",
+                "5241685ca99b7bc4"
+            ]
+        ]
+    },
+    {
+        "id": "d1d7ca12d01768ca",
+        "type": "link in",
+        "z": "560376d6bba621ec",
+        "name": "room - select",
+        "links": [
+            "5241685ca99b7bc4"
+        ],
+        "x": 145,
+        "y": 280,
+        "wires": [
+            [
+                "0887a5fd2eb0f0fc"
+            ]
+        ]
+    },
+    {
+        "id": "0887a5fd2eb0f0fc",
+        "type": "switch",
+        "z": "560376d6bba621ec",
+        "name": "enabled",
+        "property": "enabled",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 280,
+        "y": 280,
+        "wires": [
+            [
+                "87ca4c37834651cf"
+            ],
+            [
+                "7388705c484e77d7"
+            ]
+        ]
+    },
+    {
+        "id": "87ca4c37834651cf",
+        "type": "link call",
+        "z": "560376d6bba621ec",
+        "name": "",
+        "links": [
+            "c58cbe9b2f7ccf93"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 490,
+        "y": 280,
+        "wires": [
+            [
+                "5de2c01134449b81"
+            ]
+        ]
+    },
+    {
+        "id": "7388705c484e77d7",
+        "type": "link call",
+        "z": "560376d6bba621ec",
+        "name": "",
+        "links": [
+            "20e4fb9d16e1fade"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 490,
+        "y": 340,
+        "wires": [
+            [
+                "11a049b344d79a79"
+            ]
+        ]
+    },
+    {
+        "id": "5de2c01134449b81",
+        "type": "function",
+        "z": "560376d6bba621ec",
+        "name": "data",
+        "func": "msg.payload = '';\nlet rooms = global.get('room', 'default') || {};\nlet i = 0;\n\nlet dropdownOptions = [];\nfor (const room in rooms) {\n    dropdownOptions[i++] = {\n        'label': rooms[room] + ' (' + room + ')',\n        'value': room\n    };\n}\n\nmsg.ui_update = {\n    'label': msg.dictionary.group_room.room_select,\n    'options': dropdownOptions\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 280,
+        "wires": [
+            [
+                "67bbdcaaa57baf32",
+                "2714f7a68d41398c"
+            ]
+        ]
+    },
+    {
+        "id": "11a049b344d79a79",
+        "type": "change",
+        "z": "560376d6bba621ec",
+        "name": "-",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ui_update",
+                "pt": "msg",
+                "to": "{\t    'label': '',\t    'options': []\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 340,
+        "wires": [
+            [
+                "67bbdcaaa57baf32",
+                "05b99fe4383256ae"
+            ]
+        ]
+    },
+    {
+        "id": "67bbdcaaa57baf32",
+        "type": "ui-dropdown",
+        "z": "560376d6bba621ec",
+        "group": "dbf1f2065ded8405",
+        "name": "room - select - form",
+        "label": "",
+        "tooltip": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": true,
+        "msgTrigger": "onChange",
+        "x": 890,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2714f7a68d41398c",
+        "type": "debug",
+        "z": "560376d6bba621ec",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "05b99fe4383256ae",
+        "type": "debug",
+        "z": "560376d6bba621ec",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "c96e931494936766",
+        "type": "link in",
+        "z": "63b4849a4acfad4b",
+        "g": "67bb4dde6230953b",
+        "name": "tuning - page",
+        "links": [
+            "911bbe32f79bec46",
+            "92c098c716e46e3b"
+        ],
+        "x": 145,
+        "y": 140,
+        "wires": [
+            [
+                "bb11c3ff56cfd491"
+            ]
+        ]
+    },
+    {
+        "id": "b05a0af23ff18afa",
+        "type": "link out",
+        "z": "63b4849a4acfad4b",
+        "g": "67bb4dde6230953b",
+        "name": "tuning - page",
+        "mode": "link",
+        "links": [],
+        "x": 635,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "67f67dd422bc4785",
+        "type": "ui-text",
+        "z": "63b4849a4acfad4b",
+        "g": "67bb4dde6230953b",
+        "group": "9142850a35391440",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "tuning - title",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "ui-title",
+        "value": "dictionary.option_page.tuning",
+        "valueType": "msg",
+        "x": 690,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "bb11c3ff56cfd491",
+        "type": "change",
+        "z": "63b4849a4acfad4b",
+        "g": "67bb4dde6230953b",
+        "name": "tab",
+        "rules": [
+            {
+                "t": "set",
+                "p": "check",
+                "pt": "msg",
+                "to": "tuning",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 270,
+        "y": 140,
+        "wires": [
+            [
+                "251d196761ccc5df"
+            ]
+        ]
+    },
+    {
+        "id": "251d196761ccc5df",
+        "type": "link call",
+        "z": "63b4849a4acfad4b",
+        "g": "67bb4dde6230953b",
+        "name": "",
+        "links": [
+            "88c5aeadbe80be20"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 470,
+        "y": 140,
+        "wires": [
+            [
+                "67f67dd422bc4785",
+                "b05a0af23ff18afa"
+            ]
+        ]
+    },
+    {
+        "id": "7179cc22cb3792c0",
+        "type": "link in",
+        "z": "56c0b44ca387382c",
+        "g": "a56547820620b9a4",
+        "name": "scene - page",
+        "links": [
+            "911bbe32f79bec46",
+            "92c098c716e46e3b"
+        ],
+        "x": 145,
+        "y": 140,
+        "wires": [
+            [
+                "74f44e0347a943ab"
+            ]
+        ]
+    },
+    {
+        "id": "278344d6e03041b4",
+        "type": "link out",
+        "z": "56c0b44ca387382c",
+        "g": "a56547820620b9a4",
+        "name": "scene - page",
+        "mode": "link",
+        "links": [],
+        "x": 635,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "7138cc0f966c3077",
+        "type": "ui-text",
+        "z": "56c0b44ca387382c",
+        "g": "a56547820620b9a4",
+        "group": "3a30762508b6edae",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "scene - title",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "ui-title",
+        "value": "dictionary.option_page.scene",
+        "valueType": "msg",
+        "x": 690,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "74f44e0347a943ab",
+        "type": "change",
+        "z": "56c0b44ca387382c",
+        "g": "a56547820620b9a4",
+        "name": "tab",
+        "rules": [
+            {
+                "t": "set",
+                "p": "check",
+                "pt": "msg",
+                "to": "scene",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 270,
+        "y": 140,
+        "wires": [
+            [
+                "02555175cc9a9cae"
+            ]
+        ]
+    },
+    {
+        "id": "02555175cc9a9cae",
+        "type": "link call",
+        "z": "56c0b44ca387382c",
+        "g": "a56547820620b9a4",
+        "name": "",
+        "links": [
+            "88c5aeadbe80be20"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 470,
+        "y": 140,
+        "wires": [
+            [
+                "7138cc0f966c3077",
+                "278344d6e03041b4"
+            ]
+        ]
+    },
+    {
+        "id": "ab17703b4908cbf8",
+        "type": "link in",
+        "z": "3d7897ba0ee14173",
+        "g": "60852e59b1e83a40",
+        "name": "entity - page",
+        "links": [
+            "911bbe32f79bec46",
+            "92c098c716e46e3b"
+        ],
+        "x": 145,
+        "y": 140,
+        "wires": [
+            [
+                "e813aab31bc25ddd"
+            ]
+        ]
+    },
+    {
+        "id": "b3e8adf92527c468",
+        "type": "link out",
+        "z": "3d7897ba0ee14173",
+        "g": "60852e59b1e83a40",
+        "name": "entity - page",
+        "mode": "link",
+        "links": [
+            "ad848617eded124c"
+        ],
+        "x": 635,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "e813aab31bc25ddd",
+        "type": "change",
+        "z": "3d7897ba0ee14173",
+        "g": "60852e59b1e83a40",
+        "name": "tab",
+        "rules": [
+            {
+                "t": "set",
+                "p": "check",
+                "pt": "msg",
+                "to": "entity",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 270,
+        "y": 140,
+        "wires": [
+            [
+                "c3d03d916dec1420"
+            ]
+        ]
+    },
+    {
+        "id": "c3d03d916dec1420",
+        "type": "link call",
+        "z": "3d7897ba0ee14173",
+        "g": "60852e59b1e83a40",
+        "name": "",
+        "links": [
+            "88c5aeadbe80be20"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 470,
+        "y": 140,
+        "wires": [
+            [
+                "b3e8adf92527c468"
+            ]
+        ]
+    },
+    {
+        "id": "ad848617eded124c",
+        "type": "link in",
+        "z": "3d7897ba0ee14173",
+        "g": "3a6d56b6dcd8540a",
+        "name": "entity - room",
+        "links": [
+            "9e0b692686687926",
+            "b3e8adf92527c468"
+        ],
+        "x": 145,
+        "y": 320,
+        "wires": [
+            [
+                "c842eaa5192d32e5"
+            ]
+        ]
+    },
+    {
+        "id": "d3b7417ee68351e1",
+        "type": "ui-text",
+        "z": "3d7897ba0ee14173",
+        "g": "3a6d56b6dcd8540a",
+        "group": "fa076f843950d108",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "entity - room - title",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "ui-title",
+        "value": "dictionary.group_entity.room_title",
+        "valueType": "msg",
+        "x": 890,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "c842eaa5192d32e5",
+        "type": "switch",
+        "z": "3d7897ba0ee14173",
+        "g": "3a6d56b6dcd8540a",
+        "name": "enabled",
+        "property": "enabled",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 280,
+        "y": 320,
+        "wires": [
+            [
+                "51b6e97ff76ed6e4"
+            ],
+            [
+                "f5d83f7f58e28145"
+            ]
+        ]
+    },
+    {
+        "id": "51b6e97ff76ed6e4",
+        "type": "link call",
+        "z": "3d7897ba0ee14173",
+        "g": "3a6d56b6dcd8540a",
+        "name": "",
+        "links": [
+            "c58cbe9b2f7ccf93"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 490,
+        "y": 320,
+        "wires": [
+            [
+                "e56daf17aa5fb143"
+            ]
+        ]
+    },
+    {
+        "id": "f5d83f7f58e28145",
+        "type": "link call",
+        "z": "3d7897ba0ee14173",
+        "g": "3a6d56b6dcd8540a",
+        "name": "",
+        "links": [
+            "20e4fb9d16e1fade"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 490,
+        "y": 380,
+        "wires": [
+            [
+                "1b6877453ad938ee"
+            ]
+        ]
+    },
+    {
+        "id": "009f5658297ac269",
+        "type": "ui-form",
+        "z": "3d7897ba0ee14173",
+        "g": "3a6d56b6dcd8540a",
+        "name": "entity - room - add - form",
+        "group": "fa076f843950d108",
+        "label": "",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "id",
+                "key": "id",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "name",
+                "key": "name",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "id": "",
+            "name": ""
+        },
+        "payload": "",
+        "submit": "►",
+        "cancel": "",
+        "resetOnSubmit": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "passthru": false,
+        "dropdownOptions": [],
+        "x": 910,
+        "y": 380,
+        "wires": [
+            [
+                "893d313d3699806f"
+            ]
+        ]
+    },
+    {
+        "id": "893d313d3699806f",
+        "type": "link call",
+        "z": "3d7897ba0ee14173",
+        "g": "3a6d56b6dcd8540a",
+        "name": "",
+        "links": [
+            "56e6a7b9b0e66451"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1170,
+        "y": 380,
+        "wires": [
+            [
+                "1f6ea442bbd4d849"
+            ]
+        ]
+    },
+    {
+        "id": "1f6ea442bbd4d849",
+        "type": "function",
+        "z": "3d7897ba0ee14173",
+        "g": "3a6d56b6dcd8540a",
+        "name": "save",
+        "func": "if (msg.payload.id !== '' && msg.payload.name !== '') {\n    let room = global.get('room', 'default') || {};\n    room[msg.payload.id] = msg.payload.name;\n    global.set('room', room, 'default');\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.notice.save_success;\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1370,
+        "y": 380,
+        "wires": [
+            [
+                "ad48804fec92e759"
+            ]
+        ]
+    },
+    {
+        "id": "ad48804fec92e759",
+        "type": "delay",
+        "z": "3d7897ba0ee14173",
+        "g": "3a6d56b6dcd8540a",
+        "name": "50ms",
+        "pauseType": "delay",
+        "timeout": "50",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1530,
+        "y": 380,
+        "wires": [
+            [
+                "9e0b692686687926"
+            ]
+        ]
+    },
+    {
+        "id": "9e0b692686687926",
+        "type": "link out",
+        "z": "3d7897ba0ee14173",
+        "g": "3a6d56b6dcd8540a",
+        "name": "entity - room",
+        "mode": "link",
+        "links": [
+            "ad848617eded124c",
+            "f4a2353e5f92576c"
+        ],
+        "x": 1655,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "27c3f33db4e79a46",
+        "type": "ui-text",
+        "z": "3d7897ba0ee14173",
+        "g": "3a6d56b6dcd8540a",
+        "group": "fa076f843950d108",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "entity - room - add - title",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "ui-title",
+        "value": " ",
+        "valueType": "str",
+        "x": 910,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "1b6877453ad938ee",
+        "type": "change",
+        "z": "3d7897ba0ee14173",
+        "g": "3a6d56b6dcd8540a",
+        "name": "-",
+        "rules": [],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 380,
+        "wires": [
+            [
+                "d3b7417ee68351e1",
+                "009f5658297ac269",
+                "27c3f33db4e79a46",
+                "1e5dd3712a1d6e5d",
+                "d6082b7d11736655"
+            ]
+        ]
+    },
+    {
+        "id": "1e5dd3712a1d6e5d",
+        "type": "ui-text",
+        "z": "3d7897ba0ee14173",
+        "g": "3a6d56b6dcd8540a",
+        "group": "fa076f843950d108",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "entity - room - del - title",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "ui-title",
+        "value": " ",
+        "valueType": "str",
+        "x": 900,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "e56daf17aa5fb143",
+        "type": "function",
+        "z": "3d7897ba0ee14173",
+        "g": "3a6d56b6dcd8540a",
+        "name": "read",
+        "func": "// entity - room - title\nmsg.payload = '';\nnode.send([msg, null, null, null, null]);\n\n// entity - room - add - title\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.group_entity.room_add\n};\nnode.send([null, msg, null, null, null]);\n\n// entity - room - add - form\nmsg.payload = {};\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.room_id,\n            \"key\": \"id\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.room_name,\n            \"key\": \"name\",\n            \"required\": false\n        }\n    ]\n};\nnode.send([null, null, msg, null, null]);\n\n// entity - room - del - title\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.group_entity.room_del\n};\nnode.send([null, null, null, msg, null]);\n\n// entity - room - del - form\nmsg.payload = '';\nlet rooms = global.get('room', 'default') || {};\nlet i = 0;\n\nlet dropdownOptions = [];\nfor (const room in rooms) {\n    dropdownOptions[i++] = {\n        'label': rooms[room] + ' (' + room + ')',\n        'value': room,\n        'dropdown':'id'\n    };\n}\n\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.room_name,\n            \"key\": \"id\",\n            \"required\": false\n        }\n    ],\n    'dropdownOptions': dropdownOptions\n}\n\nnode.send([null, null, null, null, msg]);\n\nreturn;",
+        "outputs": 5,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 320,
+        "wires": [
+            [
+                "d3b7417ee68351e1"
+            ],
+            [
+                "27c3f33db4e79a46"
+            ],
+            [
+                "009f5658297ac269"
+            ],
+            [
+                "1e5dd3712a1d6e5d"
+            ],
+            [
+                "d6082b7d11736655"
+            ]
+        ]
+    },
+    {
+        "id": "d6082b7d11736655",
+        "type": "ui-form",
+        "z": "3d7897ba0ee14173",
+        "g": "3a6d56b6dcd8540a",
+        "name": "entity - room - del - form",
+        "group": "fa076f843950d108",
+        "label": "",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "id",
+                "key": "id",
+                "type": "dropdown",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "id": ""
+        },
+        "payload": "",
+        "submit": "►",
+        "cancel": "",
+        "resetOnSubmit": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "passthru": false,
+        "dropdownOptions": [
+            {
+                "dropdown": "id",
+                "value": "",
+                "label": ""
+            }
+        ],
+        "x": 910,
+        "y": 500,
+        "wires": [
+            [
+                "ac565fdcf378de0e"
+            ]
+        ]
+    },
+    {
+        "id": "a5b60bb102d09ad6",
+        "type": "function",
+        "z": "3d7897ba0ee14173",
+        "g": "3a6d56b6dcd8540a",
+        "name": "save",
+        "func": "if (msg.payload.id !== '') {\n    let rooms = global.get('room', 'default') || {};\n    delete rooms[msg.payload.id];\n    global.set('room', rooms, 'default');\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.notice.save_success;\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1370,
+        "y": 500,
+        "wires": [
+            [
+                "ad48804fec92e759"
+            ]
+        ]
+    },
+    {
+        "id": "ac565fdcf378de0e",
+        "type": "link call",
+        "z": "3d7897ba0ee14173",
+        "g": "3a6d56b6dcd8540a",
+        "name": "",
+        "links": [
+            "56e6a7b9b0e66451"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1170,
+        "y": 500,
+        "wires": [
+            [
+                "a5b60bb102d09ad6"
+            ]
+        ]
+    },
+    {
         "id": "7374df2eb856c2bc",
         "type": "link in",
         "z": "d90937c9d5b88b24",
@@ -3168,7 +4544,8 @@
         "name": "config - page",
         "mode": "link",
         "links": [
-            "df19be1275e79b1c"
+            "df19be1275e79b1c",
+            "0faf68b39e3ca1d8"
         ],
         "x": 635,
         "y": 140,
@@ -3269,6 +4646,20 @@
                 "pt": "global",
                 "to": "payload",
                 "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
             }
         ],
         "action": "",
@@ -3276,7 +4667,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1310,
+        "x": 1330,
         "y": 260,
         "wires": [
             [
@@ -3302,7 +4693,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1470,
+        "x": 1490,
         "y": 260,
         "wires": [
             [
@@ -3315,50 +4706,50 @@
         "type": "ui-form",
         "z": "d90937c9d5b88b24",
         "g": "d15289b1932a175e",
-        "name": "ui - mqtt - form",
+        "name": "config - mqtt - form",
         "group": "4c116fe2697e0aa9",
         "label": "",
         "order": 2,
-        "width": 0,
-        "height": 0,
+        "width": "3",
+        "height": "9",
         "options": [
             {
-                "label": "Adreese IP du broker",
+                "label": "host",
                 "key": "host",
                 "type": "text",
                 "required": true,
                 "rows": null
             },
             {
-                "label": "Port",
+                "label": "port",
                 "key": "port",
                 "type": "number",
                 "required": true,
                 "rows": null
             },
             {
-                "label": "Topic",
+                "label": "topic",
                 "key": "topic",
                 "type": "text",
                 "required": true,
                 "rows": null
             },
             {
-                "label": "Utilisateur",
+                "label": "username",
                 "key": "username",
                 "type": "text",
                 "required": false,
                 "rows": null
             },
             {
-                "label": "Mot de passe",
+                "label": "password",
                 "key": "password",
                 "type": "password",
                 "required": false,
                 "rows": null
             },
             {
-                "label": "Activation",
+                "label": "enabled",
                 "key": "enabled",
                 "type": "checkbox",
                 "required": false,
@@ -3374,7 +4765,7 @@
             "enabled": false
         },
         "payload": "",
-        "submit": "Enregistrer",
+        "submit": "►",
         "cancel": "",
         "resetOnSubmit": true,
         "topic": "topic",
@@ -3383,7 +4774,7 @@
         "className": "",
         "passthru": false,
         "dropdownOptions": [],
-        "x": 880,
+        "x": 890,
         "y": 260,
         "wires": [
             [
@@ -3420,7 +4811,7 @@
             "3fa36de74a10eac1",
             "df19be1275e79b1c"
         ],
-        "x": 1595,
+        "x": 1615,
         "y": 260,
         "wires": []
     },
@@ -3435,7 +4826,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1110,
+        "x": 1130,
         "y": 260,
         "wires": [
             [
@@ -3452,7 +4843,7 @@
         "order": 1,
         "width": 0,
         "height": 0,
-        "name": "config - title",
+        "name": "config - mqtt - title",
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "row-left",
@@ -3464,7 +4855,7 @@
         "className": "ui-title",
         "value": "dictionary.group_config.mqtt_title",
         "valueType": "msg",
-        "x": 870,
+        "x": 890,
         "y": 320,
         "wires": []
     },
@@ -3537,6 +4928,249 @@
                 "3f0e90037ee93d51"
             ]
         ]
+    },
+    {
+        "id": "0faf68b39e3ca1d8",
+        "type": "link in",
+        "z": "d90937c9d5b88b24",
+        "name": "config - backup",
+        "links": [
+            "fa8da6e72a733b2f"
+        ],
+        "x": 145,
+        "y": 500,
+        "wires": [
+            [
+                "482e20ac18d2bea8"
+            ]
+        ]
+    },
+    {
+        "id": "482e20ac18d2bea8",
+        "type": "switch",
+        "z": "d90937c9d5b88b24",
+        "name": "enabled",
+        "property": "enabled",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 280,
+        "y": 500,
+        "wires": [
+            [
+                "e17af5623fe21b8c"
+            ],
+            [
+                "0e8dd10af88255b9"
+            ]
+        ]
+    },
+    {
+        "id": "e17af5623fe21b8c",
+        "type": "link call",
+        "z": "d90937c9d5b88b24",
+        "name": "",
+        "links": [
+            "c58cbe9b2f7ccf93"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 490,
+        "y": 440,
+        "wires": [
+            [
+                "d94ed593c9fa1c5f",
+                "b13529392eecad07"
+            ]
+        ]
+    },
+    {
+        "id": "0e8dd10af88255b9",
+        "type": "link call",
+        "z": "d90937c9d5b88b24",
+        "name": "",
+        "links": [
+            "20e4fb9d16e1fade"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 490,
+        "y": 500,
+        "wires": [
+            [
+                "f1cbaf2c0e5e43ce"
+            ]
+        ]
+    },
+    {
+        "id": "5e77c6d889d7e4c3",
+        "type": "ui-form",
+        "z": "d90937c9d5b88b24",
+        "name": "config - backup - form",
+        "group": "73c6d9f7f62493d8",
+        "label": "",
+        "order": 2,
+        "width": "3",
+        "height": "7",
+        "options": [
+            {
+                "label": "user",
+                "key": "user",
+                "type": "checkbox",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "room",
+                "key": "room",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "entity",
+                "key": "entity",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "scene",
+                "key": "scene",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "mqtt",
+                "key": "mqtt",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "user": false,
+            "room": false,
+            "entity": false,
+            "scene": false,
+            "mqtt": false
+        },
+        "payload": "",
+        "submit": "►",
+        "cancel": "",
+        "resetOnSubmit": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "passthru": false,
+        "dropdownOptions": [],
+        "x": 900,
+        "y": 440,
+        "wires": [
+            [
+                "c84b1a71bc7c5411"
+            ]
+        ]
+    },
+    {
+        "id": "d94ed593c9fa1c5f",
+        "type": "function",
+        "z": "d90937c9d5b88b24",
+        "name": "data",
+        "func": "msg.payload = {\n    'room': true,\n    'entity': true,\n    'scene': true,\n    'user': true,\n    'mqtt': true\n};\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"checkbox\",\n            \"label\": msg.dictionary.group_config.backup_room,\n            \"key\": \"room\",\n            \"required\": false\n        },\n        {\n            \"type\": \"checkbox\",\n            \"label\": msg.dictionary.group_config.backup_entity,\n            \"key\": \"entity\",\n            \"required\": false\n        },\n        {\n            \"type\": \"checkbox\",\n            \"label\": msg.dictionary.group_config.backup_scene,\n            \"key\": \"scene\",\n            \"required\": false\n        },\n        {\n            \"type\": \"checkbox\",\n            \"label\": msg.dictionary.group_config.backup_user,\n            \"key\": \"user\",\n            \"required\": false\n        },\n        {\n            \"type\": \"checkbox\",\n            \"label\": msg.dictionary.group_config.backup_mqtt,\n            \"key\": \"mqtt\",\n            \"required\": false\n        }\n    ]\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 440,
+        "wires": [
+            [
+                "5e77c6d889d7e4c3"
+            ]
+        ]
+    },
+    {
+        "id": "f1cbaf2c0e5e43ce",
+        "type": "change",
+        "z": "d90937c9d5b88b24",
+        "name": "-",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ui_update",
+                "pt": "msg",
+                "to": "{\t    'label': '',\t    'options': []\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 500,
+        "wires": [
+            [
+                "5e77c6d889d7e4c3",
+                "b13529392eecad07"
+            ]
+        ]
+    },
+    {
+        "id": "c84b1a71bc7c5411",
+        "type": "debug",
+        "z": "d90937c9d5b88b24",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "b13529392eecad07",
+        "type": "ui-text",
+        "z": "d90937c9d5b88b24",
+        "group": "73c6d9f7f62493d8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "config - backup - title",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "ui-title",
+        "value": "dictionary.group_config.backup_title",
+        "valueType": "msg",
+        "x": 900,
+        "y": 500,
+        "wires": []
     },
     {
         "id": "9833ea0e831ff8c7",
@@ -4141,109 +5775,6 @@
         "wires": [
             [
                 "be3b97df6b45470f"
-            ]
-        ]
-    },
-    {
-        "id": "e0e64bf3607382ef",
-        "type": "link in",
-        "z": "560376d6bba621ec",
-        "g": "68879a4b30c8475f",
-        "name": "room - page",
-        "links": [
-            "911bbe32f79bec46",
-            "92c098c716e46e3b"
-        ],
-        "x": 145,
-        "y": 140,
-        "wires": [
-            [
-                "6032c172166c64ad"
-            ]
-        ]
-    },
-    {
-        "id": "5241685ca99b7bc4",
-        "type": "link out",
-        "z": "560376d6bba621ec",
-        "g": "68879a4b30c8475f",
-        "name": "home - page",
-        "mode": "link",
-        "links": [],
-        "x": 635,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "7d40a7ae15a1cd97",
-        "type": "ui-text",
-        "z": "560376d6bba621ec",
-        "g": "68879a4b30c8475f",
-        "group": "dbf1f2065ded8405",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "room - title",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "ui-title",
-        "value": "dictionary.option_page.room",
-        "valueType": "msg",
-        "x": 690,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "6032c172166c64ad",
-        "type": "change",
-        "z": "560376d6bba621ec",
-        "g": "68879a4b30c8475f",
-        "name": "tab",
-        "rules": [
-            {
-                "t": "set",
-                "p": "check",
-                "pt": "msg",
-                "to": "room",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 270,
-        "y": 140,
-        "wires": [
-            [
-                "ca90fa81b5d76007"
-            ]
-        ]
-    },
-    {
-        "id": "ca90fa81b5d76007",
-        "type": "link call",
-        "z": "560376d6bba621ec",
-        "g": "68879a4b30c8475f",
-        "name": "",
-        "links": [
-            "88c5aeadbe80be20"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 470,
-        "y": 140,
-        "wires": [
-            [
-                "7d40a7ae15a1cd97",
-                "5241685ca99b7bc4"
             ]
         ]
     },
