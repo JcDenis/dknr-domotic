@@ -145,17 +145,17 @@
         "nodes": [
             "4f8fb9f9243e9939",
             "8704b93076a73d7e",
-            "b42653048b3f39e8",
             "3fa36de74a10eac1",
             "f3c41b2acb15c9ea",
             "07e96d88edbef793",
             "6bb58f3ec75915c5",
             "4e8306ceb80ac08b",
-            "c32279aefb65c368"
+            "c32279aefb65c368",
+            "8778ebdbb1f4ef56"
         ],
         "x": 104,
         "y": 339,
-        "w": 582,
+        "w": 562,
         "h": 202
     },
     {
@@ -1303,7 +1303,7 @@
         "correl": "",
         "expiry": "",
         "broker": "2c5e094fee5ae877",
-        "x": 460,
+        "x": 440,
         "y": 440,
         "wires": []
     },
@@ -1320,7 +1320,7 @@
         "y": 500,
         "wires": [
             [
-                "b42653048b3f39e8"
+                "8778ebdbb1f4ef56"
             ]
         ]
     },
@@ -1399,31 +1399,6 @@
         "x": 3475,
         "y": 80,
         "wires": []
-    },
-    {
-        "id": "b42653048b3f39e8",
-        "type": "switch",
-        "z": "4bc72a1112cb448c",
-        "g": "9e3dbf7ae870765f",
-        "name": "enabled",
-        "property": "mqtt.enabled",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 1,
-        "x": 280,
-        "y": 500,
-        "wires": [
-            [
-                "4f8fb9f9243e9939",
-                "f3c41b2acb15c9ea"
-            ]
-        ]
     },
     {
         "id": "3fa36de74a10eac1",
@@ -1826,7 +1801,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 480,
+        "x": 460,
         "y": 500,
         "wires": []
     },
@@ -3332,7 +3307,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 1,
-        "x": 450,
+        "x": 430,
         "y": 380,
         "wires": [
             [
@@ -3354,7 +3329,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 290,
+        "x": 270,
         "y": 380,
         "wires": [
             [
@@ -3370,7 +3345,7 @@
         "name": "common - mqtt",
         "mode": "link",
         "links": [],
-        "x": 575,
+        "x": 555,
         "y": 440,
         "wires": []
     },
@@ -3388,11 +3363,11 @@
                 "p": "payload"
             }
         ],
-        "repeat": "5",
+        "repeat": "60",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "domotic/kernel/ping",
+        "topic": "kernel/ping",
         "payload": "",
         "payloadType": "date",
         "x": 970,
@@ -3434,7 +3409,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 610,
+        "x": 590,
         "y": 380,
         "wires": [
             [
@@ -3458,6 +3433,28 @@
         "y": 460,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "8778ebdbb1f4ef56",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "9e3dbf7ae870765f",
+        "name": "data",
+        "func": "let mqtt = global.get('mqtt', 'default') || {};\nif (typeof mqtt.enabled === 'boolean' && \n    mqtt.enabled === true && \n    msg.topic !== '' && \n    msg.payload !== ''\n) {\n    msg.topic = mqtt.topic + '/' + msg.topic;\n\n    return msg\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 500,
+        "wires": [
+            [
+                "f3c41b2acb15c9ea",
+                "4f8fb9f9243e9939"
+            ]
         ]
     },
     {
