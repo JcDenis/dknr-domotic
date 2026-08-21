@@ -868,6 +868,30 @@
         "h": 142
     },
     {
+        "id": "3db71c2c17730bd8",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "name": "common - mqtt - apsystems",
+        "style": {
+            "fill": "#ffC000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "9d2be55b974f961e",
+            "c6c1765c8ced2f28",
+            "36ceb75b76d5eff1",
+            "a7c97185682980e6",
+            "95a898f76134adbd",
+            "6ab72e116070c867",
+            "6840b2fb954ae473"
+        ],
+        "x": 104,
+        "y": 2739,
+        "w": 652,
+        "h": 142
+    },
+    {
         "id": "df7710b4b2c4e55b",
         "type": "ui-base",
         "name": "Tableau de bord",
@@ -1597,7 +1621,8 @@
             "7179cc22cb3792c0",
             "ab17703b4908cbf8",
             "c96e931494936766",
-            "4418090c31b190b3"
+            "4418090c31b190b3",
+            "9d2be55b974f961e"
         ],
         "x": 3475,
         "y": 80,
@@ -3711,7 +3736,7 @@
         "z": "4bc72a1112cb448c",
         "g": "fb34af284a5fbd90",
         "name": "parse",
-        "func": "let res = {\n    'topic':'',\n    'payload': {}\n};\n\nfor (const key in msg.payload){\n    if (typeof msg.payload.ADCO === 'object' && typeof msg.payload.ADCO.raw === 'string') {\n        res.payload.uid = 'teleinfo_' + msg.payload.ADCO.raw + '_' + key\n        res.payload.id = key;\n        res.payload.source = 'teleinfo';\n        res.payload.parent = 'teleinfo_' + msg.payload.ADCO.raw;\n        res.payload.unit = msg.payload[key]['unit'];\n        res.payload.value = msg.payload[key]['value'];\n        res.payload.name = msg.payload[key]['name'];\n    }\n\n    node.send(res);\n}\n\nreturn;",
+        "func": "let res = {\n    'topic':'',\n    'payload': {}\n};\n\nif (typeof msg.payload === 'object' && \n    typeof msg.payload.ADCO === 'object' && \n    typeof msg.payload.ADCO.raw === 'string'\n) {\n    for (const key in msg.payload){\n        res.payload.id = key;\n        res.payload.source = 'teleinfo';\n        res.payload.parent = msg.payload.ADCO.raw;\n        res.payload.unit = msg.payload[key]['unit'];\n        res.payload.value = msg.payload[key]['value'];\n        res.payload.name = msg.payload[key]['name'];\n\n        node.send(res);\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3746,7 +3771,8 @@
         "z": "4bc72a1112cb448c",
         "name": "common - data",
         "links": [
-            "038df4153883408b"
+            "038df4153883408b",
+            "6ab72e116070c867"
         ],
         "x": 175,
         "y": 2440,
@@ -3761,7 +3787,7 @@
         "type": "function",
         "z": "4bc72a1112cb448c",
         "name": "check",
-        "func": "if (typeof msg.payload !== 'object' || typeof msg.payload.uid !== 'string') {\n\n    return;\n}\n\nlet template = {\n    'source': '',\n    'uid': '',\n    'id': '',\n    'parent': '',\n    'room': '',\n    'value': '',\n    'type': '',\n    'unit': ''\n};\n\nlet entity = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\nlet protect = ['room'];\n\n// get all entity fields\nentity = {...template, ...entity};\n\nfor (const k in msg.payload) {\n    // set entity name if it not exists\n    if (k === 'name') {\n        let name = global.get('name[\"entity\"]', 'memoryOnly') || {};\n        if (typeof name[msg.payload.uid] !== 'string' || name[msg.payload.uid] === '') {\n            name[msg.payload.uid] = msg.payload.name;\n            global.set('name[\"entity\"]', name, 'memoryOnly')\n        }\n    }\n\n    if (typeof template[k] !== 'undefined') {\n        // check if value changes\n        if (k === 'value') {\n            msg.repeat = entity[k] === msg.payload[k] ? true : false;\n        }\n        if (protect.includes(k) && entity[k] !== '') {\n            // do not override some properties\n        } else {\n            entity[k] = msg.payload[k];\n        }\n    }\n}\n\nif (msg.remove === true) {\n    // todo\n}\n\nglobal.set('entity[\"' + entity.uid + '\"]', entity, 'memoryOnly');\n\nnode.status({ fill: \"green\", shape: \"ring\", text: entity.uid + ' : ' + entity.value});\n\nmsg.topic = '';\nmsg.payload = entity;\n\nreturn msg;",
+        "func": "// required to build uid\nif (typeof msg.payload !== 'object' || \n    typeof msg.payload.source !== 'string' || \n    typeof msg.payload.parent !== 'string' || \n    typeof msg.payload.id !== 'string'\n) {\n\n    return;\n}\n\n// default keys\nlet template = {\n    'uid': '',\n    'source': '',\n    'id': '',\n    'parent': '',\n    'room': '',\n    'value': '',\n    'type': '',\n    'unit': ''\n};\n\n// rebuilt some keys\nmsg.payload.uid = msg.payload.source + '_' + msg.payload.parent + '_' + msg.payload.id;\nmsg.payload.parent = msg.payload.source + '_' + msg.payload.parent;\n\n// get existing entity\nlet entity = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\nlet protect = ['room'];\n\n// set all entity fields\nentity = {...template, ...entity};\n\nfor (const k in msg.payload) {\n    // set entity name if it not exists\n    if (k === 'name') {\n        let name = global.get('name[\"entity\"]', 'memoryOnly') || {};\n        if (typeof name[msg.payload.uid] !== 'string' || name[msg.payload.uid] === '') {\n            name[msg.payload.uid] = msg.payload.name;\n            global.set('name[\"entity\"]', name, 'memoryOnly')\n        }\n    }\n\n    if (typeof template[k] !== 'undefined') {\n        // check if value changes\n        if (k === 'value') {\n            msg.repeat = entity[k] === msg.payload[k] ? true : false;\n        }\n        if (protect.includes(k) && entity[k] !== '') {\n            // do not override some properties\n        } else {\n            entity[k] = msg.payload[k];\n        }\n    }\n}\n\nif (msg.remove === true) {\n    // todo\n}\n\nglobal.set('entity[\"' + entity.uid + '\"]', entity, 'memoryOnly');\n\nnode.status({ fill: \"green\", shape: \"ring\", text: entity.uid + ' : ' + entity.value});\n\nmsg.topic = '';\nmsg.payload = entity;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3900,6 +3926,140 @@
         "info": "",
         "x": 390,
         "y": 200,
+        "wires": []
+    },
+    {
+        "id": "9d2be55b974f961e",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "3db71c2c17730bd8",
+        "name": "common - mqtt - apsystems",
+        "links": [
+            "92c098c716e46e3b",
+            "f2cd63b49ac325ec"
+        ],
+        "x": 145,
+        "y": 2840,
+        "wires": [
+            [
+                "c6c1765c8ced2f28"
+            ]
+        ]
+    },
+    {
+        "id": "c6c1765c8ced2f28",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "3db71c2c17730bd8",
+        "name": "data",
+        "func": "msg.broker = {};\n\nlet mqtt = global.get('mqtt', 'memoryOnly');\nif (typeof mqtt == 'object' && mqtt.enabled == true && mqtt.apsystems != '') {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.apsystems.length > 0\n    ) {\n        msg.broker = {\n            'broker': mqtt.host,\n            'port': mqtt.port,\n            'clientid': 'apsystems' + global.get('describe.app.project', 'memoryOnly') || 'dknr',\n            'force': true\n        };\n\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.apsystems + '/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'memoryOnly');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 2840,
+        "wires": [
+            [
+                "36ceb75b76d5eff1"
+            ]
+        ]
+    },
+    {
+        "id": "36ceb75b76d5eff1",
+        "type": "mqtt in",
+        "z": "4bc72a1112cb448c",
+        "g": "3db71c2c17730bd8",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "a619830c5e5eadfb",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 430,
+        "y": 2840,
+        "wires": [
+            [
+                "a7c97185682980e6",
+                "95a898f76134adbd"
+            ]
+        ]
+    },
+    {
+        "id": "a7c97185682980e6",
+        "type": "trigger",
+        "z": "4bc72a1112cb448c",
+        "g": "3db71c2c17730bd8",
+        "name": "10m",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "str",
+        "duration": "10",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 590,
+        "y": 2780,
+        "wires": [
+            [
+                "c6c1765c8ced2f28"
+            ]
+        ]
+    },
+    {
+        "id": "95a898f76134adbd",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "3db71c2c17730bd8",
+        "name": "parse",
+        "func": "let res = {\n    'topic':'',\n    'payload': {}\n};\n\n// limit ot these keys\nlet ecu = ['energy_total', 'energy_today', 'power_instant'];\n\nif (msg.topic.includes(\"/ecu/\") && \n    typeof msg.payload === 'object' && \n    typeof msg.payload.id === 'string'\n) {\n    for (let k = 0; k < ecu.length; k++) {\n        res.payload.id = ecu[k]\n        res.payload.source = 'apsystems';\n        res.payload.parent = 'ecu_' + msg.payload.id;\n        res.payload.unit = msg.payload[ecu[k] + '_unit'];\n        res.payload.value = msg.payload[ecu[k]];\n\n        node.send(res);\n    }\n}\n\n// limit ot these keys\nlet inv = {\n    'power_instant': 'W', \n    'temperature': '°C'\n};\n\nif (msg.topic.includes(\"/inverter/\") && \n    typeof msg.payload === 'object' && \n    typeof msg.payload.id === 'string'\n) {\n    for (const i in inv) {\n        res.payload.id = i\n        res.payload.source = 'apsystems';\n        res.payload.parent = 'inverter_' + msg.payload.id;\n        res.payload.unit = inv[i];\n        res.payload.value = msg.payload[i];\n\n        node.send(res);\n    }\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 2840,
+        "wires": [
+            [
+                "6ab72e116070c867"
+            ]
+        ]
+    },
+    {
+        "id": "6ab72e116070c867",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "3db71c2c17730bd8",
+        "name": "common - mqtt - apsystems",
+        "mode": "link",
+        "links": [
+            "cc0a7c14f877c371"
+        ],
+        "x": 715,
+        "y": 2840,
+        "wires": []
+    },
+    {
+        "id": "6840b2fb954ae473",
+        "type": "comment",
+        "z": "4bc72a1112cb448c",
+        "g": "3db71c2c17730bd8",
+        "name": "From docker dknr-apsystems",
+        "info": "https://github.com/JcDenis/dknr-apsystems",
+        "x": 340,
+        "y": 2780,
         "wires": []
     },
     {
@@ -6578,7 +6738,8 @@
         "links": [
             "3fa36de74a10eac1",
             "df19be1275e79b1c",
-            "4418090c31b190b3"
+            "4418090c31b190b3",
+            "9d2be55b974f961e"
         ],
         "x": 1615,
         "y": 260,
