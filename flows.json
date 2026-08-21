@@ -159,83 +159,6 @@
         "h": 202
     },
     {
-        "id": "671369a42a9b2d5c",
-        "type": "group",
-        "z": "4bc72a1112cb448c",
-        "g": "58c5eecd014eb5e1",
-        "name": "common - ui - notice",
-        "style": {
-            "fill": "#6f2fa0",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "f4a2353e5f92576c",
-            "fecaee88b8c296ed",
-            "7f15feb966b47505"
-        ],
-        "x": 104,
-        "y": 699,
-        "w": 502,
-        "h": 82
-    },
-    {
-        "id": "614d71e9e019ca82",
-        "type": "group",
-        "z": "4bc72a1112cb448c",
-        "g": "58c5eecd014eb5e1",
-        "name": "common - ui",
-        "style": {
-            "fill": "#6f2fa0",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "bbb6fa5ec8070fb8",
-            "911bbe32f79bec46",
-            "289e0a6cd1209c38",
-            "6f2775829158f825",
-            "5c9bfdd80f490de0",
-            "ab044268dd81617b",
-            "4841db186251fd55",
-            "7651e96c4502dada",
-            "fd39d13ae9c195f3",
-            "8f1a54f299198096",
-            "7fcb176f2e725c02",
-            "b02e3c2d96304d41",
-            "afe884e8467661e5",
-            "b490f62e4ba2632e",
-            "9aa067029d4049a3",
-            "be56244e32363548"
-        ],
-        "x": 104,
-        "y": 819,
-        "w": 1712,
-        "h": 209.5
-    },
-    {
-        "id": "8cc9a474d6cd27ec",
-        "type": "group",
-        "z": "4bc72a1112cb448c",
-        "g": "58c5eecd014eb5e1",
-        "name": "common - ui - hmi",
-        "style": {
-            "stroke": "#ff0000",
-            "fill": "#ff0000",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "56e6a7b9b0e66451",
-            "7214e26c1a5974bd",
-            "d1b1e789f412bd08"
-        ],
-        "x": 104,
-        "y": 1299,
-        "w": 332,
-        "h": 82
-    },
-    {
         "id": "8d2869ca423714d6",
         "type": "group",
         "z": "4bc72a1112cb448c",
@@ -300,50 +223,6 @@
         "h": 262
     },
     {
-        "id": "bb969636ef1c72e8",
-        "type": "group",
-        "z": "4bc72a1112cb448c",
-        "g": "58c5eecd014eb5e1",
-        "name": "common - ui - show",
-        "style": {
-            "stroke": "#6f2fa0",
-            "fill": "#6f2fa0",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "c58cbe9b2f7ccf93",
-            "af676f21bca27752",
-            "2a9a03dea7e40994"
-        ],
-        "x": 104,
-        "y": 1059,
-        "w": 332,
-        "h": 82
-    },
-    {
-        "id": "c7c6965ab4689d05",
-        "type": "group",
-        "z": "4bc72a1112cb448c",
-        "g": "58c5eecd014eb5e1",
-        "name": "common - ui - hide",
-        "style": {
-            "stroke": "#6f2fa0",
-            "fill": "#6f2fa0",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "20e4fb9d16e1fade",
-            "b78acc27f4a55cb0",
-            "89643fc02bcb1d58"
-        ],
-        "x": 104,
-        "y": 1179,
-        "w": 332,
-        "h": 82
-    },
-    {
         "id": "d509ef3b5101effa",
         "type": "group",
         "z": "10a4e1188aad61a2",
@@ -364,28 +243,6 @@
         "y": 39,
         "w": 682,
         "h": 142
-    },
-    {
-        "id": "5621e43ca08d7164",
-        "type": "group",
-        "z": "4bc72a1112cb448c",
-        "g": "58c5eecd014eb5e1",
-        "name": "common - ui - tab",
-        "style": {
-            "stroke": "#ff0000",
-            "fill": "#ff0000",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "8c540395a0e469f7",
-            "88c5aeadbe80be20",
-            "c026a3bb27b7e4d4"
-        ],
-        "x": 104,
-        "y": 1419,
-        "w": 332,
-        "h": 82
     },
     {
         "id": "fbbd122ee9ce22d8",
@@ -441,7 +298,6 @@
             "label": true
         },
         "nodes": [
-            "84741ff9d386b4bb",
             "6483959a5e73553e",
             "490f552ee626deb7",
             "d9dbb31a0ba1e2a5",
@@ -451,7 +307,9 @@
             "df8a1dc0e990cec8",
             "3f0e90037ee93d51",
             "abd6ad4192fa2e91",
-            "c15a5b6fa07d76be"
+            "c15a5b6fa07d76be",
+            "d9949fe532466202",
+            "9fc4f5c2bd891f35"
         ],
         "x": 104,
         "y": 219,
@@ -479,113 +337,6 @@
         "y": 39,
         "w": 682,
         "h": 142
-    },
-    {
-        "id": "bd007f48192aa2f3",
-        "type": "group",
-        "z": "4bc72a1112cb448c",
-        "g": "8d2869ca423714d6",
-        "name": "common - user - check",
-        "style": {
-            "fill": "#ff0000",
-            "fill-opacity": "0.05",
-            "label": true,
-            "stroke": "#ff0000"
-        },
-        "nodes": [
-            "fdb028158b218535",
-            "e0302181e220fb24",
-            "4b4db5a5c5bcb3c6",
-            "2dbd34bfcf7eed32",
-            "20f654f00ef52950",
-            "8cdcab5e1a00fa52",
-            "02fe29cae83d1e2a"
-        ],
-        "x": 104,
-        "y": 2139,
-        "w": 902,
-        "h": 142
-    },
-    {
-        "id": "ec05c59aee9e7dba",
-        "type": "group",
-        "z": "4bc72a1112cb448c",
-        "g": "8d2869ca423714d6",
-        "name": "common - user - clean",
-        "style": {
-            "fill": "#ff0000",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "0502ea2e9ef0f780",
-            "0e94cde52c021d45",
-            "670bb85f2c2aeaf5"
-        ],
-        "x": 104,
-        "y": 2019,
-        "w": 622,
-        "h": 82
-    },
-    {
-        "id": "7ea06c29d525f7ce",
-        "type": "group",
-        "z": "4bc72a1112cb448c",
-        "g": "8d2869ca423714d6",
-        "name": "common - user - write",
-        "style": {
-            "fill": "#ff0000",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "d1737d208c83ee99",
-            "efbcb97a4ab96940",
-            "6e614b3f0adee365",
-            "6009419e656f5fb7",
-            "f261b4c898eeec2e",
-            "166b868a64df0e9f",
-            "b75938c74c41ca5e",
-            "25946e03a69f38c2"
-        ],
-        "x": 104,
-        "y": 1839,
-        "w": 882,
-        "h": 142
-    },
-    {
-        "id": "fc6029b7d49d1e93",
-        "type": "group",
-        "z": "4bc72a1112cb448c",
-        "g": "8d2869ca423714d6",
-        "name": "common - user - read",
-        "style": {
-            "fill": "#ff0000",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "63e58cf7f88ce5af",
-            "0b2cf7bf91ae4d19",
-            "74dfe619e629d696",
-            "3b80cd5cae7c3642",
-            "8e12e262806af7b7",
-            "aae1f5d9a3931146",
-            "cca39ee5b2794b76",
-            "fa7160372fcfe3b2",
-            "c207171ed4430df8",
-            "44a9a10bea4cbb76",
-            "6e04acdf428261ac",
-            "7f71d2575c92f1e5",
-            "45fec39ce210f1d4",
-            "62fd5d97d37862c8",
-            "4cc3ed0d3ee8fb8d",
-            "1e31ae9f27a06bd8"
-        ],
-        "x": 104,
-        "y": 1599,
-        "w": 1882,
-        "h": 202
     },
     {
         "id": "274931f4309b3257",
@@ -751,6 +502,279 @@
         "x": 104,
         "y": 39,
         "w": 682,
+        "h": 142
+    },
+    {
+        "id": "671369a42a9b2d5c",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "g": "58c5eecd014eb5e1",
+        "name": "common - ui - notice",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "f4a2353e5f92576c",
+            "fecaee88b8c296ed",
+            "7f15feb966b47505"
+        ],
+        "x": 104,
+        "y": 699,
+        "w": 502,
+        "h": 82
+    },
+    {
+        "id": "614d71e9e019ca82",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "g": "58c5eecd014eb5e1",
+        "name": "common - ui",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "bbb6fa5ec8070fb8",
+            "911bbe32f79bec46",
+            "289e0a6cd1209c38",
+            "6f2775829158f825",
+            "5c9bfdd80f490de0",
+            "ab044268dd81617b",
+            "4841db186251fd55",
+            "7651e96c4502dada",
+            "fd39d13ae9c195f3",
+            "8f1a54f299198096",
+            "7fcb176f2e725c02",
+            "b02e3c2d96304d41",
+            "afe884e8467661e5",
+            "b490f62e4ba2632e",
+            "9aa067029d4049a3",
+            "be56244e32363548"
+        ],
+        "x": 104,
+        "y": 819,
+        "w": 1712,
+        "h": 209.5
+    },
+    {
+        "id": "8cc9a474d6cd27ec",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "g": "58c5eecd014eb5e1",
+        "name": "common - ui - hmi",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "56e6a7b9b0e66451",
+            "7214e26c1a5974bd",
+            "d1b1e789f412bd08"
+        ],
+        "x": 104,
+        "y": 1299,
+        "w": 332,
+        "h": 82
+    },
+    {
+        "id": "bb969636ef1c72e8",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "g": "58c5eecd014eb5e1",
+        "name": "common - ui - show",
+        "style": {
+            "stroke": "#6f2fa0",
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "c58cbe9b2f7ccf93",
+            "af676f21bca27752",
+            "2a9a03dea7e40994"
+        ],
+        "x": 104,
+        "y": 1059,
+        "w": 332,
+        "h": 82
+    },
+    {
+        "id": "c7c6965ab4689d05",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "g": "58c5eecd014eb5e1",
+        "name": "common - ui - hide",
+        "style": {
+            "stroke": "#6f2fa0",
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "20e4fb9d16e1fade",
+            "b78acc27f4a55cb0",
+            "89643fc02bcb1d58"
+        ],
+        "x": 104,
+        "y": 1179,
+        "w": 332,
+        "h": 82
+    },
+    {
+        "id": "5621e43ca08d7164",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "g": "58c5eecd014eb5e1",
+        "name": "common - ui - tab",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "8c540395a0e469f7",
+            "88c5aeadbe80be20",
+            "c026a3bb27b7e4d4"
+        ],
+        "x": 104,
+        "y": 1419,
+        "w": 332,
+        "h": 82
+    },
+    {
+        "id": "bd007f48192aa2f3",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "g": "8d2869ca423714d6",
+        "name": "common - user - check",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true,
+            "stroke": "#ff0000"
+        },
+        "nodes": [
+            "fdb028158b218535",
+            "e0302181e220fb24",
+            "4b4db5a5c5bcb3c6",
+            "2dbd34bfcf7eed32",
+            "20f654f00ef52950",
+            "8cdcab5e1a00fa52",
+            "02fe29cae83d1e2a"
+        ],
+        "x": 104,
+        "y": 2139,
+        "w": 902,
+        "h": 142
+    },
+    {
+        "id": "ec05c59aee9e7dba",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "g": "8d2869ca423714d6",
+        "name": "common - user - clean",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "0502ea2e9ef0f780",
+            "0e94cde52c021d45",
+            "670bb85f2c2aeaf5"
+        ],
+        "x": 104,
+        "y": 2019,
+        "w": 622,
+        "h": 82
+    },
+    {
+        "id": "7ea06c29d525f7ce",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "g": "8d2869ca423714d6",
+        "name": "common - user - write",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "d1737d208c83ee99",
+            "efbcb97a4ab96940",
+            "6e614b3f0adee365",
+            "6009419e656f5fb7",
+            "f261b4c898eeec2e",
+            "166b868a64df0e9f",
+            "b75938c74c41ca5e",
+            "25946e03a69f38c2"
+        ],
+        "x": 104,
+        "y": 1839,
+        "w": 882,
+        "h": 142
+    },
+    {
+        "id": "fc6029b7d49d1e93",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "g": "8d2869ca423714d6",
+        "name": "common - user - read",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "63e58cf7f88ce5af",
+            "0b2cf7bf91ae4d19",
+            "74dfe619e629d696",
+            "3b80cd5cae7c3642",
+            "8e12e262806af7b7",
+            "aae1f5d9a3931146",
+            "cca39ee5b2794b76",
+            "fa7160372fcfe3b2",
+            "c207171ed4430df8",
+            "44a9a10bea4cbb76",
+            "6e04acdf428261ac",
+            "7f71d2575c92f1e5",
+            "45fec39ce210f1d4",
+            "62fd5d97d37862c8",
+            "4cc3ed0d3ee8fb8d",
+            "1e31ae9f27a06bd8"
+        ],
+        "x": 104,
+        "y": 1599,
+        "w": 1882,
+        "h": 202
+    },
+    {
+        "id": "fb34af284a5fbd90",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "name": "common - mqtt - teleinfo",
+        "style": {
+            "fill": "#ffC000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "4418090c31b190b3",
+            "ae66a858fd8c7d7b",
+            "b5ee6411deb05df3",
+            "91b6294e85a14007",
+            "b00df660533aa1bd",
+            "038df4153883408b"
+        ],
+        "x": 94,
+        "y": 2499,
+        "w": 652,
         "h": 142
     },
     {
@@ -1092,20 +1116,6 @@
         "groupType": "default"
     },
     {
-        "id": "fa076f843950d108",
-        "type": "ui-group",
-        "name": "entity_room",
-        "page": "2b12391aa314ef62",
-        "width": 6,
-        "height": 1,
-        "order": 1,
-        "showTitle": false,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
-    },
-    {
         "id": "1e9f5bde9636a371",
         "type": "ui-page",
         "name": "scene",
@@ -1256,6 +1266,65 @@
         "groupType": "default"
     },
     {
+        "id": "fa076f843950d108",
+        "type": "ui-group",
+        "name": "entity_room",
+        "page": "2b12391aa314ef62",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "a619830c5e5eadfb",
+        "type": "mqtt-broker",
+        "name": "mqtt - teleinfo",
+        "broker": "192.168.0.11",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": false,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "79512e64340aeb66",
+        "type": "ui-group",
+        "name": "entity_list",
+        "page": "2b12391aa314ef62",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
         "id": "025edbd02daf82d0",
         "type": "http response",
         "z": "4bc72a1112cb448c",
@@ -1333,8 +1402,8 @@
         "links": [
             "0cf63361a578f787",
             "92c098c716e46e3b",
-            "04788c98da9d0f9d",
-            "9e0b692686687926"
+            "9e0b692686687926",
+            "43b439d13979544c"
         ],
         "x": 145,
         "y": 740,
@@ -1394,7 +1463,8 @@
             "e0e64bf3607382ef",
             "7179cc22cb3792c0",
             "ab17703b4908cbf8",
-            "c96e931494936766"
+            "c96e931494936766",
+            "4418090c31b190b3"
         ],
         "x": 3475,
         "y": 80,
@@ -1723,7 +1793,7 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": ".app-bar-actions-title {\n    margin: auto;\n    text-shadow: rgb(var(--v-theme-background)) 2px 2px 1px;\n}\n\n.v-card .remove,\n.v-card-text .remove {\n    display: none !important;\n    visibility: hidden;\n    color: transparent !important;\n}\n\n.v-table__wrapper table thead {\n    display: none !important;\n}\ntbody td[data-column-key=lbl] {\n    font-weight: bold !important;\n}\n\n.v-tab-item--selected {\n    color: rgb(var(--v-theme-primary)) !important;\n}\n\n.v-main {\n    padding-bottom: 2em;\n}\n.ui-title span {\n    font-size: 1.4rem !important;\n    font-weight: normal !important;\n    padding: 0;\n    color: rgb(var(--v-theme-primary)) !important;\n}\n\n.nrdb-ui-group {\n    border-radius: 4px;\n    box-shadow: 3px 2px 2px rgba(var(--v-theme-group-outline));\n}\n.v-application {\n    border-top: 1px solid rgba(var(--v-theme-group-outline));\n    margin-top: -1px;\n}\n",
+        "format": ".app-bar-actions-title {\n    margin: auto;\n    text-shadow: rgb(var(--v-theme-background)) 2px 2px 1px;\n}\n\n.v-card .remove,\n.v-card-text .remove {\n    display: none !important;\n    visibility: hidden;\n    color: transparent !important;\n}\n\n.v-table__wrapper table thead {\n    //display: none !important;\n}\ntbody td[data-column-key=lbl] {\n    font-weight: bold !important;\n}\n\n.v-tab-item--selected {\n    color: rgb(var(--v-theme-primary)) !important;\n}\n\n.v-main {\n    padding-bottom: 2em;\n}\n.ui-title span {\n    font-size: 1.4rem !important;\n    font-weight: normal !important;\n    padding: 0;\n    color: rgb(var(--v-theme-primary)) !important;\n}\n\n.nrdb-ui-group {\n    border-radius: 4px;\n    box-shadow: 3px 2px 2px rgba(var(--v-theme-group-outline));\n}\n.v-application {\n    border-top: 1px solid rgba(var(--v-theme-group-outline));\n    margin-top: -1px;\n}\n",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
@@ -3010,8 +3080,7 @@
         "name": "common - boot - init",
         "mode": "link",
         "links": [
-            "0fad0e21f00eaa17",
-            "e9a41625a93563f2"
+            "0fad0e21f00eaa17"
         ],
         "x": 475,
         "y": 80,
@@ -3024,7 +3093,6 @@
         "g": "bcc6f36c217d1643",
         "name": "common - boot - init",
         "links": [
-            "6f5df9d670b9906d",
             "724fe4a33c68dee1"
         ],
         "x": 685,
@@ -3119,7 +3187,7 @@
                 "t": "set",
                 "p": "payload.en",
                 "pt": "msg",
-                "to": "{\t    'option_page': {\t        'home': 'Home',\t        'room': 'Rooms',\t        'tuning': 'Adjustments',\t        'scene': 'Scenes',\t        'entity': 'Entities',\t        'config': 'Configuration',\t        'auth': 'Authentication'\t    },\t    'option_level': {\t        'visitor': 'Visitor',\t        'child':  'Child',\t        'parent':'Parent',\t        'admin': 'Administrator'\t    },\t    'option_team': {\t        'm': 'Morning',\t        'a': 'Afternoon',\t        'n': 'Night',\t        'd': 'Day',\t        'w': 'Weekend',\t        's': 'Saturday'\t    },\t    'option_lang': {\t        'en': 'English',\t        'fr': 'French'\t    },\t    'option_color': {\t        'on': '#008000',\t        'off': '#FF0000',\t        'median': '#F08000',\t        'none': '#808000',\t        'theme': '#0094CE',\t        'empty': '#CCCCCC'\t    },\t    'notice': {\t        'file_write_success': 'Saved file successfully',\t        'file_write_fail': 'Failed to save file',\t        'login_fail': 'Wrong username or password',\t        'save_success': 'Successfully saved'\t    },\t    'group_room': {\t        'room_select': 'Select a room'\t    },\t    'group_entity': {\t        'room_title': 'Rooms configuration',\t        'room_add': 'Add or edit a room',\t        'room_del': 'Delete a room',\t        'room_id': 'Ident',\t        'room_name': 'Name'\t    },\t    'group_config': {\t        'mqtt_title': 'MQTT configuration',\t        'mqtt_host': 'Broker IP address',\t        'mqtt_port': 'Port',\t        'mqtt_topic': 'Topic',\t        'mqtt_username': 'Username',\t        'mqtt_password': 'Password',\t        'mqtt_discovery': 'Home Assistant Discovery topic',\t        'mqtt_enabled': 'Enable MQTT',\t\t        'backup_title': 'Backup configuration',\t        'backup_room': 'Rooms',\t        'backup_entity': 'Entities',\t        'backup_scene': 'Scenes',\t        'backup_user': 'Users',\t        'backup_mqtt': 'MQTT'\t    },\t    'group_auth': {\t        'login': 'Login',\t        'pass': 'Password',\t        'auth_user': 'User'\t    }\t}",
+                "to": "{\t    'option_page': {\t        'home': 'Home',\t        'room': 'Rooms',\t        'tuning': 'Adjustments',\t        'scene': 'Scenes',\t        'entity': 'Entities',\t        'config': 'Configuration',\t        'auth': 'Authentication'\t    },\t    'option_level': {\t        'visitor': 'Visitor',\t        'child':  'Child',\t        'parent':'Parent',\t        'admin': 'Administrator'\t    },\t    'option_team': {\t        'm': 'Morning',\t        'a': 'Afternoon',\t        'n': 'Night',\t        'd': 'Day',\t        'w': 'Weekend',\t        's': 'Saturday'\t    },\t    'option_lang': {\t        'en': 'English',\t        'fr': 'French'\t    },\t    'option_color': {\t        'on': '#008000',\t        'off': '#FF0000',\t        'median': '#F08000',\t        'none': '#808000',\t        'theme': '#0094CE',\t        'empty': '#CCCCCC'\t    },\t    'notice': {\t        'file_write_success': 'Saved file successfully',\t        'file_write_fail': 'Failed to save file',\t        'login_fail': 'Wrong username or password',\t        'save_success': 'Successfully saved'\t    },\t    'group_room': {\t        'room_select': 'Select a room'\t    },\t    'group_entity': {\t        'room_title': 'Rooms configuration',\t        'room_add': 'Add or edit a room',\t        'room_del': 'Delete a room',\t        'room_id': 'Ident',\t        'room_name': 'Name',\t\t        'list_title': 'List of received entities',\t        'list_edit': 'Setup',\t        'list_delete': 'Delete'\t    },\t    'group_config': {\t        'mqtt_title': 'MQTT configuration',\t        'mqtt_host': 'Broker IP address',\t        'mqtt_port': 'Port',\t        'mqtt_topic': 'Topic',\t        'mqtt_username': 'Username',\t        'mqtt_password': 'Password',\t        'mqtt_discovery': 'Home Assistant Discovery topic',\t        'mqtt_dknrteleinfo': 'DKNR Teleinfo topic',\t        'mqtt_dknrapsystems': 'DKNR APsystems topic',\t        'mqtt_dknrdaikin': 'DKNR Daikin topic',\t        'mqtt_enabled': 'Enable MQTT',\t\t        'backup_title': 'Backup configuration',\t        'backup_room': 'Rooms',\t        'backup_entity': 'Entities',\t        'backup_scene': 'Scenes',\t        'backup_user': 'Users',\t        'backup_mqtt': 'MQTT'\t    },\t    'group_auth': {\t        'login': 'Login',\t        'pass': 'Password',\t        'auth_user': 'User'\t    }\t}",
                 "tot": "jsonata"
             }
         ],
@@ -3370,8 +3438,8 @@
         "topic": "kernel/ping",
         "payload": "",
         "payloadType": "date",
-        "x": 970,
-        "y": 400,
+        "x": 650,
+        "y": 2880,
         "wires": [
             [
                 "ef33a0199d61fffa"
@@ -3387,8 +3455,8 @@
         "links": [
             "8704b93076a73d7e"
         ],
-        "x": 1095,
-        "y": 400,
+        "x": 775,
+        "y": 2880,
         "wires": []
     },
     {
@@ -3418,24 +3486,6 @@
         ]
     },
     {
-        "id": "98492dc009e30bd0",
-        "type": "function",
-        "z": "4bc72a1112cb448c",
-        "name": "dknr",
-        "func": "let dknr = {\n    'target': '',\n    'source': '',\n    'bucket': '',\n    'measurement': '',\n    'field': '',\n    'tags': {},\n    'value': '',\n    'unit': '',\n    'repeat': false\n};\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 970,
-        "y": 460,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "8778ebdbb1f4ef56",
         "type": "function",
         "z": "4bc72a1112cb448c",
@@ -3454,6 +3504,182 @@
             [
                 "f3c41b2acb15c9ea",
                 "4f8fb9f9243e9939"
+            ]
+        ]
+    },
+    {
+        "id": "4418090c31b190b3",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "fb34af284a5fbd90",
+        "name": "common - mqtt - teleinfo",
+        "links": [
+            "92c098c716e46e3b",
+            "f2cd63b49ac325ec"
+        ],
+        "x": 135,
+        "y": 2600,
+        "wires": [
+            [
+                "ae66a858fd8c7d7b"
+            ]
+        ]
+    },
+    {
+        "id": "ae66a858fd8c7d7b",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "fb34af284a5fbd90",
+        "name": "data",
+        "func": "msg.broker = {};\n\nlet mqtt = global.get('mqtt', 'default');\nif (typeof mqtt == 'object' && mqtt.enabled == true && mqtt.teleinfo != '') {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.teleinfo.length > 0\n    ) {\n        msg.broker = {\n            'broker': mqtt.host,\n            'port': mqtt.port,\n            'clientid': 'teleinfo' + global.get('describe.app.project', 'memoryOnly') || 'dknr',\n            'force': true\n        };\n\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.teleinfo + '/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'default');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 2600,
+        "wires": [
+            [
+                "b5ee6411deb05df3"
+            ]
+        ]
+    },
+    {
+        "id": "b5ee6411deb05df3",
+        "type": "mqtt in",
+        "z": "4bc72a1112cb448c",
+        "g": "fb34af284a5fbd90",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "a619830c5e5eadfb",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 420,
+        "y": 2600,
+        "wires": [
+            [
+                "91b6294e85a14007",
+                "b00df660533aa1bd"
+            ]
+        ]
+    },
+    {
+        "id": "91b6294e85a14007",
+        "type": "trigger",
+        "z": "4bc72a1112cb448c",
+        "g": "fb34af284a5fbd90",
+        "name": "10m",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "str",
+        "duration": "10",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 580,
+        "y": 2540,
+        "wires": [
+            [
+                "ae66a858fd8c7d7b"
+            ]
+        ]
+    },
+    {
+        "id": "540ace790f3fa1eb",
+        "type": "debug",
+        "z": "4bc72a1112cb448c",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 2380,
+        "wires": []
+    },
+    {
+        "id": "b00df660533aa1bd",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "fb34af284a5fbd90",
+        "name": "parse",
+        "func": "let res = {\n    'topic':'',\n    'payload': {}\n};\n\nfor (const key in msg.payload){\n    if (typeof msg.payload.ADCO.raw === 'string') {\n        res.payload.uid = 'teleinfo_' + msg.payload.ADCO.raw + '_' + key\n        res.payload.unit = msg.payload[key]['unit'];\n        res.payload.value = msg.payload[key]['value'];\n    }\n\n    node.send(res);\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 2600,
+        "wires": [
+            [
+                "038df4153883408b"
+            ]
+        ]
+    },
+    {
+        "id": "038df4153883408b",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "fb34af284a5fbd90",
+        "name": "common - mqtt - teleinfo",
+        "mode": "link",
+        "links": [
+            "cc0a7c14f877c371"
+        ],
+        "x": 705,
+        "y": 2600,
+        "wires": []
+    },
+    {
+        "id": "cc0a7c14f877c371",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "name": "common - data",
+        "links": [
+            "038df4153883408b"
+        ],
+        "x": 305,
+        "y": 2380,
+        "wires": [
+            [
+                "b3e3b0dde3bcdd99"
+            ]
+        ]
+    },
+    {
+        "id": "b3e3b0dde3bcdd99",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "name": "check",
+        "func": "if (typeof msg.payload !== 'object') {\n\n    return;\n}\n\nlet template = {\n    'uid': '',\n    'value': '',\n    'unit': '',\n    'remove': false,\n    'repeat': false\n};\nlet res = {...template, ...msg.payload};\n\nif (res.uid === '') {\n\n    return;\n}\n\nif (res.remove === true) {\n    // todo\n}\n\nif (global.get('data[\"' + res.uid + '\"]', 'memoryOnly') === res.value) {\n    res.repeat = true;\n} else {\n    global.set('data[\"' + res.uid + '\"]', res.value, 'memoryOnly');\n}\n\nmsg.topic = '';\nmsg.payload = res;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 2380,
+        "wires": [
+            [
+                "540ace790f3fa1eb"
             ]
         ]
     },
@@ -4059,7 +4285,8 @@
         "name": "entity - page",
         "mode": "link",
         "links": [
-            "ad848617eded124c"
+            "ad848617eded124c",
+            "c6104f486096a92f"
         ],
         "x": 635,
         "y": 140,
@@ -4432,7 +4659,7 @@
         "type": "function",
         "z": "3d7897ba0ee14173",
         "g": "3a6d56b6dcd8540a",
-        "name": "read",
+        "name": "data",
         "func": "// entity - room - title\nmsg.payload = '';\nnode.send([msg, null, null, null, null]);\n\n// entity - room - add - title\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.group_entity.room_add\n};\nnode.send([null, msg, null, null, null]);\n\n// entity - room - add - form\nmsg.payload = {};\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.room_id,\n            \"key\": \"id\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.room_name,\n            \"key\": \"name\",\n            \"required\": false\n        }\n    ]\n};\nnode.send([null, null, msg, null, null]);\n\n// entity - room - del - title\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.group_entity.room_del\n};\nnode.send([null, null, null, msg, null]);\n\n// entity - room - del - form\nmsg.payload = '';\nlet rooms = global.get('room', 'default') || {};\nlet i = 0;\n\nlet dropdownOptions = [];\nfor (const room in rooms) {\n    dropdownOptions[i++] = {\n        'label': rooms[room] + ' (' + room + ')',\n        'value': room,\n        'dropdown':'id'\n    };\n}\n\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.room_name,\n            \"key\": \"id\",\n            \"required\": false\n        }\n    ],\n    'dropdownOptions': dropdownOptions\n}\n\nnode.send([null, null, null, null, msg]);\n\nreturn;",
         "outputs": 5,
         "timeout": 0,
@@ -4548,6 +4775,331 @@
         ]
     },
     {
+        "id": "c6104f486096a92f",
+        "type": "link in",
+        "z": "3d7897ba0ee14173",
+        "name": "entity - list",
+        "links": [
+            "b3e8adf92527c468",
+            "43b439d13979544c"
+        ],
+        "x": 145,
+        "y": 700,
+        "wires": [
+            [
+                "a07660298420c898"
+            ]
+        ]
+    },
+    {
+        "id": "a07660298420c898",
+        "type": "switch",
+        "z": "3d7897ba0ee14173",
+        "name": "enabled",
+        "property": "enabled",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 280,
+        "y": 700,
+        "wires": [
+            [
+                "c39ca7cafa16086b"
+            ],
+            [
+                "914f7c7031a0790c"
+            ]
+        ]
+    },
+    {
+        "id": "c39ca7cafa16086b",
+        "type": "link call",
+        "z": "3d7897ba0ee14173",
+        "name": "",
+        "links": [
+            "c58cbe9b2f7ccf93"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 490,
+        "y": 700,
+        "wires": [
+            [
+                "9912ca0fa2d1a8c4"
+            ]
+        ]
+    },
+    {
+        "id": "914f7c7031a0790c",
+        "type": "link call",
+        "z": "3d7897ba0ee14173",
+        "name": "",
+        "links": [
+            "20e4fb9d16e1fade"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 490,
+        "y": 760,
+        "wires": [
+            [
+                "de936a86ee99c5f5"
+            ]
+        ]
+    },
+    {
+        "id": "de936a86ee99c5f5",
+        "type": "change",
+        "z": "3d7897ba0ee14173",
+        "name": "-",
+        "rules": [],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 760,
+        "wires": [
+            [
+                "da0722f98764fac5",
+                "bda49606849a8f05"
+            ]
+        ]
+    },
+    {
+        "id": "da0722f98764fac5",
+        "type": "ui-text",
+        "z": "3d7897ba0ee14173",
+        "group": "79512e64340aeb66",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "entity - list - title",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "ui-title",
+        "value": "dictionary.group_entity.list_title",
+        "valueType": "msg",
+        "x": 880,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "9912ca0fa2d1a8c4",
+        "type": "function",
+        "z": "3d7897ba0ee14173",
+        "name": "data",
+        "func": "// entity - list - title\nmsg.payload = '';\nnode.send([msg, null]);\n\n// entity - list - table\nmsg.payload = [];\nmsg.ui_update = {\n    'label': ''\n};\n\nlet data = global.get('data', 'memoryOnly') || {};\nlet i = 0;\nfor (const uid in data) {\n    msg.payload[i++] = {\n        'uid': uid,\n        'value': data[uid],\n        'edit': msg.dictionary.group_entity.list_edit,\n        'delete': msg.dictionary.group_entity.list_delete\n    };\n}\n\nnode.send([null, msg]);\n\nreturn;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 700,
+        "wires": [
+            [
+                "da0722f98764fac5"
+            ],
+            [
+                "bda49606849a8f05"
+            ]
+        ]
+    },
+    {
+        "id": "bda49606849a8f05",
+        "type": "ui-table",
+        "z": "3d7897ba0ee14173",
+        "group": "79512e64340aeb66",
+        "name": "entity_list_table",
+        "label": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "maxrows": "100",
+        "passthru": false,
+        "autocols": false,
+        "showSearch": true,
+        "deselect": true,
+        "selectionType": "click",
+        "columns": [
+            {
+                "title": "UID",
+                "key": "uid",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            },
+            {
+                "title": "Value",
+                "key": "value",
+                "keyType": "key",
+                "type": "text",
+                "width": "30%",
+                "align": "start"
+            },
+            {
+                "title": "",
+                "key": "edit",
+                "keyType": "key",
+                "type": "button",
+                "width": "5%",
+                "align": "end"
+            },
+            {
+                "title": "",
+                "key": "delete",
+                "keyType": "key",
+                "type": "button",
+                "width": "5%",
+                "align": "end"
+            }
+        ],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "",
+        "x": 880,
+        "y": 700,
+        "wires": [
+            [
+                "78a4bf5e9f67fb5c"
+            ]
+        ]
+    },
+    {
+        "id": "e2b7bfcb5e4692a3",
+        "type": "debug",
+        "z": "3d7897ba0ee14173",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1420,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "c36c28690d0eee5b",
+        "type": "debug",
+        "z": "3d7897ba0ee14173",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1700,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "78a4bf5e9f67fb5c",
+        "type": "link call",
+        "z": "3d7897ba0ee14173",
+        "name": "",
+        "links": [
+            "56e6a7b9b0e66451"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1110,
+        "y": 700,
+        "wires": [
+            [
+                "083f2a1d4069ab69",
+                "e2b7bfcb5e4692a3"
+            ]
+        ]
+    },
+    {
+        "id": "083f2a1d4069ab69",
+        "type": "function",
+        "z": "3d7897ba0ee14173",
+        "name": "check",
+        "func": "// delete entity data\nif (msg.hmi.level === 'admin' && \n    msg.action === 'button_click' && \n    msg.column === 'delete'\n) {\n    let data = global.get('data', 'memoryOnly') || {};\n    delete data[msg.payload.uid];\n    global.set('data', data, 'memoryOnly');\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.notice.save_success;\n    node.send([msg, null]);\n}\n\nreturn;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 700,
+        "wires": [
+            [
+                "8efcf9aa67ba9375"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "43b439d13979544c",
+        "type": "link out",
+        "z": "3d7897ba0ee14173",
+        "name": "entity - list",
+        "mode": "link",
+        "links": [
+            "c6104f486096a92f",
+            "f4a2353e5f92576c"
+        ],
+        "x": 1595,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "8efcf9aa67ba9375",
+        "type": "delay",
+        "z": "3d7897ba0ee14173",
+        "name": "50ms",
+        "pauseType": "delay",
+        "timeout": "50",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1470,
+        "y": 700,
+        "wires": [
+            [
+                "c36c28690d0eee5b",
+                "43b439d13979544c"
+            ]
+        ]
+    },
+    {
         "id": "7374df2eb856c2bc",
         "type": "link in",
         "z": "d90937c9d5b88b24",
@@ -4624,41 +5176,6 @@
         "wires": [
             [
                 "fa8da6e72a733b2f"
-            ]
-        ]
-    },
-    {
-        "id": "84741ff9d386b4bb",
-        "type": "change",
-        "z": "d90937c9d5b88b24",
-        "g": "d15289b1932a175e",
-        "name": "read",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "mqtt",
-                "tot": "global"
-            },
-            {
-                "t": "set",
-                "p": "ui_update",
-                "pt": "msg",
-                "to": "{\t    'options': [\t        {\t            \"type\": \"text\",\t            \"label\": msg.dictionary.group_config.mqtt_host,\t            \"key\": \"host\",\t            \"required\": true\t        },\t        {\t            \"type\": \"number\",\t            \"label\": msg.dictionary.group_config.mqtt_port,\t            \"key\": \"port\",\t            \"required\": true\t        },\t        {\t            \"type\": \"text\",\t            \"label\": msg.dictionary.group_config.mqtt_topic,\t            \"key\": \"topic\",\t            \"required\": true\t        },\t        {\t            \"type\": \"text\",\t            \"label\": msg.dictionary.group_config.mqtt_username,\t            \"key\": \"username\",\t            \"required\": false\t        },\t        {\t            \"type\": \"password\",\t            \"label\": msg.dictionary.group_config.mqtt_password,\t            \"key\": \"password\",\t            \"required\": false\t        },\t        {\t            \"type\": \"text\",\t            \"label\": msg.dictionary.group_config.mqtt_discovery,\t            \"key\": \"discovery\",\t            \"required\": false\t        },\t        {\t            \"type\": \"checkbox\",\t            \"label\": msg.dictionary.group_config.mqtt_enabled,\t            \"key\": \"enabled\",\t            \"required\": false\t        }\t    ]\t}",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 690,
-        "y": 260,
-        "wires": [
-            [
-                "d9dbb31a0ba1e2a5"
             ]
         ]
     },
@@ -4740,7 +5257,7 @@
         "label": "",
         "order": 2,
         "width": "3",
-        "height": "9",
+        "height": "12",
         "options": [
             {
                 "label": "host",
@@ -4838,7 +5355,8 @@
         "mode": "link",
         "links": [
             "3fa36de74a10eac1",
-            "df19be1275e79b1c"
+            "df19be1275e79b1c",
+            "4418090c31b190b3"
         ],
         "x": 1615,
         "y": 260,
@@ -4903,8 +5421,7 @@
         "y": 320,
         "wires": [
             [
-                "df8a1dc0e990cec8",
-                "d9dbb31a0ba1e2a5"
+                "9fc4f5c2bd891f35"
             ]
         ]
     },
@@ -4923,8 +5440,8 @@
         "y": 260,
         "wires": [
             [
-                "84741ff9d386b4bb",
-                "df8a1dc0e990cec8"
+                "df8a1dc0e990cec8",
+                "d9949fe532466202"
             ]
         ]
     },
@@ -5200,6 +5717,56 @@
         "x": 900,
         "y": 500,
         "wires": []
+    },
+    {
+        "id": "d9949fe532466202",
+        "type": "function",
+        "z": "d90937c9d5b88b24",
+        "g": "d15289b1932a175e",
+        "name": "data",
+        "func": "msg.payload = global.get('mqtt', 'default') || {};\n\nmsg.ui_update = {\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_host,\n            \"key\": \"host\",\n            \"required\": true\n        },\n        {\n            \"type\": \"number\",\n            \"label\": msg.dictionary.group_config.mqtt_port,\n            \"key\": \"port\",\n            \"required\": true\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_topic,\n            \"key\": \"topic\",\n            \"required\": true\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_username,\n            \"key\": \"username\",\n            \"required\": false\n        },\n        {\n            \"type\": \"password\",\n            \"label\": msg.dictionary.group_config.mqtt_password,\n            \"key\": \"password\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_discovery,\n            \"key\": \"discovery\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_dknrteleinfo,\n            \"key\": \"teleinfo\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_dknrapsystems,\n            \"key\": \"apsystems\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_dknrdaikin,\n            \"key\": \"daikin\",\n            \"required\": false\n        },\n        {\n            \"type\": \"checkbox\",\n            \"label\": msg.dictionary.group_config.mqtt_enabled,\n            \"key\": \"enabled\",\n            \"required\": false\n        }\n    ]\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 260,
+        "wires": [
+            [
+                "d9dbb31a0ba1e2a5"
+            ]
+        ]
+    },
+    {
+        "id": "9fc4f5c2bd891f35",
+        "type": "change",
+        "z": "d90937c9d5b88b24",
+        "g": "d15289b1932a175e",
+        "name": "-",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ui_update",
+                "pt": "msg",
+                "to": "{\t    'label': '',\t    'options': []\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 320,
+        "wires": [
+            [
+                "df8a1dc0e990cec8",
+                "d9dbb31a0ba1e2a5"
+            ]
+        ]
     },
     {
         "id": "9833ea0e831ff8c7",
