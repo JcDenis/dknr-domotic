@@ -530,7 +530,7 @@
         "type": "group",
         "z": "4bc72a1112cb448c",
         "g": "58c5eecd014eb5e1",
-        "name": "common - ui",
+        "name": "common - ui - control",
         "style": {
             "fill": "#6f2fa0",
             "fill-opacity": "0.05",
@@ -1270,7 +1270,7 @@
         "type": "ui-group",
         "name": "entity_room",
         "page": "2b12391aa314ef62",
-        "width": 6,
+        "width": "6",
         "height": 1,
         "order": 1,
         "showTitle": false,
@@ -1323,6 +1323,20 @@
         "visible": "true",
         "disabled": "false",
         "groupType": "default"
+    },
+    {
+        "id": "ab792e98013972e4",
+        "type": "ui-group",
+        "name": "entity_list_edit",
+        "page": "2b12391aa314ef62",
+        "width": "6",
+        "height": 1,
+        "order": 3,
+        "showTitle": false,
+        "className": "",
+        "visible": "false",
+        "disabled": "false",
+        "groupType": "dialog"
     },
     {
         "id": "025edbd02daf82d0",
@@ -1509,17 +1523,17 @@
         "type": "link out",
         "z": "4bc72a1112cb448c",
         "g": "614d71e9e019ca82",
-        "name": "common - ui",
+        "name": "common - ui - page",
         "mode": "link",
         "links": [
             "4131c78a07d0bd44",
-            "7374df2eb856c2bc",
-            "bf3da41c4b5bd219",
-            "d7bc8fc74bfc07cb",
-            "e0e64bf3607382ef",
             "7179cc22cb3792c0",
+            "7374df2eb856c2bc",
             "ab17703b4908cbf8",
-            "c96e931494936766"
+            "bf3da41c4b5bd219",
+            "c96e931494936766",
+            "d7bc8fc74bfc07cb",
+            "e0e64bf3607382ef"
         ],
         "x": 1775,
         "y": 920,
@@ -1530,12 +1544,13 @@
         "type": "link in",
         "z": "4bc72a1112cb448c",
         "g": "614d71e9e019ca82",
-        "name": "common - ui",
+        "name": "common - ui - control",
         "links": [
             "92c098c716e46e3b",
             "afe884e8467661e5",
             "b02e3c2d96304d41",
-            "bb71762ba2269b75"
+            "bb71762ba2269b75",
+            "ffe4299b2fae4efd"
         ],
         "x": 145,
         "y": 980,
@@ -3187,7 +3202,7 @@
                 "t": "set",
                 "p": "payload.en",
                 "pt": "msg",
-                "to": "{\t    'option_page': {\t        'home': 'Home',\t        'room': 'Rooms',\t        'tuning': 'Adjustments',\t        'scene': 'Scenes',\t        'entity': 'Entities',\t        'config': 'Configuration',\t        'auth': 'Authentication'\t    },\t    'option_level': {\t        'visitor': 'Visitor',\t        'child':  'Child',\t        'parent':'Parent',\t        'admin': 'Administrator'\t    },\t    'option_team': {\t        'm': 'Morning',\t        'a': 'Afternoon',\t        'n': 'Night',\t        'd': 'Day',\t        'w': 'Weekend',\t        's': 'Saturday'\t    },\t    'option_lang': {\t        'en': 'English',\t        'fr': 'French'\t    },\t    'option_color': {\t        'on': '#008000',\t        'off': '#FF0000',\t        'median': '#F08000',\t        'none': '#808000',\t        'theme': '#0094CE',\t        'empty': '#CCCCCC'\t    },\t    'notice': {\t        'file_write_success': 'Saved file successfully',\t        'file_write_fail': 'Failed to save file',\t        'login_fail': 'Wrong username or password',\t        'save_success': 'Successfully saved'\t    },\t    'group_room': {\t        'room_select': 'Select a room'\t    },\t    'group_entity': {\t        'room_title': 'Rooms configuration',\t        'room_add': 'Add or edit a room',\t        'room_del': 'Delete a room',\t        'room_id': 'Ident',\t        'room_name': 'Name',\t\t        'list_title': 'List of received entities',\t        'list_edit': 'Setup',\t        'list_delete': 'Delete'\t    },\t    'group_config': {\t        'mqtt_title': 'MQTT configuration',\t        'mqtt_host': 'Broker IP address',\t        'mqtt_port': 'Port',\t        'mqtt_topic': 'Topic',\t        'mqtt_username': 'Username',\t        'mqtt_password': 'Password',\t        'mqtt_discovery': 'Home Assistant Discovery topic',\t        'mqtt_dknrteleinfo': 'DKNR Teleinfo topic',\t        'mqtt_dknrapsystems': 'DKNR APsystems topic',\t        'mqtt_dknrdaikin': 'DKNR Daikin topic',\t        'mqtt_enabled': 'Enable MQTT',\t\t        'backup_title': 'Backup configuration',\t        'backup_room': 'Rooms',\t        'backup_entity': 'Entities',\t        'backup_scene': 'Scenes',\t        'backup_user': 'Users',\t        'backup_mqtt': 'MQTT'\t    },\t    'group_auth': {\t        'login': 'Login',\t        'pass': 'Password',\t        'auth_user': 'User'\t    }\t}",
+                "to": "{\t    'option_page': {\t        'home': 'Home',\t        'room': 'Rooms',\t        'tuning': 'Adjustments',\t        'scene': 'Scenes',\t        'entity': 'Entities',\t        'config': 'Configuration',\t        'auth': 'Authentication'\t    },\t    'option_level': {\t        'visitor': 'Visitor',\t        'child':  'Child',\t        'parent':'Parent',\t        'admin': 'Administrator'\t    },\t    'option_team': {\t        'm': 'Morning',\t        'a': 'Afternoon',\t        'n': 'Night',\t        'd': 'Day',\t        'w': 'Weekend',\t        's': 'Saturday'\t    },\t    'option_lang': {\t        'en': 'English',\t        'fr': 'French'\t    },\t    'option_color': {\t        'on': '#008000',\t        'off': '#FF0000',\t        'median': '#F08000',\t        'none': '#808000',\t        'theme': '#0094CE',\t        'empty': '#CCCCCC'\t    },\t    'notice': {\t        'file_write_success': 'Saved file successfully',\t        'file_write_fail': 'Failed to save file',\t        'login_fail': 'Wrong username or password',\t        'save_success': 'Successfully saved'\t    },\t    'group_room': {\t        'room_select': 'Select a room'\t    },\t    'group_entity': {\t        'room_title': 'Rooms configuration',\t        'room_add': 'Add or edit a room',\t        'room_del': 'Delete a room',\t        'room_id': 'Ident',\t        'room_name': 'Name',\t\t        'list_title': 'List of received entities',\t        'list_edit': 'Setup',\t        'list_edit_name': 'Nom',\t        'list_edit_room': 'Pièces',\t        'list_delete': 'Delete'\t    },\t    'group_config': {\t        'mqtt_title': 'MQTT configuration',\t        'mqtt_host': 'Broker IP address',\t        'mqtt_port': 'Port',\t        'mqtt_topic': 'Topic',\t        'mqtt_username': 'Username',\t        'mqtt_password': 'Password',\t        'mqtt_discovery': 'Home Assistant Discovery topic',\t        'mqtt_dknrteleinfo': 'DKNR Teleinfo topic',\t        'mqtt_dknrapsystems': 'DKNR APsystems topic',\t        'mqtt_dknrdaikin': 'DKNR Daikin topic',\t        'mqtt_zwavejs': 'ZwaveJS topic',\t        'mqtt_zigbee2mqtt': 'Zigbee2MQTT topic',\t        'mqtt_enabled': 'Enable MQTT',\t\t        'backup_title': 'Backup configuration',\t        'backup_room': 'Rooms',\t        'backup_entity': 'Entities',\t        'backup_scene': 'Scenes',\t        'backup_user': 'Users',\t        'backup_mqtt': 'MQTT'\t    },\t    'group_auth': {\t        'login': 'Login',\t        'pass': 'Password',\t        'auth_user': 'User'\t    }\t}",
                 "tot": "jsonata"
             }
         ],
@@ -3236,7 +3251,7 @@
                 "t": "set",
                 "p": "payload.fr",
                 "pt": "msg",
-                "to": "{\t    'option_page': {\t        'home': 'Accueil',\t        'room': 'Pièces',\t        'tuning': 'Ajustements',\t        'scene': 'Scènes',\t        'entity': 'Entités',\t        'config': 'Configuration',\t        'auth': 'Authentification'\t    },\t    'option_level': {\t        'visitor': 'Visiteur',\t        'child':  'Enfant',\t        'parent':'Parent',\t        'admin': 'Administrateur'\t    },\t    'option_team': {\t        'm': 'Maint',\t        'a': 'Après-midi',\t        'n': 'Nuit',\t        'd': 'Journée',\t        's': 'Samedi',\t        'w': 'Weekend'\t    },\t    'option_lang': {\t        'en': 'English',\t        'fr': 'French'\t    },\t    'notice': {\t        'file_write_success': 'Fichier sauvegardé avec suucès',\t        'file_write_fail': 'Impossiblde de sauvegarder le fichier',\t        'login_fail': \"Mauvais nom d'utilisateur ou de mot de passe\",\t        'save_success': 'Sauvergardé avec succès'\t    },\t    'group_room': {\t        'room_select': 'Sélectionner une pièce'\t    },\t    'group_entity': {\t        'room_title': 'Configuration des pièces',\t        'room_add': 'Ajouter ou modifier une pièce',\t        'room_del': 'Supprimer une pièce',\t        'room_id': 'Identifant',\t        'room_name': 'Nom'\t    },\t    'group_config': {\t        'mqtt_title': 'Configuration MQTT',\t        'mqtt_host': 'Adresse IP du broker',\t        'mqtt_port': 'Port',\t        'mqtt_topic': 'Topic',\t        'mqtt_username': 'Utilisateur',\t        'mqtt_password': 'Mot de passe',\t        'mqtt_discovery': 'Home Assistant Discovery topic',\t        'mqtt_enabled': 'Activer MQTT',\t\t        'backup_title': \"Configuration d'une sauvergarde\",\t        'backup_room': 'Pièces',\t        'backup_entity': 'Entités',\t        'backup_scene': 'Scènes',\t        'backup_user': 'Utilisateurs',\t        'backup_mqtt': 'MQTT'\t    },\t    'group_auth': {\t        'login': 'Identifiant',\t        'pass': 'Mot de passe',\t        'user': 'Utilisateur'\t    }\t}",
+                "to": "{\t    'option_page': {\t        'home': 'Accueil',\t        'room': 'Pièces',\t        'tuning': 'Ajustements',\t        'scene': 'Scènes',\t        'entity': 'Entités',\t        'config': 'Configuration',\t        'auth': 'Authentification'\t    },\t    'option_level': {\t        'visitor': 'Visiteur',\t        'child':  'Enfant',\t        'parent':'Parent',\t        'admin': 'Administrateur'\t    },\t    'option_team': {\t        'm': 'Maint',\t        'a': 'Après-midi',\t        'n': 'Nuit',\t        'd': 'Journée',\t        's': 'Samedi',\t        'w': 'Weekend'\t    },\t    'option_lang': {\t        'en': 'English',\t        'fr': 'French'\t    },\t    'notice': {\t        'file_write_success': 'Fichier sauvegardé avec suucès',\t        'file_write_fail': 'Impossiblde de sauvegarder le fichier',\t        'login_fail': \"Mauvais nom d'utilisateur ou de mot de passe\",\t        'save_success': 'Sauvergardé avec succès'\t    },\t    'group_room': {\t        'room_select': 'Sélectionner une pièce'\t    },\t    'group_entity': {\t        'room_title': 'Configuration des pièces',\t        'room_add': 'Ajouter ou modifier une pièce',\t        'room_del': 'Supprimer une pièce',\t        'room_id': 'Identifant',\t        'room_name': 'Nom',\t\t        'list_title': \"Liste d'entités reçu\",\t        'list_edit': 'Configurer',\t        'list_edit_name': 'Nom',\t        'list_edit_room': 'Pièces',\t        'list_delete': 'Effacer'\t    },\t    'group_config': {\t        'mqtt_title': 'Configuration MQTT',\t        'mqtt_host': 'Adresse IP du broker',\t        'mqtt_port': 'Port',\t        'mqtt_topic': 'Topic',\t        'mqtt_username': 'Utilisateur',\t        'mqtt_password': 'Mot de passe',\t        'mqtt_discovery': 'Home Assistant Discovery topic',\t        'mqtt_enabled': 'Activer MQTT',\t\t        'backup_title': \"Configuration d'une sauvergarde\",\t        'backup_room': 'Pièces',\t        'backup_entity': 'Entités',\t        'backup_scene': 'Scènes',\t        'backup_user': 'Utilisateurs',\t        'backup_mqtt': 'MQTT'\t    },\t    'group_auth': {\t        'login': 'Identifiant',\t        'pass': 'Mot de passe',\t        'user': 'Utilisateur'\t    }\t}",
                 "tot": "jsonata"
             }
         ],
@@ -3608,7 +3623,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 620,
+        "x": 860,
         "y": 2380,
         "wires": []
     },
@@ -3618,7 +3633,7 @@
         "z": "4bc72a1112cb448c",
         "g": "fb34af284a5fbd90",
         "name": "parse",
-        "func": "let res = {\n    'topic':'',\n    'payload': {}\n};\n\nfor (const key in msg.payload){\n    if (typeof msg.payload.ADCO.raw === 'string') {\n        res.payload.uid = 'teleinfo_' + msg.payload.ADCO.raw + '_' + key\n        res.payload.unit = msg.payload[key]['unit'];\n        res.payload.value = msg.payload[key]['value'];\n    }\n\n    node.send(res);\n}\n\nreturn;",
+        "func": "let res = {\n    'topic':'',\n    'payload': {}\n};\n\nfor (const key in msg.payload){\n    if (typeof msg.payload.ADCO === 'object' && typeof msg.payload.ADCO.raw === 'string') {\n        res.payload.uid = 'teleinfo_' + msg.payload.ADCO.raw + '_' + key\n        res.payload.id = key;\n        res.payload.source = 'teleinfo';\n        res.payload.parent = msg.payload.ADCO.raw;\n        res.payload.unit = msg.payload[key]['unit'];\n        res.payload.value = msg.payload[key]['value'];\n        res.payload.name = msg.payload[key]['name'];\n    }\n\n    node.send(res);\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3655,11 +3670,11 @@
         "links": [
             "038df4153883408b"
         ],
-        "x": 305,
+        "x": 175,
         "y": 2380,
         "wires": [
             [
-                "b3e3b0dde3bcdd99"
+                "e964304a04d624f4"
             ]
         ]
     },
@@ -3668,20 +3683,91 @@
         "type": "function",
         "z": "4bc72a1112cb448c",
         "name": "check",
-        "func": "if (typeof msg.payload !== 'object') {\n\n    return;\n}\n\nlet template = {\n    'uid': '',\n    'value': '',\n    'unit': '',\n    'remove': false,\n    'repeat': false\n};\nlet res = {...template, ...msg.payload};\n\nif (res.uid === '') {\n\n    return;\n}\n\nif (res.remove === true) {\n    // todo\n}\n\nif (global.get('data[\"' + res.uid + '\"]', 'memoryOnly') === res.value) {\n    res.repeat = true;\n} else {\n    global.set('data[\"' + res.uid + '\"]', res.value, 'memoryOnly');\n}\n\nmsg.topic = '';\nmsg.payload = res;\n\nreturn msg;",
+        "func": "if (typeof msg.payload !== 'object' || typeof msg.payload.uid !== 'string') {\n\n    return;\n}\n\nlet template = {\n    'source': '',\n    'uid': '',\n    'id': '',\n    'parent': '',\n    'name': '',\n    'value': '',\n    'room': '',\n    'type': '',\n    'unit': ''\n};\n\nlet entity = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\nlet value = typeof entity['uid'] === 'string' ? entity['value'] : '';\n\nfor (const k in msg.payload) {\n    if (typeof template[k] !== 'undefined') {\n        if (k === 'name') {\n            if (typeof entity[k] === 'undefined' || entity[k] === '') {\n                // do not override custom name\n                entity[k] = msg.payload[k];\n            }\n        } else {\n            entity[k] = msg.payload[k];\n        }\n    }\n}\n\nif (msg.remove === true) {\n    // todo\n}\n\nmsg.repeat = value === entity.value ? true : false;\n\nglobal.set('entity[\"' + entity.uid + '\"]', entity, 'memoryOnly');\n\nnode.status({ fill: \"green\", shape: \"ring\", text: entity.uid + ' : ' + entity.value});\n\nmsg.topic = '';\nmsg.payload = entity;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
+        "x": 450,
         "y": 2380,
         "wires": [
             [
                 "540ace790f3fa1eb"
             ]
         ]
+    },
+    {
+        "id": "a29ec7554a818a6f",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "name": "common - data - out",
+        "mode": "link",
+        "links": [],
+        "x": 705,
+        "y": 2440,
+        "wires": []
+    },
+    {
+        "id": "e964304a04d624f4",
+        "type": "delay",
+        "z": "4bc72a1112cb448c",
+        "name": "10/s",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "50",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 290,
+        "y": 2380,
+        "wires": [
+            [
+                "b3e3b0dde3bcdd99"
+            ]
+        ]
+    },
+    {
+        "id": "4a92cc963dfba7b7",
+        "type": "inject",
+        "z": "4bc72a1112cb448c",
+        "name": "5min",
+        "props": [],
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 230,
+        "y": 2460,
+        "wires": [
+            [
+                "c7b7c464c8142df7"
+            ]
+        ]
+    },
+    {
+        "id": "c7b7c464c8142df7",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "name": "copy",
+        "func": "global.set('entity', (global.get('entity', 'memoryOnly') || {}), 'default');\n\nreturn;",
+        "outputs": 0,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 2460,
+        "wires": []
     },
     {
         "id": "d7bc8fc74bfc07cb",
@@ -4459,8 +4545,8 @@
         "group": "fa076f843950d108",
         "label": "",
         "order": 3,
-        "width": 0,
-        "height": 0,
+        "width": "0",
+        "height": "0",
         "options": [
             {
                 "label": "id",
@@ -4905,7 +4991,7 @@
         "type": "function",
         "z": "3d7897ba0ee14173",
         "name": "data",
-        "func": "// entity - list - title\nmsg.payload = '';\nnode.send([msg, null]);\n\n// entity - list - table\nmsg.payload = [];\nmsg.ui_update = {\n    'label': ''\n};\n\nlet data = global.get('data', 'memoryOnly') || {};\nlet i = 0;\nfor (const uid in data) {\n    msg.payload[i++] = {\n        'uid': uid,\n        'value': data[uid],\n        'edit': msg.dictionary.group_entity.list_edit,\n        'delete': msg.dictionary.group_entity.list_delete\n    };\n}\n\nnode.send([null, msg]);\n\nreturn;",
+        "func": "// entity - list - title\nmsg.payload = '';\nnode.send([msg, null]);\n\n// entity - list - table\nmsg.payload = [];\nmsg.ui_update = {\n    'label': ''\n};\n\nlet entities = global.get('entity', 'memoryOnly') || {};\nlet i = 0;\nfor (const uid in entities) {\n    let room = entities[uid]['room'];\n    if (room !== '') {\n        room = global.get('room[\"' + room + '\"]', 'default') || room;\n    }\n\n    msg.payload[i++] = {\n        'uid': uid,\n        'name': entities[uid]['name'],\n        'room': room,\n        'parent': entities[uid]['parent'],\n        'id': entities[uid]['id'],\n        'value': entities[uid]['value'],\n        'unit': entities[uid]['unit'],\n        'edit': msg.dictionary.group_entity.list_edit,\n        'delete': msg.dictionary.group_entity.list_delete\n    };\n}\n\nnode.send([null, msg]);\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -4941,8 +5027,32 @@
         "selectionType": "click",
         "columns": [
             {
-                "title": "UID",
-                "key": "uid",
+                "title": "Parent",
+                "key": "parent",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            },
+            {
+                "title": "ID",
+                "key": "id",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            },
+            {
+                "title": "Name",
+                "key": "name",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            },
+            {
+                "title": "Room",
+                "key": "room",
                 "keyType": "key",
                 "type": "text",
                 "width": "",
@@ -4953,15 +5063,23 @@
                 "key": "value",
                 "keyType": "key",
                 "type": "text",
-                "width": "30%",
-                "align": "start"
+                "width": "",
+                "align": "end"
+            },
+            {
+                "title": "Unit",
+                "key": "unit",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "end"
             },
             {
                 "title": "",
                 "key": "edit",
                 "keyType": "key",
                 "type": "button",
-                "width": "5%",
+                "width": "",
                 "align": "end"
             },
             {
@@ -4969,7 +5087,7 @@
                 "key": "delete",
                 "keyType": "key",
                 "type": "button",
-                "width": "5%",
+                "width": "",
                 "align": "end"
             }
         ],
@@ -4986,40 +5104,6 @@
         ]
     },
     {
-        "id": "e2b7bfcb5e4692a3",
-        "type": "debug",
-        "z": "3d7897ba0ee14173",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1420,
-        "y": 840,
-        "wires": []
-    },
-    {
-        "id": "c36c28690d0eee5b",
-        "type": "debug",
-        "z": "3d7897ba0ee14173",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1700,
-        "y": 760,
-        "wires": []
-    },
-    {
         "id": "78a4bf5e9f67fb5c",
         "type": "link call",
         "z": "3d7897ba0ee14173",
@@ -5033,8 +5117,7 @@
         "y": 700,
         "wires": [
             [
-                "083f2a1d4069ab69",
-                "e2b7bfcb5e4692a3"
+                "083f2a1d4069ab69"
             ]
         ]
     },
@@ -5043,7 +5126,7 @@
         "type": "function",
         "z": "3d7897ba0ee14173",
         "name": "check",
-        "func": "// delete entity data\nif (msg.hmi.level === 'admin' && \n    msg.action === 'button_click' && \n    msg.column === 'delete'\n) {\n    let data = global.get('data', 'memoryOnly') || {};\n    delete data[msg.payload.uid];\n    global.set('data', data, 'memoryOnly');\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.notice.save_success;\n    node.send([msg, null]);\n}\n\nreturn;",
+        "func": "// delete entity data\nif (msg.hmi.level === 'admin' && msg.action === 'button_click') {\n    if (msg.column === 'delete') {\n        let entity = global.get('entity', 'memoryOnly') || {};\n        delete entity[msg.payload.uid];\n        global.set('entity', entity, 'memoryOnly');\n\n        msg.enabled = true;\n        msg.payload = msg.dictionary.notice.save_success;\n        node.send([msg, null]);\n    }\n    else if (msg.column === 'edit') {\n\n        node.send([null, msg]);\n    }\n}\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -5056,7 +5139,9 @@
             [
                 "8efcf9aa67ba9375"
             ],
-            []
+            [
+                "142df6c6376da789"
+            ]
         ]
     },
     {
@@ -5069,7 +5154,7 @@
             "c6104f486096a92f",
             "f4a2353e5f92576c"
         ],
-        "x": 1595,
+        "x": 2775,
         "y": 700,
         "wires": []
     },
@@ -5090,14 +5175,341 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1470,
+        "x": 2610,
         "y": 700,
         "wires": [
             [
-                "c36c28690d0eee5b",
                 "43b439d13979544c"
             ]
         ]
+    },
+    {
+        "id": "4a65b8428bc02868",
+        "type": "ui-form",
+        "z": "3d7897ba0ee14173",
+        "name": "entity - list - edit - form",
+        "group": "ab792e98013972e4",
+        "label": "",
+        "order": 6,
+        "width": "6",
+        "height": "4",
+        "options": [
+            {
+                "label": "room",
+                "key": "room",
+                "type": "dropdown",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "room": ""
+        },
+        "payload": "",
+        "submit": "►",
+        "cancel": "",
+        "resetOnSubmit": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "passthru": false,
+        "dropdownOptions": [
+            {
+                "dropdown": "room",
+                "value": "",
+                "label": ""
+            }
+        ],
+        "x": 2000,
+        "y": 820,
+        "wires": [
+            [
+                "4ff23a4db8ae28dc"
+            ]
+        ]
+    },
+    {
+        "id": "496a21836d20115a",
+        "type": "function",
+        "z": "3d7897ba0ee14173",
+        "name": "show dialog",
+        "func": "msg.payload = {\n    groups: {\n        show: ['entity_list_edit']\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2630,
+        "y": 760,
+        "wires": [
+            [
+                "ffe4299b2fae4efd"
+            ]
+        ]
+    },
+    {
+        "id": "4637984430f9f9f9",
+        "type": "function",
+        "z": "3d7897ba0ee14173",
+        "name": "hide dialog",
+        "func": "msg.payload = {\n    groups: {\n        hide: ['entity_list_edit']\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2630,
+        "y": 820,
+        "wires": [
+            [
+                "ffe4299b2fae4efd"
+            ]
+        ]
+    },
+    {
+        "id": "ffe4299b2fae4efd",
+        "type": "link out",
+        "z": "3d7897ba0ee14173",
+        "name": "link out 2",
+        "mode": "link",
+        "links": [
+            "289e0a6cd1209c38"
+        ],
+        "x": 2775,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "e4e6368d57415f5c",
+        "type": "function",
+        "z": "3d7897ba0ee14173",
+        "name": "data",
+        "func": "let entity = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\nlet rooms = global.get('room', 'default');\n\nlet d = 0;\nlet dropdownOptions = [];\nfor (const room in rooms) {\n    dropdownOptions[d++] = {\n        'label': rooms[room] + ' (' + room + ')',\n        'value': room,\n        'dropdown': 'room'\n    };\n}\n\nmsg.topic = msg.payload.uid;\n//node-red 5.04 bug with dropdown msg.topic\nflow.set('current_entity_list_edit', msg.payload.uid, 'memoryOnly');\n\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.list_edit_name,\n            \"key\": \"name\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.list_edit_room,\n            \"key\": \"room\"\n        }\n    ],\n    'dropdownOptions': dropdownOptions\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1790,
+        "y": 820,
+        "wires": [
+            [
+                "4a65b8428bc02868"
+            ]
+        ]
+    },
+    {
+        "id": "44f2b0d0e1923c5e",
+        "type": "ui-text",
+        "z": "3d7897ba0ee14173",
+        "group": "ab792e98013972e4",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "entity_list_edit_id",
+        "label": "ID",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload.id",
+        "valueType": "msg",
+        "x": 1990,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "142df6c6376da789",
+        "type": "change",
+        "z": "3d7897ba0ee14173",
+        "name": "-",
+        "rules": [],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1470,
+        "y": 760,
+        "wires": [
+            [
+                "496a21836d20115a",
+                "5d27310454b9dc88"
+            ]
+        ]
+    },
+    {
+        "id": "5d27310454b9dc88",
+        "type": "delay",
+        "z": "3d7897ba0ee14173",
+        "name": "500ms",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1630,
+        "y": 880,
+        "wires": [
+            [
+                "e4e6368d57415f5c",
+                "44f2b0d0e1923c5e",
+                "83c69cd135c027cf",
+                "c5a761e74f9ad612",
+                "ea9109e556b62ba2",
+                "17b8d9a4f39b3c80"
+            ]
+        ]
+    },
+    {
+        "id": "9634bf7cac24c86f",
+        "type": "function",
+        "z": "3d7897ba0ee14173",
+        "name": "save",
+        "func": "// node-red 5.0.4 has bug with dropdown topic\nlet topic = flow.get('current_entity_list_edit', 'memoryOnly') || '-';\n\nlet entity = global.get('entity[\"' + topic + '\"]', 'memoryOnly');\nif (msg.hmi.level === 'admin' && typeof entity === 'object') {\n    global.set('entity[\"' + topic + '\"][\"room\"]', msg.payload.room, 'memoryOnly');\n    global.set('entity[\"' + topic + '\"][\"name\"]', msg.payload.name, 'memoryOnly');\n    \n    msg.enabled = true;\n    msg.payload = msg.dictionary.notice.save_success;\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2450,
+        "y": 820,
+        "wires": [
+            [
+                "4637984430f9f9f9",
+                "8efcf9aa67ba9375"
+            ]
+        ]
+    },
+    {
+        "id": "4ff23a4db8ae28dc",
+        "type": "link call",
+        "z": "3d7897ba0ee14173",
+        "name": "",
+        "links": [
+            "56e6a7b9b0e66451"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 2250,
+        "y": 820,
+        "wires": [
+            [
+                "9634bf7cac24c86f"
+            ]
+        ]
+    },
+    {
+        "id": "83c69cd135c027cf",
+        "type": "ui-text",
+        "z": "3d7897ba0ee14173",
+        "group": "ab792e98013972e4",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "entity_list_edit_uid",
+        "label": "UID",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": true,
+        "className": "",
+        "value": "payload.uid",
+        "valueType": "msg",
+        "x": 1990,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "c5a761e74f9ad612",
+        "type": "ui-text",
+        "z": "3d7897ba0ee14173",
+        "group": "ab792e98013972e4",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "entity_list_edit_unit",
+        "label": "Unit",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload.unit",
+        "valueType": "msg",
+        "x": 1990,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "ea9109e556b62ba2",
+        "type": "ui-text",
+        "z": "3d7897ba0ee14173",
+        "group": "ab792e98013972e4",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "entity_list_edit_parent",
+        "label": "Parent",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload.parent",
+        "valueType": "msg",
+        "x": 2000,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "17b8d9a4f39b3c80",
+        "type": "ui-text",
+        "z": "3d7897ba0ee14173",
+        "group": "ab792e98013972e4",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "entity_list_edit_value",
+        "label": "Value",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload.value",
+        "valueType": "msg",
+        "x": 2000,
+        "y": 1060,
+        "wires": []
     },
     {
         "id": "7374df2eb856c2bc",
@@ -5257,7 +5669,7 @@
         "label": "",
         "order": 2,
         "width": "3",
-        "height": "12",
+        "height": "14",
         "options": [
             {
                 "label": "host",
@@ -5724,7 +6136,7 @@
         "z": "d90937c9d5b88b24",
         "g": "d15289b1932a175e",
         "name": "data",
-        "func": "msg.payload = global.get('mqtt', 'default') || {};\n\nmsg.ui_update = {\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_host,\n            \"key\": \"host\",\n            \"required\": true\n        },\n        {\n            \"type\": \"number\",\n            \"label\": msg.dictionary.group_config.mqtt_port,\n            \"key\": \"port\",\n            \"required\": true\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_topic,\n            \"key\": \"topic\",\n            \"required\": true\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_username,\n            \"key\": \"username\",\n            \"required\": false\n        },\n        {\n            \"type\": \"password\",\n            \"label\": msg.dictionary.group_config.mqtt_password,\n            \"key\": \"password\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_discovery,\n            \"key\": \"discovery\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_dknrteleinfo,\n            \"key\": \"teleinfo\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_dknrapsystems,\n            \"key\": \"apsystems\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_dknrdaikin,\n            \"key\": \"daikin\",\n            \"required\": false\n        },\n        {\n            \"type\": \"checkbox\",\n            \"label\": msg.dictionary.group_config.mqtt_enabled,\n            \"key\": \"enabled\",\n            \"required\": false\n        }\n    ]\n};\n\nreturn msg;",
+        "func": "msg.payload = global.get('mqtt', 'default') || {};\n\nmsg.ui_update = {\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_host,\n            \"key\": \"host\",\n            \"required\": true\n        },\n        {\n            \"type\": \"number\",\n            \"label\": msg.dictionary.group_config.mqtt_port,\n            \"key\": \"port\",\n            \"required\": true\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_topic,\n            \"key\": \"topic\",\n            \"required\": true\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_username,\n            \"key\": \"username\",\n            \"required\": false\n        },\n        {\n            \"type\": \"password\",\n            \"label\": msg.dictionary.group_config.mqtt_password,\n            \"key\": \"password\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_discovery,\n            \"key\": \"discovery\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_dknrteleinfo,\n            \"key\": \"teleinfo\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_dknrapsystems,\n            \"key\": \"apsystems\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_dknrdaikin,\n            \"key\": \"daikin\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_zwavejs,\n            \"key\": \"zwave\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_zigbee2mqtt,\n            \"key\": \"zigbee\",\n            \"required\": false\n        },\n        {\n            \"type\": \"checkbox\",\n            \"label\": msg.dictionary.group_config.mqtt_enabled,\n            \"key\": \"enabled\",\n            \"required\": false\n        }\n    ]\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
