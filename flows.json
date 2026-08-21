@@ -3520,7 +3520,7 @@
         "z": "4bc72a1112cb448c",
         "g": "9e3dbf7ae870765f",
         "name": "data",
-        "func": "msg.broker = {};\n\nlet mqtt = global.get('mqtt', 'default');\nif (typeof mqtt == 'object' && mqtt.enabled == true) {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.topic.length > 0\n    ) {\n        msg.broker = {\n            'broker': mqtt.host,\n            'port': mqtt.port,\n            'clientid': global.get('describe.app.project', 'memoryOnly') || 'dknr',\n            'birth': {\n                'topic': mqtt.topic + '/kernel/state',\n                'payload': 'online',\n                'qos': 0,\n                'retain': false\n            },\n            'close': {\n                'topic': mqtt.topic + '/kernel/state',\n                'payload': 'offline',\n                'qos': 0,\n                'retain': false\n            },\n            'will': {\n                'topic': mqtt.topic + '/kernel/state',\n                'payload': 'will',\n                'qos': 0,\n                'retain': false\n            },\n            'force': true\n        };\n\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.topic + '/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'default');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
+        "func": "msg.broker = {};\n\nlet mqtt = global.get('mqtt', 'memoryOnly');\nif (typeof mqtt == 'object' && mqtt.enabled == true) {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.topic.length > 0\n    ) {\n        msg.broker = {\n            'broker': mqtt.host,\n            'port': mqtt.port,\n            'clientid': global.get('describe.app.project', 'memoryOnly') || 'dknr',\n            'birth': {\n                'topic': mqtt.topic + '/kernel/state',\n                'payload': 'online',\n                'qos': 0,\n                'retain': false\n            },\n            'close': {\n                'topic': mqtt.topic + '/kernel/state',\n                'payload': 'offline',\n                'qos': 0,\n                'retain': false\n            },\n            'will': {\n                'topic': mqtt.topic + '/kernel/state',\n                'payload': 'will',\n                'qos': 0,\n                'retain': false\n            },\n            'force': true\n        };\n\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.topic + '/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'memoryOnly');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3661,7 +3661,7 @@
         "z": "4bc72a1112cb448c",
         "g": "fb34af284a5fbd90",
         "name": "data",
-        "func": "msg.broker = {};\n\nlet mqtt = global.get('mqtt', 'default');\nif (typeof mqtt == 'object' && mqtt.enabled == true && mqtt.teleinfo != '') {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.teleinfo.length > 0\n    ) {\n        msg.broker = {\n            'broker': mqtt.host,\n            'port': mqtt.port,\n            'clientid': 'teleinfo' + global.get('describe.app.project', 'memoryOnly') || 'dknr',\n            'force': true\n        };\n\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.teleinfo + '/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'default');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
+        "func": "msg.broker = {};\n\nlet mqtt = global.get('mqtt', 'memoryOnly');\nif (typeof mqtt == 'object' && mqtt.enabled == true && mqtt.teleinfo != '') {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.teleinfo.length > 0\n    ) {\n        msg.broker = {\n            'broker': mqtt.host,\n            'port': mqtt.port,\n            'clientid': 'teleinfo' + global.get('describe.app.project', 'memoryOnly') || 'dknr',\n            'force': true\n        };\n\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.teleinfo + '/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'memoryOnly');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3798,7 +3798,7 @@
         "type": "function",
         "z": "4bc72a1112cb448c",
         "name": "check",
-        "func": "if (typeof msg.payload !== 'object' || typeof msg.payload.uid !== 'string') {\n\n    return;\n}\n\nlet template = {\n    'source': '',\n    'uid': '',\n    'id': '',\n    'parent': '',\n    'room': '',\n    'value': '',\n    'type': '',\n    'unit': ''\n};\n\nlet entity = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\nlet protect = ['room'];\n\n// get all entity fields\nentity = {...template, ...entity};\n\nfor (const k in msg.payload) {\n    // set entity name if it not exists\n    if (k === 'name') {\n        let name = global.get('name[\"entity\"]', 'default') || {};\n        if (typeof name[msg.payload.uid] !== 'string' || name[msg.payload.uid] === '') {\n            name[msg.payload.uid] = msg.payload.name;\n            global.set('name[\"entity\"]', name, 'default')\n        }\n    }\n\n    if (typeof template[k] !== 'undefined') {\n        // check if value changes\n        if (k === 'value') {\n            msg.repeat = entity[k] === msg.payload[k] ? true : false;\n        }\n        if (protect.includes(k) && entity[k] !== '') {\n            // do not override some properties\n        } else {\n            entity[k] = msg.payload[k];\n        }\n    }\n}\n\nif (msg.remove === true) {\n    // todo\n}\n\nglobal.set('entity[\"' + entity.uid + '\"]', entity, 'memoryOnly');\n\nnode.status({ fill: \"green\", shape: \"ring\", text: entity.uid + ' : ' + entity.value});\n\nmsg.topic = '';\nmsg.payload = entity;\n\nreturn msg;",
+        "func": "if (typeof msg.payload !== 'object' || typeof msg.payload.uid !== 'string') {\n\n    return;\n}\n\nlet template = {\n    'source': '',\n    'uid': '',\n    'id': '',\n    'parent': '',\n    'room': '',\n    'value': '',\n    'type': '',\n    'unit': ''\n};\n\nlet entity = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\nlet protect = ['room'];\n\n// get all entity fields\nentity = {...template, ...entity};\n\nfor (const k in msg.payload) {\n    // set entity name if it not exists\n    if (k === 'name') {\n        let name = global.get('name[\"entity\"]', 'memoryOnly') || {};\n        if (typeof name[msg.payload.uid] !== 'string' || name[msg.payload.uid] === '') {\n            name[msg.payload.uid] = msg.payload.name;\n            global.set('name[\"entity\"]', name, 'memoryOnly')\n        }\n    }\n\n    if (typeof template[k] !== 'undefined') {\n        // check if value changes\n        if (k === 'value') {\n            msg.repeat = entity[k] === msg.payload[k] ? true : false;\n        }\n        if (protect.includes(k) && entity[k] !== '') {\n            // do not override some properties\n        } else {\n            entity[k] = msg.payload[k];\n        }\n    }\n}\n\nif (msg.remove === true) {\n    // todo\n}\n\nglobal.set('entity[\"' + entity.uid + '\"]', entity, 'memoryOnly');\n\nnode.status({ fill: \"green\", shape: \"ring\", text: entity.uid + ' : ' + entity.value});\n\nmsg.topic = '';\nmsg.payload = entity;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3885,6 +3885,60 @@
         "x": 350,
         "y": 140,
         "wires": []
+    },
+    {
+        "id": "59fdcca1f6409d31",
+        "type": "inject",
+        "z": "4bc72a1112cb448c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 910,
+        "y": 2460,
+        "wires": [
+            [
+                "0e7d3a791038b5b3"
+            ]
+        ]
+    },
+    {
+        "id": "0e7d3a791038b5b3",
+        "type": "change",
+        "z": "4bc72a1112cb448c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "#:(memoryOnly)::name.entity",
+                "pt": "global",
+                "to": "{}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1130,
+        "y": 2460,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "d7bc8fc74bfc07cb",
@@ -4557,7 +4611,7 @@
         "type": "function",
         "z": "560376d6bba621ec",
         "name": "data",
-        "func": "let room = flow.get('room[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--';\nlet entity = global.get('entity', 'memoryOnly') || {};\n\nlet p = 0;\nlet power = msg;\npower.payload = [];\n\nfor (const uid in entity) {\n    if (entity[uid]['room'] === room) {\n        if (entity[uid]['unit'].match((new RegExp('^(mA|A|mW|W|kW)$'))) !== null) {\n            power.payload[p++] = {\n                'name': entity[uid]['name'],\n                'parent': entity[uid]['parent'],\n                'value': entity[uid]['value'] + ' ' + entity[uid]['unit'],\n                'data': entity[uid]\n            };\n        }\n    }\n}\n\nif (power.payload.length > 0) {\n    node.send([power]);\n}\n\nreturn;",
+        "func": "let room = flow.get('room[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--';\nlet entity = global.get('entity', 'memoryOnly') || {};\n\nlet p = 0;\nlet power = msg;\npower.payload = [];\n\nfor (const uid in entity) {\n    if (entity[uid]['room'] === room) {\n        if (entity[uid]['unit'].match((new RegExp('^(mA|A|mW|W|kW)$'))) !== null) {\n            power.payload[p++] = {\n                'name': global.get('name[\"entity\"][\"' + uid + '\"]', 'memoryOnly') || entity[uid]['id'],\n                'parent': global.get('name[\"device\"][\"' + entity[uid]['parent']  + '\"]', 'memoryOnly') || entity[uid]['parent'],\n                'value': entity[uid]['value'] + ' ' + entity[uid]['unit'],\n                'data': entity[uid]\n            };\n        }\n    }\n}\n\nif (power.payload.length > 0) {\n    node.send([power]);\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6368,7 +6422,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "mqtt",
+                "p": "#:(memoryOnly)::mqtt",
                 "pt": "global",
                 "to": "payload",
                 "tot": "msg"
@@ -6904,7 +6958,7 @@
         "z": "d90937c9d5b88b24",
         "g": "d15289b1932a175e",
         "name": "data",
-        "func": "msg.payload = global.get('mqtt', 'default') || {};\n\nmsg.ui_update = {\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_host,\n            \"key\": \"host\",\n            \"required\": true\n        },\n        {\n            \"type\": \"number\",\n            \"label\": msg.dictionary.group_config.mqtt_port,\n            \"key\": \"port\",\n            \"required\": true\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_topic,\n            \"key\": \"topic\",\n            \"required\": true\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_username,\n            \"key\": \"username\",\n            \"required\": false\n        },\n        {\n            \"type\": \"password\",\n            \"label\": msg.dictionary.group_config.mqtt_password,\n            \"key\": \"password\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_discovery,\n            \"key\": \"discovery\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_dknrteleinfo,\n            \"key\": \"teleinfo\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_dknrapsystems,\n            \"key\": \"apsystems\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_dknrdaikin,\n            \"key\": \"daikin\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_zwavejs,\n            \"key\": \"zwave\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_zigbee2mqtt,\n            \"key\": \"zigbee\",\n            \"required\": false\n        },\n        {\n            \"type\": \"checkbox\",\n            \"label\": msg.dictionary.group_config.mqtt_enabled,\n            \"key\": \"enabled\",\n            \"required\": false\n        }\n    ]\n};\n\nreturn msg;",
+        "func": "msg.payload = global.get('mqtt', 'memoryOnly') || {};\n\nmsg.ui_update = {\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_host,\n            \"key\": \"host\",\n            \"required\": true\n        },\n        {\n            \"type\": \"number\",\n            \"label\": msg.dictionary.group_config.mqtt_port,\n            \"key\": \"port\",\n            \"required\": true\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_topic,\n            \"key\": \"topic\",\n            \"required\": true\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_username,\n            \"key\": \"username\",\n            \"required\": false\n        },\n        {\n            \"type\": \"password\",\n            \"label\": msg.dictionary.group_config.mqtt_password,\n            \"key\": \"password\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_discovery,\n            \"key\": \"discovery\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_dknrteleinfo,\n            \"key\": \"teleinfo\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_dknrapsystems,\n            \"key\": \"apsystems\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_dknrdaikin,\n            \"key\": \"daikin\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_zwavejs,\n            \"key\": \"zwave\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_config.mqtt_zigbee2mqtt,\n            \"key\": \"zigbee\",\n            \"required\": false\n        },\n        {\n            \"type\": \"checkbox\",\n            \"label\": msg.dictionary.group_config.mqtt_enabled,\n            \"key\": \"enabled\",\n            \"required\": false\n        }\n    ]\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
