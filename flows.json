@@ -827,12 +827,13 @@
             "4cb0c8835c747153",
             "950c792d20eafdc3",
             "2f9f6f02023cdb2b",
-            "02da074ecfba7d08"
+            "02da074ecfba7d08",
+            "d40b377694438865"
         ],
         "x": 104,
         "y": 579,
         "w": 2732,
-        "h": 802
+        "h": 862
     },
     {
         "id": "1465a47c930ed8e1",
@@ -3041,7 +3042,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "init",
-        "func": "// set default variables\nif (typeof global.get('device', 'default') === 'undefined') {\n    global.set('device', {}, 'default');\n}\nif (typeof global.get('entity', 'default') === 'undefined') {\n    global.set('device', {}, 'default');\n}\nif (typeof global.get('mqtt', 'default') === 'undefined') {\n    global.set('mqtt', {}, 'default');\n}\nif (typeof global.get('room', 'default') === 'undefined') {\n    global.set('room', {}, 'default');\n}\n\n// Reset variables\n\nglobal.set('auth', {}, 'memoryOnly');\nglobal.set('browser', {}, 'memoryOnly');\nglobal.set('describe', {\n    'project': '',\n    'app': {},\n    'pages': {}\n}, 'memoryOnly');\nglobal.set('dictionary', {}, 'memoryOnly');\nglobal.set('entity', {}, 'memoryOnly');\nglobal.set('form', {}, 'memoryOnly');\nglobal.set('user', {}, 'memoryOnly');\n\nmsg.payload = {\n    'pages': {},\n    'dictionary': {}\n};\n\n// Copy backup\nglobal.set('auth', (global.get('auth', 'default') || {}), 'memoryOnly');\nglobal.set('entity', (global.get('entity', 'default') || {}), 'memoryOnly');\n\nreturn msg;",
+        "func": "// set default variables\nif (typeof global.get('device', 'default') === 'undefined') {\n    global.set('device', {}, 'default');\n}\nif (typeof global.get('entity', 'default') === 'undefined') {\n    global.set('device', {}, 'default');\n}\nif (typeof global.get('mqtt', 'default') === 'undefined') {\n    global.set('mqtt', {}, 'default');\n}\nif (typeof global.get('name', 'default') === 'undefined') {\n    global.set('name', {\n        'room': {},\n        'device': {},\n        'entity': {}\n    }, 'default');\n}\n\n// Reset variables\n\nglobal.set('auth', {}, 'memoryOnly');\nglobal.set('browser', {}, 'memoryOnly');\nglobal.set('describe', {\n    'project': '',\n    'app': {},\n    'pages': {}\n}, 'memoryOnly');\nglobal.set('dictionary', {}, 'memoryOnly');\nglobal.set('entity', {}, 'memoryOnly');\nglobal.set('form', {}, 'memoryOnly');\nglobal.set('user', {}, 'memoryOnly');\n\nmsg.payload = {\n    'pages': {},\n    'dictionary': {}\n};\n\n// Copy backup\nglobal.set('auth', (global.get('auth', 'default') || {}), 'memoryOnly');\nglobal.set('entity', (global.get('entity', 'default') || {}), 'memoryOnly');\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3316,7 +3317,7 @@
                 "t": "set",
                 "p": "payload.en",
                 "pt": "msg",
-                "to": "{\t    'option_page': {\t        'home': 'Home',\t        'room': 'Rooms',\t        'tuning': 'Adjustments',\t        'scene': 'Scenes',\t        'entity': 'Entities',\t        'config': 'Configuration',\t        'auth': 'Authentication'\t    },\t    'option_level': {\t        'visitor': 'Visitor',\t        'child':  'Child',\t        'parent':'Parent',\t        'admin': 'Administrator'\t    },\t    'option_team': {\t        'm': 'Morning',\t        'a': 'Afternoon',\t        'n': 'Night',\t        'd': 'Day',\t        'w': 'Weekend',\t        's': 'Saturday'\t    },\t    'option_lang': {\t        'en': 'English',\t        'fr': 'French'\t    },\t    'option_color': {\t        'on': '#008000',\t        'off': '#FF0000',\t        'median': '#F08000',\t        'none': '#808000',\t        'theme': '#0094CE',\t        'empty': '#CCCCCC'\t    },\t    'notice': {\t        'file_write_success': 'Saved file successfully',\t        'file_write_fail': 'Failed to save file',\t        'login_fail': 'Wrong username or password',\t        'save_success': 'Successfully saved'\t    },\t    'group_room': {\t        'room_select': 'Select a room',\t        'power_title': 'Powers'\t    },\t    'group_entity': {\t        'room_title': 'Rooms configuration',\t        'room_add': 'Add or edit a room',\t        'room_del': 'Delete a room',\t        'room_id': 'Ident',\t        'room_name': 'Name',\t\t        'list_title': 'List of received entities',\t        'list_edit': 'Setup',\t        'list_edit_name': 'Nom',\t        'list_edit_room': 'Pièces',\t        'list_delete': 'Delete'\t    },\t    'group_config': {\t        'mqtt_title': 'MQTT configuration',\t        'mqtt_host': 'Broker IP address',\t        'mqtt_port': 'Port',\t        'mqtt_topic': 'Topic',\t        'mqtt_username': 'Username',\t        'mqtt_password': 'Password',\t        'mqtt_discovery': 'Home Assistant Discovery topic',\t        'mqtt_dknrteleinfo': 'DKNR Teleinfo topic',\t        'mqtt_dknrapsystems': 'DKNR APsystems topic',\t        'mqtt_dknrdaikin': 'DKNR Daikin topic',\t        'mqtt_zwavejs': 'ZwaveJS topic',\t        'mqtt_zigbee2mqtt': 'Zigbee2MQTT topic',\t        'mqtt_enabled': 'Enable MQTT',\t\t        'backup_title': 'Backup configuration',\t        'backup_room': 'Rooms',\t        'backup_entity': 'Entities',\t        'backup_scene': 'Scenes',\t        'backup_user': 'Users',\t        'backup_mqtt': 'MQTT'\t    },\t    'group_auth': {\t        'login': 'Login',\t        'pass': 'Password',\t        'auth_user': 'User'\t    }\t}",
+                "to": "{\t    'option_page': {\t        'home': 'Home',\t        'room': 'Rooms',\t        'tuning': 'Adjustments',\t        'scene': 'Scenes',\t        'entity': 'Entities',\t        'config': 'Configuration',\t        'auth': 'Authentication'\t    },\t    'option_level': {\t        'visitor': 'Visitor',\t        'child':  'Child',\t        'parent':'Parent',\t        'admin': 'Administrator'\t    },\t    'option_team': {\t        'm': 'Morning',\t        'a': 'Afternoon',\t        'n': 'Night',\t        'd': 'Day',\t        'w': 'Weekend',\t        's': 'Saturday'\t    },\t    'option_lang': {\t        'en': 'English',\t        'fr': 'French'\t    },\t    'option_color': {\t        'on': '#008000',\t        'off': '#FF0000',\t        'median': '#F08000',\t        'none': '#808000',\t        'theme': '#0094CE',\t        'empty': '#CCCCCC'\t    },\t    'notice': {\t        'file_write_success': 'Saved file successfully',\t        'file_write_fail': 'Failed to save file',\t        'login_fail': 'Wrong username or password',\t        'save_success': 'Successfully saved'\t    },\t    'group_room': {\t        'room_select': 'Select a room',\t        'power_title': 'Powers'\t    },\t    'group_entity': {\t        'room_title': 'Rooms configuration',\t        'room_add': 'Add or edit a room',\t        'room_del': 'Delete a room',\t        'room_id': 'Ident',\t        'room_name': 'Name',\t\t        'entity_title': 'List of received entities',\t        'entity_edit_title': 'Configure entity',\t        'entity_edit_name': 'Nom',\t        'entity_edit_room': 'Pièces',\t        'entity_delete': 'Delete',\t\t        'device_edit_title': 'Configure device',\t        'device_edit_name': 'Device name'\t    },\t    'group_config': {\t        'mqtt_title': 'MQTT configuration',\t        'mqtt_host': 'Broker IP address',\t        'mqtt_port': 'Port',\t        'mqtt_topic': 'Topic',\t        'mqtt_username': 'Username',\t        'mqtt_password': 'Password',\t        'mqtt_discovery': 'Home Assistant Discovery topic',\t        'mqtt_dknrteleinfo': 'DKNR Teleinfo topic',\t        'mqtt_dknrapsystems': 'DKNR APsystems topic',\t        'mqtt_dknrdaikin': 'DKNR Daikin topic',\t        'mqtt_zwavejs': 'ZwaveJS topic',\t        'mqtt_zigbee2mqtt': 'Zigbee2MQTT topic',\t        'mqtt_enabled': 'Enable MQTT',\t\t        'backup_title': 'Backup configuration',\t        'backup_room': 'Rooms',\t        'backup_entity': 'Entities',\t        'backup_scene': 'Scenes',\t        'backup_user': 'Users',\t        'backup_mqtt': 'MQTT'\t    },\t    'group_auth': {\t        'login': 'Login',\t        'pass': 'Password',\t        'auth_user': 'User'\t    }\t}",
                 "tot": "jsonata"
             }
         ],
@@ -3365,7 +3366,7 @@
                 "t": "set",
                 "p": "payload.fr",
                 "pt": "msg",
-                "to": "{\t    'option_page': {\t        'home': 'Accueil',\t        'room': 'Pièces',\t        'tuning': 'Ajustements',\t        'scene': 'Scènes',\t        'entity': 'Entités',\t        'config': 'Configuration',\t        'auth': 'Authentification'\t    },\t    'option_level': {\t        'visitor': 'Visiteur',\t        'child':  'Enfant',\t        'parent':'Parent',\t        'admin': 'Administrateur'\t    },\t    'option_team': {\t        'm': 'Maint',\t        'a': 'Après-midi',\t        'n': 'Nuit',\t        'd': 'Journée',\t        's': 'Samedi',\t        'w': 'Weekend'\t    },\t    'option_lang': {\t        'en': 'English',\t        'fr': 'French'\t    },\t    'notice': {\t        'file_write_success': 'Fichier sauvegardé avec suucès',\t        'file_write_fail': 'Impossiblde de sauvegarder le fichier',\t        'login_fail': \"Mauvais nom d'utilisateur ou de mot de passe\",\t        'save_success': 'Sauvergardé avec succès'\t    },\t    'group_room': {\t        'room_select': 'Sélectionner une pièce',\t        'power_title': 'Puissances'\t    },\t    'group_entity': {\t        'room_title': 'Configuration des pièces',\t        'room_add': 'Ajouter ou modifier une pièce',\t        'room_del': 'Supprimer une pièce',\t        'room_id': 'Identifant',\t        'room_name': 'Nom',\t\t        'list_title': \"Liste d'entités reçu\",\t        'list_edit': 'Configurer',\t        'list_edit_name': 'Nom',\t        'list_edit_room': 'Pièces',\t        'list_delete': 'Effacer'\t    },\t    'group_config': {\t        'mqtt_title': 'Configuration MQTT',\t        'mqtt_host': 'Adresse IP du broker',\t        'mqtt_port': 'Port',\t        'mqtt_topic': 'Topic',\t        'mqtt_username': 'Utilisateur',\t        'mqtt_password': 'Mot de passe',\t        'mqtt_discovery': 'Home Assistant Discovery topic',\t        'mqtt_enabled': 'Activer MQTT',\t\t        'backup_title': \"Configuration d'une sauvergarde\",\t        'backup_room': 'Pièces',\t        'backup_entity': 'Entités',\t        'backup_scene': 'Scènes',\t        'backup_user': 'Utilisateurs',\t        'backup_mqtt': 'MQTT'\t    },\t    'group_auth': {\t        'login': 'Identifiant',\t        'pass': 'Mot de passe',\t        'user': 'Utilisateur'\t    }\t}",
+                "to": "{\t    'option_page': {\t        'home': 'Accueil',\t        'room': 'Pièces',\t        'tuning': 'Ajustements',\t        'scene': 'Scènes',\t        'entity': 'Entités',\t        'config': 'Configuration',\t        'auth': 'Authentification'\t    },\t    'option_level': {\t        'visitor': 'Visiteur',\t        'child':  'Enfant',\t        'parent':'Parent',\t        'admin': 'Administrateur'\t    },\t    'option_team': {\t        'm': 'Maint',\t        'a': 'Après-midi',\t        'n': 'Nuit',\t        'd': 'Journée',\t        's': 'Samedi',\t        'w': 'Weekend'\t    },\t    'option_lang': {\t        'en': 'English',\t        'fr': 'French'\t    },\t    'notice': {\t        'file_write_success': 'Fichier sauvegardé avec suucès',\t        'file_write_fail': 'Impossiblde de sauvegarder le fichier',\t        'login_fail': \"Mauvais nom d'utilisateur ou de mot de passe\",\t        'save_success': 'Sauvergardé avec succès'\t    },\t    'group_room': {\t        'room_select': 'Sélectionner une pièce',\t        'power_title': 'Puissances'\t    },\t    'group_entity': {\t        'room_title': 'Configuration des pièces',\t        'room_add': 'Ajouter ou modifier une pièce',\t        'room_del': 'Supprimer une pièce',\t        'room_id': 'Identifant',\t        'room_name': 'Nom',\t\t        'entity_title': 'Liste des entités reçu',\t        'entity_edit_title': 'Configurer une entité',\t        'entity_edit_name': 'Nom',\t        'entity_edit_room': 'Pièces',\t        'entity_delete': 'Supprimer',\t\t        'device_edit_title': 'Configurer un appareil',\t        'device_edit_name': \"Nom de l'appareil\"\t    },\t    'group_config': {\t        'mqtt_title': 'Configuration MQTT',\t        'mqtt_host': 'Adresse IP du broker',\t        'mqtt_port': 'Port',\t        'mqtt_topic': 'Topic',\t        'mqtt_username': 'Utilisateur',\t        'mqtt_password': 'Mot de passe',\t        'mqtt_discovery': 'Home Assistant Discovery topic',\t        'mqtt_enabled': 'Activer MQTT',\t\t        'backup_title': \"Configuration d'une sauvergarde\",\t        'backup_room': 'Pièces',\t        'backup_entity': 'Entités',\t        'backup_scene': 'Scènes',\t        'backup_user': 'Utilisateurs',\t        'backup_mqtt': 'MQTT'\t    },\t    'group_auth': {\t        'login': 'Identifiant',\t        'pass': 'Mot de passe',\t        'user': 'Utilisateur'\t    }\t}",
                 "tot": "jsonata"
             }
         ],
@@ -3747,7 +3748,7 @@
         "z": "4bc72a1112cb448c",
         "g": "fb34af284a5fbd90",
         "name": "parse",
-        "func": "let res = {\n    'topic':'',\n    'payload': {}\n};\n\nfor (const key in msg.payload){\n    if (typeof msg.payload.ADCO === 'object' && typeof msg.payload.ADCO.raw === 'string') {\n        res.payload.uid = 'teleinfo_' + msg.payload.ADCO.raw + '_' + key\n        res.payload.id = key;\n        res.payload.source = 'teleinfo';\n        res.payload.parent = msg.payload.ADCO.raw;\n        res.payload.unit = msg.payload[key]['unit'];\n        res.payload.value = msg.payload[key]['value'];\n        res.payload.name = msg.payload[key]['name'];\n    }\n\n    node.send(res);\n}\n\nreturn;",
+        "func": "let res = {\n    'topic':'',\n    'payload': {}\n};\n\nfor (const key in msg.payload){\n    if (typeof msg.payload.ADCO === 'object' && typeof msg.payload.ADCO.raw === 'string') {\n        res.payload.uid = 'teleinfo_' + msg.payload.ADCO.raw + '_' + key\n        res.payload.id = key;\n        res.payload.source = 'teleinfo';\n        res.payload.parent = 'teleinfo_' + msg.payload.ADCO.raw;\n        res.payload.unit = msg.payload[key]['unit'];\n        res.payload.value = msg.payload[key]['value'];\n        res.payload.name = msg.payload[key]['name'];\n    }\n\n    node.send(res);\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3797,7 +3798,7 @@
         "type": "function",
         "z": "4bc72a1112cb448c",
         "name": "check",
-        "func": "if (typeof msg.payload !== 'object' || typeof msg.payload.uid !== 'string') {\n\n    return;\n}\n\nlet template = {\n    'source': '',\n    'uid': '',\n    'id': '',\n    'name': '',\n    'parent': '',\n    'parent_name': '',\n    'value': '',\n    'room': '',\n    'room_name': '',\n    'type': '',\n    'type_name': '',\n    'unit': ''\n};\n\nlet entity = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\nlet value = typeof entity['uid'] === 'string' ? entity['value'] : '';\nlet protect = ['name', 'room', 'room_name', 'type', 'type_name'];\n\nentity = {...template, ...entity};\n\nfor (const k in msg.payload) {\n    if (typeof template[k] !== 'undefined') {\n        if (protect.includes(k) && entity[k] !== '') {\n            // do not override some properties\n        } else {\n            entity[k] = msg.payload[k];\n        }\n    }\n}\n\nif (msg.remove === true) {\n    // todo\n}\n\nmsg.repeat = value === entity.value ? true : false;\n\nglobal.set('entity[\"' + entity.uid + '\"]', entity, 'memoryOnly');\n\nnode.status({ fill: \"green\", shape: \"ring\", text: entity.uid + ' : ' + entity.value});\n\nmsg.topic = '';\nmsg.payload = entity;\n\nreturn msg;",
+        "func": "if (typeof msg.payload !== 'object' || typeof msg.payload.uid !== 'string') {\n\n    return;\n}\n\nlet template = {\n    'source': '',\n    'uid': '',\n    'id': '',\n    'name': '',\n    'parent': '',\n    'room': '',\n    'value': '',\n    'type': '',\n    'unit': ''\n};\n\nlet entity = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\nlet value = typeof entity['uid'] === 'string' ? entity['value'] : '';\nlet protect = ['name', 'room'];\n\nentity = {...template, ...entity};\n\nfor (const k in msg.payload) {\n    if (typeof template[k] !== 'undefined') {\n        if (protect.includes(k) && entity[k] !== '') {\n            // do not override some properties\n        } else {\n            entity[k] = msg.payload[k];\n        }\n    }\n}\n\nif (msg.remove === true) {\n    // todo\n}\n\nmsg.repeat = value === entity.value ? true : false;\n\nglobal.set('entity[\"' + entity.uid + '\"]', entity, 'memoryOnly');\n\nnode.status({ fill: \"green\", shape: \"ring\", text: entity.uid + ' : ' + entity.value});\n\nmsg.topic = '';\nmsg.payload = entity;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4185,7 +4186,7 @@
         "z": "560376d6bba621ec",
         "g": "1465a47c930ed8e1",
         "name": "data",
-        "func": "flow.set('room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n\nmsg.payload = '';\nlet rooms = global.get('room', 'default') || {};\nlet i = 0;\n\nlet dropdownOptions = [];\nfor (const room in rooms) {\n    dropdownOptions[i++] = {\n        'label': rooms[room] + ' (' + room + ')',\n        'value': room\n    };\n}\n\nmsg.ui_update = {\n    'label': msg.dictionary.group_room.room_select,\n    'options': dropdownOptions\n}\n\n\nreturn msg;",
+        "func": "flow.set('room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n\nmsg.payload = '';\nlet rooms = global.get('name[\"room\"]', 'default') || {};\nlet i = 0;\n\nlet dropdownOptions = [];\nfor (const room in rooms) {\n    dropdownOptions[i++] = {\n        'label': rooms[room] + ' (' + room + ')',\n        'value': room\n    };\n}\n\nmsg.ui_update = {\n    'label': msg.dictionary.group_room.room_select,\n    'options': dropdownOptions\n}\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5069,7 +5070,7 @@
         "z": "3d7897ba0ee14173",
         "g": "3a6d56b6dcd8540a",
         "name": "save",
-        "func": "if (msg.payload.id !== '' && msg.payload.name !== '') {\n    let room = global.get('room', 'default') || {};\n    room[msg.payload.id] = msg.payload.name;\n    global.set('room', room, 'default');\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.notice.save_success;\n\n    return msg;\n}\n\nreturn;",
+        "func": "if (msg.payload.id !== '' && msg.payload.name !== '') {\n    let name = global.get('name', 'default') || {};\n    name['room'][msg.payload.id] = msg.payload.name;\n    global.set('name', name, 'default');\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.notice.save_success;\n\n    return msg;\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5205,7 +5206,7 @@
         "z": "3d7897ba0ee14173",
         "g": "3a6d56b6dcd8540a",
         "name": "data",
-        "func": "// entity - room - title\nmsg.payload = '';\nnode.send([msg, null, null, null, null]);\n\n// entity - room - add - title\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.group_entity.room_add\n};\nnode.send([null, msg, null, null, null]);\n\n// entity - room - add - form\nmsg.payload = {};\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.room_id,\n            \"key\": \"id\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.room_name,\n            \"key\": \"name\",\n            \"required\": false\n        }\n    ]\n};\nnode.send([null, null, msg, null, null]);\n\n// entity - room - del - title\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.group_entity.room_del\n};\nnode.send([null, null, null, msg, null]);\n\n// entity - room - del - form\nmsg.payload = '';\nlet rooms = global.get('room', 'default') || {};\nlet i = 0;\n\nlet dropdownOptions = [];\nfor (const room in rooms) {\n    dropdownOptions[i++] = {\n        'label': rooms[room] + ' (' + room + ')',\n        'value': room,\n        'dropdown':'id'\n    };\n}\n\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.room_name,\n            \"key\": \"id\",\n            \"required\": false\n        }\n    ],\n    'dropdownOptions': dropdownOptions\n}\n\nnode.send([null, null, null, null, msg]);\n\nreturn;",
+        "func": "// entity - room - title\nmsg.payload = '';\nnode.send([msg, null, null, null, null]);\n\n// entity - room - add - title\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.group_entity.room_add\n};\nnode.send([null, msg, null, null, null]);\n\n// entity - room - add - form\nmsg.payload = {};\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.room_id,\n            \"key\": \"id\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.room_name,\n            \"key\": \"name\",\n            \"required\": false\n        }\n    ]\n};\nnode.send([null, null, msg, null, null]);\n\n// entity - room - del - title\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.group_entity.room_del\n};\nnode.send([null, null, null, msg, null]);\n\n// entity - room - del - form\nmsg.payload = '';\nlet rooms = global.get('name[\"room\"]', 'default') || {};\nlet i = 0;\n\nlet dropdownOptions = [];\nfor (const room in rooms) {\n    dropdownOptions[i++] = {\n        'label': rooms[room] + ' (' + room + ')',\n        'value': room,\n        'dropdown':'id'\n    };\n}\n\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.room_name,\n            \"key\": \"id\",\n            \"required\": false\n        }\n    ],\n    'dropdownOptions': dropdownOptions\n}\n\nnode.send([null, null, null, null, msg]);\n\nreturn;",
         "outputs": 5,
         "timeout": 0,
         "noerr": 0,
@@ -5285,7 +5286,7 @@
         "z": "3d7897ba0ee14173",
         "g": "3a6d56b6dcd8540a",
         "name": "save",
-        "func": "if (msg.payload.id !== '') {\n    let rooms = global.get('room', 'default') || {};\n    delete rooms[msg.payload.id];\n    global.set('room', rooms, 'default');\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.notice.save_success;\n\n    return msg;\n}\n\nreturn;",
+        "func": "if (msg.payload.id !== '') {\n    let name = global.get('name', 'default') || {};\n    delete name['room'][msg.payload.id];\n    global.set('name', name, 'default');\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.notice.save_success;\n\n    return msg;\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5457,7 +5458,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "data",
-        "func": "// entity - list - title\nmsg.payload = '';\nnode.send([msg, null]);\n\n// entity - list - table\nmsg.payload = [];\nmsg.ui_update = {\n    'label': ''\n};\n\nlet entities = global.get('entity', 'memoryOnly') || {};\nlet i = 0;\nfor (const uid in entities) {\n    let room = entities[uid]['room'];\n    let room_name = room;\n    if (room !== '') {\n        room_name = global.get('room[\"' + room + '\"]', 'default') || room;\n    }\n\n    msg.payload[i++] = {\n        'uid': uid,\n        'name': entities[uid]['name'],\n        'room': room,\n        'room_name': room_name,\n        'parent': entities[uid]['parent'],\n        'id': entities[uid]['id'],\n        'value': entities[uid]['value'],\n        'unit': entities[uid]['unit'],\n        'delete': msg.dictionary.group_entity.list_delete\n    };\n}\n\nnode.send([null, msg]);\n\nreturn;",
+        "func": "// entity - list - title\nmsg.payload = '';\nnode.send([msg, null]);\n\n// entity - list - table\nmsg.payload = [];\nmsg.ui_update = {\n    'label': ''\n};\n\nlet entities = global.get('entity', 'memoryOnly') || {};\nlet i = 0;\nfor (const uid in entities) {\n    let name = entities[uid]['id'];\n    if (entities[uid]['name'] !== '') {\n        name = entities[uid]['name'];\n    }\n\n    let room = entities[uid]['room'];\n    let room_name = room;\n    if (room !== '') {\n        room_name = global.get('name[\"room\"][\"' + room + '\"]', 'default') || room;\n    }\n\n    let parent_name = global.get('device[\"' + entities[uid]['parent'] + '\"]', 'default') || entities[uid]['parent'];\n\n    msg.payload[i++] = {\n        'uid': uid,\n        'name': name,\n        'room': room,\n        'room_name': room_name,\n        'parent': entities[uid]['parent'],\n        'parent_name': parent_name,\n        'id': entities[uid]['id'],\n        'value': entities[uid]['value'],\n        'unit': entities[uid]['unit'],\n        'delete': msg.dictionary.group_entity.list_delete\n    };\n}\n\nnode.send([null, msg]);\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -5495,7 +5496,7 @@
         "columns": [
             {
                 "title": "",
-                "key": "parent",
+                "key": "parent_name",
                 "keyType": "key",
                 "type": "button",
                 "width": "",
@@ -5503,17 +5504,9 @@
             },
             {
                 "title": "",
-                "key": "id",
-                "keyType": "key",
-                "type": "button",
-                "width": "",
-                "align": "start"
-            },
-            {
-                "title": "Name",
                 "key": "name",
                 "keyType": "key",
-                "type": "text",
+                "type": "button",
                 "width": "",
                 "align": "start"
             },
@@ -5538,14 +5531,6 @@
                 "key": "unit",
                 "keyType": "key",
                 "type": "text",
-                "width": "",
-                "align": "end"
-            },
-            {
-                "title": "",
-                "key": "delete",
-                "keyType": "key",
-                "type": "button",
                 "width": "",
                 "align": "end"
             }
@@ -5587,7 +5572,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "check",
-        "func": "// delete entity data\nif (msg.hmi.level === 'admin' && msg.action === 'button_click') {\n    if (msg.column === 'delete') {\n        let entity = global.get('entity', 'memoryOnly') || {};\n        delete entity[msg.payload.uid];\n        global.set('entity', entity, 'memoryOnly');\n\n        msg.enabled = true;\n        msg.payload = msg.dictionary.notice.save_success;\n        node.send([msg, null, null]);\n    }\n    else if (msg.column === 'id') {\n\n        node.send([null, msg, null]);\n    }\n    else if (msg.column === 'parent') {\n\n        node.send([null, null, msg]);\n    }\n}\n\nreturn;",
+        "func": "// delete entity data\nif (msg.hmi.level === 'admin' && msg.action === 'button_click') {\n    if (msg.column === 'delete') {\n        let entity = global.get('entity', 'memoryOnly') || {};\n        delete entity[msg.payload.uid];\n        global.set('entity', entity, 'memoryOnly');\n\n        msg.enabled = true;\n        msg.payload = msg.dictionary.notice.save_success;\n        node.send([msg, null, null]);\n    }\n    else if (msg.column === 'name') {\n\n        node.send([null, msg, null]);\n    }\n    else if (msg.column === 'parent_name') {\n\n        node.send([null, null, msg]);\n    }\n}\n\nreturn;",
         "outputs": 3,
         "timeout": 0,
         "noerr": 0,
@@ -5654,12 +5639,12 @@
         "type": "ui-form",
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
-        "name": "entity - list - edit - form",
+        "name": "entity - entity - edit - form",
         "group": "ab792e98013972e4",
         "label": "",
         "order": 7,
         "width": "6",
-        "height": "4",
+        "height": "5",
         "options": [
             {
                 "label": "room",
@@ -5688,7 +5673,7 @@
                 "label": ""
             }
         ],
-        "x": 2000,
+        "x": 2010,
         "y": 800,
         "wires": [
             [
@@ -5758,7 +5743,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "data",
-        "func": "let entity = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\nlet rooms = global.get('room', 'default');\n\nlet d = 0;\nlet dropdownOptions = [];\nfor (const room in rooms) {\n    dropdownOptions[d++] = {\n        'label': rooms[room] + ' (' + room + ')',\n        'value': room,\n        'dropdown': 'room'\n    };\n}\n\nmsg.topic = msg.payload.uid;\n//node-red 5.04 bug with dropdown msg.topic\nflow.set('current_entity_list_edit[\"' + msg.hmi.id + '\"]', msg.payload.uid, 'memoryOnly');\n\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.list_edit_name,\n            \"key\": \"name\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.list_edit_room,\n            \"key\": \"room\"\n        }\n    ],\n    'dropdownOptions': dropdownOptions\n};\n\nreturn msg;",
+        "func": "let entity = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\nlet rooms = global.get('name[\"room\"]', 'default');\n\nlet d = 0;\nlet dropdownOptions = [];\nfor (const room in rooms) {\n    dropdownOptions[d++] = {\n        'label': rooms[room] + ' (' + room + ')',\n        'value': room,\n        'dropdown': 'room'\n    };\n}\n\nmsg.topic = msg.payload.uid;\n//node-red 5.04 bug with dropdown msg.topic\nflow.set('entity[\"' + msg.hmi.id + '\"]', msg.payload.uid, 'memoryOnly');\n\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.entity_edit_name,\n            \"key\": \"name\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_room,\n            \"key\": \"room\"\n        },\n        {\n            \"type\": \"checkbox\",\n            \"label\": msg.dictionary.group_entity.entity_delete,\n            \"key\": \"remove\"\n        }\n    ],\n    'dropdownOptions': dropdownOptions\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5782,7 +5767,7 @@
         "order": 4,
         "width": 0,
         "height": 0,
-        "name": "entity_list_edit_id",
+        "name": "entity - entity - edit - id",
         "label": "ID",
         "format": "{{msg.payload}}",
         "layout": "col-center",
@@ -5794,7 +5779,7 @@
         "className": "",
         "value": "payload.id",
         "valueType": "msg",
-        "x": 1990,
+        "x": 2000,
         "y": 1040,
         "wires": []
     },
@@ -5857,7 +5842,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "save",
-        "func": "// node-red 5.0.4 has bug with dropdown topic\nlet topic = flow.get('current_entity_list_edit[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '-';\n\nlet entity = global.get('entity[\"' + topic + '\"]', 'memoryOnly');\nif (msg.hmi.level === 'admin' && typeof entity === 'object') {\n    entity['room'] = msg.payload.room;\n    entity['name'] = msg.payload.name;\n    global.set('entity[\"' + topic + '\"]', entity, 'memoryOnly');\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.notice.save_success;\n    return msg;\n}\n\nreturn;",
+        "func": "// node-red 5.0.4 has bug with dropdown topic\nlet topic = flow.get('entity[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '-';\n\n// delete\nif (msg.payload.remove === true) {\n        let entity = global.get('entity', 'memoryOnly') || {};\n        delete entity[topic];\n        global.set('entity', entity, 'memoryOnly');\n\n        msg.enabled = true;\n        msg.payload = msg.dictionary.notice.save_success;\n        return msg;\n} else {\n    let entity = global.get('entity[\"' + topic + '\"]', 'memoryOnly');\n    if (msg.hmi.level === 'admin' && typeof entity === 'object') {\n        entity['room'] = msg.payload.room;\n        entity['name'] = msg.payload.name;\n        global.set('entity[\"' + topic + '\"]', entity, 'memoryOnly');\n\n        msg.enabled = true;\n        msg.payload = msg.dictionary.notice.save_success;\n        return msg;\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5902,7 +5887,7 @@
         "order": 2,
         "width": 0,
         "height": 0,
-        "name": "entity_list_edit_uid",
+        "name": "entity - entity - list - edit - uid",
         "label": "UID",
         "format": "{{msg.payload}}",
         "layout": "col-center",
@@ -5914,7 +5899,7 @@
         "className": "",
         "value": "payload.uid",
         "valueType": "msg",
-        "x": 1990,
+        "x": 2020,
         "y": 920,
         "wires": []
     },
@@ -5927,7 +5912,7 @@
         "order": 6,
         "width": 0,
         "height": 0,
-        "name": "entity_list_edit_unit",
+        "name": "entity - entity - edit - unit",
         "label": "Unit",
         "format": "{{msg.payload}}",
         "layout": "col-center",
@@ -5939,7 +5924,7 @@
         "className": "",
         "value": "payload.unit",
         "valueType": "msg",
-        "x": 1990,
+        "x": 2010,
         "y": 1160,
         "wires": []
     },
@@ -5952,7 +5937,7 @@
         "order": 3,
         "width": 0,
         "height": 0,
-        "name": "entity_list_edit_parent",
+        "name": "entity - entity - edit - parent",
         "label": "Parent",
         "format": "{{msg.payload}}",
         "layout": "col-center",
@@ -5964,7 +5949,7 @@
         "className": "",
         "value": "payload.parent",
         "valueType": "msg",
-        "x": 2000,
+        "x": 2020,
         "y": 980,
         "wires": []
     },
@@ -5977,7 +5962,7 @@
         "order": 5,
         "width": 0,
         "height": 0,
-        "name": "entity_list_edit_value",
+        "name": "entity - entity - edit - value",
         "label": "Value",
         "format": "{{msg.payload}}",
         "layout": "col-center",
@@ -5989,7 +5974,7 @@
         "className": "",
         "value": "payload.value",
         "valueType": "msg",
-        "x": 2000,
+        "x": 2010,
         "y": 1100,
         "wires": []
     },
@@ -6055,7 +6040,8 @@
         "wires": [
             [
                 "476c3436a383ed1e",
-                "b727118b88340ecf"
+                "b727118b88340ecf",
+                "d40b377694438865"
             ]
         ]
     },
@@ -6065,7 +6051,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "data",
-        "func": "let device = global.get('device[\"' + msg.payload.perent + '\"]', 'memoryOnly') || {};\n\n\nmsg.topic = msg.payload.parent;\n//node-red 5.04 bug with dropdown msg.topic\nflow.set('current_entity_device_edit[\"' + msg.hmi.id + '\"]', msg.payload.perent, 'memoryOnly');\n\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.device_edit_name,\n            \"key\": \"parent_name\"\n        }\n    ]\n};\n\nreturn msg;",
+        "func": "let device = global.get('device[\"' + msg.payload.parent + '\"]', 'memoryOnly') || '';\n\nmsg.topic = msg.payload.parent;\n//node-red 5.04 bug with dropdown msg.topic\nflow.set('device[\"' + msg.hmi.id + '\"]', msg.payload.parent, 'memoryOnly');\n\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.device_edit_name,\n            \"key\": \"parent_name\"\n        }\n    ]\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6089,7 +6075,7 @@
         "order": 1,
         "width": 0,
         "height": 0,
-        "name": "entity - list - edit - title",
+        "name": "entity - entity - edit - title",
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "row-left",
@@ -6099,9 +6085,9 @@
         "color": "#717171",
         "wrapText": false,
         "className": "ui-title",
-        "value": "dictionary.group_entity.list_edit_title",
+        "value": "dictionary.group_entity.entity_edit_title",
         "valueType": "msg",
-        "x": 2000,
+        "x": 2010,
         "y": 860,
         "wires": []
     },
@@ -6124,7 +6110,7 @@
         "color": "#717171",
         "wrapText": false,
         "className": "ui-title",
-        "value": "dictionary.group_entity.list_edit_title",
+        "value": "dictionary.group_entity.device_edit_title",
         "valueType": "msg",
         "x": 2010,
         "y": 1340,
@@ -6194,7 +6180,7 @@
         "name": "entity - device - edit - form",
         "group": "371d8326aa7242fd",
         "label": "",
-        "order": 2,
+        "order": 3,
         "width": "6",
         "height": "4",
         "options": [
@@ -6241,7 +6227,9 @@
         "x": 2270,
         "y": 1280,
         "wires": [
-            []
+            [
+                "02da074ecfba7d08"
+            ]
         ]
     },
     {
@@ -6250,7 +6238,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "save",
-        "func": "// node-red 5.0.4 has bug with dropdown topic\nlet topic = flow.get('current_entity_list_edit[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '-';\n\nlet entity = global.get('entity[\"' + topic + '\"]', 'memoryOnly');\nif (msg.hmi.level === 'admin' && typeof entity === 'object') {\n    entity['room'] = msg.payload.room;\n    entity['name'] = msg.payload.name;\n    global.set('entity[\"' + topic + '\"]', entity, 'memoryOnly');\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.notice.save_success;\n    return msg;\n}\n\nreturn;",
+        "func": "// node-red 5.0.4 has bug with dropdown topic\nlet topic = flow.get('device[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '-';\n\nif (msg.hmi.level === 'admin') {\n    let device = global.get('device', 'default') || {};\n    if (msg.payload.parent_name === '') {\n        device[topic] = undefined;\n    } else {\n        device[topic] = msg.payload.parent_name;\n    }\n    global.set('device', device, 'default');\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.notice.save_success;\n    return msg;\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6260,8 +6248,36 @@
         "x": 2470,
         "y": 1280,
         "wires": [
-            []
+            [
+                "4257decc97d57217",
+                "8efcf9aa67ba9375"
+            ]
         ]
+    },
+    {
+        "id": "d40b377694438865",
+        "type": "ui-text",
+        "z": "3d7897ba0ee14173",
+        "g": "5cf193e5430d3bde",
+        "group": "371d8326aa7242fd",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "entity - device - edit - parent",
+        "label": "ID",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload.parent",
+        "valueType": "msg",
+        "x": 2020,
+        "y": 1400,
+        "wires": []
     },
     {
         "id": "7374df2eb856c2bc",
