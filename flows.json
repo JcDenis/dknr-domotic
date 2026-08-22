@@ -830,8 +830,7 @@
             "02da074ecfba7d08",
             "d40b377694438865",
             "fbaa5b8d78bc8124",
-            "28f40e8f269f3e61",
-            "5fc691320298b636"
+            "28f40e8f269f3e61"
         ],
         "x": 104,
         "y": 579,
@@ -3783,7 +3782,7 @@
         "z": "4bc72a1112cb448c",
         "g": "fb34af284a5fbd90",
         "name": "parse",
-        "func": "let res = {\n    'topic':'',\n    'payload': {}\n};\n\nif (typeof msg.payload === 'object' && \n    typeof msg.payload.ADCO === 'object' && \n    typeof msg.payload.ADCO.raw === 'string'\n) {\n    for (const key in msg.payload){\n        if (key === 'PTEC') {\n            // Convert HC to bin\n            msg.payload[key]['value'] = msg.payload[key]['value'] === 'HC' ? 0 : 1;\n            msg.payload[key]['unit'] = 'b';\n        }\n\n        res.payload.id = key;\n        res.payload.source = 'teleinfo';\n        res.payload.parent = msg.payload.ADCO.raw;\n        res.payload.unit = msg.payload[key]['unit'];\n        res.payload.value = msg.payload[key]['value'];\n        res.payload.name = msg.payload[key]['name'];\n        res.payload.seen = Date.now();\n\n        node.send(res);\n    }\n}\n\nreturn;",
+        "func": "let res = {\n    'topic':'',\n    'payload': {}\n};\n\nif (typeof msg.payload === 'object' && \n    typeof msg.payload.ADCO === 'object' && \n    typeof msg.payload.ADCO.raw === 'string'\n) {\n    node.status({ text: msg.payload.ADCO.raw });\n\n    for (const key in msg.payload){\n        if (key === 'PTEC') {\n            // Convert HC to bin\n            msg.payload[key]['value'] = msg.payload[key]['value'] === 'HC' ? 0 : 1;\n            msg.payload[key]['unit'] = 'b';\n        }\n\n        res.payload.id = key;\n        res.payload.source = 'teleinfo';\n        res.payload.parent = msg.payload.ADCO.raw;\n        res.payload.unit = msg.payload[key]['unit'];\n        res.payload.value = msg.payload[key]['value'];\n        res.payload.name = msg.payload[key]['name'];\n        res.payload.seen = Date.now();\n\n        node.send(res);\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4076,7 +4075,7 @@
         "z": "4bc72a1112cb448c",
         "g": "3db71c2c17730bd8",
         "name": "parse",
-        "func": "let res = {\n    'topic':'',\n    'payload': {}\n};\n\n// limit ot these keys\nlet ecu = ['energy_total', 'energy_today', 'power_instant'];\n\nif (msg.topic.includes(\"/ecu/\") && \n    typeof msg.payload === 'object' && \n    typeof msg.payload.id === 'string'\n) {\n    for (let k = 0; k < ecu.length; k++) {\n        res.payload.id = ecu[k]\n        res.payload.source = 'apsystems';\n        res.payload.parent = 'ecu_' + msg.payload.id;\n        res.payload.unit = msg.payload[ecu[k] + '_unit'];\n        res.payload.value = msg.payload[ecu[k]];\n\n        node.send(res);\n    }\n}\n\n// limit ot these keys\nlet inv = {\n    'power_instant': 'W', \n    'temperature': '°C'\n};\n\nif (msg.topic.includes(\"/inverter/\") && \n    typeof msg.payload === 'object' && \n    typeof msg.payload.id === 'string'\n) {\n    for (const i in inv) {\n        res.payload.id = i\n        res.payload.source = 'apsystems';\n        res.payload.parent = 'inverter_' + msg.payload.id;\n        res.payload.unit = inv[i];\n        res.payload.value = msg.payload[i];\n        res.payload.seen = Date.now();\n\n        node.send(res);\n    }\n}\n\nreturn;",
+        "func": "let res = {\n    'topic':'',\n    'payload': {}\n};\n\n// limit ot these keys\nlet ecu = ['energy_total', 'energy_today', 'power_instant'];\n\nif (msg.topic.includes(\"/ecu/\") && \n    typeof msg.payload === 'object' && \n    typeof msg.payload.id === 'string'\n) {\n    node.status({ text: msg.payload.id });\n\n    for (let k = 0; k < ecu.length; k++) {\n        res.payload.id = ecu[k]\n        res.payload.source = 'apsystems';\n        res.payload.parent = 'ecu_' + msg.payload.id;\n        res.payload.unit = msg.payload[ecu[k] + '_unit'];\n        res.payload.value = msg.payload[ecu[k]];\n\n        node.send(res);\n    }\n}\n\n// limit ot these keys\nlet inv = {\n    'power_instant': 'W', \n    'temperature': '°C'\n};\n\nif (msg.topic.includes(\"/inverter/\") && \n    typeof msg.payload === 'object' && \n    typeof msg.payload.id === 'string'\n) {\n    for (const i in inv) {\n        res.payload.id = i\n        res.payload.source = 'apsystems';\n        res.payload.parent = 'inverter_' + msg.payload.id;\n        res.payload.unit = inv[i];\n        res.payload.value = msg.payload[i];\n        res.payload.seen = Date.now();\n\n        node.send(res);\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4317,7 +4316,7 @@
         "z": "4bc72a1112cb448c",
         "g": "89ac7be96aabaa70",
         "name": "parse",
-        "func": "let res = {\n    'topic':'',\n    'payload': {}\n};\n\n// limit ot these keys\nlet keys = ['pow', 'mode', 'stemp', 'f_rate', 'f_dir', 'htemp', 'otemp', 'host'];\n\nif (typeof msg.payload === 'object' && \n    typeof msg.payload.id === 'object'\n) {\n    for (let k = 0; k < keys.length; k++) {\n        res.payload.id = keys[k]\n        res.payload.source = 'daikin';\n        res.payload.parent = msg.payload.id.value;\n        res.payload.unit = msg.payload[keys[k]]['unit'];\n        res.payload.value = msg.payload[keys[k]]['value'];\n        res.payload.name = msg.payload[keys[k]]['label'];\n        res.payload.seen = Date.now();\n\n        node.send(res);\n    }\n}\n\nreturn;",
+        "func": "let res = {\n    'topic':'',\n    'payload': {}\n};\n\n// limit ot these keys\nlet keys = ['pow', 'mode', 'stemp', 'f_rate', 'f_dir', 'htemp', 'otemp', 'host'];\n\nif (typeof msg.payload === 'object' && \n    typeof msg.payload.id === 'object'\n) {\n    node.status({ text: msg.payload.id.value });\n\n    for (let k = 0; k < keys.length; k++) {\n        res.payload.id = keys[k]\n        res.payload.source = 'daikin';\n        res.payload.parent = msg.payload.id.value;\n        res.payload.unit = msg.payload[keys[k]]['unit'];\n        res.payload.value = msg.payload[keys[k]]['value'];\n        res.payload.name = msg.payload[keys[k]]['label'];\n        res.payload.seen = Date.now();\n\n        node.send(res);\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4541,7 +4540,7 @@
         "z": "4bc72a1112cb448c",
         "g": "42c8cfb80db1c77e",
         "name": "parse",
-        "func": "if (typeof msg.payload !== 'object' ||\n    msg.topic.includes(\"/availability\") ||\n    msg.topic.includes(\"/set\") ||\n    msg.topic.includes(\"zigbee_bridge/\")\n) {\n\n    return;\n}\n\nlet res = {\n    'topic':'',\n    'payload': {}\n};\n\nlet id = msg.topic.slice(global.get('mqtt.zigbee', 'memoryOnly').length + 1);\nnode.status({text: id});\n\n// limit ot these keys\nlet keys = {\n    'current': 'A',\n    'energy': 'Wh',\n    'power': 'W',\n    'linkquatlity': '',\n    'battery': '%',\n    'humidity': '%',\n    'temperature': '°C',\n    'occupancy': 'b', // motion\n    'contact': 'b',\n    'state': 'b', // \"OFF/ON\"\n    'action': 'enum' // swicth \"single/double\"...\n    //'brightness' // ex: led\n    //'speed' // ex led\n};\n\nfor (const k in keys) {\n    if (typeof msg.payload[k] !== 'undefined') {\n        res.payload.id = k;\n        res.payload.source = 'zigbee';\n        res.payload.parent = id;\n        res.payload.value = msg.payload[k];\n        res.payload.unit = keys[k];\n        res.payload.seen = Date.now();\n\n        if (k === 'occupancy') {\n            res.payload.id = 'motion';\n            res.payload.value = (res.payload.value === true || res.payload.value === 'ON') ? 1 : 0;\n        }\n        if (k === 'state') {\n            res.payload.id = 'switch';\n            res.payload.value = (res.payload.value === true || res.payload.value === 'ON') ? 1 : 0;\n        }\n        if (k === 'contact') {\n            res.payload.id = 'switch';\n            res.payload.value = (res.payload.value === true || res.payload.value === 'ON') ? 0 : 1;\n        }\n\n        node.send(res);\n    }\n}\n\nreturn;",
+        "func": "if (typeof msg.payload !== 'object' ||\n    msg.topic.includes(\"/availability\") ||\n    msg.topic.includes(\"/set\") ||\n    msg.topic.includes(\"zigbee_bridge/\")\n) {\n\n    return;\n}\n\nlet res = {\n    'topic':'',\n    'payload': {}\n};\n\nlet id = msg.topic.slice(global.get('mqtt.zigbee', 'memoryOnly').length + 1);\n\nnode.status({text: id});\n\n// limit ot these keys\nlet keys = {\n    'current': 'A',\n    'energy': 'Wh',\n    'power': 'W',\n    'linkquatlity': '',\n    'battery': '%',\n    'humidity': '%',\n    'temperature': '°C',\n    'occupancy': 'b', // motion\n    'contact': 'b',\n    'state': 'b', // \"OFF/ON\"\n    'action': 'enum' // swicth \"single/double\"...\n    //'brightness' // ex: led\n    //'speed' // ex led\n};\n\nfor (const k in keys) {\n    if (typeof msg.payload[k] !== 'undefined') {\n        res.payload.id = k;\n        res.payload.source = 'zigbee';\n        res.payload.parent = id;\n        res.payload.value = msg.payload[k];\n        res.payload.unit = keys[k];\n        res.payload.seen = Date.now();\n\n        if (k === 'occupancy') {\n            res.payload.id = 'motion';\n            res.payload.value = (res.payload.value === true || res.payload.value === 'ON') ? 1 : 0;\n        }\n        if (k === 'state') {\n            res.payload.id = 'switch';\n            res.payload.value = (res.payload.value === true || res.payload.value === 'ON') ? 1 : 0;\n        }\n        if (k === 'contact') {\n            res.payload.id = 'switch';\n            res.payload.value = (res.payload.value === true || res.payload.value === 'ON') ? 0 : 1;\n        }\n\n        node.send(res);\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4944,7 +4943,7 @@
         "z": "560376d6bba621ec",
         "g": "1465a47c930ed8e1",
         "name": "data",
-        "func": "flow.set('room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n\nmsg.payload = '';\nlet rooms = global.get('name[\"room\"]', 'default') || {};\nlet i = 0;\n\nlet dropdownOptions = [];\nfor (const room in rooms) {\n    dropdownOptions[i++] = {\n        'label': rooms[room] + ' (' + room + ')',\n        'value': room\n    };\n}\n\nmsg.ui_update = {\n    'label': msg.dictionary.group_room.room_select,\n    'options': dropdownOptions\n}\n\n\nreturn msg;",
+        "func": "flow.set('room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n\nmsg.payload = '';\nlet rooms = global.get('name[\"room\"]', 'default') || {};\nlet i = 0;\n\nlet dropdownOptions = [];\nfor (const room in rooms) {\n    dropdownOptions[i++] = {\n        'label': rooms[room],\n        'value': room\n    };\n}\n\ndropdownOptions.sort((a, b) => a.value.localeCompare(b.value));\n\nmsg.ui_update = {\n    'label': msg.dictionary.group_room.room_select,\n    'options': dropdownOptions\n}\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6569,8 +6568,7 @@
             [
                 "e4e6368d57415f5c",
                 "bf93358a99b050e8",
-                "28f40e8f269f3e61",
-                "5fc691320298b636"
+                "28f40e8f269f3e61"
             ]
         ]
     },
@@ -6982,24 +6980,6 @@
                 "fbaa5b8d78bc8124"
             ]
         ]
-    },
-    {
-        "id": "5fc691320298b636",
-        "type": "debug",
-        "z": "3d7897ba0ee14173",
-        "g": "5cf193e5430d3bde",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1840,
-        "y": 1060,
-        "wires": []
     },
     {
         "id": "7374df2eb856c2bc",
