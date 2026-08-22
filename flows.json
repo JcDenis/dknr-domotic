@@ -120,8 +120,6 @@
             "558522ead4ae24ea",
             "091abc67148a2c55",
             "26b401d093a20ea0",
-            "0adfbcb74fd13b1f",
-            "9563d3bc895a825a",
             "755b262907010fd2",
             "18ea6555f6dbc2f5",
             "afa71edf80d855b7",
@@ -129,11 +127,13 @@
             "c7b7c464c8142df7",
             "4a92cc963dfba7b7",
             "9f212bf86ebb59d4",
-            "5a2eb340ab76940b"
+            "5a2eb340ab76940b",
+            "67cca85c91edaff0",
+            "417f8003fb9c0b7a"
         ],
         "x": 94,
         "y": 39,
-        "w": 3422,
+        "w": 3222,
         "h": 202
     },
     {
@@ -775,12 +775,13 @@
             "91b6294e85a14007",
             "b00df660533aa1bd",
             "038df4153883408b",
-            "f6402ce038486712"
+            "f6402ce038486712",
+            "41fc0776f67a9292"
         ],
         "x": 104,
-        "y": 2559,
+        "y": 2619,
         "w": 652,
-        "h": 142
+        "h": 202
     },
     {
         "id": "5cf193e5430d3bde",
@@ -810,15 +811,10 @@
             "4637984430f9f9f9",
             "ffe4299b2fae4efd",
             "e4e6368d57415f5c",
-            "44f2b0d0e1923c5e",
             "142df6c6376da789",
             "5d27310454b9dc88",
             "9634bf7cac24c86f",
             "4ff23a4db8ae28dc",
-            "83c69cd135c027cf",
-            "c5a761e74f9ad612",
-            "ea9109e556b62ba2",
-            "17b8d9a4f39b3c80",
             "ae5b3d86abec7b5a",
             "8057bdb8220a4ae5",
             "d2ba4befd6bdc86e",
@@ -832,7 +828,9 @@
             "2f9f6f02023cdb2b",
             "02da074ecfba7d08",
             "d40b377694438865",
-            "51651abddc9c4d16"
+            "fbaa5b8d78bc8124",
+            "28f40e8f269f3e61",
+            "5fc691320298b636"
         ],
         "x": 104,
         "y": 579,
@@ -884,12 +882,82 @@
             "a7c97185682980e6",
             "95a898f76134adbd",
             "6ab72e116070c867",
-            "6840b2fb954ae473"
+            "6840b2fb954ae473",
+            "72aae6174b64a06c"
         ],
         "x": 104,
-        "y": 2739,
+        "y": 2859,
         "w": 652,
+        "h": 202
+    },
+    {
+        "id": "be2dde01217c4ebd",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "name": "common - data",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "540ace790f3fa1eb",
+            "cc0a7c14f877c371",
+            "b3e3b0dde3bcdd99",
+            "a29ec7554a818a6f",
+            "e964304a04d624f4"
+        ],
+        "x": 104,
+        "y": 2439,
+        "w": 642,
         "h": 142
+    },
+    {
+        "id": "aa28e51660bead4f",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "name": "common - domotic",
+        "style": {
+            "fill": "#ffC000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "4accbc2f42fda36a",
+            "29c782ee02094a7a",
+            "1b6ec87a498d3297"
+        ],
+        "x": 354,
+        "y": 3339,
+        "w": 402,
+        "h": 82
+    },
+    {
+        "id": "89ac7be96aabaa70",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "name": "common - mqtt - daikin",
+        "style": {
+            "fill": "#ffC000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "1a8726b2de605ecb",
+            "8f0b88d6a682a1e4",
+            "9052d70bbd0bb619",
+            "ea429b3e01991411",
+            "313d1e8f5b331872",
+            "4c1329a43d9cd7ca",
+            "fa04738bcd767d04",
+            "dac35c32b868aea8",
+            "17ee74250b6fe764",
+            "4e7136a46fab4070"
+        ],
+        "x": 104,
+        "y": 3099,
+        "w": 652,
+        "h": 202
     },
     {
         "id": "df7710b4b2c4e55b",
@@ -1622,9 +1690,10 @@
             "ab17703b4908cbf8",
             "c96e931494936766",
             "4418090c31b190b3",
-            "9d2be55b974f961e"
+            "9d2be55b974f961e",
+            "1a8726b2de605ecb"
         ],
-        "x": 3475,
+        "x": 3275,
         "y": 80,
         "wires": []
     },
@@ -1767,7 +1836,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 2770,
+        "x": 2570,
         "y": 80,
         "wires": [
             [
@@ -1784,7 +1853,7 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 2950,
+        "x": 2750,
         "y": 80,
         "wires": [
             [
@@ -1805,7 +1874,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3110,
+        "x": 2910,
         "y": 80,
         "wires": [
             [
@@ -1971,14 +2040,14 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "common",
-        "func": "let describe = global.get('describe', 'memoryOnly') || {};\nif (typeof describe !== 'object') {\n    describe = {};\n}\nif (typeof describe.pages !== 'object') {\n    describe.pages = {};\n}\n\n// Set default app values\ndescribe.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\ndescribe.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\ndescribe.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['tuning'] = {\n    'id': '1c3c77208d684dc0',\n    'name': 'tuning',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['scene'] = {\n    'id': '1e9f5bde9636a371',\n    'name': 'scene',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['entity'] = {\n    'id': '2b12391aa314ef62',\n    'name': 'entity',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': false,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// save config\nglobal.set('describe', describe, 'memoryOnly');\n\n// Clear user and more\nglobal.set('auth',{},'memoryOnly');\nglobal.set('user',{},'memoryOnly');\nglobal.set('form',{},'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/.config.projects.json'\n};",
+        "func": "let describe = global.get('describe', 'memoryOnly') || {};\nif (typeof describe !== 'object') {\n    describe = {};\n}\nif (typeof describe.pages !== 'object') {\n    describe.pages = {};\n}\n\n// Set default app values\ndescribe.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\ndescribe.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\ndescribe.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['tuning'] = {\n    'id': '1c3c77208d684dc0',\n    'name': 'tuning',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['scene'] = {\n    'id': '1e9f5bde9636a371',\n    'name': 'scene',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['entity'] = {\n    'id': '2b12391aa314ef62',\n    'name': 'entity',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': false,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// Elements icons\ndescribe.elements = {\n    'switch': ['toggle-switch-off', 'toggle-switch-on'],\n    'power': ['flash-outline', 'flash'],\n    'light': ['lightbulb','lightbulb-off'],\n    'plug': ['power-plug-off', 'power-plug'],\n    'motion': ['motion-sensor', 'motion-sensor-off'],\n    'precence': ['localtion-exit', 'location-enter'],\n    'door': ['door-closed', 'door-open'],\n    'window': ['window-closed-variant', 'window-open-variant'],\n    'shutter': ['window-shutter', 'window-shutter-open'],\n    'lock': ['lock-off', 'lock'],\n    'alert': ['bell-off', 'bell'],\n    'sound': ['volume-off', 'volume-hight'],\n    'temperature': ['thermometer', 'thermometer-off'],\n    'humidity': ['water-percent', 'water-percent-alert'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless'],\n    'wind': ['weather-windy', 'weather-dust'],\n    'fan': ['fan-off', 'fan'],\n    'direction': ['swap-horizontal', 'swp-horizontale-bold'],\n    'time': ['clock-outline', 'clock']\n};\n\n// Save config\nglobal.set('describe', describe, 'memoryOnly');\n\n// Clear user and more\nglobal.set('auth',{},'memoryOnly');\nglobal.set('user',{},'memoryOnly');\nglobal.set('form',{},'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/.config.projects.json'\n};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2040,
+        "x": 1840,
         "y": 80,
         "wires": [
             [
@@ -2100,7 +2169,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 3310,
+        "x": 3110,
         "y": 80,
         "wires": [
             [
@@ -3072,7 +3141,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "init",
-        "func": "let memorized = {\n    'auth': {},\n    'entity': {},\n    'mqtt': {},\n    'name': { 'room': {}, 'device': {}, 'entity': {} }\n}\n\n// Copy backup or at least init\nfor (const key in memorized) {\n    global.set(key, (global.get(key, 'default') || memorized[key]), 'memoryOnly');\n}\n\n// Reset variables\nglobal.set('browser', {}, 'memoryOnly');\nglobal.set('describe', {\n    'project': '',\n    'app': {},\n    'pages': {}\n}, 'memoryOnly');\nglobal.set('dictionary', {}, 'memoryOnly');\nglobal.set('form', {}, 'memoryOnly');\nglobal.set('user', {}, 'memoryOnly');\n\n\n// start\nmsg.payload = {\n    'pages': {},\n    'dictionary': {}\n};\n\nreturn msg;",
+        "func": "let memorized = {\n    'auth': {},\n    'entity': {},\n    'mqtt': {},\n    'name': { 'room': {}, 'device': {}, 'entity': {} }\n}\n\n// Copy backup or at least init\nfor (const key in memorized) {\n    global.set(key, (global.get(key, 'default') || memorized[key]), 'memoryOnly');\n}\n\n// Reset variables\nglobal.set('browser', {}, 'memoryOnly');\nglobal.set('describe', { 'project': '', 'app': {}, 'pages': {}, 'enum': {}, 'elements': {} }, 'memoryOnly');\nglobal.set('dictionary', {}, 'memoryOnly');\nglobal.set('form', {}, 'memoryOnly');\nglobal.set('user', {}, 'memoryOnly');\n\n// start\nmsg.payload = {\n    'pages': {},\n    'enum': {},\n    'dictionary': {}\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3240,7 +3309,8 @@
         "name": "common - boot - init",
         "mode": "link",
         "links": [
-            "0fad0e21f00eaa17"
+            "0fad0e21f00eaa17",
+            "17ee74250b6fe764"
         ],
         "x": 475,
         "y": 80,
@@ -3253,7 +3323,8 @@
         "g": "bcc6f36c217d1643",
         "name": "common - boot - init",
         "links": [
-            "724fe4a33c68dee1"
+            "724fe4a33c68dee1",
+            "4e7136a46fab4070"
         ],
         "x": 685,
         "y": 80,
@@ -3269,7 +3340,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "check",
-        "func": "if (typeof msg.payload !== 'object') {\n    msg.payload = {};\n}\nif (typeof msg.payload.pages !== 'object') {\n    msg.payload.pages = {};\n}\nif (typeof msg.payload.dictionary !== 'object') {\n    msg.payload.dictionary = {};\n}\n\nlet describe = global.get('describe', 'memoryOnly') || {};\nfor (const page in msg.payload.pages) {\n    describe.pages[page] = msg.payload.pages[page];\n}\n\nglobal.set('describe', describe, 'memoryOnly');\n\nlet dictionary = global.get('dictionary', 'memoryOnly') || {};\nfor (const lang in msg.payload.dictionary) {\n    if (typeof dictionary[lang] !== 'object') {\n        dictionary[lang] = {};\n    }\n    if (typeof msg.payload.dictionary[lang] === 'object') {\n        for (const group in msg.payload.dictionary[lang]) {\n            if (typeof dictionary[lang][group] !== 'object') {\n                dictionary[lang][group] = {};\n            }\n            if (typeof msg.payload.dictionary[lang][group] === 'object') {\n                for (const sentence in msg.payload.dictionary[lang][group]) {\n                    // custom sentence overwrite existing ones\n                    dictionary[lang][group][sentence] = msg.payload.dictionary[lang][group][sentence];\n                }\n            }\n        }\n    }\n}\n\nglobal.set('dictionary', dictionary, 'memoryOnly');\n\nreturn msg;",
+        "func": "if (typeof msg.payload !== 'object') {\n    msg.payload = {};\n}\nif (typeof msg.payload.pages !== 'object') {\n    msg.payload.pages = {};\n}\nif (typeof msg.payload.enum !== 'object') {\n    msg.payload.enum = {};\n}\nif (typeof msg.payload.dictionary !== 'object') {\n    msg.payload.dictionary = {};\n}\n\nlet describe = global.get('describe', 'memoryOnly') || {};\nfor (const p in msg.payload.pages) {\n    describe.pages[p] = msg.payload.pages[p];\n}\nfor (const e in msg.payload.enum) {\n    describe.enum[e] = msg.payload.enum[e];\n}\n\nglobal.set('describe', describe, 'memoryOnly');\n\nlet dictionary = global.get('dictionary', 'memoryOnly') || {};\nfor (const lang in msg.payload.dictionary) {\n    if (typeof dictionary[lang] !== 'object') {\n        dictionary[lang] = {};\n    }\n    if (typeof msg.payload.dictionary[lang] === 'object') {\n        for (const group in msg.payload.dictionary[lang]) {\n            if (typeof dictionary[lang][group] !== 'object') {\n                dictionary[lang][group] = {};\n            }\n            if (typeof msg.payload.dictionary[lang][group] === 'object') {\n                for (const sentence in msg.payload.dictionary[lang][group]) {\n                    // custom sentence overwrite existing ones\n                    dictionary[lang][group][sentence] = msg.payload.dictionary[lang][group][sentence];\n                }\n            }\n        }\n    }\n}\n\nglobal.set('dictionary', dictionary, 'memoryOnly');\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3337,34 +3408,6 @@
         ]
     },
     {
-        "id": "0adfbcb74fd13b1f",
-        "type": "change",
-        "z": "4bc72a1112cb448c",
-        "g": "bcc6f36c217d1643",
-        "name": "dictionary en",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.en",
-                "pt": "msg",
-                "to": "{\t    'option_page': {\t        'home': 'Home',\t        'room': 'Rooms',\t        'tuning': 'Adjustments',\t        'scene': 'Scenes',\t        'entity': 'Entities',\t        'config': 'Configuration',\t        'auth': 'Authentication'\t    },\t    'option_level': {\t        'visitor': 'Visitor',\t        'child':  'Child',\t        'parent':'Parent',\t        'admin': 'Administrator'\t    },\t    'option_team': {\t        'm': 'Morning',\t        'a': 'Afternoon',\t        'n': 'Night',\t        'd': 'Day',\t        'w': 'Weekend',\t        's': 'Saturday'\t    },\t    'option_lang': {\t        'en': 'English',\t        'fr': 'French'\t    },\t    'option_color': {\t        'on': '#008000',\t        'off': '#FF0000',\t        'median': '#F08000',\t        'none': '#808000',\t        'theme': '#0094CE',\t        'empty': '#CCCCCC'\t    },\t    'notice': {\t        'file_write_success': 'Saved file successfully',\t        'file_write_fail': 'Failed to save file',\t        'login_fail': 'Wrong username or password',\t        'save_success': 'Successfully saved'\t    },\t    'group_room': {\t        'room_select': 'Select a room',\t        'power_title': 'Powers'\t    },\t    'group_entity': {\t        'room_title': 'Rooms configuration',\t        'room_add': 'Add or edit a room',\t        'room_del': 'Delete a room',\t        'room_id': 'Ident',\t        'room_name': 'Name',\t\t        'entity_title': 'List of received entities',\t        'entity_edit_title': 'Configure entity',\t        'entity_edit_name': 'Nom',\t        'entity_edit_room': 'Pièces',\t        'entity_delete': 'Delete',\t\t        'device_edit_title': 'Configure device',\t        'device_edit_name': 'Device name'\t    },\t    'group_config': {\t        'mqtt_title': 'MQTT configuration',\t        'mqtt_host': 'Broker IP address',\t        'mqtt_port': 'Port',\t        'mqtt_topic': 'Topic',\t        'mqtt_username': 'Username',\t        'mqtt_password': 'Password',\t        'mqtt_discovery': 'Home Assistant Discovery topic',\t        'mqtt_dknrteleinfo': 'DKNR Teleinfo topic',\t        'mqtt_dknrapsystems': 'DKNR APsystems topic',\t        'mqtt_dknrdaikin': 'DKNR Daikin topic',\t        'mqtt_zwavejs': 'ZwaveJS topic',\t        'mqtt_zigbee2mqtt': 'Zigbee2MQTT topic',\t        'mqtt_enabled': 'Enable MQTT',\t\t        'backup_title': 'Backup configuration',\t        'backup_room': 'Rooms',\t        'backup_entity': 'Entities',\t        'backup_scene': 'Scenes',\t        'backup_user': 'Users',\t        'backup_mqtt': 'MQTT'\t    },\t    'group_auth': {\t        'login': 'Login',\t        'pass': 'Password',\t        'auth_user': 'User'\t    }\t}",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1470,
-        "y": 80,
-        "wires": [
-            [
-                "9563d3bc895a825a"
-            ]
-        ]
-    },
-    {
         "id": "755b262907010fd2",
         "type": "function",
         "z": "4bc72a1112cb448c",
@@ -3377,39 +3420,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1860,
+        "x": 1660,
         "y": 80,
         "wires": [
             [
                 "667f445784d1b506"
-            ]
-        ]
-    },
-    {
-        "id": "9563d3bc895a825a",
-        "type": "change",
-        "z": "4bc72a1112cb448c",
-        "g": "bcc6f36c217d1643",
-        "name": "dictionary fr",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.fr",
-                "pt": "msg",
-                "to": "{\t    'option_page': {\t        'home': 'Accueil',\t        'room': 'Pièces',\t        'tuning': 'Ajustements',\t        'scene': 'Scènes',\t        'entity': 'Entités',\t        'config': 'Configuration',\t        'auth': 'Authentification'\t    },\t    'option_level': {\t        'visitor': 'Visiteur',\t        'child':  'Enfant',\t        'parent':'Parent',\t        'admin': 'Administrateur'\t    },\t    'option_team': {\t        'm': 'Maint',\t        'a': 'Après-midi',\t        'n': 'Nuit',\t        'd': 'Journée',\t        's': 'Samedi',\t        'w': 'Weekend'\t    },\t    'option_lang': {\t        'en': 'English',\t        'fr': 'French'\t    },\t    'notice': {\t        'file_write_success': 'Fichier sauvegardé avec suucès',\t        'file_write_fail': 'Impossiblde de sauvegarder le fichier',\t        'login_fail': \"Mauvais nom d'utilisateur ou de mot de passe\",\t        'save_success': 'Sauvergardé avec succès'\t    },\t    'group_room': {\t        'room_select': 'Sélectionner une pièce',\t        'power_title': 'Puissances'\t    },\t    'group_entity': {\t        'room_title': 'Configuration des pièces',\t        'room_add': 'Ajouter ou modifier une pièce',\t        'room_del': 'Supprimer une pièce',\t        'room_id': 'Identifant',\t        'room_name': 'Nom',\t\t        'entity_title': 'Liste des entités reçu',\t        'entity_edit_title': 'Configurer une entité',\t        'entity_edit_name': 'Nom',\t        'entity_edit_room': 'Pièces',\t        'entity_delete': 'Supprimer',\t\t        'device_edit_title': 'Configurer un appareil',\t        'device_edit_name': \"Nom de l'appareil\"\t    },\t    'group_config': {\t        'mqtt_title': 'Configuration MQTT',\t        'mqtt_host': 'Adresse IP du broker',\t        'mqtt_port': 'Port',\t        'mqtt_topic': 'Topic',\t        'mqtt_username': 'Utilisateur',\t        'mqtt_password': 'Mot de passe',\t        'mqtt_discovery': 'Home Assistant Discovery topic',\t        'mqtt_enabled': 'Activer MQTT',\t\t        'backup_title': \"Configuration d'une sauvergarde\",\t        'backup_room': 'Pièces',\t        'backup_entity': 'Entités',\t        'backup_scene': 'Scènes',\t        'backup_user': 'Utilisateurs',\t        'backup_mqtt': 'MQTT'\t    },\t    'group_auth': {\t        'login': 'Identifiant',\t        'pass': 'Mot de passe',\t        'user': 'Utilisateur'\t    }\t}",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1670,
-        "y": 80,
-        "wires": [
-            [
-                "755b262907010fd2"
             ]
         ]
     },
@@ -3437,7 +3452,7 @@
         "y": 80,
         "wires": [
             [
-                "0adfbcb74fd13b1f"
+                "67cca85c91edaff0"
             ]
         ]
     },
@@ -3475,7 +3490,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 2230,
+        "x": 2030,
         "y": 80,
         "wires": [
             [
@@ -3492,7 +3507,7 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 2410,
+        "x": 2210,
         "y": 80,
         "wires": [
             [
@@ -3513,7 +3528,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2580,
+        "x": 2380,
         "y": 80,
         "wires": [
             [
@@ -3636,7 +3651,7 @@
             "f2cd63b49ac325ec"
         ],
         "x": 145,
-        "y": 2660,
+        "y": 2720,
         "wires": [
             [
                 "ae66a858fd8c7d7b"
@@ -3657,7 +3672,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 2660,
+        "y": 2720,
         "wires": [
             [
                 "b5ee6411deb05df3"
@@ -3679,7 +3694,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 430,
-        "y": 2660,
+        "y": 2720,
         "wires": [
             [
                 "91b6294e85a14007",
@@ -3706,7 +3721,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 590,
-        "y": 2600,
+        "y": 2660,
         "wires": [
             [
                 "ae66a858fd8c7d7b"
@@ -3717,6 +3732,7 @@
         "id": "540ace790f3fa1eb",
         "type": "debug",
         "z": "4bc72a1112cb448c",
+        "g": "be2dde01217c4ebd",
         "name": "common - data",
         "active": false,
         "tosidebar": true,
@@ -3726,8 +3742,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 640,
-        "y": 2500,
+        "x": 620,
+        "y": 2540,
         "wires": []
     },
     {
@@ -3736,7 +3752,7 @@
         "z": "4bc72a1112cb448c",
         "g": "fb34af284a5fbd90",
         "name": "parse",
-        "func": "let res = {\n    'topic':'',\n    'payload': {}\n};\n\nif (typeof msg.payload === 'object' && \n    typeof msg.payload.ADCO === 'object' && \n    typeof msg.payload.ADCO.raw === 'string'\n) {\n    for (const key in msg.payload){\n        res.payload.id = key;\n        res.payload.source = 'teleinfo';\n        res.payload.parent = msg.payload.ADCO.raw;\n        res.payload.unit = msg.payload[key]['unit'];\n        res.payload.value = msg.payload[key]['value'];\n        res.payload.name = msg.payload[key]['name'];\n\n        node.send(res);\n    }\n}\n\nreturn;",
+        "func": "let res = {\n    'topic':'',\n    'payload': {}\n};\n\nif (typeof msg.payload === 'object' && \n    typeof msg.payload.ADCO === 'object' && \n    typeof msg.payload.ADCO.raw === 'string'\n) {\n    for (const key in msg.payload){\n        if (key === 'PTEC') {\n            // Convert HC to bin\n            msg.payload[key]['value'] = msg.payload[key]['value'] === 'HC' ? 0 : 1;\n            msg.payload[key]['unit'] = 'b';\n        }\n\n        res.payload.id = key;\n        res.payload.source = 'teleinfo';\n        res.payload.parent = msg.payload.ADCO.raw;\n        res.payload.unit = msg.payload[key]['unit'];\n        res.payload.value = msg.payload[key]['value'];\n        res.payload.name = msg.payload[key]['name'];\n\n        node.send(res);\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3744,7 +3760,7 @@
         "finalize": "",
         "libs": [],
         "x": 590,
-        "y": 2660,
+        "y": 2720,
         "wires": [
             [
                 "038df4153883408b"
@@ -3762,20 +3778,23 @@
             "cc0a7c14f877c371"
         ],
         "x": 715,
-        "y": 2660,
+        "y": 2720,
         "wires": []
     },
     {
         "id": "cc0a7c14f877c371",
         "type": "link in",
         "z": "4bc72a1112cb448c",
+        "g": "be2dde01217c4ebd",
         "name": "common - data",
         "links": [
             "038df4153883408b",
-            "6ab72e116070c867"
+            "6ab72e116070c867",
+            "1b6ec87a498d3297",
+            "4c1329a43d9cd7ca"
         ],
-        "x": 175,
-        "y": 2440,
+        "x": 145,
+        "y": 2480,
         "wires": [
             [
                 "e964304a04d624f4"
@@ -3786,16 +3805,17 @@
         "id": "b3e3b0dde3bcdd99",
         "type": "function",
         "z": "4bc72a1112cb448c",
+        "g": "be2dde01217c4ebd",
         "name": "check",
-        "func": "// required to build uid\nif (typeof msg.payload !== 'object' || \n    typeof msg.payload.source !== 'string' || \n    typeof msg.payload.parent !== 'string' || \n    typeof msg.payload.id !== 'string'\n) {\n\n    return;\n}\n\n// default keys\nlet template = {\n    'uid': '',\n    'source': '',\n    'id': '',\n    'parent': '',\n    'room': '',\n    'value': '',\n    'type': '',\n    'unit': ''\n};\n\n// rebuilt some keys\nmsg.payload.uid = msg.payload.source + '_' + msg.payload.parent + '_' + msg.payload.id;\nmsg.payload.parent = msg.payload.source + '_' + msg.payload.parent;\n\n// get existing entity\nlet entity = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\nlet protect = ['room'];\n\n// set all entity fields\nentity = {...template, ...entity};\n\nfor (const k in msg.payload) {\n    // set entity name if it not exists\n    if (k === 'name') {\n        let name = global.get('name[\"entity\"]', 'memoryOnly') || {};\n        if (typeof name[msg.payload.uid] !== 'string' || name[msg.payload.uid] === '') {\n            name[msg.payload.uid] = msg.payload.name;\n            global.set('name[\"entity\"]', name, 'memoryOnly')\n        }\n    }\n\n    if (typeof template[k] !== 'undefined') {\n        // check if value changes\n        if (k === 'value') {\n            msg.repeat = entity[k] === msg.payload[k] ? true : false;\n        }\n        if (protect.includes(k) && entity[k] !== '') {\n            // do not override some properties\n        } else {\n            entity[k] = msg.payload[k];\n        }\n    }\n}\n\nif (msg.remove === true) {\n    // todo\n}\n\nglobal.set('entity[\"' + entity.uid + '\"]', entity, 'memoryOnly');\n\nnode.status({ fill: \"green\", shape: \"ring\", text: entity.uid + ' : ' + entity.value});\n\nmsg.topic = '';\nmsg.payload = entity;\n\nreturn msg;",
+        "func": "// required to build uid\nif (typeof msg.payload !== 'object' || \n    typeof msg.payload.source !== 'string' || \n    typeof msg.payload.parent !== 'string' || \n    typeof msg.payload.id !== 'string'\n) {\n\n    return;\n}\n\n// default keys\nlet template = {\n    'uid': '',\n    'source': '',\n    'id': '',\n    'parent': '',\n    'value': '',\n    'type': '',\n    'room': '',\n    'holder': '',\n    'cardinal': '',\n    'element': '',\n    'unit': ''\n};\n\n// rebuilt some keys\nmsg.payload.uid = msg.payload.source + '_' + msg.payload.parent + '_' + msg.payload.id;\nmsg.payload.parent = msg.payload.source + '_' + msg.payload.parent;\n\n// get existing entity\nlet entity = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\nlet protect = ['room'];\n\n// set all entity fields\nentity = {...template, ...entity};\n\nfor (const k in msg.payload) {\n    // set entity name if it not exists\n    if (k === 'name') {\n        let name = global.get('name[\"entity\"]', 'memoryOnly') || {};\n        if (typeof name[msg.payload.uid] !== 'string' || name[msg.payload.uid] === '') {\n            name[msg.payload.uid] = msg.payload.name;\n            global.set('name[\"entity\"]', name, 'memoryOnly')\n        }\n    }\n\n    if (typeof template[k] !== 'undefined') {\n        // check if value changes\n        if (k === 'value') {\n            msg.repeat = entity[k] === msg.payload[k] ? true : false;\n        }\n        if (protect.includes(k) && entity[k] !== '') {\n            // do not override some properties\n        } else {\n            entity[k] = msg.payload[k];\n        }\n    }\n}\n\nif (msg.remove === true) {\n    // todo\n}\n\nglobal.set('entity[\"' + entity.uid + '\"]', entity, 'memoryOnly');\n\nnode.status({ fill: \"green\", shape: \"ring\", text: entity.uid + ' : ' + entity.value});\n\nmsg.topic = '';\nmsg.payload = entity;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 450,
-        "y": 2440,
+        "x": 430,
+        "y": 2480,
         "wires": [
             [
                 "540ace790f3fa1eb",
@@ -3807,19 +3827,21 @@
         "id": "a29ec7554a818a6f",
         "type": "link out",
         "z": "4bc72a1112cb448c",
+        "g": "be2dde01217c4ebd",
         "name": "common - data",
         "mode": "link",
         "links": [
             "8704b93076a73d7e"
         ],
-        "x": 575,
-        "y": 2440,
+        "x": 555,
+        "y": 2480,
         "wires": []
     },
     {
         "id": "e964304a04d624f4",
         "type": "delay",
         "z": "4bc72a1112cb448c",
+        "g": "be2dde01217c4ebd",
         "name": "10/s",
         "pauseType": "rate",
         "timeout": "5",
@@ -3833,8 +3855,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 290,
-        "y": 2440,
+        "x": 270,
+        "y": 2480,
         "wires": [
             [
                 "b3e3b0dde3bcdd99"
@@ -3886,7 +3908,7 @@
         "name": "From docker dknr-teleinfo",
         "info": "https://github.com/JcDenis/dknr-teleinfo",
         "x": 330,
-        "y": 2600,
+        "y": 2660,
         "wires": []
     },
     {
@@ -3939,7 +3961,7 @@
             "f2cd63b49ac325ec"
         ],
         "x": 145,
-        "y": 2840,
+        "y": 2960,
         "wires": [
             [
                 "c6c1765c8ced2f28"
@@ -3960,7 +3982,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 2840,
+        "y": 2960,
         "wires": [
             [
                 "36ceb75b76d5eff1"
@@ -3982,7 +4004,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 430,
-        "y": 2840,
+        "y": 2960,
         "wires": [
             [
                 "a7c97185682980e6",
@@ -4009,7 +4031,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 590,
-        "y": 2780,
+        "y": 2900,
         "wires": [
             [
                 "c6c1765c8ced2f28"
@@ -4030,7 +4052,7 @@
         "finalize": "",
         "libs": [],
         "x": 590,
-        "y": 2840,
+        "y": 2960,
         "wires": [
             [
                 "6ab72e116070c867"
@@ -4048,7 +4070,7 @@
             "cc0a7c14f877c371"
         ],
         "x": 715,
-        "y": 2840,
+        "y": 2960,
         "wires": []
     },
     {
@@ -4059,7 +4081,338 @@
         "name": "From docker dknr-apsystems",
         "info": "https://github.com/JcDenis/dknr-apsystems",
         "x": 340,
+        "y": 2900,
+        "wires": []
+    },
+    {
+        "id": "67cca85c91edaff0",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "bcc6f36c217d1643",
+        "name": "dictionary en",
+        "func": "msg.payload.en = {\n    'option_page': {\n        'home': 'Home',\n        'room': 'Rooms',\n        'tuning': 'Adjustments',\n        'scene': 'Scenes',\n        'entity': 'Entities',\n        'config': 'Configuration',\n        'auth': 'Authentication'\n    },\n    'option_level': {\n        'visitor': 'Visitor',\n        'child':  'Child',\n        'parent':'Parent',\n        'admin': 'Administrator'\n    },\n    'option_team': {\n        'm': 'Morning',\n        'a': 'Afternoon',\n        'n': 'Night',\n        'd': 'Day',\n        'w': 'Weekend',\n        's': 'Saturday'\n    },\n    'option_lang': {\n        'en': 'English',\n        'fr': 'French'\n    },\n    'option_color': {\n        'on': '#008000',\n        'off': '#FF0000',\n        'median': '#F08000',\n        'none': '#808000',\n        'theme': '#0094CE',\n        'empty': '#CCCCCC'\n    },\n    'option_type': {\n        'command': 'Command',\n        'sensor': 'Sensor'\n    },\n    'option_holder': {\n        'roof': 'Roof',\n        'ceiling': 'Ceiling',\n        'ground': 'Ground',\n        'wall': 'Wall',\n        'door': 'Door',\n        'window': 'Window',\n        'bay': 'Bay',\n        'desk': 'Desk',\n        'mirror': 'Mirror',\n        'bedside': 'Bedside',\n        'shelf': 'Shelf',\n        'rack': 'Rack'\n    },\n    'option_cardinal': {\n        'none': 'none',\n        'left': 'Left',\n        'right': 'Right',\n        'east': 'East',\n        'west': 'West',\n        'north': 'North',\n        'south': 'South',\n        'front': 'Front',\n        'rear': 'Rear'\n    },\n    option_element: {\n        'switch': 'Switch',\n        'power': 'Power',\n        'light': 'Light',\n        'plug': 'Plug',\n        'motion': 'Motion',\n        'precence': 'Presence',\n        'door': 'Door',\n        'window': 'Window',\n        'shutter': 'Shutter',\n        'lock': 'Lock',\n        'alert': 'Alert',\n        'sound': 'Volume',\n        'temperature': 'Temperature',\n        'humidity': 'Humidity',\n        'illuminance': 'Illuminance',\n        'wind': 'Wind',\n        'fan': 'Fan',\n        'direction': 'Direction',\n        'time': 'Clock'\n    },\n    'option_unit': {\n        'none': 'None',\n        '°C': 'Degree celsuis',\n        '°F': 'Degree fahrenheit',\n        'mA': 'Milliampere',\n        'A': 'Ampere',\n        'mW': 'Milliwatt',\n        'W': 'Watt',\n        'kW': 'Kilowatt',\n        'MW': 'Megawatt',\n        'mWh': 'Milliwatt/hour',\n        'Wh': 'Watt/Hour',\n        'mVA': 'Millivoltampere',\n        'VA': 'Voltampere',\n        'lx': 'Lux',\n        '%': 'Percent',\n        'b': 'Binary',\n        'n': 'Number',\n        's': 'Second',\n        'ms': 'Millisecond',\n        'enum': 'Enumerator',\n        'text': 'Text'\n    },\n    'notice': {\n        'file_write_success': 'Saved file successfully',\n        'file_write_fail': 'Failed to save file',\n        'login_fail': 'Wrong username or password',\n        'save_success': 'Successfully saved'\n    },\n    'group_room': {\n        'room_select': 'Select a room',\n        'power_title': 'Powers'\n    },\n    'group_entity': {\n        'room_title': 'Rooms configuration',\n        'room_add': 'Add or edit a room',\n        'room_del': 'Delete a room',\n        'room_id': 'Ident',\n        'room_name': 'Name',\n\n        'entity_title': 'List of received entities',\n        'entity_edit_title': 'Configure entity',\n        'entity_edit_name': 'Name',\n        'entity_edit_room': 'Room',\n        'entity_edit_type': 'Type',\n        'entity_edit_holder': 'Holder',\n        'entity_edit_cardinal': 'Cardinal',\n        'entity_edit_element': 'Element',\n        'entity_delete': 'Delete',\n\n        'device_edit_title': 'Configure device',\n        'device_edit_name': 'Device name'\n    },\n    'group_config': {\n        'mqtt_title': 'MQTT configuration',\n        'mqtt_host': 'Broker IP address',\n        'mqtt_port': 'Port',\n        'mqtt_topic': 'Topic',\n        'mqtt_username': 'Username',\n        'mqtt_password': 'Password',\n        'mqtt_discovery': 'Home Assistant Discovery topic',\n        'mqtt_dknrteleinfo': 'DKNR Teleinfo topic',\n        'mqtt_dknrapsystems': 'DKNR APsystems topic',\n        'mqtt_dknrdaikin': 'DKNR Daikin topic',\n        'mqtt_zwavejs': 'ZwaveJS topic',\n        'mqtt_zigbee2mqtt': 'Zigbee2MQTT topic',\n        'mqtt_enabled': 'Enable MQTT',\n\n        'backup_title': 'Backup configuration',\n        'backup_room': 'Rooms',\n        'backup_entity': 'Entities',\n        'backup_scene': 'Scenes',\n        'backup_user': 'Users',\n        'backup_mqtt': 'MQTT'\n    },\n    'group_auth': {\n        'login': 'Login',\n        'pass': 'Password',\n        'auth_user': 'User'\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1470,
+        "y": 80,
+        "wires": [
+            [
+                "417f8003fb9c0b7a"
+            ]
+        ]
+    },
+    {
+        "id": "417f8003fb9c0b7a",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "bcc6f36c217d1643",
+        "name": "dictionary fr",
+        "func": "msg.payload.fr = {\n    'option_page': {\n        'home': 'Accueil',\n        'room': 'Pièces',\n        'tuning': 'Ajustements',\n        'scene': 'Scènes',\n        'entity': 'Entités',\n        'config': 'Configuration',\n        'auth': 'Authentification'\n    },\n    'option_level': {\n        'visitor': 'Visiteur',\n        'child':  'Enfant',\n        'parent':'Parent',\n        'admin': 'Administrateur'\n    },\n    'option_team': {\n        'm': 'Maint',\n        'a': 'Après-midi',\n        'n': 'Nuit',\n        'd': 'Journée',\n        's': 'Samedi',\n        'w': 'Weekend'\n    },\n    'option_lang': {\n        'en': 'English',\n        'fr': 'French'\n    },\n    'notice': {\n        'file_write_success': 'Fichier sauvegardé avec suucès',\n        'file_write_fail': 'Impossiblde de sauvegarder le fichier',\n        'login_fail': \"Mauvais nom d'utilisateur ou de mot de passe\",\n        'save_success': 'Sauvergardé avec succès'\n    },\n    'group_room': {\n        'room_select': 'Sélectionner une pièce',\n        'power_title': 'Puissances'\n    },\n    'group_entity': {\n        'room_title': 'Configuration des pièces',\n        'room_add': 'Ajouter ou modifier une pièce',\n        'room_del': 'Supprimer une pièce',\n        'room_id': 'Identifant',\n        'room_name': 'Nom',\n\n        'entity_title': 'Liste des entités reçu',\n        'entity_edit_title': 'Configurer une entité',\n        'entity_edit_name': 'Nom',\n        'entity_edit_room': 'Pièces',\n        'entity_delete': 'Supprimer',\n\n        'device_edit_title': 'Configurer un appareil',\n        'device_edit_name': \"Nom de l'appareil\"\n    },\n    'group_config': {\n        'mqtt_title': 'Configuration MQTT',\n        'mqtt_host': 'Adresse IP du broker',\n        'mqtt_port': 'Port',\n        'mqtt_topic': 'Topic',\n        'mqtt_username': 'Utilisateur',\n        'mqtt_password': 'Mot de passe',\n        'mqtt_discovery': 'Home Assistant Discovery topic',\n        'mqtt_enabled': 'Activer MQTT',\n\n        'backup_title': \"Configuration d'une sauvergarde\",\n        'backup_room': 'Pièces',\n        'backup_entity': 'Entités',\n        'backup_scene': 'Scènes',\n        'backup_user': 'Utilisateurs',\n        'backup_mqtt': 'MQTT'\n    },\n    'group_auth': {\n        'login': 'Identifiant',\n        'pass': 'Mot de passe',\n        'user': 'Utilisateur'\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1470,
+        "y": 140,
+        "wires": [
+            [
+                "755b262907010fd2"
+            ]
+        ]
+    },
+    {
+        "id": "4accbc2f42fda36a",
+        "type": "inject",
+        "z": "4bc72a1112cb448c",
+        "g": "aa28e51660bead4f",
+        "name": "1min",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 450,
+        "y": 3380,
+        "wires": [
+            [
+                "29c782ee02094a7a"
+            ]
+        ]
+    },
+    {
+        "id": "29c782ee02094a7a",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "aa28e51660bead4f",
+        "name": "parse",
+        "func": "msg.payload = {\n    'id': 'ping',\n    'source': 'dknr',\n    'parent': 'domotic',\n    'value': Date.now(),\n    'unit': 'ts',\n    'name': 'Ping'\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 3380,
+        "wires": [
+            [
+                "1b6ec87a498d3297"
+            ]
+        ]
+    },
+    {
+        "id": "1b6ec87a498d3297",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "aa28e51660bead4f",
+        "name": "common - domotic",
+        "mode": "link",
+        "links": [
+            "cc0a7c14f877c371"
+        ],
+        "x": 715,
+        "y": 3380,
+        "wires": []
+    },
+    {
+        "id": "1a8726b2de605ecb",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "89ac7be96aabaa70",
+        "name": "common - mqtt - daikin",
+        "links": [
+            "92c098c716e46e3b",
+            "f2cd63b49ac325ec"
+        ],
+        "x": 145,
+        "y": 3200,
+        "wires": [
+            [
+                "8f0b88d6a682a1e4"
+            ]
+        ]
+    },
+    {
+        "id": "8f0b88d6a682a1e4",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "89ac7be96aabaa70",
+        "name": "data",
+        "func": "msg.broker = {};\n\nlet mqtt = global.get('mqtt', 'memoryOnly');\nif (typeof mqtt == 'object' && mqtt.enabled == true && mqtt.daikin != '') {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.daikin.length > 0\n    ) {\n        msg.broker = {\n            'broker': mqtt.host,\n            'port': mqtt.port,\n            'clientid': 'daikin' + global.get('describe.app.project', 'memoryOnly') || 'dknr',\n            'force': true\n        };\n\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.daikin + '/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'memoryOnly');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 3200,
+        "wires": [
+            [
+                "9052d70bbd0bb619"
+            ]
+        ]
+    },
+    {
+        "id": "9052d70bbd0bb619",
+        "type": "mqtt in",
+        "z": "4bc72a1112cb448c",
+        "g": "89ac7be96aabaa70",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "a619830c5e5eadfb",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 430,
+        "y": 3200,
+        "wires": [
+            [
+                "ea429b3e01991411",
+                "313d1e8f5b331872"
+            ]
+        ]
+    },
+    {
+        "id": "ea429b3e01991411",
+        "type": "trigger",
+        "z": "4bc72a1112cb448c",
+        "g": "89ac7be96aabaa70",
+        "name": "10m",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "str",
+        "duration": "10",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 590,
+        "y": 3140,
+        "wires": [
+            [
+                "8f0b88d6a682a1e4"
+            ]
+        ]
+    },
+    {
+        "id": "313d1e8f5b331872",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "89ac7be96aabaa70",
+        "name": "parse",
+        "func": "let res = {\n    'topic':'',\n    'payload': {}\n};\n\n// limit ot these keys\nlet keys = ['pow', 'mode', 'stemp', 'f_rate', 'f_dir', 'htemp', 'otemp', 'host'];\n\nif (typeof msg.payload === 'object' && \n    typeof msg.payload.id === 'object'\n) {\n    for (let k = 0; k < keys.length; k++) {\n        res.payload.id = keys[k]\n        res.payload.source = 'daikin';\n        res.payload.parent = msg.payload.id.value;\n        res.payload.unit = msg.payload[keys[k]]['unit'];\n        res.payload.value = msg.payload[keys[k]]['value'];\n        res.payload.name = msg.payload[keys[k]]['label'];\n\n        node.send(res);\n    }\n}\n\n// limit ot these keys\nlet inv = {\n    'power_instant': 'W', \n    'temperature': '°C'\n};\n\nif (msg.topic.includes(\"/inverter/\") && \n    typeof msg.payload === 'object' && \n    typeof msg.payload.id === 'string'\n) {\n    for (const i in inv) {\n        res.payload.id = i\n        res.payload.source = 'apsystems';\n        res.payload.parent = 'inverter_' + msg.payload.id;\n        res.payload.unit = inv[i];\n        res.payload.value = msg.payload[i];\n\n        node.send(res);\n    }\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 3200,
+        "wires": [
+            [
+                "4c1329a43d9cd7ca"
+            ]
+        ]
+    },
+    {
+        "id": "4c1329a43d9cd7ca",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "89ac7be96aabaa70",
+        "name": "common - mqtt - daikin",
+        "mode": "link",
+        "links": [
+            "cc0a7c14f877c371"
+        ],
+        "x": 715,
+        "y": 3200,
+        "wires": []
+    },
+    {
+        "id": "fa04738bcd767d04",
+        "type": "comment",
+        "z": "4bc72a1112cb448c",
+        "g": "89ac7be96aabaa70",
+        "name": "From docker dknr-daikin",
+        "info": "https://github.com/JcDenis/dknr-daikin",
+        "x": 330,
+        "y": 3140,
+        "wires": []
+    },
+    {
+        "id": "41fc0776f67a9292",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "fb34af284a5fbd90",
+        "name": "enum",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
         "y": 2780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "72aae6174b64a06c",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "3db71c2c17730bd8",
+        "name": "enum",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 3020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dac35c32b868aea8",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "89ac7be96aabaa70",
+        "name": "enum",
+        "func": "msg.payload.enum.daikin = {\n    'mode': {\n        '0': ['refresh-auto', 'Auto'],\n        '3': ['snowflake', 'Froid'],\n        '2': ['water-percent', 'Déshumidifier'],\n        '4': ['fire', 'Chaud'],\n        '5': ['weather-windy', 'Ventilation']\n    },\n    'f_rate': {\n        'A': ['refresh-auto', 'Auto'],\n        'B': ['leaf', 'Eco'],\n        '3': ['fan-minus', 'Vitesse 1'],\n        '4': ['fan-speed-1', 'Vitesse 2'],\n        '5': ['fan-speed-2', 'Vitesse 3'],\n        '6': ['fan-speed-3', 'Vitesse 4'],\n        '7': ['fan-plus', 'Vitesse 5'],\n    },\n    'f_dir': {\n        '0': ['arrow-collapse-all', 'Fixe'],\n        '1': ['arrow-up-down', 'Verticale'],\n        '2': ['arrow-left-right', 'Horizontale'],\n        '3': ['arrow-all', 'Toutes directions']\n    }\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 3260,
+        "wires": [
+            [
+                "4e7136a46fab4070"
+            ]
+        ]
+    },
+    {
+        "id": "17ee74250b6fe764",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "89ac7be96aabaa70",
+        "name": "common - init - daikin",
+        "links": [
+            "26bca8d17b597ed1"
+        ],
+        "x": 465,
+        "y": 3260,
+        "wires": [
+            [
+                "dac35c32b868aea8"
+            ]
+        ]
+    },
+    {
+        "id": "4e7136a46fab4070",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "89ac7be96aabaa70",
+        "name": "common - init - daikin",
+        "mode": "link",
+        "links": [
+            "73f3212ba921a620"
+        ],
+        "x": 715,
+        "y": 3260,
         "wires": []
     },
     {
@@ -5622,7 +5975,7 @@
         "color": "#717171",
         "wrapText": false,
         "className": "ui-title",
-        "value": "dictionary.group_entity.list_title",
+        "value": "dictionary.group_entity.entity_title",
         "valueType": "msg",
         "x": 880,
         "y": 620,
@@ -5634,7 +5987,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "data",
-        "func": "// entity - list - title\nmsg.payload = '';\nnode.send([msg, null]);\n\n// entity - list - table\nmsg.payload = [];\nmsg.ui_update = {\n    'label': ''\n};\n\nlet entities = global.get('entity', 'memoryOnly') || {};\nlet i = 0;\nfor (const uid in entities) {\n    let name = global.get('name[\"entity\"][\"' + uid + '\"]', 'default') || entities[uid]['id'];\n    let parent_name = global.get('name[\"device\"][\"' + entities[uid]['parent'] + '\"]', 'default') || entities[uid]['parent'];\n\n    let room = entities[uid]['room'];\n    let room_name = room;\n    if (room !== '') {\n        room_name = global.get('name[\"room\"][\"' + room + '\"]', 'default') || room;\n    }\n\n\n    msg.payload[i++] = {\n        'uid': uid,\n        'name': name,\n        'room': room,\n        'room_name': room_name,\n        'parent': entities[uid]['parent'],\n        'parent_name': parent_name,\n        'id': entities[uid]['id'],\n        'value': entities[uid]['value'],\n        'unit': entities[uid]['unit'],\n        'delete': msg.dictionary.group_entity.list_delete\n    };\n}\n\nnode.send([null, msg]);\n\nreturn;",
+        "func": "// entity - list - title\nmsg.payload = '';\nnode.send([msg, null]);\n\n// entity - list - table\nmsg.payload = [];\nmsg.ui_update = {\n    'label': ''\n};\n\nlet entities = global.get('entity', 'memoryOnly') || {};\nlet i = 0;\nfor (const uid in entities) {\n    let name = global.get('name[\"entity\"][\"' + uid + '\"]', 'default') || entities[uid]['id'];\n    let parent_name = global.get('name[\"device\"][\"' + entities[uid]['parent'] + '\"]', 'default') || entities[uid]['parent'];\n\n    let room = entities[uid]['room'];\n    let room_name = room;\n    if (room !== '') {\n        room_name = global.get('name[\"room\"][\"' + room + '\"]', 'default') || room;\n    }\n\n    msg.payload[i] = entities[uid];\n    msg.payload[i]['name'] = name;\n    msg.payload[i]['room_name'] = room_name;\n    msg.payload[i]['parent_name'] = parent_name;\n    msg.payload[i]['delete'] = msg.dictionary.group_entity.list_delete;\n\n    i++;\n}\n\nnode.send([null, msg]);\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -5671,7 +6024,7 @@
         "selectionType": "click",
         "columns": [
             {
-                "title": "",
+                "title": "Group",
                 "key": "parent_name",
                 "keyType": "key",
                 "type": "button",
@@ -5679,10 +6032,18 @@
                 "align": "start"
             },
             {
-                "title": "",
+                "title": "Nom",
                 "key": "name",
                 "keyType": "key",
                 "type": "button",
+                "width": "",
+                "align": "start"
+            },
+            {
+                "title": "Source",
+                "key": "source",
+                "keyType": "key",
+                "type": "text",
                 "width": "",
                 "align": "start"
             },
@@ -5708,7 +6069,7 @@
                 "keyType": "key",
                 "type": "text",
                 "width": "",
-                "align": "end"
+                "align": "start"
             }
         ],
         "mobileBreakpoint": "sm",
@@ -5818,9 +6179,9 @@
         "name": "entity - entity - edit - form",
         "group": "ab792e98013972e4",
         "label": "",
-        "order": 8,
+        "order": 3,
         "width": "6",
-        "height": "5",
+        "height": "10",
         "options": [
             {
                 "label": "room",
@@ -5850,7 +6211,7 @@
             }
         ],
         "x": 2010,
-        "y": 800,
+        "y": 860,
         "wires": [
             [
                 "4ff23a4db8ae28dc"
@@ -5892,7 +6253,7 @@
         "finalize": "",
         "libs": [],
         "x": 2650,
-        "y": 800,
+        "y": 860,
         "wires": [
             [
                 "ffe4299b2fae4efd"
@@ -5910,7 +6271,7 @@
             "289e0a6cd1209c38"
         ],
         "x": 2795,
-        "y": 800,
+        "y": 740,
         "wires": []
     },
     {
@@ -5919,7 +6280,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "data",
-        "func": "let entity = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\nlet rooms = global.get('name[\"room\"]', 'default');\n\nlet d = 0;\nlet dropdownOptions = [];\nfor (const room in rooms) {\n    dropdownOptions[d++] = {\n        'label': rooms[room] + ' (' + room + ')',\n        'value': room,\n        'dropdown': 'room'\n    };\n}\n\nmsg.topic = msg.payload.uid;\n//node-red 5.04 bug with dropdown msg.topic\nflow.set('entity[\"' + msg.hmi.id + '\"]', msg.payload.uid, 'memoryOnly');\n\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.entity_edit_name,\n            \"key\": \"name\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_room,\n            \"key\": \"room\"\n        },\n        {\n            \"type\": \"checkbox\",\n            \"label\": msg.dictionary.group_entity.entity_delete,\n            \"key\": \"remove\"\n        }\n    ],\n    'dropdownOptions': dropdownOptions\n};\n\nreturn msg;",
+        "func": "let entity = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\n\nlet d = 0;\nlet dropdownOptions = [];\n\n// Room\nlet rooms = global.get('name[\"room\"]', 'default');\nfor (const room in rooms) {\n    dropdownOptions[d++] = {\n        'label': rooms[room] + ' (' + room + ')',\n        'value': room,\n        'dropdown': 'room'\n    };\n}\n\n// Holder\nfor (const holder in msg.dictionary.option_holder) {\n    dropdownOptions[d++] = {\n        'label': msg.dictionary.option_holder[holder] + ' (' + holder + ')',\n        'value': holder,\n        'dropdown': 'holder'\n    };\n}\n\n// Cardinal\nfor (const cardinal in msg.dictionary.option_cardinal) {\n    dropdownOptions[d++] = {\n        'label': msg.dictionary.option_cardinal[cardinal] + ' (' + cardinal + ')',\n        'value': cardinal,\n        'dropdown': 'cardinal'\n    };\n}\n\n// Element\nfor (const element in msg.dictionary.option_element) {\n    dropdownOptions[d++] = {\n        'label': msg.dictionary.option_element[element] + ' (' + element + ')',\n        'value': element,\n        'dropdown': 'element'\n    };\n}\n\n// Type\nfor (const type in msg.dictionary.option_type) {\n    dropdownOptions[d++] = {\n        'label': msg.dictionary.option_type[type] + ' (' + type + ')',\n        'value': type,\n        'dropdown': 'type'\n    };\n}\n\n// Unit\nfor (const unit in msg.dictionary.option_unit) {\n    dropdownOptions[d++] = {\n        'label': msg.dictionary.option_unit[unit] + ' (' + unit + ')',\n        'value': unit,\n        'dropdown': 'unit'\n    };\n}\n\nmsg.topic = msg.payload.uid;\n//node-red 5.04 bug with dropdown msg.topic\nflow.set('entity[\"' + msg.hmi.id + '\"]', msg.payload.uid, 'memoryOnly');\n\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.entity_edit_name,\n            \"key\": \"name\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_room,\n            \"key\": \"room\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_holder,\n            \"key\": \"holder\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_cardinal,\n            \"key\": \"cardinal\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_element,\n            \"key\": \"element\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_type,\n            \"key\": \"type\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_unit,\n            \"key\": \"unit\"\n        },\n        {\n            \"type\": \"checkbox\",\n            \"label\": msg.dictionary.group_entity.entity_delete,\n            \"key\": \"remove\"\n        }\n    ],\n    'dropdownOptions': dropdownOptions\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5927,37 +6288,12 @@
         "finalize": "",
         "libs": [],
         "x": 1790,
-        "y": 800,
+        "y": 860,
         "wires": [
             [
                 "4a65b8428bc02868"
             ]
         ]
-    },
-    {
-        "id": "44f2b0d0e1923c5e",
-        "type": "ui-text",
-        "z": "3d7897ba0ee14173",
-        "g": "5cf193e5430d3bde",
-        "group": "ab792e98013972e4",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "name": "entity - entity - edit - id",
-        "label": "ID",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "",
-        "value": "payload.id",
-        "valueType": "msg",
-        "x": 2000,
-        "y": 1100,
-        "wires": []
     },
     {
         "id": "142df6c6376da789",
@@ -5999,17 +6335,13 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1630,
-        "y": 860,
+        "y": 800,
         "wires": [
             [
                 "e4e6368d57415f5c",
-                "44f2b0d0e1923c5e",
-                "83c69cd135c027cf",
-                "c5a761e74f9ad612",
-                "ea9109e556b62ba2",
-                "17b8d9a4f39b3c80",
                 "bf93358a99b050e8",
-                "51651abddc9c4d16"
+                "28f40e8f269f3e61",
+                "5fc691320298b636"
             ]
         ]
     },
@@ -6019,7 +6351,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "save",
-        "func": "// node-red 5.0.4 has bug with dropdown topic\nlet topic = flow.get('entity[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '-';\n\n// delete\nif (msg.payload.remove === true) {\n        let entity = global.get('entity', 'memoryOnly') || {};\n        delete entity[topic];\n        global.set('entity', entity, 'memoryOnly');\n\n        msg.enabled = true;\n        msg.payload = msg.dictionary.notice.save_success;\n        return msg;\n} else {\n    let entity = global.get('entity[\"' + topic + '\"]', 'memoryOnly');\n    if (msg.hmi.level === 'admin' && typeof entity === 'object') {\n        entity['room'] = msg.payload.room;\n        global.set('entity[\"' + topic + '\"]', entity, 'memoryOnly');\n\n        let name = global.get('name[\"entity\"]', 'default') || {};\n        name[topic] = msg.payload.name;\n        global.set('name[\"entity\"]', name, 'default');\n\n        msg.enabled = true;\n        msg.payload = msg.dictionary.notice.save_success;\n        return msg;\n    }\n}\n\nreturn;",
+        "func": "if (msg.hmi.level !== 'admin') {\n    \n    return;\n}\n\n// node-red 5.0.4 has bug with dropdown topic\nlet topic = flow.get('entity[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '-';\n\n// delete\nif (msg.payload.remove === true) {\n        let entity = global.get('entity', 'memoryOnly') || {};\n        delete entity[topic];\n        global.set('entity', entity, 'memoryOnly');\n\n        msg.enabled = true;\n        msg.payload = msg.dictionary.notice.save_success;\n        return msg;\n} else {\n    let entity = global.get('entity[\"' + topic + '\"]', 'memoryOnly');\n    if (typeof entity === 'object') {\n        entity['room'] = msg.payload.room;\n        entity['type'] = msg.payload.type;\n        entity['holder'] = msg.payload.holder;\n        entity['cardinal'] = msg.payload.cardinal;\n        entity['element'] = msg.payload.element;\n        entity['unit'] = msg.payload.unit;\n        global.set('entity[\"' + topic + '\"]', entity, 'memoryOnly');\n\n        let name = global.get('name[\"entity\"]', 'default') || {};\n        name[topic] = msg.payload.name;\n        global.set('name[\"entity\"]', name, 'default');\n\n        msg.enabled = true;\n        msg.payload = msg.dictionary.notice.save_success;\n        return msg;\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6027,7 +6359,7 @@
         "finalize": "",
         "libs": [],
         "x": 2470,
-        "y": 800,
+        "y": 860,
         "wires": [
             [
                 "4637984430f9f9f9",
@@ -6048,112 +6380,12 @@
         "linkType": "static",
         "timeout": "30",
         "x": 2270,
-        "y": 800,
+        "y": 860,
         "wires": [
             [
                 "9634bf7cac24c86f"
             ]
         ]
-    },
-    {
-        "id": "83c69cd135c027cf",
-        "type": "ui-text",
-        "z": "3d7897ba0ee14173",
-        "g": "5cf193e5430d3bde",
-        "group": "ab792e98013972e4",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "entity - entity - list - edit - uid",
-        "label": "UID",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": true,
-        "className": "",
-        "value": "payload.uid",
-        "valueType": "msg",
-        "x": 2020,
-        "y": 980,
-        "wires": []
-    },
-    {
-        "id": "c5a761e74f9ad612",
-        "type": "ui-text",
-        "z": "3d7897ba0ee14173",
-        "g": "5cf193e5430d3bde",
-        "group": "ab792e98013972e4",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "name": "entity - entity - edit - unit",
-        "label": "Unit",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "",
-        "value": "payload.unit",
-        "valueType": "msg",
-        "x": 2010,
-        "y": 1220,
-        "wires": []
-    },
-    {
-        "id": "ea9109e556b62ba2",
-        "type": "ui-text",
-        "z": "3d7897ba0ee14173",
-        "g": "5cf193e5430d3bde",
-        "group": "ab792e98013972e4",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "entity - entity - edit - parent",
-        "label": "Parent",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "",
-        "value": "payload.parent",
-        "valueType": "msg",
-        "x": 2020,
-        "y": 1040,
-        "wires": []
-    },
-    {
-        "id": "17b8d9a4f39b3c80",
-        "type": "ui-text",
-        "z": "3d7897ba0ee14173",
-        "g": "5cf193e5430d3bde",
-        "group": "ab792e98013972e4",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "name": "entity - entity - edit - value",
-        "label": "Value",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "",
-        "value": "payload.value",
-        "valueType": "msg",
-        "x": 2010,
-        "y": 1160,
-        "wires": []
     },
     {
         "id": "ae5b3d86abec7b5a",
@@ -6170,7 +6402,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 2670,
-        "y": 860,
+        "y": 920,
         "wires": []
     },
     {
@@ -6265,7 +6497,7 @@
         "value": "dictionary.group_entity.entity_edit_title",
         "valueType": "msg",
         "x": 2010,
-        "y": 860,
+        "y": 800,
         "wires": []
     },
     {
@@ -6457,28 +6689,87 @@
         "wires": []
     },
     {
-        "id": "51651abddc9c4d16",
-        "type": "ui-text",
+        "id": "fbaa5b8d78bc8124",
+        "type": "ui-table",
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "group": "ab792e98013972e4",
+        "name": "entity - entity - edit - table",
+        "label": "",
         "order": 2,
         "width": 0,
         "height": 0,
-        "name": "entity - entity - list - edit - source",
-        "label": "Source",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": true,
+        "maxrows": 0,
+        "passthru": false,
+        "autocols": false,
+        "showSearch": false,
+        "deselect": true,
+        "selectionType": "click",
+        "columns": [
+            {
+                "title": "",
+                "key": "id",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "end"
+            },
+            {
+                "title": "",
+                "key": "value",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            }
+        ],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
         "className": "",
-        "value": "payload.source",
-        "valueType": "msg",
-        "x": 2030,
+        "x": 2010,
         "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "28f40e8f269f3e61",
+        "type": "function",
+        "z": "3d7897ba0ee14173",
+        "g": "5cf193e5430d3bde",
+        "name": "data",
+        "func": "let res = [\n    {\n        'id': 'Source',\n        'value': msg.payload.source\n    },\n    {\n        'id': 'UID',\n        'value': msg.payload.uid\n    },\n    {\n        'id': 'Parent',\n        'value': msg.payload.parent\n    },\n    {\n        'id': 'ID',\n        'value': msg.payload.id\n    },\n    {\n        'id': 'value',\n        'value': msg.payload.value\n    }\n];\n\nmsg.payload = res;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1790,
+        "y": 920,
+        "wires": [
+            [
+                "fbaa5b8d78bc8124"
+            ]
+        ]
+    },
+    {
+        "id": "5fc691320298b636",
+        "type": "debug",
+        "z": "3d7897ba0ee14173",
+        "g": "5cf193e5430d3bde",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1840,
+        "y": 1060,
         "wires": []
     },
     {
@@ -6739,7 +7030,8 @@
             "3fa36de74a10eac1",
             "df19be1275e79b1c",
             "4418090c31b190b3",
-            "9d2be55b974f961e"
+            "9d2be55b974f961e",
+            "1a8726b2de605ecb"
         ],
         "x": 1615,
         "y": 260,
