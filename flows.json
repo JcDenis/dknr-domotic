@@ -129,7 +129,8 @@
             "9f212bf86ebb59d4",
             "5a2eb340ab76940b",
             "67cca85c91edaff0",
-            "417f8003fb9c0b7a"
+            "417f8003fb9c0b7a",
+            "f63cfc9cbd993db7"
         ],
         "x": 94,
         "y": 39,
@@ -928,7 +929,7 @@
             "1b6ec87a498d3297"
         ],
         "x": 354,
-        "y": 3339,
+        "y": 3579,
         "w": 402,
         "h": 82
     },
@@ -956,6 +957,33 @@
         ],
         "x": 104,
         "y": 3099,
+        "w": 652,
+        "h": 202
+    },
+    {
+        "id": "42c8cfb80db1c77e",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "name": "common - mqtt - zigbee2mqtt",
+        "style": {
+            "fill": "#ffC000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "344c6f9b1cdd2cc1",
+            "3ef7839a35b0f5f1",
+            "b7e6a5d320beb1f6",
+            "2ed8557b81e7c605",
+            "252619ba2eaca7fc",
+            "d4934016db111d04",
+            "2c47d4e0dbcbfcd4",
+            "661cf303d85905bb",
+            "2afef736f8debc96",
+            "c56da29053349405"
+        ],
+        "x": 104,
+        "y": 3339,
         "w": 652,
         "h": 202
     },
@@ -1691,7 +1719,8 @@
             "c96e931494936766",
             "4418090c31b190b3",
             "9d2be55b974f961e",
-            "1a8726b2de605ecb"
+            "1a8726b2de605ecb",
+            "344c6f9b1cdd2cc1"
         ],
         "x": 3275,
         "y": 80,
@@ -2040,7 +2069,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "common",
-        "func": "let describe = global.get('describe', 'memoryOnly') || {};\nif (typeof describe !== 'object') {\n    describe = {};\n}\nif (typeof describe.pages !== 'object') {\n    describe.pages = {};\n}\n\n// Set default app values\ndescribe.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\ndescribe.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\ndescribe.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['tuning'] = {\n    'id': '1c3c77208d684dc0',\n    'name': 'tuning',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['scene'] = {\n    'id': '1e9f5bde9636a371',\n    'name': 'scene',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['entity'] = {\n    'id': '2b12391aa314ef62',\n    'name': 'entity',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': false,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// Elements icons\ndescribe.elements = {\n    'switch': ['toggle-switch-off', 'toggle-switch-on'],\n    'power': ['flash-outline', 'flash'],\n    'light': ['lightbulb','lightbulb-off'],\n    'plug': ['power-plug-off', 'power-plug'],\n    'motion': ['motion-sensor', 'motion-sensor-off'],\n    'precence': ['localtion-exit', 'location-enter'],\n    'door': ['door-closed', 'door-open'],\n    'window': ['window-closed-variant', 'window-open-variant'],\n    'shutter': ['window-shutter', 'window-shutter-open'],\n    'lock': ['lock-off', 'lock'],\n    'alert': ['bell-off', 'bell'],\n    'sound': ['volume-off', 'volume-hight'],\n    'temperature': ['thermometer', 'thermometer-off'],\n    'humidity': ['water-percent', 'water-percent-alert'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless'],\n    'wind': ['weather-windy', 'weather-dust'],\n    'fan': ['fan-off', 'fan'],\n    'direction': ['swap-horizontal', 'swp-horizontale-bold'],\n    'time': ['clock-outline', 'clock']\n};\n\n// Save config\nglobal.set('describe', describe, 'memoryOnly');\n\n// Clear user and more\nglobal.set('auth',{},'memoryOnly');\nglobal.set('user',{},'memoryOnly');\nglobal.set('form',{},'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/.config.projects.json'\n};",
+        "func": "let describe = global.get('describe', 'memoryOnly') || {};\nif (typeof describe !== 'object') {\n    describe = {};\n}\nif (typeof describe.pages !== 'object') {\n    describe.pages = {};\n}\n\n// Set default app values\ndescribe.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\ndescribe.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\ndescribe.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['tuning'] = {\n    'id': '1c3c77208d684dc0',\n    'name': 'tuning',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['scene'] = {\n    'id': '1e9f5bde9636a371',\n    'name': 'scene',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['entity'] = {\n    'id': '2b12391aa314ef62',\n    'name': 'entity',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': false,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// Elements icons\ndescribe.elements = {\n    'switch': ['toggle-switch-off', 'toggle-switch-on'],\n    'power': ['flash-outline', 'flash'],\n    'light': ['lightbulb','lightbulb-off'],\n    'plug': ['power-plug-off', 'power-plug'],\n    'motion': ['motion-sensor', 'motion-sensor-off'],\n    'precence': ['localtion-exit', 'location-enter'],\n    'door': ['door-closed', 'door-open'],\n    'window': ['window-closed-variant', 'window-open-variant'],\n    'shutter': ['window-shutter', 'window-shutter-open'],\n    'lock': ['lock-off', 'lock'],\n    'alert': ['bell-off', 'bell'],\n    'sound': ['volume-off', 'volume-hight'],\n    'temperature': ['thermometer', 'thermometer-off'],\n    'humidity': ['water-percent', 'water-percent-alert'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless'],\n    'wind': ['weather-windy', 'weather-dust'],\n    'fan': ['fan-off', 'fan'],\n    'direction': ['swap-horizontal', 'swp-horizontale-bold'],\n    'time': ['clock-outline', 'clock'],\n    'battery': ['battery-low', 'battery']\n};\n\n// Save config\nglobal.set('describe', describe, 'memoryOnly');\n\n// Clear user and more\nglobal.set('auth',{},'memoryOnly');\nglobal.set('user',{},'memoryOnly');\nglobal.set('form',{},'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/.config.projects.json'\n};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3310,7 +3339,8 @@
         "mode": "link",
         "links": [
             "0fad0e21f00eaa17",
-            "17ee74250b6fe764"
+            "17ee74250b6fe764",
+            "2afef736f8debc96"
         ],
         "x": 475,
         "y": 80,
@@ -3324,7 +3354,8 @@
         "name": "common - boot - init",
         "links": [
             "724fe4a33c68dee1",
-            "4e7136a46fab4070"
+            "4e7136a46fab4070",
+            "c56da29053349405"
         ],
         "x": 685,
         "y": 80,
@@ -3752,7 +3783,7 @@
         "z": "4bc72a1112cb448c",
         "g": "fb34af284a5fbd90",
         "name": "parse",
-        "func": "let res = {\n    'topic':'',\n    'payload': {}\n};\n\nif (typeof msg.payload === 'object' && \n    typeof msg.payload.ADCO === 'object' && \n    typeof msg.payload.ADCO.raw === 'string'\n) {\n    for (const key in msg.payload){\n        if (key === 'PTEC') {\n            // Convert HC to bin\n            msg.payload[key]['value'] = msg.payload[key]['value'] === 'HC' ? 0 : 1;\n            msg.payload[key]['unit'] = 'b';\n        }\n\n        res.payload.id = key;\n        res.payload.source = 'teleinfo';\n        res.payload.parent = msg.payload.ADCO.raw;\n        res.payload.unit = msg.payload[key]['unit'];\n        res.payload.value = msg.payload[key]['value'];\n        res.payload.name = msg.payload[key]['name'];\n\n        node.send(res);\n    }\n}\n\nreturn;",
+        "func": "let res = {\n    'topic':'',\n    'payload': {}\n};\n\nif (typeof msg.payload === 'object' && \n    typeof msg.payload.ADCO === 'object' && \n    typeof msg.payload.ADCO.raw === 'string'\n) {\n    for (const key in msg.payload){\n        if (key === 'PTEC') {\n            // Convert HC to bin\n            msg.payload[key]['value'] = msg.payload[key]['value'] === 'HC' ? 0 : 1;\n            msg.payload[key]['unit'] = 'b';\n        }\n\n        res.payload.id = key;\n        res.payload.source = 'teleinfo';\n        res.payload.parent = msg.payload.ADCO.raw;\n        res.payload.unit = msg.payload[key]['unit'];\n        res.payload.value = msg.payload[key]['value'];\n        res.payload.name = msg.payload[key]['name'];\n        res.payload.seen = Date.now();\n\n        node.send(res);\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3791,7 +3822,8 @@
             "038df4153883408b",
             "6ab72e116070c867",
             "1b6ec87a498d3297",
-            "4c1329a43d9cd7ca"
+            "4c1329a43d9cd7ca",
+            "d4934016db111d04"
         ],
         "x": 145,
         "y": 2480,
@@ -3807,7 +3839,7 @@
         "z": "4bc72a1112cb448c",
         "g": "be2dde01217c4ebd",
         "name": "check",
-        "func": "// required to build uid\nif (typeof msg.payload !== 'object' || \n    typeof msg.payload.source !== 'string' || \n    typeof msg.payload.parent !== 'string' || \n    typeof msg.payload.id !== 'string'\n) {\n\n    return;\n}\n\n// default keys\nlet template = {\n    'uid': '',\n    'source': '',\n    'id': '',\n    'parent': '',\n    'value': '',\n    'type': '',\n    'room': '',\n    'holder': '',\n    'cardinal': '',\n    'element': '',\n    'unit': ''\n};\n\n// rebuilt some keys\nmsg.payload.uid = msg.payload.source + '_' + msg.payload.parent + '_' + msg.payload.id;\nmsg.payload.parent = msg.payload.source + '_' + msg.payload.parent;\n\n// get existing entity\nlet entity = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\nlet protect = ['room'];\n\n// set all entity fields\nentity = {...template, ...entity};\n\nfor (const k in msg.payload) {\n    // set entity name if it not exists\n    if (k === 'name') {\n        let name = global.get('name[\"entity\"]', 'memoryOnly') || {};\n        if (typeof name[msg.payload.uid] !== 'string' || name[msg.payload.uid] === '') {\n            name[msg.payload.uid] = msg.payload.name;\n            global.set('name[\"entity\"]', name, 'memoryOnly')\n        }\n    }\n\n    if (typeof template[k] !== 'undefined') {\n        // check if value changes\n        if (k === 'value') {\n            msg.repeat = entity[k] === msg.payload[k] ? true : false;\n        }\n        if (protect.includes(k) && entity[k] !== '') {\n            // do not override some properties\n        } else {\n            entity[k] = msg.payload[k];\n        }\n    }\n}\n\nif (msg.remove === true) {\n    // todo\n}\n\nglobal.set('entity[\"' + entity.uid + '\"]', entity, 'memoryOnly');\n\nnode.status({ fill: \"green\", shape: \"ring\", text: entity.uid + ' : ' + entity.value});\n\nmsg.topic = '';\nmsg.payload = entity;\n\nreturn msg;",
+        "func": "// required to build uid\nif (typeof msg.payload !== 'object' || \n    typeof msg.payload.source !== 'string' || \n    typeof msg.payload.parent !== 'string' || \n    typeof msg.payload.id !== 'string'\n) {\n\n    return;\n}\n\n// default keys\nlet template = {\n    'uid': '',\n    'source': '',\n    'id': '',\n    'parent': '',\n    'value': '',\n    'type': '',\n    'room': '',\n    'holder': '',\n    'cardinal': '',\n    'element': '',\n    'unit': '',\n    'seen': 0\n};\n\n// rebuilt some keys\nmsg.payload.uid = msg.payload.source + '_' + msg.payload.parent + '_' + msg.payload.id;\nmsg.payload.parent = msg.payload.source + '_' + msg.payload.parent;\n\n// get existing entity\nlet entity = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\nlet protect = ['room'];\n\n// set all entity fields\nentity = {...template, ...entity};\n\nfor (const k in msg.payload) {\n    // set entity name if it not exists\n    if (k === 'name') {\n        let name = global.get('name[\"entity\"]', 'memoryOnly') || {};\n        if (typeof name[msg.payload.uid] !== 'string' || name[msg.payload.uid] === '') {\n            name[msg.payload.uid] = msg.payload.name;\n            global.set('name[\"entity\"]', name, 'memoryOnly')\n        }\n    }\n\n    if (typeof template[k] !== 'undefined') {\n        // check if value changes\n        if (k === 'value') {\n            msg.repeat = entity[k] === msg.payload[k] ? true : false;\n        }\n        if (protect.includes(k) && entity[k] !== '') {\n            // do not override some properties\n        } else {\n            entity[k] = msg.payload[k];\n        }\n    }\n}\n\nif (msg.remove === true) {\n    // todo\n}\n\nglobal.set('entity[\"' + entity.uid + '\"]', entity, 'memoryOnly');\n\nnode.status({ fill: \"green\", shape: \"ring\", text: entity.uid + ' : ' + entity.value});\n\nmsg.topic = '';\nmsg.payload = entity;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4044,7 +4076,7 @@
         "z": "4bc72a1112cb448c",
         "g": "3db71c2c17730bd8",
         "name": "parse",
-        "func": "let res = {\n    'topic':'',\n    'payload': {}\n};\n\n// limit ot these keys\nlet ecu = ['energy_total', 'energy_today', 'power_instant'];\n\nif (msg.topic.includes(\"/ecu/\") && \n    typeof msg.payload === 'object' && \n    typeof msg.payload.id === 'string'\n) {\n    for (let k = 0; k < ecu.length; k++) {\n        res.payload.id = ecu[k]\n        res.payload.source = 'apsystems';\n        res.payload.parent = 'ecu_' + msg.payload.id;\n        res.payload.unit = msg.payload[ecu[k] + '_unit'];\n        res.payload.value = msg.payload[ecu[k]];\n\n        node.send(res);\n    }\n}\n\n// limit ot these keys\nlet inv = {\n    'power_instant': 'W', \n    'temperature': '°C'\n};\n\nif (msg.topic.includes(\"/inverter/\") && \n    typeof msg.payload === 'object' && \n    typeof msg.payload.id === 'string'\n) {\n    for (const i in inv) {\n        res.payload.id = i\n        res.payload.source = 'apsystems';\n        res.payload.parent = 'inverter_' + msg.payload.id;\n        res.payload.unit = inv[i];\n        res.payload.value = msg.payload[i];\n\n        node.send(res);\n    }\n}\n\nreturn;",
+        "func": "let res = {\n    'topic':'',\n    'payload': {}\n};\n\n// limit ot these keys\nlet ecu = ['energy_total', 'energy_today', 'power_instant'];\n\nif (msg.topic.includes(\"/ecu/\") && \n    typeof msg.payload === 'object' && \n    typeof msg.payload.id === 'string'\n) {\n    for (let k = 0; k < ecu.length; k++) {\n        res.payload.id = ecu[k]\n        res.payload.source = 'apsystems';\n        res.payload.parent = 'ecu_' + msg.payload.id;\n        res.payload.unit = msg.payload[ecu[k] + '_unit'];\n        res.payload.value = msg.payload[ecu[k]];\n\n        node.send(res);\n    }\n}\n\n// limit ot these keys\nlet inv = {\n    'power_instant': 'W', \n    'temperature': '°C'\n};\n\nif (msg.topic.includes(\"/inverter/\") && \n    typeof msg.payload === 'object' && \n    typeof msg.payload.id === 'string'\n) {\n    for (const i in inv) {\n        res.payload.id = i\n        res.payload.source = 'apsystems';\n        res.payload.parent = 'inverter_' + msg.payload.id;\n        res.payload.unit = inv[i];\n        res.payload.value = msg.payload[i];\n        res.payload.seen = Date.now();\n\n        node.send(res);\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4090,7 +4122,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "dictionary en",
-        "func": "msg.payload.en = {\n    'option_page': {\n        'home': 'Home',\n        'room': 'Rooms',\n        'tuning': 'Adjustments',\n        'scene': 'Scenes',\n        'entity': 'Entities',\n        'config': 'Configuration',\n        'auth': 'Authentication'\n    },\n    'option_level': {\n        'visitor': 'Visitor',\n        'child':  'Child',\n        'parent':'Parent',\n        'admin': 'Administrator'\n    },\n    'option_team': {\n        'm': 'Morning',\n        'a': 'Afternoon',\n        'n': 'Night',\n        'd': 'Day',\n        'w': 'Weekend',\n        's': 'Saturday'\n    },\n    'option_lang': {\n        'en': 'English',\n        'fr': 'French'\n    },\n    'option_color': {\n        'on': '#008000',\n        'off': '#FF0000',\n        'median': '#F08000',\n        'none': '#808000',\n        'theme': '#0094CE',\n        'empty': '#CCCCCC'\n    },\n    'option_type': {\n        'command': 'Command',\n        'sensor': 'Sensor'\n    },\n    'option_holder': {\n        'roof': 'Roof',\n        'ceiling': 'Ceiling',\n        'ground': 'Ground',\n        'wall': 'Wall',\n        'door': 'Door',\n        'window': 'Window',\n        'bay': 'Bay',\n        'desk': 'Desk',\n        'mirror': 'Mirror',\n        'bedside': 'Bedside',\n        'shelf': 'Shelf',\n        'rack': 'Rack'\n    },\n    'option_cardinal': {\n        'none': 'none',\n        'left': 'Left',\n        'right': 'Right',\n        'east': 'East',\n        'west': 'West',\n        'north': 'North',\n        'south': 'South',\n        'front': 'Front',\n        'rear': 'Rear'\n    },\n    option_element: {\n        'switch': 'Switch',\n        'power': 'Power',\n        'light': 'Light',\n        'plug': 'Plug',\n        'motion': 'Motion',\n        'precence': 'Presence',\n        'door': 'Door',\n        'window': 'Window',\n        'shutter': 'Shutter',\n        'lock': 'Lock',\n        'alert': 'Alert',\n        'sound': 'Volume',\n        'temperature': 'Temperature',\n        'humidity': 'Humidity',\n        'illuminance': 'Illuminance',\n        'wind': 'Wind',\n        'fan': 'Fan',\n        'direction': 'Direction',\n        'time': 'Clock'\n    },\n    'option_unit': {\n        'none': 'None',\n        '°C': 'Degree celsuis',\n        '°F': 'Degree fahrenheit',\n        'mA': 'Milliampere',\n        'A': 'Ampere',\n        'mW': 'Milliwatt',\n        'W': 'Watt',\n        'kW': 'Kilowatt',\n        'MW': 'Megawatt',\n        'mWh': 'Milliwatt/hour',\n        'Wh': 'Watt/Hour',\n        'mVA': 'Millivoltampere',\n        'VA': 'Voltampere',\n        'lx': 'Lux',\n        '%': 'Percent',\n        'b': 'Binary',\n        'n': 'Number',\n        's': 'Second',\n        'ms': 'Millisecond',\n        'enum': 'Enumerator',\n        'text': 'Text'\n    },\n    'notice': {\n        'file_write_success': 'Saved file successfully',\n        'file_write_fail': 'Failed to save file',\n        'login_fail': 'Wrong username or password',\n        'save_success': 'Successfully saved'\n    },\n    'group_room': {\n        'room_select': 'Select a room',\n        'power_title': 'Powers'\n    },\n    'group_entity': {\n        'room_title': 'Rooms configuration',\n        'room_add': 'Add or edit a room',\n        'room_del': 'Delete a room',\n        'room_id': 'Ident',\n        'room_name': 'Name',\n\n        'entity_title': 'List of received entities',\n        'entity_edit_title': 'Configure entity',\n        'entity_edit_name': 'Name',\n        'entity_edit_room': 'Room',\n        'entity_edit_type': 'Type',\n        'entity_edit_holder': 'Holder',\n        'entity_edit_cardinal': 'Cardinal',\n        'entity_edit_element': 'Element',\n        'entity_delete': 'Delete',\n\n        'device_edit_title': 'Configure device',\n        'device_edit_name': 'Device name'\n    },\n    'group_config': {\n        'mqtt_title': 'MQTT configuration',\n        'mqtt_host': 'Broker IP address',\n        'mqtt_port': 'Port',\n        'mqtt_topic': 'Topic',\n        'mqtt_username': 'Username',\n        'mqtt_password': 'Password',\n        'mqtt_discovery': 'Home Assistant Discovery topic',\n        'mqtt_dknrteleinfo': 'DKNR Teleinfo topic',\n        'mqtt_dknrapsystems': 'DKNR APsystems topic',\n        'mqtt_dknrdaikin': 'DKNR Daikin topic',\n        'mqtt_zwavejs': 'ZwaveJS topic',\n        'mqtt_zigbee2mqtt': 'Zigbee2MQTT topic',\n        'mqtt_enabled': 'Enable MQTT',\n\n        'backup_title': 'Backup configuration',\n        'backup_room': 'Rooms',\n        'backup_entity': 'Entities',\n        'backup_scene': 'Scenes',\n        'backup_user': 'Users',\n        'backup_mqtt': 'MQTT'\n    },\n    'group_auth': {\n        'login': 'Login',\n        'pass': 'Password',\n        'auth_user': 'User'\n    }\n}\n\nreturn msg;",
+        "func": "msg.payload.en = {\n    'config': {\n        'locales': 'en-GB'\n    },\n    'option_page': {\n        'home': 'Home',\n        'room': 'Rooms',\n        'tuning': 'Adjustments',\n        'scene': 'Scenes',\n        'entity': 'Entities',\n        'config': 'Configuration',\n        'auth': 'Authentication'\n    },\n    'option_level': {\n        'visitor': 'Visitor',\n        'child':  'Child',\n        'parent':'Parent',\n        'admin': 'Administrator'\n    },\n    'option_team': {\n        'm': 'Morning',\n        'a': 'Afternoon',\n        'n': 'Night',\n        'd': 'Day',\n        'w': 'Weekend',\n        's': 'Saturday'\n    },\n    'option_lang': {\n        'en': 'English',\n        'fr': 'French'\n    },\n    'option_color': {\n        'on': '#008000',\n        'off': '#FF0000',\n        'median': '#F08000',\n        'none': '#808000',\n        'theme': '#0094CE',\n        'empty': '#CCCCCC'\n    },\n    'option_type': {\n        'command': 'Command',\n        'sensor': 'Sensor'\n    },\n    'option_holder': {\n        'roof': 'Roof',\n        'ceiling': 'Ceiling',\n        'ground': 'Ground',\n        'wall': 'Wall',\n        'door': 'Door',\n        'window': 'Window',\n        'bay': 'Bay',\n        'desk': 'Desk',\n        'mirror': 'Mirror',\n        'bedside': 'Bedside',\n        'shelf': 'Shelf',\n        'rack': 'Rack'\n    },\n    'option_cardinal': {\n        'none': 'none',\n        'left': 'Left',\n        'right': 'Right',\n        'east': 'East',\n        'west': 'West',\n        'north': 'North',\n        'south': 'South',\n        'front': 'Front',\n        'rear': 'Rear'\n    },\n    'option_element': {\n        'switch': 'Switch',\n        'power': 'Power',\n        'light': 'Light',\n        'plug': 'Plug',\n        'motion': 'Motion',\n        'precence': 'Presence',\n        'door': 'Door',\n        'window': 'Window',\n        'shutter': 'Shutter',\n        'lock': 'Lock',\n        'alert': 'Alert',\n        'sound': 'Volume',\n        'temperature': 'Temperature',\n        'humidity': 'Humidity',\n        'illuminance': 'Illuminance',\n        'wind': 'Wind',\n        'fan': 'Fan',\n        'direction': 'Direction',\n        'time': 'Clock',\n        'battery': 'Battery'\n    },\n    'option_unit': {\n        'none': 'None',\n        '°C': 'Degree celsuis',\n        '°F': 'Degree fahrenheit',\n        'mA': 'Milliampere',\n        'A': 'Ampere',\n        'mW': 'Milliwatt',\n        'W': 'Watt',\n        'kW': 'Kilowatt',\n        'MW': 'Megawatt',\n        'mWh': 'Milliwatt/hour',\n        'Wh': 'Watt/Hour',\n        'mVA': 'Millivoltampere',\n        'VA': 'Voltampere',\n        'lx': 'Lux',\n        '%': 'Percent',\n        'b': 'Binary',\n        'n': 'Number',\n        's': 'Second',\n        'ms': 'Millisecond',\n        'enum': 'Enumerator',\n        'text': 'Text'\n    },\n    'notice': {\n        'file_write_success': 'Saved file successfully',\n        'file_write_fail': 'Failed to save file',\n        'login_fail': 'Wrong username or password',\n        'save_success': 'Successfully saved'\n    },\n    'group_room': {\n        'room_select': 'Select a room',\n        'power_title': 'Powers'\n    },\n    'group_entity': {\n        'room_title': 'Rooms configuration',\n        'room_add': 'Add or edit a room',\n        'room_del': 'Delete a room',\n        'room_id': 'Ident',\n        'room_name': 'Name',\n\n        'entity_title': 'List of received entities',\n        'entity_edit_title': 'Configure entity',\n        'entity_edit_name': 'Name',\n        'entity_edit_room': 'Room',\n        'entity_edit_type': 'Type',\n        'entity_edit_holder': 'Holder',\n        'entity_edit_cardinal': 'Cardinal',\n        'entity_edit_element': 'Element',\n        'entity_delete': 'Delete',\n\n        'device_edit_title': 'Configure device',\n        'device_edit_name': 'Device name'\n    },\n    'group_config': {\n        'mqtt_title': 'MQTT configuration',\n        'mqtt_host': 'Broker IP address',\n        'mqtt_port': 'Port',\n        'mqtt_topic': 'Topic',\n        'mqtt_username': 'Username',\n        'mqtt_password': 'Password',\n        'mqtt_discovery': 'Home Assistant Discovery topic',\n        'mqtt_dknrteleinfo': 'DKNR Teleinfo topic',\n        'mqtt_dknrapsystems': 'DKNR APsystems topic',\n        'mqtt_dknrdaikin': 'DKNR Daikin topic',\n        'mqtt_zwavejs': 'ZwaveJS topic',\n        'mqtt_zigbee2mqtt': 'Zigbee2MQTT topic',\n        'mqtt_enabled': 'Enable MQTT',\n\n        'backup_title': 'Backup configuration',\n        'backup_room': 'Rooms',\n        'backup_entity': 'Entities',\n        'backup_scene': 'Scenes',\n        'backup_user': 'Users',\n        'backup_mqtt': 'MQTT'\n    },\n    'group_auth': {\n        'login': 'Login',\n        'pass': 'Password',\n        'auth_user': 'User'\n    }\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4111,7 +4143,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "dictionary fr",
-        "func": "msg.payload.fr = {\n    'option_page': {\n        'home': 'Accueil',\n        'room': 'Pièces',\n        'tuning': 'Ajustements',\n        'scene': 'Scènes',\n        'entity': 'Entités',\n        'config': 'Configuration',\n        'auth': 'Authentification'\n    },\n    'option_level': {\n        'visitor': 'Visiteur',\n        'child':  'Enfant',\n        'parent':'Parent',\n        'admin': 'Administrateur'\n    },\n    'option_team': {\n        'm': 'Maint',\n        'a': 'Après-midi',\n        'n': 'Nuit',\n        'd': 'Journée',\n        's': 'Samedi',\n        'w': 'Weekend'\n    },\n    'option_lang': {\n        'en': 'English',\n        'fr': 'French'\n    },\n    'notice': {\n        'file_write_success': 'Fichier sauvegardé avec suucès',\n        'file_write_fail': 'Impossiblde de sauvegarder le fichier',\n        'login_fail': \"Mauvais nom d'utilisateur ou de mot de passe\",\n        'save_success': 'Sauvergardé avec succès'\n    },\n    'group_room': {\n        'room_select': 'Sélectionner une pièce',\n        'power_title': 'Puissances'\n    },\n    'group_entity': {\n        'room_title': 'Configuration des pièces',\n        'room_add': 'Ajouter ou modifier une pièce',\n        'room_del': 'Supprimer une pièce',\n        'room_id': 'Identifant',\n        'room_name': 'Nom',\n\n        'entity_title': 'Liste des entités reçu',\n        'entity_edit_title': 'Configurer une entité',\n        'entity_edit_name': 'Nom',\n        'entity_edit_room': 'Pièces',\n        'entity_delete': 'Supprimer',\n\n        'device_edit_title': 'Configurer un appareil',\n        'device_edit_name': \"Nom de l'appareil\"\n    },\n    'group_config': {\n        'mqtt_title': 'Configuration MQTT',\n        'mqtt_host': 'Adresse IP du broker',\n        'mqtt_port': 'Port',\n        'mqtt_topic': 'Topic',\n        'mqtt_username': 'Utilisateur',\n        'mqtt_password': 'Mot de passe',\n        'mqtt_discovery': 'Home Assistant Discovery topic',\n        'mqtt_enabled': 'Activer MQTT',\n\n        'backup_title': \"Configuration d'une sauvergarde\",\n        'backup_room': 'Pièces',\n        'backup_entity': 'Entités',\n        'backup_scene': 'Scènes',\n        'backup_user': 'Utilisateurs',\n        'backup_mqtt': 'MQTT'\n    },\n    'group_auth': {\n        'login': 'Identifiant',\n        'pass': 'Mot de passe',\n        'user': 'Utilisateur'\n    }\n}\n\nreturn msg;",
+        "func": "msg.payload.fr = {\n    'config': {\n        'locales': 'fr'\n    },\n    'option_page': {\n        'home': 'Accueil',\n        'room': 'Pièces',\n        'tuning': 'Ajustements',\n        'scene': 'Scènes',\n        'entity': 'Entités',\n        'config': 'Configuration',\n        'auth': 'Authentification'\n    },\n    'option_level': {\n        'visitor': 'Visiteur',\n        'child':  'Enfant',\n        'parent':'Parent',\n        'admin': 'Administrateur'\n    },\n    'option_team': {\n        'm': 'Maint',\n        'a': 'Après-midi',\n        'n': 'Nuit',\n        'd': 'Journée',\n        's': 'Samedi',\n        'w': 'Weekend'\n    },\n    'option_lang': {\n        'en': 'English',\n        'fr': 'French'\n    },\n    'notice': {\n        'file_write_success': 'Fichier sauvegardé avec suucès',\n        'file_write_fail': 'Impossiblde de sauvegarder le fichier',\n        'login_fail': \"Mauvais nom d'utilisateur ou de mot de passe\",\n        'save_success': 'Sauvergardé avec succès'\n    },\n    'group_room': {\n        'room_select': 'Sélectionner une pièce',\n        'power_title': 'Puissances'\n    },\n    'group_entity': {\n        'room_title': 'Configuration des pièces',\n        'room_add': 'Ajouter ou modifier une pièce',\n        'room_del': 'Supprimer une pièce',\n        'room_id': 'Identifant',\n        'room_name': 'Nom',\n\n        'entity_title': 'Liste des entités reçu',\n        'entity_edit_title': 'Configurer une entité',\n        'entity_edit_name': 'Nom',\n        'entity_edit_room': 'Pièces',\n        'entity_delete': 'Supprimer',\n\n        'device_edit_title': 'Configurer un appareil',\n        'device_edit_name': \"Nom de l'appareil\"\n    },\n    'group_config': {\n        'mqtt_title': 'Configuration MQTT',\n        'mqtt_host': 'Adresse IP du broker',\n        'mqtt_port': 'Port',\n        'mqtt_topic': 'Topic',\n        'mqtt_username': 'Utilisateur',\n        'mqtt_password': 'Mot de passe',\n        'mqtt_discovery': 'Home Assistant Discovery topic',\n        'mqtt_enabled': 'Activer MQTT',\n\n        'backup_title': \"Configuration d'une sauvergarde\",\n        'backup_room': 'Pièces',\n        'backup_entity': 'Entités',\n        'backup_scene': 'Scènes',\n        'backup_user': 'Utilisateurs',\n        'backup_mqtt': 'MQTT'\n    },\n    'group_auth': {\n        'login': 'Identifiant',\n        'pass': 'Mot de passe',\n        'user': 'Utilisateur'\n    }\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4149,7 +4181,7 @@
         "payload": "",
         "payloadType": "str",
         "x": 450,
-        "y": 3380,
+        "y": 3620,
         "wires": [
             [
                 "29c782ee02094a7a"
@@ -4170,7 +4202,7 @@
         "finalize": "",
         "libs": [],
         "x": 590,
-        "y": 3380,
+        "y": 3620,
         "wires": [
             [
                 "1b6ec87a498d3297"
@@ -4188,7 +4220,7 @@
             "cc0a7c14f877c371"
         ],
         "x": 715,
-        "y": 3380,
+        "y": 3620,
         "wires": []
     },
     {
@@ -4285,7 +4317,7 @@
         "z": "4bc72a1112cb448c",
         "g": "89ac7be96aabaa70",
         "name": "parse",
-        "func": "let res = {\n    'topic':'',\n    'payload': {}\n};\n\n// limit ot these keys\nlet keys = ['pow', 'mode', 'stemp', 'f_rate', 'f_dir', 'htemp', 'otemp', 'host'];\n\nif (typeof msg.payload === 'object' && \n    typeof msg.payload.id === 'object'\n) {\n    for (let k = 0; k < keys.length; k++) {\n        res.payload.id = keys[k]\n        res.payload.source = 'daikin';\n        res.payload.parent = msg.payload.id.value;\n        res.payload.unit = msg.payload[keys[k]]['unit'];\n        res.payload.value = msg.payload[keys[k]]['value'];\n        res.payload.name = msg.payload[keys[k]]['label'];\n\n        node.send(res);\n    }\n}\n\n// limit ot these keys\nlet inv = {\n    'power_instant': 'W', \n    'temperature': '°C'\n};\n\nif (msg.topic.includes(\"/inverter/\") && \n    typeof msg.payload === 'object' && \n    typeof msg.payload.id === 'string'\n) {\n    for (const i in inv) {\n        res.payload.id = i\n        res.payload.source = 'apsystems';\n        res.payload.parent = 'inverter_' + msg.payload.id;\n        res.payload.unit = inv[i];\n        res.payload.value = msg.payload[i];\n\n        node.send(res);\n    }\n}\n\nreturn;",
+        "func": "let res = {\n    'topic':'',\n    'payload': {}\n};\n\n// limit ot these keys\nlet keys = ['pow', 'mode', 'stemp', 'f_rate', 'f_dir', 'htemp', 'otemp', 'host'];\n\nif (typeof msg.payload === 'object' && \n    typeof msg.payload.id === 'object'\n) {\n    for (let k = 0; k < keys.length; k++) {\n        res.payload.id = keys[k]\n        res.payload.source = 'daikin';\n        res.payload.parent = msg.payload.id.value;\n        res.payload.unit = msg.payload[keys[k]]['unit'];\n        res.payload.value = msg.payload[keys[k]]['value'];\n        res.payload.name = msg.payload[keys[k]]['label'];\n        res.payload.seen = Date.now();\n\n        node.send(res);\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4413,6 +4445,203 @@
         ],
         "x": 715,
         "y": 3260,
+        "wires": []
+    },
+    {
+        "id": "344c6f9b1cdd2cc1",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "42c8cfb80db1c77e",
+        "name": "common - mqtt - zigbee2mqtt",
+        "links": [
+            "92c098c716e46e3b",
+            "f2cd63b49ac325ec"
+        ],
+        "x": 145,
+        "y": 3440,
+        "wires": [
+            [
+                "3ef7839a35b0f5f1"
+            ]
+        ]
+    },
+    {
+        "id": "3ef7839a35b0f5f1",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "42c8cfb80db1c77e",
+        "name": "data",
+        "func": "msg.broker = {};\n\nlet mqtt = global.get('mqtt', 'memoryOnly');\nif (typeof mqtt == 'object' && mqtt.enabled == true && mqtt.zigbee != '') {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.zigbee.length > 0\n    ) {\n        msg.broker = {\n            'broker': mqtt.host,\n            'port': mqtt.port,\n            'clientid': 'zigbee' + global.get('describe.app.project', 'memoryOnly') || 'dknr',\n            'force': true\n        };\n\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.zigbee + '/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'memoryOnly');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 3440,
+        "wires": [
+            [
+                "b7e6a5d320beb1f6"
+            ]
+        ]
+    },
+    {
+        "id": "b7e6a5d320beb1f6",
+        "type": "mqtt in",
+        "z": "4bc72a1112cb448c",
+        "g": "42c8cfb80db1c77e",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "a619830c5e5eadfb",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 430,
+        "y": 3440,
+        "wires": [
+            [
+                "2ed8557b81e7c605",
+                "252619ba2eaca7fc"
+            ]
+        ]
+    },
+    {
+        "id": "2ed8557b81e7c605",
+        "type": "trigger",
+        "z": "4bc72a1112cb448c",
+        "g": "42c8cfb80db1c77e",
+        "name": "10m",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "str",
+        "duration": "10",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 590,
+        "y": 3380,
+        "wires": [
+            [
+                "3ef7839a35b0f5f1"
+            ]
+        ]
+    },
+    {
+        "id": "252619ba2eaca7fc",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "42c8cfb80db1c77e",
+        "name": "parse",
+        "func": "if (typeof msg.payload !== 'object' ||\n    msg.topic.includes(\"/availability\") ||\n    msg.topic.includes(\"/set\") ||\n    msg.topic.includes(\"zigbee_bridge/\")\n) {\n\n    return;\n}\n\nlet res = {\n    'topic':'',\n    'payload': {}\n};\n\nlet id = msg.topic.slice(global.get('mqtt.zigbee', 'memoryOnly').length + 1);\nnode.status({text: id});\n\n// limit ot these keys\nlet keys = {\n    'current': 'A',\n    'energy': 'Wh',\n    'power': 'W',\n    'linkquatlity': '',\n    'battery': '%',\n    'humidity': '%',\n    'temperature': '°C',\n    'occupancy': 'b', // motion\n    'contact': 'b',\n    'state': 'b', // \"OFF/ON\"\n    'action': 'enum' // swicth \"single/double\"...\n    //'brightness' // ex: led\n    //'speed' // ex led\n};\n\nfor (const k in keys) {\n    if (typeof msg.payload[k] !== 'undefined') {\n        res.payload.id = k;\n        res.payload.source = 'zigbee';\n        res.payload.parent = id;\n        res.payload.value = msg.payload[k];\n        res.payload.unit = keys[k];\n        res.payload.seen = Date.now();\n\n        if (k === 'occupancy') {\n            res.payload.id = 'motion';\n            res.payload.value = (res.payload.value === true || res.payload.value === 'ON') ? 1 : 0;\n        }\n        if (k === 'state') {\n            res.payload.id = 'switch';\n            res.payload.value = (res.payload.value === true || res.payload.value === 'ON') ? 1 : 0;\n        }\n        if (k === 'contact') {\n            res.payload.id = 'switch';\n            res.payload.value = (res.payload.value === true || res.payload.value === 'ON') ? 0 : 1;\n        }\n\n        node.send(res);\n    }\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 3440,
+        "wires": [
+            [
+                "d4934016db111d04"
+            ]
+        ]
+    },
+    {
+        "id": "d4934016db111d04",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "42c8cfb80db1c77e",
+        "name": "common - mqtt - zigbee2mqtt",
+        "mode": "link",
+        "links": [
+            "cc0a7c14f877c371"
+        ],
+        "x": 715,
+        "y": 3440,
+        "wires": []
+    },
+    {
+        "id": "2c47d4e0dbcbfcd4",
+        "type": "comment",
+        "z": "4bc72a1112cb448c",
+        "g": "42c8cfb80db1c77e",
+        "name": "From zig2mqtt",
+        "info": "",
+        "x": 290,
+        "y": 3380,
+        "wires": []
+    },
+    {
+        "id": "661cf303d85905bb",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "42c8cfb80db1c77e",
+        "name": "enum",
+        "func": "msg.payload.enum.zigbee = {\n    'action': {\n        'single': ['numeric-1', 'Single'],\n        'double': ['numeric-2', 'Double'],\n        'long': ['clock-start', 'Long'],\n    }\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 3500,
+        "wires": [
+            [
+                "c56da29053349405"
+            ]
+        ]
+    },
+    {
+        "id": "2afef736f8debc96",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "42c8cfb80db1c77e",
+        "name": "common - init - daikin",
+        "links": [
+            "26bca8d17b597ed1"
+        ],
+        "x": 465,
+        "y": 3500,
+        "wires": [
+            [
+                "661cf303d85905bb"
+            ]
+        ]
+    },
+    {
+        "id": "c56da29053349405",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "42c8cfb80db1c77e",
+        "name": "common - init - daikin",
+        "mode": "link",
+        "links": [
+            "73f3212ba921a620"
+        ],
+        "x": 715,
+        "y": 3500,
+        "wires": []
+    },
+    {
+        "id": "f63cfc9cbd993db7",
+        "type": "comment",
+        "z": "4bc72a1112cb448c",
+        "g": "bcc6f36c217d1643",
+        "name": "Notes",
+        "info": "* Aperture opened = 1, closed = 0",
+        "x": 810,
+        "y": 140,
         "wires": []
     },
     {
@@ -6739,7 +6968,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "data",
-        "func": "let res = [\n    {\n        'id': 'Source',\n        'value': msg.payload.source\n    },\n    {\n        'id': 'UID',\n        'value': msg.payload.uid\n    },\n    {\n        'id': 'Parent',\n        'value': msg.payload.parent\n    },\n    {\n        'id': 'ID',\n        'value': msg.payload.id\n    },\n    {\n        'id': 'value',\n        'value': msg.payload.value\n    }\n];\n\nmsg.payload = res;\n\nreturn msg;",
+        "func": "let res = [\n    {\n        'id': 'Source',\n        'value': msg.payload.source\n    },\n    {\n        'id': 'UID',\n        'value': msg.payload.uid\n    },\n    {\n        'id': 'Parent',\n        'value': msg.payload.parent\n    },\n    {\n        'id': 'ID',\n        'value': msg.payload.id\n    },\n    {\n        'id': 'value',\n        'value': msg.payload.value\n    },\n    {\n        'id': 'Last seen',\n        'value': new Date(msg.payload.seen).toLocaleString(msg.dictionary.config.locales)\n    }\n];\n\nmsg.payload = res;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7031,7 +7260,8 @@
             "df19be1275e79b1c",
             "4418090c31b190b3",
             "9d2be55b974f961e",
-            "1a8726b2de605ecb"
+            "1a8726b2de605ecb",
+            "344c6f9b1cdd2cc1"
         ],
         "x": 1615,
         "y": 260,
