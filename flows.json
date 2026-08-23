@@ -777,7 +777,9 @@
             "b00df660533aa1bd",
             "038df4153883408b",
             "f6402ce038486712",
-            "41fc0776f67a9292"
+            "41fc0776f67a9292",
+            "0583228cd0708f56",
+            "af5a4db306f7c8b5"
         ],
         "x": 104,
         "y": 2619,
@@ -883,7 +885,9 @@
             "95a898f76134adbd",
             "6ab72e116070c867",
             "6840b2fb954ae473",
-            "72aae6174b64a06c"
+            "72aae6174b64a06c",
+            "6cc5d113c7e2b326",
+            "5e692d972f19ef9a"
         ],
         "x": 104,
         "y": 2859,
@@ -928,7 +932,7 @@
             "1b6ec87a498d3297"
         ],
         "x": 354,
-        "y": 3579,
+        "y": 3819,
         "w": 402,
         "h": 82
     },
@@ -983,6 +987,33 @@
         ],
         "x": 104,
         "y": 3339,
+        "w": 652,
+        "h": 202
+    },
+    {
+        "id": "4350d3ede367f1ca",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "name": "common - mqtt - zwave",
+        "style": {
+            "fill": "#ffC000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "6a90a7dc8131bd16",
+            "e9bbb6c6378abf81",
+            "e28bab796f882c1f",
+            "e67c2e3e94b1325a",
+            "40a0387da807ed99",
+            "d4a958696ac0d5bc",
+            "618718adcfc276f8",
+            "2d506fa6b9a372b2",
+            "e5cd132fabafdec1",
+            "017e88df33bc747c"
+        ],
+        "x": 104,
+        "y": 3579,
         "w": 652,
         "h": 202
     },
@@ -1719,7 +1750,8 @@
             "4418090c31b190b3",
             "9d2be55b974f961e",
             "1a8726b2de605ecb",
-            "344c6f9b1cdd2cc1"
+            "344c6f9b1cdd2cc1",
+            "6a90a7dc8131bd16"
         ],
         "x": 3275,
         "y": 80,
@@ -3339,7 +3371,10 @@
         "links": [
             "0fad0e21f00eaa17",
             "17ee74250b6fe764",
-            "2afef736f8debc96"
+            "2afef736f8debc96",
+            "e5cd132fabafdec1",
+            "0583228cd0708f56",
+            "6cc5d113c7e2b326"
         ],
         "x": 475,
         "y": 80,
@@ -3354,7 +3389,10 @@
         "links": [
             "724fe4a33c68dee1",
             "4e7136a46fab4070",
-            "c56da29053349405"
+            "c56da29053349405",
+            "017e88df33bc747c",
+            "af5a4db306f7c8b5",
+            "5e692d972f19ef9a"
         ],
         "x": 685,
         "y": 80,
@@ -3822,7 +3860,8 @@
             "6ab72e116070c867",
             "1b6ec87a498d3297",
             "4c1329a43d9cd7ca",
-            "d4934016db111d04"
+            "d4934016db111d04",
+            "d4a958696ac0d5bc"
         ],
         "x": 145,
         "y": 2480,
@@ -3838,7 +3877,7 @@
         "z": "4bc72a1112cb448c",
         "g": "be2dde01217c4ebd",
         "name": "check",
-        "func": "// required to build uid\nif (typeof msg.payload !== 'object' || \n    typeof msg.payload.source !== 'string' || \n    typeof msg.payload.parent !== 'string' || \n    typeof msg.payload.id !== 'string'\n) {\n\n    return;\n}\n\n// default keys\nlet template = {\n    'uid': '',\n    'source': '',\n    'id': '',\n    'parent': '',\n    'value': '',\n    'type': '',\n    'room': '',\n    'holder': '',\n    'cardinal': '',\n    'element': '',\n    'unit': '',\n    'seen': 0\n};\n\n// rebuilt some keys\nmsg.payload.uid = msg.payload.source + '_' + msg.payload.parent + '_' + msg.payload.id;\nmsg.payload.parent = msg.payload.source + '_' + msg.payload.parent;\n\n// get existing entity\nlet entity = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\nlet protect = ['room'];\n\n// set all entity fields\nentity = {...template, ...entity};\n\nfor (const k in msg.payload) {\n    // set entity name if it not exists\n    if (k === 'name') {\n        let name = global.get('name[\"entity\"]', 'memoryOnly') || {};\n        if (typeof name[msg.payload.uid] !== 'string' || name[msg.payload.uid] === '') {\n            name[msg.payload.uid] = msg.payload.name;\n            global.set('name[\"entity\"]', name, 'memoryOnly')\n        }\n    }\n\n    if (typeof template[k] !== 'undefined') {\n        // check if value changes\n        if (k === 'value') {\n            msg.repeat = entity[k] === msg.payload[k] ? true : false;\n        }\n        if (protect.includes(k) && entity[k] !== '') {\n            // do not override some properties\n        } else {\n            entity[k] = msg.payload[k];\n        }\n    }\n}\n\nif (msg.remove === true) {\n    // todo\n}\n\nglobal.set('entity[\"' + entity.uid + '\"]', entity, 'memoryOnly');\n\nnode.status({ fill: \"green\", shape: \"ring\", text: entity.uid + ' : ' + entity.value});\n\nmsg.topic = '';\nmsg.payload = entity;\n\nreturn msg;",
+        "func": "// required to build uid\nif (typeof msg.payload !== 'object' || \n    typeof msg.payload.source !== 'string' || \n    typeof msg.payload.parent !== 'string' || \n    typeof msg.payload.id !== 'string'\n) {\n\n    return;\n}\n\n// default keys\nlet template = {\n    'uid': '',\n    'source': '',\n    'id': '',\n    'parent': '',\n    'value': '',\n    'type': '',\n    'room': '',\n    'holder': '',\n    'cardinal': '',\n    'element': '',\n    'unit': '',\n    'seen': 0,\n    'hidden': 0\n};\n\n// rebuilt some keys\nmsg.payload.uid = msg.payload.source + '_' + msg.payload.parent + '_' + msg.payload.id;\nmsg.payload.parent = msg.payload.source + '_' + msg.payload.parent;\n\n// get existing entity\nlet entity = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\nlet protect = ['room'];\n\n// set all entity fields\nentity = {...template, ...entity};\n\nfor (const k in msg.payload) {\n    // set entity name if it not exists\n    if (k === 'name') {\n        let name = global.get('name[\"entity\"]', 'memoryOnly') || {};\n        if (typeof name[msg.payload.uid] !== 'string' || name[msg.payload.uid] === '') {\n            name[msg.payload.uid] = msg.payload.name;\n            global.set('name[\"entity\"]', name, 'memoryOnly')\n        }\n    }\n\n    if (typeof template[k] !== 'undefined') {\n        // check if value changes\n        if (k === 'value') {\n            msg.repeat = entity[k] === msg.payload[k] ? true : false;\n        }\n        if (protect.includes(k) && entity[k] !== '') {\n            // do not override some properties\n        } else {\n            entity[k] = msg.payload[k];\n        }\n    }\n}\n\nif (msg.remove === true) {\n    // todo\n}\n\nglobal.set('entity[\"' + entity.uid + '\"]', entity, 'memoryOnly');\n\nnode.status({ fill: \"green\", shape: \"ring\", text: entity.uid + ' : ' + entity.value});\n\nmsg.topic = '';\nmsg.payload = entity;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4121,7 +4160,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "dictionary en",
-        "func": "msg.payload.en = {\n    'config': {\n        'locales': 'en-GB'\n    },\n    'option_page': {\n        'home': 'Home',\n        'room': 'Rooms',\n        'tuning': 'Adjustments',\n        'scene': 'Scenes',\n        'entity': 'Entities',\n        'config': 'Configuration',\n        'auth': 'Authentication'\n    },\n    'option_level': {\n        'visitor': 'Visitor',\n        'child':  'Child',\n        'parent':'Parent',\n        'admin': 'Administrator'\n    },\n    'option_team': {\n        'm': 'Morning',\n        'a': 'Afternoon',\n        'n': 'Night',\n        'd': 'Day',\n        'w': 'Weekend',\n        's': 'Saturday'\n    },\n    'option_lang': {\n        'en': 'English',\n        'fr': 'French'\n    },\n    'option_color': {\n        'on': '#008000',\n        'off': '#FF0000',\n        'median': '#F08000',\n        'none': '#808000',\n        'theme': '#0094CE',\n        'empty': '#CCCCCC'\n    },\n    'option_type': {\n        'command': 'Command',\n        'sensor': 'Sensor'\n    },\n    'option_holder': {\n        'roof': 'Roof',\n        'ceiling': 'Ceiling',\n        'ground': 'Ground',\n        'wall': 'Wall',\n        'door': 'Door',\n        'window': 'Window',\n        'bay': 'Bay',\n        'desk': 'Desk',\n        'mirror': 'Mirror',\n        'bedside': 'Bedside',\n        'shelf': 'Shelf',\n        'rack': 'Rack'\n    },\n    'option_cardinal': {\n        'none': 'none',\n        'left': 'Left',\n        'right': 'Right',\n        'east': 'East',\n        'west': 'West',\n        'north': 'North',\n        'south': 'South',\n        'front': 'Front',\n        'rear': 'Rear'\n    },\n    'option_element': {\n        'switch': 'Switch',\n        'power': 'Power',\n        'light': 'Light',\n        'plug': 'Plug',\n        'motion': 'Motion',\n        'precence': 'Presence',\n        'door': 'Door',\n        'window': 'Window',\n        'shutter': 'Shutter',\n        'lock': 'Lock',\n        'alert': 'Alert',\n        'sound': 'Volume',\n        'temperature': 'Temperature',\n        'humidity': 'Humidity',\n        'illuminance': 'Illuminance',\n        'wind': 'Wind',\n        'fan': 'Fan',\n        'direction': 'Direction',\n        'time': 'Clock',\n        'battery': 'Battery'\n    },\n    'option_unit': {\n        'none': 'None',\n        '°C': 'Degree celsuis',\n        '°F': 'Degree fahrenheit',\n        'mA': 'Milliampere',\n        'A': 'Ampere',\n        'mW': 'Milliwatt',\n        'W': 'Watt',\n        'kW': 'Kilowatt',\n        'MW': 'Megawatt',\n        'mWh': 'Milliwatt/hour',\n        'Wh': 'Watt/Hour',\n        'mVA': 'Millivoltampere',\n        'VA': 'Voltampere',\n        'lx': 'Lux',\n        '%': 'Percent',\n        'b': 'Binary',\n        'n': 'Number',\n        's': 'Second',\n        'ms': 'Millisecond',\n        'enum': 'Enumerator',\n        'text': 'Text'\n    },\n    'notice': {\n        'file_write_success': 'Saved file successfully',\n        'file_write_fail': 'Failed to save file',\n        'login_fail': 'Wrong username or password',\n        'save_success': 'Successfully saved'\n    },\n    'group_room': {\n        'room_select': 'Select a room',\n        'power_title': 'Powers'\n    },\n    'group_entity': {\n        'room_title': 'Rooms configuration',\n        'room_add': 'Add or edit a room',\n        'room_del': 'Delete a room',\n        'room_id': 'Ident',\n        'room_name': 'Name',\n\n        'entity_title': 'List of received entities',\n        'entity_edit_title': 'Configure entity',\n        'entity_edit_name': 'Name',\n        'entity_edit_room': 'Room',\n        'entity_edit_type': 'Type',\n        'entity_edit_holder': 'Holder',\n        'entity_edit_cardinal': 'Cardinal',\n        'entity_edit_element': 'Element',\n        'entity_delete': 'Delete',\n\n        'device_edit_title': 'Configure device',\n        'device_edit_name': 'Device name'\n    },\n    'group_config': {\n        'mqtt_title': 'MQTT configuration',\n        'mqtt_host': 'Broker IP address',\n        'mqtt_port': 'Port',\n        'mqtt_topic': 'Topic',\n        'mqtt_username': 'Username',\n        'mqtt_password': 'Password',\n        'mqtt_discovery': 'Home Assistant Discovery topic',\n        'mqtt_dknrteleinfo': 'DKNR Teleinfo topic',\n        'mqtt_dknrapsystems': 'DKNR APsystems topic',\n        'mqtt_dknrdaikin': 'DKNR Daikin topic',\n        'mqtt_zwavejs': 'ZwaveJS topic',\n        'mqtt_zigbee2mqtt': 'Zigbee2MQTT topic',\n        'mqtt_enabled': 'Enable MQTT',\n\n        'backup_title': 'Backup configuration',\n        'backup_room': 'Rooms',\n        'backup_entity': 'Entities',\n        'backup_scene': 'Scenes',\n        'backup_user': 'Users',\n        'backup_mqtt': 'MQTT'\n    },\n    'group_auth': {\n        'login': 'Login',\n        'pass': 'Password',\n        'auth_user': 'User'\n    }\n}\n\nreturn msg;",
+        "func": "msg.payload.en = {\n    'config': {\n        'locales': 'en-GB'\n    },\n    'option_page': {\n        'home': 'Home',\n        'room': 'Rooms',\n        'tuning': 'Adjustments',\n        'scene': 'Scenes',\n        'entity': 'Entities',\n        'config': 'Configuration',\n        'auth': 'Authentication'\n    },\n    'option_level': {\n        'visitor': 'Visitor',\n        'child':  'Child',\n        'parent':'Parent',\n        'admin': 'Administrator'\n    },\n    'option_team': {\n        'm': 'Morning',\n        'a': 'Afternoon',\n        'n': 'Night',\n        'd': 'Day',\n        'w': 'Weekend',\n        's': 'Saturday'\n    },\n    'option_lang': {\n        'en': 'English',\n        'fr': 'French'\n    },\n    'option_color': {\n        'on': '#008000',\n        'off': '#FF0000',\n        'median': '#F08000',\n        'none': '#808000',\n        'theme': '#0094CE',\n        'empty': '#CCCCCC'\n    },\n    'option_type': {\n        'command': 'Command',\n        'sensor': 'Sensor'\n    },\n    'option_holder': {\n        'roof': 'Roof',\n        'ceiling': 'Ceiling',\n        'ground': 'Ground',\n        'wall': 'Wall',\n        'door': 'Door',\n        'window': 'Window',\n        'bay': 'Bay',\n        'desk': 'Desk',\n        'mirror': 'Mirror',\n        'bedside': 'Bedside',\n        'shelf': 'Shelf',\n        'rack': 'Rack'\n    },\n    'option_cardinal': {\n        'none': 'none',\n        'left': 'Left',\n        'right': 'Right',\n        'east': 'East',\n        'west': 'West',\n        'north': 'North',\n        'south': 'South',\n        'front': 'Front',\n        'rear': 'Rear'\n    },\n    'option_element': {\n        'switch': 'Switch',\n        'power': 'Power',\n        'light': 'Light',\n        'plug': 'Plug',\n        'motion': 'Motion',\n        'precence': 'Presence',\n        'door': 'Door',\n        'window': 'Window',\n        'shutter': 'Shutter',\n        'lock': 'Lock',\n        'alert': 'Alert',\n        'sound': 'Volume',\n        'temperature': 'Temperature',\n        'humidity': 'Humidity',\n        'illuminance': 'Illuminance',\n        'wind': 'Wind',\n        'fan': 'Fan',\n        'direction': 'Direction',\n        'time': 'Clock',\n        'battery': 'Battery'\n    },\n    'option_unit': {\n        'none': 'None',\n        '°C': 'Degree celsuis',\n        '°F': 'Degree fahrenheit',\n        'mA': 'Milliampere',\n        'A': 'Ampere',\n        'mW': 'Milliwatt',\n        'W': 'Watt',\n        'kW': 'Kilowatt',\n        'MW': 'Megawatt',\n        'mWh': 'Milliwatt/hour',\n        'Wh': 'Watt/Hour',\n        'mVA': 'Millivoltampere',\n        'VA': 'Voltampere',\n        'lx': 'Lux',\n        'ppm': 'Parts per million',\n        '%': 'Percent',\n        'b': 'Binary',\n        'n': 'Number',\n        's': 'Second',\n        'ms': 'Millisecond',\n        'enum': 'Enumerator',\n        'text': 'Text'\n    },\n    'notice': {\n        'file_write_success': 'Saved file successfully',\n        'file_write_fail': 'Failed to save file',\n        'login_fail': 'Wrong username or password',\n        'save_success': 'Successfully saved'\n    },\n    'group_room': {\n        'room_select': 'Select a room',\n        'power_title': 'Powers'\n    },\n    'group_entity': {\n        'room_title': 'Rooms configuration',\n        'room_add': 'Add or edit a room',\n        'room_del': 'Delete a room',\n        'room_id': 'Ident',\n        'room_name': 'Name',\n\n        'entity_title': 'List of received entities',\n        'entity_edit_title': 'Configure entity',\n        'entity_edit_name': 'Name',\n        'entity_edit_room': 'Room',\n        'entity_edit_type': 'Type',\n        'entity_edit_holder': 'Holder',\n        'entity_edit_cardinal': 'Cardinal',\n        'entity_edit_element': 'Element',\n        'entity_edit_action': 'Action',\n        'entity_update': 'Update',\n        'entity_disable': 'Disable',\n        'entity_delete': 'Delete',\n\n        'device_edit_title': 'Configure device',\n        'device_edit_name': 'Device name'\n    },\n    'group_config': {\n        'mqtt_title': 'MQTT configuration',\n        'mqtt_host': 'Broker IP address',\n        'mqtt_port': 'Port',\n        'mqtt_topic': 'Topic',\n        'mqtt_username': 'Username',\n        'mqtt_password': 'Password',\n        'mqtt_discovery': 'Home Assistant Discovery topic',\n        'mqtt_dknrteleinfo': 'DKNR Teleinfo topic',\n        'mqtt_dknrapsystems': 'DKNR APsystems topic',\n        'mqtt_dknrdaikin': 'DKNR Daikin topic',\n        'mqtt_zwavejs': 'ZwaveJS topic',\n        'mqtt_zigbee2mqtt': 'Zigbee2MQTT topic',\n        'mqtt_enabled': 'Enable MQTT',\n\n        'backup_title': 'Backup configuration',\n        'backup_room': 'Rooms',\n        'backup_entity': 'Entities',\n        'backup_scene': 'Scenes',\n        'backup_user': 'Users',\n        'backup_mqtt': 'MQTT'\n    },\n    'group_auth': {\n        'login': 'Login',\n        'pass': 'Password',\n        'auth_user': 'User'\n    }\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4142,7 +4181,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "dictionary fr",
-        "func": "msg.payload.fr = {\n    'config': {\n        'locales': 'fr'\n    },\n    'option_page': {\n        'home': 'Accueil',\n        'room': 'Pièces',\n        'tuning': 'Ajustements',\n        'scene': 'Scènes',\n        'entity': 'Entités',\n        'config': 'Configuration',\n        'auth': 'Authentification'\n    },\n    'option_level': {\n        'visitor': 'Visiteur',\n        'child':  'Enfant',\n        'parent':'Parent',\n        'admin': 'Administrateur'\n    },\n    'option_team': {\n        'm': 'Maint',\n        'a': 'Après-midi',\n        'n': 'Nuit',\n        'd': 'Journée',\n        's': 'Samedi',\n        'w': 'Weekend'\n    },\n    'option_lang': {\n        'en': 'English',\n        'fr': 'French'\n    },\n    'notice': {\n        'file_write_success': 'Fichier sauvegardé avec suucès',\n        'file_write_fail': 'Impossiblde de sauvegarder le fichier',\n        'login_fail': \"Mauvais nom d'utilisateur ou de mot de passe\",\n        'save_success': 'Sauvergardé avec succès'\n    },\n    'group_room': {\n        'room_select': 'Sélectionner une pièce',\n        'power_title': 'Puissances'\n    },\n    'group_entity': {\n        'room_title': 'Configuration des pièces',\n        'room_add': 'Ajouter ou modifier une pièce',\n        'room_del': 'Supprimer une pièce',\n        'room_id': 'Identifant',\n        'room_name': 'Nom',\n\n        'entity_title': 'Liste des entités reçu',\n        'entity_edit_title': 'Configurer une entité',\n        'entity_edit_name': 'Nom',\n        'entity_edit_room': 'Pièces',\n        'entity_delete': 'Supprimer',\n\n        'device_edit_title': 'Configurer un appareil',\n        'device_edit_name': \"Nom de l'appareil\"\n    },\n    'group_config': {\n        'mqtt_title': 'Configuration MQTT',\n        'mqtt_host': 'Adresse IP du broker',\n        'mqtt_port': 'Port',\n        'mqtt_topic': 'Topic',\n        'mqtt_username': 'Utilisateur',\n        'mqtt_password': 'Mot de passe',\n        'mqtt_discovery': 'Home Assistant Discovery topic',\n        'mqtt_enabled': 'Activer MQTT',\n\n        'backup_title': \"Configuration d'une sauvergarde\",\n        'backup_room': 'Pièces',\n        'backup_entity': 'Entités',\n        'backup_scene': 'Scènes',\n        'backup_user': 'Utilisateurs',\n        'backup_mqtt': 'MQTT'\n    },\n    'group_auth': {\n        'login': 'Identifiant',\n        'pass': 'Mot de passe',\n        'user': 'Utilisateur'\n    }\n}\n\nreturn msg;",
+        "func": "msg.payload.fr = {\n    'config': {\n        'locales': 'fr'\n    },\n    'option_page': {\n        'home': 'Accueil',\n        'room': 'Pièces',\n        'tuning': 'Ajustements',\n        'scene': 'Scènes',\n        'entity': 'Entités',\n        'config': 'Configuration',\n        'auth': 'Authentification'\n    },\n    'option_level': {\n        'visitor': 'Visiteur',\n        'child':  'Enfant',\n        'parent':'Parent',\n        'admin': 'Administrateur'\n    },\n    'option_team': {\n        'm': 'Maint',\n        'a': 'Après-midi',\n        'n': 'Nuit',\n        'd': 'Journée',\n        's': 'Samedi',\n        'w': 'Weekend'\n    },\n    'option_lang': {\n        'en': 'English',\n        'fr': 'French'\n    },\n    'notice': {\n        'file_write_success': 'Fichier sauvegardé avec suucès',\n        'file_write_fail': 'Impossiblde de sauvegarder le fichier',\n        'login_fail': \"Mauvais nom d'utilisateur ou de mot de passe\",\n        'save_success': 'Sauvergardé avec succès'\n    },\n    'group_room': {\n        'room_select': 'Sélectionner une pièce',\n        'power_title': 'Puissances'\n    },\n    'group_entity': {\n        'room_title': 'Configuration des pièces',\n        'room_add': 'Ajouter ou modifier une pièce',\n        'room_del': 'Supprimer une pièce',\n        'room_id': 'Identifant',\n        'room_name': 'Nom',\n\n        'entity_title': 'Liste des entités reçu',\n        'entity_edit_title': 'Configurer une entité',\n        'entity_edit_name': 'Nom',\n        'entity_edit_room': 'Pièces',\n        'entity_edit_type': 'Type',\n        'entity_edit_holder': 'Support',\n        'entity_edit_cardinal': 'Support (bis)',\n        'entity_edit_element': 'Elément',\n        'entity_edit_action': 'Action',\n        'entity_update': 'Mettre à jour',\n        'entity_disable': 'Désactiver',\n        'entity_delete': 'Supprimer',\n\n        'device_edit_title': 'Configurer un appareil',\n        'device_edit_name': \"Nom de l'appareil\"\n    },\n    'group_config': {\n        'mqtt_title': 'Configuration MQTT',\n        'mqtt_host': 'Adresse IP du broker',\n        'mqtt_port': 'Port',\n        'mqtt_topic': 'Topic',\n        'mqtt_username': 'Utilisateur',\n        'mqtt_password': 'Mot de passe',\n        'mqtt_discovery': 'Home Assistant Discovery topic',\n        'mqtt_enabled': 'Activer MQTT',\n\n        'backup_title': \"Configuration d'une sauvergarde\",\n        'backup_room': 'Pièces',\n        'backup_entity': 'Entités',\n        'backup_scene': 'Scènes',\n        'backup_user': 'Utilisateurs',\n        'backup_mqtt': 'MQTT'\n    },\n    'group_auth': {\n        'login': 'Identifiant',\n        'pass': 'Mot de passe',\n        'user': 'Utilisateur'\n    }\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4180,7 +4219,7 @@
         "payload": "",
         "payloadType": "str",
         "x": 450,
-        "y": 3620,
+        "y": 3860,
         "wires": [
             [
                 "29c782ee02094a7a"
@@ -4201,7 +4240,7 @@
         "finalize": "",
         "libs": [],
         "x": 590,
-        "y": 3620,
+        "y": 3860,
         "wires": [
             [
                 "1b6ec87a498d3297"
@@ -4219,7 +4258,7 @@
             "cc0a7c14f877c371"
         ],
         "x": 715,
-        "y": 3620,
+        "y": 3860,
         "wires": []
     },
     {
@@ -4360,6 +4399,7 @@
         "id": "41fc0776f67a9292",
         "type": "function",
         "z": "4bc72a1112cb448c",
+        "d": true,
         "g": "fb34af284a5fbd90",
         "name": "enum",
         "func": "\nreturn msg;",
@@ -4372,7 +4412,9 @@
         "x": 590,
         "y": 2780,
         "wires": [
-            []
+            [
+                "af5a4db306f7c8b5"
+            ]
         ]
     },
     {
@@ -4391,7 +4433,9 @@
         "x": 590,
         "y": 3020,
         "wires": [
-            []
+            [
+                "5e692d972f19ef9a"
+            ]
         ]
     },
     {
@@ -4641,6 +4685,279 @@
         "info": "* Aperture opened = 1, closed = 0",
         "x": 810,
         "y": 140,
+        "wires": []
+    },
+    {
+        "id": "6a90a7dc8131bd16",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "4350d3ede367f1ca",
+        "name": "common - mqtt - zwave",
+        "links": [
+            "92c098c716e46e3b",
+            "f2cd63b49ac325ec"
+        ],
+        "x": 145,
+        "y": 3680,
+        "wires": [
+            [
+                "e9bbb6c6378abf81"
+            ]
+        ]
+    },
+    {
+        "id": "e9bbb6c6378abf81",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "4350d3ede367f1ca",
+        "name": "data",
+        "func": "msg.broker = {};\n\nlet mqtt = global.get('mqtt', 'memoryOnly');\nif (typeof mqtt == 'object' && mqtt.enabled == true && mqtt.zwave != '') {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.zwave.length > 0\n    ) {\n        msg.broker = {\n            'broker': mqtt.host,\n            'port': mqtt.port,\n            'clientid': 'zwave' + global.get('describe.app.project', 'memoryOnly') || 'dknr',\n            'force': true\n        };\n\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.zwave + '/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'memoryOnly');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 3680,
+        "wires": [
+            [
+                "e28bab796f882c1f"
+            ]
+        ]
+    },
+    {
+        "id": "e28bab796f882c1f",
+        "type": "mqtt in",
+        "z": "4bc72a1112cb448c",
+        "g": "4350d3ede367f1ca",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "a619830c5e5eadfb",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 430,
+        "y": 3680,
+        "wires": [
+            [
+                "e67c2e3e94b1325a",
+                "40a0387da807ed99"
+            ]
+        ]
+    },
+    {
+        "id": "e67c2e3e94b1325a",
+        "type": "trigger",
+        "z": "4bc72a1112cb448c",
+        "g": "4350d3ede367f1ca",
+        "name": "10m",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "str",
+        "duration": "10",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 590,
+        "y": 3620,
+        "wires": [
+            [
+                "e9bbb6c6378abf81"
+            ]
+        ]
+    },
+    {
+        "id": "40a0387da807ed99",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "4350d3ede367f1ca",
+        "name": "parse",
+        "func": "// Limit for some values\nif (msg.topic.includes(\"/lastActive\") ||\n    msg.topic.includes(\"/set\")\n) {\n\n    return;\n}\n\nlet res = {\n    'topic':'',\n    'payload': {}\n};\n\n// Split topic\nlet path = msg.topic.slice(global.get('mqtt.zwave', 'memoryOnly').length + 1).split('/');\n\n// Limit for some values\nif (path.length < 4) {\n    return;\n}\n\nres.payload.source = 'zwave';\nres.payload.parent = path[0];\nres.payload.id = path.join('_');\nres.payload.seen = Date.now();\nres.payload.value = msg.payload;\n\nnode.status({text: res.payload.id});\n\n// See: https://z-wave.me/manual/z-way/Command_Class_Reference.htm\nswitch (path[1]) {\n    case \"32\": // common binary sensor\n        res.payload.unit = 'b';\n        res.payload.name = 'Alert';\n    case \"37\": // common binary switch\n        res.payload.unit = 'b';\n        res.payload.name = 'Switch';\n        break;\n    case \"38\": // common level switch\n        switch (path[3]) {\n            case \"currentValue\":\n                res.payload.unit = '%';\n                res.payload.name = 'Level switch state';\n                break;\n            case \"targetValue\":\n                res.payload.unit = '%';\n                res.payload.name = 'Level switch target';\n                break;\n            case \"Up\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Level switch up';\n                break;\n            case \"Down\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Level switch down';\n                break;\n            default:\n                return;\n        }\n    case \"48\":\n        switch (path[3]) {\n            case \"Any\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Binary sensor';\n                break;\n            default:\n                return;\n        }\n    case \"49\":\n        switch (path[3]) {\n            case \"Power\":\n                res.payload.unit = 'W';\n                res.payload.name = 'Power';\n                break;\n            case \"Illuminance\":\n                res.payload.unit = 'lx';\n                res.payload.name = 'Illuminance';\n                break;\n            case \"Air_temperature\":\n                res.payload.unit = '°C';\n                res.payload.name = 'Temperature';\n                break;\n            case \"Humidity\":\n                res.payload.unit = '%';\n                res.payload.name = 'Humidity';\n                break;\n            case \"Ultraviolet\":\n                res.payload.unit = '';\n                res.payload.name = 'Ultraviolet';\n                break;\n            case \"Seismic_Intensity\":\n            case \"Seismic_magnitude\":\n                res.payload.unit = '';\n                res.payload.name = 'Seismic';\n                break;\n            case \"Carbon_dioxide_(CO₂)_level\": // FGDW002\n                res.payload.unit = 'ppm';\n                res.payload.name = 'Carbon dioxide';\n                break;\n            default:\n                return;\n        }\n        break;\n    case \"50\":\n        switch (path[4]) {\n            case \"65536\":\n            case \"65537\":\n                res.payload.unit = 'kWh';\n                res.payload.name = 'Power';\n                break;\n            case \"66048\":\n            case \"66049\":\n                res.payload.unit = 'W';\n                res.payload.name = 'Power';\n                break;\n            default:\n                return;\n        };\n        break;\n    case \"128\":\n        res.payload.unit = '%';\n        res.payload.name = 'Battery';\n        break;\n    default:\n        return;\n};\n\nres.payload.name = res.payload.name + ' ' + path[2];\n\nreturn res;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 3680,
+        "wires": [
+            [
+                "d4a958696ac0d5bc",
+                "a3c887be2940bb12"
+            ]
+        ]
+    },
+    {
+        "id": "d4a958696ac0d5bc",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "4350d3ede367f1ca",
+        "name": "common - mqtt - zwave",
+        "mode": "link",
+        "links": [
+            "cc0a7c14f877c371"
+        ],
+        "x": 715,
+        "y": 3680,
+        "wires": []
+    },
+    {
+        "id": "618718adcfc276f8",
+        "type": "comment",
+        "z": "4bc72a1112cb448c",
+        "g": "4350d3ede367f1ca",
+        "name": "From zwave",
+        "info": "Using zwavejs",
+        "x": 290,
+        "y": 3620,
+        "wires": []
+    },
+    {
+        "id": "2d506fa6b9a372b2",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "d": true,
+        "g": "4350d3ede367f1ca",
+        "name": "enum",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 3740,
+        "wires": [
+            [
+                "017e88df33bc747c"
+            ]
+        ]
+    },
+    {
+        "id": "e5cd132fabafdec1",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "d": true,
+        "g": "4350d3ede367f1ca",
+        "name": "common - init - zwave",
+        "links": [
+            "26bca8d17b597ed1"
+        ],
+        "x": 465,
+        "y": 3740,
+        "wires": [
+            [
+                "2d506fa6b9a372b2"
+            ]
+        ]
+    },
+    {
+        "id": "017e88df33bc747c",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "d": true,
+        "g": "4350d3ede367f1ca",
+        "name": "common - init - zwave",
+        "mode": "link",
+        "links": [
+            "73f3212ba921a620"
+        ],
+        "x": 715,
+        "y": 3740,
+        "wires": []
+    },
+    {
+        "id": "a3c887be2940bb12",
+        "type": "debug",
+        "z": "4bc72a1112cb448c",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 3620,
+        "wires": []
+    },
+    {
+        "id": "0583228cd0708f56",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "d": true,
+        "g": "fb34af284a5fbd90",
+        "name": "common - init - teleinfo",
+        "links": [
+            "26bca8d17b597ed1"
+        ],
+        "x": 465,
+        "y": 2780,
+        "wires": [
+            [
+                "41fc0776f67a9292"
+            ]
+        ]
+    },
+    {
+        "id": "af5a4db306f7c8b5",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "d": true,
+        "g": "fb34af284a5fbd90",
+        "name": "common - init - teleinfo",
+        "mode": "link",
+        "links": [
+            "73f3212ba921a620"
+        ],
+        "x": 715,
+        "y": 2780,
+        "wires": []
+    },
+    {
+        "id": "6cc5d113c7e2b326",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "d": true,
+        "g": "3db71c2c17730bd8",
+        "name": "common - init - apsystems",
+        "links": [
+            "26bca8d17b597ed1"
+        ],
+        "x": 465,
+        "y": 3020,
+        "wires": [
+            [
+                "72aae6174b64a06c"
+            ]
+        ]
+    },
+    {
+        "id": "5e692d972f19ef9a",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "d": true,
+        "g": "3db71c2c17730bd8",
+        "name": "common - init - apsystems",
+        "mode": "link",
+        "links": [
+            "73f3212ba921a620"
+        ],
+        "x": 715,
+        "y": 3020,
         "wires": []
     },
     {
@@ -5238,7 +5555,7 @@
         "y": 440,
         "wires": [
             [
-                "d731f77ad7ed963a"
+                "a1bb9f69547e39ce"
             ]
         ]
     },
@@ -5352,7 +5669,47 @@
         "wires": [
             [
                 "ab9b52b152e82712",
+                "77117f060edca833"
+            ]
+        ]
+    },
+    {
+        "id": "77117f060edca833",
+        "type": "function",
+        "z": "560376d6bba621ec",
+        "name": "room",
+        "func": "msg.room = flow.get('room[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '-';\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 440,
+        "wires": [
+            [
                 "e1e00667e377c3a4"
+            ]
+        ]
+    },
+    {
+        "id": "a1bb9f69547e39ce",
+        "type": "function",
+        "z": "560376d6bba621ec",
+        "name": "room",
+        "func": "if (msg.room === (flow.get('room[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--')) {\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 440,
+        "wires": [
+            [
+                "d731f77ad7ed963a"
             ]
         ]
     },
@@ -5963,7 +6320,7 @@
         "z": "3d7897ba0ee14173",
         "g": "3a6d56b6dcd8540a",
         "name": "data",
-        "func": "// entity - room - title\nmsg.payload = '';\nnode.send([msg, null, null, null, null]);\n\n// entity - room - add - title\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.group_entity.room_add\n};\nnode.send([null, msg, null, null, null]);\n\n// entity - room - add - form\nmsg.payload = {};\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.room_id,\n            \"key\": \"id\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.room_name,\n            \"key\": \"name\",\n            \"required\": false\n        }\n    ]\n};\nnode.send([null, null, msg, null, null]);\n\n// entity - room - del - title\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.group_entity.room_del\n};\nnode.send([null, null, null, msg, null]);\n\n// entity - room - del - form\nmsg.payload = '';\nlet rooms = global.get('name[\"room\"]', 'default') || {};\nlet i = 0;\n\nlet dropdownOptions = [];\nfor (const room in rooms) {\n    dropdownOptions[i++] = {\n        'label': rooms[room] + ' (' + room + ')',\n        'value': room,\n        'dropdown':'id'\n    };\n}\n\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.room_name,\n            \"key\": \"id\",\n            \"required\": false\n        }\n    ],\n    'dropdownOptions': dropdownOptions\n}\n\nnode.send([null, null, null, null, msg]);\n\nreturn;",
+        "func": "// entity - room - title\nmsg.payload = '';\nnode.send([msg, null, null, null, null]);\n\n// entity - room - add - title\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.group_entity.room_add\n};\nnode.send([null, msg, null, null, null]);\n\n// entity - room - add - form\nmsg.payload = {};\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.room_id,\n            \"key\": \"id\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.room_name,\n            \"key\": \"name\",\n            \"required\": false\n        }\n    ]\n};\nnode.send([null, null, msg, null, null]);\n\n// entity - room - del - title\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.group_entity.room_del\n};\nnode.send([null, null, null, msg, null]);\n\n// entity - room - del - form\nmsg.payload = '';\nlet rooms = global.get('name[\"room\"]', 'default') || {};\nlet i = 0;\n\nlet dropdownOptions = [];\nfor (const room in rooms) {\n    dropdownOptions[i++] = {\n        'label': rooms[room] + ' (' + room + ')',\n        'value': room,\n        'dropdown':'id'\n    };\n}\ndropdownOptions.sort((a, b) => a.value.localeCompare(b.value));\n\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.room_name,\n            \"key\": \"id\",\n            \"required\": false\n        }\n    ],\n    'dropdownOptions': dropdownOptions\n}\n\nnode.send([null, null, null, null, msg]);\n\nreturn;",
         "outputs": 5,
         "timeout": 0,
         "noerr": 0,
@@ -6337,7 +6694,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "check",
-        "func": "// delete entity data\nif (msg.hmi.level === 'admin' && msg.action === 'button_click') {\n    if (msg.column === 'delete') {\n        let entity = global.get('entity', 'memoryOnly') || {};\n        delete entity[msg.payload.uid];\n        global.set('entity', entity, 'memoryOnly');\n\n        msg.enabled = true;\n        msg.payload = msg.dictionary.notice.save_success;\n        node.send([msg, null, null]);\n    }\n    else if (msg.column === 'name') {\n\n        node.send([null, msg, null]);\n    }\n    else if (msg.column === 'parent_name') {\n\n        node.send([null, null, msg]);\n    }\n}\n\nreturn;",
+        "func": "msg.payload = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\n\n// delete entity data\nif (msg.hmi.level === 'admin' && msg.action === 'button_click') {\n    if (msg.column === 'delete') {\n        let entity = global.get('entity', 'memoryOnly') || {};\n        delete entity[msg.payload.uid];\n        global.set('entity', entity, 'memoryOnly');\n\n        msg.enabled = true;\n        msg.payload = msg.dictionary.notice.save_success;\n        node.send([msg, null, null]);\n    }\n    else if (msg.column === 'name') {\n\n        node.send([null, msg, null]);\n    }\n    else if (msg.column === 'parent_name') {\n\n        node.send([null, null, msg]);\n    }\n}\n\nreturn;",
         "outputs": 3,
         "timeout": 0,
         "noerr": 0,
@@ -6508,7 +6865,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "data",
-        "func": "let entity = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\n\nlet d = 0;\nlet dropdownOptions = [];\n\n// Room\nlet rooms = global.get('name[\"room\"]', 'default');\nfor (const room in rooms) {\n    dropdownOptions[d++] = {\n        'label': rooms[room] + ' (' + room + ')',\n        'value': room,\n        'dropdown': 'room'\n    };\n}\n\n// Holder\nfor (const holder in msg.dictionary.option_holder) {\n    dropdownOptions[d++] = {\n        'label': msg.dictionary.option_holder[holder] + ' (' + holder + ')',\n        'value': holder,\n        'dropdown': 'holder'\n    };\n}\n\n// Cardinal\nfor (const cardinal in msg.dictionary.option_cardinal) {\n    dropdownOptions[d++] = {\n        'label': msg.dictionary.option_cardinal[cardinal] + ' (' + cardinal + ')',\n        'value': cardinal,\n        'dropdown': 'cardinal'\n    };\n}\n\n// Element\nfor (const element in msg.dictionary.option_element) {\n    dropdownOptions[d++] = {\n        'label': msg.dictionary.option_element[element] + ' (' + element + ')',\n        'value': element,\n        'dropdown': 'element'\n    };\n}\n\n// Type\nfor (const type in msg.dictionary.option_type) {\n    dropdownOptions[d++] = {\n        'label': msg.dictionary.option_type[type] + ' (' + type + ')',\n        'value': type,\n        'dropdown': 'type'\n    };\n}\n\n// Unit\nfor (const unit in msg.dictionary.option_unit) {\n    dropdownOptions[d++] = {\n        'label': msg.dictionary.option_unit[unit] + ' (' + unit + ')',\n        'value': unit,\n        'dropdown': 'unit'\n    };\n}\n\nmsg.topic = msg.payload.uid;\n//node-red 5.04 bug with dropdown msg.topic\nflow.set('entity[\"' + msg.hmi.id + '\"]', msg.payload.uid, 'memoryOnly');\n\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.entity_edit_name,\n            \"key\": \"name\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_room,\n            \"key\": \"room\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_holder,\n            \"key\": \"holder\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_cardinal,\n            \"key\": \"cardinal\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_element,\n            \"key\": \"element\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_type,\n            \"key\": \"type\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_unit,\n            \"key\": \"unit\"\n        },\n        {\n            \"type\": \"checkbox\",\n            \"label\": msg.dictionary.group_entity.entity_delete,\n            \"key\": \"remove\"\n        }\n    ],\n    'dropdownOptions': dropdownOptions\n};\n\nreturn msg;",
+        "func": "let entity = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\n\nlet d = 0;\nlet dropdownOptions = [];\n\n// Room\nlet rooms = global.get('name[\"room\"]', 'default');\nfor (const room in rooms) {\n    dropdownOptions[d++] = {\n        'label': rooms[room] + ' (' + room + ')',\n        'value': room,\n        'dropdown': 'room'\n    };\n}\n\n// Holder\nfor (const holder in msg.dictionary.option_holder) {\n    dropdownOptions[d++] = {\n        'label': msg.dictionary.option_holder[holder] + ' (' + holder + ')',\n        'value': holder,\n        'dropdown': 'holder'\n    };\n}\n\n// Cardinal\nfor (const cardinal in msg.dictionary.option_cardinal) {\n    dropdownOptions[d++] = {\n        'label': msg.dictionary.option_cardinal[cardinal] + ' (' + cardinal + ')',\n        'value': cardinal,\n        'dropdown': 'cardinal'\n    };\n}\n\n// Element\nfor (const element in msg.dictionary.option_element) {\n    dropdownOptions[d++] = {\n        'label': msg.dictionary.option_element[element] + ' (' + element + ')',\n        'value': element,\n        'dropdown': 'element'\n    };\n}\n\n// Type\nfor (const type in msg.dictionary.option_type) {\n    dropdownOptions[d++] = {\n        'label': msg.dictionary.option_type[type] + ' (' + type + ')',\n        'value': type,\n        'dropdown': 'type'\n    };\n}\n\n// Unit\nfor (const unit in msg.dictionary.option_unit) {\n    dropdownOptions[d++] = {\n        'label': msg.dictionary.option_unit[unit] + ' (' + unit + ')',\n        'value': unit,\n        'dropdown': 'unit'\n    };\n}\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\n// Action\ndropdownOptions[d++] = {\n    'label': msg.dictionary.group_entity.entity_update,\n    'value': 'update',\n    'dropdown': 'todo'\n};\ndropdownOptions[d++] = {\n    'label': msg.dictionary.group_entity.entity_disable,\n    'value': 'disable',\n    'dropdown': 'todo'\n};\ndropdownOptions[d++] = {\n    'label': msg.dictionary.group_entity.entity_delete,\n    'value': 'remove',\n    'dropdown': 'todo'\n};\n\nmsg.topic = msg.payload.uid;\n//node-red 5.04 bug with dropdown msg.topic\nflow.set('entity[\"' + msg.hmi.id + '\"]', msg.payload.uid, 'memoryOnly');\n\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.entity_edit_name,\n            \"key\": \"name\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_room,\n            \"key\": \"room\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_holder,\n            \"key\": \"holder\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_cardinal,\n            \"key\": \"cardinal\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_element,\n            \"key\": \"element\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_type,\n            \"key\": \"type\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_unit,\n            \"key\": \"unit\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_action,\n            \"key\": \"todo\"\n        }\n    ],\n    'dropdownOptions': dropdownOptions\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6578,7 +6935,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "save",
-        "func": "if (msg.hmi.level !== 'admin') {\n    \n    return;\n}\n\n// node-red 5.0.4 has bug with dropdown topic\nlet topic = flow.get('entity[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '-';\n\n// delete\nif (msg.payload.remove === true) {\n        let entity = global.get('entity', 'memoryOnly') || {};\n        delete entity[topic];\n        global.set('entity', entity, 'memoryOnly');\n\n        msg.enabled = true;\n        msg.payload = msg.dictionary.notice.save_success;\n        return msg;\n} else {\n    let entity = global.get('entity[\"' + topic + '\"]', 'memoryOnly');\n    if (typeof entity === 'object') {\n        entity['room'] = msg.payload.room;\n        entity['type'] = msg.payload.type;\n        entity['holder'] = msg.payload.holder;\n        entity['cardinal'] = msg.payload.cardinal;\n        entity['element'] = msg.payload.element;\n        entity['unit'] = msg.payload.unit;\n        global.set('entity[\"' + topic + '\"]', entity, 'memoryOnly');\n\n        let name = global.get('name[\"entity\"]', 'default') || {};\n        name[topic] = msg.payload.name;\n        global.set('name[\"entity\"]', name, 'default');\n\n        msg.enabled = true;\n        msg.payload = msg.dictionary.notice.save_success;\n        return msg;\n    }\n}\n\nreturn;",
+        "func": "if (msg.hmi.level !== 'admin') {\n    \n    return;\n}\n\nlet todo = msg.payload.todo;\ndelete msg.payload.todo;\n\n// node-red 5.0.4 has bug with dropdown topic\nlet topic = flow.get('entity[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '-';\n\n// delete\nif (todo === 'remove') {\n        let entity = global.get('entity', 'memoryOnly') || {};\n        delete entity[topic];\n        global.set('entity', entity, 'memoryOnly');\n\n        msg.enabled = true;\n        msg.payload = msg.dictionary.notice.save_success;\n        return msg;\n} else {\n    let entity = global.get('entity[\"' + topic + '\"]', 'memoryOnly');\n    if (typeof entity === 'object') {\n        entity['room'] = msg.payload.room;\n        entity['type'] = msg.payload.type;\n        entity['holder'] = msg.payload.holder;\n        entity['cardinal'] = msg.payload.cardinal;\n        entity['element'] = msg.payload.element;\n        entity['unit'] = msg.payload.unit;\n        entity['hidden'] = todo === 'disable' ? 1 : 0;\n        global.set('entity[\"' + topic + '\"]', entity, 'memoryOnly');\n\n        let name = global.get('name[\"entity\"]', 'default') || {};\n        name[topic] = msg.payload.name;\n        global.set('name[\"entity\"]', name, 'default');\n\n        msg.enabled = true;\n        msg.payload = msg.dictionary.notice.save_success;\n        return msg;\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7241,7 +7598,8 @@
             "4418090c31b190b3",
             "9d2be55b974f961e",
             "1a8726b2de605ecb",
-            "344c6f9b1cdd2cc1"
+            "344c6f9b1cdd2cc1",
+            "6a90a7dc8131bd16"
         ],
         "x": 1615,
         "y": 260,
