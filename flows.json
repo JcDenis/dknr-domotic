@@ -709,12 +709,15 @@
             "dac35c32b868aea8",
             "17ee74250b6fe764",
             "4e7136a46fab4070",
-            "c0162f775400da9e"
+            "c0162f775400da9e",
+            "5d4843dd49b4478b",
+            "41af64d15abfcb75",
+            "42b9b89e3ee6717c"
         ],
         "x": 104,
         "y": 3099,
         "w": 842,
-        "h": 142
+        "h": 202
     },
     {
         "id": "42c8cfb80db1c77e",
@@ -4051,7 +4054,8 @@
         "mode": "link",
         "links": [
             "8704b93076a73d7e",
-            "7f0cf300d60b5706"
+            "7f0cf300d60b5706",
+            "5d4843dd49b4478b"
         ],
         "x": 575,
         "y": 2480,
@@ -5377,6 +5381,63 @@
         "broker": "1f942ba50a9a898b",
         "x": 430,
         "y": 3740,
+        "wires": []
+    },
+    {
+        "id": "5d4843dd49b4478b",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "89ac7be96aabaa70",
+        "name": "common - mqtt - daikin - out",
+        "links": [
+            "a29ec7554a818a6f"
+        ],
+        "x": 145,
+        "y": 3260,
+        "wires": [
+            [
+                "41af64d15abfcb75"
+            ]
+        ]
+    },
+    {
+        "id": "41af64d15abfcb75",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "89ac7be96aabaa70",
+        "name": "parse",
+        "func": "if (msg.payload.source !== 'daikin' ||\n    msg.repeat !== false ||\n    msg.loop !== true\n) {\n\n    return;\n}\n\n// allowed action\nlet pilot = ['pow', 'mode', 'stemp', 'f_rate', 'f_dir'];\nif (!pilot.includes(msg.payload.id)) {\n\n    return;\n}\n\n// remove source from parent\nlet topic = global.get('mqtt.daikin', 'memoryOnly') || '';\nlet parent = msg.payload.parent.slice(msg.payload.source.length + 1)\n\nmsg.topic = [topic, 'set', parent, msg.payload.id].join('/');\nmsg.payload = msg.payload.value;\n\nnode.status({text: msg.topic + ' - ' + msg.payload });\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 3260,
+        "wires": [
+            [
+                "42b9b89e3ee6717c"
+            ]
+        ]
+    },
+    {
+        "id": "42b9b89e3ee6717c",
+        "type": "mqtt out",
+        "z": "4bc72a1112cb448c",
+        "g": "89ac7be96aabaa70",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "c16ec4b19c5752ca",
+        "x": 430,
+        "y": 3260,
         "wires": []
     },
     {
