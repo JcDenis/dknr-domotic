@@ -661,11 +661,12 @@
             "cc0a7c14f877c371",
             "b3e3b0dde3bcdd99",
             "a29ec7554a818a6f",
-            "e964304a04d624f4"
+            "e964304a04d624f4",
+            "0b84426ed74fcabd"
         ],
         "x": 104,
         "y": 2439,
-        "w": 642,
+        "w": 652,
         "h": 142
     },
     {
@@ -712,7 +713,8 @@
             "c0162f775400da9e",
             "5d4843dd49b4478b",
             "41af64d15abfcb75",
-            "42b9b89e3ee6717c"
+            "42b9b89e3ee6717c",
+            "4e39726c1725f1cf"
         ],
         "x": 104,
         "y": 3099,
@@ -745,7 +747,7 @@
         ],
         "x": 104,
         "y": 3339,
-        "w": 812,
+        "w": 882,
         "h": 202
     },
     {
@@ -777,7 +779,7 @@
         ],
         "x": 104,
         "y": 3579,
-        "w": 812,
+        "w": 862,
         "h": 202
     },
     {
@@ -4041,7 +4043,7 @@
         "wires": [
             [
                 "540ace790f3fa1eb",
-                "a29ec7554a818a6f"
+                "0b84426ed74fcabd"
             ]
         ]
     },
@@ -4057,7 +4059,7 @@
             "7f0cf300d60b5706",
             "5d4843dd49b4478b"
         ],
-        "x": 575,
+        "x": 715,
         "y": 2480,
         "wires": []
     },
@@ -4066,7 +4068,7 @@
         "type": "delay",
         "z": "4bc72a1112cb448c",
         "g": "be2dde01217c4ebd",
-        "name": "10/s",
+        "name": "30/s",
         "pauseType": "rate",
         "timeout": "5",
         "timeoutUnits": "seconds",
@@ -4520,7 +4522,8 @@
         "y": 3200,
         "wires": [
             [
-                "c0162f775400da9e"
+                "c0162f775400da9e",
+                "4e39726c1725f1cf"
             ]
         ]
     },
@@ -4546,7 +4549,7 @@
         "name": "From docker dknr-daikin",
         "info": "https://github.com/JcDenis/dknr-daikin",
         "x": 810,
-        "y": 3140,
+        "y": 3260,
         "wires": []
     },
     {
@@ -4574,6 +4577,7 @@
         "id": "72aae6174b64a06c",
         "type": "function",
         "z": "4bc72a1112cb448c",
+        "d": true,
         "g": "3db71c2c17730bd8",
         "name": "enum",
         "func": "\nreturn msg;",
@@ -4775,7 +4779,7 @@
         "name": "From zig2mqtt",
         "info": "",
         "x": 770,
-        "y": 3380,
+        "y": 3500,
         "wires": []
     },
     {
@@ -4973,7 +4977,7 @@
         "name": "From zwave",
         "info": "Using zwavejs",
         "x": 770,
-        "y": 3620,
+        "y": 3740,
         "wires": []
     },
     {
@@ -5045,8 +5049,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 650,
-        "y": 3740,
+        "x": 810,
+        "y": 3620,
         "wires": []
     },
     {
@@ -5118,11 +5122,11 @@
         "type": "delay",
         "z": "4bc72a1112cb448c",
         "g": "fb34af284a5fbd90",
-        "name": "10ms",
-        "pauseType": "delay",
+        "name": "20/s",
+        "pauseType": "rate",
         "timeout": "10",
         "timeoutUnits": "milliseconds",
-        "rate": "1",
+        "rate": "20",
         "nbRateUnits": "1",
         "rateUnits": "second",
         "randomFirst": "1",
@@ -5144,11 +5148,11 @@
         "type": "delay",
         "z": "4bc72a1112cb448c",
         "g": "3db71c2c17730bd8",
-        "name": "10ms",
-        "pauseType": "delay",
+        "name": "20/s",
+        "pauseType": "rate",
         "timeout": "10",
         "timeoutUnits": "milliseconds",
-        "rate": "1",
+        "rate": "20",
         "nbRateUnits": "1",
         "rateUnits": "second",
         "randomFirst": "1",
@@ -5170,11 +5174,11 @@
         "type": "delay",
         "z": "4bc72a1112cb448c",
         "g": "89ac7be96aabaa70",
-        "name": "10ms",
-        "pauseType": "delay",
+        "name": "20/s",
+        "pauseType": "rate",
         "timeout": "10",
         "timeoutUnits": "milliseconds",
-        "rate": "1",
+        "rate": "20",
         "nbRateUnits": "1",
         "rateUnits": "second",
         "randomFirst": "1",
@@ -5196,7 +5200,7 @@
         "type": "delay",
         "z": "4bc72a1112cb448c",
         "g": "42c8cfb80db1c77e",
-        "name": "10ms",
+        "name": "20/s",
         "pauseType": "delay",
         "timeout": "10",
         "timeoutUnits": "milliseconds",
@@ -5222,11 +5226,11 @@
         "type": "delay",
         "z": "4bc72a1112cb448c",
         "g": "4350d3ede367f1ca",
-        "name": "10ms",
-        "pauseType": "delay",
-        "timeout": "10",
+        "name": "20/s",
+        "pauseType": "rate",
+        "timeout": "20",
         "timeoutUnits": "milliseconds",
-        "rate": "1",
+        "rate": "20",
         "nbRateUnits": "1",
         "rateUnits": "second",
         "randomFirst": "1",
@@ -5313,8 +5317,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 660,
-        "y": 3500,
+        "x": 820,
+        "y": 3380,
         "wires": []
     },
     {
@@ -5439,6 +5443,50 @@
         "x": 430,
         "y": 3260,
         "wires": []
+    },
+    {
+        "id": "4e39726c1725f1cf",
+        "type": "debug",
+        "z": "4bc72a1112cb448c",
+        "g": "89ac7be96aabaa70",
+        "name": "common - mqtt - daikin",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 3140,
+        "wires": []
+    },
+    {
+        "id": "0b84426ed74fcabd",
+        "type": "delay",
+        "z": "4bc72a1112cb448c",
+        "g": "be2dde01217c4ebd",
+        "name": "5ms",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 590,
+        "y": 2480,
+        "wires": [
+            [
+                "a29ec7554a818a6f"
+            ]
+        ]
     },
     {
         "id": "d7bc8fc74bfc07cb",
@@ -6621,23 +6669,6 @@
         ]
     },
     {
-        "id": "259a756a805e7704",
-        "type": "debug",
-        "z": "560376d6bba621ec",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 3060,
-        "y": 620,
-        "wires": []
-    },
-    {
         "id": "252938343b5dcf68",
         "type": "function",
         "z": "560376d6bba621ec",
@@ -6682,7 +6713,7 @@
         "className": "ui-title",
         "value": "payload",
         "valueType": "msg",
-        "x": 2550,
+        "x": 2570,
         "y": 620,
         "wires": []
     },
@@ -6715,7 +6746,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3390,
+        "x": 3430,
         "y": 680,
         "wires": [
             [
@@ -6752,7 +6783,7 @@
         "links": [
             "289e0a6cd1209c38"
         ],
-        "x": 3535,
+        "x": 3575,
         "y": 560,
         "wires": []
     },
@@ -6780,7 +6811,7 @@
         "z": "560376d6bba621ec",
         "name": "500ms",
         "pauseType": "delay",
-        "timeout": "500",
+        "timeout": "200",
         "timeoutUnits": "milliseconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -6806,7 +6837,7 @@
         "z": "560376d6bba621ec",
         "name": "510ms",
         "pauseType": "delay",
-        "timeout": "510",
+        "timeout": "210",
         "timeoutUnits": "milliseconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -6822,7 +6853,9 @@
         "wires": [
             [
                 "3ff60ae0f3c9d037",
-                "c22bda1a9d69f288"
+                "c22bda1a9d69f288",
+                "29af0940f1b6e590",
+                "0acafb21eca88813"
             ]
         ]
     },
@@ -6831,14 +6864,14 @@
         "type": "function",
         "z": "560376d6bba621ec",
         "name": "title",
-        "func": "let aperture = ['aperture', 'door', 'window', 'shutter'];\nmsg.ui_update = {\n    'label': ''\n}\n\n// title\nlet entity_name = global.get('name[\"entity\"][\"' + msg.payload.uid + '\"]', 'memoryOnly') || '';\nif (entity_name === '' || entity_name === msg.payload.id) {\n    entity_name = global.get('name[\"device\"][\"' + msg.payload.parent + '\"]', 'memoryOnly') || msg.payload.parent;\n}\nlet room_name = global.get('name[\"room\"][\"' + msg.payload.room + '\"]', 'memoryOnly') || '';\nlet element_name = msg.dictionary.option_element[msg.payload.element];\nif (aperture.includes(msg.payload.element)) {\n    msg.payload = entity_name + ' - ' + element_name + ' - ' + room_name;\n} else {\n    msg.payload = element_name + ' - ' + entity_name + ' - ' + room_name;\n}\n\nreturn msg;",
+        "func": "let aperture = ['aperture', 'door', 'window', 'shutter'];\nmsg.ui_update = {\n    'label': ''\n}\n\n// title\nlet entity_name = global.get('name[\"entity\"][\"' + msg.payload.uid + '\"]', 'memoryOnly') || '';\nif (entity_name === '' || entity_name === msg.payload.id) {\n    entity_name = global.get('name[\"device\"][\"' + msg.payload.parent + '\"]', 'memoryOnly') || msg.payload.parent;\n}\nlet room_name = global.get('name[\"room\"][\"' + msg.payload.room + '\"]', 'memoryOnly') || '';\nlet element_name = msg.dictionary.option_element[msg.payload.element];\nif (aperture.includes(msg.payload.element)) {\n    //msg.payload = entity_name + ' - ' + element_name + ' - ' + room_name;\n} else {\n    //msg.payload = element_name + ' - ' + entity_name + ' - ' + room_name;\n}\n// for now, without element name\nmsg.payload = entity_name + ' - ' + room_name;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2310,
+        "x": 2330,
         "y": 620,
         "wires": [
             [
@@ -6892,7 +6925,7 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 2470,
+        "x": 2490,
         "y": 740,
         "wires": [
             [
@@ -6905,7 +6938,7 @@
         "type": "function",
         "z": "560376d6bba621ec",
         "name": "command percent",
-        "func": "// command percent\nif (msg.payload.type === 'command' && msg.payload.unit === '%') {\n    msg.ui_update = {\n        'label': msg.dictionary.option_element[msg.payload.element],\n        'class': ''\n    };\n    msg.payload = msg.payload.value;\n    msg.plop = 'waza';\n\n    return msg;\n}\n\nreturn;",
+        "func": "// command percent\nif (msg.payload.type === 'command' && msg.payload.unit === '%') {\n    msg.ui_update = {\n        'label': msg.dictionary.option_element[msg.payload.element],\n        'class': ''\n    };\n    msg.payload = msg.payload.value;\n\n    return msg;\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6935,7 +6968,7 @@
         "outs": "end",
         "topic": "topic",
         "topicType": "msg",
-        "thumbLabel": "true",
+        "thumbLabel": "false",
         "showTicks": "false",
         "min": 0,
         "max": "100",
@@ -6946,8 +6979,8 @@
         "color": "",
         "colorTrack": "",
         "colorThumb": "",
-        "showTextField": false,
-        "x": 2480,
+        "showTextField": true,
+        "x": 2500,
         "y": 800,
         "wires": [
             [
@@ -6960,19 +6993,21 @@
         "type": "function",
         "z": "560376d6bba621ec",
         "name": "hide",
-        "func": "msg.class = 'remove',\nmsg.enabled = false;\nmsg.payload = false;\nmsg.ui_update = {\n    'label': '',\n    'class': 'd-none'\n}\n\nreturn msg;",
+        "func": "msg.class = 'remove',\nmsg.enabled = false;\nmsg.payload = false;\nmsg.ui_update = {\n    'label': '',\n    'options': [],\n    'class': 'd-none'\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2310,
+        "x": 2330,
         "y": 680,
         "wires": [
             [
                 "51010ef1d15ac94c",
-                "cde7e255d559082a"
+                "cde7e255d559082a",
+                "665bd6eb3895ca09",
+                "bfca3b4e772b111b"
             ]
         ]
     },
@@ -6982,7 +7017,7 @@
         "z": "560376d6bba621ec",
         "name": "Wait \"show dialog\" then wait \"hide\" then \"show\"",
         "info": "To hide ui-xxx, use:\nmsg.ui_update.class = d-none';\nmsg.class = 'remove';",
-        "x": 2600,
+        "x": 2620,
         "y": 680,
         "wires": []
     },
@@ -7003,7 +7038,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 3050,
+        "x": 3090,
         "y": 680,
         "wires": [
             [
@@ -7021,7 +7056,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 2690,
+        "x": 2730,
         "y": 740,
         "wires": [
             [
@@ -7041,7 +7076,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3210,
+        "x": 3250,
         "y": 680,
         "wires": [
             [
@@ -7061,13 +7096,13 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2890,
+        "x": 2930,
         "y": 740,
         "wires": [
             [
                 "9a4ba68c1ec7229b",
-                "259a756a805e7704",
-                "9d415c5d88aaac86"
+                "9d415c5d88aaac86",
+                "373e79bc954a0e10"
             ]
         ]
     },
@@ -7081,7 +7116,149 @@
             "cc0a7c14f877c371",
             "7f4aee4ddcd7320f"
         ],
-        "x": 3015,
+        "x": 3055,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "29af0940f1b6e590",
+        "type": "function",
+        "z": "560376d6bba621ec",
+        "name": "command temperature",
+        "func": "// command percent\nif (msg.payload.type === 'command' && ['°C', '°F'].includes(msg.payload.unit)) {\n    let icons = global.get('describe[\"elements\"][\"' + msg.payload.element + '\"]', 'memoryOnly') || ['', ''];\n    msg.ui_update = {\n        'label': msg.dictionary.option_element[msg.payload.element],\n        'class': ''\n    };\n    msg.payload = msg.payload.value;\n    msg.plop = 'waza';\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2280,
+        "y": 860,
+        "wires": [
+            [
+                "665bd6eb3895ca09"
+            ]
+        ]
+    },
+    {
+        "id": "665bd6eb3895ca09",
+        "type": "ui-slider",
+        "z": "560376d6bba621ec",
+        "group": "9dca42b48aec683d",
+        "name": "temperature",
+        "label": "",
+        "tooltip": "",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "thumbLabel": "false",
+        "showTicks": "false",
+        "min": "-5",
+        "max": "50",
+        "step": 1,
+        "className": "",
+        "iconPrepend": "",
+        "iconAppend": "",
+        "color": "",
+        "colorTrack": "",
+        "colorThumb": "",
+        "showTextField": true,
+        "x": 2510,
+        "y": 860,
+        "wires": [
+            [
+                "620fc0330d63fdea"
+            ]
+        ]
+    },
+    {
+        "id": "0acafb21eca88813",
+        "type": "function",
+        "z": "560376d6bba621ec",
+        "name": "command enum",
+        "func": "// command percent\nif (msg.payload.type === 'command' && msg.payload.unit === 'enum') {\n    let enums = global.get('describe[\"enum\"][\"' + msg.payload.source + '\"][\"' + msg.payload.id + '\"]', 'memoryOnly') || {};\n    let options = [];\n    let i = 0;\n    for (const k in enums) {\n        options[i++] = { 'value': k, 'icon': enums[k][0] };\n    }\n    msg.ui_update = {\n        'label': msg.dictionary.option_element[msg.payload.element],\n        'options': options,\n        'class': ''\n    };\n    msg.payload = msg.payload.value.toString();\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2260,
+        "y": 920,
+        "wires": [
+            [
+                "bfca3b4e772b111b"
+            ]
+        ]
+    },
+    {
+        "id": "bfca3b4e772b111b",
+        "type": "ui-button-group",
+        "z": "560376d6bba621ec",
+        "name": "",
+        "group": "9dca42b48aec683d",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "label": "button group",
+        "className": "",
+        "rounded": true,
+        "useThemeColors": true,
+        "passthru": false,
+        "options": [
+            {
+                "label": "",
+                "icon": "",
+                "value": "option_0",
+                "valueType": "str",
+                "color": "#009933"
+            },
+            {
+                "label": "",
+                "icon": "",
+                "value": "option_1",
+                "valueType": "str",
+                "color": "#999999"
+            }
+        ],
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 2510,
+        "y": 920,
+        "wires": [
+            [
+                "620fc0330d63fdea"
+            ]
+        ]
+    },
+    {
+        "id": "373e79bc954a0e10",
+        "type": "debug",
+        "z": "560376d6bba621ec",
+        "name": "room - detail",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3110,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "c49c495447d5d5eb",
+        "type": "comment",
+        "z": "560376d6bba621ec",
+        "name": "todo: put a dynamic delay",
+        "info": "",
+        "x": 2010,
         "y": 740,
         "wires": []
     },
