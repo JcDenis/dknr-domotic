@@ -748,7 +748,11 @@
             "2afef736f8debc96",
             "c56da29053349405",
             "db5def985887ea3f",
-            "fa0ae8233592e352"
+            "fa0ae8233592e352",
+            "2e769390f22a4eb7",
+            "0b110dae421cde2a",
+            "4bed2e6513fc8d52",
+            "39f58c630debf66e"
         ],
         "x": 104,
         "y": 3339,
@@ -2323,7 +2327,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "common",
-        "func": "let describe = global.get('describe', 'memoryOnly') || {};\nif (typeof describe !== 'object') {\n    describe = {};\n}\nif (typeof describe.pages !== 'object') {\n    describe.pages = {};\n}\n\n// Set default app values\ndescribe.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\ndescribe.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\ndescribe.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['tuning'] = {\n    'id': '1c3c77208d684dc0',\n    'name': 'tuning',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['scene'] = {\n    'id': '1e9f5bde9636a371',\n    'name': 'scene',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['entity'] = {\n    'id': '2b12391aa314ef62',\n    'name': 'entity',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': false,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// Elements icons\ndescribe.elements = {\n    'switch': ['toggle-switch-off-outline', 'toggle-switch-outline'],\n    'power': ['flash-outline', 'flash'],\n    'light': ['lightbulb-off', 'lightbulb'],\n    'plug': ['power-plug-off', 'power-plug'],\n    'remote': ['remote-off', 'remote'],\n    'motion': ['motion-sensor-off', 'motion-sensor'],\n    'presence': ['localtion-exit', 'location-enter'],\n    'aperture': ['electric-switch-closed', 'electric-switch'],\n    'door': ['door-open', 'door-closed'],\n    'window': ['window-open-variant', 'window-closed-variant'],\n    'shutter': ['window-shutter', 'window-shutter-open'],\n    'slider': ['door-sliding-open', 'door-sliding'],\n    'heater': ['radiator-off', 'radiator'],\n    'lock': ['lock-off', 'lock'],\n    'alert': ['bell-off', 'bell'],\n    'sound': ['volume-off', 'volume-hight'],\n    'temperature': ['thermometer-off', 'thermometer'],\n    'humidity': ['water-percent-alert', 'water-percent'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless'],\n    'wind': ['weather-windy', 'weather-dust'],\n    'fan': ['fan-off', 'fan'],\n    'direction': ['swap-horizontal', 'swap-horizontal-bold'],\n    'time': ['clock-outline', 'clock'],\n    'battery': ['battery-low', 'battery'],\n    'climate': ['home-thermometer-outline', 'home-thermometer'],\n    'current': ['current-ac', 'sine-wave'],\n    'energy': ['meter-electric-outline', 'meter-electric'],\n    'pressure': ['gauge', 'gauge'],\n    'mode': ['home-switch-outline', 'home-switch'],\n    'text': ['clipboard-text-off', 'clipboard-text']\n};\n\n\n// Value color\ndescribe.colors = {\n    'on': '#008000',\n    'off': '#FF0000',\n    'median': '#F08000',\n    'none': '#808000',\n    'theme': '#0094CE',\n    'empty': '#CCCCCC'\n};\n\n// Save config\nglobal.set('describe', describe, 'memoryOnly');\n\n// Clear user and more\nglobal.set('auth',{},'memoryOnly');\nglobal.set('user',{},'memoryOnly');\nglobal.set('form',{},'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/.config.projects.json'\n};",
+        "func": "let describe = global.get('describe', 'memoryOnly') || {};\nif (typeof describe !== 'object') {\n    describe = {};\n}\nif (typeof describe.pages !== 'object') {\n    describe.pages = {};\n}\n\n// Set default app values\ndescribe.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\ndescribe.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\ndescribe.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['tuning'] = {\n    'id': '1c3c77208d684dc0',\n    'name': 'tuning',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['scene'] = {\n    'id': '1e9f5bde9636a371',\n    'name': 'scene',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['entity'] = {\n    'id': '2b12391aa314ef62',\n    'name': 'entity',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': false,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// Sources\ndescribe.sources['dknr'] = ['eye', 'Domotic'];\n\n// Binary element with revert value\ndescribe.reverts = ['aperture', 'door', 'window', 'lock'];\n\n// Elements icons\ndescribe.elements = {\n    'switch': ['toggle-switch-off-outline', 'toggle-switch-outline'],\n    'power': ['flash-outline', 'flash'],\n    'light': ['lightbulb-off', 'lightbulb'],\n    'plug': ['power-plug-off', 'power-plug'],\n    'remote': ['remote-off', 'remote'],\n    'motion': ['motion-sensor-off', 'motion-sensor'],\n    'presence': ['localtion-exit', 'location-enter'],\n    'aperture': ['electric-switch-closed', 'electric-switch'], // 0=open\n    'door': ['door-closed', 'door-open'], // 0=open\n    'window': ['window-closed-variant', 'window-open-variant'], //0=open\n    'lock': ['lock-off', 'lock'], //0=open\n    'shutter': ['window-shutter', 'window-shutter-open'],\n    'slider': ['door-sliding', 'door-sliding-open'],\n    'heater': ['radiator-off', 'radiator'],\n    'alert': ['bell-off', 'bell'],\n    'sound': ['volume-off', 'volume-hight'],\n    'temperature': ['thermometer-off', 'thermometer'],\n    'humidity': ['water-percent-alert', 'water-percent'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless'],\n    'wind': ['weather-windy', 'weather-dust'],\n    'fan': ['fan-off', 'fan'],\n    'direction': ['swap-horizontal', 'swap-horizontal-bold'],\n    'time': ['clock-outline', 'clock'],\n    'battery': ['battery-low', 'battery'],\n    'climate': ['home-thermometer-outline', 'home-thermometer'],\n    'current': ['current-ac', 'sine-wave'],\n    'energy': ['meter-electric-outline', 'meter-electric'],\n    'pressure': ['gauge', 'gauge'],\n    'mode': ['home-switch-outline', 'home-switch'],\n    'text': ['clipboard-text-off', 'clipboard-text']\n};\n\n\n// Value color\ndescribe.colors = {\n    'on': '#008000',\n    'off': '#FF0000',\n    'median': '#F08000',\n    'none': '#808000',\n    'theme': '#0094CE',\n    'empty': '#CCCCCC'\n};\n\n// Save config\nglobal.set('describe', describe, 'memoryOnly');\n\n// Clear user and more\nglobal.set('auth',{},'memoryOnly');\nglobal.set('user',{},'memoryOnly');\nglobal.set('form',{},'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/.config.projects.json'\n};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3424,7 +3428,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "init",
-        "func": "flow.set('stop', false, 'memoryOnly');\n\nlet memorized = {\n    'auth': {},\n    'entity': {},\n    'mqtt': {},\n    'name': { 'room': {}, 'device': {}, 'entity': {} }\n}\n\n// Copy backup or at least init\nfor (const key in memorized) {\n    global.set(key, (global.get(key, 'default') || memorized[key]), 'memoryOnly');\n}\n\n// Reset variables\nglobal.set('browser', {}, 'memoryOnly');\nglobal.set('describe', { 'project': '', 'app': {}, 'pages': {}, 'enum': {}, 'elements': {} }, 'memoryOnly');\nglobal.set('dictionary', {}, 'memoryOnly');\nglobal.set('form', {}, 'memoryOnly');\nglobal.set('user', {}, 'memoryOnly');\n\n// start\nmsg.payload = {\n    'pages': {},\n    'enum': {},\n    'dictionary': {}\n};\n\nreturn msg;",
+        "func": "flow.set('stop', false, 'memoryOnly');\n\nlet memorized = {\n    'auth': {},\n    'entity': {},\n    'mqtt': {},\n    'name': { 'room': {}, 'device': {}, 'entity': {} }\n}\n\n// Copy backup or at least init\nfor (const key in memorized) {\n    global.set(key, (global.get(key, 'default') || memorized[key]), 'memoryOnly');\n}\n\n// Reset variables\nglobal.set('browser', {}, 'memoryOnly');\nglobal.set('describe', { 'project': '', 'app': {}, 'pages': {}, 'sources': {}, 'enum': {}, 'elements': {} }, 'memoryOnly');\nglobal.set('dictionary', {}, 'memoryOnly');\nglobal.set('form', {}, 'memoryOnly');\nglobal.set('user', {}, 'memoryOnly');\n\n// start\nmsg.payload = {\n    'pages': {},\n    'sources': {},\n    'enum': {},\n    'dictionary': {}\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3633,7 +3637,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "check",
-        "func": "if (typeof msg.payload !== 'object') {\n    msg.payload = {};\n}\nif (typeof msg.payload.pages !== 'object') {\n    msg.payload.pages = {};\n}\nif (typeof msg.payload.enum !== 'object') {\n    msg.payload.enum = {};\n}\nif (typeof msg.payload.dictionary !== 'object') {\n    msg.payload.dictionary = {};\n}\n\nlet describe = global.get('describe', 'memoryOnly') || {};\nfor (const p in msg.payload.pages) {\n    describe.pages[p] = msg.payload.pages[p];\n}\nfor (const e in msg.payload.enum) {\n    describe.enum[e] = msg.payload.enum[e];\n}\n\nglobal.set('describe', describe, 'memoryOnly');\n\nlet dictionary = global.get('dictionary', 'memoryOnly') || {};\nfor (const lang in msg.payload.dictionary) {\n    if (typeof dictionary[lang] !== 'object') {\n        dictionary[lang] = {};\n    }\n    if (typeof msg.payload.dictionary[lang] === 'object') {\n        for (const group in msg.payload.dictionary[lang]) {\n            if (typeof dictionary[lang][group] !== 'object') {\n                dictionary[lang][group] = {};\n            }\n            if (typeof msg.payload.dictionary[lang][group] === 'object') {\n                for (const sentence in msg.payload.dictionary[lang][group]) {\n                    // custom sentence overwrite existing ones\n                    dictionary[lang][group][sentence] = msg.payload.dictionary[lang][group][sentence];\n                }\n            }\n        }\n    }\n}\n\nglobal.set('dictionary', dictionary, 'memoryOnly');\n\nreturn msg;",
+        "func": "if (typeof msg.payload !== 'object') {\n    msg.payload = {};\n}\nif (typeof msg.payload.pages !== 'object') {\n    msg.payload.pages = {};\n}\nif (typeof msg.payload.sources !== 'object') {\n    msg.payload.sources = {};\n}\nif (typeof msg.payload.enum !== 'object') {\n    msg.payload.enum = {};\n}\nif (typeof msg.payload.dictionary !== 'object') {\n    msg.payload.dictionary = {};\n}\n\nlet describe = global.get('describe', 'memoryOnly') || {};\nfor (const p in msg.payload.pages) {\n    describe.pages[p] = msg.payload.pages[p];\n}\nfor (const s in msg.payload.sources) {\n    describe.sources[s] = msg.payload.sources[s];\n}\nfor (const e in msg.payload.enum) {\n    describe.enum[e] = msg.payload.enum[e];\n}\n\nglobal.set('describe', describe, 'memoryOnly');\n\nlet dictionary = global.get('dictionary', 'memoryOnly') || {};\nfor (const lang in msg.payload.dictionary) {\n    if (typeof dictionary[lang] !== 'object') {\n        dictionary[lang] = {};\n    }\n    if (typeof msg.payload.dictionary[lang] === 'object') {\n        for (const group in msg.payload.dictionary[lang]) {\n            if (typeof dictionary[lang][group] !== 'object') {\n                dictionary[lang][group] = {};\n            }\n            if (typeof msg.payload.dictionary[lang][group] === 'object') {\n                for (const sentence in msg.payload.dictionary[lang][group]) {\n                    // custom sentence overwrite existing ones\n                    dictionary[lang][group][sentence] = msg.payload.dictionary[lang][group][sentence];\n                }\n            }\n        }\n    }\n}\n\nglobal.set('dictionary', dictionary, 'memoryOnly');\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4044,7 +4048,7 @@
         "z": "4bc72a1112cb448c",
         "g": "fb34af284a5fbd90",
         "name": "parse",
-        "func": "let res = {\n    'topic':'',\n    'payload': {}\n};\n\nif (typeof msg.payload === 'object' && \n    typeof msg.payload.ADCO === 'object' && \n    typeof msg.payload.ADCO.raw === 'string'\n) {\n    node.status({ text: msg.payload.ADCO.raw });\n\n    for (const key in msg.payload){\n        if (key === 'PTEC') {\n            // Convert HC to bin\n            msg.payload[key]['value'] = msg.payload[key]['value'] === 'HC' ? 0 : 1;\n            msg.payload[key]['unit'] = 'b';\n        }\n\n        res.payload.id = key;\n        res.payload.source = 'teleinfo';\n        res.payload.parent = msg.payload.ADCO.raw;\n        res.payload.unit = msg.payload[key]['unit'];\n        res.payload.value = msg.payload[key]['value'];\n        res.payload.name = msg.payload[key]['name'];\n        res.payload.seen = Date.now();\n\n        node.send(res);\n    }\n}\n\nreturn;",
+        "func": "let res = {\n    'topic':'',\n    'payload': {}\n};\n\nif (typeof msg.payload === 'object' && \n    typeof msg.payload.ADCO === 'object' && \n    typeof msg.payload.ADCO.raw === 'string'\n) {\n    node.status({ text: msg.payload.ADCO.raw });\n\n    for (const key in msg.payload){\n        if (['ADCO', 'PTEC', 'OPTARIF', 'HHPHC'].includes(key)) {\n            msg.payload[key]['unit'] = 'text';\n        }\n\n        res.payload.id = key;\n        res.payload.source = 'teleinfo';\n        res.payload.parent = msg.payload.ADCO.raw;\n        res.payload.unit = msg.payload[key]['unit'];\n        res.payload.value = msg.payload[key]['value'];\n        res.payload.name = msg.payload[key]['name'];\n        res.payload.seen = Date.now();\n\n        node.send(res);\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4104,7 +4108,7 @@
         "z": "4bc72a1112cb448c",
         "g": "be2dde01217c4ebd",
         "name": "check",
-        "func": "// Stop loop from elsewhere\nlet stop = flow.get('stop', 'memoryOnly') || false;\n\n// Check required fields\nif (stop === true ||\n    typeof msg.payload !== 'object' || \n    typeof msg.payload.source !== 'string' || \n    typeof msg.payload.parent !== 'string' || \n    typeof msg.payload.id !== 'string' || \n    typeof msg.payload.value === 'undefined'\n) {\n\n    return;\n}\n\n// Default keys\nlet template = {\n    'uid': '',\n    'source': '',\n    'id': '',\n    'parent': '',\n    'value': '',\n    'type': '',\n    'room': '',\n    'element': '',\n    'unit': '',\n    'seen': 0,\n    'hidden': 0\n};\n\n// Rebuilt some keys\nif (msg.payload.parent.slice(0, msg.payload.source.length) !== msg.payload.source) {\n    // dot not add source on loop\n    msg.payload.parent = msg.payload.source + '_' + msg.payload.parent;\n}\nmsg.payload.uid = msg.payload.parent + '_' + msg.payload.id;\n\n// Convert boolean to int\nif (typeof msg.payload.value === 'boolean') {\n    msg.payload.value = msg.payload.value ? 1 : 0;\n}\n\n// Get existing entity\nlet entity = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\nlet protect = ['room', 'element', 'unit'];\n\n// For now, hide new entity\ntemplate['hidden'] = (typeof entity['hidden'] !== 'number') ? 1 : 0;\n\n// Set all entity fields\nentity = {...template, ...entity};\n\n// Check if value changes\nmsg.repeat = entity['value'] === msg.payload.value ? true : false;\n\nfor (const k in msg.payload) {\n    // Clean up old record\n    if (typeof template[k] !== 'undefined') {\n        // Set entity name if entity is new\n        if (k === 'name' && entity.id === '') {\n            let name = global.get('name[\"entity\"]', 'memoryOnly') || {};\n            if (typeof name[msg.payload.uid] !== 'string' || name[msg.payload.uid] === '') {\n                name[msg.payload.uid] = msg.payload.name;\n                global.set('name[\"entity\"]', name, 'memoryOnly')\n            }\n        }\n\n        if (protect.includes(k) && entity[k] !== '') {\n            // Do not override some properties\n        } else {\n            entity[k] = msg.payload[k];\n        }\n    }\n}\n\nif (msg.remove === true) {\n    // todo\n}\n\nglobal.set('entity[\"' + entity.uid + '\"]', entity, 'memoryOnly');\n\nnode.status({ fill: \"green\", shape: \"ring\", text: entity.uid + ' : ' + entity.value});\n\n// To alert connector (ak zwave...) that this is an update, set loop to true\nif (typeof msg.loop !== 'boolean') {\n    msg.loop = false;\n}\nmsg.topic = '';\nmsg.payload = entity;\n\nreturn msg;",
+        "func": "// Stop loop from elsewhere\nlet stop = flow.get('stop', 'memoryOnly') || false;\n\n// Check required fields\nif (stop === true ||\n    typeof msg.payload !== 'object' || \n    typeof msg.payload.source !== 'string' || \n    typeof msg.payload.parent !== 'string' || \n    typeof msg.payload.id !== 'string' || \n    typeof msg.payload.value === 'undefined'\n) {\n\n    return;\n}\n\n// Default keys\nlet template = {\n    'uid': '',\n    'source': '',\n    'id': '',\n    'parent': '',\n    'value': '',\n    'type': '',\n    'room': '',\n    'element': '',\n    'unit': '',\n    'seen': 0,\n    'hidden': 0\n};\n\n// Rebuilt some keys\nif (msg.payload.parent.slice(0, msg.payload.source.length) !== msg.payload.source) {\n    // dot not add source on loop\n    msg.payload.parent = msg.payload.source + '_' + msg.payload.parent;\n}\nmsg.payload.uid = msg.payload.parent + '_' + msg.payload.id;\n\n// Always convert boolean to int\nif (typeof msg.payload.value === 'boolean') {\n    msg.payload.value = msg.payload.value ? 1 : 0;\n}\n\n// Get existing entity\nlet entity = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\nlet protect = ['room', 'element', 'unit'];\n\n// For now, hide new entity\ntemplate['hidden'] = (typeof entity['hidden'] !== 'number') ? 1 : 0;\n\n// Set all entity fields\nentity = {...template, ...entity};\nlet old_value = entity['value'];\n\nfor (const k in msg.payload) {\n    // Clean up old record\n    if (typeof template[k] !== 'undefined') {\n        // Set entity name if entity is new\n        if (k === 'name' && entity.id === '') {\n            let name = global.get('name[\"entity\"]', 'memoryOnly') || {};\n            if (typeof name[msg.payload.uid] !== 'string' || name[msg.payload.uid] === '') {\n                name[msg.payload.uid] = msg.payload.name;\n                global.set('name[\"entity\"]', name, 'memoryOnly')\n            }\n        }\n\n        // check protected fields\n        if (protect.includes(k) && entity[k] !== '') {\n            // Do not override some properties\n        } else {\n            entity[k] = msg.payload[k];\n        }\n    }\n}\n\n// Cleanup value, convert to 0-1. (boolean is int, see above)\nif (entity['unit'] === 'b') {\n    // Higher than 0 is 1\n    entity['value'] = entity['value'] === 0 ? 0 : 1\n}\n\n// Check if value changes\nmsg.repeat = old_value === entity['value'] ? true : false;\n\n\nif (msg.remove === true) {\n    // todo\n}\n\nglobal.set('entity[\"' + entity.uid + '\"]', entity, 'memoryOnly');\n\nnode.status({ fill: \"green\", shape: \"ring\", text: entity.uid + ' : ' + entity.value});\n\n// To alert connector (ak zwave...) that this is an update, set loop to true\nif (typeof msg.loop !== 'boolean') {\n    msg.loop = false;\n}\nmsg.topic = '';\nmsg.payload = entity;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4130,7 +4134,8 @@
         "links": [
             "8704b93076a73d7e",
             "7f0cf300d60b5706",
-            "5d4843dd49b4478b"
+            "5d4843dd49b4478b",
+            "2e769390f22a4eb7"
         ],
         "x": 715,
         "y": 2480,
@@ -4370,7 +4375,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "dictionary en",
-        "func": "msg.payload.en = {\n    'config': {\n        'locales': 'en-GB'\n    },\n    'option_page': {\n        'home': 'Home',\n        'room': 'Rooms',\n        'tuning': 'Adjustments',\n        'scene': 'Scenes',\n        'entity': 'Entities',\n        'config': 'Configuration',\n        'auth': 'Authentication'\n    },\n    'option_level': {\n        'visitor': 'Visitor',\n        'child':  'Child',\n        'parent':'Parent',\n        'admin': 'Administrator'\n    },\n    'option_team': {\n        'm': 'Morning',\n        'a': 'Afternoon',\n        'n': 'Night',\n        'd': 'Day',\n        'w': 'Weekend',\n        's': 'Saturday'\n    },\n    'option_lang': {\n        'en': 'English',\n        'fr': 'French'\n    },\n    'option_type': {\n        'command': 'Command',\n        'sensor': 'Sensor'\n    },\n    'option_element': {\n        'aperture': 'Aperture',\n        'battery': 'Battery',\n        'climate': 'Climate',\n        'current': 'Current',\n        'energy': 'Energy',\n        'power': 'Power',\n        'pressure': 'Pressure',\n        'temperature': 'Temperature',\n        'humidity': 'Humidity',\n        'illuminance': 'Illuminance',\n        'light': 'Light',\n        'switch': 'Switch',\n        'plug': 'Plug',\n        'remote': 'Remote',\n        'door': 'Door',\n        'window': 'Window',\n        'shutter': 'Shutter',\n        'slider': 'Sliding door',\n        'heater': 'Heating',\n        'motion': 'Motion',\n        'presence': 'Presence',\n        'lock': 'Lock',\n        'alert': 'Alert',\n        'sound': 'Volume',\n        'wind': 'Wind',\n        'fan': 'Fan',\n        'direction': 'Direction',\n        'time': 'Clock',\n        'mode': 'Mode',\n        'text': 'Text'\n    },\n    'option_unit': {\n        '': 'None',\n        '°C': 'Degree celsuis',\n        '°F': 'Degree fahrenheit',\n        'mA': 'Milliampere',\n        'A': 'Ampere',\n        'mW': 'Milliwatt',\n        'W': 'Watt',\n        'kW': 'Kilowatt',\n        'MW': 'Megawatt',\n        'mWh': 'Milliwatt/hour',\n        'Wh': 'Watt/Hour',\n        'mVA': 'Millivoltampere',\n        'VA': 'Voltampere',\n        'lx': 'Lux',\n        'ppm': 'Parts per million',\n        '%': 'Percent',\n        'b': 'Binary',\n        'n': 'Number',\n        's': 'Second',\n        'ms': 'Millisecond',\n        'enum': 'Enumerator',\n        'text': 'Text'\n    },\n    'notice': {\n        'file_write_success': 'Saved file successfully',\n        'file_write_fail': 'Failed to save file',\n        'login_fail': 'Wrong username or password',\n        'save_success': 'Successfully saved'\n    },\n    'group_room': {\n        'room_select': 'Select a room',\n        'open': 'Opened',\n        'close': 'Closed',\n        'on': 'On',\n        'off': 'Off',\n        'label_select': 'Selector',\n        'label_various': 'Various',\n        'label_unknown': 'Unknown',\n        'list_title': 'Elements',\n        'detail_title': 'Element detail'\n    },\n    'group_entity': {\n        'room_title': 'Rooms configuration',\n        'room_add': 'Add or edit a room',\n        'room_del': 'Delete a room',\n        'room_id': 'Ident',\n        'room_name': 'Name',\n\n        'entity_title': 'List of received entities',\n        'entity_edit_title': 'Configure entity',\n        'entity_edit_name': 'Name',\n        'entity_edit_room': 'Room',\n        'entity_edit_type': 'Type',\n        'entity_edit_element': 'Element',\n        'entity_edit_action': 'Action',\n        'entity_show': 'Show',\n        'entity_hide': 'Hide',\n        'entity_delete': 'Delete',\n\n        'device_edit_title': 'Configure device',\n        'device_edit_name': 'Device name'\n    },\n    'group_config': {\n        'mqtt_title': 'MQTT configuration',\n        'mqtt_host': 'Broker IP address',\n        'mqtt_port': 'Port',\n        'mqtt_topic': 'Topic',\n        'mqtt_username': 'Username',\n        'mqtt_password': 'Password',\n        'mqtt_discovery': 'Home Assistant Discovery topic',\n        'mqtt_dknrteleinfo': 'Teleinfo topic from dknr-teleinfo docker',\n        'mqtt_dknrapsystems': 'APSystems topic from dknr-apsystems docker',\n        'mqtt_dknrdaikin': 'Daikin topic from dknr-daikin docker',\n        'mqtt_zwavejs': 'Zwave topic from zwave-js-ui docker',\n        'mqtt_zigbee2mqtt': 'Zigbee topic from zigbee2mqtt docker',\n        'mqtt_rfxcom2mqtt': 'RFXCom topic from rfxcom2mqtt docker',\n        'mqtt_enabled': 'Enable MQTT',\n\n        'backup_title': 'Backup configuration',\n        'backup_room': 'Rooms',\n        'backup_entity': 'Entities',\n        'backup_scene': 'Scenes',\n        'backup_user': 'Users',\n        'backup_mqtt': 'MQTT'\n    },\n    'group_auth': {\n        'login': 'Login',\n        'pass': 'Password',\n        'auth_user': 'User'\n    }\n}\n\nreturn msg;",
+        "func": "msg.payload.en = {\n    'config': {\n        'locales': 'en-GB'\n    },\n    'option_page': {\n        'home': 'Home',\n        'room': 'Rooms',\n        'tuning': 'Adjustments',\n        'scene': 'Scenes',\n        'entity': 'Entities',\n        'config': 'Configuration',\n        'auth': 'Authentication'\n    },\n    'option_level': {\n        'visitor': 'Visitor',\n        'child':  'Child',\n        'parent':'Parent',\n        'admin': 'Administrator'\n    },\n    'option_team': {\n        'm': 'Morning',\n        'a': 'Afternoon',\n        'n': 'Night',\n        'd': 'Day',\n        'w': 'Weekend',\n        's': 'Saturday'\n    },\n    'option_lang': {\n        'en': 'English',\n        'fr': 'French'\n    },\n    'option_type': {\n        'command': 'Command',\n        'sensor': 'Sensor'\n    },\n    'option_element': {\n        'aperture': 'Aperture',\n        'battery': 'Battery',\n        'climate': 'Climate',\n        'current': 'Current',\n        'energy': 'Energy',\n        'power': 'Power',\n        'pressure': 'Pressure',\n        'temperature': 'Temperature',\n        'humidity': 'Humidity',\n        'illuminance': 'Illuminance',\n        'light': 'Light',\n        'switch': 'Switch',\n        'plug': 'Plug',\n        'remote': 'Remote',\n        'door': 'Door',\n        'window': 'Window',\n        'shutter': 'Shutter',\n        'slider': 'Sliding door',\n        'heater': 'Heating',\n        'motion': 'Motion',\n        'presence': 'Presence',\n        'lock': 'Lock',\n        'alert': 'Alert',\n        'sound': 'Volume',\n        'wind': 'Wind',\n        'fan': 'Fan',\n        'direction': 'Direction',\n        'time': 'Clock',\n        'mode': 'Mode',\n        'text': 'Text'\n    },\n    'option_unit': {\n        '': 'None',\n        '°C': 'Degree celsuis',\n        '°F': 'Degree fahrenheit',\n        'mA': 'Milliampere',\n        'A': 'Ampere',\n        'mW': 'Milliwatt',\n        'W': 'Watt',\n        'kW': 'Kilowatt',\n        'MW': 'Megawatt',\n        'mWh': 'Milliwatt/hour',\n        'Wh': 'Watt/Hour',\n        'mVA': 'Millivoltampere',\n        'VA': 'Voltampere',\n        'lx': 'Lux',\n        'ppm': 'Parts per million',\n        '%': 'Percent (0-100)',\n        'b': 'Binary (0-1)',\n        'rb': 'Revert binary',\n        '8b': '8-bit (0-255)',\n        'n': 'Number',\n        's': 'Second',\n        'ms': 'Millisecond',\n        'enum': 'Enumerator',\n        'text': 'Text'\n    },\n    'notice': {\n        'file_write_success': 'Saved file successfully',\n        'file_write_fail': 'Failed to save file',\n        'login_fail': 'Wrong username or password',\n        'save_success': 'Successfully saved'\n    },\n    'group_room': {\n        'room_select': 'Select a room',\n        'open': 'Opened',\n        'close': 'Closed',\n        'on': 'On',\n        'off': 'Off',\n        'label_select': 'Selector',\n        'label_various': 'Various',\n        'label_unknown': 'Unknown',\n        'list_title': 'Elements',\n        'detail_title': 'Element detail'\n    },\n    'group_entity': {\n        'room_title': 'Rooms configuration',\n        'room_add': 'Add or edit a room',\n        'room_del': 'Delete a room',\n        'room_id': 'Ident',\n        'room_name': 'Name',\n\n        'entity_title': 'List of received entities',\n        'entity_edit_title': 'Configure entity',\n        'entity_edit_name': 'Name',\n        'entity_edit_room': 'Room',\n        'entity_edit_type': 'Type',\n        'entity_edit_element': 'Element',\n        'entity_edit_action': 'Action',\n        'entity_show': 'Show',\n        'entity_hide': 'Hide',\n        'entity_delete': 'Delete',\n\n        'device_edit_title': 'Configure device',\n        'device_edit_name': 'Device name'\n    },\n    'group_config': {\n        'mqtt_title': 'MQTT configuration',\n        'mqtt_host': 'Broker IP address',\n        'mqtt_port': 'Port',\n        'mqtt_topic': 'Topic',\n        'mqtt_username': 'Username',\n        'mqtt_password': 'Password',\n        'mqtt_discovery': 'Home Assistant Discovery topic',\n        'mqtt_dknrteleinfo': 'Teleinfo topic from dknr-teleinfo docker',\n        'mqtt_dknrapsystems': 'APSystems topic from dknr-apsystems docker',\n        'mqtt_dknrdaikin': 'Daikin topic from dknr-daikin docker',\n        'mqtt_zwavejs': 'Zwave topic from zwave-js-ui docker',\n        'mqtt_zigbee2mqtt': 'Zigbee topic from zigbee2mqtt docker',\n        'mqtt_rfxcom2mqtt': 'RFXCom topic from rfxcom2mqtt docker',\n        'mqtt_enabled': 'Enable MQTT',\n\n        'backup_title': 'Backup configuration',\n        'backup_room': 'Rooms',\n        'backup_entity': 'Entities',\n        'backup_scene': 'Scenes',\n        'backup_user': 'Users',\n        'backup_mqtt': 'MQTT'\n    },\n    'group_auth': {\n        'login': 'Login',\n        'pass': 'Password',\n        'auth_user': 'User'\n    }\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4600,8 +4605,8 @@
         "type": "function",
         "z": "4bc72a1112cb448c",
         "g": "fb34af284a5fbd90",
-        "name": "enum",
-        "func": "msg.payload.enum.teleinfo = {\n    'PTEC': {\n        'HC': ['trending-up', 'Heures pleines'],\n        'HP': ['trending-down', 'Heures creuses'],\n    }\n};\n\nreturn msg;",
+        "name": "init",
+        "func": "msg.payload.sources.teleinfo = ['meter-electric', 'Teleinfo'];\n\nmsg.payload.enum.teleinfo = {\n    'PTEC': {\n        'HC': ['trending-up', 'Heures pleines'],\n        'HP': ['trending-down', 'Heures creuses'],\n    }\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4620,10 +4625,9 @@
         "id": "72aae6174b64a06c",
         "type": "function",
         "z": "4bc72a1112cb448c",
-        "d": true,
         "g": "3db71c2c17730bd8",
-        "name": "enum",
-        "func": "\nreturn msg;",
+        "name": "init",
+        "func": "msg.payload.sources.apsystems = ['solar-power', 'APSystems'];\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4643,8 +4647,8 @@
         "type": "function",
         "z": "4bc72a1112cb448c",
         "g": "89ac7be96aabaa70",
-        "name": "enum",
-        "func": "msg.payload.enum.daikin = {\n    'mode': {\n        '0': ['refresh-auto', 'Auto'],\n        '3': ['snowflake', 'Froid'],\n        '2': ['water-percent', 'Déshumidifier'],\n        '4': ['fire', 'Chaud'],\n        '5': ['weather-windy', 'Ventilation']\n    },\n    'f_rate': {\n        'A': ['refresh-auto', 'Auto'],\n        'B': ['leaf', 'Eco'],\n        '3': ['fan-minus', 'Vitesse 1'],\n        '4': ['fan-speed-1', 'Vitesse 2'],\n        '5': ['fan-speed-2', 'Vitesse 3'],\n        '6': ['fan-speed-3', 'Vitesse 4'],\n        '7': ['fan-plus', 'Vitesse 5'],\n    },\n    'f_dir': {\n        '0': ['arrow-collapse-all', 'Fixe'],\n        '1': ['arrow-up-down', 'Verticale'],\n        '2': ['arrow-left-right', 'Horizontale'],\n        '3': ['arrow-all', 'Toutes directions']\n    }\n};\n\nreturn msg;",
+        "name": "init",
+        "func": "msg.payload.sources.daikin = ['hvac', 'Daikin'];\n\nmsg.payload.enum.daikin = {\n    'mode': {\n        '0': ['refresh-auto', 'Auto'],\n        '3': ['snowflake', 'Froid'],\n        '2': ['water-percent', 'Déshumidifier'],\n        '4': ['fire', 'Chaud'],\n        '5': ['weather-windy', 'Ventilation']\n    },\n    'f_rate': {\n        'A': ['refresh-auto', 'Auto'],\n        'B': ['leaf', 'Eco'],\n        '3': ['fan-minus', 'Vitesse 1'],\n        '4': ['fan-speed-1', 'Vitesse 2'],\n        '5': ['fan-speed-2', 'Vitesse 3'],\n        '6': ['fan-speed-3', 'Vitesse 4'],\n        '7': ['fan-plus', 'Vitesse 5'],\n    },\n    'f_dir': {\n        '0': ['arrow-collapse-all', 'Fixe'],\n        '1': ['arrow-up-down', 'Verticale'],\n        '2': ['arrow-left-right', 'Horizontale'],\n        '3': ['arrow-all', 'Toutes directions']\n    }\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4784,7 +4788,7 @@
         "z": "4bc72a1112cb448c",
         "g": "42c8cfb80db1c77e",
         "name": "parse",
-        "func": "if (typeof msg.payload !== 'object' ||\n    msg.topic.includes(\"/availability\") ||\n    msg.topic.includes(\"/set\") ||\n    msg.topic.includes(\"zigbee_bridge/\")\n) {\n\n    return;\n}\n\nlet res = {\n    'topic':'',\n    'payload': {}\n};\n\nlet parent = msg.topic.slice(global.get('mqtt.zigbee', 'memoryOnly').length + 1);\nnode.status({ text: parent });\n\n// limit ot these keys\nlet keys = {\n    'current': 'A',\n    'energy': 'Wh',\n    'power': 'W',\n    'linkquatlity': '',\n    'battery': '%',\n    'humidity': '%',\n    'temperature': '°C',\n    'occupancy': 'b', // motion\n    'contact': 'b',\n    'state': 'b', // \"OFF/ON\"\n    'action': 'enum' // swicth \"single/double\"...\n    //'brightness' // ex: led\n    //'speed' // ex led\n};\n\nfor (const k in keys) {\n    if (typeof msg.payload[k] !== 'undefined') {\n        res.payload.id = k;\n        res.payload.source = 'zigbee';\n        res.payload.parent = parent;\n        res.payload.value = msg.payload[k];\n        res.payload.unit = keys[k];\n        res.payload.seen = Date.now();\n\n        if (k === 'occupancy') {\n            res.payload.id = 'motion';\n            res.payload.value = (res.payload.value === true || res.payload.value === 'ON') ? 1 : 0;\n        }\n        if (k === 'state' || k === 'contact') {\n            res.payload.id = 'switch';\n            res.payload.value = (res.payload.value === true || res.payload.value === 'ON') ? 1 : 0;\n        }\n\n        node.send(res);\n    }\n}\n\nreturn;",
+        "func": "if (typeof msg.payload !== 'object' ||\n    msg.topic.includes(\"/availability\") ||\n    msg.topic.includes(\"/set\") ||\n    msg.topic.includes(\"zigbee_bridge/\")\n) {\n\n    return;\n}\n\nlet res = {\n    'topic':'',\n    'payload': {}\n};\n\nlet parent = msg.topic.slice(global.get('mqtt.zigbee', 'memoryOnly').length + 1);\nnode.status({ text: parent });\n\n// limit ot these keys\nlet keys = {\n    'current': 'A',\n    'energy': 'Wh',\n    'power': 'W',\n    'linkquatlity': '',\n    'battery': '%',\n    'humidity': '%',\n    'temperature': '°C',\n    'occupancy': 'b', // motion\n    'contact': 'b',\n    'state': 'b', // \"OFF/ON\"\n    'action': 'enum', // swicth \"single/double\"...\n    'brightness': '8b' // ex: led\n    //'speed' // ex: led\n    // 'color' // ex: led\n};\n\nlet on = ['ON', 'On', 'on', 1, true ];\n\nfor (const k in keys) {\n    if (typeof msg.payload[k] !== 'undefined') {\n        res.payload.id = k;\n        res.payload.source = 'zigbee';\n        res.payload.parent = parent;\n        res.payload.value = msg.payload[k];\n        res.payload.unit = keys[k];\n        res.payload.seen = Date.now();\n\n        if (k === 'occupancy') {\n            res.payload.id = 'motion';\n            res.payload.value = on.includes(res.payload.value) ? 1 : 0;\n        }\n        else if (['switch', 'state', 'contact'].includes(k)) {\n            res.payload.id = 'state';\n            res.payload.value = on.includes(res.payload.value) ? 1 : 0;\n        }\n\n        node.send(res);\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4819,8 +4823,8 @@
         "type": "function",
         "z": "4bc72a1112cb448c",
         "g": "42c8cfb80db1c77e",
-        "name": "enum",
-        "func": "msg.payload.enum.zigbee = {\n    'action': {\n        'single': ['numeric-1', 'Single'],\n        'double': ['numeric-2', 'Double'],\n        'long': ['clock-start', 'Long'],\n    }\n};\n\nreturn msg;",
+        "name": "init",
+        "func": "msg.payload.sources.zigbee = ['zigbee', 'Zigbee'];\n\nmsg.payload.enum.zigbee = {\n    'action': {\n        'single': ['numeric-1', 'Single'],\n        'double': ['numeric-2', 'Double'],\n        'long': ['clock-start', 'Long'],\n    }\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4872,7 +4876,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "Notes",
-        "info": "* Aperture opened = 1, closed = 1",
+        "info": "* Aperture binary opened = 0, closed = 1",
         "x": 810,
         "y": 140,
         "wires": []
@@ -4971,7 +4975,7 @@
         "z": "4bc72a1112cb448c",
         "g": "4350d3ede367f1ca",
         "name": "parse",
-        "func": "// Limit for some values\nif (msg.topic.includes(\"/lastActive\") ||\n    msg.topic.includes(\"/set\")\n) {\n\n    return;\n}\n\nlet res = {\n    'topic':'',\n    'payload': {}\n};\n\n// Split topic\nlet path = msg.topic.slice(global.get('mqtt.zwave', 'memoryOnly').length + 1).split('/');\n\n// Limit for some values\nif (path.length < 4) {\n    return;\n}\n\nres.payload.source = 'zwave';\nres.payload.parent = path.shift();\nres.payload.id = path.join('_');\nres.payload.seen = Date.now();\nres.payload.value = msg.payload;\n\n// See: https://z-wave.me/manual/z-way/Command_Class_Reference.htm\nswitch (path[0]) {\n    case \"32\": // common binary sensor\n        res.payload.unit = 'b';\n        res.payload.name = 'Alert';\n    case \"37\": // common binary switch\n        res.payload.unit = 'b';\n        res.payload.name = 'Switch';\n        break;\n    case \"38\": // common level switch\n        switch (path[2]) {\n            case \"On\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Switch on';\n                break;\n            case \"Off\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Switch off';\n                break;\n            case \"currentValue\":\n                res.payload.unit = '%';\n                res.payload.name = 'Level switch state';\n                break;\n            case \"targetValue\":\n                res.payload.unit = '%';\n                res.payload.name = 'Level switch target';\n                break;\n            case \"Up\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Level switch up';\n                break;\n            case \"Down\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Level switch down';\n                break;\n            default:\n                return;\n        }\n        break;\n    case \"48\":\n        switch (path[2]) {\n            case \"Any\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Binary sensor';\n                break;\n            default:\n                return;\n        }\n        break;\n    case \"49\":\n        switch (path[2]) {\n            case \"Power\":\n                res.payload.unit = 'W';\n                res.payload.name = 'Power';\n                break;\n            case \"Illuminance\":\n                res.payload.unit = 'lx';\n                res.payload.name = 'Illuminance';\n                break;\n            case \"Air_temperature\":\n                res.payload.unit = '°C';\n                res.payload.name = 'Temperature';\n                break;\n            case \"Humidity\":\n                res.payload.unit = '%';\n                res.payload.name = 'Humidity';\n                break;\n            case \"Ultraviolet\":\n                res.payload.unit = '';\n                res.payload.name = 'Ultraviolet';\n                break;\n            case \"Seismic_Intensity\":\n            case \"Seismic_magnitude\":\n                res.payload.unit = '';\n                res.payload.name = 'Seismic';\n                break;\n            case \"Carbon_dioxide_(CO₂)_level\": // FGDW002\n                res.payload.unit = 'ppm';\n                res.payload.name = 'Carbon dioxide';\n                break;\n            default:\n                return;\n        }\n        break;\n    case \"50\":\n        switch (path[3]) {\n            case \"65536\":\n            case \"65537\":\n                res.payload.unit = 'kWh';\n                res.payload.name = 'Power';\n                break;\n            case \"66048\":\n            case \"66049\":\n            case \"66051\":\n                res.payload.unit = 'W';\n                res.payload.name = 'Power';\n                break;\n            default:\n                return;\n        };\n        break;\n    case \"128\":\n        res.payload.unit = '%';\n        res.payload.name = 'Battery';\n        break;\n    default:\n        return;\n};\n\nres.payload.name = res.payload.name + ' ' + path[1];\n\nnode.status({ text: res.payload.parent });\nreturn res;",
+        "func": "// Limit for some values\nif (msg.topic.includes(\"/lastActive\") ||\n    msg.topic.includes(\"/set\")\n) {\n\n    return;\n}\n\nlet res = {\n    'topic':'',\n    'payload': {}\n};\n\n// Split topic\nlet path = msg.topic.slice(global.get('mqtt.zwave', 'memoryOnly').length + 1).split('/');\n\n// Limit for some values\nif (path.length < 4) {\n    return;\n}\n\nres.payload.source = 'zwave';\nres.payload.parent = path.shift();\nres.payload.id = path.join('_');\nres.payload.seen = Date.now();\nres.payload.value = msg.payload;\n\n// See: https://z-wave.me/manual/z-way/Command_Class_Reference.htm\nswitch (path[0]) {\n    case \"32\": // common binary sensor\n        res.payload.unit = 'b';\n        res.payload.name = 'Alert';\n    case \"37\": // common binary switch\n        res.payload.unit = 'b';\n        res.payload.name = 'Switch';\n        break;\n    case \"38\": // common level switch\n        switch (path[2]) {\n            case \"On\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Switch on';\n                break;\n            case \"Off\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Switch off';\n                break;\n            case \"currentValue\":\n                res.payload.unit = '%';\n                res.payload.name = 'Level switch state';\n                break;\n            case \"targetValue\":\n                res.payload.unit = '%';\n                res.payload.name = 'Level switch target';\n                break;\n            case \"Up\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Level switch up';\n                break;\n            case \"Down\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Level switch down';\n                break;\n            default:\n                return;\n        }\n        break;\n    case \"48\":\n        switch (path[2]) {\n            case \"Any\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Binary sensor';\n                break;\n            default:\n                return;\n        }\n        break;\n    case \"49\":\n        switch (path[2]) {\n            case \"Power\":\n                res.payload.unit = 'W';\n                res.payload.name = 'Power';\n                break;\n            case \"Illuminance\":\n                res.payload.unit = 'lx';\n                res.payload.name = 'Illuminance';\n                break;\n            case \"Air_temperature\":\n                res.payload.unit = '°C';\n                res.payload.name = 'Temperature';\n                break;\n            case \"Humidity\":\n                res.payload.unit = '%';\n                res.payload.name = 'Humidity';\n                break;\n            case \"Ultraviolet\":\n                res.payload.unit = '';\n                res.payload.name = 'Ultraviolet';\n                break;\n            case \"Seismic_Intensity\":\n            case \"Seismic_magnitude\":\n                res.payload.unit = '';\n                res.payload.name = 'Seismic';\n                break;\n            case \"Carbon_dioxide_(CO₂)_level\": // FGDW002\n                res.payload.unit = 'ppm';\n                res.payload.name = 'Carbon dioxide';\n                break;\n            case \"Barometric_pressure\":\n                res.payload.unit = 'kPa';\n                res.payload.name = 'Barometric pressure';\n                break;\n            default:\n                return;\n        }\n        break;\n    case \"50\":\n        switch (path[3]) {\n            case \"65536\":\n            case \"65537\":\n                res.payload.unit = 'kWh';\n                res.payload.name = 'Power';\n                break;\n            case \"66048\":\n            case \"66049\":\n            case \"66051\":\n                res.payload.unit = 'W';\n                res.payload.name = 'Power';\n                break;\n            default:\n                return;\n        };\n        break;\n    case \"113\":\n        switch (path[3]) {\n            case \"Heat_sensor_status \":\n                res.payload.value = res.payload.value === 0 ? 0 : 1;\n                res.payload.unit = 'b';\n                res.payload.name = 'Heat alert';\n                break;\n            case \"Sensor_status \":\n                res.payload.value = res.payload.value === 0 ? 0 : 1;\n                res.payload.unit = 'b';\n                res.payload.name = 'Smoke alert';\n                break;\n            default:\n                return;\n        };\n        break;\n    case \"128\":\n        res.payload.unit = '%';\n        res.payload.name = 'Battery';\n        break;\n    default:\n        return;\n};\n\nres.payload.name = res.payload.name + ' ' + path[1];\n\nnode.status({ text: res.payload.parent });\nreturn res;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5005,10 +5009,9 @@
         "id": "2d506fa6b9a372b2",
         "type": "function",
         "z": "4bc72a1112cb448c",
-        "d": true,
         "g": "4350d3ede367f1ca",
-        "name": "enum",
-        "func": "\nreturn msg;",
+        "name": "init",
+        "func": "msg.payload.sources.zwave = ['z-wave', 'Z-Wave'];\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5027,7 +5030,6 @@
         "id": "e5cd132fabafdec1",
         "type": "link in",
         "z": "4bc72a1112cb448c",
-        "d": true,
         "g": "4350d3ede367f1ca",
         "name": "common - init - zwave",
         "links": [
@@ -5045,7 +5047,6 @@
         "id": "017e88df33bc747c",
         "type": "link out",
         "z": "4bc72a1112cb448c",
-        "d": true,
         "g": "4350d3ede367f1ca",
         "name": "common - init - zwave",
         "mode": "link",
@@ -5109,7 +5110,6 @@
         "id": "6cc5d113c7e2b326",
         "type": "link in",
         "z": "4bc72a1112cb448c",
-        "d": true,
         "g": "3db71c2c17730bd8",
         "name": "common - init - apsystems",
         "links": [
@@ -5127,7 +5127,6 @@
         "id": "5e692d972f19ef9a",
         "type": "link out",
         "z": "4bc72a1112cb448c",
-        "d": true,
         "g": "3db71c2c17730bd8",
         "name": "common - init - apsystems",
         "mode": "link",
@@ -5291,7 +5290,7 @@
         "z": "4bc72a1112cb448c",
         "g": "4350d3ede367f1ca",
         "name": "parse",
-        "func": "if (msg.payload.source === 'zwave' &&\n    msg.repeat === false &&\n    msg.loop === true\n) {\n    //...\n    let split = msg.payload.id.split('_');\n    if (split.length < 4) {\n        return;\n    }\n\n    let topic = global.get('mqtt.zwave', 'memoryOnly') || {};\n    if (topic === '') {\n\n        return;\n    }\n\n    msg.topic = [topic, split[0], split[1], split[2], split[3], 'set'].join('/');\n    msg.payload = msg.payload.value;\n\n    return msg;\n}\n\nreturn;",
+        "func": "if (msg.payload.source === 'zwave' &&\n    msg.repeat === false &&\n    msg.loop === true\n) {\n    //...\n    let p_path = msg.payload.parent.split('_').pop();\n    let e_path = msg.payload.id.split('_');\n    if (e_path.length < 3) {\n        return;\n    }\n\n    let topic = global.get('mqtt.zwave', 'memoryOnly') || {};\n    if (topic === '') {\n\n        return;\n    }\n\n    msg.topic = [topic, p_path, e_path[0], e_path[1], e_path[2], 'set'].join('/');\n    msg.payload = msg.payload.value;\n\n    return msg;\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5620,8 +5619,8 @@
         "type": "function",
         "z": "4bc72a1112cb448c",
         "g": "c2f0711b621df28f",
-        "name": "enum",
-        "func": "msg.payload.enum.rfxcom = {\n\n};\n\nreturn msg;",
+        "name": "init",
+        "func": "msg.payload.sources.rfxcom = ['home-automation', 'RFXCom'];\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6002,6 +6001,74 @@
         ]
     },
     {
+        "id": "2e769390f22a4eb7",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "42c8cfb80db1c77e",
+        "name": "common - mqtt - zigbee2mqtt - out",
+        "links": [
+            "a29ec7554a818a6f"
+        ],
+        "x": 145,
+        "y": 3500,
+        "wires": [
+            [
+                "0b110dae421cde2a"
+            ]
+        ]
+    },
+    {
+        "id": "0b110dae421cde2a",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "42c8cfb80db1c77e",
+        "name": "parse",
+        "func": "if (msg.payload.source !== 'zigbee' ||\n    msg.repeat !== false ||\n    msg.loop !== true\n) {\n\n    return;\n}\n\n// allowed action\nlet pilot = ['switch', 'state', 'brightness'];\nif (!pilot.includes(msg.payload.id)) {\n\n    return;\n}\n\n// remove source from parent\nlet topic = global.get('mqtt.zigbee', 'memoryOnly') || '';\nlet parent = msg.payload.parent.slice(msg.payload.source.length + 1);\nlet action = msg.payload.id;\nlet value = msg.payload.value;\n\nswitch (action) {\n    case 'state':\n    case 'switch':\n        msg.payload = { [action]: (value ? 'ON' : 'OFF') };\n        break;\n    case 'brightness':\n        msg.payload = { [action]: value };\n        break;\n    default:\n        return;\n}\n\nmsg.topic = [topic, parent, 'set'].join('/');\n\nnode.status({text: msg.topic });\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 3500,
+        "wires": [
+            [
+                "39f58c630debf66e"
+            ]
+        ]
+    },
+    {
+        "id": "4bed2e6513fc8d52",
+        "type": "comment",
+        "z": "4bc72a1112cb448c",
+        "g": "42c8cfb80db1c77e",
+        "name": "UNCOMPLETE",
+        "info": "",
+        "x": 780,
+        "y": 3380,
+        "wires": []
+    },
+    {
+        "id": "39f58c630debf66e",
+        "type": "mqtt out",
+        "z": "4bc72a1112cb448c",
+        "g": "42c8cfb80db1c77e",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0e0c7f65d7976645",
+        "x": 430,
+        "y": 3500,
+        "wires": []
+    },
+    {
         "id": "d7bc8fc74bfc07cb",
         "type": "link in",
         "z": "10a4e1188aad61a2",
@@ -6301,7 +6368,7 @@
         "z": "560376d6bba621ec",
         "g": "1465a47c930ed8e1",
         "name": "data",
-        "func": "flow.set('room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n\nmsg.payload = '';\nlet rooms = global.get('name[\"room\"]', 'default') || {};\nlet i = 0;\n\nlet dropdownOptions = [];\nfor (const room in rooms) {\n    dropdownOptions[i++] = {\n        'label': rooms[room],\n        'value': room\n    };\n}\n\ndropdownOptions.sort((a, b) => a.value.localeCompare(b.value));\n\nmsg.ui_update = {\n    'label': msg.dictionary.group_room.room_select,\n    'options': dropdownOptions\n}\n\n\nreturn msg;",
+        "func": "flow.set('room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n\nmsg.payload = '';\nlet rooms = global.get('name[\"room\"]', 'default') || {};\nlet i = 0;\n\nlet dropdownOptions = [];\nfor (const room in rooms) {\n    dropdownOptions[i++] = {\n        'label': rooms[room],\n        'value': room\n    };\n}\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.ui_update = {\n    'label': msg.dictionary.group_room.room_select,\n    'options': dropdownOptions\n}\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6522,14 +6589,6 @@
         "columns": [
             {
                 "title": "",
-                "key": "group",
-                "keyType": "key",
-                "type": "html",
-                "width": "1em",
-                "align": "center"
-            },
-            {
-                "title": "",
                 "key": "name",
                 "keyType": "key",
                 "type": "text",
@@ -6538,27 +6597,27 @@
             },
             {
                 "title": "",
+                "key": "icon",
+                "keyType": "key",
+                "type": "html",
+                "width": "20px",
+                "align": "center"
+            },
+            {
+                "title": "",
                 "key": "value",
                 "keyType": "key",
                 "type": "text",
                 "width": "15%",
+                "align": "start"
+            },
+            {
+                "title": "",
+                "key": "icons",
+                "keyType": "key",
+                "type": "html",
+                "width": "60px",
                 "align": "end"
-            },
-            {
-                "title": "",
-                "key": "icon",
-                "keyType": "key",
-                "type": "html",
-                "width": "1em",
-                "align": "center"
-            },
-            {
-                "title": "",
-                "key": "type",
-                "keyType": "key",
-                "type": "html",
-                "width": "1em",
-                "align": "center"
             }
         ],
         "mobileBreakpoint": "sm",
@@ -6615,7 +6674,7 @@
         "op2": "",
         "op1type": "nul",
         "op2type": "payl",
-        "duration": "5",
+        "duration": "1",
         "extend": false,
         "overrideDelay": false,
         "units": "s",
@@ -6702,7 +6761,7 @@
         "type": "function",
         "z": "560376d6bba621ec",
         "name": "data",
-        "func": "let room = flow.get('room[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--';\nlet entity = global.get('entity', 'memoryOnly') || {};\nlet colors = global.get('describe.colors', 'memoryOnly') || {};\nlet icons = global.get('describe.elements', 'memoryOnly') || {};\n\nlet groups = {\n    'switch': [\n        'light',\n        'switch',\n        'plug',\n        'mode',\n        'fan',\n        'direction',\n        'heater'\n    ],\n    'enum': [],\n    'aperture': [\n        'aperture',\n        'door',\n        'window',\n        'shutter',\n        'slider'\n    ],\n    'climate': [\n        'humidity',\n        'temperature',\n        'illuminance',\n        'pressure',\n        'motion'\n    ],\n    'energy': [\n        'current',\n        'energy',\n        'power',\n        'battery'\n    ],\n    'various': [\n        'remote'\n    ]\n};\n\nlet labels = {\n    'switch': msg.dictionary.option_element['switch'],\n    'enum': msg.dictionary.group_room.label_select,\n    'aperture': msg.dictionary.option_element['aperture'],\n    'climate': msg.dictionary.option_element['climate'],\n    'energy': msg.dictionary.option_element['energy'],\n    'various': msg.dictionary.group_room.label_various,\n    'unknown': msg.dictionary.group_room.label_unknown\n};\n\nlet inc = {\n    'switch': 0,\n    'enum': 0,\n    'aperture': 0,\n    'climate': 0,\n    'energy': 0,\n    'various': 0,\n    'unknown': 0\n};\nlet res = {\n    'switch': [],\n    'enum': [],\n    'aperture': [],\n    'climate': [],\n    'energy': [],\n    'various': [],\n    'unknown': []\n};\n\nlet exists = false;\n\nfor (const uid in entity) {\n    if (entity[uid]['room'] === room && \n        entity[uid]['hidden'] !== 1\n    ) {\n        let group = 'unknown';\n        for (const g in groups) {\n            if (groups[g].includes(entity[uid]['element'])) {\n                group = g;\n            }\n        }\n\n        if (group !== '') {\n            let value = entity[uid]['value'];\n            let unit = entity[uid]['unit'];\n            let name = global.get('name[\"entity\"][\"' + uid + '\"]', 'memoryOnly') || '';\n            let parent = global.get('name[\"device\"][\"' + entity[uid]['parent'] + '\"]', 'memoryOnly') || entity[uid]['parent'];\n            let icon = '';\n            let color = 'empty';\n            let element = msg.dictionary.option_element[entity[uid]['element']];\n            let element_icon = '';\n\n            if (typeof icons[entity[uid]['element']] !== null) {\n                if (entity[uid]['value']) {\n                    icon = icons[entity[uid]['element']][1];\n                    color = colors.theme;\n                } else {\n                    icon = icons[entity[uid]['element']][0];\n                    color = colors.empty;\n                }\n                element_icon = icons[entity[uid]['element']][1];\n            }\n            if (entity[uid]['element'] === 'battery' && entity[uid]['value'] < 15) {\n                color = colors.off;\n            }\n\n            if (unit === 'enum') {\n                let enums = global.get('describe[\"enum\"][\"' + entity[uid]['source'] + '\"][\"' + entity[uid]['id'] + '\"][\"' + value + '\"]', 'memoryOnly');\n                icon = enums[0] || icon;\n                value = enums[1] || value;\n                group = 'enum';\n            }\n\n            if (!['b', 'enum'].includes(unit) && unit !== '') {\n                value = value + ' ' + unit;\n            }\n            if (entity[uid]['unit'] === 'b') {\n                if (group === 'aperture') {\n                    value = value ? msg.dictionary.group_room.close : msg.dictionary.group_room.open;\n                } else if (group === 'switch') {\n                    value = value ? msg.dictionary.group_room.on : msg.dictionary.group_room.off;\n                }\n            }\n            if (name === '' || name === entity[uid]['id']) {\n                name = parent;\n            }\n\n            let type_icon = entity[uid]['type'] === 'sensor' ? 'leak': 'button-pointer';\n            let type_color = entity[uid]['type'] === 'sensor' ? colors.empty : colors.none;\n            if ((entity[uid]['seen'] + 86400000) < Date.now()) { // 24h\n                type_color = colors.off;\n            }\n\n            res[group][inc[group]] = {\n                'uid': uid,\n                'name': name,\n                'value': value,\n                'icon': '<i class=\"icon-in-row mdi mdi-' + icon + '\" style=\"color:' + color + '\"></i>',\n                'type': '<i class=\"icon-in-row mdi mdi-' + type_icon + '\" style=\"color:' + type_color + '\" title=\"' + msg.dictionary.option_type[entity[uid]['type']] + '\"></i>',\n                'group': '<i class=\"icon-in-row mdi mdi-' + element_icon + '\" style=\"color:' + colors.median + '\" title=\"' + element + '\"></i>'\n            };\n\n            inc[group] = inc[group] + 1;\n            exists = true;\n        }\n    }\n}\n\nlet rres = {};\nfor (const k in res) {\n    if (res[k].length > 0) {\n        res[k].sort((a, b) => a.name.localeCompare(b.name));\n        rres[k] = {...msg, ...{\n            'label': labels[k],\n            'payload': res[k]\n        }};\n    } else {\n        rres[k] = {\n            'topic': '',\n            'class': 'remove',\n            'enabled': false,\n            'payload': {}\n        };\n    }\n}\n\nif (exists) {\n\n    node.send([rres['energy'], rres['aperture'], rres['switch'], rres['climate'], rres['enum'], rres['various'], rres['unknown']]);\n}\n\nreturn;",
+        "func": "let room = flow.get('room[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--';\nlet entity = global.get('entity', 'memoryOnly') || {};\nlet colors = global.get('describe.colors', 'memoryOnly') || {};\nlet icons = global.get('describe.elements', 'memoryOnly') || {};\nlet enums = global.get('describe.enum', 'memoryOnly') || {};\nlet sources = global.get('describe.sources', 'memoryOnly') || {};\nlet reverts = global.get('describe.reverts', 'memoryOnly') || [];\n\nlet groups = {\n    'switch': [\n        'light',\n        'switch',\n        'plug',\n        'mode',\n        'fan',\n        'direction',\n        'heater'\n    ],\n    'enum': [],\n    'aperture': [\n        'aperture',\n        'door',\n        'window',\n        'lock',\n        'shutter',\n        'slider'\n    ],\n    'climate': [\n        'humidity',\n        'temperature',\n        'illuminance',\n        'pressure',\n        'motion'\n    ],\n    'energy': [\n        'current',\n        'energy',\n        'power',\n        'battery'\n    ],\n    'various': [\n        'remote',\n        'text',\n        'time'\n    ]\n};\n\nlet labels = {\n    'switch': msg.dictionary.option_element['switch'],\n    'enum': msg.dictionary.group_room.label_select,\n    'aperture': msg.dictionary.option_element['aperture'],\n    'climate': msg.dictionary.option_element['climate'],\n    'energy': msg.dictionary.option_element['energy'],\n    'various': msg.dictionary.group_room.label_various,\n    'unknown': msg.dictionary.group_room.label_unknown\n};\n\nlet inc = {\n    'switch': 0,\n    'enum': 0,\n    'aperture': 0,\n    'climate': 0,\n    'energy': 0,\n    'various': 0,\n    'unknown': 0\n};\nlet res = {\n    'switch': [],\n    'enum': [],\n    'aperture': [],\n    'climate': [],\n    'energy': [],\n    'various': [],\n    'unknown': []\n};\n\nlet exists = false;\n\nfor (const uid in entity) {\n    if (entity[uid]['room'] === room && \n        entity[uid]['hidden'] !== 1\n    ) {\n        let group = 'unknown';\n        for (const g in groups) {\n            if (groups[g].includes(entity[uid]['element'])) {\n                group = g;\n            }\n        }\n\n        if (group !== '') {\n            let value = entity[uid]['value'] || 0;\n            let unit = entity[uid]['unit'];\n            let name = global.get('name[\"entity\"][\"' + uid + '\"]', 'memoryOnly') || '';\n            let parent = global.get('name[\"device\"][\"' + entity[uid]['parent'] + '\"]', 'memoryOnly') || entity[uid]['parent'];\n            let icon = '';\n            let color = 'empty';\n            let element = entity[uid]['element'];\n            let element_name = msg.dictionary.option_element[element];\n            let element_icon = '';\n            let source = sources[entity[uid]['source']] || ['help', entity[uid]['source']];\n\n            // Revert value for some \"rb\" unit\n            if (unit === 'rb') {\n                value = value === 0 ? 1 : 0;\n            }\n            // Revert text for some elements (see describe.reverts)\n            if (reverts.includes(element)) {\n                value = value === 0 ? 1 : 0;\n            }\n            // Get icon from value\n            if (typeof icons[element] !== 'undefined') {\n                if (value) {\n                    icon = icons[element][1];\n                    color = colors.theme;\n                } else {\n                    icon = icons[element][0];\n                    color = colors.empty;\n                }\n                element_icon = icons[element][1];\n            }\n\n            // Battery alert color\n            if (element === 'battery' && value < 15) {\n                color = colors.off;\n            }\n\n            // Get special enum value\n            if (unit === 'enum') {\n                let cur_enum = enums[entity[uid]['source']][entity[uid]['id']][value] || [icon, value];\n                icon = cur_enum[0];\n                value = cur_enum[1];\n                group = 'enum';\n            }\n\n            // Format value\n            if (!['8b', 'rb', 'b', 'enum', 'ts', 'text'].includes(unit) && unit !== '') {\n                // Add unit text\n                value = value + ' ' + unit;\n            }\n            else if (unit === '8b') {\n                // Convert 8b in %\n                value = Math.ceil(Number(value) * 100 / 255) + '%'\n            }\n            else if (unit === 'ts') {\n                // Convert to date\n                value = new Date(value).toLocaleString(msg.dictionary.config.locales);\n            }\n            else if (['b', 'rb'].includes(unit)) {\n                // Convert to text\n                if (group === 'aperture') {\n                    value = value === 0 ? msg.dictionary.group_room.close : msg.dictionary.group_room.open;\n                }\n                else if (group === 'switch') {\n                    value = value === 0 ? msg.dictionary.group_room.off : msg.dictionary.group_room.on;\n                }\n            }\n\n            // Get name from parent if none or default is set\n            if (name === '' || name === entity[uid]['id']) {\n                name = parent;\n            }\n\n            // Colorize unresponsive entity\n            let type_icon = entity[uid]['type'] === 'sensor' ? 'leak': 'button-pointer';\n            let type_color = entity[uid]['type'] === 'sensor' ? colors.empty : colors.none;\n            if ((entity[uid]['seen'] + 86400000) < Date.now()) { // 24h\n                type_color = colors.off;\n            }\n\n            res[group][inc[group]] = {\n                'uid': uid,\n                'name': name,\n                'value': value,\n                'icon': '<i class=\"icon-in-row mdi mdi-' + icon + '\" style=\"color:' + color + '; font-size: 2em;\"></i>',\n                'icons': '<span style=\"white-space: nowrap;\">' +\n                    '<i class=\"icon-in-row mdi mdi-' + source[0] + '\" style=\"color:' + colors.empty + '\" title=\"' + source[1] + '\"></i> ' +\n                    '<i class=\"icon-in-row mdi mdi-' + element_icon + '\" style=\"color:' + colors.empty + '\" title=\"' + element_name + '\"></i> ' +\n                    '<i class=\"icon-in-row mdi mdi-' + type_icon + '\" style=\"color:' + type_color + '\" title=\"' + msg.dictionary.option_type[entity[uid]['type']] + '\"></i>' +\n                    '</span>'\n            };\n\n            inc[group] = inc[group] + 1;\n            exists = true;\n        }\n    }\n}\n\nlet rres = {};\nfor (const k in res) {\n    if (res[k].length > 0) {\n        res[k].sort((a, b) => a.name.localeCompare(b.name));\n        rres[k] = {...msg, ...{\n            'label': labels[k],\n            'payload': res[k]\n        }};\n    } else {\n        rres[k] = {\n            'topic': '',\n            'class': 'remove',\n            'enabled': false,\n            'payload': {}\n        };\n    }\n}\n\nif (exists) {\n\n    node.send([rres['energy'], rres['aperture'], rres['switch'], rres['climate'], rres['enum'], rres['various'], rres['unknown']]);\n}\n\nreturn;",
         "outputs": 7,
         "timeout": 0,
         "noerr": 0,
@@ -6827,22 +6886,6 @@
         "columns": [
             {
                 "title": "",
-                "key": "group",
-                "keyType": "key",
-                "type": "html",
-                "width": "1em",
-                "align": "center"
-            },
-            {
-                "title": "",
-                "key": "element",
-                "keyType": "key",
-                "type": "text",
-                "width": "",
-                "align": "end"
-            },
-            {
-                "title": "",
                 "key": "name",
                 "keyType": "key",
                 "type": "text",
@@ -6851,27 +6894,27 @@
             },
             {
                 "title": "",
+                "key": "icon",
+                "keyType": "key",
+                "type": "html",
+                "width": "20px",
+                "align": "center"
+            },
+            {
+                "title": "",
                 "key": "value",
                 "keyType": "key",
                 "type": "text",
                 "width": "15%",
+                "align": "start"
+            },
+            {
+                "title": "",
+                "key": "icons",
+                "keyType": "key",
+                "type": "html",
+                "width": "60px",
                 "align": "end"
-            },
-            {
-                "title": "",
-                "key": "icon",
-                "keyType": "key",
-                "type": "html",
-                "width": "5%",
-                "align": "center"
-            },
-            {
-                "title": "",
-                "key": "type",
-                "keyType": "key",
-                "type": "html",
-                "width": "5%",
-                "align": "center"
             }
         ],
         "mobileBreakpoint": "sm",
@@ -6905,14 +6948,6 @@
         "columns": [
             {
                 "title": "",
-                "key": "group",
-                "keyType": "key",
-                "type": "html",
-                "width": "1em",
-                "align": "center"
-            },
-            {
-                "title": "",
                 "key": "name",
                 "keyType": "key",
                 "type": "text",
@@ -6921,27 +6956,27 @@
             },
             {
                 "title": "",
+                "key": "icon",
+                "keyType": "key",
+                "type": "html",
+                "width": "20px",
+                "align": "center"
+            },
+            {
+                "title": "",
                 "key": "value",
                 "keyType": "key",
                 "type": "text",
                 "width": "15%",
+                "align": "start"
+            },
+            {
+                "title": "",
+                "key": "icons",
+                "keyType": "key",
+                "type": "html",
+                "width": "60px",
                 "align": "end"
-            },
-            {
-                "title": "",
-                "key": "icon",
-                "keyType": "key",
-                "type": "html",
-                "width": "5%",
-                "align": "center"
-            },
-            {
-                "title": "",
-                "key": "type",
-                "keyType": "key",
-                "type": "html",
-                "width": "5%",
-                "align": "center"
             }
         ],
         "mobileBreakpoint": "sm",
@@ -6975,14 +7010,6 @@
         "columns": [
             {
                 "title": "",
-                "key": "group",
-                "keyType": "key",
-                "type": "html",
-                "width": "1em",
-                "align": "center"
-            },
-            {
-                "title": "",
                 "key": "name",
                 "keyType": "key",
                 "type": "text",
@@ -6991,27 +7018,27 @@
             },
             {
                 "title": "",
+                "key": "icon",
+                "keyType": "key",
+                "type": "html",
+                "width": "20px",
+                "align": "center"
+            },
+            {
+                "title": "",
                 "key": "value",
                 "keyType": "key",
                 "type": "text",
                 "width": "15%",
+                "align": "start"
+            },
+            {
+                "title": "",
+                "key": "icons",
+                "keyType": "key",
+                "type": "html",
+                "width": "60px",
                 "align": "end"
-            },
-            {
-                "title": "",
-                "key": "icon",
-                "keyType": "key",
-                "type": "html",
-                "width": "5%",
-                "align": "center"
-            },
-            {
-                "title": "",
-                "key": "type",
-                "keyType": "key",
-                "type": "html",
-                "width": "5%",
-                "align": "center"
             }
         ],
         "mobileBreakpoint": "sm",
@@ -7374,7 +7401,8 @@
                 "3ff60ae0f3c9d037",
                 "c22bda1a9d69f288",
                 "29af0940f1b6e590",
-                "0acafb21eca88813"
+                "0acafb21eca88813",
+                "5db2d8a356ad18fe"
             ]
         ]
     },
@@ -7448,7 +7476,7 @@
         "y": 800,
         "wires": [
             [
-                "620fc0330d63fdea"
+                "ace113a6569e5b42"
             ]
         ]
     },
@@ -7465,7 +7493,7 @@
         "finalize": "",
         "libs": [],
         "x": 2270,
-        "y": 860,
+        "y": 920,
         "wires": [
             [
                 "51010ef1d15ac94c"
@@ -7500,7 +7528,7 @@
         "colorThumb": "",
         "showTextField": true,
         "x": 2540,
-        "y": 860,
+        "y": 920,
         "wires": [
             [
                 "620fc0330d63fdea"
@@ -7526,7 +7554,8 @@
                 "51010ef1d15ac94c",
                 "cde7e255d559082a",
                 "665bd6eb3895ca09",
-                "bfca3b4e772b111b"
+                "bfca3b4e772b111b",
+                "1b26f1130d67ca8d"
             ]
         ]
     },
@@ -7652,7 +7681,7 @@
         "finalize": "",
         "libs": [],
         "x": 2280,
-        "y": 920,
+        "y": 980,
         "wires": [
             [
                 "665bd6eb3895ca09"
@@ -7667,7 +7696,7 @@
         "name": "room - detail - temperature",
         "label": "",
         "tooltip": "",
-        "order": 6,
+        "order": 7,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -7687,7 +7716,7 @@
         "colorThumb": "",
         "showTextField": true,
         "x": 2560,
-        "y": 920,
+        "y": 980,
         "wires": [
             [
                 "620fc0330d63fdea"
@@ -7707,7 +7736,7 @@
         "finalize": "",
         "libs": [],
         "x": 2300,
-        "y": 980,
+        "y": 1060,
         "wires": [
             [
                 "bfca3b4e772b111b"
@@ -7747,7 +7776,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 2540,
-        "y": 980,
+        "y": 1060,
         "wires": [
             [
                 "620fc0330d63fdea"
@@ -7800,14 +7829,6 @@
         "columns": [
             {
                 "title": "",
-                "key": "group",
-                "keyType": "key",
-                "type": "html",
-                "width": "1em",
-                "align": "center"
-            },
-            {
-                "title": "",
                 "key": "name",
                 "keyType": "key",
                 "type": "text",
@@ -7816,27 +7837,27 @@
             },
             {
                 "title": "",
+                "key": "icon",
+                "keyType": "key",
+                "type": "html",
+                "width": "20px",
+                "align": "center"
+            },
+            {
+                "title": "",
                 "key": "value",
                 "keyType": "key",
                 "type": "text",
                 "width": "15%",
+                "align": "start"
+            },
+            {
+                "title": "",
+                "key": "icons",
+                "keyType": "key",
+                "type": "html",
+                "width": "60px",
                 "align": "end"
-            },
-            {
-                "title": "",
-                "key": "icon",
-                "keyType": "key",
-                "type": "html",
-                "width": "5%",
-                "align": "center"
-            },
-            {
-                "title": "",
-                "key": "type",
-                "keyType": "key",
-                "type": "html",
-                "width": "5%",
-                "align": "center"
             }
         ],
         "mobileBreakpoint": "sm",
@@ -7965,14 +7986,6 @@
         "columns": [
             {
                 "title": "",
-                "key": "group",
-                "keyType": "key",
-                "type": "html",
-                "width": "1em",
-                "align": "center"
-            },
-            {
-                "title": "",
                 "key": "name",
                 "keyType": "key",
                 "type": "text",
@@ -7981,27 +7994,27 @@
             },
             {
                 "title": "",
+                "key": "icon",
+                "keyType": "key",
+                "type": "html",
+                "width": "20px",
+                "align": "center"
+            },
+            {
+                "title": "",
                 "key": "value",
                 "keyType": "key",
                 "type": "text",
                 "width": "15%",
+                "align": "start"
+            },
+            {
+                "title": "",
+                "key": "icons",
+                "keyType": "key",
+                "type": "html",
+                "width": "60px",
                 "align": "end"
-            },
-            {
-                "title": "",
-                "key": "icon",
-                "keyType": "key",
-                "type": "html",
-                "width": "5%",
-                "align": "center"
-            },
-            {
-                "title": "",
-                "key": "type",
-                "keyType": "key",
-                "type": "html",
-                "width": "5%",
-                "align": "center"
             }
         ],
         "mobileBreakpoint": "sm",
@@ -8086,14 +8099,6 @@
         "columns": [
             {
                 "title": "",
-                "key": "group",
-                "keyType": "key",
-                "type": "html",
-                "width": "1em",
-                "align": "center"
-            },
-            {
-                "title": "",
                 "key": "name",
                 "keyType": "key",
                 "type": "text",
@@ -8102,27 +8107,27 @@
             },
             {
                 "title": "",
+                "key": "icon",
+                "keyType": "key",
+                "type": "html",
+                "width": "20px",
+                "align": "center"
+            },
+            {
+                "title": "",
                 "key": "value",
                 "keyType": "key",
                 "type": "text",
                 "width": "15%",
+                "align": "start"
+            },
+            {
+                "title": "",
+                "key": "icons",
+                "keyType": "key",
+                "type": "html",
+                "width": "60px",
                 "align": "end"
-            },
-            {
-                "title": "",
-                "key": "icon",
-                "keyType": "key",
-                "type": "html",
-                "width": "5%",
-                "align": "center"
-            },
-            {
-                "title": "",
-                "key": "type",
-                "keyType": "key",
-                "type": "html",
-                "width": "5%",
-                "align": "center"
             }
         ],
         "mobileBreakpoint": "sm",
@@ -8185,6 +8190,81 @@
         "wires": [
             [
                 "f818a87d659afc1c"
+            ]
+        ]
+    },
+    {
+        "id": "ace113a6569e5b42",
+        "type": "function",
+        "z": "560376d6bba621ec",
+        "name": "fix",
+        "func": "msg.payload = msg.payload === true ? 1 : 0;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2630,
+        "y": 820,
+        "wires": [
+            [
+                "620fc0330d63fdea"
+            ]
+        ]
+    },
+    {
+        "id": "5db2d8a356ad18fe",
+        "type": "function",
+        "z": "560376d6bba621ec",
+        "name": "command 8b",
+        "func": "// command percent\nif (msg.payload.type === 'command' && msg.payload.unit === '8b') {\n    msg.ui_update = {\n        'label': '',//msg.dictionary.option_element[msg.payload.element],\n        'class': ''\n    };\n    msg.payload = msg.payload.value;\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2250,
+        "y": 860,
+        "wires": [
+            [
+                "1b26f1130d67ca8d"
+            ]
+        ]
+    },
+    {
+        "id": "1b26f1130d67ca8d",
+        "type": "ui-slider",
+        "z": "560376d6bba621ec",
+        "group": "9dca42b48aec683d",
+        "name": "room - detail - 8b",
+        "label": "",
+        "tooltip": "",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "thumbLabel": "false",
+        "showTicks": "false",
+        "min": 0,
+        "max": "255",
+        "step": 1,
+        "className": "center",
+        "iconPrepend": "",
+        "iconAppend": "",
+        "color": "",
+        "colorTrack": "",
+        "colorThumb": "",
+        "showTextField": true,
+        "x": 2530,
+        "y": 860,
+        "wires": [
+            [
+                "620fc0330d63fdea"
             ]
         ]
     },
@@ -9047,7 +9127,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "data",
-        "func": "// entity - list - title\nmsg.payload = '';\nnode.send([msg, null]);\n\n// entity - list - table\nmsg.payload = [];\nmsg.ui_update = {\n    'label': ''\n};\n\nlet colors = global.get('describe.colors', 'memoryOnly') || {};\nlet entities = global.get('entity', 'memoryOnly') || {};\nlet i = 0;\nfor (const uid in entities) {\n    let name = global.get('name[\"entity\"][\"' + uid + '\"]', 'default') || entities[uid]['id'];\n    let parent_name = global.get('name[\"device\"][\"' + entities[uid]['parent'] + '\"]', 'default') || entities[uid]['parent'];\n\n    let room = entities[uid]['room'];\n    let room_name = room;\n    if (room !== '') {\n        room_name = global.get('name[\"room\"][\"' + room + '\"]', 'default') || room;\n    }\n\n    let color = colors.on;\n    let dead = (entities[uid]['seen'] + 86400000) < Date.now() ? true : false; //24h\n    if (entities[uid]['hidden']) {\n        color = dead ? colors.median : colors.empty;\n    } else {\n        color = dead ? colors.off : colors.on;\n    }\n\n    msg.payload[i] = entities[uid];\n    msg.payload[i]['name'] = name;\n    msg.payload[i]['room_name'] = room_name;\n    msg.payload[i]['parent_name'] = parent_name;\n    msg.payload[i]['delete'] = msg.dictionary.group_entity.list_delete;\n    msg.payload[i]['hidden_color'] = color;\n\n    i++;\n}\n\n\n//msg.payload.sort((a, b) => a.id.localeCompare(b.id));\n//msg.payload.sort((a, b) => a.parent.localeCompare(b.parent));\n\nnode.send([null, msg]);\n\nreturn;",
+        "func": "// entity - list - title\nmsg.payload = '';\nnode.send([msg, null]);\n\n// entity - list - table\nmsg.payload = [];\nmsg.ui_update = {\n    'label': ''\n};\n\nlet colors = global.get('describe.colors', 'memoryOnly') || {};\nlet entities = global.get('entity', 'memoryOnly') || {};\nlet i = 0;\nfor (const uid in entities) {\n    let name = global.get('name[\"entity\"][\"' + uid + '\"]', 'default') || entities[uid]['id'];\n    let parent_name = global.get('name[\"device\"][\"' + entities[uid]['parent'] + '\"]', 'default') || entities[uid]['parent'];\n\n    let room = entities[uid]['room'];\n    let room_name = room;\n    if (room !== '') {\n        room_name = global.get('name[\"room\"][\"' + room + '\"]', 'default') || room;\n    }\n\n    let color = colors.on;\n    let dead = (entities[uid]['seen'] + 86400000) < Date.now() ? true : false; //24h\n    if (entities[uid]['hidden']) {\n        color = dead ? colors.median : colors.empty;\n    } else {\n        color = dead ? colors.off : colors.on;\n    }\n\n    msg.payload[i] = entities[uid];\n    msg.payload[i]['uid'] = uid;\n    msg.payload[i]['name'] = name;\n    msg.payload[i]['room_name'] = room_name;\n    msg.payload[i]['parent_name'] = parent_name;\n    msg.payload[i]['delete'] = msg.dictionary.group_entity.list_delete;\n    msg.payload[i]['hidden_color'] = color;\n\n    i++;\n}\n\n\n//msg.payload.sort((a, b) => a.id.localeCompare(b.id));\n//msg.payload.sort((a, b) => a.parent.localeCompare(b.parent));\n\nnode.send([null, msg]);\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -9136,6 +9216,14 @@
                 "key": "hidden_color",
                 "keyType": "key",
                 "type": "color",
+                "width": "",
+                "align": "start"
+            },
+            {
+                "title": "UID",
+                "key": "uid",
+                "keyType": "key",
+                "type": "text",
                 "width": "",
                 "align": "start"
             }
