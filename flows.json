@@ -604,12 +604,14 @@
             "a134fe322b07388f",
             "b6b16c9ce4cb114d",
             "0d5fbb3940042ce9",
-            "088de9d34a38547c"
+            "088de9d34a38547c",
+            "363daf239c99a09f",
+            "e6ead5c536cc3453"
         ],
         "x": 104,
         "y": 219,
-        "w": 1392,
-        "h": 82
+        "w": 1552,
+        "h": 142
     },
     {
         "id": "3db71c2c17730bd8",
@@ -6879,7 +6881,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1170,
+        "x": 1330,
         "y": 260,
         "wires": [
             [
@@ -6898,7 +6900,7 @@
             "7f4aee4ddcd7320f",
             "fb7da4dbb76c9223"
         ],
-        "x": 1455,
+        "x": 1615,
         "y": 260,
         "wires": []
     },
@@ -6936,7 +6938,8 @@
         "y": 260,
         "wires": [
             [
-                "a134fe322b07388f"
+                "a134fe322b07388f",
+                "363daf239c99a09f"
             ]
         ]
     },
@@ -6958,7 +6961,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1330,
+        "x": 1490,
         "y": 260,
         "wires": [
             [
@@ -8954,6 +8957,54 @@
         ]
     },
     {
+        "id": "363daf239c99a09f",
+        "type": "trigger",
+        "z": "560376d6bba621ec",
+        "g": "1465a47c930ed8e1",
+        "name": "10m",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "10",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "topic",
+        "topic": "hmi.id",
+        "outputs": 1,
+        "x": 1170,
+        "y": 320,
+        "wires": [
+            [
+                "e6ead5c536cc3453"
+            ]
+        ]
+    },
+    {
+        "id": "e6ead5c536cc3453",
+        "type": "function",
+        "z": "560376d6bba621ec",
+        "g": "1465a47c930ed8e1",
+        "name": "reset",
+        "func": "flow.set('room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('detail[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nmsg.enabled = false;\nmsg.payload = '-';\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1330,
+        "y": 320,
+        "wires": [
+            [
+                "5de2c01134449b81",
+                "088de9d34a38547c"
+            ]
+        ]
+    },
+    {
         "id": "c96e931494936766",
         "type": "link in",
         "z": "63b4849a4acfad4b",
@@ -9084,7 +9135,9 @@
         "name": "scene - page",
         "mode": "link",
         "links": [
-            "2d928a99443ec655"
+            "2d928a99443ec655",
+            "825c2d70a0eda50b",
+            "1da14302ac5ccefa"
         ],
         "x": 635,
         "y": 140,
@@ -9167,12 +9220,13 @@
         "id": "2d928a99443ec655",
         "type": "link in",
         "z": "56c0b44ca387382c",
-        "name": "link in 1",
+        "name": "scene - trigger - add",
         "links": [
-            "278344d6e03041b4"
+            "278344d6e03041b4",
+            "5da931c9323d8033"
         ],
-        "x": 145,
-        "y": 320,
+        "x": 305,
+        "y": 740,
         "wires": [
             [
                 "64ccaeb92cf4dce0"
@@ -9189,11 +9243,11 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 320,
-        "y": 320,
+        "x": 480,
+        "y": 740,
         "wires": [
             [
-                "0297b4144c2e6d81"
+                "2567eca3241f7ece"
             ]
         ]
     },
@@ -9209,8 +9263,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 380,
+        "x": 850,
+        "y": 800,
         "wires": [
             [
                 "efd48922da0abebd"
@@ -9227,8 +9281,8 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1050,
-        "y": 380,
+        "x": 1370,
+        "y": 800,
         "wires": [
             [
                 "3fa5a229bc2295f8"
@@ -9240,15 +9294,15 @@
         "type": "function",
         "z": "56c0b44ca387382c",
         "name": "data",
-        "func": "// raz\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send(msg);\nawait new Promise(resolve => setTimeout(resolve, 50)); // wait 50ms\n\n// limit\nlet trigger_room = msg.payload;\nnode.status({text: trigger_room});\nflow.set('trigger_room[\"' + msg.hmi.id + '\"]', trigger_room, 'memoryOnly');\nflow.set('trigger_element[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('trigger_entity[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('scene[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('target_room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('target_element[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('target_entity[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n\nmsg.class = '';\nmsg.enabled = true;\nnode.send(msg);\n\nreturn;",
+        "func": "// raz\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send(msg);\n\n// limit\nlet trigger_room = msg.payload;\nnode.status({text: trigger_room});\nflow.set('trigger_room[\"' + msg.hmi.id + '\"]', trigger_room, 'memoryOnly');\nflow.set('trigger_element[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('trigger_entity[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('scene[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('target_room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('target_element[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('target_entity[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n\nmsg.class = '';\nmsg.enabled = true;\n\nawait new Promise(resolve => setTimeout(resolve, 50)); // wait 50ms\nnode.send(msg);\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1250,
-        "y": 380,
+        "x": 1570,
+        "y": 800,
         "wires": [
             [
                 "5d52477d6029146d"
@@ -9260,10 +9314,10 @@
         "type": "ui-dropdown",
         "z": "56c0b44ca387382c",
         "group": "3a30762508b6edae",
-        "name": "scene - trigger room - select",
+        "name": "scene - trigger - add - room",
         "label": "",
         "tooltip": "",
-        "order": 2,
+        "order": 17,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -9283,8 +9337,8 @@
         "className": "",
         "typeIsComboBox": true,
         "msgTrigger": "onChange",
-        "x": 760,
-        "y": 380,
+        "x": 1080,
+        "y": 800,
         "wires": [
             [
                 "11815aab8b2a2e6f"
@@ -9296,10 +9350,10 @@
         "type": "ui-dropdown",
         "z": "56c0b44ca387382c",
         "group": "3a30762508b6edae",
-        "name": "scene - trigger element - select",
+        "name": "scene - trigger - add - element",
         "label": "",
         "tooltip": "",
-        "order": 3,
+        "order": 18,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -9319,8 +9373,8 @@
         "className": "",
         "typeIsComboBox": true,
         "msgTrigger": "onChange",
-        "x": 770,
-        "y": 440,
+        "x": 1090,
+        "y": 860,
         "wires": [
             [
                 "5a11361d68942e05"
@@ -9339,8 +9393,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 440,
+        "x": 850,
+        "y": 860,
         "wires": [
             [
                 "ab0d5f3d078b1b18"
@@ -9352,10 +9406,10 @@
         "type": "ui-dropdown",
         "z": "56c0b44ca387382c",
         "group": "3a30762508b6edae",
-        "name": "scene - trigger entity - select",
+        "name": "scene - trigger - add - entity",
         "label": "",
         "tooltip": "",
-        "order": 4,
+        "order": 19,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -9375,8 +9429,8 @@
         "className": "",
         "typeIsComboBox": true,
         "msgTrigger": "onChange",
-        "x": 760,
-        "y": 500,
+        "x": 1080,
+        "y": 920,
         "wires": [
             [
                 "ff6d642c5b54d3ca"
@@ -9395,8 +9449,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 500,
+        "x": 850,
+        "y": 920,
         "wires": [
             [
                 "b27d7ed13f1eaaf6"
@@ -9413,8 +9467,8 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1050,
-        "y": 440,
+        "x": 1370,
+        "y": 860,
         "wires": [
             [
                 "22cb95146936e775"
@@ -9426,15 +9480,15 @@
         "type": "function",
         "z": "56c0b44ca387382c",
         "name": "data",
-        "func": "// raz\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send(msg);\nawait new Promise(resolve => setTimeout(resolve, 50)); // wait 50ms\n\n// limit\nlet trigger_element = msg.payload;\nnode.status({text: trigger_element});\nflow.set('trigger_element[\"' + msg.hmi.id + '\"]', trigger_element, 'memoryOnly');\nflow.set('trigger_entity[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('scene[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('target_room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('target_element[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('target_entity[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n\nmsg.class = '';\nmsg.enabled = true;\nnode.send(msg);\n\nreturn;",
+        "func": "// raz\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send(msg);\n\n// limit\nlet trigger_element = msg.payload;\nnode.status({text: trigger_element});\nflow.set('trigger_element[\"' + msg.hmi.id + '\"]', trigger_element, 'memoryOnly');\nflow.set('trigger_entity[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('scene[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('target_room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('target_element[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('target_entity[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n\nmsg.class = '';\nmsg.enabled = true;\n\nawait new Promise(resolve => setTimeout(resolve, 50)); // wait 50ms\nnode.send(msg);\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1250,
-        "y": 440,
+        "x": 1570,
+        "y": 860,
         "wires": [
             [
                 "edb67ee24ad56034"
@@ -9459,19 +9513,15 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 370,
-        "y": 440,
+        "x": 690,
+        "y": 860,
         "wires": [
             [
                 "ae2618b4f144243b"
             ],
             [
-                "acfcdbe385caefe8",
-                "1e5ffa8f8a8fbaa1",
-                "390944bd417f8510",
-                "269f3174249f43bb",
-                "c347279fabc7621c",
-                "5f385e8867aa61fe"
+                "edb67ee24ad56034",
+                "ae2618b4f144243b"
             ]
         ]
     },
@@ -9493,21 +9543,15 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 370,
-        "y": 380,
+        "x": 690,
+        "y": 800,
         "wires": [
             [
                 "3f1e50c7c7349c30"
             ],
             [
-                "ae2618b4f144243b",
                 "3f1e50c7c7349c30",
-                "acfcdbe385caefe8",
-                "1e5ffa8f8a8fbaa1",
-                "390944bd417f8510",
-                "269f3174249f43bb",
-                "c347279fabc7621c",
-                "5f385e8867aa61fe"
+                "5d52477d6029146d"
             ]
         ]
     },
@@ -9521,8 +9565,8 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1050,
-        "y": 500,
+        "x": 1370,
+        "y": 920,
         "wires": [
             [
                 "94cae51ea6349dec"
@@ -9534,15 +9578,15 @@
         "type": "function",
         "z": "56c0b44ca387382c",
         "name": "data",
-        "func": "// raz\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send(msg);\nawait new Promise(resolve => setTimeout(resolve, 50)); // wait 50ms\n\n// limit\nlet trigger_entity = msg.payload;\nnode.status({text: trigger_entity});\nflow.set('trigger_entity[\"' + msg.hmi.id + '\"]', trigger_entity, 'memoryOnly');\nflow.set('scene[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('target_room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('target_element[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('target_entity[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n\nmsg.class = '';\nmsg.enabled = true;\nnode.send(msg);\n\nreturn;",
+        "func": "// raz\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send(msg);\n\n// limit\nlet trigger_entity = msg.payload;\nnode.status({text: trigger_entity});\nflow.set('trigger_entity[\"' + msg.hmi.id + '\"]', trigger_entity, 'memoryOnly');\nflow.set('scene[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('target_room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('target_element[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('target_entity[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n\nmsg.class = '';\nmsg.enabled = true;\n\nawait new Promise(resolve => setTimeout(resolve, 50)); // wait 50ms\nnode.send(msg);\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1250,
-        "y": 500,
+        "x": 1570,
+        "y": 920,
         "wires": [
             [
                 "727c08cf5d83f3de"
@@ -9567,18 +9611,15 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 370,
-        "y": 500,
+        "x": 690,
+        "y": 920,
         "wires": [
             [
                 "acfcdbe385caefe8"
             ],
             [
-                "1e5ffa8f8a8fbaa1",
-                "390944bd417f8510",
-                "269f3174249f43bb",
-                "c347279fabc7621c",
-                "5f385e8867aa61fe"
+                "727c08cf5d83f3de",
+                "acfcdbe385caefe8"
             ]
         ]
     },
@@ -9587,15 +9628,15 @@
         "type": "function",
         "z": "56c0b44ca387382c",
         "name": "data",
-        "func": "\nflow.set('scenes_elements', {\n    'lighting': ['light']\n}, 'memoryOnly');\n\n// raz\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send(msg);\nawait new Promise(resolve => setTimeout(resolve, 50)); // wait 50ms\n\nif (typeof msg.hmi.id === 'string' && msg.hmi.id !== '') {\n    // limit\n    flow.set('trigger_room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n    flow.set('trigger_element[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n    flow.set('trigger_entity[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n    flow.set('scene[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n    flow.set('target_room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n    flow.set('target_element[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n    flow.set('target_entity[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n\n    msg.class = '';\n    msg.enabled = true;\n    node.send(msg);\n}\n\nreturn;",
+        "func": "if (msg.enabled && typeof msg.hmi.id === 'string' && msg.hmi.id !== '') {\n    // limit\n    flow.set('trigger_room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n    flow.set('trigger_element[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n    flow.set('trigger_entity[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n    flow.set('scene[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n    flow.set('target_room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n    flow.set('target_element[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n    flow.set('target_entity[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n\n    msg.class = '';\n    msg.enabled = true;\n}\n\nawait new Promise(resolve => setTimeout(resolve, 50)); // wait 50ms\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1250,
-        "y": 320,
+        "x": 1570,
+        "y": 740,
         "wires": [
             [
                 "0340b06f1f1eb5a8"
@@ -9620,16 +9661,15 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 370,
-        "y": 560,
+        "x": 690,
+        "y": 980,
         "wires": [
             [
                 "1e5ffa8f8a8fbaa1"
             ],
             [
-                "390944bd417f8510",
-                "269f3174249f43bb",
-                "5f385e8867aa61fe"
+                "1e5ffa8f8a8fbaa1",
+                "f97e2917690d7705"
             ]
         ]
     },
@@ -9645,8 +9685,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 560,
+        "x": 850,
+        "y": 980,
         "wires": [
             [
                 "77d1d28d5d82cda5"
@@ -9658,10 +9698,10 @@
         "type": "ui-dropdown",
         "z": "56c0b44ca387382c",
         "group": "3a30762508b6edae",
-        "name": "scene - scene - select",
+        "name": "scene - trigger - add - scene",
         "label": "",
         "tooltip": "",
-        "order": 5,
+        "order": 20,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -9681,8 +9721,8 @@
         "className": "",
         "typeIsComboBox": true,
         "msgTrigger": "onChange",
-        "x": 740,
-        "y": 560,
+        "x": 1080,
+        "y": 980,
         "wires": [
             [
                 "bcba6ada8afa36fe"
@@ -9699,8 +9739,8 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1050,
-        "y": 560,
+        "x": 1370,
+        "y": 980,
         "wires": [
             [
                 "7633be06242c6d21"
@@ -9712,15 +9752,15 @@
         "type": "function",
         "z": "56c0b44ca387382c",
         "name": "data",
-        "func": "// raz\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send(msg);\nawait new Promise(resolve => setTimeout(resolve, 50)); // wait 50ms\n\n// limit\nlet scene = msg.payload;\nnode.status({ text: scene });\nflow.set('scene[\"' + msg.hmi.id + '\"]', scene, 'memoryOnly');\nflow.set('target_room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('target_element[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('target_entity[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n\nmsg.class = '';\nmsg.enabled = true;\nnode.send(msg);\n\nreturn;",
+        "func": "// raz\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send(msg);\n\n// limit\nlet scene = msg.payload;\nnode.status({ text: scene });\nflow.set('scene[\"' + msg.hmi.id + '\"]', scene, 'memoryOnly');\nflow.set('target_room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('target_element[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('target_entity[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n\nmsg.class = '';\nmsg.enabled = true;\n\nawait new Promise(resolve => setTimeout(resolve, 50)); // wait 50ms\nnode.send(msg);\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1250,
-        "y": 560,
+        "x": 1570,
+        "y": 980,
         "wires": [
             [
                 "f97e2917690d7705"
@@ -9745,14 +9785,15 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 370,
-        "y": 740,
+        "x": 690,
+        "y": 1160,
         "wires": [
             [
                 "390944bd417f8510"
             ],
             [
-                "5f385e8867aa61fe"
+                "390944bd417f8510",
+                "fa68f09c69ea084a"
             ]
         ]
     },
@@ -9768,8 +9809,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 740,
+        "x": 850,
+        "y": 1160,
         "wires": [
             [
                 "47a3f7c02c84d404"
@@ -9781,10 +9822,10 @@
         "type": "ui-dropdown",
         "z": "56c0b44ca387382c",
         "group": "3a30762508b6edae",
-        "name": "scene - target entity - select",
+        "name": "scene - target - add - entity",
         "label": "",
         "tooltip": "",
-        "order": 8,
+        "order": 23,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -9804,8 +9845,8 @@
         "className": "",
         "typeIsComboBox": true,
         "msgTrigger": "onChange",
-        "x": 760,
-        "y": 740,
+        "x": 1080,
+        "y": 1160,
         "wires": [
             [
                 "29c1a806700e7e72"
@@ -9822,8 +9863,8 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1050,
-        "y": 740,
+        "x": 1370,
+        "y": 1160,
         "wires": [
             [
                 "a80509268e482c2c"
@@ -9835,15 +9876,15 @@
         "type": "function",
         "z": "56c0b44ca387382c",
         "name": "data",
-        "func": "// raz\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send(msg);\nawait new Promise(resolve => setTimeout(resolve, 50)); // wait 50ms\n\n// limit\nlet target_entity = msg.payload;\nnode.status({ text: target_entity });\nflow.set('target_entity[\"' + msg.hmi.id + '\"]', target_entity, 'memoryOnly');\n\nmsg.class = '';\nmsg.enabled = true;\nnode.send(msg);\n\nreturn;",
+        "func": "// raz\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send(msg);\n\n// limit\nlet target_entity = msg.payload;\nnode.status({ text: target_entity });\nflow.set('target_entity[\"' + msg.hmi.id + '\"]', target_entity, 'memoryOnly');\n\nmsg.class = '';\nmsg.enabled = true;\n\nawait new Promise(resolve => setTimeout(resolve, 50)); // wait 50ms\nnode.send(msg);\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1250,
-        "y": 740,
+        "x": 1570,
+        "y": 1160,
         "wires": [
             [
                 "fa68f09c69ea084a"
@@ -9868,13 +9909,15 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 370,
-        "y": 800,
+        "x": 690,
+        "y": 1220,
         "wires": [
             [
                 "5f385e8867aa61fe"
             ],
-            []
+            [
+                "5f385e8867aa61fe"
+            ]
         ]
     },
     {
@@ -9889,8 +9932,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 800,
+        "x": 850,
+        "y": 1220,
         "wires": [
             []
         ]
@@ -9907,8 +9950,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 620,
+        "x": 850,
+        "y": 1040,
         "wires": [
             [
                 "69d0a229bc92d424"
@@ -9925,8 +9968,8 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1050,
-        "y": 620,
+        "x": 1370,
+        "y": 1040,
         "wires": [
             [
                 "4f60ffdf4ef20d89"
@@ -9938,15 +9981,15 @@
         "type": "function",
         "z": "56c0b44ca387382c",
         "name": "data",
-        "func": "// raz\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send(msg);\nawait new Promise(resolve => setTimeout(resolve, 50)); // wait 50ms\n\n// limit\nlet target_room = msg.payload;\nnode.status({text: target_room});\nflow.set('target_room[\"' + msg.hmi.id + '\"]', target_room, 'memoryOnly');\nflow.set('target_element[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('target_entity[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n\nmsg.class = '';\nmsg.enabled = true;\nnode.send(msg);\n\nreturn;",
+        "func": "// raz\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send(msg);\n\n// limit\nlet target_room = msg.payload;\nnode.status({text: target_room});\nflow.set('target_room[\"' + msg.hmi.id + '\"]', target_room, 'memoryOnly');\nflow.set('target_element[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('target_entity[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n\nmsg.class = '';\nmsg.enabled = true;\n\nawait new Promise(resolve => setTimeout(resolve, 50)); // wait 50ms\nnode.send(msg);\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1250,
-        "y": 620,
+        "x": 1570,
+        "y": 1040,
         "wires": [
             [
                 "cab32461107dc2d2"
@@ -9958,10 +10001,10 @@
         "type": "ui-dropdown",
         "z": "56c0b44ca387382c",
         "group": "3a30762508b6edae",
-        "name": "scene - target room - select",
+        "name": "scene - target - add - room",
         "label": "",
         "tooltip": "",
-        "order": 6,
+        "order": 21,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -9981,8 +10024,8 @@
         "className": "",
         "typeIsComboBox": true,
         "msgTrigger": "onChange",
-        "x": 760,
-        "y": 620,
+        "x": 1080,
+        "y": 1040,
         "wires": [
             [
                 "0114b239dd1f1601"
@@ -10007,16 +10050,15 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 370,
-        "y": 620,
+        "x": 690,
+        "y": 1040,
         "wires": [
             [
                 "269f3174249f43bb"
             ],
             [
-                "c347279fabc7621c",
-                "390944bd417f8510",
-                "5f385e8867aa61fe"
+                "269f3174249f43bb",
+                "cab32461107dc2d2"
             ]
         ]
     },
@@ -10025,10 +10067,10 @@
         "type": "ui-dropdown",
         "z": "56c0b44ca387382c",
         "group": "3a30762508b6edae",
-        "name": "scene - target element - select",
+        "name": "scene - target - add - element",
         "label": "",
         "tooltip": "",
-        "order": 7,
+        "order": 22,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -10048,8 +10090,8 @@
         "className": "",
         "typeIsComboBox": true,
         "msgTrigger": "onChange",
-        "x": 770,
-        "y": 680,
+        "x": 1090,
+        "y": 1100,
         "wires": [
             [
                 "1f67c5bce52c10fd"
@@ -10068,8 +10110,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 680,
+        "x": 850,
+        "y": 1100,
         "wires": [
             [
                 "ad08568a621f73e2"
@@ -10086,8 +10128,8 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1050,
-        "y": 680,
+        "x": 1370,
+        "y": 1100,
         "wires": [
             [
                 "77415f31ad1c7a58"
@@ -10099,15 +10141,15 @@
         "type": "function",
         "z": "56c0b44ca387382c",
         "name": "data",
-        "func": "// raz\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send(msg);\nawait new Promise(resolve => setTimeout(resolve, 50)); // wait 50ms\n\n// limit\nlet tatget_element = msg.payload;\nnode.status({text: tatget_element});\nflow.set('target_element[\"' + msg.hmi.id + '\"]', tatget_element, 'memoryOnly');\nflow.set('target_entity[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n\nmsg.class = '';\nmsg.enabled = true;\nnode.send(msg);\n\nreturn;",
+        "func": "// raz\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send(msg);\n\n// limit\nlet tatget_element = msg.payload;\nnode.status({text: tatget_element});\nflow.set('target_element[\"' + msg.hmi.id + '\"]', tatget_element, 'memoryOnly');\nflow.set('target_entity[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n\nmsg.class = '';\nmsg.enabled = true;\n\nawait new Promise(resolve => setTimeout(resolve, 50)); // wait 50ms\nnode.send(msg);\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1250,
-        "y": 680,
+        "x": 1570,
+        "y": 1100,
         "wires": [
             [
                 "6bcef46f177927f6"
@@ -10132,16 +10174,1344 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 370,
-        "y": 680,
+        "x": 690,
+        "y": 1100,
         "wires": [
             [
                 "c347279fabc7621c"
             ],
             [
-                "5f385e8867aa61fe",
-                "390944bd417f8510"
+                "c347279fabc7621c",
+                "6bcef46f177927f6"
             ]
+        ]
+    },
+    {
+        "id": "825c2d70a0eda50b",
+        "type": "link in",
+        "z": "56c0b44ca387382c",
+        "name": "scene - scene - add",
+        "links": [
+            "278344d6e03041b4",
+            "5da931c9323d8033"
+        ],
+        "x": 305,
+        "y": 1400,
+        "wires": [
+            [
+                "585f93ea36a25b6a"
+            ]
+        ]
+    },
+    {
+        "id": "585f93ea36a25b6a",
+        "type": "link call",
+        "z": "56c0b44ca387382c",
+        "name": "",
+        "links": [
+            "5a1d16fa45e115fa"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 480,
+        "y": 1400,
+        "wires": [
+            [
+                "97e1f87ad83e6159"
+            ]
+        ]
+    },
+    {
+        "id": "1da14302ac5ccefa",
+        "type": "link in",
+        "z": "56c0b44ca387382c",
+        "name": "scene - action - select",
+        "links": [
+            "278344d6e03041b4"
+        ],
+        "x": 145,
+        "y": 300,
+        "wires": [
+            [
+                "1c382d87144d2104"
+            ]
+        ]
+    },
+    {
+        "id": "1c382d87144d2104",
+        "type": "link call",
+        "z": "56c0b44ca387382c",
+        "name": "",
+        "links": [
+            "5a1d16fa45e115fa"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 320,
+        "y": 300,
+        "wires": [
+            [
+                "5556c287566eed43"
+            ]
+        ]
+    },
+    {
+        "id": "5556c287566eed43",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "name": "data",
+        "func": "if (!msg.enabled) {\n\n    return msg;\n}\n\n// Reset\nflow.set('action[\"' + msg.hmi.id +'\"]', '', 'memoryOnly');\n\nmsg.payload = '';\nlet actions = {\n    'sceneadd': 'Add or edit scene',\n    'scenelist': 'List scenes',\n    'triggeradd': 'Add triggers',\n    'triggerlist': 'List triggers'\n};\nlet i = 0;\n\nlet dropdownOptions = [];\nfor (const a in actions) {\n    dropdownOptions[i++] = {\n        'label': actions[a],\n        'value': a\n    };\n}\nnode.status({text: i});\n\n//dropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.ui_update = {\n    'label': msg.dictionary.group_scene.action_select || 'Select an action',\n    'options': dropdownOptions\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 300,
+        "wires": [
+            [
+                "695b21984aa45d60"
+            ]
+        ]
+    },
+    {
+        "id": "695b21984aa45d60",
+        "type": "ui-dropdown",
+        "z": "56c0b44ca387382c",
+        "group": "3a30762508b6edae",
+        "name": "scene - action - select",
+        "label": "",
+        "tooltip": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": false,
+        "msgTrigger": "onChange",
+        "x": 740,
+        "y": 300,
+        "wires": [
+            [
+                "34c5feac73a0a098"
+            ]
+        ]
+    },
+    {
+        "id": "34c5feac73a0a098",
+        "type": "link call",
+        "z": "56c0b44ca387382c",
+        "name": "",
+        "links": [
+            "56e6a7b9b0e66451"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 990,
+        "y": 300,
+        "wires": [
+            [
+                "b127b33350d13e29"
+            ]
+        ]
+    },
+    {
+        "id": "7b6e41bba4c46872",
+        "type": "link in",
+        "z": "56c0b44ca387382c",
+        "name": "scene - scenes_elements",
+        "links": [
+            "5da931c9323d8033"
+        ],
+        "x": 965,
+        "y": 120,
+        "wires": [
+            [
+                "85fe530b84434f58"
+            ]
+        ]
+    },
+    {
+        "id": "85fe530b84434f58",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "name": "data",
+        "func": "// Limit available elements by scene type\nflow.set('scenes_elements', {\n    'lighting': ['light']\n}, 'memoryOnly');\n\nflow.set('scenes_template', {\n    'scene': '',\n    'entity': '',\n    'on': 1,\n    'off': 0,\n    'motion': 0,\n    'nocturnal': 0,\n    'nightlight': 0,\n    'retention': 0,\n    'timer': 600,\n    'high': '70',\n    'low': '30',\n    'illuminace': 2000,\n    'darkness': 200,\n    'daily': 0,\n    'openwork': 0,\n    'delay': 60,\n    'lower': 0,\n    'higher': 255,\n    'step': 5\n}, 'memoryOnly');\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b127b33350d13e29",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "name": "data",
+        "func": "// raz\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send(msg);\n\n// limit\nlet value = msg.payload;\nnode.status({text: value});\nflow.set('action[\"' + msg.hmi.id + '\"]', value, 'memoryOnly');\n\nmsg.class = '';\nmsg.enabled = true;\n\nawait new Promise(resolve => setTimeout(resolve, 50)); // wait 50ms\nnode.send(msg);\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 300,
+        "wires": [
+            [
+                "5da931c9323d8033"
+            ]
+        ]
+    },
+    {
+        "id": "5da931c9323d8033",
+        "type": "link out",
+        "z": "56c0b44ca387382c",
+        "name": "scene - action",
+        "mode": "link",
+        "links": [
+            "7b6e41bba4c46872",
+            "2d928a99443ec655",
+            "825c2d70a0eda50b"
+        ],
+        "x": 1315,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "2567eca3241f7ece",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "name": "action",
+        "func": "let action = flow.get('action[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--';\nnode.status({text: action});\n\nif (!msg.enabled || action === 'triggeradd') {\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 740,
+        "wires": [
+            [
+                "0297b4144c2e6d81"
+            ]
+        ]
+    },
+    {
+        "id": "97e1f87ad83e6159",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "name": "action",
+        "func": "let action = flow.get('action[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--';\nnode.status({text: action});\n\nif (!msg.enabled || action === 'sceneadd') {\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 1400,
+        "wires": [
+            [
+                "b182393683a907c2"
+            ]
+        ]
+    },
+    {
+        "id": "4b27b4a89ebdbcb3",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "name": "data",
+        "func": "if (!msg.enabled) {\n\n    return msg;\n}\n\nmsg.payload = '';\nlet scenes = msg.dictionary.option_scene;\nlet i = 0;\n\nlet dropdownOptions = [];\nfor (const s in scenes) {\n    dropdownOptions[i++] = {\n        'label': scenes[s],\n        'value': s\n    };\n}\nnode.status({text: i});\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.ui_update = {\n    'label': msg.dictionary.group_scene.addscene_scene || 'Select scene to add',\n    'options': dropdownOptions\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 1460,
+        "wires": [
+            [
+                "e0cbae64ac422ac0"
+            ]
+        ]
+    },
+    {
+        "id": "e0cbae64ac422ac0",
+        "type": "ui-dropdown",
+        "z": "56c0b44ca387382c",
+        "group": "3a30762508b6edae",
+        "name": "scene - addscene - scene",
+        "label": "",
+        "tooltip": "",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": false,
+        "msgTrigger": "onChange",
+        "x": 1070,
+        "y": 1460,
+        "wires": [
+            [
+                "8ef698c4dbdd7631"
+            ]
+        ]
+    },
+    {
+        "id": "8ef698c4dbdd7631",
+        "type": "link call",
+        "z": "56c0b44ca387382c",
+        "name": "",
+        "links": [
+            "56e6a7b9b0e66451"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1350,
+        "y": 1460,
+        "wires": [
+            [
+                "0bd608317001d469"
+            ]
+        ]
+    },
+    {
+        "id": "0bd608317001d469",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "name": "data",
+        "func": "// raz\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send(msg);\n\n// form\nlet value = msg.payload;\nnode.status({ text: value });\n\nlet data = flow.get('scene[\"' + msg.hmi.id + '\"]', 'memoryOnly') || {};\ndata.scene = value;\nflow.set('scene[\"' + msg.hmi.id + '\"]', data, 'memoryOnly');\n\nmsg.class = '';\nmsg.enabled = true;\n\nawait new Promise(resolve => setTimeout(resolve, 50)); // wait 50ms\nnode.send(msg);\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1570,
+        "y": 1460,
+        "wires": [
+            [
+                "6921d3af4628f904"
+            ]
+        ]
+    },
+    {
+        "id": "6921d3af4628f904",
+        "type": "switch",
+        "z": "56c0b44ca387382c",
+        "name": "hide",
+        "property": "enabled",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 690,
+        "y": 1520,
+        "wires": [
+            [
+                "2e5237010ef5be2c"
+            ],
+            [
+                "2e5237010ef5be2c",
+                "8b2319c38c6cee5b"
+            ]
+        ]
+    },
+    {
+        "id": "e53f8510416c52e1",
+        "type": "ui-dropdown",
+        "z": "56c0b44ca387382c",
+        "group": "3a30762508b6edae",
+        "name": "scene - addscene - entity",
+        "label": "",
+        "tooltip": "",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": true,
+        "msgTrigger": "onChange",
+        "x": 1070,
+        "y": 1520,
+        "wires": [
+            [
+                "af61cae68cb431e1"
+            ]
+        ]
+    },
+    {
+        "id": "2e5237010ef5be2c",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "name": "data",
+        "func": "if (!msg.enabled) {\n\n    return msg;\n}\n\nlet scene = flow.get('scene[\"' + msg.hmi.id + '\"][\"scene\"]', 'memoryOnly') || '--';\nlet elements = flow.get('scenes_elements[\"' + scene + '\"]', 'memoryOnly') || {};\n\nmsg.payload = '';\nlet names = global.get('name', 'memoryOnly') || {};\nlet entities = global.get('entity', 'memoryOnly') || {};\nlet i = 0;\n\nlet dropdownOptions = [];\nfor (const e in entities) {\n    if (entities[e]['type'] === 'command' &&\n        elements.includes(entities[e]['element'])\n    ) {\n        let room = names['room'][entities[e]['room']] || entities[e]['room'];\n        let parent = names['device'][entities[e]['parent']] || entities[e]['parent'];\n        let name = names['entity'][entities[e]['uid']] || entities[e]['id'];\n        dropdownOptions[i++] = {\n            'label': room + ' / ' + parent + ' / ' + name,\n            'value': entities[e]['uid']\n        };\n    }\n}\nnode.status({text: i});\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.ui_update = {\n    'label': msg.dictionary.group_scene.addscene_entity_select || 'Select target entity of the scene',\n    'options': dropdownOptions\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 1520,
+        "wires": [
+            [
+                "e53f8510416c52e1"
+            ]
+        ]
+    },
+    {
+        "id": "af61cae68cb431e1",
+        "type": "link call",
+        "z": "56c0b44ca387382c",
+        "name": "",
+        "links": [
+            "56e6a7b9b0e66451"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1350,
+        "y": 1520,
+        "wires": [
+            [
+                "6c7947f3b54fcf52"
+            ]
+        ]
+    },
+    {
+        "id": "6c7947f3b54fcf52",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "name": "data",
+        "func": "// raz\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send(msg);\n\n// form\nlet value = msg.payload;\nnode.status({ text: value });\n\nlet data =  flow.get('scene[\"' + msg.hmi.id + '\"]', 'memoryOnly') || {};\ndata.entity = value;\nflow.set('scene[\"' + msg.hmi.id + '\"]', data, 'memoryOnly');\n\nmsg.class = '';\nmsg.enabled = true;\n\nawait new Promise(resolve => setTimeout(resolve, 50)); // wait 50ms\nnode.send(msg);\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1570,
+        "y": 1520,
+        "wires": [
+            [
+                "8b2319c38c6cee5b"
+            ]
+        ]
+    },
+    {
+        "id": "b182393683a907c2",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "name": "data",
+        "func": "if (typeof msg.hmi.id === 'string' && msg.hmi.id !== '') {\n    // clear\n    flow.set('scene[\"' + msg.hmi.id + '\"]', {...flow.get('scenes_template', 'memoryOnly') || {}}, 'memoryOnly');\n}\n\nawait new Promise(resolve => setTimeout(resolve, 50)); // wait 50ms\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1570,
+        "y": 1400,
+        "wires": [
+            [
+                "63fe57f2ad567654"
+            ]
+        ]
+    },
+    {
+        "id": "63fe57f2ad567654",
+        "type": "switch",
+        "z": "56c0b44ca387382c",
+        "name": "hide",
+        "property": "enabled",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 690,
+        "y": 1460,
+        "wires": [
+            [
+                "4b27b4a89ebdbcb3"
+            ],
+            [
+                "4b27b4a89ebdbcb3",
+                "6921d3af4628f904"
+            ]
+        ]
+    },
+    {
+        "id": "8b2319c38c6cee5b",
+        "type": "switch",
+        "z": "56c0b44ca387382c",
+        "name": "hide",
+        "property": "enabled",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 690,
+        "y": 1580,
+        "wires": [
+            [
+                "6915f59f4540c5bb"
+            ],
+            [
+                "6915f59f4540c5bb",
+                "8472d9d3bdc08497"
+            ]
+        ]
+    },
+    {
+        "id": "6915f59f4540c5bb",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "name": "data",
+        "func": "if (!msg.enabled) {\n\n    return msg;\n}\n\nnode.status({text: ''});\n\nlet scenes = global.get('scene', 'memoryOnly') || {};\nlet scene = flow.get('scene[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--';\nlet entity = global.get('entity[\"' + scene.entity + '\"]', 'memoryOnly');\nlet existing = global.get('scene[\"' + scene.scene + '\"][\"' + scene.entity + '\"]', 'memoryOnly') || {};\n\n// Delete if unknown\nif (typeof entity !== 'object') {\n    delete scenes[scene.scene][scene.entity];\n    global.set('scene', scenes, 'memoryOnly');\n\n    return;\n}\n\nmsg.update = existing.length > 0 ? true : false;\nmsg.scene = {...existing, ...scene};\nmsg.entity = entity;\n\nnode.status({ text: msg.update ? 'update' : 'add' });\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 1580,
+        "wires": [
+            [
+                "8472d9d3bdc08497"
+            ]
+        ]
+    },
+    {
+        "id": "8472d9d3bdc08497",
+        "type": "switch",
+        "z": "56c0b44ca387382c",
+        "name": "hide",
+        "property": "enabled",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 850,
+        "y": 1640,
+        "wires": [
+            [
+                "7ad7716954631752"
+            ],
+            [
+                "7ad7716954631752"
+            ]
+        ]
+    },
+    {
+        "id": "7ad7716954631752",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "name": "on / off",
+        "func": "if (!msg.enabled) {\n    msg.scene = {...flow.get('scenes_template', 'memoryOnly')}; // required for fields payload\n\n    node.send([msg, msg, msg, msg, msg, msg]);\n}\nnode.status({text: ''});\n\nif (!['lighting', 'toggle', 'shading', 'airflow', 'cumulus', 'volume', 'overload'].includes(msg.scene.scene)) {\n\n    return;\n}\nnode.status({text: msg.scene.scene + ' - ' + msg.entity.unit});\n\nif (['b', 'rb'].includes(msg.entity.unit)) {\n    // Binary\n    node.send([msg, null, null, null, null, null]);\n}\nelse if (['%'].includes(msg.entity.unit)) {\n    // Percent\n    node.send([null, msg, null, null, null, null]);\n}\nelse if (['8b'].includes(msg.entity.unit)) {\n    // 8-bit\n    node.send([null, null, msg, null, null, null]);\n}\nelse if (['°C', '°F', 'mA', 'A', 'mW', 'W', 'kW', 'MW', 'mWh', 'Wh', 'kWh', 'MWh', 'mVA', 'VA', 'lx', 'ppm', 'n', 's', 'ms'].includes(msg.entity.unit)) {\n    // Number\n    node.send([null, null, null, msg, null, null]);\n}\nelse if (['enum'].includes(msg.entity.unit)) {\n    // Enum\n    node.send([null, null, null, null, msg, null]);\n}\nelse if (['text'].includes(msg.entity.unit)) {\n    // Text\n    node.send([null, null, null, null, null, msg]);\n}\n\nreturn;",
+        "outputs": 6,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 1640,
+        "wires": [
+            [
+                "f17262e3f5f32b9c",
+                "7908cf2d7a9557d5"
+            ],
+            [
+                "a288f0436ad108fa",
+                "b242230d03558915"
+            ],
+            [
+                "9af1dfb35a345ed3",
+                "97ef458e1abb4b90"
+            ],
+            [
+                "50e39f95598b8097",
+                "f4faa97ce1eb394f"
+            ],
+            [
+                "b90a744ae25cbf93",
+                "c357942c7bd50be0"
+            ],
+            [
+                "5fb85f2cddab05de",
+                "8c80ebf34e16a3c3"
+            ]
+        ]
+    },
+    {
+        "id": "7a990ea667fe7cf6",
+        "type": "ui-switch",
+        "z": "56c0b44ca387382c",
+        "name": "scene - addscene - on - binary",
+        "label": "",
+        "group": "3a30762508b6edae",
+        "order": 5,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "decouple": false,
+        "topic": "on",
+        "topicType": "str",
+        "style": "",
+        "className": "",
+        "layout": "row-left-swapped",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 1410,
+        "y": 1580,
+        "wires": [
+            [
+                "19a4011894c1a9be"
+            ]
+        ]
+    },
+    {
+        "id": "bb6fdbb2db911f09",
+        "type": "ui-switch",
+        "z": "56c0b44ca387382c",
+        "name": "scene - addscene - off - binary",
+        "label": "switch",
+        "group": "3a30762508b6edae",
+        "order": 6,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "decouple": false,
+        "topic": "off",
+        "topicType": "str",
+        "style": "",
+        "className": "",
+        "layout": "row-left-swapped",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 1410,
+        "y": 1640,
+        "wires": [
+            [
+                "19a4011894c1a9be"
+            ]
+        ]
+    },
+    {
+        "id": "19a4011894c1a9be",
+        "type": "link call",
+        "z": "56c0b44ca387382c",
+        "name": "",
+        "links": [
+            "56e6a7b9b0e66451"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1690,
+        "y": 1640,
+        "wires": [
+            [
+                "971ba058b0ec97e4"
+            ]
+        ]
+    },
+    {
+        "id": "f17262e3f5f32b9c",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "name": "value",
+        "func": "msg.payload = Boolean(msg.scene.on);\nmsg.ui_update =  {\n    'label': msg.dictionary.group_scene.addscene_on_select || 'On'\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 1580,
+        "wires": [
+            [
+                "7a990ea667fe7cf6"
+            ]
+        ]
+    },
+    {
+        "id": "7908cf2d7a9557d5",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "name": "value",
+        "func": "msg.payload = Boolean(msg.scene.off);\nmsg.ui_update =  {\n    'label': msg.dictionary.group_scene.addscene_off_select || 'Off'\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 1640,
+        "wires": [
+            [
+                "bb6fdbb2db911f09"
+            ]
+        ]
+    },
+    {
+        "id": "a288f0436ad108fa",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "name": "value",
+        "func": "msg.payload = Number(msg.scene.on);\nmsg.ui_update =  {\n    'label': msg.dictionary.group_scene.addscene_on_select || 'On'\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 1700,
+        "wires": [
+            [
+                "d75bf2579725af1f"
+            ]
+        ]
+    },
+    {
+        "id": "b242230d03558915",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "name": "value",
+        "func": "msg.payload = Number(msg.scene.off);\nmsg.ui_update =  {\n    'label': msg.dictionary.group_scene.addscene_off_select || 'Off'\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 1760,
+        "wires": [
+            [
+                "f9ef2eadb9dfda0a"
+            ]
+        ]
+    },
+    {
+        "id": "d75bf2579725af1f",
+        "type": "ui-slider",
+        "z": "56c0b44ca387382c",
+        "group": "3a30762508b6edae",
+        "name": "scene - addscene - on - percent",
+        "label": "",
+        "tooltip": "",
+        "order": 7,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "outs": "end",
+        "topic": "on",
+        "topicType": "str",
+        "thumbLabel": "true",
+        "showTicks": "false",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "iconPrepend": "",
+        "iconAppend": "",
+        "color": "",
+        "colorTrack": "",
+        "colorThumb": "",
+        "showTextField": false,
+        "x": 1410,
+        "y": 1700,
+        "wires": [
+            [
+                "19a4011894c1a9be"
+            ]
+        ]
+    },
+    {
+        "id": "f9ef2eadb9dfda0a",
+        "type": "ui-slider",
+        "z": "56c0b44ca387382c",
+        "group": "3a30762508b6edae",
+        "name": "scene - addsene - off - percent",
+        "label": "",
+        "tooltip": "",
+        "order": 8,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "outs": "end",
+        "topic": "off",
+        "topicType": "str",
+        "thumbLabel": "true",
+        "showTicks": "false",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "iconPrepend": "",
+        "iconAppend": "",
+        "color": "",
+        "colorTrack": "",
+        "colorThumb": "",
+        "showTextField": false,
+        "x": 1410,
+        "y": 1760,
+        "wires": [
+            [
+                "19a4011894c1a9be"
+            ]
+        ]
+    },
+    {
+        "id": "9af1dfb35a345ed3",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "name": "value",
+        "func": "msg.payload = Number(msg.scene.on);\nmsg.ui_update =  {\n    'label': msg.dictionary.group_scene.addscene_on_select || 'On'\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 1820,
+        "wires": [
+            [
+                "c3f8f585b4829cee"
+            ]
+        ]
+    },
+    {
+        "id": "97ef458e1abb4b90",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "name": "value",
+        "func": "msg.payload = Number(msg.scene.off);\nmsg.ui_update =  {\n    'label': msg.dictionary.group_scene.addscene_off_select || 'Off'\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 1880,
+        "wires": [
+            [
+                "5f683d0ca5cac1cc"
+            ]
+        ]
+    },
+    {
+        "id": "c3f8f585b4829cee",
+        "type": "ui-slider",
+        "z": "56c0b44ca387382c",
+        "group": "3a30762508b6edae",
+        "name": "scene - addscene - on - 8b",
+        "label": "",
+        "tooltip": "",
+        "order": 9,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "outs": "end",
+        "topic": "on",
+        "topicType": "msg",
+        "thumbLabel": "true",
+        "showTicks": "false",
+        "min": 0,
+        "max": "255",
+        "step": 1,
+        "className": "",
+        "iconPrepend": "",
+        "iconAppend": "",
+        "color": "",
+        "colorTrack": "",
+        "colorThumb": "",
+        "showTextField": false,
+        "x": 1400,
+        "y": 1820,
+        "wires": [
+            [
+                "19a4011894c1a9be"
+            ]
+        ]
+    },
+    {
+        "id": "5f683d0ca5cac1cc",
+        "type": "ui-slider",
+        "z": "56c0b44ca387382c",
+        "group": "3a30762508b6edae",
+        "name": "scene - addscene - off - 8b",
+        "label": "",
+        "tooltip": "",
+        "order": 10,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "outs": "end",
+        "topic": "off",
+        "topicType": "str",
+        "thumbLabel": "true",
+        "showTicks": "false",
+        "min": 0,
+        "max": "255",
+        "step": 1,
+        "className": "",
+        "iconPrepend": "",
+        "iconAppend": "",
+        "color": "",
+        "colorTrack": "",
+        "colorThumb": "",
+        "showTextField": false,
+        "x": 1400,
+        "y": 1880,
+        "wires": [
+            [
+                "19a4011894c1a9be"
+            ]
+        ]
+    },
+    {
+        "id": "50e39f95598b8097",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "name": "value",
+        "func": "msg.payload = Number(msg.scene.on);\nmsg.ui_update =  {\n    'label': msg.dictionary.group_scene.addscene_on_select || 'On'\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 1940,
+        "wires": [
+            [
+                "3ac49d9c001b8389"
+            ]
+        ]
+    },
+    {
+        "id": "f4faa97ce1eb394f",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "name": "value",
+        "func": "msg.payload = Number(msg.scene.off);\nmsg.ui_update =  {\n    'label': msg.dictionary.group_scene.addscene_off_select || 'Off'\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 2000,
+        "wires": [
+            [
+                "cdba7deaedf723b5"
+            ]
+        ]
+    },
+    {
+        "id": "3ac49d9c001b8389",
+        "type": "ui-text-input",
+        "z": "56c0b44ca387382c",
+        "group": "3a30762508b6edae",
+        "name": "scene - addscene - on - number",
+        "label": "",
+        "order": 11,
+        "width": "6",
+        "height": "1",
+        "topic": "on",
+        "topicType": "str",
+        "mode": "number",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": false,
+        "sendOnDelay": true,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 1410,
+        "y": 1940,
+        "wires": [
+            [
+                "19a4011894c1a9be"
+            ]
+        ]
+    },
+    {
+        "id": "cdba7deaedf723b5",
+        "type": "ui-text-input",
+        "z": "56c0b44ca387382c",
+        "group": "3a30762508b6edae",
+        "name": "scene - addscene - off - number",
+        "label": "",
+        "order": 12,
+        "width": "6",
+        "height": "1",
+        "topic": "off",
+        "topicType": "str",
+        "mode": "number",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": false,
+        "sendOnDelay": true,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 1410,
+        "y": 2000,
+        "wires": [
+            [
+                "19a4011894c1a9be"
+            ]
+        ]
+    },
+    {
+        "id": "8c80ebf34e16a3c3",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "name": "value",
+        "func": "msg.payload = msg.scene.on;\nmsg.ui_update =  {\n    'label': msg.dictionary.group_scene.addscene_on_select || 'On'\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 2180,
+        "wires": [
+            [
+                "d0c7b87e19dbcd9b"
+            ]
+        ]
+    },
+    {
+        "id": "5fb85f2cddab05de",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "name": "value",
+        "func": "msg.payload = msg.scene.off;\nmsg.ui_update =  {\n    'label': msg.dictionary.group_scene.addscene_off_select || 'Off'\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 2240,
+        "wires": [
+            [
+                "3e54175efe145c15"
+            ]
+        ]
+    },
+    {
+        "id": "d0c7b87e19dbcd9b",
+        "type": "ui-text-input",
+        "z": "56c0b44ca387382c",
+        "group": "3a30762508b6edae",
+        "name": "scene - addscene - on - text",
+        "label": "",
+        "order": 15,
+        "width": "6",
+        "height": "1",
+        "topic": "on",
+        "topicType": "str",
+        "mode": "text",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": false,
+        "sendOnDelay": true,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 1400,
+        "y": 2180,
+        "wires": [
+            [
+                "19a4011894c1a9be"
+            ]
+        ]
+    },
+    {
+        "id": "3e54175efe145c15",
+        "type": "ui-text-input",
+        "z": "56c0b44ca387382c",
+        "group": "3a30762508b6edae",
+        "name": "scene - addscene - off - text",
+        "label": "",
+        "order": 16,
+        "width": "6",
+        "height": "1",
+        "topic": "off",
+        "topicType": "str",
+        "mode": "text",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": false,
+        "sendOnDelay": true,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 1400,
+        "y": 2240,
+        "wires": [
+            [
+                "19a4011894c1a9be"
+            ]
+        ]
+    },
+    {
+        "id": "b90a744ae25cbf93",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "name": "value",
+        "func": "if (!msg.enabled) {\n    msg.payload = '';\n\n    return;\n}\n\nlet enums = global.get('describe[\"' + msg.entity.source + '\"][\"' + msg.entity.id + '\"]', 'memoryOnly') || {};\nlet i = 0;\n\nlet dropdownOptions = [];\nfor (const e in enums) {\n    dropdownOptions[i++] = {\n        'label': enums[e][1],\n        'value': e\n    };\n}\n\nmsg.payload = msg.scene.on;\nmsg.ui_update =  {\n    'label': msg.dictionary.group_scene.addscene_on_select || 'On',\n    'options': dropdownOptions\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 2060,
+        "wires": [
+            [
+                "5add4f69509b7c61"
+            ]
+        ]
+    },
+    {
+        "id": "5add4f69509b7c61",
+        "type": "ui-dropdown",
+        "z": "56c0b44ca387382c",
+        "group": "3a30762508b6edae",
+        "name": "scene - addscene - on - enum",
+        "label": "",
+        "tooltip": "",
+        "order": 13,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "on",
+        "topicType": "str",
+        "className": "",
+        "typeIsComboBox": false,
+        "msgTrigger": "onChange",
+        "x": 1410,
+        "y": 2060,
+        "wires": [
+            [
+                "19a4011894c1a9be"
+            ]
+        ]
+    },
+    {
+        "id": "c357942c7bd50be0",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "name": "value",
+        "func": "if (!msg.enabled) {\n    msg.payload = '';\n\n    return;\n}\n\nlet enums = global.get('describe[\"' + msg.entity.source + '\"][\"' + msg.entity.id + '\"]', 'memoryOnly') || {};\nlet i = 0;\n\nlet dropdownOptions = [];\nfor (const e in enums) {\n    dropdownOptions[i++] = {\n        'label': enums[e][1],\n        'value': e\n    };\n}\n\nmsg.payload = msg.scene.off;\nmsg.ui_update =  {\n    'label': msg.dictionary.group_scene.addscene_off_select || 'On',\n    'options': dropdownOptions\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 2120,
+        "wires": [
+            [
+                "c48e071177dac8c7"
+            ]
+        ]
+    },
+    {
+        "id": "c48e071177dac8c7",
+        "type": "ui-dropdown",
+        "z": "56c0b44ca387382c",
+        "group": "3a30762508b6edae",
+        "name": "scene - addscene - off - enum",
+        "label": "",
+        "tooltip": "",
+        "order": 14,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "off",
+        "topicType": "str",
+        "className": "",
+        "typeIsComboBox": false,
+        "msgTrigger": "onChange",
+        "x": 1410,
+        "y": 2120,
+        "wires": [
+            [
+                "19a4011894c1a9be"
+            ]
+        ]
+    },
+    {
+        "id": "971ba058b0ec97e4",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "name": "data",
+        "func": "let value = msg.payload;\nnode.status({ text: msg.topic + ' - ' + value });\n\nlet data = flow.get('scene[\"' + msg.hmi.id + '\"]', 'memoryOnly') || {};\ndata[msg.topic] = value;\nflow.set('scene[\"' + msg.hmi.id + '\"]', data, 'memoryOnly');\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1890,
+        "y": 1640,
+        "wires": [
+            []
         ]
     },
     {
@@ -11657,18 +13027,6 @@
         "x": 1975,
         "y": 1960,
         "wires": []
-    },
-    {
-        "id": "0ff51edf472e3374",
-        "type": "link in",
-        "z": "3d7897ba0ee14173",
-        "name": "entity - menu",
-        "links": [],
-        "x": 145,
-        "y": 260,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "545efe2dc3ce790a",
