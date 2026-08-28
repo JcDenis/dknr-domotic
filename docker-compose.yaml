@@ -6,9 +6,44 @@
 name: DKNRDomotic
 
 services: 
+  dknr_influxdb:
+    image: influxdb:2.9.1-alpine
+    container_name: dknr_influxdb
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1024M
+    environment:
+      TZ: Europe/Paris
+      DOCKER_INFLUXDB_INIT_MODE: setup
+      DOCKER_INFLUXDB_INIT_USERNAME: ${DKNR_USERNAME}
+      DOCKER_INFLUXDB_INIT_PASSWORD: ${DKNR_PASSWORD}
+      DOCKER_INFLUXDB_INIT_ORG: dknr
+      DOCKER_INFLUXDB_INIT_BUCKET: domotic
+      DOCKER_INFLUXDB_INIT_RETENTION: 700d
+      DOCKER_INFLUXDB_INIT_ADMIN_TOKEN: ${DKNR_SECRET}
+    ports:
+      - 8086:8086
+    networks:
+      - dknr_net
+    volumes:
+      - dknr_influxdb_etc:/etc/influxdb2
+      - dknr_influxdb_lib:/var/lib/influxdb2
+    healthcheck:
+      test: "curl -f http://localhost:8086/ping"
+      interval: 5s
+      timeout: 10s
+      retries: 5
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "5"
   dknr_domotic:
     container_name: dknr_domotic
-    image: ghcr.io/jcdenis/dknr-domotic:latest
+    image: ghcr.io/jcdenis/dknr-domotic:dev
     restart: unless-stopped
     deploy:
       resources:
@@ -22,8 +57,12 @@ services:
       DKNR_SECRET: ${DKNR_SECRET}
     ports:
       - 1880:1880
+    networks:
+      - dknr_net
     volumes:
       - dknr_domotic:/data
+    depends_on:
+      - dknr_influxdb
     healthcheck:
       test: timeout 10s bash -c ':> /dev/tcp/127.0.0.1/1880' || exit 1
       interval: 10s
@@ -35,5 +74,9 @@ services:
       options:
         max-size: "20m"
         max-file: "5"
+networks:
+  dknr_net:
 volumes:
+  dknr_influxdb_etc:
+  dknr_influxdb_lib:
   dknr_domotic:
