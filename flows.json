@@ -1504,20 +1504,16 @@
         "nodes": [
             "7f38981a1a7a894f",
             "a9e810108c841cb2",
-            "f32c3c553c3ce6b5",
-            "b407f315762096bb",
-            "72bdb573cf83c9ab",
             "329710fd6a91787d",
             "cfee6a014e3e823b",
             "362a4bd4cef94903",
-            "979c368fe06a3531",
             "1238621625ac1387",
             "7482fbd3b4a1a5ae"
         ],
         "x": 104,
         "y": 3519,
         "w": 1272,
-        "h": 142
+        "h": 82
     },
     {
         "id": "5d38062b01fae17a",
@@ -1539,8 +1535,8 @@
             "f32e8939b64dd232"
         ],
         "x": 104,
-        "y": 3699,
-        "w": 1292,
+        "y": 3639,
+        "w": 1272,
         "h": 82
     },
     {
@@ -2815,7 +2811,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "describe",
-        "func": "let describe = global.get('describe', 'memoryOnly') || {};\nif (typeof describe !== 'object') {\n    describe = {};\n}\nif (typeof describe.pages !== 'object') {\n    describe.pages = {};\n}\n\n// Set default app values\ndescribe.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\ndescribe.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\ndescribe.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['tuning'] = {\n    'id': '1c3c77208d684dc0',\n    'name': 'tuning',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['scene'] = {\n    'id': '1e9f5bde9636a371',\n    'name': 'scene',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['entity'] = {\n    'id': '2b12391aa314ef62',\n    'name': 'entity',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': false,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// Sources\ndescribe.sources['dknr'] = ['eye', 'Domotic'];\n\n// Binary element with revert value\ndescribe.reverts = ['aperture', 'door', 'window', 'lock'];\n\n// Elements icons\ndescribe.elements = {\n    'switch': ['toggle-switch-off-outline', 'toggle-switch-outline'],\n    'power': ['flash-outline', 'flash'],\n    'light': ['lightbulb-off', 'lightbulb'],\n    'plug': ['power-plug-off', 'power-plug'],\n    'remote': ['remote-off', 'remote'],\n    'motion': ['motion-sensor-off', 'motion-sensor'],\n    'presence': ['localtion-exit', 'location-enter'],\n    'aperture': ['electric-switch-closed', 'electric-switch'], // 0=open\n    'door': ['door-closed', 'door-open'], // 0=open\n    'window': ['window-closed-variant', 'window-open-variant'], //0=open\n    'lock': ['lock-off', 'lock'], //0=open\n    'shutter': ['window-shutter', 'window-shutter-open'],\n    'slider': ['door-sliding', 'door-sliding-open'],\n    'heater': ['radiator-off', 'radiator'],\n    'alert': ['bell-off', 'bell'],\n    'sound': ['volume-off', 'volume-high'],\n    'temperature': ['thermometer-off', 'thermometer'],\n    'humidity': ['water-percent-alert', 'water-percent'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless'],\n    'wind': ['weather-windy', 'weather-dust'],\n    'fan': ['fan-off', 'fan'],\n    'direction': ['swap-horizontal', 'swap-horizontal-bold'],\n    'time': ['clock-outline', 'clock'],\n    'battery': ['battery-low', 'battery'],\n    'climate': ['home-thermometer-outline', 'home-thermometer'],\n    'current': ['current-ac', 'sine-wave'],\n    'energy': ['meter-electric-outline', 'meter-electric'],\n    'pressure': ['gauge', 'gauge'],\n    'mode': ['home-switch-outline', 'home-switch'],\n    'text': ['clipboard-text-off', 'clipboard-text'],\n    'camera': ['camera-off', 'camera']\n};\n\n\n// Value color\ndescribe.colors = {\n    'on': '#008000',\n    'off': '#FF0000',\n    'median': '#F08000',\n    'none': '#808000',\n    'theme': '#0094CE',\n    'empty': '#CCCCCC'\n};\n\n// Templates\ndescribe.template = {\n    'entity': {\n        'uid': '',\n        'source': '',\n        'id': '',\n        'parent': '',\n        'value': '',\n        'type': '',\n        'room': '',\n        'element': '',\n        'unit': '',\n        'seen': 0,\n        'hidden': 0\n    },\n    'scene': {\n        'scene': '',\n        'entity': '',\n        'enabled': 0,\n        'on': 1,\n        'off': 0,\n        'motion': 0,\n        'nocturnal': 0,\n        'nightlight': 0,\n        'retention': 0,\n        'duration': 60, //minutes\n        'high': '70',\n        'low': '30',\n        'illuminance': 2000,\n        'darkness': 200,\n        'daily': 0,\n        'openwork': 0,\n        'delay': 60, //seconds\n        'min': 0,\n        'max': 255,\n        'step': 5\n    },\n    'trigger': {\n        'room': '',\n        'element': '',\n        'scene': '',\n        'trigger': '',\n        'target': '',\n        'outon': 1,\n        'outoff': 1,\n        'inon': 1,\n        'inoff': 0\n    }\n};\n\n// Scenes\ndescribe.scenes = {\n    'lighting': {\n        'fields': ['enabled', 'on', 'off', 'motion', 'nocturnal', 'nightlight', 'retention', 'duration', 'high', 'low', 'illuminance', 'darknass'],\n        'elements': ['light']\n    },\n    'toogle': {\n        'fields': ['enabled', 'on','off'],\n        'elements': []\n    },\n    'shading': {\n        'fields': ['enabled', 'on', 'off', 'daily', 'openwork', 'illuminance', 'delay'],\n        'elements': []\n    },\n    'airflow': {\n        'fields': ['enabled', 'on', 'off', 'duration'],\n        'elements': []\n    },\n    'waterboiler': {\n        'fields': ['enabled', 'on', 'off', 'daily', 'duration', 'nocturnal'],\n        'elements': []\n    },\n    'level': {\n        'fields': ['enabled', 'on','off', 'min', 'max', 'step'],\n        'elements': []\n    },\n    'overload': {\n        'fields': ['enabled', 'on', 'off', 'duration'],\n        'elements': []\n    }\n};\n\n// Save config\nglobal.set('describe', describe, 'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/.config.projects.json'\n};",
+        "func": "let describe = global.get('describe', 'memoryOnly') || {};\nif (typeof describe !== 'object') {\n    describe = {};\n}\nif (typeof describe.pages !== 'object') {\n    describe.pages = {};\n}\n\n// Set default app values\ndescribe.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\ndescribe.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\ndescribe.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['tuning'] = {\n    'id': '1c3c77208d684dc0',\n    'name': 'tuning',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['scene'] = {\n    'id': '1e9f5bde9636a371',\n    'name': 'scene',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['entity'] = {\n    'id': '2b12391aa314ef62',\n    'name': 'entity',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': false,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// Sources\ndescribe.sources['dknr'] = ['eye', 'Domotic'];\n\n// Binary element with revert value\ndescribe.reverts = ['aperture', 'door', 'window', 'lock'];\n\n// Elements icons\ndescribe.elements = {\n    'switch': ['toggle-switch-off-outline', 'toggle-switch-outline'],\n    'power': ['flash-outline', 'flash'],\n    'light': ['lightbulb-off', 'lightbulb'],\n    'plug': ['power-plug-off', 'power-plug'],\n    'remote': ['remote-off', 'remote'],\n    'motion': ['motion-sensor-off', 'motion-sensor'],\n    'presence': ['localtion-exit', 'location-enter'],\n    'aperture': ['electric-switch-closed', 'electric-switch'], // 0=open\n    'door': ['door-closed', 'door-open'], // 0=open\n    'window': ['window-closed-variant', 'window-open-variant'], //0=open\n    'lock': ['lock-off', 'lock'], //0=open\n    'shutter': ['window-shutter', 'window-shutter-open'],\n    'slider': ['door-sliding', 'door-sliding-open'],\n    'heater': ['radiator-off', 'radiator'],\n    'alert': ['bell-off', 'bell'],\n    'sound': ['volume-off', 'volume-high'],\n    'temperature': ['thermometer-off', 'thermometer'],\n    'humidity': ['water-percent-alert', 'water-percent'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless'],\n    'wind': ['weather-windy', 'weather-dust'],\n    'fan': ['fan-off', 'fan'],\n    'direction': ['swap-horizontal', 'swap-horizontal-bold'],\n    'time': ['clock-outline', 'clock'],\n    'battery': ['battery-low', 'battery'],\n    'climate': ['home-thermometer-outline', 'home-thermometer'],\n    'current': ['current-ac', 'sine-wave'],\n    'energy': ['meter-electric-outline', 'meter-electric'],\n    'pressure': ['gauge', 'gauge'],\n    'mode': ['home-switch-outline', 'home-switch'],\n    'text': ['clipboard-text-off', 'clipboard-text'],\n    'camera': ['camera-off', 'camera']\n};\n\n\n// Value color\ndescribe.colors = {\n    'on': '#008000',\n    'off': '#FF0000',\n    'median': '#F08000',\n    'none': '#808000',\n    'theme': '#0094CE',\n    'empty': '#CCCCCC'\n};\n\n// Templates\ndescribe.template = {\n    'entity': {\n        'uid': '',\n        'source': '',\n        'id': '',\n        'parent': '',\n        'value': '',\n        'type': '',\n        'room': '',\n        'element': '',\n        'unit': '',\n        'seen': 0,\n        'hidden': 0\n    },\n    'scene': {\n        'scene': '',\n        'entity': '',\n        'enabled': 0,\n        'on': 1,\n        'off': 0,\n        'motion': 0,\n        'nocturnal': 0,\n        'nightlight': 0,\n        'retention': 0,\n        'duration': 60, //minutes\n        'high': '70',\n        'low': '30',\n        'illuminance': 2000,\n        'darkness': 200,\n        'daily': 0,\n        'openwork': 0,\n        'delay': 60, //seconds\n        'min': 0,\n        'max': 255,\n        'step': 5\n    },\n    'trigger': {\n        'room': '',\n        'element': '',\n        'scene': '',\n        'trigger': '',\n        'target': '',\n        'outon': 1,\n        'outoff': 1,\n        'inon': 1,\n        'inoff': 0\n    }\n};\n\n// Scenes\ndescribe.scenes = {\n    'lighting': {\n        'icons': ['lightbulb-auto-outline', 'lightbulb-auto'],\n        'fields': ['enabled', 'on', 'off', 'motion', 'nocturnal', 'nightlight', 'retention', 'duration', 'high', 'low', 'illuminance', 'darknass'],\n        'elements': ['light']\n    },\n    'toogle': {\n        'icons': ['toggle-switch-variant-outline', 'toggle-switch-variant'],\n        'fields': ['enabled', 'on','off'],\n        'elements': []\n    },\n    'shading': {\n        'icons': ['roller-shade-closed', 'roller-shade'],\n        'fields': ['enabled', 'on', 'off', 'daily', 'openwork', 'illuminance', 'delay'],\n        'elements': []\n    },\n    'airflow': {\n        'icons': ['hvac', 'hvac-off'],\n        'fields': ['enabled', 'on', 'off', 'duration'],\n        'elements': []\n    },\n    'waterboiler': {\n        'icons': ['water-boiler-off', 'water-boiler-auto'],\n        'fields': ['enabled', 'on', 'off', 'daily', 'duration', 'nocturnal'],\n        'elements': []\n    },\n    'level': {\n        'icons': ['arrow-up-down-bold-outline', 'arrow-up-down-bold'],\n        'fields': ['enabled', 'on','off', 'min', 'max', 'step'],\n        'elements': []\n    },\n    'overload': {\n        'icons': ['meter-electric-outline', 'meter-electric'],\n        'fields': ['enabled', 'on', 'off', 'duration'],\n        'elements': []\n    }\n};\n\n// Save config\nglobal.set('describe', describe, 'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/.config.projects.json'\n};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -13132,87 +13128,7 @@
         "y": 3560,
         "wires": [
             [
-                "f32c3c553c3ce6b5"
-            ]
-        ]
-    },
-    {
-        "id": "f32c3c553c3ce6b5",
-        "type": "function",
-        "z": "56c0b44ca387382c",
-        "g": "690005b9a6f433cf",
-        "name": "data",
-        "func": "await new Promise(resolve => setTimeout(resolve, 10));\nnode.status({ text: '' });\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\nlet action = flow.get('action[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--';\nif (action !== 'scenelist') {\n\n    return;\n}\n\nnode.status({ text: action });\n\nlet groups = global.get('describe.scenes', 'memoryOnly') || {};\nlet scenes = global.get('scene', 'memoryOnly') || {};\n\nlet i = 0;\nlet dropdownOptions = [];\ndropdownOptions[i++] = {\n    'label': '',\n    'value': ''\n};\n\nfor (const g in groups) {\n    if (typeof scenes[g] === 'object' && Object.keys(scenes[g]).length > 0) {\n        dropdownOptions[i++] = {\n            'label': g,\n            'value': g\n        };\n    }\n}\nnode.status({text: i});\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.scene.scenelist_group || 'Select type of scenes',\n    'options': dropdownOptions\n}\n\n\nawait new Promise(resolve => setTimeout(resolve, 50));\nnode.send([msg, null]);\n\nreturn;",
-        "outputs": 2,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 530,
-        "y": 3560,
-        "wires": [
-            [
-                "72bdb573cf83c9ab"
-            ],
-            [
                 "329710fd6a91787d"
-            ]
-        ]
-    },
-    {
-        "id": "b407f315762096bb",
-        "type": "link call",
-        "z": "56c0b44ca387382c",
-        "g": "690005b9a6f433cf",
-        "name": "",
-        "links": [
-            "56e6a7b9b0e66451"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 1010,
-        "y": 3560,
-        "wires": [
-            [
-                "979c368fe06a3531"
-            ]
-        ]
-    },
-    {
-        "id": "72bdb573cf83c9ab",
-        "type": "ui-dropdown",
-        "z": "56c0b44ca387382c",
-        "g": "690005b9a6f433cf",
-        "group": "3a30762508b6edae",
-        "name": "scene - scenelist - group",
-        "label": "",
-        "tooltip": "",
-        "order": 52,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "multiple": false,
-        "chips": false,
-        "clearable": false,
-        "options": [
-            {
-                "label": "",
-                "value": "",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "typeIsComboBox": false,
-        "msgTrigger": "onChange",
-        "x": 750,
-        "y": 3560,
-        "wires": [
-            [
-                "b407f315762096bb"
             ]
         ]
     },
@@ -13222,7 +13138,7 @@
         "z": "56c0b44ca387382c",
         "g": "690005b9a6f433cf",
         "name": "data",
-        "func": "node.status({ text: '' });\nif (!msg.enabled) {\n    msg.payload = [];\n\n    return msg;\n}\n\nnode.status({ text: msg.payload });\n\nlet options = {\n    'motion':'',\n    'nocturnal':'',\n    'nightlight':'',\n    'retention': '',\n    'daily': '',\n    'openwork': ''\n};\n\nlet scene = global.get('scene[\"' + msg.payload + '\"]', 'memoryOnly') || {};\nlet names = global.get('name', 'memoryOnly') || {};\n\nlet i = 0;\nlet dropdownOptions = [];\n\nfor (const s in scene) {\n    let entity = global.get('entity[\"' + s + '\"]', 'memoryOnly');\n    if (typeof entity === 'object') {\n        let room = names['room'][entity['room']] || entity['room'];\n        let name = names['entity'][entity['uid']] || entity['id'];\n        if (name === '' || name === entity['id']) {\n            name = names['device'][entity['parent']] || entity['parent'];\n        }\n        let j = 0;\n        let option = [];\n        for (const o in options) {\n            if (scene[s][o] === 1) {\n                option[j++] = o;\n            }\n        }\n        dropdownOptions[i++] = {\n            'scene': msg.payload,\n            'target': s,\n            'name': room + ' / ' + name,\n            'option': option.join(', '),\n            'enabled': Boolean(scene[s]['enabled']),\n            'delete': msg.dictionary.scene.scenelist_delete || 'Delete'\n        };\n    }\n}\nnode.status({text: i});\n\ndropdownOptions.sort((a, b) => a.name.localeCompare(b.name));\n\nmsg.payload = dropdownOptions;\nmsg.ui_update = {\n    'label': ''\n}\n\nawait new Promise(resolve => setTimeout(resolve, 250));\nreturn msg;",
+        "func": "await new Promise(resolve => setTimeout(resolve, 10));\nnode.status({ text: '' });\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\nlet action = flow.get('action[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--';\nif (action !== 'scenelist') {\n\n    return;\n}\n\nnode.status({ text: action });\n\nlet options = {\n    'motion':'',\n    'nocturnal':'',\n    'nightlight':'',\n    'retention': '',\n    'daily': '',\n    'openwork': ''\n};\n\nlet colors = global.get('describe.colors') || {};\nlet scene = global.get('scene', 'memoryOnly') || {};\nlet names = global.get('name', 'memoryOnly') || {};\n\nlet i = 0;\nlet dropdownOptions = [];\n\nfor (const s in scene) {\n    let scene_icon = global.get('describe[\"scenes\"][\"' + s + '\"][\"icons\"]', 'memoryOnly') || ['help', 'help'];\n    for (const e in scene[s]) {\n        let entity = global.get('entity[\"' + e + '\"]', 'memoryOnly');\n        if (typeof entity === 'object') {\n            let enabled = Boolean(scene[s][e]['enabled']);\n            let color = enabled ? colors.theme : colors.empty;\n            let icon = enabled ? scene_icon[1] : scene_icon[0];\n            let room = names['room'][entity['room']] || entity['room'];\n            let name = names['entity'][entity['uid']] || entity['id'];\n            if (name === '' || name === entity['id']) {\n                name = names['device'][entity['parent']] || entity['parent'];\n            }\n            let j = 0;\n            let option = [];\n            for (const o in options) {\n                if (scene[s][e][o] === 1) {\n                    option[j++] = o;\n                }\n            }\n            dropdownOptions[i++] = {\n                'scene_icon': '<i class=\"icon-in-row mdi mdi-' + icon + '\" style=\"color:' + color + '\" title=\"' + s + '\"></i>',\n                'scene': s,\n                'target': e,\n                'name': room + ' / ' + name,\n                'option': option.join(', '),\n                'disable': enabled ? msg.dictionary.scene.scenelist_disbale || 'Disable' : msg.dictionary.scene.scenelist_enable || 'Enable',\n                'delete': msg.dictionary.scene.scenelist_delete || 'Delete'\n            };\n        }\n    }\n}\nnode.status({text: i});\n\ndropdownOptions.sort((a, b) => a.name.localeCompare(b.name));\n\nmsg.payload = dropdownOptions;\nmsg.ui_update = {\n    'label': ''\n}\n\nawait new Promise(resolve => setTimeout(resolve, 250));\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -13230,7 +13146,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 3620,
+        "y": 3560,
         "wires": [
             [
                 "cfee6a014e3e823b"
@@ -13251,20 +13167,20 @@
         "maxrows": 0,
         "passthru": false,
         "autocols": false,
-        "showSearch": false,
+        "showSearch": true,
         "deselect": true,
         "selectionType": "click",
         "columns": [
             {
                 "title": "",
-                "key": "enabled",
+                "key": "scene_icon",
                 "keyType": "key",
-                "type": "tickcross",
+                "type": "html",
                 "width": "20px",
-                "align": "start"
+                "align": "center"
             },
             {
-                "title": "",
+                "title": "Target",
                 "key": "name",
                 "keyType": "key",
                 "type": "text",
@@ -13272,12 +13188,28 @@
                 "align": "start"
             },
             {
-                "title": "",
+                "title": "Options",
                 "key": "option",
                 "keyType": "key",
                 "type": "text",
                 "width": "",
                 "align": "start"
+            },
+            {
+                "title": "",
+                "key": "enabled",
+                "keyType": "key",
+                "type": "tickcross",
+                "width": "20px",
+                "align": "end"
+            },
+            {
+                "title": "",
+                "key": "disable",
+                "keyType": "key",
+                "type": "button",
+                "width": "",
+                "align": "end"
             },
             {
                 "title": "",
@@ -13293,7 +13225,7 @@
         "action": "replace",
         "className": "",
         "x": 750,
-        "y": 3620,
+        "y": 3560,
         "wires": [
             [
                 "362a4bd4cef94903"
@@ -13312,31 +13244,10 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1010,
-        "y": 3620,
-        "wires": [
-            [
-                "1238621625ac1387"
-            ]
-        ]
-    },
-    {
-        "id": "979c368fe06a3531",
-        "type": "function",
-        "z": "56c0b44ca387382c",
-        "g": "690005b9a6f433cf",
-        "name": "data",
-        "func": "if (msg.payload === '') {\n\n    msg.class = 'remove';\n    msg.enabled = false;\n\n    return msg;\n}\n\nmsg.class = '';\nmsg.enabled = true;\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1210,
         "y": 3560,
         "wires": [
             [
-                "329710fd6a91787d"
+                "1238621625ac1387"
             ]
         ]
     },
@@ -13354,7 +13265,7 @@
         "finalize": "",
         "libs": [],
         "x": 1210,
-        "y": 3620,
+        "y": 3560,
         "wires": [
             [
                 "7482fbd3b4a1a5ae"
@@ -13375,7 +13286,7 @@
             "f4a2353e5f92576c"
         ],
         "x": 1335,
-        "y": 3620,
+        "y": 3560,
         "wires": []
     },
     {
@@ -13483,7 +13394,7 @@
             "5da931c9323d8033"
         ],
         "x": 145,
-        "y": 3740,
+        "y": 3680,
         "wires": [
             [
                 "cebe76f18e15ce70"
@@ -13502,7 +13413,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 320,
-        "y": 3740,
+        "y": 3680,
         "wires": [
             [
                 "1c0bfc84dadda4b4"
@@ -13515,7 +13426,7 @@
         "z": "56c0b44ca387382c",
         "g": "5d38062b01fae17a",
         "name": "data",
-        "func": "await new Promise(resolve => setTimeout(resolve, 10));\nnode.status({ text: '' });\nif (!msg.enabled) {\n    msg.payload = [];\n\n    return msg;\n}\n\nlet action = flow.get('action[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--';\nif (action !== 'triggerlist') {\n\n    return;\n}\n\nnode.status({ text: action });\n\nlet trigger = global.get('trigger', 'memoryOnly') || {};\nlet names = global.get('name', 'memoryOnly') || {};\n\nlet i = 0;\nlet dropdownOptions = [];\n\nfor (const t in trigger) {\n    let tentity = global.get('entity[\"' + t + '\"]', 'memoryOnly');\n    if (typeof tentity === 'object') {\n        let troom = names['room'][tentity['room']] || tentity['room'];\n        let tname = names['entity'][tentity['uid']] || tentity['id'];\n        if (tname === '' || tname === tentity['id']) {\n            tname = names['device'][tentity['parent']] || tentity['parent'];\n        }\n\n        for (const s in trigger[t]) {\n            for (const e in trigger[t][s]) {\n                let eentity = global.get('entity[\"' + e + '\"]', 'memoryOnly');\n                if (typeof eentity === 'object') {\n                    let eroom = names['room'][eentity['room']] || eentity['room'];\n                    let ename = names['entity'][eentity['uid']] || eentity['id'];\n                    if (ename === '' || ename === eentity['id']) {\n                        ename = names['device'][eentity['parent']] || eentity['parent'];\n                    }\n\n                    dropdownOptions[i++] = {\n                        'scene': trigger[t][s][e]['scene'],\n                        'trigger': t,\n                        'trigger_name': troom + ' / ' + tname + ' (' + tentity['element'] + ')',\n                        'target': e,\n                        'target_name': eroom + ' / ' + ename + ' (' + eentity['element'] + ')',\n                        'inon': trigger[t][s][e]['inon'],\n                        'inoff': trigger[t][s][e]['inoff'],\n                        'delete': msg.dictionary.scene.triggerlist_delete || 'Delete'\n                    };\n                }\n            }\n        }\n    }\n}\nnode.status({ text: i });\n\ndropdownOptions.sort((a, b) => a.trigger.localeCompare(b.trigger));\n\nmsg.payload = dropdownOptions;\nmsg.ui_update = {\n    'label': ''\n}\n\nawait new Promise(resolve => setTimeout(resolve, 250));\nreturn msg;",
+        "func": "await new Promise(resolve => setTimeout(resolve, 10));\nnode.status({ text: '' });\nif (!msg.enabled) {\n    msg.payload = [];\n\n    return msg;\n}\n\nlet action = flow.get('action[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--';\nif (action !== 'triggerlist') {\n\n    return;\n}\n\nnode.status({ text: action });\n\nlet colors = global.get('describe.colors') || {};\nlet trigger = global.get('trigger', 'memoryOnly') || {};\nlet names = global.get('name', 'memoryOnly') || {};\n\nlet i = 0;\nlet dropdownOptions = [];\n\nfor (const t in trigger) {\n    let tentity = global.get('entity[\"' + t + '\"]', 'memoryOnly');\n    if (typeof tentity === 'object') {\n        let troom = names['room'][tentity['room']] || tentity['room'];\n        let tname = names['entity'][tentity['uid']] || tentity['id'];\n        if (tname === '' || tname === tentity['id']) {\n            tname = names['device'][tentity['parent']] || tentity['parent'];\n        }\n\n        for (const s in trigger[t]) {\n            let scene_icon = global.get('describe[\"scenes\"][\"' + s + '\"][\"icons\"]', 'memoryOnly') || ['help', 'help'];\n    \n            for (const e in trigger[t][s]) {\n                let eentity = global.get('entity[\"' + e + '\"]', 'memoryOnly');\n                if (typeof eentity === 'object') {\n                    let eroom = names['room'][eentity['room']] || eentity['room'];\n                    let ename = names['entity'][eentity['uid']] || eentity['id'];\n                    if (ename === '' || ename === eentity['id']) {\n                        ename = names['device'][eentity['parent']] || eentity['parent'];\n                    }\n\n                    dropdownOptions[i++] = {\n                        'scene_icon': '<i class=\"icon-in-row mdi mdi-' + scene_icon[1] + '\" style=\"color:' + colors.theme + '\" title=\"' + s + '\"></i>',\n                        'scene': trigger[t][s][e]['scene'],\n                        'trigger': t,\n                        'trigger_name': troom + ' / ' + tname + ' (' + tentity['element'] + ')',\n                        'target': e,\n                        'target_name': eroom + ' / ' + ename + ' (' + eentity['element'] + ')',\n                        'inon': trigger[t][s][e]['inon'],\n                        'inoff': trigger[t][s][e]['inoff'],\n                        'delete': msg.dictionary.scene.triggerlist_delete || 'Delete'\n                    };\n                }\n            }\n        }\n    }\n}\nnode.status({ text: i });\n\ndropdownOptions.sort((a, b) => a.trigger.localeCompare(b.trigger));\n\nmsg.payload = dropdownOptions;\nmsg.ui_update = {\n    'label': ''\n}\n\nawait new Promise(resolve => setTimeout(resolve, 250));\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -13523,7 +13434,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 3740,
+        "y": 3680,
         "wires": [
             [
                 "cce9cdcb1b1e7596"
@@ -13549,12 +13460,12 @@
         "selectionType": "click",
         "columns": [
             {
-                "title": "Scene",
-                "key": "scene",
+                "title": "",
+                "key": "scene_icon",
                 "keyType": "key",
-                "type": "text",
-                "width": "",
-                "align": "start"
+                "type": "html",
+                "width": "20px",
+                "align": "center"
             },
             {
                 "title": "Trigger",
@@ -13581,7 +13492,7 @@
                 "align": "start"
             },
             {
-                "title": "Off",
+                "title": "Target",
                 "key": "target_name",
                 "keyType": "key",
                 "type": "text",
@@ -13589,7 +13500,7 @@
                 "align": "start"
             },
             {
-                "title": "Target",
+                "title": "",
                 "key": "delete",
                 "keyType": "key",
                 "type": "button",
@@ -13601,8 +13512,8 @@
         "mobileBreakpointType": "defaults",
         "action": "replace",
         "className": "",
-        "x": 770,
-        "y": 3740,
+        "x": 750,
+        "y": 3680,
         "wires": [
             [
                 "7250b1ea23fcca7c"
@@ -13620,8 +13531,8 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1030,
-        "y": 3740,
+        "x": 1010,
+        "y": 3680,
         "wires": [
             [
                 "42617cb3dc0f463a"
@@ -13641,8 +13552,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1230,
-        "y": 3740,
+        "x": 1210,
+        "y": 3680,
         "wires": [
             [
                 "f32e8939b64dd232"
@@ -13662,8 +13573,8 @@
         "links": [
             "f4a2353e5f92576c"
         ],
-        "x": 1355,
-        "y": 3740,
+        "x": 1335,
+        "y": 3680,
         "wires": []
     },
     {
