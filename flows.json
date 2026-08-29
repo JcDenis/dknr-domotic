@@ -626,8 +626,8 @@
         ],
         "x": 78,
         "y": 2653,
-        "w": 864,
-        "h": 1754
+        "w": 884,
+        "h": 1874
     },
     {
         "id": "fa2576d920009359",
@@ -1027,12 +1027,17 @@
             "7fc016215b15f119",
             "aff998eaeca88c3a",
             "aeb13f5cf98d1ed2",
-            "938e2afe4f3b8170"
+            "938e2afe4f3b8170",
+            "89a4eac22d6b866f",
+            "57d4182cc0e85388",
+            "34ed32e6a87f128a",
+            "b02cfc942571e058",
+            "5ef4528ceedec868"
         ],
         "x": 104,
         "y": 4119,
-        "w": 652,
-        "h": 262
+        "w": 832,
+        "h": 382
     },
     {
         "id": "89ac7be96aabaa70",
@@ -1542,6 +1547,26 @@
         "x": 104,
         "y": 3699,
         "w": 1272,
+        "h": 82
+    },
+    {
+        "id": "303826cfb9124cc0",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "name": "common - influxdb",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "56fbb9ce29a1541e",
+            "e662bb5ad2a389ef",
+            "83ee9be1aa2cf49f"
+        ],
+        "x": 104,
+        "y": 4599,
+        "w": 422,
         "h": 82
     },
     {
@@ -4803,14 +4828,14 @@
         "z": "4bc72a1112cb448c",
         "g": "aa28e51660bead4f",
         "name": "parse",
-        "func": "msg.payload = {\n    'id': 'ping',\n    'source': 'dknr',\n    'parent': 'domotic',\n    'value': Date.now(),\n    'unit': 'ts',\n    'name': 'Ping',\n    'seen': Date.now()\n};\n\nreturn msg;",
+        "func": "// ping\nmsg.payload = {\n    'id': 'ping',\n    'source': 'dknr',\n    'parent': 'domotic',\n    'value': Date.now(),\n    'type': 'sensor',\n    'unit': 'ts',\n    'name': 'Ping',\n    'seen': Date.now()\n};\n\nnode.send([msg]);\n\nmsg.payload = {};\n\n// nycthemer\nlet nycthemer = global.get('entity.dknr_domotic_nycthemer', 'memoryOnly');\nlet morning = global.get('entity.dknr_domotic_morning_limit', 'memoryOnly');\nlet evening = global.get('entity.dknr_domotic_evening_limit', 'memoryOnly');\n\nlet mode = global.get('entity.dknr_config_nycthemer.value', 'memoryOnly');\nlet sunrise = global.get('entity.dknr_domotic_sunrise.value', 'memoryOnly');\nlet sunset = global.get('entity.dknr_domotic_sunset.value', 'memoryOnly');\nlet workday_morning_limit = global.get('entity.dknr_config_workday_morning_limit.value', 'memoryOnly');\nlet workday_evening_limit = global.get('entity.dknr_config_workday_evening_limit.value', 'memoryOnly');\nlet current = new Date().toTimeString().slice(0, 5);\n// TODO: restday\n\nif (typeof nycthemer === 'object' && \n    typeof morning === 'object' && \n    typeof evening === 'object' && \n    typeof mode === 'string' && mode === 'auto' && \n    typeof sunrise === 'string' && \n    typeof sunset === 'string'\n) {\n    let tcurrent = Number(current.split(':').join(''));\n    let tsunrise = Number(sunrise.split(':').join(''));\n    let tsunset = Number(sunset.split(':').join(''));\n    let tworkday_morning_limit = Number(workday_morning_limit.split(':').join(''));\n    let tworkday_evening_limit = Number(workday_evening_limit.split(':').join(''));\n\n    let tmorning = tsunrise > tworkday_morning_limit ? tsunrise : tworkday_morning_limit;\n    morning.value = tsunrise > tworkday_morning_limit ? sunrise : workday_morning_limit;\n\n    let tevening = tsunset < tworkday_evening_limit ? tsunset : tworkday_evening_limit;\n    evening.value = tsunset < tworkday_evening_limit ? sunset : workday_evening_limit;\n\n    nycthemer.value = tcurrent > tmorning && tcurrent < tevening ? 'day' : 'night';\n\n    msg.payload = morning;\n    node.send([msg]);\n\n    msg.payload = evening;\n    node.send([msg]);\n\n    msg.payload = nycthemer;\n    node.send([msg]);\n\n    node.status({ text: nycthemer.value + ', ' + morning.value + ', ' + evening.value });\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
+        "x": 610,
         "y": 4280,
         "wires": [
             [
@@ -4828,7 +4853,7 @@
         "links": [
             "cc0a7c14f877c371"
         ],
-        "x": 715,
+        "x": 895,
         "y": 4220,
         "wires": []
     },
@@ -6102,15 +6127,15 @@
         "type": "function",
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
-        "name": "clean name",
-        "func": "flow.set('stop', true, 'memoryOnly');\nnode.status({ fill: 'red' });\n\nlet new_d = {};\nlet new_e = {};\nlet r = global.get('name.room', 'memoryOnly') || {};\nlet d = global.get('name.device', 'memoryOnly') || {};\nlet e = global.get('name.entity', 'memoryOnly') || {};\nlet l = global.get('entity', 'memoryOnly') || {}\nfor (const k in l) {\n    if (typeof d[l[k]['parent']] === 'string') {\n        new_d[l[k]['parent']] = d[l[k]['parent']];\n    }\n    if (typeof e[k] === 'string') {\n        new_e[k] = e[k];\n    }\n}\nflow.set('name', {'room': r, 'device': new_d, 'entity': new_e }, 'memoryOnly');\n\nnode.status({ fill: 'green' });\nflow.set('stop', false, 'memoryOnly');\n\nreturn;",
+        "name": "clean",
+        "func": "flow.set('stop', true, 'memoryOnly');\nnode.status({ fill: 'red' });\n\n\n// Clean name\n//TODO: to test\nlet new_d = {};\nlet new_e = {};\nlet r = global.get('name.room', 'memoryOnly') || {};\nlet d = global.get('name.device', 'memoryOnly') || {};\nlet e = global.get('name.entity', 'memoryOnly') || {};\nlet l = global.get('entity', 'memoryOnly') || {}\nfor (const k in l) {\n    if (typeof d[l[k]['parent']] === 'string') {\n        new_d[l[k]['parent']] = d[l[k]['parent']];\n    }\n    if (typeof e[k] === 'string') {\n        new_e[k] = e[k];\n    }\n}\n//flow.set('name', {'room': r, 'device': new_d, 'entity': new_e }, 'memoryOnly');\nglobal.set('name', {'room': r, 'device': new_d, 'entity': new_e }, 'memoryOnly');\n\n\n// Clean entity\nlet template = Object.keys(global.get('describe.template.entity', 'memoryOnly'));\nlet entity = global.get('entity', 'memoryOnly');\nfor (const k in entity) {\n    for (const l in entity[k]) {\n        if (!template.includes(l)) {\n            delete entity[k][l];\n        }\n    }\n}\nglobal.set('entity', entity, 'memoryOnly');\n\n\nnode.status({ fill: 'green' });\nflow.set('stop', false, 'memoryOnly');\n\nreturn;",
         "outputs": 0,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 370,
+        "x": 350,
         "y": 200,
         "wires": []
     },
@@ -6490,7 +6515,8 @@
         "y": 4160,
         "wires": [
             [
-                "81545683842c0ab9"
+                "81545683842c0ab9",
+                "89a4eac22d6b866f"
             ]
         ]
     },
@@ -6531,14 +6557,14 @@
         "z": "4bc72a1112cb448c",
         "g": "aa28e51660bead4f",
         "name": "parse",
-        "func": "let enums = msg.dknr_enums;\nlet settings = msg.dknr_settings;\ndelete msg.dknr_enums;\ndelete msg.dknr_settings;\n\n// entity template\nlet template = {\n    'uid': '',\n    'source': 'dknr',\n    'parent': 'domotic',\n    'id': '',\n    'value': '',\n    'element': 'mode',\n    'type': 'command',\n    'unit': 'enum',\n    'hidden': 0,\n    'room': 'system',\n    'seen': Date.now(),\n    'name': ''\n};\n\nlet names = {};\nlet name = global.get('name', 'memoryOnly') || {};\n\n// Force \"system\" room creation\nif (typeof name['room']['system'] !== 'string') {\n    name['room']['system'] = 'System';\n}\n// Force \"system\" device creation\nif (typeof name['device']['dknr_domotic'] !== 'string') {\n    name['device']['dknr_domotic'] = 'Domotic';\n}\n\nglobal.set('name', name, 'memoryOnly');\n\n// Modes\n\n// Chek \"system\" entity existence\nfor (const k in enums) {\n    let entity = {...template, ...{\n        'id': k,\n        'value': Object.keys(enums[k])[0],\n        'name': k.charAt(0).toUpperCase() + k.slice(1)\n    }};\n\n    msg.payload = entity;\n    node.send([msg]);\n}\n\n// settings\n\n// Chek \"settings\" entity existence\nfor (const k in settings) {\n    let entity = { ...template, ...{\n        'id': k,\n        'value': settings[k][0],\n        'type': settings[k][1],\n        'unit': settings[k][2],\n        'element': settings[k][3],\n        'name': settings[k][4]\n    }};\n\n    msg.payload = entity;\n    node.send([msg]);\n}\n\nreturn;",
+        "func": "let enums = msg.dknr_enums;\nlet settings = msg.dknr_settings;\ndelete msg.dknr_enums;\ndelete msg.dknr_settings;\n\nlet names = {};\nlet name = global.get('name', 'memoryOnly') || {};\n\n// Force room creation\nif (typeof name['room']['home'] !== 'string') {\n    name['room']['home'] = '** Home **';\n}\nif (typeof name['room']['system'] !== 'string') {\n    name['room']['system'] = '** System **';\n}\n// Force device creation\nif (typeof name['device']['dknr_config'] !== 'string') {\n    name['device']['dknr_config'] = 'Configuration';\n}\nif (typeof name['device']['dknr_domotic'] !== 'string') {\n    name['device']['dknr_domotic'] = 'Domotic';\n}\n\nglobal.set('name', name, 'memoryOnly');\n\n// Modes\n\n// Chek \"system\" entity existence\nfor (const k in enums) {\n    let entity = {\n        'id': k,\n        'source': 'dknr',\n        'value': Object.keys(enums[k])[0],\n        'parent': 'config',\n        'type': 'command',\n        'unit': 'enum',\n        'element': 'mode',\n        'name': k.charAt(0).toUpperCase() + k.slice(1),\n        'room': 'system',\n        'seen': Date.now(),\n        'hidden': 0\n    };\n\n    msg.payload = entity;\n    node.send([msg]);\n}\n\n// settings\n\n// Chek \"settings\" entity existence\nfor (const k in settings) {\n    let entity = {\n        'id': k,\n        'source': 'dknr',\n        'value': settings[k][0],\n        'parent': settings[k][1],\n        'type': settings[k][2],\n        'unit': settings[k][3],\n        'element': settings[k][4],\n        'name': settings[k][5],\n        'room': settings[k][1] === 'domotic' ? 'home' : 'system',\n        'seen': Date.now(),\n        'hidden': 0\n    };\n\n    msg.payload = entity;\n    node.send([msg]);\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
+        "x": 610,
         "y": 4220,
         "wires": [
             [
@@ -6553,8 +6579,8 @@
         "g": "aa28e51660bead4f",
         "name": "dknr",
         "links": [],
-        "x": 145,
-        "y": 4340,
+        "x": 645,
+        "y": 4460,
         "wires": [
             [
                 "7fc016215b15f119"
@@ -6567,15 +6593,15 @@
         "z": "4bc72a1112cb448c",
         "g": "aa28e51660bead4f",
         "name": "dknr",
-        "func": "// Default system enums\nmsg.dknr_enums = {\n    'automate': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'nycthemer': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'day': ['plus-thick', 'Day'],\n        'night': ['minus-thick', 'Night'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'lighting': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'high': ['plus-thick', 'High'],\n        'low': ['minus-thick', 'Low'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'sound': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'high': ['plus-thick', 'High'],\n        'low': ['minus-thick', 'Low'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'notice': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'write': ['lead-pencil', 'Writing'],\n        'off': ['stop', 'Off']\n    },\n    'climate': {\n        'thawing': ['theme-light-dark', 'Thawning'],\n        'heating': ['heat-wave', 'Heating'],\n        'cooling': ['snowflake', 'Cooling'],\n        'off': ['stop', 'Off'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'offloading': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'on': ['play', 'On'],\n        'off': ['stop', 'Off'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'waterboiler': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'on': ['play', 'On'],\n        'off': ['stop', 'Off'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'airflow': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'on': ['play', 'On'],\n        'off': ['stop', 'Off'],\n        'manual': ['gesture-double-tap', 'Manual']\n    }\n};\n\nmsg.dknr_settings = {\n    'time_sunrise': ['07:00', 'sensor', 'time', 'time', 'Hour of sunrise'],\n    'time_sunset': ['19:00', 'sensor', 'time', 'time', 'Hour of sunset'],\n    'time_morning': ['07:00', 'sensor', 'time', 'time', 'Hour limit of morning'],\n    'time_evening': ['19:00', 'sensor', 'time', 'time', 'Hour limit of evening'],\n    'time_workday_morning': ['07:00', 'command', 'time', 'time', 'Hour limit of work day morning'],\n    'time_workday_evening': ['20:00', 'command', 'time', 'time', 'Hour limit of work day evening'],\n    'time_restday_morning': ['09:00', 'command', 'time', 'time', 'Hour limit of rest day monring'],\n    'time_restday_evening': ['21:00', 'command', 'time', 'time', 'Hour limit of rest day evening'],\n\n    'latitude': [48.8743, 'command', 'text', 'location', 'Home latitude'],\n    'longitude': [2.2950, 'command', 'text', 'location', 'Home longitude']\n};\n\nreturn msg;",
+        "func": "// Default system enums\nmsg.dknr_enums = {\n    'automate': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'nycthemer': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'day': ['plus-thick', 'Day'],\n        'night': ['minus-thick', 'Night'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'lighting': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'high': ['plus-thick', 'High'],\n        'low': ['minus-thick', 'Low'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'sound': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'high': ['plus-thick', 'High'],\n        'low': ['minus-thick', 'Low'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'notice': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'write': ['lead-pencil', 'Writing'],\n        'off': ['stop', 'Off']\n    },\n    'climate': {\n        'thawing': ['theme-light-dark', 'Thawning'],\n        'heating': ['heat-wave', 'Heating'],\n        'cooling': ['snowflake', 'Cooling'],\n        'off': ['stop', 'Off'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'offloading': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'on': ['play', 'On'],\n        'off': ['stop', 'Off'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'waterboiler': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'on': ['play', 'On'],\n        'off': ['stop', 'Off'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'airflow': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'on': ['play', 'On'],\n        'off': ['stop', 'Off'],\n        'manual': ['gesture-double-tap', 'Manual']\n    }\n};\n\nmsg.dknr_settings = {\n    // id: [value, parent, type, unit, element, name]\n    'automate': ['auto', 'domotic', 'sensor', 'enum', 'text', 'Automate'],\n    'nycthemer': ['day', 'domotic', 'sensor', 'enum', 'text', 'Nycthemer'],\n    'sunrise': ['07:00', 'domotic', 'sensor', 'time', 'climate', 'Sunrise'],\n    'sunset': ['19:00', 'domotic', 'sensor', 'time', 'climate', 'Sunset'],\n    'morning_limit': ['07:00', 'domotic', 'sensor', 'time', 'time', 'Hour limit of morning'],\n    'evening_limit': ['19:00', 'domotic', 'sensor', 'time', 'time', 'Hour limit of evening'],\n    'workday_morning_limit': ['07:00', 'config', 'command', 'time', 'time', 'Hour limit of work day morning'],\n    'workday_evening_limit': ['20:00', 'config', 'command', 'time', 'time', 'Hour limit of work day evening'],\n    'restday_morning_limit': ['09:00', 'config', 'command', 'time', 'time', 'Hour limit of rest day monring'],\n    'restday_evening_limit': ['21:00', 'config', 'command', 'time', 'time', 'Hour limit of rest day evening'],\n    'latitude': ['48.8743', 'config', 'command', 'text', 'location', 'Home latitude'],\n    'longitude': ['2.2950', 'config', 'command', 'text', 'location', 'Home longitude']\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 270,
-        "y": 4340,
+        "x": 770,
+        "y": 4460,
         "wires": [
             [
                 "aff998eaeca88c3a"
@@ -6590,8 +6616,8 @@
         "name": "dknr",
         "mode": "return",
         "links": [],
-        "x": 395,
-        "y": 4340,
+        "x": 895,
+        "y": 4460,
         "wires": []
     },
     {
@@ -6760,7 +6786,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 620,
+        "x": 800,
         "y": 4340,
         "wires": []
     },
@@ -6782,7 +6808,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 590,
+        "x": 770,
         "y": 4220,
         "wires": [
             [
@@ -6813,6 +6839,7 @@
         "id": "56fbb9ce29a1541e",
         "type": "influxdb out",
         "z": "4bc72a1112cb448c",
+        "g": "303826cfb9124cc0",
         "influxdb": "cf56c7fff4df45c2",
         "name": "influxdb",
         "measurement": "",
@@ -6824,13 +6851,14 @@
         "org": "dknr",
         "bucket": "domotic",
         "x": 440,
-        "y": 4580,
+        "y": 4640,
         "wires": []
     },
     {
         "id": "e662bb5ad2a389ef",
         "type": "function",
         "z": "4bc72a1112cb448c",
+        "g": "303826cfb9124cc0",
         "name": "state",
         "func": "if (msg.repeat !== false ||\n    msg.payload.hidden !== 0\n) {\n\n    return;\n}\nnode.status({text: msg.payload.uid + ' - ' + msg.payload.value});\n\nmsg.measurement = 'state';\nmsg.payload = [\n    {\n        [msg.payload.uid]: msg.payload.value\n    },\n    {\n        'type': msg.payload.type,\n        'element': msg.payload.element,\n        'parent': msg.payload.parent\n    }\n];\n\nreturn msg;",
         "outputs": 1,
@@ -6840,7 +6868,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 4580,
+        "y": 4640,
         "wires": [
             [
                 "56fbb9ce29a1541e"
@@ -6851,12 +6879,13 @@
         "id": "83ee9be1aa2cf49f",
         "type": "link in",
         "z": "4bc72a1112cb448c",
+        "g": "303826cfb9124cc0",
         "name": "common - influxdb",
         "links": [
             "a29ec7554a818a6f"
         ],
         "x": 145,
-        "y": 4580,
+        "y": 4640,
         "wires": [
             [
                 "e662bb5ad2a389ef"
@@ -6872,7 +6901,7 @@
             "a29ec7554a818a6f"
         ],
         "x": 145,
-        "y": 4760,
+        "y": 4960,
         "wires": [
             [
                 "7337d9e15ceae96c"
@@ -6883,16 +6912,16 @@
         "id": "7337d9e15ceae96c",
         "type": "function",
         "z": "4bc72a1112cb448c",
-        "name": "data",
-        "func": "// Do not watch hidden or duplicate message\nif (msg.repeat === true || msg.payload.hidden === 1) {\n\n    return;\n}\n\n// Find trigger\nlet trigger = global.get('trigger[\"' + msg.payload.uid + '\"]', 'memoryOnly');\nif (typeof trigger !== 'object') {\n\n    return;\n}\nnode.status({text: msg.payload.uid});\n\nfor (const s in trigger) {\n    for (const e in trigger[s]) {\n        let is_num = ['enum', 'text'].includes(msg.payload.unit) ? false : true;\n        if (!is_num && msg.payload.value === trigger[s][e]['inon'] ||\n            is_num && Number(msg.payload.value) >= trigger[s][e]['inon']\n        ) {\n            msg.value = true;\n            node.send(msg);\n        }\n        if (trigger[s][e]['outoff']) {\n            if (!is_num && msg.payload.value === trigger[s][e]['inoff'] ||\n                is_num && Number(msg.payload.value) <= trigger[s][e]['inoff']\n            ) {\n                msg.value = false;\n                node.send(msg);\n            }\n        }\n    }\n}\n\nreturn;",
+        "name": "trigger payload",
+        "func": "// Do not watch hidden or duplicate message\nif (msg.repeat === true || msg.payload.hidden === 1) {\n\n    return;\n}\n\n// Find input entity in triggers\nlet trigger = global.get('trigger[\"' + msg.payload.uid + '\"]', 'memoryOnly');\nif (typeof trigger !== 'object') {\n\n    return;\n}\nnode.status({text: msg.payload.uid});\n\n// Loop through all triggers of this entity\nfor (const s in trigger) {\n    for (const e in trigger[s]) {\n        let payload_value = msg.payload.value;\n        let trigger_on = trigger[s][e]['inon'];\n        let trigger_off = trigger[s][e]['inoff'];\n        let is_num = ['enum', 'text', 'time'].includes(msg.payload.unit) ? false : true;\n\n        // need to convert time in minute\n        if (msg.payload.unit === 'time') {\n            payload_value = payload_value.split(':').join('');\n            trigger_on = Number(trigger_on.split(':').join(''));\n            trigger_off = Number(trigger_off.split(':').join(''));\n            is_num = true;\n        }\n\n        // Get required scene\n        msg.payload = global.get('scene[\"' + s + '\"][\"' + e + '\"]', 'memoryOnly');\n        if (typeof msg.payload === 'object') {\n            // If pilot \"on\" and entity value is \"on\"\n            if (trigger[s][e]['outon'] && (\n                !is_num && payload_value === trigger_on ||\n                is_num && Number(payload_value) >= trigger_on\n            )) {\n                msg.payload.value = true;\n                node.send(msg);\n            }\n\n            // If pilot \"off\" and entity value is \"off\"\n            if (trigger[s][e]['outoff'] && (\n                !is_num && payload_value === trigger_off ||\n                is_num && Number(payload_value) <= trigger_off\n            )) {\n                msg.payload.value = false;\n                node.send(msg);\n            }\n        }\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 270,
-        "y": 4760,
+        "x": 300,
+        "y": 4960,
         "wires": [
             [
                 "7a3fccbcd9c1e5fc"
@@ -6912,9 +6941,245 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 460,
-        "y": 4840,
+        "x": 560,
+        "y": 5100,
         "wires": []
+    },
+    {
+        "id": "2c75e0ed62bdc1a4",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "name": "lighting",
+        "func": "if (msg.payload.scene !== 'lighting') {\n\n    return;\n}\n\n// Nightlight\nif (msg.payload.nightlight === 1) {\n    \n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 4960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "57d4182cc0e85388",
+        "type": "cronplus",
+        "z": "4bc72a1112cb448c",
+        "g": "aa28e51660bead4f",
+        "name": "",
+        "outputField": "payload",
+        "timeZone": "",
+        "storeName": "",
+        "commandResponseMsgOutput": "output1",
+        "defaultLocation": "",
+        "defaultLocationType": "default",
+        "outputs": 1,
+        "options": [],
+        "x": 440,
+        "y": 4340,
+        "wires": [
+            [
+                "34ed32e6a87f128a"
+            ]
+        ]
+    },
+    {
+        "id": "89a4eac22d6b866f",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "aa28e51660bead4f",
+        "name": "init",
+        "func": "msg.payload = [\n  {\n    \"command\": \"add\",\n    \"name\": \"sunrise\",\n    \"expressionType\": \"solar\",\n    \"solarType\": \"selected\",\n    \"solarEvents\": \"civilDawn\",\n    \"location\": \"45.9385545061656 5.38116016257227\",\n    \"offset\": \"0\",\n    \"payloadType\": \"default\",\n    \"limit\": null\n  },\n  {\n    \"command\": \"add\",\n    \"name\": \"sunset\",\n    \"expressionType\": \"solar\",\n    \"solarType\": \"selected\",\n    \"solarEvents\": \"civilDusk\",\n    \"location\": \"45.9385545061656 5.38116016257227\",\n    \"offset\": \"0\",\n    \"payloadType\": \"default\",\n    \"limit\": null\n  }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 4340,
+        "wires": [
+            [
+                "57d4182cc0e85388"
+            ]
+        ]
+    },
+    {
+        "id": "b02cfc942571e058",
+        "type": "inject",
+        "z": "4bc72a1112cb448c",
+        "g": "aa28e51660bead4f",
+        "name": "sunrise",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 12 * * *",
+        "once": true,
+        "onceDelay": "5",
+        "topic": "trigger",
+        "payload": "sunrise",
+        "payloadType": "str",
+        "x": 260,
+        "y": 4400,
+        "wires": [
+            [
+                "57d4182cc0e85388"
+            ]
+        ]
+    },
+    {
+        "id": "34ed32e6a87f128a",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "aa28e51660bead4f",
+        "name": "parse",
+        "func": "msg.payload = {\n    'id': msg.topic, // entity was cerated on common-dknr:dknr callback\n    'source': 'dknr',\n    'parent': 'domotic',\n    'value': new Date(msg.payload.status.nextDate).toTimeString().slice(0, 5),\n    'element': 'climate',\n    'type': 'sensor',\n    'unit': 'time',\n    'name': msg.topic.charAt(0).toUpperCase() + msg.topic.slice(1),\n    'seen': Date.now()\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 4340,
+        "wires": [
+            [
+                "938e2afe4f3b8170"
+            ]
+        ]
+    },
+    {
+        "id": "5ef4528ceedec868",
+        "type": "inject",
+        "z": "4bc72a1112cb448c",
+        "g": "aa28e51660bead4f",
+        "name": "sunset",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "05 12 * * *",
+        "once": true,
+        "onceDelay": "5",
+        "topic": "trigger",
+        "payload": "sunset",
+        "payloadType": "str",
+        "x": 260,
+        "y": 4460,
+        "wires": [
+            [
+                "57d4182cc0e85388"
+            ]
+        ]
+    },
+    {
+        "id": "741c163839ba86f4",
+        "type": "inject",
+        "z": "4bc72a1112cb448c",
+        "name": "dev",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 730,
+        "y": 4680,
+        "wires": [
+            [
+                "e3c77fb1aa9f2ec1"
+            ]
+        ]
+    },
+    {
+        "id": "e3c77fb1aa9f2ec1",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "name": "remove dknr_",
+        "func": "let entity = global.get('entity', 'memoryOnly');\nfor (const k in entity) {\n    if (entity[k]['source'] === 'dknr') {\n        delete entity[k];\n    }\n}\nglobal.set('entity', entity, 'memoryOnly');\n\nlet name = global.get('name', 'memoryOnly');\nfor (const k in name) {\n    for (const l in name[k]) {\n        let n = l.slice(0, 5);\n        if (n === 'dknr_') {\n            delete name[k][l];\n        }\n    }\n}\nglobal.set('name', name, 'memoryOnly');\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 4680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "66f6b7e017880ca2",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "name": "clean entity",
+        "func": "let template = Object.keys(global.get('describe.template.entity', 'memoryOnly'));\nlet entity = global.get('entity', 'memoryOnly');\nfor (const k in entity) {\n    for (const l in entity[k]) {\n        if (!template.includes(l)) {\n            delete entity[k][l];\n        }\n    }\n}\n\nglobal.set('entity', entity, 'memoryOnly');\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 4740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ea30a1e512702af6",
+        "type": "inject",
+        "z": "4bc72a1112cb448c",
+        "name": "dev",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 730,
+        "y": 4740,
+        "wires": [
+            [
+                "66f6b7e017880ca2"
+            ]
+        ]
     },
     {
         "id": "d7bc8fc74bfc07cb",
@@ -8299,7 +8564,8 @@
                 "665bd6eb3895ca09",
                 "bfca3b4e772b111b",
                 "1b26f1130d67ca8d",
-                "6225c693c67cccce"
+                "6225c693c67cccce",
+                "9a395949c6b718fc"
             ]
         ]
     },
@@ -12606,7 +12872,7 @@
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "name": "data",
-        "func": "if (!msg.enabled) {\n\n    return;\n}\n\nlet value = msg.payload;\nnode.status({ text: msg.topic + ' - ' + value });\n\nlet data = flow.get('trigger[\"' + msg.hmi.id + '\"]', 'memoryOnly') || {};\ndata[msg.topic] = value;\nflow.set('trigger[\"' + msg.hmi.id + '\"]', data, 'memoryOnly');\n\nmsg.payload = data;\n\nreturn msg;",
+        "func": "let value = msg.payload;\nnode.status({ text: msg.topic + ' - ' + value });\n\nlet data = flow.get('trigger[\"' + msg.hmi.id + '\"]', 'memoryOnly') || {};\ndata[msg.topic] = value;\nflow.set('trigger[\"' + msg.hmi.id + '\"]', data, 'memoryOnly');\n\nmsg.payload = data;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -13557,7 +13823,7 @@
         "z": "56c0b44ca387382c",
         "g": "5d38062b01fae17a",
         "name": "data",
-        "func": "await new Promise(resolve => setTimeout(resolve, 10));\nnode.status({ text: '' });\nif (!msg.enabled) {\n    msg.payload = [];\n\n    return msg;\n}\n\nlet action = flow.get('action[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--';\nif (action !== 'triggerlist') {\n\n    return;\n}\n\nnode.status({ text: action });\n\nlet trigger = global.get('trigger', 'memoryOnly') || {};\nlet names = global.get('name', 'memoryOnly') || {};\n\nlet i = 0;\nlet dropdownOptions = [];\n\nfor (const t in trigger) {\n    let tentity = global.get('entity[\"' + t + '\"]', 'memoryOnly');\n    if (typeof tentity === 'object') {\n        let troom = names['room'][tentity['room']] || tentity['room'];\n        let tname = names['entity'][tentity['uid']] || tentity['id'];\n        if (tname === '' || tname === tentity['id']) {\n            tname = names['device'][tentity['parent']] || tentity['parent'];\n        }\n\n        for (const s in trigger[t]) {\n            let scene_icon = global.get('describe[\"scenes\"][\"' + s + '\"][\"icons\"]', 'memoryOnly') || ['help', 'help'];\n    \n            for (const e in trigger[t][s]) {\n                let eentity = global.get('entity[\"' + e + '\"]', 'memoryOnly');\n                if (typeof eentity === 'object') {\n                    let eroom = names['room'][eentity['room']] || eentity['room'];\n                    let ename = names['entity'][eentity['uid']] || eentity['id'];\n                    if (ename === '' || ename === eentity['id']) {\n                        ename = names['device'][eentity['parent']] || eentity['parent'];\n                    }\n\n                    dropdownOptions[i++] = {\n                        'scene_icon': '<i class=\"icon-in-row mdi mdi-' + scene_icon[1] + '\" title=\"' + s + '\"></i>',\n                        'scene': trigger[t][s][e]['scene'],\n                        'trigger': t,\n                        'trigger_name': troom + ' / ' + tname + ' (' + tentity['element'] + ')',\n                        'target': e,\n                        'target_name': eroom + ' / ' + ename + ' (' + eentity['element'] + ')',\n                        'inon': trigger[t][s][e]['inon'],\n                        'inoff': trigger[t][s][e]['inoff'],\n                        'delete': msg.dictionary.scene.triggerlist_delete || 'Delete'\n                    };\n                }\n            }\n        }\n    }\n}\nnode.status({ text: i });\n\ndropdownOptions.sort((a, b) => a.trigger.localeCompare(b.trigger));\n\nmsg.payload = dropdownOptions;\nmsg.ui_update = {\n    'label': ''\n}\n\nawait new Promise(resolve => setTimeout(resolve, 250));\nreturn msg;",
+        "func": "await new Promise(resolve => setTimeout(resolve, 10));\nnode.status({ text: '' });\nif (!msg.enabled) {\n    msg.payload = [];\n\n    return msg;\n}\n\nlet action = flow.get('action[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--';\nif (action !== 'triggerlist') {\n\n    return;\n}\n\nnode.status({ text: action });\n\nlet trigger = global.get('trigger', 'memoryOnly') || {};\nlet names = global.get('name', 'memoryOnly') || {};\n\nlet i = 0;\nlet dropdownOptions = [];\n\nfor (const t in trigger) {\n    let tentity = global.get('entity[\"' + t + '\"]', 'memoryOnly');\n    if (typeof tentity === 'object') {\n        let troom = names['room'][tentity['room']] || tentity['room'];\n        let tname = names['entity'][tentity['uid']] || tentity['id'];\n        if (tname === '' || tname === tentity['id']) {\n            tname = names['device'][tentity['parent']] || tentity['parent'];\n        }\n\n        for (const s in trigger[t]) {\n            let scene_icon = global.get('describe[\"scenes\"][\"' + s + '\"][\"icons\"]', 'memoryOnly') || ['help', 'help'];\n    \n            for (const e in trigger[t][s]) {\n                let eentity = global.get('entity[\"' + e + '\"]', 'memoryOnly');\n                if (typeof eentity === 'object') {\n                    let eroom = names['room'][eentity['room']] || eentity['room'];\n                    let ename = names['entity'][eentity['uid']] || eentity['id'];\n                    if (ename === '' || ename === eentity['id']) {\n                        ename = names['device'][eentity['parent']] || eentity['parent'];\n                    }\n\n                    dropdownOptions[i++] = {\n                        'scene_icon': '<i class=\"icon-in-row mdi mdi-' + scene_icon[1] + '\" title=\"' + s + '\"></i>',\n                        'scene': trigger[t][s][e]['scene'],\n                        'trigger': t,\n                        'trigger_name': troom + ' / ' + tname + ' (' + tentity['element'] + ')',\n                        'target': e,\n                        'target_name': eroom + ' / ' + ename + ' (' + eentity['element'] + ')',\n                        'outon': trigger[t][s][e]['outon'],\n                        'outoff': trigger[t][s][e]['outoff'],\n                        'delete': msg.dictionary.scene.triggerlist_delete || 'Delete'\n                    };\n                }\n            }\n        }\n    }\n}\nnode.status({ text: i });\n\ndropdownOptions.sort((a, b) => a.trigger.localeCompare(b.trigger));\n\nmsg.payload = dropdownOptions;\nmsg.ui_update = {\n    'label': ''\n}\n\nawait new Promise(resolve => setTimeout(resolve, 250));\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -14095,7 +14361,7 @@
         "z": "3d7897ba0ee14173",
         "g": "3a6d56b6dcd8540a",
         "name": "save",
-        "func": "if (msg.payload.id !== '' && msg.payload.id !== 'system') {\n    let name = global.get('name', 'memoryOnly') || {};\n    delete name['room'][msg.payload.id];\n    global.set('name', name, 'memoryOnly');\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.notice.save_success;\n\n    return msg;\n}\n\nreturn;",
+        "func": "if (msg.payload.id !== ''){//dev } && msg.payload.id !== 'system') {\n    let name = global.get('name', 'memoryOnly') || {};\n    delete name['room'][msg.payload.id];\n    global.set('name', name, 'memoryOnly');\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.notice.save_success;\n\n    return msg;\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -14178,7 +14444,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "data",
-        "func": "if (!msg.enabled) {\n\n    return msg;\n}\n\nmsg.payload = [];\nmsg.ui_update = {\n    'label': ''\n};\n\nlet colors = global.get('describe.colors', 'memoryOnly') || {};\nlet entities = global.get('entity', 'memoryOnly') || {};\nlet i = 0;\nfor (const uid in entities) {\n    let name = global.get('name[\"entity\"][\"' + uid + '\"]', 'default') || entities[uid]['id'];\n    let parent_name = global.get('name[\"device\"][\"' + entities[uid]['parent'] + '\"]', 'memoryOnly') || entities[uid]['parent'];\n\n    let room = entities[uid]['room'];\n    let room_name = room;\n    if (room !== '') {\n        room_name = global.get('name[\"room\"][\"' + room + '\"]', 'default') || room;\n    }\n\n    let color = colors.on;\n    let dead = (entities[uid]['seen'] + 86400000) < Date.now() ? true : false; //24h\n    if (entities[uid]['hidden']) {\n        color = dead ? colors.median : colors.empty;\n    } else {\n        color = dead ? colors.off : colors.on;\n    }\n\n    msg.payload[i] = entities[uid];\n    msg.payload[i]['uid'] = uid;\n    msg.payload[i]['name'] = name;\n    msg.payload[i]['room_name'] = room_name;\n    msg.payload[i]['parent_name'] = parent_name;\n    msg.payload[i]['delete'] = msg.dictionary.group_entity.list_delete;\n    msg.payload[i]['hidden_color'] = color;\n\n    i++;\n}\n\n//msg.payload.sort((a, b) => a.id.localeCompare(b.id));\n//msg.payload.sort((a, b) => a.parent.localeCompare(b.parent));\n\nreturn msg;",
+        "func": "if (!msg.enabled) {\n\n    return msg;\n}\n\nmsg.payload = [];\nmsg.ui_update = {\n    'label': ''\n};\n\nlet colors = global.get('describe.colors', 'memoryOnly') || {};\nlet entities = global.get('entity', 'memoryOnly') || {};\nlet i = 0;\nfor (const uid in entities) {\n    let name = global.get('name[\"entity\"][\"' + uid + '\"]', 'default') || entities[uid]['id'];\n    let parent_name = global.get('name[\"device\"][\"' + entities[uid]['parent'] + '\"]', 'memoryOnly') || entities[uid]['parent'];\n\n    let room = entities[uid]['room'];\n    let room_name = room;\n    if (room !== '') {\n        room_name = global.get('name[\"room\"][\"' + room + '\"]', 'default') || room;\n    }\n\n    let color = colors.on;\n    let dead = (entities[uid]['seen'] + 86400000) < Date.now() ? true : false; //24h\n    if (entities[uid]['hidden']) {\n        color = dead ? colors.median : colors.empty;\n    } else {\n        color = dead ? colors.off : colors.on;\n    }\n\n    msg.payload[i] = {...entities[uid]};\n    msg.payload[i]['uid'] = uid;\n    msg.payload[i]['name'] = name;\n    msg.payload[i]['room_name'] = room_name;\n    msg.payload[i]['parent_name'] = parent_name;\n    msg.payload[i]['delete'] = msg.dictionary.group_entity.list_delete;\n    msg.payload[i]['hidden_color'] = color;\n\n    i++;\n}\n\n//msg.payload.sort((a, b) => a.id.localeCompare(b.id));\n//msg.payload.sort((a, b) => a.parent.localeCompare(b.parent));\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -14313,7 +14579,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "check",
-        "func": "msg.payload = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\n\n// delete entity data\nif (msg.hmi.level === 'admin' && msg.action === 'button_click') {\n    if (msg.column === 'delete') {\n        let entity = global.get('entity', 'memoryOnly') || {};\n        delete entity[msg.payload.uid];\n        global.set('entity', entity, 'memoryOnly');\n\n        msg.enabled = true;\n        msg.payload = msg.dictionary.notice.save_success;\n        node.send([msg, null, null]);\n    }\n    else if (msg.column === 'name') {\n\n        node.send([null, msg, null]);\n    }\n    else if (msg.column === 'parent_name') {\n\n        node.send([null, null, msg]);\n    }\n}\n\nreturn;",
+        "func": "msg.payload = {...global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {}};\n\n// delete entity data\nif (msg.hmi.level === 'admin' && msg.action === 'button_click') {\n    if (msg.column === 'delete') {\n        let entity = global.get('entity', 'memoryOnly') || {};\n        delete entity[msg.payload.uid];\n        global.set('entity', entity, 'memoryOnly');\n\n        msg.enabled = true;\n        msg.payload = msg.dictionary.notice.save_success;\n        node.send([msg, null, null]);\n    }\n    else if (msg.column === 'name') {\n\n        node.send([null, msg, null]);\n    }\n    else if (msg.column === 'parent_name') {\n\n        node.send([null, null, msg]);\n    }\n}\n\nreturn;",
         "outputs": 3,
         "timeout": 0,
         "noerr": 0,
