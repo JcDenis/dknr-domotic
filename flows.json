@@ -672,28 +672,172 @@
             "5da931c9323d8033"
         ],
         "x": 104,
-        "y": 339,
+        "y": 219,
         "w": 1252,
         "h": 82
     },
     {
-        "id": "316f146de238cec8",
+        "id": "82df6aae63bd1422",
         "type": "group",
         "z": "56c0b44ca387382c",
-        "name": "scene - template (flow)",
+        "name": "scene - sceneadd",
         "style": {
-            "fill": "#ff0000",
+            "fill": "#6f2fa0",
             "fill-opacity": "0.05",
             "label": true
         },
         "nodes": [
-            "7b6e41bba4c46872",
-            "85fe530b84434f58"
+            "825c2d70a0eda50b",
+            "585f93ea36a25b6a",
+            "97e1f87ad83e6159",
+            "4b27b4a89ebdbcb3",
+            "e0cbae64ac422ac0",
+            "8ef698c4dbdd7631",
+            "0bd608317001d469",
+            "e53f8510416c52e1",
+            "2e5237010ef5be2c",
+            "af61cae68cb431e1",
+            "6c7947f3b54fcf52",
+            "b182393683a907c2",
+            "6915f59f4540c5bb",
+            "7a990ea667fe7cf6",
+            "bb6fdbb2db911f09",
+            "19a4011894c1a9be",
+            "f17262e3f5f32b9c",
+            "a288f0436ad108fa",
+            "d75bf2579725af1f",
+            "f9ef2eadb9dfda0a",
+            "50e39f95598b8097",
+            "3ac49d9c001b8389",
+            "cdba7deaedf723b5",
+            "8c80ebf34e16a3c3",
+            "d0c7b87e19dbcd9b",
+            "3e54175efe145c15",
+            "b90a744ae25cbf93",
+            "5add4f69509b7c61",
+            "c48e071177dac8c7",
+            "971ba058b0ec97e4",
+            "b164ea7d83833392",
+            "af7a9efbabc6f08a",
+            "3805b06d11ef0cf7",
+            "823538677472fe85",
+            "4b554a57706ba248",
+            "cd1f976e546507b2",
+            "7ba2b7538313f754",
+            "f3758fd41e0ac3eb",
+            "4c785bcb5de607be",
+            "f2fe5c8db7e07d80",
+            "2175f2ab97508f14",
+            "f4f76a530d4a3869",
+            "14ce5e758a88c497",
+            "a27b8e3d925973e6",
+            "0fe4bcaa51dd9a03",
+            "3a6204d2c51df3aa",
+            "4744ecf4e024c429",
+            "dc38ac715bb0bf9c",
+            "fcad055ebd6a05e7",
+            "c4e1039a17348b7c",
+            "f0c45817e50295aa",
+            "666963dd1752b63d",
+            "c3423d086410d36d",
+            "57606a488ee76f61",
+            "8d70884261d1f2da",
+            "93b15a13469964fa",
+            "3263d20900780876",
+            "5aaf84dd3a596040",
+            "d4f3a3489ac1c348",
+            "cc195a7e9497c3c9",
+            "53e71c77a16629c7",
+            "44a9b5bcb40bb174",
+            "3257d52092bce306",
+            "4964d1c6d857847c",
+            "4663d789de18b6df",
+            "9f7c750151bc3137",
+            "51e64a4caa163cdd",
+            "8c0c5d3bb65a9f64",
+            "9d4643d0a9a321ff",
+            "b0ab58e61689840a",
+            "c88e3eab330254fa",
+            "c81043d4a876f3f5",
+            "1950018cf846a01e"
         ],
         "x": 104,
-        "y": 219,
-        "w": 242,
-        "h": 82
+        "y": 339,
+        "w": 1342,
+        "h": 1882
+    },
+    {
+        "id": "0a9a5f5f4e641599",
+        "type": "group",
+        "z": "56c0b44ca387382c",
+        "name": "scene - triggeradd",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "2d928a99443ec655",
+            "64ccaeb92cf4dce0",
+            "3f1e50c7c7349c30",
+            "11815aab8b2a2e6f",
+            "3fa5a229bc2295f8",
+            "efd48922da0abebd",
+            "ab0d5f3d078b1b18",
+            "ae2618b4f144243b",
+            "b27d7ed13f1eaaf6",
+            "acfcdbe385caefe8",
+            "5a11361d68942e05",
+            "22cb95146936e775",
+            "ff6d642c5b54d3ca",
+            "94cae51ea6349dec",
+            "0297b4144c2e6d81",
+            "1e5ffa8f8a8fbaa1",
+            "77d1d28d5d82cda5",
+            "bcba6ada8afa36fe",
+            "7633be06242c6d21",
+            "2567eca3241f7ece",
+            "ae51e215ca4ce7bc",
+            "35c692b012987615",
+            "aa089ac147c0b0dd",
+            "09d2c449c401d154",
+            "9880d7748fa4235f",
+            "eb6c339dfc1c2a60",
+            "f46dd14ebf96f7ee",
+            "7576483ab18f8055",
+            "9a7b9a6d2d24629a",
+            "6ab22375c63091ec",
+            "fc3b86c3b2f2e284",
+            "ada9c96b941e3bae",
+            "212963c2d77d719a",
+            "85cda8aaae4f2153",
+            "4e940e2bed097b6b",
+            "6de461e4d754d7f9",
+            "8d1d998dea792dbd",
+            "42452070a1ddf1e6",
+            "0c8d1b252e56bc7b",
+            "bc979e0eebd8f9cf",
+            "ac5535b96559da6d",
+            "66dfed6aabfe271c",
+            "52cafddc760e8a64",
+            "b362f8df3c182707",
+            "35f4233f429f1612",
+            "8a1ebd93cd9a9a38",
+            "9291b3bf3aa25f9a",
+            "d5239b98c9a6fc21",
+            "a466057f2126875d",
+            "31a058d2309e20b6",
+            "b843242d3b6bb11a",
+            "1a6c82ac11c24c9f",
+            "9b7e566f7c1f5054",
+            "d5bb9cbd8e3d12d0",
+            "5a84b17c0d618930",
+            "089ca9808005cd1d"
+        ],
+        "x": 104,
+        "y": 2259,
+        "w": 1322,
+        "h": 1222
     },
     {
         "id": "f822aa69af66c546",
@@ -1348,165 +1492,56 @@
         "h": 82
     },
     {
-        "id": "82df6aae63bd1422",
+        "id": "690005b9a6f433cf",
         "type": "group",
         "z": "56c0b44ca387382c",
-        "name": "scene - sceneadd",
+        "name": "scene - scenelist",
         "style": {
             "fill": "#6f2fa0",
             "fill-opacity": "0.05",
             "label": true
         },
         "nodes": [
-            "825c2d70a0eda50b",
-            "585f93ea36a25b6a",
-            "97e1f87ad83e6159",
-            "4b27b4a89ebdbcb3",
-            "e0cbae64ac422ac0",
-            "8ef698c4dbdd7631",
-            "0bd608317001d469",
-            "e53f8510416c52e1",
-            "2e5237010ef5be2c",
-            "af61cae68cb431e1",
-            "6c7947f3b54fcf52",
-            "b182393683a907c2",
-            "6915f59f4540c5bb",
-            "7a990ea667fe7cf6",
-            "bb6fdbb2db911f09",
-            "19a4011894c1a9be",
-            "f17262e3f5f32b9c",
-            "a288f0436ad108fa",
-            "d75bf2579725af1f",
-            "f9ef2eadb9dfda0a",
-            "50e39f95598b8097",
-            "3ac49d9c001b8389",
-            "cdba7deaedf723b5",
-            "8c80ebf34e16a3c3",
-            "d0c7b87e19dbcd9b",
-            "3e54175efe145c15",
-            "b90a744ae25cbf93",
-            "5add4f69509b7c61",
-            "c48e071177dac8c7",
-            "971ba058b0ec97e4",
-            "b164ea7d83833392",
-            "af7a9efbabc6f08a",
-            "3805b06d11ef0cf7",
-            "823538677472fe85",
-            "4b554a57706ba248",
-            "cd1f976e546507b2",
-            "7ba2b7538313f754",
-            "f3758fd41e0ac3eb",
-            "4c785bcb5de607be",
-            "f2fe5c8db7e07d80",
-            "2175f2ab97508f14",
-            "f4f76a530d4a3869",
-            "14ce5e758a88c497",
-            "a27b8e3d925973e6",
-            "0fe4bcaa51dd9a03",
-            "3a6204d2c51df3aa",
-            "4744ecf4e024c429",
-            "dc38ac715bb0bf9c",
-            "fcad055ebd6a05e7",
-            "c4e1039a17348b7c",
-            "f0c45817e50295aa",
-            "666963dd1752b63d",
-            "c3423d086410d36d",
-            "57606a488ee76f61",
-            "8d70884261d1f2da",
-            "93b15a13469964fa",
-            "3263d20900780876",
-            "5aaf84dd3a596040",
-            "d4f3a3489ac1c348",
-            "cc195a7e9497c3c9",
-            "53e71c77a16629c7",
-            "44a9b5bcb40bb174",
-            "3257d52092bce306",
-            "4964d1c6d857847c",
-            "4663d789de18b6df",
-            "9f7c750151bc3137",
-            "51e64a4caa163cdd",
-            "8c0c5d3bb65a9f64",
-            "9d4643d0a9a321ff",
-            "b0ab58e61689840a",
-            "c88e3eab330254fa",
-            "c81043d4a876f3f5",
-            "1950018cf846a01e"
+            "7f38981a1a7a894f",
+            "a9e810108c841cb2",
+            "f32c3c553c3ce6b5",
+            "b407f315762096bb",
+            "72bdb573cf83c9ab",
+            "329710fd6a91787d",
+            "cfee6a014e3e823b",
+            "362a4bd4cef94903",
+            "979c368fe06a3531",
+            "1238621625ac1387",
+            "7482fbd3b4a1a5ae"
         ],
         "x": 104,
-        "y": 459,
-        "w": 1342,
-        "h": 1882
+        "y": 3519,
+        "w": 1272,
+        "h": 142
     },
     {
-        "id": "0a9a5f5f4e641599",
+        "id": "5d38062b01fae17a",
         "type": "group",
         "z": "56c0b44ca387382c",
-        "name": "scene - triggeradd",
+        "name": "scene - triggerlist",
         "style": {
             "fill": "#6f2fa0",
             "fill-opacity": "0.05",
             "label": true
         },
         "nodes": [
-            "2d928a99443ec655",
-            "64ccaeb92cf4dce0",
-            "3f1e50c7c7349c30",
-            "11815aab8b2a2e6f",
-            "3fa5a229bc2295f8",
-            "efd48922da0abebd",
-            "ab0d5f3d078b1b18",
-            "ae2618b4f144243b",
-            "b27d7ed13f1eaaf6",
-            "acfcdbe385caefe8",
-            "5a11361d68942e05",
-            "22cb95146936e775",
-            "ff6d642c5b54d3ca",
-            "94cae51ea6349dec",
-            "0297b4144c2e6d81",
-            "1e5ffa8f8a8fbaa1",
-            "77d1d28d5d82cda5",
-            "bcba6ada8afa36fe",
-            "7633be06242c6d21",
-            "2567eca3241f7ece",
-            "ae51e215ca4ce7bc",
-            "35c692b012987615",
-            "aa089ac147c0b0dd",
-            "09d2c449c401d154",
-            "9880d7748fa4235f",
-            "eb6c339dfc1c2a60",
-            "f46dd14ebf96f7ee",
-            "7576483ab18f8055",
-            "9a7b9a6d2d24629a",
-            "6ab22375c63091ec",
-            "fc3b86c3b2f2e284",
-            "ada9c96b941e3bae",
-            "212963c2d77d719a",
-            "85cda8aaae4f2153",
-            "4e940e2bed097b6b",
-            "6de461e4d754d7f9",
-            "8d1d998dea792dbd",
-            "42452070a1ddf1e6",
-            "0c8d1b252e56bc7b",
-            "bc979e0eebd8f9cf",
-            "ac5535b96559da6d",
-            "66dfed6aabfe271c",
-            "52cafddc760e8a64",
-            "b362f8df3c182707",
-            "35f4233f429f1612",
-            "8a1ebd93cd9a9a38",
-            "9291b3bf3aa25f9a",
-            "d5239b98c9a6fc21",
-            "a466057f2126875d",
-            "2506ba47eb53515a",
-            "31a058d2309e20b6",
-            "b843242d3b6bb11a",
-            "1a6c82ac11c24c9f",
-            "9b7e566f7c1f5054"
+            "46bfd2b0460b2723",
+            "cebe76f18e15ce70",
+            "1c0bfc84dadda4b4",
+            "cce9cdcb1b1e7596",
+            "7250b1ea23fcca7c",
+            "42617cb3dc0f463a",
+            "f32e8939b64dd232"
         ],
         "x": 104,
-        "y": 2379,
-        "w": 1322,
-        "h": 1102
+        "y": 3699,
+        "w": 1292,
+        "h": 82
     },
     {
         "id": "df7710b4b2c4e55b",
@@ -2379,9 +2414,9 @@
             "b6ec571b76acac85",
             "6336047780e57ccc",
             "c81043d4a876f3f5",
-            "a270dbf0197bc39b",
-            "8fae7f653b0c6c38",
-            "6de461e4d754d7f9"
+            "6de461e4d754d7f9",
+            "7482fbd3b4a1a5ae",
+            "f32e8939b64dd232"
         ],
         "x": 145,
         "y": 920,
@@ -2779,8 +2814,8 @@
         "type": "function",
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
-        "name": "common",
-        "func": "let describe = global.get('describe', 'memoryOnly') || {};\nif (typeof describe !== 'object') {\n    describe = {};\n}\nif (typeof describe.pages !== 'object') {\n    describe.pages = {};\n}\n\n// Set default app values\ndescribe.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\ndescribe.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\ndescribe.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['tuning'] = {\n    'id': '1c3c77208d684dc0',\n    'name': 'tuning',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['scene'] = {\n    'id': '1e9f5bde9636a371',\n    'name': 'scene',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['entity'] = {\n    'id': '2b12391aa314ef62',\n    'name': 'entity',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': false,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// Sources\ndescribe.sources['dknr'] = ['eye', 'Domotic'];\n\n// Binary element with revert value\ndescribe.reverts = ['aperture', 'door', 'window', 'lock'];\n\n// Elements icons\ndescribe.elements = {\n    'switch': ['toggle-switch-off-outline', 'toggle-switch-outline'],\n    'power': ['flash-outline', 'flash'],\n    'light': ['lightbulb-off', 'lightbulb'],\n    'plug': ['power-plug-off', 'power-plug'],\n    'remote': ['remote-off', 'remote'],\n    'motion': ['motion-sensor-off', 'motion-sensor'],\n    'presence': ['localtion-exit', 'location-enter'],\n    'aperture': ['electric-switch-closed', 'electric-switch'], // 0=open\n    'door': ['door-closed', 'door-open'], // 0=open\n    'window': ['window-closed-variant', 'window-open-variant'], //0=open\n    'lock': ['lock-off', 'lock'], //0=open\n    'shutter': ['window-shutter', 'window-shutter-open'],\n    'slider': ['door-sliding', 'door-sliding-open'],\n    'heater': ['radiator-off', 'radiator'],\n    'alert': ['bell-off', 'bell'],\n    'sound': ['volume-off', 'volume-high'],\n    'temperature': ['thermometer-off', 'thermometer'],\n    'humidity': ['water-percent-alert', 'water-percent'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless'],\n    'wind': ['weather-windy', 'weather-dust'],\n    'fan': ['fan-off', 'fan'],\n    'direction': ['swap-horizontal', 'swap-horizontal-bold'],\n    'time': ['clock-outline', 'clock'],\n    'battery': ['battery-low', 'battery'],\n    'climate': ['home-thermometer-outline', 'home-thermometer'],\n    'current': ['current-ac', 'sine-wave'],\n    'energy': ['meter-electric-outline', 'meter-electric'],\n    'pressure': ['gauge', 'gauge'],\n    'mode': ['home-switch-outline', 'home-switch'],\n    'text': ['clipboard-text-off', 'clipboard-text'],\n    'camera': ['camera-off', 'camera']\n};\n\n\n// Value color\ndescribe.colors = {\n    'on': '#008000',\n    'off': '#FF0000',\n    'median': '#F08000',\n    'none': '#808000',\n    'theme': '#0094CE',\n    'empty': '#CCCCCC'\n};\n\n// Scenes\ndescribe.scenes = {\n    'lighting': {\n        'fields': ['enabled', 'on', 'off', 'motion', 'nocturnal', 'nightlight', 'retention', 'duration', 'high', 'low', 'illuminance', 'darknass'],\n        'elements': ['light']\n    },\n    'toogle': {\n        'fields': ['enabled', 'on','off'],\n        'elements': []\n    },\n    'shading': {\n        'fields': ['enabled', 'on', 'off', 'daily', 'openwork', 'illuminance', 'delay'],\n        'elements': []\n    },\n    'airflow': {\n        'fields': ['enabled', 'on', 'off', 'duration'],\n        'elements': []\n    },\n    'waterboiler': {\n        'fields': ['enabled', 'on', 'off', 'daily', 'duration', 'nocturnal'],\n        'elements': []\n    },\n    'level': {\n        'fields': ['enabled', 'on','off', 'min', 'max', 'step'],\n        'elements': []\n    },\n    'overload': {\n        'fields': ['enabled', 'on', 'off', 'duration'],\n        'elements': []\n    }\n};\n\n// Save config\nglobal.set('describe', describe, 'memoryOnly');\n\n// Clear user and more\nglobal.set('auth',{},'memoryOnly');\nglobal.set('user',{},'memoryOnly');\nglobal.set('form',{},'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/.config.projects.json'\n};",
+        "name": "describe",
+        "func": "let describe = global.get('describe', 'memoryOnly') || {};\nif (typeof describe !== 'object') {\n    describe = {};\n}\nif (typeof describe.pages !== 'object') {\n    describe.pages = {};\n}\n\n// Set default app values\ndescribe.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\ndescribe.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\ndescribe.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['tuning'] = {\n    'id': '1c3c77208d684dc0',\n    'name': 'tuning',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['scene'] = {\n    'id': '1e9f5bde9636a371',\n    'name': 'scene',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['entity'] = {\n    'id': '2b12391aa314ef62',\n    'name': 'entity',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': false,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// Sources\ndescribe.sources['dknr'] = ['eye', 'Domotic'];\n\n// Binary element with revert value\ndescribe.reverts = ['aperture', 'door', 'window', 'lock'];\n\n// Elements icons\ndescribe.elements = {\n    'switch': ['toggle-switch-off-outline', 'toggle-switch-outline'],\n    'power': ['flash-outline', 'flash'],\n    'light': ['lightbulb-off', 'lightbulb'],\n    'plug': ['power-plug-off', 'power-plug'],\n    'remote': ['remote-off', 'remote'],\n    'motion': ['motion-sensor-off', 'motion-sensor'],\n    'presence': ['localtion-exit', 'location-enter'],\n    'aperture': ['electric-switch-closed', 'electric-switch'], // 0=open\n    'door': ['door-closed', 'door-open'], // 0=open\n    'window': ['window-closed-variant', 'window-open-variant'], //0=open\n    'lock': ['lock-off', 'lock'], //0=open\n    'shutter': ['window-shutter', 'window-shutter-open'],\n    'slider': ['door-sliding', 'door-sliding-open'],\n    'heater': ['radiator-off', 'radiator'],\n    'alert': ['bell-off', 'bell'],\n    'sound': ['volume-off', 'volume-high'],\n    'temperature': ['thermometer-off', 'thermometer'],\n    'humidity': ['water-percent-alert', 'water-percent'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless'],\n    'wind': ['weather-windy', 'weather-dust'],\n    'fan': ['fan-off', 'fan'],\n    'direction': ['swap-horizontal', 'swap-horizontal-bold'],\n    'time': ['clock-outline', 'clock'],\n    'battery': ['battery-low', 'battery'],\n    'climate': ['home-thermometer-outline', 'home-thermometer'],\n    'current': ['current-ac', 'sine-wave'],\n    'energy': ['meter-electric-outline', 'meter-electric'],\n    'pressure': ['gauge', 'gauge'],\n    'mode': ['home-switch-outline', 'home-switch'],\n    'text': ['clipboard-text-off', 'clipboard-text'],\n    'camera': ['camera-off', 'camera']\n};\n\n\n// Value color\ndescribe.colors = {\n    'on': '#008000',\n    'off': '#FF0000',\n    'median': '#F08000',\n    'none': '#808000',\n    'theme': '#0094CE',\n    'empty': '#CCCCCC'\n};\n\n// Templates\ndescribe.template = {\n    'entity': {\n        'uid': '',\n        'source': '',\n        'id': '',\n        'parent': '',\n        'value': '',\n        'type': '',\n        'room': '',\n        'element': '',\n        'unit': '',\n        'seen': 0,\n        'hidden': 0\n    },\n    'scene': {\n        'scene': '',\n        'entity': '',\n        'enabled': 0,\n        'on': 1,\n        'off': 0,\n        'motion': 0,\n        'nocturnal': 0,\n        'nightlight': 0,\n        'retention': 0,\n        'duration': 60, //minutes\n        'high': '70',\n        'low': '30',\n        'illuminance': 2000,\n        'darkness': 200,\n        'daily': 0,\n        'openwork': 0,\n        'delay': 60, //seconds\n        'min': 0,\n        'max': 255,\n        'step': 5\n    },\n    'trigger': {\n        'room': '',\n        'element': '',\n        'scene': '',\n        'trigger': '',\n        'target': '',\n        'outon': 1,\n        'outoff': 1,\n        'inon': 1,\n        'inoff': 0\n    }\n};\n\n// Scenes\ndescribe.scenes = {\n    'lighting': {\n        'fields': ['enabled', 'on', 'off', 'motion', 'nocturnal', 'nightlight', 'retention', 'duration', 'high', 'low', 'illuminance', 'darknass'],\n        'elements': ['light']\n    },\n    'toogle': {\n        'fields': ['enabled', 'on','off'],\n        'elements': []\n    },\n    'shading': {\n        'fields': ['enabled', 'on', 'off', 'daily', 'openwork', 'illuminance', 'delay'],\n        'elements': []\n    },\n    'airflow': {\n        'fields': ['enabled', 'on', 'off', 'duration'],\n        'elements': []\n    },\n    'waterboiler': {\n        'fields': ['enabled', 'on', 'off', 'daily', 'duration', 'nocturnal'],\n        'elements': []\n    },\n    'level': {\n        'fields': ['enabled', 'on','off', 'min', 'max', 'step'],\n        'elements': []\n    },\n    'overload': {\n        'fields': ['enabled', 'on', 'off', 'duration'],\n        'elements': []\n    }\n};\n\n// Save config\nglobal.set('describe', describe, 'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/.config.projects.json'\n};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3743,7 +3778,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "init",
-        "func": "if (msg.payload === true) {\n\n    return;\n}\n\nflow.set('stop', false, 'memoryOnly');\n\n// Reset variables\nglobal.set('browser', {}, 'memoryOnly');\nglobal.set('describe', { 'project': '', 'app': {}, 'pages': {}, 'sources': {}, 'enum': {}, 'elements': {} }, 'memoryOnly');\nglobal.set('dictionary', {}, 'memoryOnly');\nglobal.set('form', {}, 'memoryOnly');\nglobal.set('user', {}, 'memoryOnly');\n\n// start\nmsg.payload = {\n    'pages': {},\n    'sources': {},\n    'enum': {},\n    'dictionary': {}\n};\n\nreturn msg;",
+        "func": "if (msg.payload === true) {\n\n    return;\n}\n\nflow.set('stop', false, 'memoryOnly');\n\n// Reset variables\nglobal.set('browser', {}, 'memoryOnly');\nglobal.set('describe', { 'project': '', 'app': {}, 'pages': {}, 'sources': {}, 'enum': {}, 'elements': {} }, 'memoryOnly');\nglobal.set('dictionary', {}, 'memoryOnly');\nglobal.set('auth', {}, 'memoryOnly');\nglobal.set('form', {}, 'memoryOnly');\nglobal.set('user', {}, 'memoryOnly');\n\n// start\nmsg.payload = {\n    'pages': {},\n    'sources': {},\n    'enum': {},\n    'dictionary': {}\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4424,7 +4459,7 @@
         "z": "4bc72a1112cb448c",
         "g": "be2dde01217c4ebd",
         "name": "check",
-        "func": "// Stop loop from elsewhere\nlet stop = flow.get('stop', 'memoryOnly') || false;\n\n// Check required fields\nif (stop === true ||\n    typeof msg.payload !== 'object' || \n    typeof msg.payload.source !== 'string' || \n    typeof msg.payload.parent !== 'string' || \n    typeof msg.payload.id !== 'string' || \n    typeof msg.payload.value === 'undefined'\n) {\n\n    return;\n}\n\n// Default keys\nlet template = {\n    'uid': '',\n    'source': '',\n    'id': '',\n    'parent': '',\n    'value': '',\n    'type': '',\n    'room': '',\n    'element': '',\n    'unit': '',\n    'seen': 0,\n    'hidden': 0\n};\n\n// Rebuilt some keys\nif (msg.payload.parent.slice(0, msg.payload.source.length) !== msg.payload.source) {\n    // dot not add source on loop\n    msg.payload.parent = msg.payload.source + '_' + msg.payload.parent;\n}\nmsg.payload.uid = msg.payload.parent + '_' + msg.payload.id;\n\n// Always convert boolean to int\nif (typeof msg.payload.value === 'boolean') {\n    msg.payload.value = msg.payload.value ? 1 : 0;\n}\n\n// Get existing entity\nlet entity = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\nlet protect = ['room', 'element', 'unit'];\n\n// For now, hide new entity\ntemplate['hidden'] = (typeof entity['hidden'] !== 'number') ? 1 : 0;\n\n// Set all entity fields\nentity = {...template, ...entity};\nlet old_value = entity['value'];\n\n// Set entity name if entity is new\nif (typeof msg.payload['name'] === 'string' && entity.id === '') {\n    let name = global.get('name[\"entity\"]', 'memoryOnly') || {};\n    if (typeof name[msg.payload.uid] !== 'string' || name[msg.payload.uid] === '') {\n        name[msg.payload.uid] = msg.payload.name;\n        global.set('name[\"entity\"]', name, 'memoryOnly');\n    }\n}\ndelete msg.payload['name'];\n\nfor (const k in msg.payload) {\n    // Clean up old record\n    if (typeof template[k] !== 'undefined') {\n        // check protected fields\n        if (protect.includes(k) && entity[k] !== '') {\n            // Do not override some properties\n        } else {\n            entity[k] = msg.payload[k];\n        }\n    }\n}\n\n// Cleanup value, convert to 0-1. (boolean is int, see above)\nif (entity['unit'] === 'b') {\n    // Higher than 0 is 1\n    entity['value'] = entity['value'] === 0 ? 0 : 1\n}\n\n// Check if value changes\nmsg.repeat = old_value === entity['value'] ? true : false;\n\nif (msg.remove === true) {\n    // todo\n}\n\nglobal.set('entity[\"' + entity.uid + '\"]', entity, 'memoryOnly');\n\nnode.status({ fill: \"green\", shape: \"ring\", text: entity.uid + ' : ' + entity.value});\n\n// To alert connector (ak zwave...) that this is an update, set loop to true\nif (typeof msg.loop !== 'boolean') {\n    msg.loop = false;\n}\nmsg.topic = '';\nmsg.payload = entity;\n\nreturn msg;",
+        "func": "// Stop loop from elsewhere\nlet stop = flow.get('stop', 'memoryOnly') || false;\n\n// Check required fields\nif (stop === true ||\n    typeof msg.payload !== 'object' || \n    typeof msg.payload.source !== 'string' || \n    typeof msg.payload.parent !== 'string' || \n    typeof msg.payload.id !== 'string' || \n    typeof msg.payload.value === 'undefined'\n) {\n\n    return;\n}\n\n// Default keys\nlet template = global.get('describe.template.entity', 'memoryOnly') || {};\n\n// Rebuilt some keys\nif (msg.payload.parent.slice(0, msg.payload.source.length) !== msg.payload.source) {\n    // dot not add source on loop\n    msg.payload.parent = msg.payload.source + '_' + msg.payload.parent;\n}\nmsg.payload.uid = msg.payload.parent + '_' + msg.payload.id;\n\n// Always convert boolean to int\nif (typeof msg.payload.value === 'boolean') {\n    msg.payload.value = msg.payload.value ? 1 : 0;\n}\n\n// Get existing entity\nlet entity = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\nlet protect = ['room', 'element', 'unit'];\n\n// For now, hide new entity\ntemplate['hidden'] = (typeof entity['hidden'] !== 'number') ? 1 : 0;\n\n// Set all entity fields\nentity = {...template, ...entity};\nlet old_value = entity['value'];\n\n// Set entity name if entity is new\nif (typeof msg.payload['name'] === 'string' && entity.id === '') {\n    let name = global.get('name[\"entity\"]', 'memoryOnly') || {};\n    if (typeof name[msg.payload.uid] !== 'string' || name[msg.payload.uid] === '') {\n        name[msg.payload.uid] = msg.payload.name;\n        global.set('name[\"entity\"]', name, 'memoryOnly');\n    }\n}\ndelete msg.payload['name'];\n\nfor (const k in msg.payload) {\n    // Clean up old record\n    if (typeof template[k] !== 'undefined') {\n        // check protected fields\n        if (protect.includes(k) && entity[k] !== '') {\n            // Do not override some properties\n        } else {\n            entity[k] = msg.payload[k];\n        }\n    }\n}\n\n// Cleanup value, convert to 0-1. (boolean is int, see above)\nif (entity['unit'] === 'b') {\n    // Higher than 0 is 1\n    entity['value'] = entity['value'] === 0 ? 0 : 1\n}\n\n// Check if value changes\nmsg.repeat = entity['element'] !== 'remote' && old_value === entity['value'] ? true : false;\n\nif (msg.remove === true) {\n    // todo\n}\n\nglobal.set('entity[\"' + entity.uid + '\"]', entity, 'memoryOnly');\n\nnode.status({ fill: \"green\", shape: \"ring\", text: entity.uid + ' : ' + entity.value});\n\n// To alert connector (ak zwave...) that this is an update, set loop to true\nif (typeof msg.loop !== 'boolean') {\n    msg.loop = false;\n}\nmsg.topic = '';\nmsg.payload = entity;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4451,7 +4486,9 @@
             "8704b93076a73d7e",
             "7f0cf300d60b5706",
             "5d4843dd49b4478b",
-            "2e769390f22a4eb7"
+            "2e769390f22a4eb7",
+            "83ee9be1aa2cf49f",
+            "82e64870d41a24cf"
         ],
         "x": 715,
         "y": 2480,
@@ -4519,7 +4556,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "copy",
-        "func": "let places = ['default', 'memoryOnly'];\nlet place = msg.payload === true ? [places[1], places[0]]  : places;\n\n// copy from memory to file\nlet memorized = {\n    'auth': {},\n    'camera': {},\n    'entity': {},\n    'mqtt': {},\n    'name': { 'room': {}, 'device': {}, 'entity': {} }\n}\n\n// Copy backup or at least init\nfor (const key in memorized) {\n    let src = global.get(key, place[0]);\n    if (typeof src !== 'object') {\n        src = memorized[key];\n    }\n    global.set(key, src, place[1]);\n}\n\nnode.status({text: place[0] + ' to ' + place[1]});\n\nreturn msg;",
+        "func": "let places = ['default', 'memoryOnly'];\nlet place = msg.payload === true ? [places[1], places[0]]  : places;\n\n// copy from memory to file\nlet memorized = {\n    'auth': {},\n    'camera': {},\n    'entity': {},\n    'mqtt': {},\n    'name': { 'room': {}, 'device': {}, 'entity': {} },\n    'scene': {},\n    'trigger': {}\n}\n\n// Copy backup or at least init\nfor (const key in memorized) {\n    let src = global.get(key, place[0]);\n    if (typeof src !== 'object') {\n        src = memorized[key];\n    }\n    global.set(key, src, place[1]);\n}\n\nnode.status({text: place[0] + ' to ' + place[1]});\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6678,7 +6715,7 @@
         "z": "4bc72a1112cb448c",
         "g": "f822aa69af66c546",
         "name": "data",
-        "func": "let rnd = global.get('random', 'memoryOnly') || '--';\nif (typeof rnd !== 'number' || \n    typeof msg.payload.rnd !== 'string' || \n    rnd !== Number(msg.payload.rnd)\n) {\n\n    node.send([null, msg]);\n}\n\nmsg.payload = JSON.stringify({\n    'auth': global.get('auth', 'memoryOnly') || {},\n    'camera': global.get('camera', 'memoryOnly') || {},\n    'entity': global.get('entity', 'memoryOnly') || {},\n    'mqtt': global.get('mqtt', 'memoryOnly') || {},\n    'name': global.get('name', 'memoryOnly') || {}\n}, null, 4);\n\nmsg.headers = {\n    'Content-Type':'application/json',\n    'Content-Disposition':'attachment; filename=\"backup.json\"',\n    'Content-Length': msg.payload.length,\n    'Connection':'close'\t\n};\n\nnode.send([msg, null]);\n\nreturn;",
+        "func": "let rnd = global.get('random', 'memoryOnly') || '--';\nif (typeof rnd !== 'number' || \n    typeof msg.payload.rnd !== 'string' || \n    rnd !== Number(msg.payload.rnd)\n) {\n\n    node.send([null, msg]);\n}\n\nmsg.payload = JSON.stringify({\n    'auth': global.get('auth', 'memoryOnly') || {},\n    'camera': global.get('camera', 'memoryOnly') || {},\n    'entity': global.get('entity', 'memoryOnly') || {},\n    'mqtt': global.get('mqtt', 'memoryOnly') || {},\n    'name': global.get('name', 'memoryOnly') || {},\n    'scene': global.get('scene', 'memoryOnly') || {},\n    'trigger': global.get('trigger', 'memoryOnly') || {}\n}, null, 4);\n\nmsg.headers = {\n    'Content-Type':'application/json',\n    'Content-Disposition':'attachment; filename=\"backup.json\"',\n    'Content-Length': msg.payload.length,\n    'Connection':'close'\t\n};\n\nnode.send([msg, null]);\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -6776,7 +6813,7 @@
         "type": "influxdb out",
         "z": "4bc72a1112cb448c",
         "influxdb": "cf56c7fff4df45c2",
-        "name": "",
+        "name": "influxdb",
         "measurement": "",
         "precision": "",
         "retentionPolicy": "",
@@ -6785,8 +6822,97 @@
         "retentionPolicyV18Flux": "",
         "org": "dknr",
         "bucket": "domotic",
-        "x": 570,
-        "y": 4600,
+        "x": 440,
+        "y": 4580,
+        "wires": []
+    },
+    {
+        "id": "e662bb5ad2a389ef",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "name": "state",
+        "func": "if (msg.repeat !== false ||\n    msg.payload.hidden !== 0\n) {\n\n    return;\n}\nnode.status({text: msg.payload.uid + ' - ' + msg.payload.value});\n\nmsg.measurement = 'state';\nmsg.payload = [\n    {\n        [msg.payload.uid]: msg.payload.value\n    },\n    {\n        'type': msg.payload.type,\n        'element': msg.payload.element,\n        'parent': msg.payload.parent\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 4580,
+        "wires": [
+            [
+                "56fbb9ce29a1541e"
+            ]
+        ]
+    },
+    {
+        "id": "83ee9be1aa2cf49f",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "name": "common - influxdb",
+        "links": [
+            "a29ec7554a818a6f"
+        ],
+        "x": 145,
+        "y": 4580,
+        "wires": [
+            [
+                "e662bb5ad2a389ef"
+            ]
+        ]
+    },
+    {
+        "id": "82e64870d41a24cf",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "name": "common - scene - trigger",
+        "links": [
+            "a29ec7554a818a6f"
+        ],
+        "x": 145,
+        "y": 4760,
+        "wires": [
+            [
+                "7337d9e15ceae96c"
+            ]
+        ]
+    },
+    {
+        "id": "7337d9e15ceae96c",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "name": "data",
+        "func": "// Do not watch hidden or duplicate message\nif (msg.repeat === true || msg.payload.hidden === 1) {\n\n    return;\n}\n\n// Find trigger\nlet trigger = global.get('trigger[\"' + msg.payload.uid + '\"]', 'memoryOnly');\nif (typeof trigger !== 'object') {\n\n    return;\n}\nnode.status({text: msg.payload.uid});\n\nfor (const s in trigger) {\n    for (const e in trigger[s]) {\n        let is_num = ['enum', 'text'].includes(msg.payload.unit) ? false : true;\n        if (!is_num && msg.payload.value === trigger[s][e]['inon'] ||\n            is_num && Number(msg.payload.value) >= trigger[s][e]['inon']\n        ) {\n            msg.value = true;\n            node.send(msg);\n        }\n        if (trigger[s][e]['outoff']) {\n            if (!is_num && msg.payload.value === trigger[s][e]['inoff'] ||\n                is_num && Number(msg.payload.value) <= trigger[s][e]['inoff']\n            ) {\n                msg.value = false;\n                node.send(msg);\n            }\n        }\n    }\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 4760,
+        "wires": [
+            [
+                "7a3fccbcd9c1e5fc"
+            ]
+        ]
+    },
+    {
+        "id": "7a3fccbcd9c1e5fc",
+        "type": "debug",
+        "z": "4bc72a1112cb448c",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 4840,
         "wires": []
     },
     {
@@ -9360,7 +9486,9 @@
         "links": [
             "2d928a99443ec655",
             "825c2d70a0eda50b",
-            "1da14302ac5ccefa"
+            "1da14302ac5ccefa",
+            "7f38981a1a7a894f",
+            "46bfd2b0460b2723"
         ],
         "x": 635,
         "y": 140,
@@ -9451,7 +9579,7 @@
             "6de461e4d754d7f9"
         ],
         "x": 145,
-        "y": 2420,
+        "y": 2300,
         "wires": [
             [
                 "64ccaeb92cf4dce0"
@@ -9470,7 +9598,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 320,
-        "y": 2420,
+        "y": 2300,
         "wires": [
             [
                 "2567eca3241f7ece"
@@ -9483,7 +9611,7 @@
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "name": "data",
-        "func": "node.status({text: ''});\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\nlet rooms = global.get('name[\"room\"]', 'memoryOnly') || {};\nlet i = 0;\nlet dropdownOptions = [];\ndropdownOptions[i++] = {\n    'label': '',\n    'value': ''\n};\n\nfor (const r in rooms) {\n    dropdownOptions[i++] = {\n        'label': rooms[r],\n        'value': r\n    };\n}\nnode.status({text: i});\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.scene.triggeradd_room || 'Select trigger room',\n    'options': dropdownOptions\n}\n\nnode.send([msg, null]);\n\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send([null, msg])\n\nreturn;",
+        "func": "node.status({text: ''});\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\nlet rooms = global.get('name[\"room\"]', 'memoryOnly') || {};\nlet i = 0;\nlet dropdownOptions = [];\ndropdownOptions[i++] = {\n    'label': '',\n    'value': ''\n};\n\nfor (const r in rooms) {\n    dropdownOptions[i++] = {\n        'label': rooms[r],\n        'value': r\n    };\n}\nnode.status({text: i});\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.scene.triggeradd_room || 'Select trigger room',\n    'options': dropdownOptions\n}\n\nawait new Promise(resolve => setTimeout(resolve, 50));\nnode.send([msg, null]);\n\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send([null, msg])\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -9491,7 +9619,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2480,
+        "y": 2360,
         "wires": [
             [
                 "efd48922da0abebd"
@@ -9513,7 +9641,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1050,
-        "y": 2480,
+        "y": 2360,
         "wires": [
             [
                 "3fa5a229bc2295f8"
@@ -9534,7 +9662,7 @@
         "finalize": "",
         "libs": [],
         "x": 1250,
-        "y": 2480,
+        "y": 2360,
         "wires": [
             [
                 "ae2618b4f144243b"
@@ -9571,7 +9699,7 @@
         "typeIsComboBox": true,
         "msgTrigger": "onChange",
         "x": 750,
-        "y": 2480,
+        "y": 2360,
         "wires": [
             [
                 "11815aab8b2a2e6f"
@@ -9608,7 +9736,7 @@
         "typeIsComboBox": true,
         "msgTrigger": "onChange",
         "x": 760,
-        "y": 2540,
+        "y": 2420,
         "wires": [
             [
                 "5a11361d68942e05"
@@ -9629,7 +9757,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2540,
+        "y": 2420,
         "wires": [
             [
                 "ab0d5f3d078b1b18"
@@ -9669,7 +9797,7 @@
         "typeIsComboBox": true,
         "msgTrigger": "onChange",
         "x": 760,
-        "y": 2600,
+        "y": 2480,
         "wires": [
             [
                 "ff6d642c5b54d3ca"
@@ -9690,7 +9818,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2600,
+        "y": 2480,
         "wires": [
             [
                 "b27d7ed13f1eaaf6"
@@ -9712,7 +9840,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1050,
-        "y": 2540,
+        "y": 2420,
         "wires": [
             [
                 "22cb95146936e775"
@@ -9733,7 +9861,7 @@
         "finalize": "",
         "libs": [],
         "x": 1250,
-        "y": 2540,
+        "y": 2420,
         "wires": [
             [
                 "acfcdbe385caefe8"
@@ -9752,7 +9880,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1050,
-        "y": 2600,
+        "y": 2480,
         "wires": [
             [
                 "94cae51ea6349dec"
@@ -9773,7 +9901,7 @@
         "finalize": "",
         "libs": [],
         "x": 1250,
-        "y": 2600,
+        "y": 2480,
         "wires": [
             [
                 "1e5ffa8f8a8fbaa1"
@@ -9786,7 +9914,7 @@
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "name": "data",
-        "func": "if (typeof msg.hmi.id === 'string' && msg.hmi.id !== '') {\n    // clear\n    flow.set('trigger[\"' + msg.hmi.id + '\"]', {...flow.get('trigger_template', 'memoryOnly') || {}}, 'memoryOnly');\n}\n\nawait new Promise(resolve => setTimeout(resolve, 50));\nreturn msg;",
+        "func": "if (typeof msg.hmi.id === 'string' && msg.hmi.id !== '') {\n    // clear\n    flow.set('trigger[\"' + msg.hmi.id + '\"]', {...global.get('describe.template.trigger', 'memoryOnly') || {}}, 'memoryOnly');\n}\n\nawait new Promise(resolve => setTimeout(resolve, 50));\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -9794,7 +9922,7 @@
         "finalize": "",
         "libs": [],
         "x": 1250,
-        "y": 2420,
+        "y": 2300,
         "wires": [
             [
                 "3f1e50c7c7349c30"
@@ -9815,7 +9943,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2660,
+        "y": 2540,
         "wires": [
             [
                 "77d1d28d5d82cda5"
@@ -9855,7 +9983,7 @@
         "typeIsComboBox": true,
         "msgTrigger": "onChange",
         "x": 750,
-        "y": 2660,
+        "y": 2540,
         "wires": [
             [
                 "bcba6ada8afa36fe"
@@ -9874,7 +10002,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1050,
-        "y": 2660,
+        "y": 2540,
         "wires": [
             [
                 "7633be06242c6d21"
@@ -9895,7 +10023,7 @@
         "finalize": "",
         "libs": [],
         "x": 1250,
-        "y": 2660,
+        "y": 2540,
         "wires": [
             [
                 "aa089ac147c0b0dd"
@@ -9914,7 +10042,7 @@
             "c81043d4a876f3f5"
         ],
         "x": 145,
-        "y": 500,
+        "y": 380,
         "wires": [
             [
                 "585f93ea36a25b6a"
@@ -9933,7 +10061,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 320,
-        "y": 500,
+        "y": 380,
         "wires": [
             [
                 "97e1f87ad83e6159"
@@ -9947,11 +10075,10 @@
         "g": "810571340280cc3c",
         "name": "scene - action",
         "links": [
-            "278344d6e03041b4",
-            "a270dbf0197bc39b"
+            "278344d6e03041b4"
         ],
         "x": 145,
-        "y": 380,
+        "y": 260,
         "wires": [
             [
                 "1c382d87144d2104"
@@ -9970,7 +10097,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 320,
-        "y": 380,
+        "y": 260,
         "wires": [
             [
                 "5556c287566eed43"
@@ -9983,7 +10110,7 @@
         "z": "56c0b44ca387382c",
         "g": "810571340280cc3c",
         "name": "data",
-        "func": "if (!msg.enabled) {\n\n    return msg;\n}\n\n// Reset\nflow.set('action[\"' + msg.hmi.id +'\"]', '', 'memoryOnly');\n\nlet actions = {\n    'sceneadd': msg.dictionary.scene.action_sceneadd || 'Add or edit scene',\n    'scenelist': msg.dictionary.scene.action_scenelist || 'List scenes',\n    'triggeradd': msg.dictionary.scene.action_triggeradd || 'Add triggers',\n    'triggerlist': msg.dictionary.scene.action_triggeradd || 'List triggers'\n};\n\nlet i = 0;\nlet dropdownOptions = [];\ndropdownOptions[i++] = {\n    'label': '',\n    'value': ''\n};\n\nfor (const a in actions) {\n    dropdownOptions[i++] = {\n        'label': actions[a],\n        'value': a\n    };\n}\nnode.status({text: i});\n\n//dropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.scene.action_select || 'Select an action',\n    'options': dropdownOptions\n}\n\n\nreturn msg;",
+        "func": "node.status({text: ''});\nif (!msg.enabled) {\n\n    return msg;\n}\n\n// Reset\nflow.set('action[\"' + msg.hmi.id +'\"]', '', 'memoryOnly');\n\nlet actions = {\n    'sceneadd': msg.dictionary.scene.action_sceneadd || 'Add or edit scene',\n    'scenelist': msg.dictionary.scene.action_scenelist || 'List scenes',\n    'triggeradd': msg.dictionary.scene.action_triggeradd || 'Add triggers',\n    'triggerlist': msg.dictionary.scene.action_triggeradd || 'List triggers'\n};\n\nlet i = 0;\nlet dropdownOptions = [];\ndropdownOptions[i++] = {\n    'label': '',\n    'value': ''\n};\n\nfor (const a in actions) {\n    dropdownOptions[i++] = {\n        'label': actions[a],\n        'value': a\n    };\n}\nnode.status({text: i});\n\n//dropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.scene.action_select || 'Select an action',\n    'options': dropdownOptions\n}\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -9991,7 +10118,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 380,
+        "y": 260,
         "wires": [
             [
                 "695b21984aa45d60"
@@ -10028,7 +10155,7 @@
         "typeIsComboBox": false,
         "msgTrigger": "onChange",
         "x": 740,
-        "y": 380,
+        "y": 260,
         "wires": [
             [
                 "34c5feac73a0a098"
@@ -10047,7 +10174,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 990,
-        "y": 380,
+        "y": 260,
         "wires": [
             [
                 "b127b33350d13e29"
@@ -10055,46 +10182,12 @@
         ]
     },
     {
-        "id": "7b6e41bba4c46872",
-        "type": "link in",
-        "z": "56c0b44ca387382c",
-        "g": "316f146de238cec8",
-        "name": "scene - template",
-        "links": [
-            "5da931c9323d8033"
-        ],
-        "x": 145,
-        "y": 260,
-        "wires": [
-            [
-                "85fe530b84434f58"
-            ]
-        ]
-    },
-    {
-        "id": "85fe530b84434f58",
-        "type": "function",
-        "z": "56c0b44ca387382c",
-        "g": "316f146de238cec8",
-        "name": "data",
-        "func": "flow.set('scene_template', {\n    'scene': '',\n    'entity': '',\n    'enabled': 0,\n    'on': 1,\n    'off': 0,\n    'motion': 0,\n    'nocturnal': 0,\n    'nightlight': 0,\n    'retention': 0,\n    'duration': 600,\n    'high': '70',\n    'low': '30',\n    'illuminace': 2000,\n    'darkness': 200,\n    'daily': 0,\n    'openwork': 0,\n    'delay': 60,\n    'min': 0,\n    'max': 255,\n    'step': 5\n}, 'memoryOnly');\n\nflow.set('trigger_template', {\n    'room': '',\n    'element': '',\n    'scene': '',\n    'trigger': '',\n    'target': '',\n    'on': 1,\n    'off': 0\n}, 'memoryOnly');\n\nreturn;",
-        "outputs": 0,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 270,
-        "y": 260,
-        "wires": []
-    },
-    {
         "id": "b127b33350d13e29",
         "type": "function",
         "z": "56c0b44ca387382c",
         "g": "810571340280cc3c",
         "name": "data",
-        "func": "// raz\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send(msg);\n\n// limit\nlet value = msg.payload;\nnode.status({text: value});\nflow.set('action[\"' + msg.hmi.id + '\"]', value, 'memoryOnly');\n\nmsg.class = '';\nmsg.enabled = true;\n\nawait new Promise(resolve => setTimeout(resolve, 50));\nnode.send(msg);\n\nreturn;",
+        "func": "node.status({text: ''});\n// raz\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send(msg);\n\n// limit\nlet value = msg.payload;\nnode.status({text: value});\nflow.set('action[\"' + msg.hmi.id + '\"]', value, 'memoryOnly');\n\nmsg.class = '';\nmsg.enabled = true;\n\nawait new Promise(resolve => setTimeout(resolve, 50));\nnode.send(msg);\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -10102,7 +10195,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 380,
+        "y": 260,
         "wires": [
             [
                 "5da931c9323d8033"
@@ -10119,10 +10212,12 @@
         "links": [
             "2d928a99443ec655",
             "7b6e41bba4c46872",
-            "825c2d70a0eda50b"
+            "825c2d70a0eda50b",
+            "7f38981a1a7a894f",
+            "46bfd2b0460b2723"
         ],
         "x": 1315,
-        "y": 380,
+        "y": 260,
         "wires": []
     },
     {
@@ -10131,7 +10226,7 @@
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "name": "action",
-        "func": "node.status({text: ''});\nif (!msg.enabled) {\n\n    return msg;\n}\n\nlet action = flow.get('action[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--';\n\nif (!msg.enabled || action === 'triggeradd') {\n    node.status({text: action});\n\n    await new Promise(resolve => setTimeout(resolve, 250));\n    return msg;\n}\n\nreturn;",
+        "func": "await new Promise(resolve => setTimeout(resolve, 10));\nnode.status({text: ''});\nif (!msg.enabled) {\n\n    return msg;\n}\n\nlet action = flow.get('action[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--';\nif (action !== 'triggeradd') {\n\n    return;\n}\n\nnode.status({text: action});\n\nawait new Promise(resolve => setTimeout(resolve, 50));\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -10139,7 +10234,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2420,
+        "y": 2300,
         "wires": [
             [
                 "0297b4144c2e6d81"
@@ -10152,7 +10247,7 @@
         "z": "56c0b44ca387382c",
         "g": "82df6aae63bd1422",
         "name": "action",
-        "func": "node.status({text: ''});\nif (!msg.enabled) {\n\n    return msg;\n}\n\nlet action = flow.get('action[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--';\n\nif (!msg.enabled || action === 'sceneadd') {\n    node.status({text: action});\n\n    await new Promise(resolve => setTimeout(resolve, 250));\n    return msg;\n}\n\nreturn;",
+        "func": "await new Promise(resolve => setTimeout(resolve, 10));\nnode.status({text: ''});\nif (!msg.enabled) {\n\n    return msg;\n}\n\nlet action = flow.get('action[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--';\nif (action !== 'sceneadd') {\n\n    return;\n}\nnode.status({text: action});\n\nawait new Promise(resolve => setTimeout(resolve, 50));\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -10160,7 +10255,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 500,
+        "y": 380,
         "wires": [
             [
                 "b182393683a907c2"
@@ -10181,7 +10276,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 560,
+        "y": 440,
         "wires": [
             [
                 "e0cbae64ac422ac0"
@@ -10221,7 +10316,7 @@
         "typeIsComboBox": false,
         "msgTrigger": "onChange",
         "x": 750,
-        "y": 560,
+        "y": 440,
         "wires": [
             [
                 "8ef698c4dbdd7631"
@@ -10240,7 +10335,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1070,
-        "y": 560,
+        "y": 440,
         "wires": [
             [
                 "0bd608317001d469"
@@ -10261,7 +10356,7 @@
         "finalize": "",
         "libs": [],
         "x": 1270,
-        "y": 560,
+        "y": 440,
         "wires": [
             [
                 "2e5237010ef5be2c"
@@ -10298,7 +10393,7 @@
         "typeIsComboBox": true,
         "msgTrigger": "onChange",
         "x": 750,
-        "y": 620,
+        "y": 500,
         "wires": [
             [
                 "af61cae68cb431e1"
@@ -10319,7 +10414,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 620,
+        "y": 500,
         "wires": [
             [
                 "e53f8510416c52e1"
@@ -10341,7 +10436,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1070,
-        "y": 620,
+        "y": 500,
         "wires": [
             [
                 "6c7947f3b54fcf52"
@@ -10362,7 +10457,7 @@
         "finalize": "",
         "libs": [],
         "x": 1270,
-        "y": 620,
+        "y": 500,
         "wires": [
             [
                 "6915f59f4540c5bb"
@@ -10375,7 +10470,7 @@
         "z": "56c0b44ca387382c",
         "g": "82df6aae63bd1422",
         "name": "data",
-        "func": "if (typeof msg.hmi.id === 'string' && msg.hmi.id !== '') {\n    // clear\n    flow.set('scene[\"' + msg.hmi.id + '\"]', {...flow.get('scene_template', 'memoryOnly') || {}}, 'memoryOnly');\n}\n\nawait new Promise(resolve => setTimeout(resolve, 50));\nreturn msg;",
+        "func": "if (typeof msg.hmi.id === 'string' && msg.hmi.id !== '') {\n    // clear\n    flow.set('scene[\"' + msg.hmi.id + '\"]', {...global.get('describe.template.scene', 'memoryOnly') || {}}, 'memoryOnly');\n}\n\nawait new Promise(resolve => setTimeout(resolve, 50));\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -10383,7 +10478,7 @@
         "finalize": "",
         "libs": [],
         "x": 1270,
-        "y": 500,
+        "y": 380,
         "wires": [
             [
                 "4b27b4a89ebdbcb3"
@@ -10404,7 +10499,7 @@
         "finalize": "",
         "libs": [],
         "x": 370,
-        "y": 680,
+        "y": 560,
         "wires": [
             [
                 "f17262e3f5f32b9c",
@@ -10461,7 +10556,7 @@
         "officon": "",
         "offcolor": "",
         "x": 770,
-        "y": 860,
+        "y": 740,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -10496,7 +10591,7 @@
         "officon": "",
         "offcolor": "",
         "x": 770,
-        "y": 920,
+        "y": 800,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -10515,7 +10610,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1070,
-        "y": 800,
+        "y": 680,
         "wires": [
             [
                 "971ba058b0ec97e4"
@@ -10536,7 +10631,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 860,
+        "y": 740,
         "wires": [
             [
                 "7a990ea667fe7cf6"
@@ -10560,7 +10655,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 980,
+        "y": 860,
         "wires": [
             [
                 "d75bf2579725af1f"
@@ -10599,7 +10694,7 @@
         "colorThumb": "",
         "showTextField": false,
         "x": 780,
-        "y": 980,
+        "y": 860,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -10635,7 +10730,7 @@
         "colorThumb": "",
         "showTextField": false,
         "x": 780,
-        "y": 1040,
+        "y": 920,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -10656,7 +10751,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 1100,
+        "y": 980,
         "wires": [
             [
                 "3ac49d9c001b8389"
@@ -10693,7 +10788,7 @@
         "iconPosition": "left",
         "iconInnerPosition": "inside",
         "x": 770,
-        "y": 1100,
+        "y": 980,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -10727,7 +10822,7 @@
         "iconPosition": "left",
         "iconInnerPosition": "inside",
         "x": 770,
-        "y": 1160,
+        "y": 1040,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -10748,7 +10843,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 1340,
+        "y": 1220,
         "wires": [
             [
                 "d0c7b87e19dbcd9b"
@@ -10785,7 +10880,7 @@
         "iconPosition": "left",
         "iconInnerPosition": "inside",
         "x": 760,
-        "y": 1340,
+        "y": 1220,
         "wires": [
             [
                 "19a4011894c1a9be"
@@ -10819,7 +10914,7 @@
         "iconPosition": "left",
         "iconInnerPosition": "inside",
         "x": 760,
-        "y": 1400,
+        "y": 1280,
         "wires": [
             [
                 "19a4011894c1a9be"
@@ -10840,7 +10935,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 1220,
+        "y": 1100,
         "wires": [
             [
                 "5add4f69509b7c61"
@@ -10880,7 +10975,7 @@
         "typeIsComboBox": false,
         "msgTrigger": "onChange",
         "x": 770,
-        "y": 1220,
+        "y": 1100,
         "wires": [
             [
                 "19a4011894c1a9be"
@@ -10917,7 +11012,7 @@
         "typeIsComboBox": false,
         "msgTrigger": "onChange",
         "x": 770,
-        "y": 1280,
+        "y": 1160,
         "wires": [
             [
                 "19a4011894c1a9be"
@@ -10930,7 +11025,7 @@
         "z": "56c0b44ca387382c",
         "g": "82df6aae63bd1422",
         "name": "data",
-        "func": "if (!msg.enabled) {\n\n    return;\n}\n\nlet value = msg.payload;\nnode.status({ text: msg.topic + ' - ' + value });\n\nlet data = flow.get('scene[\"' + msg.hmi.id + '\"]', 'memoryOnly') || {};\ndata[msg.topic] = value;\nflow.set('scene[\"' + msg.hmi.id + '\"]', data, 'memoryOnly');\n\nmsg.payload = data;\n\nreturn msg;",
+        "func": "let value = msg.payload;\nnode.status({ text: msg.topic + ' - ' + value });\n\nlet data = flow.get('scene[\"' + msg.hmi.id + '\"]', 'memoryOnly') || {};\ndata[msg.topic] = value;\nflow.set('scene[\"' + msg.hmi.id + '\"]', data, 'memoryOnly');\n\nmsg.payload = data;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -10938,7 +11033,7 @@
         "finalize": "",
         "libs": [],
         "x": 1270,
-        "y": 800,
+        "y": 680,
         "wires": [
             [
                 "4b554a57706ba248"
@@ -10973,7 +11068,7 @@
         "officon": "",
         "offcolor": "",
         "x": 760,
-        "y": 1460,
+        "y": 1340,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -10994,7 +11089,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 1460,
+        "y": 1340,
         "wires": [
             [
                 "b164ea7d83833392"
@@ -11015,7 +11110,7 @@
         "finalize": "",
         "libs": [],
         "x": 1030,
-        "y": 860,
+        "y": 740,
         "wires": [
             [
                 "19a4011894c1a9be"
@@ -11050,7 +11145,7 @@
         "officon": "",
         "offcolor": "",
         "x": 760,
-        "y": 1520,
+        "y": 1400,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -11072,7 +11167,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1310,
-        "y": 860,
+        "y": 740,
         "wires": []
     },
     {
@@ -11089,7 +11184,7 @@
         "finalize": "",
         "libs": [],
         "x": 529.6173095703125,
-        "y": 1520.4423828125,
+        "y": 1400.4423828125,
         "wires": [
             [
                 "823538677472fe85"
@@ -11124,7 +11219,7 @@
         "officon": "",
         "offcolor": "",
         "x": 760,
-        "y": 1580,
+        "y": 1460,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -11145,7 +11240,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 1580,
+        "y": 1460,
         "wires": [
             [
                 "7ba2b7538313f754"
@@ -11180,7 +11275,7 @@
         "officon": "",
         "offcolor": "",
         "x": 760,
-        "y": 1640,
+        "y": 1520,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -11201,7 +11296,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 1640,
+        "y": 1520,
         "wires": [
             [
                 "4c785bcb5de607be"
@@ -11237,7 +11332,7 @@
         "colorThumb": "",
         "showTextField": false,
         "x": 760,
-        "y": 1700,
+        "y": 1580,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -11258,7 +11353,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 1700,
+        "y": 1580,
         "wires": [
             [
                 "2175f2ab97508f14"
@@ -11279,7 +11374,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 1760,
+        "y": 1640,
         "wires": [
             [
                 "a27b8e3d925973e6"
@@ -11315,7 +11410,7 @@
         "colorThumb": "",
         "showTextField": false,
         "x": 780,
-        "y": 1760,
+        "y": 1640,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -11336,7 +11431,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 1820,
+        "y": 1700,
         "wires": [
             [
                 "3a6204d2c51df3aa"
@@ -11372,7 +11467,7 @@
         "colorThumb": "",
         "showTextField": false,
         "x": 770,
-        "y": 1820,
+        "y": 1700,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -11408,7 +11503,7 @@
         "colorThumb": "",
         "showTextField": false,
         "x": 770,
-        "y": 1880,
+        "y": 1760,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -11444,7 +11539,7 @@
         "colorThumb": "",
         "showTextField": false,
         "x": 760,
-        "y": 1940,
+        "y": 1820,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -11465,7 +11560,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 1880,
+        "y": 1760,
         "wires": [
             [
                 "4744ecf4e024c429"
@@ -11486,7 +11581,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 1940,
+        "y": 1820,
         "wires": [
             [
                 "dc38ac715bb0bf9c"
@@ -11521,7 +11616,7 @@
         "officon": "",
         "offcolor": "",
         "x": 750,
-        "y": 2000,
+        "y": 1880,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -11542,7 +11637,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2000,
+        "y": 1880,
         "wires": [
             [
                 "f0c45817e50295aa"
@@ -11578,7 +11673,7 @@
         "colorThumb": "",
         "showTextField": false,
         "x": 770,
-        "y": 2060,
+        "y": 1940,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -11599,7 +11694,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2060,
+        "y": 1940,
         "wires": [
             [
                 "c3423d086410d36d"
@@ -11635,7 +11730,7 @@
         "colorThumb": "",
         "showTextField": false,
         "x": 750,
-        "y": 2120,
+        "y": 2000,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -11656,7 +11751,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2120,
+        "y": 2000,
         "wires": [
             [
                 "8d70884261d1f2da"
@@ -11692,7 +11787,7 @@
         "colorThumb": "",
         "showTextField": false,
         "x": 750,
-        "y": 2180,
+        "y": 2060,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -11713,7 +11808,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2180,
+        "y": 2060,
         "wires": [
             [
                 "3263d20900780876"
@@ -11749,7 +11844,7 @@
         "colorThumb": "",
         "showTextField": false,
         "x": 750,
-        "y": 2240,
+        "y": 2120,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -11770,7 +11865,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2240,
+        "y": 2120,
         "wires": [
             [
                 "d4f3a3489ac1c348"
@@ -11806,7 +11901,7 @@
         "colorThumb": "",
         "showTextField": false,
         "x": 750,
-        "y": 2300,
+        "y": 2180,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -11827,7 +11922,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2300,
+        "y": 2180,
         "wires": [
             [
                 "53e71c77a16629c7"
@@ -11862,7 +11957,7 @@
         "officon": "",
         "offcolor": "",
         "x": 760,
-        "y": 800,
+        "y": 680,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -11883,7 +11978,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 800,
+        "y": 680,
         "wires": [
             [
                 "3257d52092bce306"
@@ -11923,7 +12018,7 @@
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
         "x": 750,
-        "y": 680,
+        "y": 560,
         "wires": [
             [
                 "b0ab58e61689840a"
@@ -11963,7 +12058,7 @@
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
         "x": 750,
-        "y": 740,
+        "y": 620,
         "wires": [
             [
                 "c88e3eab330254fa"
@@ -11984,7 +12079,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 680,
+        "y": 560,
         "wires": [
             [
                 "4663d789de18b6df"
@@ -12005,7 +12100,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 740,
+        "y": 620,
         "wires": [
             [
                 "9f7c750151bc3137"
@@ -12026,7 +12121,7 @@
         "finalize": "",
         "libs": [],
         "x": 1270,
-        "y": 740,
+        "y": 620,
         "wires": [
             [
                 "c81043d4a876f3f5"
@@ -12045,7 +12140,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1070,
-        "y": 680,
+        "y": 560,
         "wires": [
             [
                 "1950018cf846a01e"
@@ -12064,7 +12159,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1070,
-        "y": 740,
+        "y": 620,
         "wires": [
             [
                 "9d4643d0a9a321ff"
@@ -12083,7 +12178,7 @@
             "f4a2353e5f92576c"
         ],
         "x": 1395,
-        "y": 680,
+        "y": 560,
         "wires": []
     },
     {
@@ -12100,7 +12195,7 @@
         "finalize": "",
         "libs": [],
         "x": 1270,
-        "y": 680,
+        "y": 560,
         "wires": [
             [
                 "c81043d4a876f3f5"
@@ -12121,7 +12216,7 @@
         "finalize": "",
         "libs": [],
         "x": 370,
-        "y": 2780,
+        "y": 2660,
         "wires": [
             [
                 "35c692b012987615",
@@ -12130,7 +12225,8 @@
                 "9291b3bf3aa25f9a",
                 "d5239b98c9a6fc21",
                 "ada9c96b941e3bae",
-                "b843242d3b6bb11a"
+                "b843242d3b6bb11a",
+                "d5bb9cbd8e3d12d0"
             ]
         ]
     },
@@ -12140,7 +12236,7 @@
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "name": "value",
-        "func": "if(!msg.enabled) {\n    msg.payload = false;\n\n    node.send([msg, msg]);\n    return;\n}\n\nif (['b', 'rb'].includes(msg.target.unit)) {\n    msg.payload = Boolean(msg.trigger.on);\n    msg.ui_update = {\n        'label': msg.dictionary.scene.triggeradd_on || 'High level'\n    };\n\n    node.send([msg, null]);\n\n    msg.payload = Boolean(msg.trigger.off);\n    msg.ui_update = {\n        'label': msg.dictionary.scene.triggeradd_off || 'Low level'\n    };\n\n    node.send([null, msg]);\n}\n\nreturn;",
+        "func": "if(!msg.enabled) {\n    msg.payload = false;\n\n    node.send([msg, msg]);\n    return;\n}\n\nif (['b', 'rb'].includes(msg.target.unit)) {\n    msg.payload = Boolean(msg.trigger.inon);\n    msg.ui_update = {\n        'label': msg.dictionary.scene.triggeradd_inon || 'Input value for high level'\n    };\n\n    node.send([msg, null]);\n\n    msg.payload = Boolean(msg.trigger.inoff);\n    msg.ui_update = {\n        'label': msg.dictionary.scene.triggeradd_inoff || 'Input value for low level'\n    };\n\n    node.send([null, msg]);\n}\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -12172,7 +12268,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2720,
+        "y": 2600,
         "wires": [
             [
                 "09d2c449c401d154"
@@ -12212,7 +12308,7 @@
         "typeIsComboBox": true,
         "msgTrigger": "onChange",
         "x": 750,
-        "y": 2720,
+        "y": 2600,
         "wires": [
             [
                 "9880d7748fa4235f"
@@ -12231,7 +12327,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1050,
-        "y": 2720,
+        "y": 2600,
         "wires": [
             [
                 "eb6c339dfc1c2a60"
@@ -12252,7 +12348,7 @@
         "finalize": "",
         "libs": [],
         "x": 1250,
-        "y": 2720,
+        "y": 2600,
         "wires": [
             [
                 "ae51e215ca4ce7bc"
@@ -12264,15 +12360,15 @@
         "type": "ui-switch",
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
-        "name": "scene - triggeradd - on - binary",
+        "name": "scene - triggeradd - inon - binary",
         "label": "",
         "group": "3a30762508b6edae",
-        "order": 38,
+        "order": 40,
         "width": 0,
         "height": 0,
-        "passthru": true,
+        "passthru": false,
         "decouple": false,
-        "topic": "on",
+        "topic": "inon",
         "topicType": "str",
         "style": "",
         "className": "",
@@ -12290,8 +12386,7 @@
         "y": 2900,
         "wires": [
             [
-                "9a7b9a6d2d24629a",
-                "2506ba47eb53515a"
+                "9a7b9a6d2d24629a"
             ]
         ]
     },
@@ -12300,15 +12395,15 @@
         "type": "ui-switch",
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
-        "name": "scene - triggeradd - off - binary",
+        "name": "scene - triggeradd - inoff - binary",
         "label": "",
         "group": "3a30762508b6edae",
-        "order": 39,
+        "order": 41,
         "width": 0,
         "height": 0,
-        "passthru": true,
+        "passthru": false,
         "decouple": false,
-        "topic": "off",
+        "topic": "inoff",
         "topicType": "str",
         "style": "",
         "className": "",
@@ -12344,7 +12439,7 @@
         "finalize": "",
         "libs": [],
         "x": 1010,
-        "y": 2960,
+        "y": 2840,
         "wires": [
             [
                 "6ab22375c63091ec"
@@ -12363,7 +12458,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1050,
-        "y": 2900,
+        "y": 2780,
         "wires": [
             [
                 "fc3b86c3b2f2e284"
@@ -12384,7 +12479,7 @@
         "finalize": "",
         "libs": [],
         "x": 1250,
-        "y": 2900,
+        "y": 2780,
         "wires": [
             [
                 "a466057f2126875d"
@@ -12405,7 +12500,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2780,
+        "y": 2660,
         "wires": [
             [
                 "4e940e2bed097b6b"
@@ -12424,7 +12519,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1050,
-        "y": 2780,
+        "y": 2660,
         "wires": [
             [
                 "85cda8aaae4f2153"
@@ -12445,7 +12540,7 @@
         "finalize": "",
         "libs": [],
         "x": 1250,
-        "y": 2780,
+        "y": 2660,
         "wires": [
             [
                 "6de461e4d754d7f9"
@@ -12460,7 +12555,7 @@
         "group": "3a30762508b6edae",
         "name": "scene - triggeradd - save",
         "label": "",
-        "order": 48,
+        "order": 50,
         "width": "2",
         "height": "1",
         "emulateClick": false,
@@ -12485,7 +12580,7 @@
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
         "x": 750,
-        "y": 2780,
+        "y": 2660,
         "wires": [
             [
                 "212963c2d77d719a"
@@ -12504,7 +12599,7 @@
             "f4a2353e5f92576c"
         ],
         "x": 1375,
-        "y": 2780,
+        "y": 2660,
         "wires": []
     },
     {
@@ -12513,7 +12608,7 @@
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "name": "value",
-        "func": "if(!msg.enabled) {\n    msg.payload = false;\n\n    node.send([msg, msg]);\n    return;\n}\n\nif (['%', '8b'].includes(msg.target.unit)) {\n    msg.payload = Number(msg.trigger.on);\n    msg.ui_update = {\n        'min': 0,\n        'max': msg.target.unit === '%' ? 100 : 255,\n        'step': 1,\n        'label': msg.dictionary.scene.sceneadd_on || 'High level'\n    };\n\n    node.send([msg, null]);\n\n    msg.payload = Number(msg.trigger.off);\n    msg.ui_update = {\n        'min': 0,\n        'max': msg.target.unit === '%' ? 100 : 255,\n        'step': 1,\n        'label': msg.dictionary.scene.triggeradd_off || 'Low level'\n    };\n\n    node.send([null, msg]);\n}\n\nreturn;",
+        "func": "if(!msg.enabled) {\n    msg.payload = false;\n\n    node.send([msg, msg]);\n    return;\n}\n\nif (['%', '8b'].includes(msg.target.unit)) {\n    msg.payload = Number(msg.trigger.inon);\n    msg.ui_update = {\n        'min': 0,\n        'max': msg.target.unit === '%' ? 100 : 255,\n        'step': 1,\n        'label': msg.dictionary.scene.sceneadd_inon || 'Input value for high level'\n    };\n\n    node.send([msg, null]);\n\n    msg.payload = Number(msg.trigger.inoff);\n    msg.ui_update = {\n        'min': 0,\n        'max': msg.target.unit === '%' ? 100 : 255,\n        'step': 1,\n        'label': msg.dictionary.scene.triggeradd_inoff || 'Input value for low level'\n    };\n\n    node.send([null, msg]);\n}\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -12537,15 +12632,15 @@
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "group": "3a30762508b6edae",
-        "name": "scene - triggeradd - on - percent",
+        "name": "scene - triggeradd - inon - percent",
         "label": "",
         "tooltip": "",
-        "order": 40,
+        "order": 42,
         "width": "6",
         "height": "1",
         "passthru": false,
         "outs": "end",
-        "topic": "on",
+        "topic": "inon",
         "topicType": "str",
         "thumbLabel": "always",
         "showTicks": "false",
@@ -12559,7 +12654,7 @@
         "colorTrack": "",
         "colorThumb": "",
         "showTextField": false,
-        "x": 770,
+        "x": 780,
         "y": 3020,
         "wires": [
             [
@@ -12573,15 +12668,15 @@
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "group": "3a30762508b6edae",
-        "name": "scene - triggeradd - off - percent",
+        "name": "scene - triggeradd - inoff - percent",
         "label": "",
         "tooltip": "",
-        "order": 41,
+        "order": 43,
         "width": "6",
         "height": "1",
         "passthru": false,
         "outs": "end",
-        "topic": "off",
+        "topic": "inoff",
         "topicType": "str",
         "thumbLabel": "always",
         "showTicks": "false",
@@ -12595,7 +12690,7 @@
         "colorTrack": "",
         "colorThumb": "",
         "showTextField": false,
-        "x": 770,
+        "x": 780,
         "y": 3080,
         "wires": [
             [
@@ -12609,12 +12704,12 @@
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "group": "3a30762508b6edae",
-        "name": "scene - triggeradd - on - number",
+        "name": "scene - triggeradd - inon - number",
         "label": "",
-        "order": 42,
+        "order": 44,
         "width": "6",
         "height": "1",
-        "topic": "on",
+        "topic": "inon",
         "topicType": "str",
         "mode": "number",
         "tooltip": "",
@@ -12629,7 +12724,7 @@
         "icon": "",
         "iconPosition": "left",
         "iconInnerPosition": "inside",
-        "x": 770,
+        "x": 780,
         "y": 3140,
         "wires": [
             [
@@ -12643,12 +12738,12 @@
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "group": "3a30762508b6edae",
-        "name": "scene - triggeradd - off - number",
+        "name": "scene - triggeradd - inoff - number",
         "label": "",
-        "order": 43,
+        "order": 45,
         "width": "6",
         "height": "1",
-        "topic": "off",
+        "topic": "inoff",
         "topicType": "str",
         "mode": "number",
         "tooltip": "",
@@ -12663,7 +12758,7 @@
         "icon": "",
         "iconPosition": "left",
         "iconInnerPosition": "inside",
-        "x": 770,
+        "x": 780,
         "y": 3200,
         "wires": [
             [
@@ -12677,10 +12772,10 @@
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "group": "3a30762508b6edae",
-        "name": "scene - triggeradd - on - enum",
+        "name": "scene - triggeradd - inon - enum",
         "label": "",
         "tooltip": "",
-        "order": 44,
+        "order": 46,
         "width": "6",
         "height": "1",
         "passthru": false,
@@ -12695,7 +12790,7 @@
             }
         ],
         "payload": "",
-        "topic": "on",
+        "topic": "inon",
         "topicType": "str",
         "className": "",
         "typeIsComboBox": false,
@@ -12714,10 +12809,10 @@
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "group": "3a30762508b6edae",
-        "name": "scene - triggeradd - off - enum",
+        "name": "scene - triggeradd - inoff - enum",
         "label": "",
         "tooltip": "",
-        "order": 45,
+        "order": 47,
         "width": "6",
         "height": "1",
         "passthru": false,
@@ -12732,7 +12827,7 @@
             }
         ],
         "payload": "",
-        "topic": "off",
+        "topic": "inoff",
         "topicType": "str",
         "className": "",
         "typeIsComboBox": false,
@@ -12751,12 +12846,12 @@
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "group": "3a30762508b6edae",
-        "name": "scene - triggeradd - on - text",
+        "name": "scene - triggeradd - inon - text",
         "label": "",
-        "order": 46,
+        "order": 48,
         "width": "6",
         "height": "1",
-        "topic": "on",
+        "topic": "inon",
         "topicType": "str",
         "mode": "text",
         "tooltip": "",
@@ -12771,7 +12866,7 @@
         "icon": "",
         "iconPosition": "left",
         "iconInnerPosition": "inside",
-        "x": 760,
+        "x": 770,
         "y": 3380,
         "wires": [
             [
@@ -12785,12 +12880,12 @@
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "group": "3a30762508b6edae",
-        "name": "scene - triggeradd - off - text",
+        "name": "scene - triggeradd - inoff - text",
         "label": "",
-        "order": 47,
+        "order": 49,
         "width": "6",
         "height": "1",
-        "topic": "off",
+        "topic": "inoff",
         "topicType": "str",
         "mode": "text",
         "tooltip": "",
@@ -12805,7 +12900,7 @@
         "icon": "",
         "iconPosition": "left",
         "iconInnerPosition": "inside",
-        "x": 760,
+        "x": 770,
         "y": 3440,
         "wires": [
             [
@@ -12819,7 +12914,7 @@
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "name": "value",
-        "func": "if(!msg.enabled) {\n    msg.payload = false;\n\n    node.send([msg, msg]);\n    return;\n}\n\nif (['°C', '°F', 'mA', 'A', 'mW', 'W', 'kW', 'MW', 'mWh', 'Wh', 'kWh', 'MWh', 'mVA', 'VA', 'lx', 'ppm', 'n', 's', 'ms'].includes(msg.target.unit)) {\n    msg.payload = Number(msg.trigger.on);\n    msg.ui_update = {\n        'min': 0,\n        'max': msg.target.unit === '%' ? 100 : 255,\n        'step': 1,\n        'label': msg.dictionary.scene.sceneadd_on || 'High level'\n    };\n\n    node.send([msg, null]);\n\n    msg.payload = Number(msg.trigger.off);\n    msg.ui_update = {\n        'min': 0,\n        'max': msg.target.unit === '%' ? 100 : 255,\n        'step': 1,\n        'label': msg.dictionary.scene.triggeradd_off || 'Low level'\n    };\n\n    node.send([null, msg]);\n}\n\nreturn;",
+        "func": "if(!msg.enabled) {\n    msg.payload = false;\n\n    node.send([msg, msg]);\n    return;\n}\n\nif (['°C', '°F', 'mA', 'A', 'mW', 'W', 'kW', 'MW', 'mWh', 'Wh', 'kWh', 'MWh', 'mVA', 'VA', 'lx', 'ppm', 'n', 's', 'ms'].includes(msg.target.unit)) {\n    msg.payload = Number(msg.trigger.inon);\n    msg.ui_update = {\n        'min': 0,\n        'max': msg.target.unit === '%' ? 100 : 255,\n        'step': 1,\n        'label': msg.dictionary.scene.sceneadd_inon || 'Input value for high level'\n    };\n\n    node.send([msg, null]);\n\n    msg.payload = Number(msg.trigger.inoff);\n    msg.ui_update = {\n        'min': 0,\n        'max': msg.target.unit === '%' ? 100 : 255,\n        'step': 1,\n        'label': msg.dictionary.scene.triggeradd_inoff || 'Input value for low level'\n    };\n\n    node.send([null, msg]);\n}\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -12843,7 +12938,7 @@
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "name": "value",
-        "func": "if (!msg.enabled) {\n    msg.payload = '';\n\n    node.send([msg, msg]);\n\n    return;\n}\n\n// Enum\nif (['enum'].includes(msg.target.unit)) {\n\n    let enums = global.get('describe[\"' + msg.target.source + '\"][\"' + msg.target.id + '\"]', 'memoryOnly') || {};\n    let i = 0;\n\n    let dropdownOptions = [];\n    for (const e in enums) {\n        dropdownOptions[i++] = {\n            'label': enums[e][1],\n            'value': e\n        };\n    }\n\n    msg.payload = msg.trigger.on;\n    msg.ui_update = {\n        'label': msg.dictionary.scene.triggeradd_on || 'On'\n    };\n    msg.ui_update.options = dropdownOptions;\n\n    node.send([msg, null]);\n\n    msg.payload = msg.trigger.off;\n    msg.ui_update = {\n        'label': msg.dictionary.scene.triggeradd_off || 'Off'\n    };\n    msg.ui_update.options = dropdownOptions;\n\n    node.send([null, msg]);\n}\n\nreturn;",
+        "func": "if (!msg.enabled) {\n    msg.payload = '';\n\n    node.send([msg, msg]);\n\n    return;\n}\n\n// Enum\nif (['enum'].includes(msg.target.unit)) {\n\n    let enums = global.get('describe[\"' + msg.target.source + '\"][\"' + msg.target.id + '\"]', 'memoryOnly') || {};\n    let i = 0;\n\n    let dropdownOptions = [];\n    for (const e in enums) {\n        dropdownOptions[i++] = {\n            'label': enums[e][1],\n            'value': e\n        };\n    }\n\n    msg.payload = msg.trigger.inon;\n    msg.ui_update = {\n        'label': msg.dictionary.scene.triggeradd_inon || 'Input value for high level'\n    };\n    msg.ui_update.options = dropdownOptions;\n\n    node.send([msg, null]);\n\n    msg.payload = msg.trigger.inoff;\n    msg.ui_update = {\n        'label': msg.dictionary.scene.triggeradd_inoff || 'Input value for low level'\n    };\n    msg.ui_update.options = dropdownOptions;\n\n    node.send([null, msg]);\n}\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -12867,7 +12962,7 @@
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "name": "value",
-        "func": "if (!msg.enabled) {\n\n    node.send([msg, msg]);\n\n    return;\n}\n\n// Text\nif (['text'].includes(msg.target.unit)) {\n    msg.payload = msg.trigger.on;\n    msg.ui_update = {\n        'label': msg.dictionary.scene.triggeradd_on || 'On'\n    };\n\n    node.send([msg, null]);\n\n    msg.payload = msg.trigger.off;\n    msg.ui_update = {\n        'label': msg.dictionary.scene.triggeradd_off || 'Off'\n    };\n\n    node.send([null, msg]);\n}\n\n\nreturn;",
+        "func": "if (!msg.enabled) {\n\n    node.send([msg, msg]);\n\n    return;\n}\n\n// Text\nif (['text'].includes(msg.target.unit)) {\n    msg.payload = msg.trigger.inon;\n    msg.ui_update = {\n        'label': msg.dictionary.scene.triggeradd_inon || 'Input value for high level'\n    };\n\n    node.send([msg, null]);\n\n    msg.payload = msg.trigger.inoff;\n    msg.ui_update = {\n        'label': msg.dictionary.scene.triggeradd_inoff || 'Input value for low level'\n    };\n\n    node.send([null, msg]);\n}\n\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -12900,29 +12995,8 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1290,
-        "y": 2960,
+        "y": 2840,
         "wires": []
-    },
-    {
-        "id": "2506ba47eb53515a",
-        "type": "function",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "name": "inv",
-        "func": "msg.payload = msg.payload ? false : true;\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 530,
-        "y": 2960,
-        "wires": [
-            [
-                "7576483ab18f8055"
-            ]
-        ]
     },
     {
         "id": "31a058d2309e20b6",
@@ -12936,7 +13010,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1050,
-        "y": 2840,
+        "y": 2720,
         "wires": [
             [
                 "1a6c82ac11c24c9f"
@@ -12957,7 +13031,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2840,
+        "y": 2720,
         "wires": [
             [
                 "9b7e566f7c1f5054"
@@ -12978,7 +13052,7 @@
         "finalize": "",
         "libs": [],
         "x": 1250,
-        "y": 2840,
+        "y": 2720,
         "wires": [
             [
                 "6de461e4d754d7f9"
@@ -12993,7 +13067,7 @@
         "group": "3a30762508b6edae",
         "name": "scene - triggeradd - delete",
         "label": "",
-        "order": 0,
+        "order": 51,
         "width": "2",
         "height": "1",
         "emulateClick": false,
@@ -13018,12 +13092,579 @@
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
         "x": 750,
-        "y": 2840,
+        "y": 2720,
         "wires": [
             [
                 "31a058d2309e20b6"
             ]
         ]
+    },
+    {
+        "id": "7f38981a1a7a894f",
+        "type": "link in",
+        "z": "56c0b44ca387382c",
+        "g": "690005b9a6f433cf",
+        "name": "scene - scenelist",
+        "links": [
+            "278344d6e03041b4",
+            "5da931c9323d8033"
+        ],
+        "x": 145,
+        "y": 3560,
+        "wires": [
+            [
+                "a9e810108c841cb2"
+            ]
+        ]
+    },
+    {
+        "id": "a9e810108c841cb2",
+        "type": "link call",
+        "z": "56c0b44ca387382c",
+        "g": "690005b9a6f433cf",
+        "name": "",
+        "links": [
+            "5a1d16fa45e115fa"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 320,
+        "y": 3560,
+        "wires": [
+            [
+                "f32c3c553c3ce6b5"
+            ]
+        ]
+    },
+    {
+        "id": "f32c3c553c3ce6b5",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "g": "690005b9a6f433cf",
+        "name": "data",
+        "func": "await new Promise(resolve => setTimeout(resolve, 10));\nnode.status({ text: '' });\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\nlet action = flow.get('action[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--';\nif (action !== 'scenelist') {\n\n    return;\n}\n\nnode.status({ text: action });\n\nlet groups = global.get('describe.scenes', 'memoryOnly') || {};\nlet scenes = global.get('scene', 'memoryOnly') || {};\n\nlet i = 0;\nlet dropdownOptions = [];\ndropdownOptions[i++] = {\n    'label': '',\n    'value': ''\n};\n\nfor (const g in groups) {\n    if (typeof scenes[g] === 'object' && Object.keys(scenes[g]).length > 0) {\n        dropdownOptions[i++] = {\n            'label': g,\n            'value': g\n        };\n    }\n}\nnode.status({text: i});\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.scene.scenelist_group || 'Select type of scenes',\n    'options': dropdownOptions\n}\n\n\nawait new Promise(resolve => setTimeout(resolve, 50));\nnode.send([msg, null]);\n\nreturn;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 3560,
+        "wires": [
+            [
+                "72bdb573cf83c9ab"
+            ],
+            [
+                "329710fd6a91787d"
+            ]
+        ]
+    },
+    {
+        "id": "b407f315762096bb",
+        "type": "link call",
+        "z": "56c0b44ca387382c",
+        "g": "690005b9a6f433cf",
+        "name": "",
+        "links": [
+            "56e6a7b9b0e66451"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1010,
+        "y": 3560,
+        "wires": [
+            [
+                "979c368fe06a3531"
+            ]
+        ]
+    },
+    {
+        "id": "72bdb573cf83c9ab",
+        "type": "ui-dropdown",
+        "z": "56c0b44ca387382c",
+        "g": "690005b9a6f433cf",
+        "group": "3a30762508b6edae",
+        "name": "scene - scenelist - group",
+        "label": "",
+        "tooltip": "",
+        "order": 52,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": false,
+        "msgTrigger": "onChange",
+        "x": 750,
+        "y": 3560,
+        "wires": [
+            [
+                "b407f315762096bb"
+            ]
+        ]
+    },
+    {
+        "id": "329710fd6a91787d",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "g": "690005b9a6f433cf",
+        "name": "data",
+        "func": "node.status({ text: '' });\nif (!msg.enabled) {\n    msg.payload = [];\n\n    return msg;\n}\n\nnode.status({ text: msg.payload });\n\nlet options = {\n    'motion':'',\n    'nocturnal':'',\n    'nightlight':'',\n    'retention': '',\n    'daily': '',\n    'openwork': ''\n};\n\nlet scene = global.get('scene[\"' + msg.payload + '\"]', 'memoryOnly') || {};\nlet names = global.get('name', 'memoryOnly') || {};\n\nlet i = 0;\nlet dropdownOptions = [];\n\nfor (const s in scene) {\n    let entity = global.get('entity[\"' + s + '\"]', 'memoryOnly');\n    if (typeof entity === 'object') {\n        let room = names['room'][entity['room']] || entity['room'];\n        let name = names['entity'][entity['uid']] || entity['id'];\n        if (name === '' || name === entity['id']) {\n            name = names['device'][entity['parent']] || entity['parent'];\n        }\n        let j = 0;\n        let option = [];\n        for (const o in options) {\n            if (scene[s][o] === 1) {\n                option[j++] = o;\n            }\n        }\n        dropdownOptions[i++] = {\n            'scene': msg.payload,\n            'target': s,\n            'name': room + ' / ' + name,\n            'option': option.join(', '),\n            'enabled': Boolean(scene[s]['enabled']),\n            'delete': msg.dictionary.scene.scenelist_delete || 'Delete'\n        };\n    }\n}\nnode.status({text: i});\n\ndropdownOptions.sort((a, b) => a.name.localeCompare(b.name));\n\nmsg.payload = dropdownOptions;\nmsg.ui_update = {\n    'label': ''\n}\n\nawait new Promise(resolve => setTimeout(resolve, 250));\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 3620,
+        "wires": [
+            [
+                "cfee6a014e3e823b"
+            ]
+        ]
+    },
+    {
+        "id": "cfee6a014e3e823b",
+        "type": "ui-table",
+        "z": "56c0b44ca387382c",
+        "g": "690005b9a6f433cf",
+        "group": "3a30762508b6edae",
+        "name": "scene - scenelist - table",
+        "label": "",
+        "order": 53,
+        "width": 0,
+        "height": 0,
+        "maxrows": 0,
+        "passthru": false,
+        "autocols": false,
+        "showSearch": false,
+        "deselect": true,
+        "selectionType": "click",
+        "columns": [
+            {
+                "title": "",
+                "key": "enabled",
+                "keyType": "key",
+                "type": "tickcross",
+                "width": "20px",
+                "align": "start"
+            },
+            {
+                "title": "",
+                "key": "name",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            },
+            {
+                "title": "",
+                "key": "option",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            },
+            {
+                "title": "",
+                "key": "delete",
+                "keyType": "key",
+                "type": "button",
+                "width": "",
+                "align": "end"
+            }
+        ],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "",
+        "x": 750,
+        "y": 3620,
+        "wires": [
+            [
+                "362a4bd4cef94903"
+            ]
+        ]
+    },
+    {
+        "id": "362a4bd4cef94903",
+        "type": "link call",
+        "z": "56c0b44ca387382c",
+        "g": "690005b9a6f433cf",
+        "name": "",
+        "links": [
+            "56e6a7b9b0e66451"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1010,
+        "y": 3620,
+        "wires": [
+            [
+                "1238621625ac1387"
+            ]
+        ]
+    },
+    {
+        "id": "979c368fe06a3531",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "g": "690005b9a6f433cf",
+        "name": "data",
+        "func": "if (msg.payload === '') {\n\n    msg.class = 'remove';\n    msg.enabled = false;\n\n    return msg;\n}\n\nmsg.class = '';\nmsg.enabled = true;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 3560,
+        "wires": [
+            [
+                "329710fd6a91787d"
+            ]
+        ]
+    },
+    {
+        "id": "1238621625ac1387",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "g": "690005b9a6f433cf",
+        "name": "data",
+        "func": "if (msg.action === 'button_click' && msg.column === 'delete') {\n    let scenes = global.get('scene', 'memoryOnly') || {};\n\n    delete scenes[msg.payload.scene][msg.payload.target];\n    global.set('scene', scenes, 'memoryOnly');\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.scene.scenelist_delete_success || 'Successfully deleted';\n\n    node.send([msg, null]);\n\n    msg.payload = msg.payload.scene;    \n    await new Promise(resolve => setTimeout(resolve, 50));\n\n    node.send([null, msg]);\n}",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 3620,
+        "wires": [
+            [
+                "7482fbd3b4a1a5ae"
+            ],
+            [
+                "329710fd6a91787d"
+            ]
+        ]
+    },
+    {
+        "id": "7482fbd3b4a1a5ae",
+        "type": "link out",
+        "z": "56c0b44ca387382c",
+        "g": "690005b9a6f433cf",
+        "name": "scene - scenelist",
+        "mode": "link",
+        "links": [
+            "f4a2353e5f92576c"
+        ],
+        "x": 1335,
+        "y": 3620,
+        "wires": []
+    },
+    {
+        "id": "d5bb9cbd8e3d12d0",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "name": "value",
+        "func": "if(!msg.enabled) {\n    msg.payload = false;\n\n    node.send([msg, msg]);\n    return;\n}\n\nmsg.payload = Boolean(msg.trigger.outon);\nmsg.ui_update = {\n    'label': msg.dictionary.scene.triggeradd_outon || 'Pilot high level'\n};\n\nnode.send([msg, null]);\n\nmsg.payload = Boolean(msg.trigger.outoff);\nmsg.ui_update = {\n    'label': msg.dictionary.scene.triggeradd_outoff || 'Pilot low level'\n};\n\nnode.send([null, msg]);\n\nreturn;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 2780,
+        "wires": [
+            [
+                "5a84b17c0d618930"
+            ],
+            [
+                "089ca9808005cd1d"
+            ]
+        ]
+    },
+    {
+        "id": "5a84b17c0d618930",
+        "type": "ui-switch",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "name": "scene - triggeradd - outon",
+        "label": "",
+        "group": "3a30762508b6edae",
+        "order": 38,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "decouple": false,
+        "topic": "outon",
+        "topicType": "str",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "label",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 750,
+        "y": 2780,
+        "wires": [
+            [
+                "9a7b9a6d2d24629a"
+            ]
+        ]
+    },
+    {
+        "id": "089ca9808005cd1d",
+        "type": "ui-switch",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "name": "scene - triggeradd - outoff",
+        "label": "",
+        "group": "3a30762508b6edae",
+        "order": 39,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "decouple": false,
+        "topic": "outoff",
+        "topicType": "str",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "label",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 750,
+        "y": 2840,
+        "wires": [
+            [
+                "9a7b9a6d2d24629a"
+            ]
+        ]
+    },
+    {
+        "id": "46bfd2b0460b2723",
+        "type": "link in",
+        "z": "56c0b44ca387382c",
+        "g": "5d38062b01fae17a",
+        "name": "scene - triggerlist",
+        "links": [
+            "278344d6e03041b4",
+            "5da931c9323d8033"
+        ],
+        "x": 145,
+        "y": 3740,
+        "wires": [
+            [
+                "cebe76f18e15ce70"
+            ]
+        ]
+    },
+    {
+        "id": "cebe76f18e15ce70",
+        "type": "link call",
+        "z": "56c0b44ca387382c",
+        "g": "5d38062b01fae17a",
+        "name": "",
+        "links": [
+            "5a1d16fa45e115fa"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 320,
+        "y": 3740,
+        "wires": [
+            [
+                "1c0bfc84dadda4b4"
+            ]
+        ]
+    },
+    {
+        "id": "1c0bfc84dadda4b4",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "g": "5d38062b01fae17a",
+        "name": "data",
+        "func": "await new Promise(resolve => setTimeout(resolve, 10));\nnode.status({ text: '' });\nif (!msg.enabled) {\n    msg.payload = [];\n\n    return msg;\n}\n\nlet action = flow.get('action[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--';\nif (action !== 'triggerlist') {\n\n    return;\n}\n\nnode.status({ text: action });\n\nlet trigger = global.get('trigger', 'memoryOnly') || {};\nlet names = global.get('name', 'memoryOnly') || {};\n\nlet i = 0;\nlet dropdownOptions = [];\n\nfor (const t in trigger) {\n    let tentity = global.get('entity[\"' + t + '\"]', 'memoryOnly');\n    if (typeof tentity === 'object') {\n        let troom = names['room'][tentity['room']] || tentity['room'];\n        let tname = names['entity'][tentity['uid']] || tentity['id'];\n        if (tname === '' || tname === tentity['id']) {\n            tname = names['device'][tentity['parent']] || tentity['parent'];\n        }\n\n        for (const s in trigger[t]) {\n            for (const e in trigger[t][s]) {\n                let eentity = global.get('entity[\"' + e + '\"]', 'memoryOnly');\n                if (typeof eentity === 'object') {\n                    let eroom = names['room'][eentity['room']] || eentity['room'];\n                    let ename = names['entity'][eentity['uid']] || eentity['id'];\n                    if (ename === '' || ename === eentity['id']) {\n                        ename = names['device'][eentity['parent']] || eentity['parent'];\n                    }\n\n                    dropdownOptions[i++] = {\n                        'scene': trigger[t][s][e]['scene'],\n                        'trigger': t,\n                        'trigger_name': troom + ' / ' + tname + ' (' + tentity['element'] + ')',\n                        'target': e,\n                        'target_name': eroom + ' / ' + ename + ' (' + eentity['element'] + ')',\n                        'inon': trigger[t][s][e]['inon'],\n                        'inoff': trigger[t][s][e]['inoff'],\n                        'delete': msg.dictionary.scene.triggerlist_delete || 'Delete'\n                    };\n                }\n            }\n        }\n    }\n}\nnode.status({ text: i });\n\ndropdownOptions.sort((a, b) => a.trigger.localeCompare(b.trigger));\n\nmsg.payload = dropdownOptions;\nmsg.ui_update = {\n    'label': ''\n}\n\nawait new Promise(resolve => setTimeout(resolve, 250));\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 3740,
+        "wires": [
+            [
+                "cce9cdcb1b1e7596"
+            ]
+        ]
+    },
+    {
+        "id": "cce9cdcb1b1e7596",
+        "type": "ui-table",
+        "z": "56c0b44ca387382c",
+        "g": "5d38062b01fae17a",
+        "group": "3a30762508b6edae",
+        "name": "scene - triggerlist - table",
+        "label": "",
+        "order": 54,
+        "width": 0,
+        "height": 0,
+        "maxrows": "50",
+        "passthru": false,
+        "autocols": false,
+        "showSearch": true,
+        "deselect": true,
+        "selectionType": "click",
+        "columns": [
+            {
+                "title": "Scene",
+                "key": "scene",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            },
+            {
+                "title": "Trigger",
+                "key": "trigger_name",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            },
+            {
+                "title": "On",
+                "key": "inon",
+                "keyType": "key",
+                "type": "tickcross",
+                "width": "",
+                "align": "start"
+            },
+            {
+                "title": "Off",
+                "key": "inoff",
+                "keyType": "key",
+                "type": "tickcross",
+                "width": "",
+                "align": "start"
+            },
+            {
+                "title": "Off",
+                "key": "target_name",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            },
+            {
+                "title": "Target",
+                "key": "delete",
+                "keyType": "key",
+                "type": "button",
+                "width": "",
+                "align": "start"
+            }
+        ],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "",
+        "x": 770,
+        "y": 3740,
+        "wires": [
+            [
+                "7250b1ea23fcca7c"
+            ]
+        ]
+    },
+    {
+        "id": "7250b1ea23fcca7c",
+        "type": "link call",
+        "z": "56c0b44ca387382c",
+        "g": "5d38062b01fae17a",
+        "name": "",
+        "links": [
+            "56e6a7b9b0e66451"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1030,
+        "y": 3740,
+        "wires": [
+            [
+                "42617cb3dc0f463a"
+            ]
+        ]
+    },
+    {
+        "id": "42617cb3dc0f463a",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "g": "5d38062b01fae17a",
+        "name": "data",
+        "func": "if (msg.action === 'button_click' && msg.column === 'delete') {\n    let triggers = global.get('trigger', 'memoryOnly') || {};\n\n    delete triggers[msg.payload.trigger][msg.payload.scene][msg.payload.target];\n    global.set('trigger', triggers, 'memoryOnly');\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.scene.scenelist_delete_success || 'Successfully deleted';\n\n    node.send([msg, null]);\n\n    msg.payload = '';    \n    await new Promise(resolve => setTimeout(resolve, 50));\n\n    node.send([null, msg]);\n}",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1230,
+        "y": 3740,
+        "wires": [
+            [
+                "f32e8939b64dd232"
+            ],
+            [
+                "1c0bfc84dadda4b4"
+            ]
+        ]
+    },
+    {
+        "id": "f32e8939b64dd232",
+        "type": "link out",
+        "z": "56c0b44ca387382c",
+        "g": "5d38062b01fae17a",
+        "name": "scene - triggerlist",
+        "mode": "link",
+        "links": [
+            "f4a2353e5f92576c"
+        ],
+        "x": 1355,
+        "y": 3740,
+        "wires": []
     },
     {
         "id": "ab17703b4908cbf8",
