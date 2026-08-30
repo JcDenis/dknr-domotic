@@ -627,7 +627,7 @@
         "x": 78,
         "y": 2653,
         "w": 884,
-        "h": 1874
+        "h": 1934
     },
     {
         "id": "fa2576d920009359",
@@ -1032,12 +1032,14 @@
             "57d4182cc0e85388",
             "34ed32e6a87f128a",
             "b02cfc942571e058",
-            "5ef4528ceedec868"
+            "5ef4528ceedec868",
+            "07183ca70983bde0",
+            "0ea848a47ca04aa7"
         ],
         "x": 104,
         "y": 4119,
         "w": 832,
-        "h": 382
+        "h": 442
     },
     {
         "id": "89ac7be96aabaa70",
@@ -1567,6 +1569,188 @@
         "x": 104,
         "y": 4599,
         "w": 422,
+        "h": 82
+    },
+    {
+        "id": "c387bb92061d50fa",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "name": "routine - hightlight",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "2c75e0ed62bdc1a4",
+            "774a64cbace2af3c",
+            "49d262a3bbf53832"
+        ],
+        "x": 104,
+        "y": 5179,
+        "w": 432,
+        "h": 82
+    },
+    {
+        "id": "1af50f84b29543e4",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "name": "routine - value",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "088c9ec149a5d682",
+            "3dda32edbe318481",
+            "c6199dfe5c53ce30"
+        ],
+        "x": 104,
+        "y": 5779,
+        "w": 432,
+        "h": 82
+    },
+    {
+        "id": "f454077e9eb9e9d1",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "name": "routine - motion",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "7313e5aa5c19d721",
+            "16b9fe8281c0afc1",
+            "6fa07489024a1c42"
+        ],
+        "x": 104,
+        "y": 5299,
+        "w": 432,
+        "h": 82
+    },
+    {
+        "id": "0d874ecb6382fbda",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "name": "routine - illuminance",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "22299a8dca614bf1",
+            "446eff30a35bcafd",
+            "252fd67aeb3a316d"
+        ],
+        "x": 104,
+        "y": 5419,
+        "w": 432,
+        "h": 82
+    },
+    {
+        "id": "5d14bfa4666ea4a0",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "name": "routine - darkness",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "7ee730353ac137ce",
+            "54e33a3a33a9cd76",
+            "84eb64e38c2823aa"
+        ],
+        "x": 104,
+        "y": 5539,
+        "w": 432,
+        "h": 82
+    },
+    {
+        "id": "7270bddaa595d8b8",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "name": "routine - nocturnal",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "96e27dc1829b2a2e",
+            "0951e35f7c86244e",
+            "56af3961120ba6a8"
+        ],
+        "x": 104,
+        "y": 5059,
+        "w": 432,
+        "h": 82
+    },
+    {
+        "id": "322b1c739b2f530f",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "name": "common - scene - trigger",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "82e64870d41a24cf",
+            "7337d9e15ceae96c",
+            "5218157cce0290a0",
+            "55c2498f164ea120",
+            "9a0419834be9dd38",
+            "54d18dcebcb47319",
+            "08bc652bb475c666",
+            "fd603c013fef9bbd",
+            "82c9d5db17f107b3",
+            "388ce99449f8f70a",
+            "d949ec1d7bee2ff8",
+            "91acff672cbadc32",
+            "f354044d5e08e8a7",
+            "e7ce04a70a8ea3bf",
+            "65a28360023a0d9a",
+            "26c7c87cba4918d4",
+            "039b1817300dafaf",
+            "7a3fccbcd9c1e5fc"
+        ],
+        "x": 104,
+        "y": 4879,
+        "w": 3162,
+        "h": 142
+    },
+    {
+        "id": "541db6fc0af31daa",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "name": "routine - duration",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "0984b90658968913",
+            "8c92ae599f0c8ad6",
+            "0537716a9155db75"
+        ],
+        "x": 104,
+        "y": 5659,
+        "w": 432,
         "h": 82
     },
     {
@@ -2841,7 +3025,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "describe",
-        "func": "let describe = global.get('describe', 'memoryOnly') || {};\nif (typeof describe !== 'object') {\n    describe = {};\n}\nif (typeof describe.pages !== 'object') {\n    describe.pages = {};\n}\n\n// Set default app values\ndescribe.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\ndescribe.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\ndescribe.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['tuning'] = {\n    'id': '1c3c77208d684dc0',\n    'name': 'tuning',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['scene'] = {\n    'id': '1e9f5bde9636a371',\n    'name': 'scene',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['entity'] = {\n    'id': '2b12391aa314ef62',\n    'name': 'entity',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': false,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// Sources\ndescribe.sources['dknr'] = ['eye', 'Domotic'];\n\n// Binary element with revert value\ndescribe.reverts = ['aperture', 'door', 'window', 'lock'];\n\n// Elements icons\ndescribe.elements = {\n    'switch': ['toggle-switch-off-outline', 'toggle-switch-outline'],\n    'power': ['flash-outline', 'flash'],\n    'light': ['lightbulb-off', 'lightbulb'],\n    'plug': ['power-plug-off', 'power-plug'],\n    'remote': ['remote-off', 'remote'],\n    'motion': ['motion-sensor-off', 'motion-sensor'],\n    'presence': ['localtion-exit', 'location-enter'],\n    'aperture': ['electric-switch-closed', 'electric-switch'], // 0=open\n    'door': ['door-closed', 'door-open'], // 0=open\n    'window': ['window-closed-variant', 'window-open-variant'], //0=open\n    'lock': ['lock-off', 'lock'], //0=open\n    'shutter': ['window-shutter', 'window-shutter-open'],\n    'slider': ['door-sliding', 'door-sliding-open'],\n    'heater': ['radiator-off', 'radiator'],\n    'alert': ['bell-off', 'bell'],\n    'sound': ['volume-off', 'volume-high'],\n    'temperature': ['thermometer-off', 'thermometer'],\n    'humidity': ['water-percent-alert', 'water-percent'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless'],\n    'wind': ['weather-windy', 'weather-dust'],\n    'fan': ['fan-off', 'fan'],\n    'direction': ['swap-horizontal', 'swap-horizontal-bold'],\n    'time': ['clock-outline', 'clock'],\n    'battery': ['battery-low', 'battery'],\n    'climate': ['home-thermometer-outline', 'home-thermometer'],\n    'current': ['current-ac', 'sine-wave'],\n    'energy': ['meter-electric-outline', 'meter-electric'],\n    'pressure': ['gauge', 'gauge'],\n    'mode': ['home-switch-outline', 'home-switch'],\n    'text': ['clipboard-text-off', 'clipboard-text'],\n    'location': ['map-marker-off-outline', 'map-marker'],\n    'camera': ['camera-off', 'camera']\n};\n\n// Value color\ndescribe.colors = {\n    'on': '#008000',\n    'off': '#FF0000',\n    'median': '#F08000',\n    'none': '#808000',\n    'theme': '#0094CE',\n    'empty': '#CCCCCC'\n};\n\n// Templates\ndescribe.template = {\n    'entity': {\n        'uid': '',\n        'source': '',\n        'id': '',\n        'parent': '',\n        'value': '',\n        'type': '',\n        'room': '',\n        'element': '',\n        'unit': '',\n        'seen': 0,\n        'hidden': 0\n    },\n    'scene': {\n        'scene': '',\n        'entity': '',\n        'enabled': 0,\n        'on': 1,\n        'off': 0,\n        'motion': 0,\n        'nocturnal': 0,\n        'nightlight': 0,\n        'retention': 0,\n        'duration': 60, //minutes\n        'high': '70',\n        'low': '30',\n        'illuminance': 2000,\n        'darkness': 200,\n        'daily': 0,\n        'openwork': 0,\n        'delay': 60, //seconds\n        'min': 0,\n        'max': 255,\n        'step': 5\n    },\n    'trigger': {\n        'room': '',\n        'element': '',\n        'scene': '',\n        'trigger': '',\n        'target': '',\n        'outon': 1,\n        'outoff': 1,\n        'inon': 1,\n        'inoff': 0\n    }\n};\n\n// Scenes\ndescribe.scenes = {\n    'lighting': {\n        'icons': ['lightbulb', 'lightbulb-auto'],\n        'fields': ['enabled', 'on', 'off', 'motion', 'nocturnal', 'nightlight', 'retention', 'duration', 'high', 'low', 'illuminance', 'darknass'],\n        'elements': ['light']\n    },\n    'toogle': {\n        'icons': ['refresh', 'refresh-auto'],\n        'fields': ['enabled', 'on','off'],\n        'elements': []\n    },\n    'shading': {\n        'icons': ['window-shutter', 'window-shutter-auto'],\n        'fields': ['enabled', 'on', 'off', 'daily', 'openwork', 'illuminance', 'delay'],\n        'elements': []\n    },\n    'airflow': {\n        'icons': ['fan', 'fan-auto'],\n        'fields': ['enabled', 'on', 'off', 'duration'],\n        'elements': []\n    },\n    'waterboiler': {\n        'icons': ['water-boiler', 'water-boiler-auto'],\n        'fields': ['enabled', 'on', 'off', 'daily', 'duration', 'nocturnal'],\n        'elements': []\n    },\n    'level': {\n        'icons': ['thermostat-box', 'thermostat-box-auto'],\n        'fields': ['enabled', 'on','off', 'min', 'max', 'step'],\n        'elements': []\n    },\n    'overload': {\n        'icons': ['flash', 'flahs-auto'],\n        'fields': ['enabled', 'on', 'off', 'duration'],\n        'elements': []\n    }\n};\n\n// Save config\nglobal.set('describe', describe, 'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/.config.projects.json'\n};",
+        "func": "let describe = global.get('describe', 'memoryOnly') || {};\nif (typeof describe !== 'object') {\n    describe = {};\n}\nif (typeof describe.pages !== 'object') {\n    describe.pages = {};\n}\n\n// Set default app values\ndescribe.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\ndescribe.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\ndescribe.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['tuning'] = {\n    'id': '1c3c77208d684dc0',\n    'name': 'tuning',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['scene'] = {\n    'id': '1e9f5bde9636a371',\n    'name': 'scene',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['entity'] = {\n    'id': '2b12391aa314ef62',\n    'name': 'entity',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': false,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// Sources\ndescribe.sources['dknr'] = ['eye', 'Domotic'];\n\n// Binary element with revert value\ndescribe.reverts = ['aperture', 'door', 'window', 'lock'];\n\n// Elements icons\ndescribe.elements = {\n    'switch': ['toggle-switch-off-outline', 'toggle-switch-outline'],\n    'power': ['flash-outline', 'flash'],\n    'light': ['lightbulb-off', 'lightbulb'],\n    'plug': ['power-plug-off', 'power-plug'],\n    'remote': ['remote-off', 'remote'],\n    'motion': ['motion-sensor-off', 'motion-sensor'],\n    'presence': ['localtion-exit', 'location-enter'],\n    'aperture': ['electric-switch-closed', 'electric-switch'], // 0=open\n    'door': ['door-closed', 'door-open'], // 0=open\n    'window': ['window-closed-variant', 'window-open-variant'], //0=open\n    'lock': ['lock-off', 'lock'], //0=open\n    'shutter': ['window-shutter', 'window-shutter-open'],\n    'slider': ['door-sliding', 'door-sliding-open'],\n    'heater': ['radiator-off', 'radiator'],\n    'alert': ['bell-off', 'bell'],\n    'sound': ['volume-off', 'volume-high'],\n    'temperature': ['thermometer-off', 'thermometer'],\n    'humidity': ['water-percent-alert', 'water-percent'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless'],\n    'wind': ['weather-windy', 'weather-dust'],\n    'fan': ['fan-off', 'fan'],\n    'direction': ['swap-horizontal', 'swap-horizontal-bold'],\n    'time': ['clock-outline', 'clock'],\n    'battery': ['battery-low', 'battery'],\n    'climate': ['home-thermometer-outline', 'home-thermometer'],\n    'current': ['current-ac', 'sine-wave'],\n    'energy': ['meter-electric-outline', 'meter-electric'],\n    'pressure': ['gauge', 'gauge'],\n    'mode': ['home-switch-outline', 'home-switch'],\n    'text': ['clipboard-text-off', 'clipboard-text'],\n    'location': ['map-marker-off-outline', 'map-marker'],\n    'camera': ['camera-off', 'camera']\n};\n\n// Value color\ndescribe.colors = {\n    'on': '#008000',\n    'off': '#FF0000',\n    'median': '#F08000',\n    'none': '#808000',\n    'theme': '#0094CE',\n    'empty': '#CCCCCC'\n};\n\n// Templates\ndescribe.template = {\n    'entity': {\n        'uid': '',\n        'source': '',\n        'id': '',\n        'parent': '',\n        'value': '',\n        'type': '',\n        'room': '',\n        'element': '',\n        'unit': '',\n        'seen': 0,\n        'hidden': 0\n    },\n    'scene': {\n        'scene': '',\n        'entity': '',\n        'enabled': 0,\n        'on': 1,\n        'off': 0,\n        'motion': 0,\n        'nocturnal': 0,\n        'nightlight': 0,\n        'retention': 0,\n        'duration': 60, //minutes\n        'high': '70',\n        'low': '30',\n        'illuminance': 2000,\n        'darkness': 200,\n        'daily': 0,\n        'openwork': 0,\n        'delay': 60, //seconds\n        'min': 0,\n        'max': 255,\n        'step': 5\n    },\n    'trigger': {\n        'room': '',\n        'element': '',\n        'scene': '',\n        'trigger': '',\n        'target': '',\n        'outon': 1,\n        'outoff': 1,\n        'inon': 1,\n        'inoff': 0\n    }\n};\n\n// Scenes\ndescribe.scenes = {\n    'lighting': {\n        'icons': ['lightbulb', 'lightbulb-auto'],\n        'fields': ['enabled', 'on', 'off', 'motion', 'nocturnal', 'nightlight', 'retention', 'duration', 'high', 'low', 'illuminance', 'darkness'],\n        'elements': ['light']\n    },\n    'toogle': {\n        'icons': ['refresh', 'refresh-auto'],\n        'fields': ['enabled', 'on','off'],\n        'elements': []\n    },\n    'shading': {\n        'icons': ['window-shutter', 'window-shutter-auto'],\n        'fields': ['enabled', 'on', 'off', 'daily', 'openwork', 'illuminance', 'delay'],\n        'elements': []\n    },\n    'airflow': {\n        'icons': ['fan', 'fan-auto'],\n        'fields': ['enabled', 'on', 'off', 'duration'],\n        'elements': []\n    },\n    'waterboiler': {\n        'icons': ['water-boiler', 'water-boiler-auto'],\n        'fields': ['enabled', 'on', 'off', 'daily', 'duration', 'nocturnal'],\n        'elements': []\n    },\n    'level': {\n        'icons': ['thermostat-box', 'thermostat-box-auto'],\n        'fields': ['enabled', 'on','off', 'min', 'max', 'step'],\n        'elements': []\n    },\n    'overload': {\n        'icons': ['flash', 'flahs-auto'],\n        'fields': ['enabled', 'on', 'off', 'duration'],\n        'elements': []\n    }\n};\n\n// Save config\nglobal.set('describe', describe, 'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/.config.projects.json'\n};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4469,7 +4653,8 @@
             "d4934016db111d04",
             "d4a958696ac0d5bc",
             "9d415c5d88aaac86",
-            "7640309cc9eba43c"
+            "7640309cc9eba43c",
+            "039b1817300dafaf"
         ],
         "x": 145,
         "y": 2480,
@@ -4582,7 +4767,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "copy",
-        "func": "let places = ['default', 'memoryOnly'];\nlet place = msg.payload === true ? [places[1], places[0]]  : places;\n\n// copy from memory to file\nlet memorized = {\n    'auth': {},\n    'camera': {},\n    'entity': {},\n    'mqtt': {},\n    'name': { 'room': {}, 'device': {}, 'entity': {} },\n    'scene': {},\n    'trigger': {}\n}\n\n// Copy backup or at least init\nfor (const key in memorized) {\n    let src = global.get(key, place[0]);\n    if (typeof src !== 'object') {\n        src = memorized[key];\n    }\n    global.set(key, src, place[1]);\n}\n\nnode.status({text: place[0] + ' to ' + place[1]});\n\nreturn msg;",
+        "func": "let places = ['default', 'memoryOnly'];\nlet place = msg.payload === true ? [places[1], places[0]]  : places;\n\n// copy from memory to file\nlet memorized = {\n    'auth': {},\n    'camera': {},\n    'entity': {},\n    'mqtt': {},\n    'name': { 'room': {}, 'device': {}, 'entity': {} },\n    'scene': {},\n    'timer': {},\n    'trigger': {}\n}\n\n// Copy backup or at least init\nfor (const key in memorized) {\n    let src = global.get(key, place[0]);\n    if (typeof src !== 'object') {\n        src = memorized[key];\n    }\n    global.set(key, src, place[1]);\n}\n\nnode.status({text: place[0] + ' to ' + place[1]});\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4828,7 +5013,7 @@
         "z": "4bc72a1112cb448c",
         "g": "aa28e51660bead4f",
         "name": "parse",
-        "func": "// ping\nmsg.payload = {\n    'id': 'ping',\n    'source': 'dknr',\n    'parent': 'domotic',\n    'value': Date.now(),\n    'type': 'sensor',\n    'unit': 'ts',\n    'name': 'Ping',\n    'seen': Date.now()\n};\n\nnode.send([msg]);\n\nmsg.payload = {};\n\n// nycthemer\nlet nycthemer = global.get('entity.dknr_domotic_nycthemer', 'memoryOnly');\nlet morning = global.get('entity.dknr_domotic_morning_limit', 'memoryOnly');\nlet evening = global.get('entity.dknr_domotic_evening_limit', 'memoryOnly');\n\nlet mode = global.get('entity.dknr_config_nycthemer.value', 'memoryOnly');\nlet sunrise = global.get('entity.dknr_domotic_sunrise.value', 'memoryOnly');\nlet sunset = global.get('entity.dknr_domotic_sunset.value', 'memoryOnly');\nlet workday_morning_limit = global.get('entity.dknr_config_workday_morning_limit.value', 'memoryOnly');\nlet workday_evening_limit = global.get('entity.dknr_config_workday_evening_limit.value', 'memoryOnly');\nlet current = new Date().toTimeString().slice(0, 5);\n// TODO: restday\n\nif (typeof nycthemer === 'object' && \n    typeof morning === 'object' && \n    typeof evening === 'object' && \n    typeof mode === 'string' && mode === 'auto' && \n    typeof sunrise === 'string' && \n    typeof sunset === 'string'\n) {\n    let tcurrent = Number(current.split(':').join(''));\n    let tsunrise = Number(sunrise.split(':').join(''));\n    let tsunset = Number(sunset.split(':').join(''));\n    let tworkday_morning_limit = Number(workday_morning_limit.split(':').join(''));\n    let tworkday_evening_limit = Number(workday_evening_limit.split(':').join(''));\n\n    let tmorning = tsunrise > tworkday_morning_limit ? tsunrise : tworkday_morning_limit;\n    morning.value = tsunrise > tworkday_morning_limit ? sunrise : workday_morning_limit;\n\n    let tevening = tsunset < tworkday_evening_limit ? tsunset : tworkday_evening_limit;\n    evening.value = tsunset < tworkday_evening_limit ? sunset : workday_evening_limit;\n\n    nycthemer.value = tcurrent > tmorning && tcurrent < tevening ? 'day' : 'night';\n\n    msg.payload = morning;\n    node.send([msg]);\n\n    msg.payload = evening;\n    node.send([msg]);\n\n    msg.payload = nycthemer;\n    node.send([msg]);\n\n    node.status({ text: nycthemer.value + ', ' + morning.value + ', ' + evening.value });\n}\n\nreturn;",
+        "func": "// ping\nmsg.payload = {\n    'id': 'ping',\n    'source': 'dknr',\n    'parent': 'domotic',\n    'value': Date.now(),\n    'type': 'sensor',\n    'unit': 'ts',\n    'name': 'Ping',\n    'seen': Date.now()\n};\n\nnode.send([msg]);\n\nmsg.payload = {};\n\n// nycthemer\nlet nycthemer = global.get('entity.dknr_domotic_nycthemer', 'memoryOnly');\nlet lighting = global.get('entity.dknr_domotic_lighting', 'memoryOnly');\nlet sound = global.get('entity.dknr_domotic_sound', 'memoryOnly');\nlet morning = global.get('entity.dknr_domotic_morning_limit', 'memoryOnly');\nlet evening = global.get('entity.dknr_domotic_evening_limit', 'memoryOnly');\n\nlet mode_nycthemer = global.get('entity.dknr_config_nycthemer.value', 'memoryOnly');\nlet mode_lighting = global.get('entity.dknr_config_lighting.value', 'memoryOnly');\nlet mode_sound = global.get('entity.dknr_config_sound.value', 'memoryOnly');\nlet sunrise = global.get('entity.dknr_domotic_sunrise.value', 'memoryOnly');\nlet sunset = global.get('entity.dknr_domotic_sunset.value', 'memoryOnly');\nlet workday_morning_limit = global.get('entity.dknr_config_workday_morning_limit.value', 'memoryOnly');\nlet workday_evening_limit = global.get('entity.dknr_config_workday_evening_limit.value', 'memoryOnly');\nlet current = new Date().toTimeString().slice(0, 5);\n// TODO: restday\n\nif (typeof nycthemer === 'object' && \n    typeof morning === 'object' && \n    typeof evening === 'object' && \n    typeof mode_nycthemer === 'string' &&\n    typeof sunrise === 'string' && \n    typeof sunset === 'string'\n) {\n    let tcurrent = Number(current.split(':').join(''));\n    let tsunrise = Number(sunrise.split(':').join(''));\n    let tsunset = Number(sunset.split(':').join(''));\n    let tworkday_morning_limit = Number(workday_morning_limit.split(':').join(''));\n    let tworkday_evening_limit = Number(workday_evening_limit.split(':').join(''));\n\n    // dknr_domotic_morning_limit\n    let tmorning = tsunrise > tworkday_morning_limit ? tsunrise : tworkday_morning_limit;\n    morning.value = tsunrise > tworkday_morning_limit ? sunrise : workday_morning_limit;\n\n    msg.payload = morning;\n    node.send([msg]);\n\n    // dknr_domotic_evening_limit\n    let tevening = tsunset < tworkday_evening_limit ? tsunset : tworkday_evening_limit;\n    evening.value = tsunset < tworkday_evening_limit ? sunset : workday_evening_limit;\n\n    msg.payload = evening;\n    node.send([msg]);\n\n    // dknr_domotic_nycthemer\n    if (mode_nycthemer === 'auto') {\n        nycthemer.value = tcurrent > tmorning && tcurrent < tevening ? 'day' : 'night';\n    } else if (['day', 'night'].includes(mode_nycthemer)) {\n        nycthemer.value = mode_nycthemer;\n    }\n\n    msg.payload = nycthemer;\n    node.send([msg]);\n\n    // dknr_domotic_lighting\n    if (mode_lighting === 'auto') {\n        lighting.value = nycthemer.value === 'day' ? 'high' : 'low';\n        msg.payload = lighting;\n        node.send([msg]);\n    }\n\n    if (mode_sound == 'auto') {\n        sound.value = nycthemer.value === 'day' ? 'high' : 'low';\n        msg.payload = sound;\n        node.send([msg]);\n\n    }\n\n    node.status({ text: nycthemer.value + ', ' + morning.value + ', ' + evening.value });\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6580,7 +6765,7 @@
         "name": "dknr",
         "links": [],
         "x": 645,
-        "y": 4460,
+        "y": 4160,
         "wires": [
             [
                 "7fc016215b15f119"
@@ -6593,7 +6778,7 @@
         "z": "4bc72a1112cb448c",
         "g": "aa28e51660bead4f",
         "name": "dknr",
-        "func": "// Default system enums\nmsg.dknr_enums = {\n    'automate': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'nycthemer': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'day': ['plus-thick', 'Day'],\n        'night': ['minus-thick', 'Night'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'lighting': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'high': ['plus-thick', 'High'],\n        'low': ['minus-thick', 'Low'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'sound': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'high': ['plus-thick', 'High'],\n        'low': ['minus-thick', 'Low'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'notice': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'write': ['lead-pencil', 'Writing'],\n        'off': ['stop', 'Off']\n    },\n    'climate': {\n        'thawing': ['theme-light-dark', 'Thawning'],\n        'heating': ['heat-wave', 'Heating'],\n        'cooling': ['snowflake', 'Cooling'],\n        'off': ['stop', 'Off'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'offloading': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'on': ['play', 'On'],\n        'off': ['stop', 'Off'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'waterboiler': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'on': ['play', 'On'],\n        'off': ['stop', 'Off'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'airflow': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'on': ['play', 'On'],\n        'off': ['stop', 'Off'],\n        'manual': ['gesture-double-tap', 'Manual']\n    }\n};\n\nmsg.dknr_settings = {\n    // id: [value, parent, type, unit, element, name]\n    'automate': ['auto', 'domotic', 'sensor', 'enum', 'text', 'Automate'],\n    'nycthemer': ['day', 'domotic', 'sensor', 'enum', 'text', 'Nycthemer'],\n    'sunrise': ['07:00', 'domotic', 'sensor', 'time', 'climate', 'Sunrise'],\n    'sunset': ['19:00', 'domotic', 'sensor', 'time', 'climate', 'Sunset'],\n    'morning_limit': ['07:00', 'domotic', 'sensor', 'time', 'time', 'Hour limit of morning'],\n    'evening_limit': ['19:00', 'domotic', 'sensor', 'time', 'time', 'Hour limit of evening'],\n    'workday_morning_limit': ['07:00', 'config', 'command', 'time', 'time', 'Hour limit of work day morning'],\n    'workday_evening_limit': ['20:00', 'config', 'command', 'time', 'time', 'Hour limit of work day evening'],\n    'restday_morning_limit': ['09:00', 'config', 'command', 'time', 'time', 'Hour limit of rest day monring'],\n    'restday_evening_limit': ['21:00', 'config', 'command', 'time', 'time', 'Hour limit of rest day evening'],\n    'latitude': ['48.8743', 'config', 'command', 'text', 'location', 'Home latitude'],\n    'longitude': ['2.2950', 'config', 'command', 'text', 'location', 'Home longitude']\n};\n\nreturn msg;",
+        "func": "// Default system enums\nmsg.dknr_enums = {\n    'automate': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'nycthemer': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'day': ['plus-thick', 'Day'],\n        'night': ['minus-thick', 'Night'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'lighting': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'high': ['plus-thick', 'High'],\n        'low': ['minus-thick', 'Low'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'sound': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'high': ['plus-thick', 'High'],\n        'low': ['minus-thick', 'Low'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'notice': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'write': ['lead-pencil', 'Writing'],\n        'off': ['stop', 'Off']\n    },\n    'climate': {\n        'thawing': ['theme-light-dark', 'Thawning'],\n        'heating': ['heat-wave', 'Heating'],\n        'cooling': ['snowflake', 'Cooling'],\n        'off': ['stop', 'Off'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'offloading': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'on': ['play', 'On'],\n        'off': ['stop', 'Off'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'waterboiler': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'on': ['play', 'On'],\n        'off': ['stop', 'Off'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'airflow': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'on': ['play', 'On'],\n        'off': ['stop', 'Off'],\n        'manual': ['gesture-double-tap', 'Manual']\n    }\n};\n\nmsg.dknr_settings = {\n    // id: [value, parent, type, unit, element, name]\n    'automate': ['auto', 'domotic', 'sensor', 'enum', 'text', 'Automate'],\n    'nycthemer': ['day', 'domotic', 'sensor', 'enum', 'text', 'Nycthemer'],\n    'lighting': ['low', 'domotic', 'sensor', 'enum', 'text', 'Lighting'],\n    'sound': ['low', 'domotic', 'sensor', 'enum', 'text', 'Sound'],\n    'sunrise': ['07:00', 'domotic', 'sensor', 'time', 'climate', 'Sunrise'],\n    'sunset': ['19:00', 'domotic', 'sensor', 'time', 'climate', 'Sunset'],\n    'morning_limit': ['07:00', 'domotic', 'sensor', 'time', 'time', 'Hour limit of morning'],\n    'evening_limit': ['19:00', 'domotic', 'sensor', 'time', 'time', 'Hour limit of evening'],\n    'workday_morning_limit': ['07:00', 'config', 'command', 'time', 'time', 'Hour limit of work day morning'],\n    'workday_evening_limit': ['20:00', 'config', 'command', 'time', 'time', 'Hour limit of work day evening'],\n    'restday_morning_limit': ['09:00', 'config', 'command', 'time', 'time', 'Hour limit of rest day monring'],\n    'restday_evening_limit': ['21:00', 'config', 'command', 'time', 'time', 'Hour limit of rest day evening'],\n    'latitude': ['48.8743', 'config', 'command', 'text', 'location', 'Home latitude'],\n    'longitude': ['2.2950', 'config', 'command', 'text', 'location', 'Home longitude']\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6601,7 +6786,7 @@
         "finalize": "",
         "libs": [],
         "x": 770,
-        "y": 4460,
+        "y": 4160,
         "wires": [
             [
                 "aff998eaeca88c3a"
@@ -6617,7 +6802,7 @@
         "mode": "return",
         "links": [],
         "x": 895,
-        "y": 4460,
+        "y": 4160,
         "wires": []
     },
     {
@@ -6896,12 +7081,13 @@
         "id": "82e64870d41a24cf",
         "type": "link in",
         "z": "4bc72a1112cb448c",
+        "g": "322b1c739b2f530f",
         "name": "common - scene - trigger",
         "links": [
             "a29ec7554a818a6f"
         ],
         "x": 145,
-        "y": 4960,
+        "y": 4920,
         "wires": [
             [
                 "7337d9e15ceae96c"
@@ -6912,8 +7098,9 @@
         "id": "7337d9e15ceae96c",
         "type": "function",
         "z": "4bc72a1112cb448c",
+        "g": "322b1c739b2f530f",
         "name": "trigger payload",
-        "func": "// Do not watch hidden or duplicate message\nif (msg.repeat === true || msg.payload.hidden === 1) {\n\n    return;\n}\n\n// Find input entity in triggers\nlet trigger = global.get('trigger[\"' + msg.payload.uid + '\"]', 'memoryOnly');\nif (typeof trigger !== 'object') {\n\n    return;\n}\nnode.status({text: msg.payload.uid});\n\n// Loop through all triggers of this entity\nfor (const s in trigger) {\n    for (const e in trigger[s]) {\n        let payload_value = msg.payload.value;\n        let trigger_on = trigger[s][e]['inon'];\n        let trigger_off = trigger[s][e]['inoff'];\n        let is_num = ['enum', 'text', 'time'].includes(msg.payload.unit) ? false : true;\n\n        // need to convert time in minute\n        if (msg.payload.unit === 'time') {\n            payload_value = payload_value.split(':').join('');\n            trigger_on = Number(trigger_on.split(':').join(''));\n            trigger_off = Number(trigger_off.split(':').join(''));\n            is_num = true;\n        }\n\n        // Get required scene\n        msg.payload = global.get('scene[\"' + s + '\"][\"' + e + '\"]', 'memoryOnly');\n        if (typeof msg.payload === 'object') {\n            // If pilot \"on\" and entity value is \"on\"\n            if (trigger[s][e]['outon'] && (\n                !is_num && payload_value === trigger_on ||\n                is_num && Number(payload_value) >= trigger_on\n            )) {\n                msg.payload.value = true;\n                node.send(msg);\n            }\n\n            // If pilot \"off\" and entity value is \"off\"\n            if (trigger[s][e]['outoff'] && (\n                !is_num && payload_value === trigger_off ||\n                is_num && Number(payload_value) <= trigger_off\n            )) {\n                msg.payload.value = false;\n                node.send(msg);\n            }\n        }\n    }\n}\n\nreturn;",
+        "func": "// Returned message is composed from\n// msg.scene = scene definiton\n// msg.trigger = trigger entity\n// msg.target = target entity\n// msg.scene.pilot = the requested state of the output, true=high level, false=low level\n\n// Do not watch hidden or duplicate message\nif (msg.repeat === true || msg.payload.hidden === 1) {\n\n    return;\n}\n\n// Find input entity in triggers\nlet trigger = global.get('trigger[\"' + msg.payload.uid + '\"]', 'memoryOnly');\nif (typeof trigger !== 'object') {\n\n    return;\n}\n\n// Loop through all triggers of this entity\nfor (const s in trigger) {\n    for (const e in trigger[s]) {\n        // Get required scene\n        msg.scene = global.get('scene[\"' + s + '\"][\"' + e + '\"]', 'memoryOnly');\n        if (typeof msg.scene === 'object' && msg.scene.enabled === 1) {\n            node.status({text: msg.payload.uid});\n\n            let payload_value = msg.payload.value;\n            let trigger_on = trigger[s][e]['inon'];\n            let trigger_off = trigger[s][e]['inoff'];\n            let is_num = ['enum', 'text', 'time'].includes(msg.payload.unit) ? false : true;\n\n            // Need to convert time in minute\n            if (msg.payload.unit === 'time') {\n                payload_value = payload_value.split(':').join('');\n                trigger_on = Number(trigger_on.split(':').join(''));\n                trigger_off = Number(trigger_off.split(':').join(''));\n                is_num = true;\n            }\n\n            // If pilot \"on\" and trigger value is \"on\"\n            if (trigger[s][e]['outon'] && (\n                !is_num && payload_value === trigger_on ||\n                is_num && Number(payload_value) >= trigger_on\n            )) {\n                msg.scene.pilot = true;\n                msg.trigger = {...msg.payload};\n                msg.target = global.get('entity[\"' + e + '\"]', 'memoryOnly') || {};\n\n                node.send(msg);\n            }\n\n            // If pilot \"off\" and trigger value is \"off\"\n            if (trigger[s][e]['outoff'] && (\n                !is_num && payload_value === trigger_off ||\n                is_num && Number(payload_value) <= trigger_off\n            )) {\n                msg.scene.pilot = false;\n                msg.trigger = {...msg.payload};\n                msg.target = global.get('entity[\"' + e + '\"]', 'memoryOnly') || {};\n                \n                node.send(msg);\n            }\n        }\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6921,10 +7108,10 @@
         "finalize": "",
         "libs": [],
         "x": 300,
-        "y": 4960,
+        "y": 4920,
         "wires": [
             [
-                "7a3fccbcd9c1e5fc"
+                "5218157cce0290a0"
             ]
         ]
     },
@@ -6932,7 +7119,8 @@
         "id": "7a3fccbcd9c1e5fc",
         "type": "debug",
         "z": "4bc72a1112cb448c",
-        "name": "debug 2",
+        "g": "322b1c739b2f530f",
+        "name": "common - scene - trigger",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -6941,26 +7129,29 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 560,
-        "y": 5100,
+        "x": 3110,
+        "y": 4980,
         "wires": []
     },
     {
         "id": "2c75e0ed62bdc1a4",
         "type": "function",
         "z": "4bc72a1112cb448c",
-        "name": "lighting",
-        "func": "if (msg.payload.scene !== 'lighting') {\n\n    return;\n}\n\n// Nightlight\nif (msg.payload.nightlight === 1) {\n    \n}\n\nreturn msg;",
+        "g": "c387bb92061d50fa",
+        "name": "routine - nightlight",
+        "func": "msg.rsp = true;\n\n// Check done in first step, just disable trigger if it's not active in scene\nif (msg.scene.nightlight === 0 && msg.trigger.uid === 'dknr_domotic_nycthemer') {\n\n    msg.rsp = false;\n}\n\nnode.status({ text: msg.scene.scene + ' - ' + msg.scene.pilot + ' - ' + msg.trigger.value });\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 600,
-        "y": 4960,
+        "x": 310,
+        "y": 5220,
         "wires": [
-            []
+            [
+                "49d262a3bbf53832"
+            ]
         ]
     },
     {
@@ -6991,7 +7182,7 @@
         "z": "4bc72a1112cb448c",
         "g": "aa28e51660bead4f",
         "name": "init",
-        "func": "msg.payload = [\n  {\n    \"command\": \"add\",\n    \"name\": \"sunrise\",\n    \"expressionType\": \"solar\",\n    \"solarType\": \"selected\",\n    \"solarEvents\": \"civilDawn\",\n    \"location\": \"45.9385545061656 5.38116016257227\",\n    \"offset\": \"0\",\n    \"payloadType\": \"default\",\n    \"limit\": null\n  },\n  {\n    \"command\": \"add\",\n    \"name\": \"sunset\",\n    \"expressionType\": \"solar\",\n    \"solarType\": \"selected\",\n    \"solarEvents\": \"civilDusk\",\n    \"location\": \"45.9385545061656 5.38116016257227\",\n    \"offset\": \"0\",\n    \"payloadType\": \"default\",\n    \"limit\": null\n  }\n];\n\nreturn msg;",
+        "func": "msg.payload = [\n  {\n    \"command\": \"add\",\n    \"name\": \"sunrise\",\n    \"expressionType\": \"solar\",\n    \"solarType\": \"selected\",\n    \"solarEvents\": \"civilDawn\",\n    \"location\": \"45.9385545061656 5.38116016257227\",\n    \"offset\": \"0\",\n    \"payloadType\": \"default\",\n    \"limit\": null\n  },\n  {\n    \"command\": \"add\",\n    \"name\": \"sunset\",\n    \"expressionType\": \"solar\",\n    \"solarType\": \"selected\",\n    \"solarEvents\": \"civilDusk\",\n    \"location\": \"45.9385545061656 5.38116016257227\",\n    \"offset\": \"0\",\n    \"payloadType\": \"default\",\n    \"limit\": null\n  }\n];\n\n// Init on boot\nnode.send([msg]);\n\nawait new Promise(resolve => setTimeout(resolve, 250));\n\n// get value on boot\nmsg.topic = 'trigger';\nmsg.payload = 'sunrise';\nnode.send([msg]);\n\nmsg.topic = 'trigger';\nmsg.topic = 'sunset';\nnode.send([msg]);\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7180,6 +7371,652 @@
                 "66f6b7e017880ca2"
             ]
         ]
+    },
+    {
+        "id": "07183ca70983bde0",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "aa28e51660bead4f",
+        "name": "common - dknr - loop",
+        "links": [],
+        "x": 145,
+        "y": 4520,
+        "wires": [
+            [
+                "0ea848a47ca04aa7"
+            ]
+        ]
+    },
+    {
+        "id": "0ea848a47ca04aa7",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "aa28e51660bead4f",
+        "name": "parse",
+        "func": "if (msg.repeat === true || msg.payload.hidden === 1) {\n\n    return;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 4520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "774a64cbace2af3c",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "c387bb92061d50fa",
+        "name": "routine - nightlight",
+        "links": [],
+        "x": 145,
+        "y": 5220,
+        "wires": [
+            [
+                "2c75e0ed62bdc1a4"
+            ]
+        ]
+    },
+    {
+        "id": "49d262a3bbf53832",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "c387bb92061d50fa",
+        "name": "routine - nightlight",
+        "mode": "return",
+        "links": [],
+        "x": 495,
+        "y": 5220,
+        "wires": []
+    },
+    {
+        "id": "5218157cce0290a0",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "322b1c739b2f530f",
+        "name": "lighting",
+        "func": "node.status({fill: msg.scene.scene === 'lighting' ? 'green' : 'red' });\n\nif (msg.scene.scene === 'lighting') {\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 4920,
+        "wires": [
+            [
+                "65a28360023a0d9a"
+            ]
+        ]
+    },
+    {
+        "id": "088c9ec149a5d682",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "1af50f84b29543e4",
+        "name": "routine value",
+        "func": "if (['r', 'b'].includes(msg.target.unit)) {\n    msg.target.value = msg.scene.pilot ? msg.scene.on : msg.scene.off;\n} else {\n    msg.target.value = msg.scene.pilot ? msg.scene.high : msg.scene.low;\n}\n\nmsg.rsp = true;\n\nnode.status({ text: msg.scene.scene + ' - ' + msg.scene.pilot + ' - ' + msg.trigger.value });\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 5820,
+        "wires": [
+            [
+                "c6199dfe5c53ce30"
+            ]
+        ]
+    },
+    {
+        "id": "55c2498f164ea120",
+        "type": "link call",
+        "z": "4bc72a1112cb448c",
+        "g": "322b1c739b2f530f",
+        "name": "",
+        "links": [
+            "774a64cbace2af3c"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1110,
+        "y": 4920,
+        "wires": [
+            [
+                "54d18dcebcb47319"
+            ]
+        ]
+    },
+    {
+        "id": "3dda32edbe318481",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "1af50f84b29543e4",
+        "name": "routine - value",
+        "links": [],
+        "x": 145,
+        "y": 5820,
+        "wires": [
+            [
+                "088c9ec149a5d682"
+            ]
+        ]
+    },
+    {
+        "id": "c6199dfe5c53ce30",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "1af50f84b29543e4",
+        "name": "routine - value",
+        "mode": "return",
+        "links": [],
+        "x": 495,
+        "y": 5820,
+        "wires": []
+    },
+    {
+        "id": "9a0419834be9dd38",
+        "type": "link call",
+        "z": "4bc72a1112cb448c",
+        "g": "322b1c739b2f530f",
+        "name": "",
+        "links": [
+            "3dda32edbe318481"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 2700,
+        "y": 4920,
+        "wires": [
+            [
+                "08bc652bb475c666"
+            ]
+        ]
+    },
+    {
+        "id": "54d18dcebcb47319",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "322b1c739b2f530f",
+        "name": "rsp",
+        "func": "node.status({fill: msg.rsp ? 'green' : 'red'});\n\nif (msg.rsp) {\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 4920,
+        "wires": [
+            [
+                "388ce99449f8f70a"
+            ]
+        ]
+    },
+    {
+        "id": "08bc652bb475c666",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "322b1c739b2f530f",
+        "name": "rsp",
+        "func": "node.status({fill: msg.rsp ? 'green' : 'red'});\n\nif (msg.rsp) {\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2890,
+        "y": 4920,
+        "wires": [
+            [
+                "fd603c013fef9bbd",
+                "7a3fccbcd9c1e5fc"
+            ]
+        ]
+    },
+    {
+        "id": "fd603c013fef9bbd",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "322b1c739b2f530f",
+        "name": "parse",
+        "func": "msg.payload = {...msg.target};\n\ndelete msg.scene;\ndelete msg.trigger;\ndelete msg.target;\ndelete msg.repeat;\nmsg.loop = true;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3050,
+        "y": 4920,
+        "wires": [
+            [
+                "039b1817300dafaf"
+            ]
+        ]
+    },
+    {
+        "id": "7313e5aa5c19d721",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "f454077e9eb9e9d1",
+        "name": "routine - motion",
+        "func": "msg.rsp = true;\n\n// Check done in first step, just disable trigger if it's not active in scene\nif (msg.scene.motion === 0 && msg.trigger.element === 'motion') {\n\n    msg.rsp = false;\n}\n\nnode.status({ text: msg.scene.scene + ' - ' + msg.scene.pilot + ' - ' + msg.trigger.value });\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 5340,
+        "wires": [
+            [
+                "6fa07489024a1c42"
+            ]
+        ]
+    },
+    {
+        "id": "16b9fe8281c0afc1",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "f454077e9eb9e9d1",
+        "name": "routine - motion",
+        "links": [],
+        "x": 145,
+        "y": 5340,
+        "wires": [
+            [
+                "7313e5aa5c19d721"
+            ]
+        ]
+    },
+    {
+        "id": "6fa07489024a1c42",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "f454077e9eb9e9d1",
+        "name": "routine - motion",
+        "mode": "return",
+        "links": [],
+        "x": 495,
+        "y": 5340,
+        "wires": []
+    },
+    {
+        "id": "82c9d5db17f107b3",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "322b1c739b2f530f",
+        "name": "rsp",
+        "func": "node.status({fill: msg.rsp ? 'green' : 'red'});\n\nif (msg.rsp) {\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1690,
+        "y": 4920,
+        "wires": [
+            [
+                "f354044d5e08e8a7"
+            ]
+        ]
+    },
+    {
+        "id": "388ce99449f8f70a",
+        "type": "link call",
+        "z": "4bc72a1112cb448c",
+        "g": "322b1c739b2f530f",
+        "name": "",
+        "links": [
+            "16b9fe8281c0afc1"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1500,
+        "y": 4920,
+        "wires": [
+            [
+                "82c9d5db17f107b3"
+            ]
+        ]
+    },
+    {
+        "id": "22299a8dca614bf1",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "0d874ecb6382fbda",
+        "name": "routine - illuminance",
+        "func": "msg.rsp = true;\n\n// Check done in first step, just disable trigger if it's not active in scene\nif (msg.scene.illuminance === 0 && msg.trigger.element === 'illuminance') {\n\n    msg.rsp = false;\n}\n\nnode.status({ text: msg.scene.scene + ' - ' + msg.scene.pilot + ' - ' + msg.trigger.value });\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 5460,
+        "wires": [
+            [
+                "252fd67aeb3a316d"
+            ]
+        ]
+    },
+    {
+        "id": "446eff30a35bcafd",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "0d874ecb6382fbda",
+        "name": "routine - illuminance",
+        "links": [],
+        "x": 145,
+        "y": 5460,
+        "wires": [
+            [
+                "22299a8dca614bf1"
+            ]
+        ]
+    },
+    {
+        "id": "252fd67aeb3a316d",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "0d874ecb6382fbda",
+        "name": "routine - illuminance",
+        "mode": "return",
+        "links": [],
+        "x": 495,
+        "y": 5460,
+        "wires": []
+    },
+    {
+        "id": "7ee730353ac137ce",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "5d14bfa4666ea4a0",
+        "name": "routine - darkness",
+        "func": "msg.rsp = true;\n\n//TODO: to test\n\n// Check done in first step, just disable trigger if it's not active in scene\nif (msg.scene.darkness === 0 && msg.trigger.element === 'illuminance') {\n\n    msg.rsp = false;\n}\n\nnode.status({ text: msg.scene.scene + ' - ' + msg.scene.pilot + ' - ' + msg.trigger.value });\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 5580,
+        "wires": [
+            [
+                "84eb64e38c2823aa"
+            ]
+        ]
+    },
+    {
+        "id": "54e33a3a33a9cd76",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "5d14bfa4666ea4a0",
+        "name": "routine - darkness",
+        "links": [],
+        "x": 145,
+        "y": 5580,
+        "wires": [
+            [
+                "7ee730353ac137ce"
+            ]
+        ]
+    },
+    {
+        "id": "84eb64e38c2823aa",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "5d14bfa4666ea4a0",
+        "name": "routine - darkness",
+        "mode": "return",
+        "links": [],
+        "x": 495,
+        "y": 5580,
+        "wires": []
+    },
+    {
+        "id": "d949ec1d7bee2ff8",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "322b1c739b2f530f",
+        "name": "rsp",
+        "func": "node.status({fill: msg.rsp ? 'green' : 'red'});\n\nif (msg.rsp) {\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2510,
+        "y": 4920,
+        "wires": [
+            [
+                "9a0419834be9dd38"
+            ]
+        ]
+    },
+    {
+        "id": "91acff672cbadc32",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "322b1c739b2f530f",
+        "name": "rsp",
+        "func": "node.status({fill: msg.rsp ? 'green' : 'red'});\n\nif (msg.rsp) {\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2110,
+        "y": 4920,
+        "wires": [
+            [
+                "e7ce04a70a8ea3bf"
+            ]
+        ]
+    },
+    {
+        "id": "f354044d5e08e8a7",
+        "type": "link call",
+        "z": "4bc72a1112cb448c",
+        "g": "322b1c739b2f530f",
+        "name": "",
+        "links": [
+            "446eff30a35bcafd"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1900,
+        "y": 4920,
+        "wires": [
+            [
+                "91acff672cbadc32"
+            ]
+        ]
+    },
+    {
+        "id": "e7ce04a70a8ea3bf",
+        "type": "link call",
+        "z": "4bc72a1112cb448c",
+        "g": "322b1c739b2f530f",
+        "name": "",
+        "links": [
+            "54e33a3a33a9cd76"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 2310,
+        "y": 4920,
+        "wires": [
+            [
+                "d949ec1d7bee2ff8"
+            ]
+        ]
+    },
+    {
+        "id": "96e27dc1829b2a2e",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "7270bddaa595d8b8",
+        "name": "routine - nocturnal",
+        "func": "msg.rsp = true;\n\n// Bloc high level pilot if it's night\nif (msg.scene.nocturnal === 1 && msg.scene.pilot == true) {\n    let nycthemer = global.get('entity.dknr_domotic_nycthemer', 'memoryOnly') || '';\n    if (nycthemer !== 'night') {\n\n        msg.rsp = false;\n    }\n}\n\nnode.status({ text: msg.scene.scene + ' - ' + msg.scene.pilot + ' - ' + msg.trigger.value });\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 5100,
+        "wires": [
+            [
+                "56af3961120ba6a8"
+            ]
+        ]
+    },
+    {
+        "id": "0951e35f7c86244e",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "7270bddaa595d8b8",
+        "name": "routine - nocturnal",
+        "links": [],
+        "x": 145,
+        "y": 5100,
+        "wires": [
+            [
+                "96e27dc1829b2a2e"
+            ]
+        ]
+    },
+    {
+        "id": "56af3961120ba6a8",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "7270bddaa595d8b8",
+        "name": "routine - nocturnal",
+        "mode": "return",
+        "links": [],
+        "x": 495,
+        "y": 5100,
+        "wires": []
+    },
+    {
+        "id": "65a28360023a0d9a",
+        "type": "link call",
+        "z": "4bc72a1112cb448c",
+        "g": "322b1c739b2f530f",
+        "name": "",
+        "links": [
+            "0951e35f7c86244e"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 710,
+        "y": 4920,
+        "wires": [
+            [
+                "26c7c87cba4918d4"
+            ]
+        ]
+    },
+    {
+        "id": "26c7c87cba4918d4",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "322b1c739b2f530f",
+        "name": "rsp",
+        "func": "node.status({fill: msg.rsp ? 'green' : 'red'});\n\nif (msg.rsp) {\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 4920,
+        "wires": [
+            [
+                "55c2498f164ea120"
+            ]
+        ]
+    },
+    {
+        "id": "039b1817300dafaf",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "322b1c739b2f530f",
+        "name": "common - scene - trigger",
+        "mode": "link",
+        "links": [
+            "cc0a7c14f877c371"
+        ],
+        "x": 3175,
+        "y": 4920,
+        "wires": []
+    },
+    {
+        "id": "0984b90658968913",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "541db6fc0af31daa",
+        "name": "routine - duration",
+        "func": "msg.rsp = true;\n\n// TODO\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 5700,
+        "wires": [
+            [
+                "0537716a9155db75"
+            ]
+        ]
+    },
+    {
+        "id": "8c92ae599f0c8ad6",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "541db6fc0af31daa",
+        "name": "routine - duration",
+        "links": [],
+        "x": 145,
+        "y": 5700,
+        "wires": [
+            [
+                "0984b90658968913"
+            ]
+        ]
+    },
+    {
+        "id": "0537716a9155db75",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "541db6fc0af31daa",
+        "name": "routine - duration",
+        "mode": "return",
+        "links": [],
+        "x": 495,
+        "y": 5700,
+        "wires": []
     },
     {
         "id": "d7bc8fc74bfc07cb",
@@ -12933,7 +13770,7 @@
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "name": "data",
-        "func": "let triggers = global.get('triggers', 'memoryOnly') || {};\nlet trigger = flow.get('trigger[\"' + msg.hmi.id + '\"]', 'memoryOnly') || {};\n\nif (typeof triggers[trigger.trigger] !== 'object') {\n    triggers[trigger.trigger] = {};\n}\nif (typeof triggers[trigger.trigger][trigger.scene] !== 'object') {\n    triggers[trigger.trigger][trigger.scene] = {};\n}\n\ndelete trigger['room'];\ndelete trigger['element'];\ntriggers[trigger.trigger][trigger.scene][trigger.target] = trigger;\n\nglobal.set('trigger', triggers, 'memoryOnly');\n\nmsg.enabled = true;\nmsg.payload = msg.dictionary.scene.triggeradd_save_success || 'Successfully saved';\n\nreturn msg;",
+        "func": "let triggers = global.get('trigger', 'memoryOnly') || {};\nlet trigger = flow.get('trigger[\"' + msg.hmi.id + '\"]', 'memoryOnly') || {};\n\nif (typeof triggers[trigger.trigger] !== 'object') {\n    triggers[trigger.trigger] = {};\n}\nif (typeof triggers[trigger.trigger][trigger.scene] !== 'object') {\n    triggers[trigger.trigger][trigger.scene] = {};\n}\n\ndelete trigger['room'];\ndelete trigger['element'];\ntriggers[trigger.trigger][trigger.scene][trigger.target] = trigger;\n\nglobal.set('trigger', triggers, 'memoryOnly');\n\nmsg.enabled = true;\nmsg.payload = msg.dictionary.scene.triggeradd_save_success || 'Successfully saved';\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -13823,7 +14660,7 @@
         "z": "56c0b44ca387382c",
         "g": "5d38062b01fae17a",
         "name": "data",
-        "func": "await new Promise(resolve => setTimeout(resolve, 10));\nnode.status({ text: '' });\nif (!msg.enabled) {\n    msg.payload = [];\n\n    return msg;\n}\n\nlet action = flow.get('action[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--';\nif (action !== 'triggerlist') {\n\n    return;\n}\n\nnode.status({ text: action });\n\nlet trigger = global.get('trigger', 'memoryOnly') || {};\nlet names = global.get('name', 'memoryOnly') || {};\n\nlet i = 0;\nlet dropdownOptions = [];\n\nfor (const t in trigger) {\n    let tentity = global.get('entity[\"' + t + '\"]', 'memoryOnly');\n    if (typeof tentity === 'object') {\n        let troom = names['room'][tentity['room']] || tentity['room'];\n        let tname = names['entity'][tentity['uid']] || tentity['id'];\n        if (tname === '' || tname === tentity['id']) {\n            tname = names['device'][tentity['parent']] || tentity['parent'];\n        }\n\n        for (const s in trigger[t]) {\n            let scene_icon = global.get('describe[\"scenes\"][\"' + s + '\"][\"icons\"]', 'memoryOnly') || ['help', 'help'];\n    \n            for (const e in trigger[t][s]) {\n                let eentity = global.get('entity[\"' + e + '\"]', 'memoryOnly');\n                if (typeof eentity === 'object') {\n                    let eroom = names['room'][eentity['room']] || eentity['room'];\n                    let ename = names['entity'][eentity['uid']] || eentity['id'];\n                    if (ename === '' || ename === eentity['id']) {\n                        ename = names['device'][eentity['parent']] || eentity['parent'];\n                    }\n\n                    dropdownOptions[i++] = {\n                        'scene_icon': '<i class=\"icon-in-row mdi mdi-' + scene_icon[1] + '\" title=\"' + s + '\"></i>',\n                        'scene': trigger[t][s][e]['scene'],\n                        'trigger': t,\n                        'trigger_name': troom + ' / ' + tname + ' (' + tentity['element'] + ')',\n                        'target': e,\n                        'target_name': eroom + ' / ' + ename + ' (' + eentity['element'] + ')',\n                        'outon': trigger[t][s][e]['outon'],\n                        'outoff': trigger[t][s][e]['outoff'],\n                        'delete': msg.dictionary.scene.triggerlist_delete || 'Delete'\n                    };\n                }\n            }\n        }\n    }\n}\nnode.status({ text: i });\n\ndropdownOptions.sort((a, b) => a.trigger.localeCompare(b.trigger));\n\nmsg.payload = dropdownOptions;\nmsg.ui_update = {\n    'label': ''\n}\n\nawait new Promise(resolve => setTimeout(resolve, 250));\nreturn msg;",
+        "func": "await new Promise(resolve => setTimeout(resolve, 10));\nnode.status({ text: '' });\nif (!msg.enabled) {\n    msg.payload = [];\n\n    return msg;\n}\n\nlet action = flow.get('action[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--';\nif (action !== 'triggerlist') {\n\n    return;\n}\n\nnode.status({ text: action });\n\nlet trigger = global.get('trigger', 'memoryOnly') || {};\nlet names = global.get('name', 'memoryOnly') || {};\n\nlet i = 0;\nlet dropdownOptions = [];\n\nfor (const t in trigger) {\n    let tentity = global.get('entity[\"' + t + '\"]', 'memoryOnly');\n    if (typeof tentity === 'object') {\n        let troom = names['room'][tentity['room']] || tentity['room'];\n        let tname = names['entity'][tentity['uid']] || tentity['id'];\n        if (tname === '' || tname === tentity['id']) {\n            tname = names['device'][tentity['parent']] || tentity['parent'];\n        }\n\n        for (const s in trigger[t]) {\n            let scene_icon = global.get('describe[\"scenes\"][\"' + s + '\"][\"icons\"]', 'memoryOnly') || ['help', 'help'];\n    \n            for (const e in trigger[t][s]) {\n                let eentity = global.get('entity[\"' + e + '\"]', 'memoryOnly');\n                if (typeof eentity === 'object') {\n                    let eroom = names['room'][eentity['room']] || eentity['room'];\n                    let ename = names['entity'][eentity['uid']] || eentity['id'];\n                    if (ename === '' || ename === eentity['id']) {\n                        ename = names['device'][eentity['parent']] || eentity['parent'];\n                    }\n\n                    dropdownOptions[i++] = {\n                        'scene_icon': '<i class=\"icon-in-row mdi mdi-' + scene_icon[1] + '\" title=\"' + s + '\"></i>',\n                        'scene': trigger[t][s][e]['scene'],\n                        'trigger': t,\n                        'trigger_name': troom + ' / ' + tname + ' (' + tentity['element'] + ')',\n                        'target': e,\n                        'target_name': eroom + ' / ' + ename + ' (' + eentity['element'] + ')',\n                        'outon': Boolean(trigger[t][s][e]['outon']),\n                        'outoff': Boolean(trigger[t][s][e]['outoff']),\n                        'delete': msg.dictionary.scene.triggerlist_delete || 'Delete'\n                    };\n                }\n            }\n        }\n    }\n}\nnode.status({ text: i });\n\ndropdownOptions.sort((a, b) => a.trigger.localeCompare(b.trigger));\n\nmsg.payload = dropdownOptions;\nmsg.ui_update = {\n    'label': ''\n}\n\nawait new Promise(resolve => setTimeout(resolve, 250));\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -13874,7 +14711,7 @@
             },
             {
                 "title": "On",
-                "key": "inon",
+                "key": "outon",
                 "keyType": "key",
                 "type": "tickcross",
                 "width": "",
@@ -13882,7 +14719,7 @@
             },
             {
                 "title": "Off",
-                "key": "inoff",
+                "key": "outoff",
                 "keyType": "key",
                 "type": "tickcross",
                 "width": "",
