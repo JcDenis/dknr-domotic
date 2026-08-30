@@ -759,12 +759,16 @@
             "b0ab58e61689840a",
             "c88e3eab330254fa",
             "c81043d4a876f3f5",
-            "1950018cf846a01e"
+            "1950018cf846a01e",
+            "a1e13a3756555cc4",
+            "2c85d39ca0e3479a",
+            "73f0eaa74faa52d8",
+            "56c0df784932d3af"
         ],
         "x": 104,
         "y": 339,
         "w": 1342,
-        "h": 1882
+        "h": 1942
     },
     {
         "id": "0a9a5f5f4e641599",
@@ -835,7 +839,7 @@
             "089ca9808005cd1d"
         ],
         "x": 104,
-        "y": 2259,
+        "y": 2319,
         "w": 1322,
         "h": 1222
     },
@@ -1523,7 +1527,7 @@
             "7482fbd3b4a1a5ae"
         ],
         "x": 104,
-        "y": 3519,
+        "y": 3579,
         "w": 1272,
         "h": 82
     },
@@ -1725,11 +1729,15 @@
             "65a28360023a0d9a",
             "26c7c87cba4918d4",
             "039b1817300dafaf",
-            "7a3fccbcd9c1e5fc"
+            "7a3fccbcd9c1e5fc",
+            "50c4cf1821b85470",
+            "e8405f141198b63d",
+            "85d8c55fa28d753c",
+            "8b16a284a2dda0c0"
         ],
-        "x": 104,
+        "x": 94,
         "y": 4879,
-        "w": 3162,
+        "w": 3592,
         "h": 142
     },
     {
@@ -1751,6 +1759,30 @@
         "x": 104,
         "y": 5659,
         "w": 432,
+        "h": 82
+    },
+    {
+        "id": "5ee9c437401835c9",
+        "type": "group",
+        "z": "56c0b44ca387382c",
+        "name": "scene - timerlist",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "9f06d30ea766a8fe",
+            "0c12a7992e1ba4eb",
+            "7a4670c83b542f34",
+            "7af5a65f82f2943c",
+            "50bc4392adff795e",
+            "61acc41e24cbdd6b",
+            "80e3952b8f56d1da"
+        ],
+        "x": 104,
+        "y": 3819,
+        "w": 1272,
         "h": 82
     },
     {
@@ -2626,7 +2658,8 @@
             "c81043d4a876f3f5",
             "6de461e4d754d7f9",
             "7482fbd3b4a1a5ae",
-            "f32e8939b64dd232"
+            "f32e8939b64dd232",
+            "80e3952b8f56d1da"
         ],
         "x": 145,
         "y": 920,
@@ -7086,7 +7119,7 @@
         "links": [
             "a29ec7554a818a6f"
         ],
-        "x": 145,
+        "x": 165,
         "y": 4920,
         "wires": [
             [
@@ -7100,14 +7133,14 @@
         "z": "4bc72a1112cb448c",
         "g": "322b1c739b2f530f",
         "name": "trigger payload",
-        "func": "// Returned message is composed from\n// msg.scene = scene definiton\n// msg.trigger = trigger entity\n// msg.target = target entity\n// msg.scene.pilot = the requested state of the output, true=high level, false=low level\n\n// Do not watch hidden or duplicate message\nif (msg.repeat === true || msg.payload.hidden === 1) {\n\n    return;\n}\n\n// Find input entity in triggers\nlet trigger = global.get('trigger[\"' + msg.payload.uid + '\"]', 'memoryOnly');\nif (typeof trigger !== 'object') {\n\n    return;\n}\n\n// Loop through all triggers of this entity\nfor (const s in trigger) {\n    for (const e in trigger[s]) {\n        // Get required scene\n        msg.scene = global.get('scene[\"' + s + '\"][\"' + e + '\"]', 'memoryOnly');\n        if (typeof msg.scene === 'object' && msg.scene.enabled === 1) {\n            node.status({text: msg.payload.uid});\n\n            let payload_value = msg.payload.value;\n            let trigger_on = trigger[s][e]['inon'];\n            let trigger_off = trigger[s][e]['inoff'];\n            let is_num = ['enum', 'text', 'time'].includes(msg.payload.unit) ? false : true;\n\n            // Need to convert time in minute\n            if (msg.payload.unit === 'time') {\n                payload_value = payload_value.split(':').join('');\n                trigger_on = Number(trigger_on.split(':').join(''));\n                trigger_off = Number(trigger_off.split(':').join(''));\n                is_num = true;\n            }\n\n            // If pilot \"on\" and trigger value is \"on\"\n            if (trigger[s][e]['outon'] && (\n                !is_num && payload_value === trigger_on ||\n                is_num && Number(payload_value) >= trigger_on\n            )) {\n                msg.scene.pilot = true;\n                msg.trigger = {...msg.payload};\n                msg.target = global.get('entity[\"' + e + '\"]', 'memoryOnly') || {};\n\n                node.send(msg);\n            }\n\n            // If pilot \"off\" and trigger value is \"off\"\n            if (trigger[s][e]['outoff'] && (\n                !is_num && payload_value === trigger_off ||\n                is_num && Number(payload_value) <= trigger_off\n            )) {\n                msg.scene.pilot = false;\n                msg.trigger = {...msg.payload};\n                msg.target = global.get('entity[\"' + e + '\"]', 'memoryOnly') || {};\n                \n                node.send(msg);\n            }\n        }\n    }\n}\n\nreturn;",
+        "func": "// Returned message is composed from\n// msg.scene = scene definiton\n// msg.trigger = trigger entity\n// msg.target = target entity\n// msg.payload = the requested state of the output, true=high level, false=low level\n\n// Do not watch hidden or duplicate message\nif (msg.repeat === true || msg.payload.hidden === 1) {\n\n    return;\n}\n\n// Automate is in mode \"auto\"\nlet automate = global.get('entity.dknr_config_automate.value', 'memoryOnly') || '';\nif (automate !== 'auto') {\n\n    return;\n}\n\n// Move trigger\nmsg.trigger = { ...msg.payload };\n\n// Find input entity in triggers\nlet trigger = global.get('trigger[\"' + msg.trigger.uid + '\"]', 'memoryOnly');\nif (typeof trigger !== 'object') {\n\n    return;\n}\n\n// Loop through all triggers of this entity\nfor (const s in trigger) {\n    for (const e in trigger[s]) {\n        msg.scene = global.get('scene[\"' + s + '\"][\"' + e + '\"]', 'memoryOnly');\n\n        // Scene exists and is active\n        if (typeof msg.scene === 'object' && msg.scene.enabled === 1) {\n            // Try to wait previous loop finish\n            await new Promise(resolve => setTimeout(resolve, 10));\n\n            // Scene mode is \"auto\"\n            let scene_mode = global.get('entity.dknr_config_' + msg.scene.scene + '.value', 'memoryOnly');\n            if (typeof scene_mode !== 'string' || scene_mode === 'auto') {\n\n                node.status({ text: msg.trigger.uid});\n\n                let payload_value = msg.trigger.value;\n                let trigger_on = trigger[s][e]['inon'];\n                let trigger_off = trigger[s][e]['inoff'];\n                let is_num = ['enum', 'text', 'time'].includes(msg.trigger.unit) ? false : true;\n\n                // Need to convert time in minute\n                if (msg.trigger.unit === 'time') {\n                    payload_value = payload_value.split(':').join('');\n                    trigger_on = Number(trigger_on.split(':').join(''));\n                    trigger_off = Number(trigger_off.split(':').join(''));\n                    is_num = true;\n                }\n\n                // If pilot \"on\" and trigger value is \"on\"\n                if (trigger[s][e]['outon'] && (\n                    !is_num && payload_value === trigger_on ||\n                    is_num && Number(payload_value) >= trigger_on\n                )) {\n                    msg.target = global.get('entity[\"' + e + '\"]', 'memoryOnly') || {};\n                    msg.payload = true;\n\n                    node.send(msg);\n                }\n\n                // If pilot \"off\" and trigger value is \"off\"\n                if (trigger[s][e]['outoff'] && (\n                    !is_num && payload_value === trigger_off ||\n                    is_num && Number(payload_value) <= trigger_off\n                )) {\n                    msg.target = global.get('entity[\"' + e + '\"]', 'memoryOnly') || {};\n                    msg.payload = false;\n                    \n                    node.send(msg);\n                }\n            }\n        }\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 300,
+        "x": 320,
         "y": 4920,
         "wires": [
             [
@@ -7129,7 +7162,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 3110,
+        "x": 3530,
         "y": 4980,
         "wires": []
     },
@@ -7139,7 +7172,7 @@
         "z": "4bc72a1112cb448c",
         "g": "c387bb92061d50fa",
         "name": "routine - nightlight",
-        "func": "msg.rsp = true;\n\n// Check done in first step, just disable trigger if it's not active in scene\nif (msg.scene.nightlight === 0 && msg.trigger.uid === 'dknr_domotic_nycthemer') {\n\n    msg.rsp = false;\n}\n\nnode.status({ text: msg.scene.scene + ' - ' + msg.scene.pilot + ' - ' + msg.trigger.value });\n\nreturn msg;",
+        "func": "msg.rsp = true;\n\n// Check done in first step, just disable trigger if it's not active in scene\nif (msg.scene.nightlight === 0 && msg.trigger.uid === 'dknr_domotic_nycthemer') {\n\n    msg.rsp = false;\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7446,7 +7479,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 500,
+        "x": 520,
         "y": 4920,
         "wires": [
             [
@@ -7460,7 +7493,7 @@
         "z": "4bc72a1112cb448c",
         "g": "1af50f84b29543e4",
         "name": "routine value",
-        "func": "if (['r', 'b'].includes(msg.target.unit)) {\n    msg.target.value = msg.scene.pilot ? msg.scene.on : msg.scene.off;\n} else {\n    msg.target.value = msg.scene.pilot ? msg.scene.high : msg.scene.low;\n}\n\nmsg.rsp = true;\n\nnode.status({ text: msg.scene.scene + ' - ' + msg.scene.pilot + ' - ' + msg.trigger.value });\n\nreturn msg;",
+        "func": "msg.rsp = true;\n\nif (['r', 'b'].includes(msg.target.unit)) {\n    msg.target.value = msg.payload ? msg.scene.on : msg.scene.off;\n} else {\n    msg.target.value = msg.payload ? msg.scene.high : msg.scene.low;\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7486,7 +7519,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1110,
+        "x": 1130,
         "y": 4920,
         "wires": [
             [
@@ -7532,7 +7565,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 2700,
+        "x": 3120,
         "y": 4920,
         "wires": [
             [
@@ -7553,7 +7586,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1310,
+        "x": 1330,
         "y": 4920,
         "wires": [
             [
@@ -7574,12 +7607,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2890,
+        "x": 3310,
         "y": 4920,
         "wires": [
             [
-                "fd603c013fef9bbd",
-                "7a3fccbcd9c1e5fc"
+                "fd603c013fef9bbd"
             ]
         ]
     },
@@ -7596,11 +7628,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3050,
+        "x": 3470,
         "y": 4920,
         "wires": [
             [
-                "039b1817300dafaf"
+                "039b1817300dafaf",
+                "7a3fccbcd9c1e5fc"
             ]
         ]
     },
@@ -7610,7 +7643,7 @@
         "z": "4bc72a1112cb448c",
         "g": "f454077e9eb9e9d1",
         "name": "routine - motion",
-        "func": "msg.rsp = true;\n\n// Check done in first step, just disable trigger if it's not active in scene\nif (msg.scene.motion === 0 && msg.trigger.element === 'motion') {\n\n    msg.rsp = false;\n}\n\nnode.status({ text: msg.scene.scene + ' - ' + msg.scene.pilot + ' - ' + msg.trigger.value });\n\nreturn msg;",
+        "func": "msg.rsp = true;\n\n// Check done in first step, just disable trigger if it's not active in scene\nif (msg.scene.motion === 0 && msg.trigger.element === 'motion') {\n\n    msg.rsp = false;\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7665,7 +7698,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1690,
+        "x": 1710,
         "y": 4920,
         "wires": [
             [
@@ -7684,7 +7717,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1500,
+        "x": 1520,
         "y": 4920,
         "wires": [
             [
@@ -7698,7 +7731,7 @@
         "z": "4bc72a1112cb448c",
         "g": "0d874ecb6382fbda",
         "name": "routine - illuminance",
-        "func": "msg.rsp = true;\n\n// Check done in first step, just disable trigger if it's not active in scene\nif (msg.scene.illuminance === 0 && msg.trigger.element === 'illuminance') {\n\n    msg.rsp = false;\n}\n\nnode.status({ text: msg.scene.scene + ' - ' + msg.scene.pilot + ' - ' + msg.trigger.value });\n\nreturn msg;",
+        "func": "msg.rsp = true;\n\n// Check done in first step, just disable trigger if it's not active in scene\nif (msg.scene.illuminance === 0 && msg.trigger.element === 'illuminance') {\n\n    msg.rsp = false;\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7746,7 +7779,7 @@
         "z": "4bc72a1112cb448c",
         "g": "5d14bfa4666ea4a0",
         "name": "routine - darkness",
-        "func": "msg.rsp = true;\n\n//TODO: to test\n\n// Check done in first step, just disable trigger if it's not active in scene\nif (msg.scene.darkness === 0 && msg.trigger.element === 'illuminance') {\n\n    msg.rsp = false;\n}\n\nnode.status({ text: msg.scene.scene + ' - ' + msg.scene.pilot + ' - ' + msg.trigger.value });\n\nreturn msg;",
+        "func": "msg.rsp = true;\n\n//TODO: to test\n\n// Check done in first step, just disable trigger if it's not active in scene\nif (msg.scene.darkness === 0 && msg.trigger.element === 'illuminance') {\n\n    msg.rsp = false;\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7801,11 +7834,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2510,
+        "x": 2530,
         "y": 4920,
         "wires": [
             [
-                "9a0419834be9dd38"
+                "50c4cf1821b85470"
             ]
         ]
     },
@@ -7822,7 +7855,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2110,
+        "x": 2130,
         "y": 4920,
         "wires": [
             [
@@ -7841,7 +7874,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1900,
+        "x": 1920,
         "y": 4920,
         "wires": [
             [
@@ -7860,7 +7893,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 2310,
+        "x": 2330,
         "y": 4920,
         "wires": [
             [
@@ -7874,7 +7907,7 @@
         "z": "4bc72a1112cb448c",
         "g": "7270bddaa595d8b8",
         "name": "routine - nocturnal",
-        "func": "msg.rsp = true;\n\n// Bloc high level pilot if it's night\nif (msg.scene.nocturnal === 1 && msg.scene.pilot == true) {\n    let nycthemer = global.get('entity.dknr_domotic_nycthemer', 'memoryOnly') || '';\n    if (nycthemer !== 'night') {\n\n        msg.rsp = false;\n    }\n}\n\nnode.status({ text: msg.scene.scene + ' - ' + msg.scene.pilot + ' - ' + msg.trigger.value });\n\nreturn msg;",
+        "func": "msg.rsp = true;\n\n// Bloc high level pilot if it's night\nif (msg.scene.nocturnal === 1 && msg.payload == true) {\n    let nycthemer = global.get('entity.dknr_domotic_nycthemer', 'memoryOnly') || '';\n    if (nycthemer !== 'night') {\n\n        msg.rsp = false;\n    }\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7927,7 +7960,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 710,
+        "x": 730,
         "y": 4920,
         "wires": [
             [
@@ -7948,7 +7981,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 910,
+        "x": 930,
         "y": 4920,
         "wires": [
             [
@@ -7966,7 +7999,7 @@
         "links": [
             "cc0a7c14f877c371"
         ],
-        "x": 3175,
+        "x": 3595,
         "y": 4920,
         "wires": []
     },
@@ -7976,7 +8009,7 @@
         "z": "4bc72a1112cb448c",
         "g": "541db6fc0af31daa",
         "name": "routine - duration",
-        "func": "msg.rsp = true;\n\n// TODO\n\nreturn msg;",
+        "func": "msg.rsp = true;\n\n// If duration is not set, do not take car of this routine\nif (msg.scene.duration === 0) {\n\n    return msg;\n}\n\nlet timer = global.get('timer', 'memoryOnly') || {};\n\nif (msg.payload === false) {\n    // If scene to off, remove timer\n    delete timer[msg.scene.scene][msg.target.uid];\n} else {\n    if (typeof timer[msg.scene.scene] !== 'object') {\n        timer[msg.scene.scene] = {};\n    }\n\n    // If scene to on, add timer\n    timer[msg.scene.scene][msg.target.uid] = (new Date()).getTime();\n}\n\nglobal.set('timer', timer, 'memoryOnly');\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -8017,6 +8050,97 @@
         "x": 495,
         "y": 5700,
         "wires": []
+    },
+    {
+        "id": "50c4cf1821b85470",
+        "type": "link call",
+        "z": "4bc72a1112cb448c",
+        "g": "322b1c739b2f530f",
+        "name": "",
+        "links": [
+            "8c92ae599f0c8ad6"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 2730,
+        "y": 4920,
+        "wires": [
+            [
+                "e8405f141198b63d"
+            ]
+        ]
+    },
+    {
+        "id": "e8405f141198b63d",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "322b1c739b2f530f",
+        "name": "rsp",
+        "func": "node.status({fill: msg.rsp ? 'green' : 'red'});\n\nif (msg.rsp) {\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2930,
+        "y": 4920,
+        "wires": [
+            [
+                "9a0419834be9dd38"
+            ]
+        ]
+    },
+    {
+        "id": "85d8c55fa28d753c",
+        "type": "inject",
+        "z": "4bc72a1112cb448c",
+        "g": "322b1c739b2f530f",
+        "name": "1min",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 4980,
+        "wires": [
+            [
+                "8b16a284a2dda0c0"
+            ]
+        ]
+    },
+    {
+        "id": "8b16a284a2dda0c0",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "322b1c739b2f530f",
+        "name": "data",
+        "func": "let timer = global.get('timer', 'memoryOnly') || {};\nlet now = (new Date()).getTime();\n\n// Loop timers\nfor (const s in timer) {\n    for (const e in timer[s]) {\n        // Get timer scene and target\n        let scene = global.get('scene[\"' + s + '\"][\"' + e + '\"]', 'memoryOnly');\n        let target = global.get('entity[\"' + e + '\"]', 'memoryOnly');\n\n        if (typeof scene === 'object' && typeof target === 'object') {\n            // Calculate end time\n            let time = timer[s][e] + (scene.duration *60 * 1000);\n            // Compare end time to now\n            if (time < now) {\n                // Create a message to pass to scene\n                let newMsg = {\n                    'topic': '',\n                    'payload': false,\n                    'trigger': {\n                        'uid': 'duration',\n                        'element': 'duration',\n                        'unit': target.unit,\n                        'value': 0\n                    },\n                    'scene': scene,\n                    'target': target\n                };\n\n                node.send([newMsg]);\n            }\n        } else {\n            // entity or scene no more exists\n            delete timer[s][e];\n            global.set('timer', timer, 'memoryOnly');\n        }\n    }\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 4980,
+        "wires": [
+            [
+                "5218157cce0290a0"
+            ]
+        ]
     },
     {
         "id": "d7bc8fc74bfc07cb",
@@ -10726,7 +10850,8 @@
             "825c2d70a0eda50b",
             "1da14302ac5ccefa",
             "7f38981a1a7a894f",
-            "46bfd2b0460b2723"
+            "46bfd2b0460b2723",
+            "9f06d30ea766a8fe"
         ],
         "x": 635,
         "y": 140,
@@ -10817,7 +10942,7 @@
             "6de461e4d754d7f9"
         ],
         "x": 145,
-        "y": 2300,
+        "y": 2360,
         "wires": [
             [
                 "64ccaeb92cf4dce0"
@@ -10836,7 +10961,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 320,
-        "y": 2300,
+        "y": 2360,
         "wires": [
             [
                 "2567eca3241f7ece"
@@ -10857,7 +10982,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2360,
+        "y": 2420,
         "wires": [
             [
                 "efd48922da0abebd"
@@ -10879,7 +11004,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1050,
-        "y": 2360,
+        "y": 2420,
         "wires": [
             [
                 "3fa5a229bc2295f8"
@@ -10900,7 +11025,7 @@
         "finalize": "",
         "libs": [],
         "x": 1250,
-        "y": 2360,
+        "y": 2420,
         "wires": [
             [
                 "ae2618b4f144243b"
@@ -10914,43 +11039,6 @@
         "g": "0a9a5f5f4e641599",
         "group": "3a30762508b6edae",
         "name": "scene - triggeradd - room",
-        "label": "",
-        "tooltip": "",
-        "order": 33,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "multiple": false,
-        "chips": false,
-        "clearable": false,
-        "options": [
-            {
-                "label": "",
-                "value": "",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "typeIsComboBox": true,
-        "msgTrigger": "onChange",
-        "x": 750,
-        "y": 2360,
-        "wires": [
-            [
-                "11815aab8b2a2e6f"
-            ]
-        ]
-    },
-    {
-        "id": "ab0d5f3d078b1b18",
-        "type": "ui-dropdown",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "group": "3a30762508b6edae",
-        "name": "scene - triggeradd - element",
         "label": "",
         "tooltip": "",
         "order": 34,
@@ -10973,45 +11061,21 @@
         "className": "",
         "typeIsComboBox": true,
         "msgTrigger": "onChange",
-        "x": 760,
+        "x": 750,
         "y": 2420,
         "wires": [
             [
-                "5a11361d68942e05"
+                "11815aab8b2a2e6f"
             ]
         ]
     },
     {
-        "id": "ae2618b4f144243b",
-        "type": "function",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "name": "data",
-        "func": "node.status({text: ''});\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\nlet elements = msg.dictionary.option_element;\nlet i = 0;\nlet dropdownOptions = [];\ndropdownOptions[i++] = {\n    'label': '',\n    'value': ''\n};\n\nfor (const e in elements) {\n    dropdownOptions[i++] = {\n        'label': elements[e],\n        'value': e\n    };\n}\nnode.status({text: i});\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.scene.triggeradd_element || 'Select trigger element',\n    'options': dropdownOptions\n}\n\nnode.send([msg, null]);\n\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send([null, msg])\n\nreturn;",
-        "outputs": 2,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 530,
-        "y": 2420,
-        "wires": [
-            [
-                "ab0d5f3d078b1b18"
-            ],
-            [
-                "acfcdbe385caefe8"
-            ]
-        ]
-    },
-    {
-        "id": "b27d7ed13f1eaaf6",
+        "id": "ab0d5f3d078b1b18",
         "type": "ui-dropdown",
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "group": "3a30762508b6edae",
-        "name": "scene - triggeradd - trigger",
+        "name": "scene - triggeradd - element",
         "label": "",
         "tooltip": "",
         "order": 35,
@@ -11038,17 +11102,17 @@
         "y": 2480,
         "wires": [
             [
-                "ff6d642c5b54d3ca"
+                "5a11361d68942e05"
             ]
         ]
     },
     {
-        "id": "acfcdbe385caefe8",
+        "id": "ae2618b4f144243b",
         "type": "function",
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "name": "data",
-        "func": "node.status({text: ''});\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\nlet room = flow.get('trigger[\"' + msg.hmi.id + '\"][\"room\"]', 'memoryOnly') || '--';\nlet element = flow.get('trigger[\"' + msg.hmi.id + '\"][\"element\"]', 'memoryOnly') || '--';\nlet names = global.get('name', 'memoryOnly') || {};\nlet entities = global.get('entity', 'memoryOnly') || {};\nlet i = 0;\nlet dropdownOptions = [];\ndropdownOptions[i++] = {\n    'label': '',\n    'value': ''\n};\n\nfor (const e in entities) {\n    if (entities[e]['hidden'] === 0 &&\n        entities[e]['room'] === room && \n        entities[e]['element'] === element\n    ) {\n        let name = names['entity'][entities[e]['uid']] || entities[e]['id'];\n        if (name === '' || name === entities[e]['id']) {\n            name = names['device'][entities[e]['parent']] || entities[e]['parent'];\n        }\n        dropdownOptions[i++] = {\n            'label': name,\n            'value': entities[e]['uid']\n        };\n    }\n}\nnode.status({text: i});\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.scene.triggeradd_trigger || 'Select trigger',\n    'options': dropdownOptions\n}\n\nnode.send([msg, null]);\n\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send([null, msg])\n\nreturn;",
+        "func": "node.status({text: ''});\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\nlet elements = msg.dictionary.option_element;\nlet i = 0;\nlet dropdownOptions = [];\ndropdownOptions[i++] = {\n    'label': '',\n    'value': ''\n};\n\nfor (const e in elements) {\n    dropdownOptions[i++] = {\n        'label': elements[e],\n        'value': e\n    };\n}\nnode.status({text: i});\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.scene.triggeradd_element || 'Select trigger element',\n    'options': dropdownOptions\n}\n\nnode.send([msg, null]);\n\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send([null, msg])\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -11059,145 +11123,20 @@
         "y": 2480,
         "wires": [
             [
-                "b27d7ed13f1eaaf6"
+                "ab0d5f3d078b1b18"
             ],
-            [
-                "1e5ffa8f8a8fbaa1"
-            ]
-        ]
-    },
-    {
-        "id": "5a11361d68942e05",
-        "type": "link call",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "name": "",
-        "links": [
-            "56e6a7b9b0e66451"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 1050,
-        "y": 2420,
-        "wires": [
-            [
-                "22cb95146936e775"
-            ]
-        ]
-    },
-    {
-        "id": "22cb95146936e775",
-        "type": "function",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "name": "data",
-        "func": "node.status({text: ''});\nif (msg.payload === '') {\n\n    return;\n}\n\n// raz\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send(msg);\n\n//form\nnode.status({ text: msg.payload });\n\nlet data = flow.get('trigger[\"' + msg.hmi.id + '\"]', 'memoryOnly') || {};\ndata.element = msg.payload;\nflow.set('trigger[\"' + msg.hmi.id + '\"]', data, 'memoryOnly');\n\nmsg.class = '';\nmsg.enabled = true;\nmsg.payload = '';\n\nawait new Promise(resolve => setTimeout(resolve, 50)); // wait 50ms\nnode.send(msg);\n\nreturn;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1250,
-        "y": 2420,
-        "wires": [
             [
                 "acfcdbe385caefe8"
             ]
         ]
     },
     {
-        "id": "ff6d642c5b54d3ca",
-        "type": "link call",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "name": "",
-        "links": [
-            "56e6a7b9b0e66451"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 1050,
-        "y": 2480,
-        "wires": [
-            [
-                "94cae51ea6349dec"
-            ]
-        ]
-    },
-    {
-        "id": "94cae51ea6349dec",
-        "type": "function",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "name": "data",
-        "func": "node.status({text: ''});\nif (msg.payload === '') {\n\n    return;\n}\n\n// raz\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send(msg);\n\n//form\nnode.status({ text: msg.payload });\n\nlet data = flow.get('trigger[\"' + msg.hmi.id + '\"]', 'memoryOnly') || {};\ndata.trigger = msg.payload;\nflow.set('trigger[\"' + msg.hmi.id + '\"]', data, 'memoryOnly');\n\nmsg.class = '';\nmsg.enabled = true;\nmsg.payload = '';\n\nawait new Promise(resolve => setTimeout(resolve, 50));\nnode.send(msg);\n\nreturn;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1250,
-        "y": 2480,
-        "wires": [
-            [
-                "1e5ffa8f8a8fbaa1"
-            ]
-        ]
-    },
-    {
-        "id": "0297b4144c2e6d81",
-        "type": "function",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "name": "data",
-        "func": "if (typeof msg.hmi.id === 'string' && msg.hmi.id !== '') {\n    // clear\n    flow.set('trigger[\"' + msg.hmi.id + '\"]', {...global.get('describe.template.trigger', 'memoryOnly') || {}}, 'memoryOnly');\n}\n\nawait new Promise(resolve => setTimeout(resolve, 50));\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1250,
-        "y": 2300,
-        "wires": [
-            [
-                "3f1e50c7c7349c30"
-            ]
-        ]
-    },
-    {
-        "id": "1e5ffa8f8a8fbaa1",
-        "type": "function",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "name": "data",
-        "func": "node.status({text: ''});\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\nlet scenes = global.get('scene', 'memoryOnly') || {};\nlet i = 0;\nlet dropdownOptions = [];\ndropdownOptions[i++] = {\n    'label': '',\n    'value': ''\n};\n\nfor (const s in scenes) {\n    dropdownOptions[i++] = {\n        'label': msg.dictionary.option_scene[s] || s,\n        'value': s\n    };\n}\nnode.status({text: i});\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.scene.triggeradd_scene || 'Select scene',\n    'options': dropdownOptions\n}\n\nnode.send([msg, null]);\n\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send([null, msg])\n\nreturn;",
-        "outputs": 2,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 530,
-        "y": 2540,
-        "wires": [
-            [
-                "77d1d28d5d82cda5"
-            ],
-            [
-                "aa089ac147c0b0dd"
-            ]
-        ]
-    },
-    {
-        "id": "77d1d28d5d82cda5",
+        "id": "b27d7ed13f1eaaf6",
         "type": "ui-dropdown",
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "group": "3a30762508b6edae",
-        "name": "scene - triggeradd - scene",
+        "name": "scene - triggeradd - trigger",
         "label": "",
         "tooltip": "",
         "order": 36,
@@ -11220,8 +11159,194 @@
         "className": "",
         "typeIsComboBox": true,
         "msgTrigger": "onChange",
-        "x": 750,
+        "x": 760,
         "y": 2540,
+        "wires": [
+            [
+                "ff6d642c5b54d3ca"
+            ]
+        ]
+    },
+    {
+        "id": "acfcdbe385caefe8",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "name": "data",
+        "func": "node.status({text: ''});\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\nlet room = flow.get('trigger[\"' + msg.hmi.id + '\"][\"room\"]', 'memoryOnly') || '--';\nlet element = flow.get('trigger[\"' + msg.hmi.id + '\"][\"element\"]', 'memoryOnly') || '--';\nlet names = global.get('name', 'memoryOnly') || {};\nlet entities = global.get('entity', 'memoryOnly') || {};\nlet i = 0;\nlet dropdownOptions = [];\ndropdownOptions[i++] = {\n    'label': '',\n    'value': ''\n};\n\nfor (const e in entities) {\n    if (entities[e]['hidden'] === 0 &&\n        entities[e]['room'] === room && \n        entities[e]['element'] === element\n    ) {\n        let name = names['entity'][entities[e]['uid']] || entities[e]['id'];\n        if (name === '' || name === entities[e]['id']) {\n            name = names['device'][entities[e]['parent']] || entities[e]['parent'];\n        }\n        dropdownOptions[i++] = {\n            'label': name,\n            'value': entities[e]['uid']\n        };\n    }\n}\nnode.status({text: i});\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.scene.triggeradd_trigger || 'Select trigger',\n    'options': dropdownOptions\n}\n\nnode.send([msg, null]);\n\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send([null, msg])\n\nreturn;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 2540,
+        "wires": [
+            [
+                "b27d7ed13f1eaaf6"
+            ],
+            [
+                "1e5ffa8f8a8fbaa1"
+            ]
+        ]
+    },
+    {
+        "id": "5a11361d68942e05",
+        "type": "link call",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "name": "",
+        "links": [
+            "56e6a7b9b0e66451"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1050,
+        "y": 2480,
+        "wires": [
+            [
+                "22cb95146936e775"
+            ]
+        ]
+    },
+    {
+        "id": "22cb95146936e775",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "name": "data",
+        "func": "node.status({text: ''});\nif (msg.payload === '') {\n\n    return;\n}\n\n// raz\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send(msg);\n\n//form\nnode.status({ text: msg.payload });\n\nlet data = flow.get('trigger[\"' + msg.hmi.id + '\"]', 'memoryOnly') || {};\ndata.element = msg.payload;\nflow.set('trigger[\"' + msg.hmi.id + '\"]', data, 'memoryOnly');\n\nmsg.class = '';\nmsg.enabled = true;\nmsg.payload = '';\n\nawait new Promise(resolve => setTimeout(resolve, 50)); // wait 50ms\nnode.send(msg);\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 2480,
+        "wires": [
+            [
+                "acfcdbe385caefe8"
+            ]
+        ]
+    },
+    {
+        "id": "ff6d642c5b54d3ca",
+        "type": "link call",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "name": "",
+        "links": [
+            "56e6a7b9b0e66451"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1050,
+        "y": 2540,
+        "wires": [
+            [
+                "94cae51ea6349dec"
+            ]
+        ]
+    },
+    {
+        "id": "94cae51ea6349dec",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "name": "data",
+        "func": "node.status({text: ''});\nif (msg.payload === '') {\n\n    return;\n}\n\n// raz\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send(msg);\n\n//form\nnode.status({ text: msg.payload });\n\nlet data = flow.get('trigger[\"' + msg.hmi.id + '\"]', 'memoryOnly') || {};\ndata.trigger = msg.payload;\nflow.set('trigger[\"' + msg.hmi.id + '\"]', data, 'memoryOnly');\n\nmsg.class = '';\nmsg.enabled = true;\nmsg.payload = '';\n\nawait new Promise(resolve => setTimeout(resolve, 50));\nnode.send(msg);\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 2540,
+        "wires": [
+            [
+                "1e5ffa8f8a8fbaa1"
+            ]
+        ]
+    },
+    {
+        "id": "0297b4144c2e6d81",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "name": "data",
+        "func": "if (typeof msg.hmi.id === 'string' && msg.hmi.id !== '') {\n    // clear\n    flow.set('trigger[\"' + msg.hmi.id + '\"]', {...global.get('describe.template.trigger', 'memoryOnly') || {}}, 'memoryOnly');\n}\n\nawait new Promise(resolve => setTimeout(resolve, 50));\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 2360,
+        "wires": [
+            [
+                "3f1e50c7c7349c30"
+            ]
+        ]
+    },
+    {
+        "id": "1e5ffa8f8a8fbaa1",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "name": "data",
+        "func": "node.status({text: ''});\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\nlet scenes = global.get('scene', 'memoryOnly') || {};\nlet i = 0;\nlet dropdownOptions = [];\ndropdownOptions[i++] = {\n    'label': '',\n    'value': ''\n};\n\nfor (const s in scenes) {\n    dropdownOptions[i++] = {\n        'label': msg.dictionary.option_scene[s] || s,\n        'value': s\n    };\n}\nnode.status({text: i});\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.scene.triggeradd_scene || 'Select scene',\n    'options': dropdownOptions\n}\n\nnode.send([msg, null]);\n\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send([null, msg])\n\nreturn;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 2600,
+        "wires": [
+            [
+                "77d1d28d5d82cda5"
+            ],
+            [
+                "aa089ac147c0b0dd"
+            ]
+        ]
+    },
+    {
+        "id": "77d1d28d5d82cda5",
+        "type": "ui-dropdown",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "group": "3a30762508b6edae",
+        "name": "scene - triggeradd - scene",
+        "label": "",
+        "tooltip": "",
+        "order": 37,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": true,
+        "msgTrigger": "onChange",
+        "x": 750,
+        "y": 2600,
         "wires": [
             [
                 "bcba6ada8afa36fe"
@@ -11240,7 +11365,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1050,
-        "y": 2540,
+        "y": 2600,
         "wires": [
             [
                 "7633be06242c6d21"
@@ -11261,7 +11386,7 @@
         "finalize": "",
         "libs": [],
         "x": 1250,
-        "y": 2540,
+        "y": 2600,
         "wires": [
             [
                 "aa089ac147c0b0dd"
@@ -11348,7 +11473,7 @@
         "z": "56c0b44ca387382c",
         "g": "810571340280cc3c",
         "name": "data",
-        "func": "node.status({text: ''});\nif (!msg.enabled) {\n\n    return msg;\n}\n\n// Reset\nflow.set('action[\"' + msg.hmi.id +'\"]', '', 'memoryOnly');\n\nlet actions = {\n    'sceneadd': msg.dictionary.scene.action_sceneadd || 'Add or edit scene',\n    'scenelist': msg.dictionary.scene.action_scenelist || 'List scenes',\n    'triggeradd': msg.dictionary.scene.action_triggeradd || 'Add triggers',\n    'triggerlist': msg.dictionary.scene.action_triggeradd || 'List triggers'\n};\n\nlet i = 0;\nlet dropdownOptions = [];\ndropdownOptions[i++] = {\n    'label': '',\n    'value': ''\n};\n\nfor (const a in actions) {\n    dropdownOptions[i++] = {\n        'label': actions[a],\n        'value': a\n    };\n}\nnode.status({text: i});\n\n//dropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.scene.action_select || 'Select an action',\n    'options': dropdownOptions\n}\n\n\nreturn msg;",
+        "func": "node.status({text: ''});\nif (!msg.enabled) {\n\n    return msg;\n}\n\n// Reset\nflow.set('action[\"' + msg.hmi.id +'\"]', '', 'memoryOnly');\n\nlet actions = {\n    'scenelist': msg.dictionary.scene.action_scenelist || 'List scenes',\n    'triggerlist': msg.dictionary.scene.action_triggerlist || 'List triggers',\n    'timerlist': msg.dictionary.scene.action_timerlist || 'List timers',\n    'sceneadd': msg.dictionary.scene.action_sceneadd || 'Add or edit scene',\n    'triggeradd': msg.dictionary.scene.action_triggeradd || 'Add or edit trigger'\n};\n\nlet i = 0;\nlet dropdownOptions = [];\ndropdownOptions[i++] = {\n    'label': '',\n    'value': ''\n};\n\nfor (const a in actions) {\n    dropdownOptions[i++] = {\n        'label': actions[a],\n        'value': a\n    };\n}\nnode.status({text: i});\n\n//dropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.scene.action_select || 'Select an action',\n    'options': dropdownOptions\n}\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -11452,7 +11577,8 @@
             "7b6e41bba4c46872",
             "825c2d70a0eda50b",
             "7f38981a1a7a894f",
-            "46bfd2b0460b2723"
+            "46bfd2b0460b2723",
+            "9f06d30ea766a8fe"
         ],
         "x": 1315,
         "y": 260,
@@ -11472,7 +11598,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2300,
+        "y": 2360,
         "wires": [
             [
                 "0297b4144c2e6d81"
@@ -11644,7 +11770,7 @@
         "z": "56c0b44ca387382c",
         "g": "82df6aae63bd1422",
         "name": "data",
-        "func": "node.status({text: ''});\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\nlet scene = flow.get('scene[\"' + msg.hmi.id + '\"][\"scene\"]', 'memoryOnly') || '--';\nlet elements = global.get('describe[\"scenes\"][\"' + scene + '\"][\"elements\"]', 'memoryOnly') || [];\n\nlet names = global.get('name', 'memoryOnly') || {};\nlet entities = global.get('entity', 'memoryOnly') || {};\n\nlet i = 0;\nlet dropdownOptions = [];\ndropdownOptions[i++] = {\n    'label': '',\n    'value': ''\n};\n\nfor (const e in entities) {\n    if (entities[e]['type'] === 'command' &&\n        entities[e]['hidden'] === 0 &&\n        elements.includes(entities[e]['element'])\n    ) {\n        let room = names['room'][entities[e]['room']] || entities[e]['room'];\n        let parent = names['device'][entities[e]['parent']] || entities[e]['parent'];\n        let name = names['entity'][entities[e]['uid']] || entities[e]['id'];\n        dropdownOptions[i++] = {\n            'label': room + ' / ' + parent + ' / ' + name,\n            'value': entities[e]['uid']\n        };\n    }\n}\nnode.status({text: i});\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.scene.sceneadd_entity || 'Select target entity of the scene',\n    'options': dropdownOptions\n}\n\n\nnode.send([msg, null]);\n\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send([null, msg])\n\nreturn;",
+        "func": "node.status({text: ''});\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\nlet scene = flow.get('scene[\"' + msg.hmi.id + '\"][\"scene\"]', 'memoryOnly') || '--';\nlet elements = global.get('describe[\"scenes\"][\"' + scene + '\"][\"elements\"]', 'memoryOnly') || [];\n\nlet names = global.get('name', 'memoryOnly') || {};\nlet entities = global.get('entity', 'memoryOnly') || {};\n\nlet i = 0;\nlet dropdownOptions = [];\ndropdownOptions[i++] = {\n    'label': '',\n    'value': ''\n};\n\nfor (const e in entities) {\n    if (entities[e]['type'] === 'command' &&\n        entities[e]['hidden'] === 0 &&\n        elements.includes(entities[e]['element'])\n    ) {\n        let room = names['room'][entities[e]['room']] || entities[e]['room'];\n        let parent = names['device'][entities[e]['parent']] || entities[e]['parent'];\n        let name = names['entity'][entities[e]['uid']] || parent;\n        dropdownOptions[i++] = {\n            'label': room + ' / ' + name,\n            'value': entities[e]['uid']\n        };\n    }\n}\nnode.status({text: i});\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.scene.sceneadd_entity || 'Select target entity of the scene',\n    'options': dropdownOptions\n}\n\n\nnode.send([msg, null]);\n\nmsg.class = 'remove';\nmsg.enabled = false;\nnode.send([null, msg])\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -11762,7 +11888,8 @@
                 "44a9b5bcb40bb174",
                 "4964d1c6d857847c",
                 "51e64a4caa163cdd",
-                "8c0c5d3bb65a9f64"
+                "8c0c5d3bb65a9f64",
+                "a1e13a3756555cc4"
             ]
         ]
     },
@@ -11794,7 +11921,7 @@
         "officon": "",
         "offcolor": "",
         "x": 770,
-        "y": 740,
+        "y": 800,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -11829,7 +11956,7 @@
         "officon": "",
         "offcolor": "",
         "x": 770,
-        "y": 800,
+        "y": 860,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -11848,7 +11975,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1070,
-        "y": 680,
+        "y": 740,
         "wires": [
             [
                 "971ba058b0ec97e4"
@@ -11869,7 +11996,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 740,
+        "y": 800,
         "wires": [
             [
                 "7a990ea667fe7cf6"
@@ -11893,7 +12020,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 860,
+        "y": 920,
         "wires": [
             [
                 "d75bf2579725af1f"
@@ -11932,7 +12059,7 @@
         "colorThumb": "",
         "showTextField": false,
         "x": 780,
-        "y": 860,
+        "y": 920,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -11968,7 +12095,7 @@
         "colorThumb": "",
         "showTextField": false,
         "x": 780,
-        "y": 920,
+        "y": 980,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -11989,7 +12116,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 980,
+        "y": 1040,
         "wires": [
             [
                 "3ac49d9c001b8389"
@@ -12026,7 +12153,7 @@
         "iconPosition": "left",
         "iconInnerPosition": "inside",
         "x": 770,
-        "y": 980,
+        "y": 1040,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -12060,7 +12187,7 @@
         "iconPosition": "left",
         "iconInnerPosition": "inside",
         "x": 770,
-        "y": 1040,
+        "y": 1100,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -12081,7 +12208,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 1220,
+        "y": 1280,
         "wires": [
             [
                 "d0c7b87e19dbcd9b"
@@ -12118,7 +12245,7 @@
         "iconPosition": "left",
         "iconInnerPosition": "inside",
         "x": 760,
-        "y": 1220,
+        "y": 1280,
         "wires": [
             [
                 "19a4011894c1a9be"
@@ -12152,7 +12279,7 @@
         "iconPosition": "left",
         "iconInnerPosition": "inside",
         "x": 760,
-        "y": 1280,
+        "y": 1340,
         "wires": [
             [
                 "19a4011894c1a9be"
@@ -12173,7 +12300,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 1100,
+        "y": 1160,
         "wires": [
             [
                 "5add4f69509b7c61"
@@ -12213,7 +12340,7 @@
         "typeIsComboBox": false,
         "msgTrigger": "onChange",
         "x": 770,
-        "y": 1100,
+        "y": 1160,
         "wires": [
             [
                 "19a4011894c1a9be"
@@ -12250,7 +12377,7 @@
         "typeIsComboBox": false,
         "msgTrigger": "onChange",
         "x": 770,
-        "y": 1160,
+        "y": 1220,
         "wires": [
             [
                 "19a4011894c1a9be"
@@ -12271,7 +12398,7 @@
         "finalize": "",
         "libs": [],
         "x": 1270,
-        "y": 680,
+        "y": 740,
         "wires": [
             [
                 "4b554a57706ba248"
@@ -12306,7 +12433,7 @@
         "officon": "",
         "offcolor": "",
         "x": 760,
-        "y": 1340,
+        "y": 1400,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -12327,7 +12454,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 1340,
+        "y": 1400,
         "wires": [
             [
                 "b164ea7d83833392"
@@ -12348,7 +12475,7 @@
         "finalize": "",
         "libs": [],
         "x": 1030,
-        "y": 740,
+        "y": 800,
         "wires": [
             [
                 "19a4011894c1a9be"
@@ -12383,7 +12510,7 @@
         "officon": "",
         "offcolor": "",
         "x": 760,
-        "y": 1400,
+        "y": 1460,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -12405,7 +12532,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1310,
-        "y": 740,
+        "y": 800,
         "wires": []
     },
     {
@@ -12422,7 +12549,7 @@
         "finalize": "",
         "libs": [],
         "x": 529.6173095703125,
-        "y": 1400.4423828125,
+        "y": 1460.4423828125,
         "wires": [
             [
                 "823538677472fe85"
@@ -12457,7 +12584,7 @@
         "officon": "",
         "offcolor": "",
         "x": 760,
-        "y": 1460,
+        "y": 1520,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -12478,7 +12605,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 1460,
+        "y": 1520,
         "wires": [
             [
                 "7ba2b7538313f754"
@@ -12513,7 +12640,7 @@
         "officon": "",
         "offcolor": "",
         "x": 760,
-        "y": 1520,
+        "y": 1580,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -12534,7 +12661,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 1520,
+        "y": 1580,
         "wires": [
             [
                 "4c785bcb5de607be"
@@ -12570,7 +12697,7 @@
         "colorThumb": "",
         "showTextField": false,
         "x": 760,
-        "y": 1580,
+        "y": 1640,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -12591,7 +12718,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 1580,
+        "y": 1640,
         "wires": [
             [
                 "2175f2ab97508f14"
@@ -12612,7 +12739,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 1640,
+        "y": 1700,
         "wires": [
             [
                 "a27b8e3d925973e6"
@@ -12648,7 +12775,7 @@
         "colorThumb": "",
         "showTextField": false,
         "x": 780,
-        "y": 1640,
+        "y": 1700,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -12669,7 +12796,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 1700,
+        "y": 1760,
         "wires": [
             [
                 "3a6204d2c51df3aa"
@@ -12705,7 +12832,7 @@
         "colorThumb": "",
         "showTextField": false,
         "x": 770,
-        "y": 1700,
+        "y": 1760,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -12741,7 +12868,7 @@
         "colorThumb": "",
         "showTextField": false,
         "x": 770,
-        "y": 1760,
+        "y": 1820,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -12777,7 +12904,7 @@
         "colorThumb": "",
         "showTextField": false,
         "x": 760,
-        "y": 1820,
+        "y": 1880,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -12798,7 +12925,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 1760,
+        "y": 1820,
         "wires": [
             [
                 "4744ecf4e024c429"
@@ -12819,7 +12946,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 1820,
+        "y": 1880,
         "wires": [
             [
                 "dc38ac715bb0bf9c"
@@ -12854,7 +12981,7 @@
         "officon": "",
         "offcolor": "",
         "x": 750,
-        "y": 1880,
+        "y": 1940,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -12875,7 +13002,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 1880,
+        "y": 1940,
         "wires": [
             [
                 "f0c45817e50295aa"
@@ -12911,7 +13038,7 @@
         "colorThumb": "",
         "showTextField": false,
         "x": 770,
-        "y": 1940,
+        "y": 2000,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -12932,7 +13059,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 1940,
+        "y": 2000,
         "wires": [
             [
                 "c3423d086410d36d"
@@ -12968,7 +13095,7 @@
         "colorThumb": "",
         "showTextField": false,
         "x": 750,
-        "y": 2000,
+        "y": 2060,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -12989,7 +13116,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2000,
+        "y": 2060,
         "wires": [
             [
                 "8d70884261d1f2da"
@@ -13025,7 +13152,7 @@
         "colorThumb": "",
         "showTextField": false,
         "x": 750,
-        "y": 2060,
+        "y": 2120,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -13046,7 +13173,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2060,
+        "y": 2120,
         "wires": [
             [
                 "3263d20900780876"
@@ -13082,7 +13209,7 @@
         "colorThumb": "",
         "showTextField": false,
         "x": 750,
-        "y": 2120,
+        "y": 2180,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -13103,7 +13230,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2120,
+        "y": 2180,
         "wires": [
             [
                 "d4f3a3489ac1c348"
@@ -13139,7 +13266,7 @@
         "colorThumb": "",
         "showTextField": false,
         "x": 750,
-        "y": 2180,
+        "y": 2240,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -13160,7 +13287,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2180,
+        "y": 2240,
         "wires": [
             [
                 "53e71c77a16629c7"
@@ -13195,7 +13322,7 @@
         "officon": "",
         "offcolor": "",
         "x": 760,
-        "y": 680,
+        "y": 740,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -13216,7 +13343,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 680,
+        "y": 740,
         "wires": [
             [
                 "3257d52092bce306"
@@ -13446,7 +13573,7 @@
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "name": "data",
-        "func": "node.status({text: ''});\nif (!msg.enabled) {\n\n    return msg;\n}\n\nlet triggers = global.get('trigger', 'memoryOnly') || {};\nlet trigger = flow.get('trigger[\"' + msg.hmi.id + '\"]', 'memoryOnly') || {};\nlet target = global.get('entity[\"' + trigger.target + '\"]');\nlet update = typeof triggers[trigger.trigger] === 'object' && typeof triggers[trigger.trigger][trigger.scene] === 'object' && typeof triggers[trigger.trigger][trigger.scene][trigger.target] === 'object' ? true : false;\n\ntrigger = { ...trigger, ...(update ? triggers[trigger.trigger][trigger.scene][trigger.target] : {}) };\nflow.set('trigger[\"' + msg.hmi.id + '\"]', trigger, 'memoryOnly');\n\nmsg.payload = '';\nmsg.update = update;\nmsg.trigger = trigger\nmsg.target = target;\n\nnode.status({text: msg.update ? 'update' : 'add'});\n\nreturn msg;",
+        "func": "node.status({text: ''});\nif (!msg.enabled) {\n\n    return msg;\n}\n\nlet triggers = global.get('trigger', 'memoryOnly') || {};\nlet trigger = flow.get('trigger[\"' + msg.hmi.id + '\"]', 'memoryOnly') || {};\nlet entity = global.get('entity[\"' + trigger.trigger + '\"]') || {};\nlet target = global.get('entity[\"' + trigger.target + '\"]');\nlet update = typeof triggers[trigger.trigger] === 'object' && typeof triggers[trigger.trigger][trigger.scene] === 'object' && typeof triggers[trigger.trigger][trigger.scene][trigger.target] === 'object' ? true : false;\n\ntrigger = { ...trigger, ...(update ? triggers[trigger.trigger][trigger.scene][trigger.target] : {}) };\nflow.set('trigger[\"' + msg.hmi.id + '\"]', trigger, 'memoryOnly');\n\nmsg.payload = '';\nmsg.update = update;\nmsg.entity = entity;\nmsg.trigger = trigger\nmsg.target = target;\n\nnode.status({text: msg.update ? 'update' : 'add'});\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -13454,7 +13581,7 @@
         "finalize": "",
         "libs": [],
         "x": 370,
-        "y": 2660,
+        "y": 2720,
         "wires": [
             [
                 "35c692b012987615",
@@ -13474,7 +13601,7 @@
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "name": "value",
-        "func": "if(!msg.enabled) {\n    msg.payload = false;\n\n    node.send([msg, msg]);\n    return;\n}\n\nif (['b', 'rb'].includes(msg.target.unit)) {\n    msg.payload = Boolean(msg.trigger.inon);\n    msg.ui_update = {\n        'label': msg.dictionary.scene.triggeradd_inon || 'Input value for high level'\n    };\n\n    node.send([msg, null]);\n\n    msg.payload = Boolean(msg.trigger.inoff);\n    msg.ui_update = {\n        'label': msg.dictionary.scene.triggeradd_inoff || 'Input value for low level'\n    };\n\n    node.send([null, msg]);\n}\n\nreturn;",
+        "func": "if(!msg.enabled) {\n    msg.payload = false;\n\n    node.send([msg, msg]);\n    return;\n}\n\nif (['b', 'rb'].includes(msg.entity.unit)) {\n    msg.payload = Boolean(msg.trigger.inon);\n    msg.ui_update = {\n        'label': msg.dictionary.scene.triggeradd_inonb || 'Input value for high level'\n    };\n\n    node.send([msg, null]);\n\n    msg.payload = Boolean(msg.trigger.inoff);\n    msg.ui_update = {\n        'label': msg.dictionary.scene.triggeradd_inoffb || 'Input value for low level'\n    };\n\n    node.send([null, msg]);\n}\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -13482,7 +13609,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2900,
+        "y": 2960,
         "wires": [
             [
                 "f46dd14ebf96f7ee"
@@ -13506,7 +13633,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2600,
+        "y": 2660,
         "wires": [
             [
                 "09d2c449c401d154"
@@ -13525,7 +13652,7 @@
         "name": "scene - triggeradd - target",
         "label": "",
         "tooltip": "",
-        "order": 37,
+        "order": 38,
         "width": "6",
         "height": "1",
         "passthru": false,
@@ -13546,7 +13673,7 @@
         "typeIsComboBox": true,
         "msgTrigger": "onChange",
         "x": 750,
-        "y": 2600,
+        "y": 2660,
         "wires": [
             [
                 "9880d7748fa4235f"
@@ -13565,7 +13692,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1050,
-        "y": 2600,
+        "y": 2660,
         "wires": [
             [
                 "eb6c339dfc1c2a60"
@@ -13586,7 +13713,7 @@
         "finalize": "",
         "libs": [],
         "x": 1250,
-        "y": 2600,
+        "y": 2660,
         "wires": [
             [
                 "ae51e215ca4ce7bc"
@@ -13601,47 +13728,12 @@
         "name": "scene - triggeradd - inon - binary",
         "label": "",
         "group": "3a30762508b6edae",
-        "order": 40,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "decouple": false,
-        "topic": "inon",
-        "topicType": "str",
-        "style": "",
-        "className": "",
-        "layout": "row-spread",
-        "clickableArea": "label",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "x": 770,
-        "y": 2900,
-        "wires": [
-            [
-                "9a7b9a6d2d24629a"
-            ]
-        ]
-    },
-    {
-        "id": "7576483ab18f8055",
-        "type": "ui-switch",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "name": "scene - triggeradd - inoff - binary",
-        "label": "",
-        "group": "3a30762508b6edae",
         "order": 41,
         "width": 0,
         "height": 0,
         "passthru": false,
         "decouple": false,
-        "topic": "inoff",
+        "topic": "inon",
         "topicType": "str",
         "style": "",
         "className": "",
@@ -13664,6 +13756,41 @@
         ]
     },
     {
+        "id": "7576483ab18f8055",
+        "type": "ui-switch",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "name": "scene - triggeradd - inoff - binary",
+        "label": "",
+        "group": "3a30762508b6edae",
+        "order": 42,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": false,
+        "topic": "inoff",
+        "topicType": "str",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "label",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 770,
+        "y": 3020,
+        "wires": [
+            [
+                "9a7b9a6d2d24629a"
+            ]
+        ]
+    },
+    {
         "id": "9a7b9a6d2d24629a",
         "type": "function",
         "z": "56c0b44ca387382c",
@@ -13677,7 +13804,7 @@
         "finalize": "",
         "libs": [],
         "x": 1010,
-        "y": 2840,
+        "y": 2900,
         "wires": [
             [
                 "6ab22375c63091ec"
@@ -13696,7 +13823,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1050,
-        "y": 2780,
+        "y": 2840,
         "wires": [
             [
                 "fc3b86c3b2f2e284"
@@ -13717,7 +13844,7 @@
         "finalize": "",
         "libs": [],
         "x": 1250,
-        "y": 2780,
+        "y": 2840,
         "wires": [
             [
                 "a466057f2126875d"
@@ -13738,7 +13865,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2660,
+        "y": 2720,
         "wires": [
             [
                 "4e940e2bed097b6b"
@@ -13757,7 +13884,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1050,
-        "y": 2660,
+        "y": 2720,
         "wires": [
             [
                 "85cda8aaae4f2153"
@@ -13778,7 +13905,7 @@
         "finalize": "",
         "libs": [],
         "x": 1250,
-        "y": 2660,
+        "y": 2720,
         "wires": [
             [
                 "6de461e4d754d7f9"
@@ -13792,518 +13919,6 @@
         "g": "0a9a5f5f4e641599",
         "group": "3a30762508b6edae",
         "name": "scene - triggeradd - save",
-        "label": "",
-        "order": 50,
-        "width": "2",
-        "height": "1",
-        "emulateClick": false,
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "iconPosition": "left",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "buttonColor": "",
-        "textColor": "",
-        "iconColor": "",
-        "enableClick": true,
-        "enablePointerdown": false,
-        "pointerdownPayload": "",
-        "pointerdownPayloadType": "str",
-        "enablePointerup": false,
-        "pointerupPayload": "",
-        "pointerupPayloadType": "str",
-        "x": 750,
-        "y": 2660,
-        "wires": [
-            [
-                "212963c2d77d719a"
-            ]
-        ]
-    },
-    {
-        "id": "6de461e4d754d7f9",
-        "type": "link out",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "name": "link out 1",
-        "mode": "link",
-        "links": [
-            "2d928a99443ec655",
-            "f4a2353e5f92576c"
-        ],
-        "x": 1375,
-        "y": 2660,
-        "wires": []
-    },
-    {
-        "id": "8d1d998dea792dbd",
-        "type": "function",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "name": "value",
-        "func": "if(!msg.enabled) {\n    msg.payload = false;\n\n    node.send([msg, msg]);\n    return;\n}\n\nif (['%', '8b'].includes(msg.target.unit)) {\n    msg.payload = Number(msg.trigger.inon);\n    msg.ui_update = {\n        'min': 0,\n        'max': msg.target.unit === '%' ? 100 : 255,\n        'step': 1,\n        'label': msg.dictionary.scene.sceneadd_inon || 'Input value for high level'\n    };\n\n    node.send([msg, null]);\n\n    msg.payload = Number(msg.trigger.inoff);\n    msg.ui_update = {\n        'min': 0,\n        'max': msg.target.unit === '%' ? 100 : 255,\n        'step': 1,\n        'label': msg.dictionary.scene.triggeradd_inoff || 'Input value for low level'\n    };\n\n    node.send([null, msg]);\n}\n\nreturn;",
-        "outputs": 2,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 530,
-        "y": 3020,
-        "wires": [
-            [
-                "42452070a1ddf1e6"
-            ],
-            [
-                "0c8d1b252e56bc7b"
-            ]
-        ]
-    },
-    {
-        "id": "42452070a1ddf1e6",
-        "type": "ui-slider",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "group": "3a30762508b6edae",
-        "name": "scene - triggeradd - inon - percent",
-        "label": "",
-        "tooltip": "",
-        "order": 42,
-        "width": "6",
-        "height": "1",
-        "passthru": false,
-        "outs": "end",
-        "topic": "inon",
-        "topicType": "str",
-        "thumbLabel": "always",
-        "showTicks": "false",
-        "min": 0,
-        "max": "100",
-        "step": 1,
-        "className": "",
-        "iconPrepend": "",
-        "iconAppend": "",
-        "color": "",
-        "colorTrack": "",
-        "colorThumb": "",
-        "showTextField": false,
-        "x": 780,
-        "y": 3020,
-        "wires": [
-            [
-                "9a7b9a6d2d24629a"
-            ]
-        ]
-    },
-    {
-        "id": "0c8d1b252e56bc7b",
-        "type": "ui-slider",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "group": "3a30762508b6edae",
-        "name": "scene - triggeradd - inoff - percent",
-        "label": "",
-        "tooltip": "",
-        "order": 43,
-        "width": "6",
-        "height": "1",
-        "passthru": false,
-        "outs": "end",
-        "topic": "inoff",
-        "topicType": "str",
-        "thumbLabel": "always",
-        "showTicks": "false",
-        "min": 0,
-        "max": "100",
-        "step": 1,
-        "className": "",
-        "iconPrepend": "",
-        "iconAppend": "",
-        "color": "",
-        "colorTrack": "",
-        "colorThumb": "",
-        "showTextField": false,
-        "x": 780,
-        "y": 3080,
-        "wires": [
-            [
-                "9a7b9a6d2d24629a"
-            ]
-        ]
-    },
-    {
-        "id": "bc979e0eebd8f9cf",
-        "type": "ui-text-input",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "group": "3a30762508b6edae",
-        "name": "scene - triggeradd - inon - number",
-        "label": "",
-        "order": 44,
-        "width": "6",
-        "height": "1",
-        "topic": "inon",
-        "topicType": "str",
-        "mode": "number",
-        "tooltip": "",
-        "delay": 300,
-        "passthru": false,
-        "sendOnDelay": true,
-        "sendOnBlur": true,
-        "sendOnEnter": true,
-        "className": "",
-        "clearable": false,
-        "sendOnClear": false,
-        "icon": "",
-        "iconPosition": "left",
-        "iconInnerPosition": "inside",
-        "x": 780,
-        "y": 3140,
-        "wires": [
-            [
-                "9a7b9a6d2d24629a"
-            ]
-        ]
-    },
-    {
-        "id": "ac5535b96559da6d",
-        "type": "ui-text-input",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "group": "3a30762508b6edae",
-        "name": "scene - triggeradd - inoff - number",
-        "label": "",
-        "order": 45,
-        "width": "6",
-        "height": "1",
-        "topic": "inoff",
-        "topicType": "str",
-        "mode": "number",
-        "tooltip": "",
-        "delay": 300,
-        "passthru": false,
-        "sendOnDelay": true,
-        "sendOnBlur": true,
-        "sendOnEnter": true,
-        "className": "",
-        "clearable": false,
-        "sendOnClear": false,
-        "icon": "",
-        "iconPosition": "left",
-        "iconInnerPosition": "inside",
-        "x": 780,
-        "y": 3200,
-        "wires": [
-            [
-                "9a7b9a6d2d24629a"
-            ]
-        ]
-    },
-    {
-        "id": "66dfed6aabfe271c",
-        "type": "ui-dropdown",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "group": "3a30762508b6edae",
-        "name": "scene - triggeradd - inon - enum",
-        "label": "",
-        "tooltip": "",
-        "order": 46,
-        "width": "6",
-        "height": "1",
-        "passthru": false,
-        "multiple": false,
-        "chips": false,
-        "clearable": false,
-        "options": [
-            {
-                "label": "",
-                "value": "",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "inon",
-        "topicType": "str",
-        "className": "",
-        "typeIsComboBox": false,
-        "msgTrigger": "onChange",
-        "x": 770,
-        "y": 3260,
-        "wires": [
-            [
-                "6ab22375c63091ec"
-            ]
-        ]
-    },
-    {
-        "id": "52cafddc760e8a64",
-        "type": "ui-dropdown",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "group": "3a30762508b6edae",
-        "name": "scene - triggeradd - inoff - enum",
-        "label": "",
-        "tooltip": "",
-        "order": 47,
-        "width": "6",
-        "height": "1",
-        "passthru": false,
-        "multiple": false,
-        "chips": false,
-        "clearable": false,
-        "options": [
-            {
-                "label": "",
-                "value": "",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "inoff",
-        "topicType": "str",
-        "className": "",
-        "typeIsComboBox": false,
-        "msgTrigger": "onChange",
-        "x": 770,
-        "y": 3320,
-        "wires": [
-            [
-                "6ab22375c63091ec"
-            ]
-        ]
-    },
-    {
-        "id": "b362f8df3c182707",
-        "type": "ui-text-input",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "group": "3a30762508b6edae",
-        "name": "scene - triggeradd - inon - text",
-        "label": "",
-        "order": 48,
-        "width": "6",
-        "height": "1",
-        "topic": "inon",
-        "topicType": "str",
-        "mode": "text",
-        "tooltip": "",
-        "delay": 300,
-        "passthru": false,
-        "sendOnDelay": true,
-        "sendOnBlur": true,
-        "sendOnEnter": true,
-        "className": "",
-        "clearable": false,
-        "sendOnClear": false,
-        "icon": "",
-        "iconPosition": "left",
-        "iconInnerPosition": "inside",
-        "x": 770,
-        "y": 3380,
-        "wires": [
-            [
-                "6ab22375c63091ec"
-            ]
-        ]
-    },
-    {
-        "id": "35f4233f429f1612",
-        "type": "ui-text-input",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "group": "3a30762508b6edae",
-        "name": "scene - triggeradd - inoff - text",
-        "label": "",
-        "order": 49,
-        "width": "6",
-        "height": "1",
-        "topic": "inoff",
-        "topicType": "str",
-        "mode": "text",
-        "tooltip": "",
-        "delay": 300,
-        "passthru": false,
-        "sendOnDelay": true,
-        "sendOnBlur": true,
-        "sendOnEnter": true,
-        "className": "",
-        "clearable": false,
-        "sendOnClear": false,
-        "icon": "",
-        "iconPosition": "left",
-        "iconInnerPosition": "inside",
-        "x": 770,
-        "y": 3440,
-        "wires": [
-            [
-                "6ab22375c63091ec"
-            ]
-        ]
-    },
-    {
-        "id": "8a1ebd93cd9a9a38",
-        "type": "function",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "name": "value",
-        "func": "if(!msg.enabled) {\n    msg.payload = false;\n\n    node.send([msg, msg]);\n    return;\n}\n\nif (['°C', '°F', 'mA', 'A', 'mW', 'W', 'kW', 'MW', 'mWh', 'Wh', 'kWh', 'MWh', 'mVA', 'VA', 'lx', 'ppm', 'n', 's', 'ms'].includes(msg.target.unit)) {\n    msg.payload = Number(msg.trigger.inon);\n    msg.ui_update = {\n        'min': 0,\n        'max': msg.target.unit === '%' ? 100 : 255,\n        'step': 1,\n        'label': msg.dictionary.scene.sceneadd_inon || 'Input value for high level'\n    };\n\n    node.send([msg, null]);\n\n    msg.payload = Number(msg.trigger.inoff);\n    msg.ui_update = {\n        'min': 0,\n        'max': msg.target.unit === '%' ? 100 : 255,\n        'step': 1,\n        'label': msg.dictionary.scene.triggeradd_inoff || 'Input value for low level'\n    };\n\n    node.send([null, msg]);\n}\n\nreturn;",
-        "outputs": 2,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 530,
-        "y": 3140,
-        "wires": [
-            [
-                "bc979e0eebd8f9cf"
-            ],
-            [
-                "ac5535b96559da6d"
-            ]
-        ]
-    },
-    {
-        "id": "9291b3bf3aa25f9a",
-        "type": "function",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "name": "value",
-        "func": "if (!msg.enabled) {\n    msg.payload = '';\n\n    node.send([msg, msg]);\n\n    return;\n}\n\n// Enum\nif (['enum'].includes(msg.target.unit)) {\n\n    let enums = global.get('describe[\"' + msg.target.source + '\"][\"' + msg.target.id + '\"]', 'memoryOnly') || {};\n    let i = 0;\n\n    let dropdownOptions = [];\n    for (const e in enums) {\n        dropdownOptions[i++] = {\n            'label': enums[e][1],\n            'value': e\n        };\n    }\n\n    msg.payload = msg.trigger.inon;\n    msg.ui_update = {\n        'label': msg.dictionary.scene.triggeradd_inon || 'Input value for high level'\n    };\n    msg.ui_update.options = dropdownOptions;\n\n    node.send([msg, null]);\n\n    msg.payload = msg.trigger.inoff;\n    msg.ui_update = {\n        'label': msg.dictionary.scene.triggeradd_inoff || 'Input value for low level'\n    };\n    msg.ui_update.options = dropdownOptions;\n\n    node.send([null, msg]);\n}\n\nreturn;",
-        "outputs": 2,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 530,
-        "y": 3260,
-        "wires": [
-            [
-                "66dfed6aabfe271c"
-            ],
-            [
-                "52cafddc760e8a64"
-            ]
-        ]
-    },
-    {
-        "id": "d5239b98c9a6fc21",
-        "type": "function",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "name": "value",
-        "func": "if (!msg.enabled) {\n\n    node.send([msg, msg]);\n\n    return;\n}\n\n// Text\nif (['text'].includes(msg.target.unit)) {\n    msg.payload = msg.trigger.inon;\n    msg.ui_update = {\n        'label': msg.dictionary.scene.triggeradd_inon || 'Input value for high level'\n    };\n\n    node.send([msg, null]);\n\n    msg.payload = msg.trigger.inoff;\n    msg.ui_update = {\n        'label': msg.dictionary.scene.triggeradd_inoff || 'Input value for low level'\n    };\n\n    node.send([null, msg]);\n}\n\n\nreturn;",
-        "outputs": 2,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 530,
-        "y": 3380,
-        "wires": [
-            [
-                "b362f8df3c182707"
-            ],
-            [
-                "35f4233f429f1612"
-            ]
-        ]
-    },
-    {
-        "id": "a466057f2126875d",
-        "type": "debug",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "name": "scene - triggeradd",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1290,
-        "y": 2840,
-        "wires": []
-    },
-    {
-        "id": "31a058d2309e20b6",
-        "type": "link call",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "name": "",
-        "links": [
-            "56e6a7b9b0e66451"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 1050,
-        "y": 2720,
-        "wires": [
-            [
-                "1a6c82ac11c24c9f"
-            ]
-        ]
-    },
-    {
-        "id": "b843242d3b6bb11a",
-        "type": "function",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "name": "value",
-        "func": "if(!msg.enabled) {\n\n    msg.payload = false;\n    return msg;\n}\n\nif (msg.update) {\n    msg.payload = true;\n    msg.ui_update = {\n        'label': msg.dictionary.scene.triggeradd_delete || 'Delete'\n    };\n\n    return msg;\n}\n\nreturn;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 530,
-        "y": 2720,
-        "wires": [
-            [
-                "9b7e566f7c1f5054"
-            ]
-        ]
-    },
-    {
-        "id": "1a6c82ac11c24c9f",
-        "type": "function",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "name": "data",
-        "func": "let triggers = global.get('trigger', 'memoryOnly') || {};\nlet trigger = flow.get('trigger[\"' + msg.hmi.id + '\"]', 'memoryOnly') || {};\n\ndelete triggers[trigger.trigger][trigger.scene][trigger.trigger];\nglobal.set('trigger', triggers, 'memoryOnly');\n\nmsg.enabled = true;\nmsg.payload = msg.dictionary.scene.triggeradd_delete_success || 'Successfully deleted';\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1250,
-        "y": 2720,
-        "wires": [
-            [
-                "6de461e4d754d7f9"
-            ]
-        ]
-    },
-    {
-        "id": "9b7e566f7c1f5054",
-        "type": "ui-button",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "group": "3a30762508b6edae",
-        "name": "scene - triggeradd - delete",
         "label": "",
         "order": 51,
         "width": "2",
@@ -14333,6 +13948,518 @@
         "y": 2720,
         "wires": [
             [
+                "212963c2d77d719a"
+            ]
+        ]
+    },
+    {
+        "id": "6de461e4d754d7f9",
+        "type": "link out",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "2d928a99443ec655",
+            "f4a2353e5f92576c"
+        ],
+        "x": 1375,
+        "y": 2720,
+        "wires": []
+    },
+    {
+        "id": "8d1d998dea792dbd",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "name": "value",
+        "func": "if(!msg.enabled) {\n    msg.payload = false;\n\n    node.send([msg, msg]);\n    return;\n}\n\nif (['%', '8b'].includes(msg.entity.unit)) {\n    msg.payload = Number(msg.trigger.inon);\n    msg.ui_update = {\n        'min': 0,\n        'max': msg.entity.unit === '%' ? 100 : 255,\n        'step': 1,\n        'label': msg.dictionary.scene.sceneadd_inon || 'Minimal input value for high level'\n    };\n\n    node.send([msg, null]);\n\n    msg.payload = Number(msg.trigger.inoff);\n    msg.ui_update = {\n        'min': 0,\n        'max': msg.entity.unit === '%' ? 100 : 255,\n        'step': 1,\n        'label': msg.dictionary.scene.triggeradd_inoff || 'Maximal input value for low level'\n    };\n\n    node.send([null, msg]);\n}\n\nreturn;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 3080,
+        "wires": [
+            [
+                "42452070a1ddf1e6"
+            ],
+            [
+                "0c8d1b252e56bc7b"
+            ]
+        ]
+    },
+    {
+        "id": "42452070a1ddf1e6",
+        "type": "ui-slider",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "group": "3a30762508b6edae",
+        "name": "scene - triggeradd - inon - percent",
+        "label": "",
+        "tooltip": "",
+        "order": 43,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "outs": "end",
+        "topic": "inon",
+        "topicType": "str",
+        "thumbLabel": "always",
+        "showTicks": "false",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "iconPrepend": "",
+        "iconAppend": "",
+        "color": "",
+        "colorTrack": "",
+        "colorThumb": "",
+        "showTextField": false,
+        "x": 780,
+        "y": 3080,
+        "wires": [
+            [
+                "9a7b9a6d2d24629a"
+            ]
+        ]
+    },
+    {
+        "id": "0c8d1b252e56bc7b",
+        "type": "ui-slider",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "group": "3a30762508b6edae",
+        "name": "scene - triggeradd - inoff - percent",
+        "label": "",
+        "tooltip": "",
+        "order": 44,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "outs": "end",
+        "topic": "inoff",
+        "topicType": "str",
+        "thumbLabel": "always",
+        "showTicks": "false",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "iconPrepend": "",
+        "iconAppend": "",
+        "color": "",
+        "colorTrack": "",
+        "colorThumb": "",
+        "showTextField": false,
+        "x": 780,
+        "y": 3140,
+        "wires": [
+            [
+                "9a7b9a6d2d24629a"
+            ]
+        ]
+    },
+    {
+        "id": "bc979e0eebd8f9cf",
+        "type": "ui-text-input",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "group": "3a30762508b6edae",
+        "name": "scene - triggeradd - inon - number",
+        "label": "",
+        "order": 45,
+        "width": "6",
+        "height": "1",
+        "topic": "inon",
+        "topicType": "str",
+        "mode": "number",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": false,
+        "sendOnDelay": true,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 780,
+        "y": 3200,
+        "wires": [
+            [
+                "9a7b9a6d2d24629a"
+            ]
+        ]
+    },
+    {
+        "id": "ac5535b96559da6d",
+        "type": "ui-text-input",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "group": "3a30762508b6edae",
+        "name": "scene - triggeradd - inoff - number",
+        "label": "",
+        "order": 46,
+        "width": "6",
+        "height": "1",
+        "topic": "inoff",
+        "topicType": "str",
+        "mode": "number",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": false,
+        "sendOnDelay": true,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 780,
+        "y": 3260,
+        "wires": [
+            [
+                "9a7b9a6d2d24629a"
+            ]
+        ]
+    },
+    {
+        "id": "66dfed6aabfe271c",
+        "type": "ui-dropdown",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "group": "3a30762508b6edae",
+        "name": "scene - triggeradd - inon - enum",
+        "label": "",
+        "tooltip": "",
+        "order": 47,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "inon",
+        "topicType": "str",
+        "className": "",
+        "typeIsComboBox": false,
+        "msgTrigger": "onChange",
+        "x": 770,
+        "y": 3320,
+        "wires": [
+            [
+                "6ab22375c63091ec"
+            ]
+        ]
+    },
+    {
+        "id": "52cafddc760e8a64",
+        "type": "ui-dropdown",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "group": "3a30762508b6edae",
+        "name": "scene - triggeradd - inoff - enum",
+        "label": "",
+        "tooltip": "",
+        "order": 48,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "inoff",
+        "topicType": "str",
+        "className": "",
+        "typeIsComboBox": false,
+        "msgTrigger": "onChange",
+        "x": 770,
+        "y": 3380,
+        "wires": [
+            [
+                "6ab22375c63091ec"
+            ]
+        ]
+    },
+    {
+        "id": "b362f8df3c182707",
+        "type": "ui-text-input",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "group": "3a30762508b6edae",
+        "name": "scene - triggeradd - inon - text",
+        "label": "",
+        "order": 49,
+        "width": "6",
+        "height": "1",
+        "topic": "inon",
+        "topicType": "str",
+        "mode": "text",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": false,
+        "sendOnDelay": true,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 770,
+        "y": 3440,
+        "wires": [
+            [
+                "6ab22375c63091ec"
+            ]
+        ]
+    },
+    {
+        "id": "35f4233f429f1612",
+        "type": "ui-text-input",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "group": "3a30762508b6edae",
+        "name": "scene - triggeradd - inoff - text",
+        "label": "",
+        "order": 50,
+        "width": "6",
+        "height": "1",
+        "topic": "inoff",
+        "topicType": "str",
+        "mode": "text",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": false,
+        "sendOnDelay": true,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 770,
+        "y": 3500,
+        "wires": [
+            [
+                "6ab22375c63091ec"
+            ]
+        ]
+    },
+    {
+        "id": "8a1ebd93cd9a9a38",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "name": "value",
+        "func": "if(!msg.enabled) {\n    msg.payload = false;\n\n    node.send([msg, msg]);\n    return;\n}\n\nif (['°C', '°F', 'mA', 'A', 'mW', 'W', 'kW', 'MW', 'mWh', 'Wh', 'kWh', 'MWh', 'mVA', 'VA', 'lx', 'ppm', 'n', 's', 'ms'].includes(msg.entity.unit)) {\n    msg.payload = Number(msg.trigger.inon);\n    msg.ui_update = {\n        'min': 0,\n        'max': msg.entity.unit === '%' ? 100 : 255,\n        'step': 1,\n        'label': msg.dictionary.scene.sceneadd_inon || 'Minimal input value for high level'\n    };\n\n    node.send([msg, null]);\n\n    msg.payload = Number(msg.trigger.inoff);\n    msg.ui_update = {\n        'min': 0,\n        'max': msg.entity.unit === '%' ? 100 : 255,\n        'step': 1,\n        'label': msg.dictionary.scene.triggeradd_inoff || 'maximal input value for low level'\n    };\n\n    node.send([null, msg]);\n}\n\nreturn;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 3200,
+        "wires": [
+            [
+                "bc979e0eebd8f9cf"
+            ],
+            [
+                "ac5535b96559da6d"
+            ]
+        ]
+    },
+    {
+        "id": "9291b3bf3aa25f9a",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "name": "value",
+        "func": "if (!msg.enabled) {\n    msg.payload = '';\n\n    node.send([msg, msg]);\n\n    return;\n}\n\n// Enum\nif (['enum'].includes(msg.entity.unit)) {\n\n    let enums = global.get('describe[\"' + msg.entity.source + '\"][\"' + msg.entity.id + '\"]', 'memoryOnly') || {};\n    let i = 0;\n    let dropdownOptions = [];\n    dropdownOptions[i++] = {\n        'label': '',\n        'value': ''\n    };\n\n    for (const e in enums) {\n        dropdownOptions[i++] = {\n            'label': enums[e][1],\n            'value': e\n        };\n    }\n\n    msg.payload = '';\n    msg.ui_update = {\n        'label': msg.dictionary.scene.triggeradd_inonb || 'Input value for high level'\n    };\n    msg.ui_update.options = dropdownOptions;\n\n    node.send([msg, null]);\n\n    msg.payload = '';\n    msg.ui_update = {\n        'label': msg.dictionary.scene.triggeradd_inoffb || 'Input value for low level'\n    };\n    msg.ui_update.options = dropdownOptions;\n\n    node.send([null, msg]);\n}\n\nreturn;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 3320,
+        "wires": [
+            [
+                "66dfed6aabfe271c"
+            ],
+            [
+                "52cafddc760e8a64"
+            ]
+        ]
+    },
+    {
+        "id": "d5239b98c9a6fc21",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "name": "value",
+        "func": "if (!msg.enabled) {\n\n    node.send([msg, msg]);\n\n    return;\n}\n\n// Text\nif (['text'].includes(msg.entity.unit)) {\n    msg.payload = msg.trigger.inon;\n    msg.ui_update = {\n        'label': msg.dictionary.scene.triggeradd_inonb || 'Input value for high level'\n    };\n\n    node.send([msg, null]);\n\n    msg.payload = msg.trigger.inoff;\n    msg.ui_update = {\n        'label': msg.dictionary.scene.triggeradd_inoffb || 'Input value for low level'\n    };\n\n    node.send([null, msg]);\n}\n\n\nreturn;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 3440,
+        "wires": [
+            [
+                "b362f8df3c182707"
+            ],
+            [
+                "35f4233f429f1612"
+            ]
+        ]
+    },
+    {
+        "id": "a466057f2126875d",
+        "type": "debug",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "name": "scene - triggeradd",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1290,
+        "y": 2900,
+        "wires": []
+    },
+    {
+        "id": "31a058d2309e20b6",
+        "type": "link call",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "name": "",
+        "links": [
+            "56e6a7b9b0e66451"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1050,
+        "y": 2780,
+        "wires": [
+            [
+                "1a6c82ac11c24c9f"
+            ]
+        ]
+    },
+    {
+        "id": "b843242d3b6bb11a",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "name": "value",
+        "func": "if(!msg.enabled) {\n\n    msg.payload = false;\n    return msg;\n}\n\nif (msg.update) {\n    msg.payload = true;\n    msg.ui_update = {\n        'label': msg.dictionary.scene.triggeradd_delete || 'Delete'\n    };\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 2780,
+        "wires": [
+            [
+                "9b7e566f7c1f5054"
+            ]
+        ]
+    },
+    {
+        "id": "1a6c82ac11c24c9f",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "name": "data",
+        "func": "let triggers = global.get('trigger', 'memoryOnly') || {};\nlet trigger = flow.get('trigger[\"' + msg.hmi.id + '\"]', 'memoryOnly') || {};\n\ndelete triggers[trigger.trigger][trigger.scene][trigger.trigger];\nglobal.set('trigger', triggers, 'memoryOnly');\n\nmsg.enabled = true;\nmsg.payload = msg.dictionary.scene.triggeradd_delete_success || 'Successfully deleted';\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 2780,
+        "wires": [
+            [
+                "6de461e4d754d7f9"
+            ]
+        ]
+    },
+    {
+        "id": "9b7e566f7c1f5054",
+        "type": "ui-button",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "group": "3a30762508b6edae",
+        "name": "scene - triggeradd - delete",
+        "label": "",
+        "order": 52,
+        "width": "2",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 750,
+        "y": 2780,
+        "wires": [
+            [
                 "31a058d2309e20b6"
             ]
         ]
@@ -14348,7 +14475,7 @@
             "5da931c9323d8033"
         ],
         "x": 145,
-        "y": 3560,
+        "y": 3620,
         "wires": [
             [
                 "a9e810108c841cb2"
@@ -14367,7 +14494,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 320,
-        "y": 3560,
+        "y": 3620,
         "wires": [
             [
                 "329710fd6a91787d"
@@ -14388,7 +14515,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 3560,
+        "y": 3620,
         "wires": [
             [
                 "cfee6a014e3e823b"
@@ -14403,7 +14530,7 @@
         "group": "3a30762508b6edae",
         "name": "scene - scenelist - table",
         "label": "",
-        "order": 52,
+        "order": 53,
         "width": 0,
         "height": 0,
         "maxrows": 0,
@@ -14459,7 +14586,7 @@
         "action": "replace",
         "className": "",
         "x": 750,
-        "y": 3560,
+        "y": 3620,
         "wires": [
             [
                 "362a4bd4cef94903"
@@ -14478,7 +14605,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1010,
-        "y": 3560,
+        "y": 3620,
         "wires": [
             [
                 "1238621625ac1387"
@@ -14499,7 +14626,7 @@
         "finalize": "",
         "libs": [],
         "x": 1210,
-        "y": 3560,
+        "y": 3620,
         "wires": [
             [
                 "7482fbd3b4a1a5ae"
@@ -14520,7 +14647,7 @@
             "f4a2353e5f92576c"
         ],
         "x": 1335,
-        "y": 3560,
+        "y": 3620,
         "wires": []
     },
     {
@@ -14537,7 +14664,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2780,
+        "y": 2840,
         "wires": [
             [
                 "5a84b17c0d618930"
@@ -14555,47 +14682,12 @@
         "name": "scene - triggeradd - outon",
         "label": "",
         "group": "3a30762508b6edae",
-        "order": 38,
-        "width": "6",
-        "height": "1",
-        "passthru": false,
-        "decouple": false,
-        "topic": "outon",
-        "topicType": "str",
-        "style": "",
-        "className": "",
-        "layout": "row-spread",
-        "clickableArea": "label",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "x": 750,
-        "y": 2780,
-        "wires": [
-            [
-                "9a7b9a6d2d24629a"
-            ]
-        ]
-    },
-    {
-        "id": "089ca9808005cd1d",
-        "type": "ui-switch",
-        "z": "56c0b44ca387382c",
-        "g": "0a9a5f5f4e641599",
-        "name": "scene - triggeradd - outoff",
-        "label": "",
-        "group": "3a30762508b6edae",
         "order": 39,
         "width": "6",
         "height": "1",
         "passthru": false,
         "decouple": false,
-        "topic": "outoff",
+        "topic": "outon",
         "topicType": "str",
         "style": "",
         "className": "",
@@ -14618,6 +14710,41 @@
         ]
     },
     {
+        "id": "089ca9808005cd1d",
+        "type": "ui-switch",
+        "z": "56c0b44ca387382c",
+        "g": "0a9a5f5f4e641599",
+        "name": "scene - triggeradd - outoff",
+        "label": "",
+        "group": "3a30762508b6edae",
+        "order": 40,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "decouple": false,
+        "topic": "outoff",
+        "topicType": "str",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "label",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 750,
+        "y": 2900,
+        "wires": [
+            [
+                "9a7b9a6d2d24629a"
+            ]
+        ]
+    },
+    {
         "id": "46bfd2b0460b2723",
         "type": "link in",
         "z": "56c0b44ca387382c",
@@ -14625,7 +14752,8 @@
         "name": "scene - triggerlist",
         "links": [
             "278344d6e03041b4",
-            "5da931c9323d8033"
+            "5da931c9323d8033",
+            "73f0eaa74faa52d8"
         ],
         "x": 145,
         "y": 3740,
@@ -14660,7 +14788,7 @@
         "z": "56c0b44ca387382c",
         "g": "5d38062b01fae17a",
         "name": "data",
-        "func": "await new Promise(resolve => setTimeout(resolve, 10));\nnode.status({ text: '' });\nif (!msg.enabled) {\n    msg.payload = [];\n\n    return msg;\n}\n\nlet action = flow.get('action[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--';\nif (action !== 'triggerlist') {\n\n    return;\n}\n\nnode.status({ text: action });\n\nlet trigger = global.get('trigger', 'memoryOnly') || {};\nlet names = global.get('name', 'memoryOnly') || {};\n\nlet i = 0;\nlet dropdownOptions = [];\n\nfor (const t in trigger) {\n    let tentity = global.get('entity[\"' + t + '\"]', 'memoryOnly');\n    if (typeof tentity === 'object') {\n        let troom = names['room'][tentity['room']] || tentity['room'];\n        let tname = names['entity'][tentity['uid']] || tentity['id'];\n        if (tname === '' || tname === tentity['id']) {\n            tname = names['device'][tentity['parent']] || tentity['parent'];\n        }\n\n        for (const s in trigger[t]) {\n            let scene_icon = global.get('describe[\"scenes\"][\"' + s + '\"][\"icons\"]', 'memoryOnly') || ['help', 'help'];\n    \n            for (const e in trigger[t][s]) {\n                let eentity = global.get('entity[\"' + e + '\"]', 'memoryOnly');\n                if (typeof eentity === 'object') {\n                    let eroom = names['room'][eentity['room']] || eentity['room'];\n                    let ename = names['entity'][eentity['uid']] || eentity['id'];\n                    if (ename === '' || ename === eentity['id']) {\n                        ename = names['device'][eentity['parent']] || eentity['parent'];\n                    }\n\n                    dropdownOptions[i++] = {\n                        'scene_icon': '<i class=\"icon-in-row mdi mdi-' + scene_icon[1] + '\" title=\"' + s + '\"></i>',\n                        'scene': trigger[t][s][e]['scene'],\n                        'trigger': t,\n                        'trigger_name': troom + ' / ' + tname + ' (' + tentity['element'] + ')',\n                        'target': e,\n                        'target_name': eroom + ' / ' + ename + ' (' + eentity['element'] + ')',\n                        'outon': Boolean(trigger[t][s][e]['outon']),\n                        'outoff': Boolean(trigger[t][s][e]['outoff']),\n                        'delete': msg.dictionary.scene.triggerlist_delete || 'Delete'\n                    };\n                }\n            }\n        }\n    }\n}\nnode.status({ text: i });\n\ndropdownOptions.sort((a, b) => a.trigger.localeCompare(b.trigger));\n\nmsg.payload = dropdownOptions;\nmsg.ui_update = {\n    'label': ''\n}\n\nawait new Promise(resolve => setTimeout(resolve, 250));\nreturn msg;",
+        "func": "await new Promise(resolve => setTimeout(resolve, 10));\nnode.status({ text: '' });\nif (!msg.enabled) {\n    msg.payload = [];\n\n    return msg;\n}\n\n\nlet action = flow.get('action[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--';\n// From sceneadd form\nif (typeof msg.scene === 'string' && typeof msg.entity === 'string') {\n    action = 'triggerlist';\n}\nif (action !== 'triggerlist') {\n\n    return;\n}\n\nnode.status({ text: action });\n\nlet trigger = global.get('trigger', 'memoryOnly') || {};\nlet names = global.get('name', 'memoryOnly') || {};\n\nlet i = 0;\nlet dropdownOptions = [];\n\nfor (const t in trigger) {\n    let tentity = global.get('entity[\"' + t + '\"]', 'memoryOnly');\n    if (typeof tentity === 'object') {\n        let troom = names['room'][tentity['room']] || tentity['room'];\n        let tname = names['entity'][tentity['uid']] || tentity['id'];\n        if (tname === '' || tname === tentity['id']) {\n            tname = names['device'][tentity['parent']] || tentity['parent'];\n        }\n\n        for (const s in trigger[t]) {\n            // From sceneadd form\n            if (typeof msg.scene === 'string' && msg.scene !== s) {\n                continue;\n            }\n\n            let scene_icon = global.get('describe[\"scenes\"][\"' + s + '\"][\"icons\"]', 'memoryOnly') || ['help', 'help'];\n    \n            for (const e in trigger[t][s]) {\n                // From sceneadd form\n                if (typeof msg.entity === 'string' && msg.entity !== e) {\n                    continue;\n                }\n\n                let eentity = global.get('entity[\"' + e + '\"]', 'memoryOnly');\n                if (typeof eentity === 'object') {\n                    let eroom = names['room'][eentity['room']] || eentity['room'];\n                    let ename = names['entity'][eentity['uid']] || eentity['id'];\n                    if (ename === '' || ename === eentity['id']) {\n                        ename = names['device'][eentity['parent']] || eentity['parent'];\n                    }\n\n                    dropdownOptions[i++] = {\n                        'scene_icon': '<i class=\"icon-in-row mdi mdi-' + scene_icon[1] + '\" title=\"' + s + '\"></i>',\n                        'scene': trigger[t][s][e]['scene'],\n                        'trigger': t,\n                        'trigger_name': troom + ' / ' + tname + ' (' + tentity['element'] + ')',\n                        'target': e,\n                        'target_name': eroom + ' / ' + ename + ' (' + eentity['element'] + ')',\n                        'outon': Boolean(trigger[t][s][e]['outon']),\n                        'outoff': Boolean(trigger[t][s][e]['outoff']),\n                        'delete': msg.dictionary.scene.triggerlist_delete || 'Delete'\n                    };\n                }\n            }\n        }\n    }\n}\nnode.status({ text: i });\n\ndropdownOptions.sort((a, b) => a.trigger.localeCompare(b.trigger));\n\nmsg.payload = dropdownOptions;\nmsg.ui_update = {\n    'label': ''\n}\n\nawait new Promise(resolve => setTimeout(resolve, 250));\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -14683,7 +14811,7 @@
         "group": "3a30762508b6edae",
         "name": "scene - triggerlist - table",
         "label": "",
-        "order": 53,
+        "order": 54,
         "width": 0,
         "height": 0,
         "maxrows": "50",
@@ -14779,7 +14907,7 @@
         "z": "56c0b44ca387382c",
         "g": "5d38062b01fae17a",
         "name": "data",
-        "func": "if (msg.action === 'button_click' && msg.column === 'delete') {\n    let triggers = global.get('trigger', 'memoryOnly') || {};\n\n    delete triggers[msg.payload.trigger][msg.payload.scene][msg.payload.target];\n    global.set('trigger', triggers, 'memoryOnly');\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.scene.scenelist_delete_success || 'Successfully deleted';\n\n    node.send([msg, null]);\n\n    msg.payload = '';    \n    await new Promise(resolve => setTimeout(resolve, 50));\n\n    node.send([null, msg]);\n}",
+        "func": "if (msg.action === 'button_click' && msg.column === 'delete') {\n    let triggers = global.get('trigger', 'memoryOnly') || {};\n\n    delete triggers[msg.payload.trigger][msg.payload.scene][msg.payload.target];\n    global.set('trigger', triggers, 'memoryOnly');\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.scene.triggerlist_delete_success || 'Successfully deleted';\n\n    node.send([msg, null]);\n\n    msg.payload = '';    \n    await new Promise(resolve => setTimeout(resolve, 50));\n\n    node.send([null, msg]);\n}",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -14809,6 +14937,280 @@
         ],
         "x": 1335,
         "y": 3740,
+        "wires": []
+    },
+    {
+        "id": "56c0df784932d3af",
+        "type": "ui-button",
+        "z": "56c0b44ca387382c",
+        "g": "82df6aae63bd1422",
+        "group": "3a30762508b6edae",
+        "name": "scene - sceneadd- list",
+        "label": "",
+        "order": 33,
+        "width": "2",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 740,
+        "y": 680,
+        "wires": [
+            [
+                "2c85d39ca0e3479a"
+            ]
+        ]
+    },
+    {
+        "id": "a1e13a3756555cc4",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "g": "82df6aae63bd1422",
+        "name": "value",
+        "func": "if(!msg.enabled) {\n\n    msg.payload = false;\n    return msg;\n}\n\nmsg.payload = true;\nmsg.ui_update = {\n    'label': msg.dictionary.scene.addscene_list || 'List triggers'\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 680,
+        "wires": [
+            [
+                "56c0df784932d3af"
+            ]
+        ]
+    },
+    {
+        "id": "2c85d39ca0e3479a",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "g": "82df6aae63bd1422",
+        "name": "data",
+        "func": "\nlet scene = flow.get('scene[\"' + msg.hmi.id + '\"]', 'memoryOnly') || {};\n\nmsg.class = '';\nmsg.enabled = true;\nmsg.scene = scene.scene;\nmsg.entity = scene.entity;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 680,
+        "wires": [
+            [
+                "73f0eaa74faa52d8"
+            ]
+        ]
+    },
+    {
+        "id": "73f0eaa74faa52d8",
+        "type": "link out",
+        "z": "56c0b44ca387382c",
+        "g": "82df6aae63bd1422",
+        "name": "scene - sceneadd - list",
+        "mode": "link",
+        "links": [
+            "46bfd2b0460b2723"
+        ],
+        "x": 1395,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "9f06d30ea766a8fe",
+        "type": "link in",
+        "z": "56c0b44ca387382c",
+        "g": "5ee9c437401835c9",
+        "name": "scene - timerlist",
+        "links": [
+            "278344d6e03041b4",
+            "5da931c9323d8033"
+        ],
+        "x": 145,
+        "y": 3860,
+        "wires": [
+            [
+                "0c12a7992e1ba4eb"
+            ]
+        ]
+    },
+    {
+        "id": "0c12a7992e1ba4eb",
+        "type": "link call",
+        "z": "56c0b44ca387382c",
+        "g": "5ee9c437401835c9",
+        "name": "",
+        "links": [
+            "5a1d16fa45e115fa"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 320,
+        "y": 3860,
+        "wires": [
+            [
+                "7a4670c83b542f34"
+            ]
+        ]
+    },
+    {
+        "id": "7a4670c83b542f34",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "g": "5ee9c437401835c9",
+        "name": "data",
+        "func": "await new Promise(resolve => setTimeout(resolve, 10));\nnode.status({ text: '' });\nif (!msg.enabled) {\n    msg.payload = [];\n\n    return msg;\n}\n\n\nlet action = flow.get('action[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--';\nif (action !== 'timerlist') {\n\n    return;\n}\n\nnode.status({ text: action });\n\nlet timer = global.get('timer', 'memoryOnly') || {};\nlet names = global.get('name', 'memoryOnly') || {};\nlet scenes = global.get('scene', 'memoryOnly') || {};\n\nlet i = 0;\nlet dropdownOptions = [];\n\nfor (const s in timer) {\n    let scene_icon = global.get('describe[\"scenes\"][\"' + s + '\"][\"icons\"]', 'memoryOnly') || ['help', 'help'];\n    \n    for (const e in timer[s]) {\n\n        let entity = global.get('entity[\"' + e + '\"]', 'memoryOnly');\n        if (typeof entity === 'object') {\n            let room = names['room'][entity['room']] || entity['room'];\n            let name = names['entity'][entity['uid']] || entity['id'];\n            if (name === '' || name === entity['id']) {\n                name = names['device'][entity['parent']] || entity['parent'];\n            }\n            let time = timer[s][e];\n            if (typeof scenes[s][e] === 'object') {\n                time = time + (scenes[s][e].duration * 60 * 1000);\n            }\n            time = (new Date(time)).toLocaleString(msg.dictionary.common.locales);\n\n            dropdownOptions[i++] = {\n                'scene_icon': '<i class=\"icon-in-row mdi mdi-' + scene_icon[1] + '\" title=\"' + s + '\"></i>',\n                'scene': s,\n                'target': e,\n                'target_name': room + ' / ' + name + ' (' + entity['element'] + ')',\n                'time': time,\n                'delete': msg.dictionary.scene.timerlist_delete || 'Delete'\n            };\n        }\n    }\n}\nnode.status({ text: i });\n\ndropdownOptions.sort((a, b) => a.target_name.localeCompare(b.target_name));\n\nmsg.payload = dropdownOptions;\nmsg.ui_update = {\n    'label': ''\n}\n\nawait new Promise(resolve => setTimeout(resolve, 250));\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 3860,
+        "wires": [
+            [
+                "61acc41e24cbdd6b"
+            ]
+        ]
+    },
+    {
+        "id": "7af5a65f82f2943c",
+        "type": "link call",
+        "z": "56c0b44ca387382c",
+        "g": "5ee9c437401835c9",
+        "name": "",
+        "links": [
+            "56e6a7b9b0e66451"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1010,
+        "y": 3860,
+        "wires": [
+            [
+                "50bc4392adff795e"
+            ]
+        ]
+    },
+    {
+        "id": "50bc4392adff795e",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "g": "5ee9c437401835c9",
+        "name": "data",
+        "func": "if (msg.action === 'button_click' && msg.column === 'delete') {\n    let timers = global.get('timer', 'memoryOnly') || {};\n\n    delete timers[msg.payload.scene][msg.payload.target];\n    global.set('timer', timers, 'memoryOnly');\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.scene.scenelist_delete_success || 'Successfully deleted';\n\n    node.send([msg, null]);\n\n    msg.payload = '';    \n    await new Promise(resolve => setTimeout(resolve, 50));\n\n    node.send([null, msg]);\n}",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 3860,
+        "wires": [
+            [
+                "80e3952b8f56d1da"
+            ],
+            [
+                "7a4670c83b542f34"
+            ]
+        ]
+    },
+    {
+        "id": "61acc41e24cbdd6b",
+        "type": "ui-table",
+        "z": "56c0b44ca387382c",
+        "g": "5ee9c437401835c9",
+        "group": "3a30762508b6edae",
+        "name": "scene - timerlist - table",
+        "label": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "maxrows": 0,
+        "passthru": false,
+        "autocols": false,
+        "showSearch": true,
+        "deselect": true,
+        "selectionType": "none",
+        "columns": [
+            {
+                "title": "",
+                "key": "scene_icon",
+                "keyType": "key",
+                "type": "html",
+                "width": "20px",
+                "align": "center"
+            },
+            {
+                "title": "Target",
+                "key": "target_name",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            },
+            {
+                "title": "Timer",
+                "key": "time",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            },
+            {
+                "title": "",
+                "key": "delete",
+                "keyType": "key",
+                "type": "button",
+                "width": "",
+                "align": "start"
+            }
+        ],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "",
+        "x": 740,
+        "y": 3860,
+        "wires": [
+            [
+                "7af5a65f82f2943c"
+            ]
+        ]
+    },
+    {
+        "id": "80e3952b8f56d1da",
+        "type": "link out",
+        "z": "56c0b44ca387382c",
+        "g": "5ee9c437401835c9",
+        "name": "scene - timerlist",
+        "mode": "link",
+        "links": [
+            "f4a2353e5f92576c"
+        ],
+        "x": 1335,
+        "y": 3860,
         "wires": []
     },
     {
@@ -15587,7 +15989,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "data",
-        "func": "let entity = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\n\nlet d = 0;\nlet dropdownOptions = [];\n\n// Room\nlet rooms = global.get('name[\"room\"]', 'memoryOnly');\nfor (const room in rooms) {\n    dropdownOptions[d++] = {\n        'label': rooms[room] + ' (' + room + ')',\n        'value': room,\n        'dropdown': 'room'\n    };\n}\n\n// Element\nfor (const element in msg.dictionary.option_element) {\n    dropdownOptions[d++] = {\n        'label': msg.dictionary.option_element[element] + ' (' + element + ')',\n        'value': element,\n        'dropdown': 'element'\n    };\n}\n\n// Type\nfor (const type in msg.dictionary.option_type) {\n    dropdownOptions[d++] = {\n        'label': msg.dictionary.option_type[type] + ' (' + type + ')',\n        'value': type,\n        'dropdown': 'type'\n    };\n}\n\n// Unit\nfor (const unit in msg.dictionary.option_unit) {\n    dropdownOptions[d++] = {\n        'label': msg.dictionary.option_unit[unit] + ' (' + unit + ')',\n        'value': unit,\n        'dropdown': 'unit'\n    };\n}\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\n// Action\nmsg.payload.todo = msg.payload.hidden === 1 ? 'hide' : 'show';\ndropdownOptions[d++] = {\n    'label': msg.dictionary.group_entity.entity_show,\n    'value': 'show',\n    'dropdown': 'todo'\n};\ndropdownOptions[d++] = {\n    'label': msg.dictionary.group_entity.entity_hide,\n    'value': 'hide',\n    'dropdown': 'todo'\n};\ndropdownOptions[d++] = {\n    'label': msg.dictionary.group_entity.entity_delete,\n    'value': 'remove',\n    'dropdown': 'todo'\n};\n\nmsg.topic = msg.payload.uid;\n//node-red 5.04 bug with dropdown msg.topic\nflow.set('entity[\"' + msg.hmi.id + '\"]', msg.payload.uid, 'memoryOnly');\n\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.entity_edit_name,\n            \"key\": \"name\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_room,\n            \"key\": \"room\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_element,\n            \"key\": \"element\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_type,\n            \"key\": \"type\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_unit,\n            \"key\": \"unit\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_action,\n            \"key\": \"todo\"\n        }\n    ],\n    'dropdownOptions': dropdownOptions\n};\n\nreturn msg;",
+        "func": "let entity = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\n\nlet d = 0;\nlet dropdownOptions = [];\n\n// Name\nmsg.payload.name = global.get('name[\"entity\"][\"' + msg.payload.uid + '\"]', 'memoryOnly') || '';\n\n// Room\nlet rooms = global.get('name[\"room\"]', 'memoryOnly');\nfor (const room in rooms) {\n    dropdownOptions[d++] = {\n        'label': rooms[room] + ' (' + room + ')',\n        'value': room,\n        'dropdown': 'room'\n    };\n}\n\n// Element\nfor (const element in msg.dictionary.option_element) {\n    dropdownOptions[d++] = {\n        'label': msg.dictionary.option_element[element] + ' (' + element + ')',\n        'value': element,\n        'dropdown': 'element'\n    };\n}\n\n// Type\nfor (const type in msg.dictionary.option_type) {\n    dropdownOptions[d++] = {\n        'label': msg.dictionary.option_type[type] + ' (' + type + ')',\n        'value': type,\n        'dropdown': 'type'\n    };\n}\n\n// Unit\nfor (const unit in msg.dictionary.option_unit) {\n    dropdownOptions[d++] = {\n        'label': msg.dictionary.option_unit[unit] + ' (' + unit + ')',\n        'value': unit,\n        'dropdown': 'unit'\n    };\n}\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\n// Action\nmsg.payload.todo = msg.payload.hidden === 1 ? 'hide' : 'show';\ndropdownOptions[d++] = {\n    'label': msg.dictionary.group_entity.entity_show,\n    'value': 'show',\n    'dropdown': 'todo'\n};\ndropdownOptions[d++] = {\n    'label': msg.dictionary.group_entity.entity_hide,\n    'value': 'hide',\n    'dropdown': 'todo'\n};\ndropdownOptions[d++] = {\n    'label': msg.dictionary.group_entity.entity_delete,\n    'value': 'remove',\n    'dropdown': 'todo'\n};\n\nmsg.topic = msg.payload.uid;\n//node-red 5.04 bug with dropdown msg.topic\nflow.set('entity[\"' + msg.hmi.id + '\"]', msg.payload.uid, 'memoryOnly');\n\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.entity_edit_name,\n            \"key\": \"name\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_room,\n            \"key\": \"room\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_element,\n            \"key\": \"element\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_type,\n            \"key\": \"type\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_unit,\n            \"key\": \"unit\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.entity_edit_action,\n            \"key\": \"todo\"\n        }\n    ],\n    'dropdownOptions': dropdownOptions\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
