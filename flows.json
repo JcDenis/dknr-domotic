@@ -444,11 +444,12 @@
             "0d5fbb3940042ce9",
             "088de9d34a38547c",
             "363daf239c99a09f",
-            "e6ead5c536cc3453"
+            "e6ead5c536cc3453",
+            "30042ae566db1c6f"
         ],
         "x": 104,
         "y": 219,
-        "w": 1552,
+        "w": 1712,
         "h": 142
     },
     {
@@ -2758,7 +2759,8 @@
             "ffe4299b2fae4efd",
             "4cb0c8835c747153",
             "337d29d853fc2716",
-            "b5e5ddf712b53493"
+            "b5e5ddf712b53493",
+            "d74d6fbf0abd6f0f"
         ],
         "x": 145,
         "y": 1160,
@@ -3910,7 +3912,7 @@
         "z": "4bc72a1112cb448c",
         "g": "614d71e9e019ca82",
         "name": "action",
-        "func": "delete msg.tag; // use msg.name only\n\n// On unwanted state, stop here\nif (msg.payload.match((new RegExp('^(connect|change|lost)$'))) === null) {\n    if (typeof msg.hmi.id === 'string' && msg.hmi.id !== '') {\n        global.set('user[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n        global.set('form[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n    }\n\n    return;\n}\n\n// On connect or lost connection, go to auth page\nif (msg.payload === 'connect' || msg.payload === 'lost') {\n    msg.payload = global.get('describe.pages.auth.name', 'memoryOnly') || '';\n\n    return [null, null, msg];\n}\n\n// Prepare ui\nmsg.menus = {};\nmsg.titles = {};\nmsg.payload = {\n    'pages': {\n        'show': [],\n        'hide': []\n    }\n};\n\nlet pages = global.get('describe.pages', 'memoryOnly');\nif (typeof pages !== 'object') {\n    return;\n}\n\n// check user page right\nlet allowed = false;\nlet s = 0;\nlet h = 0;\nfor (const page in pages) {\n    if (typeof pages[page]['level'][msg.hmi.level] === 'boolean') {\n        if (pages[page]['level'][msg.hmi.level] === true) {\n            msg.menus[page] = true;\n            msg.payload.pages.show[s++] = pages[page]['name'];\n        } else {\n            msg.menus[page] = false;\n            msg.payload.pages.hide[h++] = pages[page]['name'];\n        }\n    } else {\n        if (global.get('describe.pages.auth.name', 'memoryOnly') === pages[page]['name']) {\n            msg.menus[page] = true;\n            msg.payload.pages.show[s++] = pages[page]['name'];\n        } else {\n            msg.menus[page] = false;\n            msg.payload.pages.hide[h++] = pages[page]['name'];\n        }\n    }\n    msg.titles[page] = msg.dictionary.option_page[page];\n\n    if (pages[page]['name'] === msg.hmi.name) {\n        msg.page_title = msg.dictionary.option_page[page];\n        msg.page_lang = msg.hmi.lang;\n    }\n\n    if (pages[page]['name'] === msg.hmi.name && pages[page]['level'][msg.hmi.level] === true) {\n        allowed = true;\n    }\n}\n\nif (allowed === false) {\n    msg.hmi.name = global.get('describe.pages.auth.name', 'memoryOnly');\n    msg.page_title = msg.dictionary.option_page.auth;\n    msg.page_lang = msg.hmi.lang;\n}\n\n// user plant\nglobal.set('form[\"' + msg.hmi.id + '\"][\"ts\"]', Date.now(), 'memoryOnly');\n\n// page process\nlet newMsg = {\n    'topic': '',\n    'payload': msg.hmi.name,\n    'hmi': msg.hmi,\n    'dictionary': msg.dictionary,\n    '_client': msg._client,\n    //'enabled': true,\n    //'class': ''\n};\n\n// ui menu\nmsg.version = global.get('describe.app.version', 'memoryOnly') || '0.0.0';\nmsg.title = msg.page_title + ' - ' + global.get('describe.app.title', 'memoryOnly');\nmsg.full = global.get('describe.app.project', 'memoryOnly') + ' v' + msg.version;\n\ndelete msg.dictionary;\n\nreturn [msg, newMsg, null];",
+        "func": "delete msg.tag; // use msg.name only\n\n// On unwanted state, stop here\nif (msg.payload.match((new RegExp('^(connect|change|lost)$'))) === null) {\n    if (typeof msg.hmi.id === 'string' && msg.hmi.id !== '') {\n        global.set('user[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n        global.set('form[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n    }\n\n    return;\n}\n\n// On connect or lost connection, go to auth page\nif (msg.payload === 'connect' || msg.payload === 'lost') {\n\n    // No auth\n    if (global.get('entity[\"dknr_config_auth\"][\"value\"]', 'memoryOnly') === 1) {\n        msg.payload = global.get('describe.pages.room.name', 'memoryOnly') || '';\n    } else {\n        msg.payload = global.get('describe.pages.auth.name', 'memoryOnly') || '';\n    }\n\n    return [null, null, msg];\n}\n\n// Prepare ui\nmsg.menus = {};\nmsg.titles = {};\nmsg.payload = {\n    'pages': {\n        'show': [],\n        'hide': []\n    }\n};\n\nlet pages = global.get('describe.pages', 'memoryOnly');\nif (typeof pages !== 'object') {\n    return;\n}\n\n// check user page right\nlet allowed = false;\nlet s = 0;\nlet h = 0;\nfor (const page in pages) {\n    if (typeof pages[page]['level'][msg.hmi.level] === 'boolean') {\n        if (pages[page]['level'][msg.hmi.level] === true) {\n            msg.menus[page] = true;\n            msg.payload.pages.show[s++] = pages[page]['name'];\n        } else {\n            msg.menus[page] = false;\n            msg.payload.pages.hide[h++] = pages[page]['name'];\n        }\n    } else {\n        if (global.get('describe.pages.auth.name', 'memoryOnly') === pages[page]['name']) {\n            msg.menus[page] = true;\n            msg.payload.pages.show[s++] = pages[page]['name'];\n        } else {\n            msg.menus[page] = false;\n            msg.payload.pages.hide[h++] = pages[page]['name'];\n        }\n    }\n    msg.titles[page] = msg.dictionary.option_page[page];\n\n    if (pages[page]['name'] === msg.hmi.name) {\n        msg.page_title = msg.dictionary.option_page[page];\n        msg.page_lang = msg.hmi.lang;\n    }\n\n    if (pages[page]['name'] === msg.hmi.name && pages[page]['level'][msg.hmi.level] === true) {\n        allowed = true;\n    }\n}\n\nif (allowed === false) {\n    msg.hmi.name = global.get('describe.pages.auth.name', 'memoryOnly');\n    msg.page_title = msg.dictionary.option_page.auth;\n    msg.page_lang = msg.hmi.lang;\n}\n\n// user plant\nglobal.set('form[\"' + msg.hmi.id + '\"][\"ts\"]', Date.now(), 'memoryOnly');\n\n// page process\nlet newMsg = {\n    'topic': '',\n    'payload': msg.hmi.name,\n    'hmi': msg.hmi,\n    'dictionary': msg.dictionary,\n    '_client': msg._client,\n    //'enabled': true,\n    //'class': ''\n};\n\n// ui menu\nmsg.version = global.get('describe.app.version', 'memoryOnly') || '0.0.0';\nmsg.title = msg.page_title + ' - ' + global.get('describe.app.title', 'memoryOnly');\nmsg.full = global.get('describe.app.project', 'memoryOnly') + ' v' + msg.version;\n\ndelete msg.dictionary;\n\nreturn [msg, newMsg, null];",
         "outputs": 3,
         "timeout": 0,
         "noerr": 0,
@@ -6732,7 +6734,7 @@
         "z": "4bc72a1112cb448c",
         "g": "aa28e51660bead4f",
         "name": "parse",
-        "func": "let enums = msg.dknr_enums;\nlet settings = msg.dknr_settings;\ndelete msg.dknr_enums;\ndelete msg.dknr_settings;\n\nlet names = {};\nlet name = global.get('name', 'memoryOnly') || {};\n\n// Force room creation\nif (typeof name['room']['home'] !== 'string') {\n    name['room']['home'] = '** Home **';\n}\nif (typeof name['room']['system'] !== 'string') {\n    name['room']['system'] = '** System **';\n}\n// Force device creation\nif (typeof name['device']['dknr_config'] !== 'string') {\n    name['device']['dknr_config'] = 'Configuration';\n}\nif (typeof name['device']['dknr_domotic'] !== 'string') {\n    name['device']['dknr_domotic'] = 'Domotic';\n}\n\nglobal.set('name', name, 'memoryOnly');\n\n// Modes\n\n// Chek \"system\" entity existence\nfor (const k in enums) {\n    let entity = {\n        'id': k,\n        'source': 'dknr',\n        'value': Object.keys(enums[k])[0],\n        'parent': 'config',\n        'type': 'command',\n        'unit': 'enum',\n        'element': 'mode',\n        'name': k.charAt(0).toUpperCase() + k.slice(1),\n        'room': 'system',\n        'seen': Date.now(),\n        'hidden': 0\n    };\n\n    msg.payload = entity;\n    node.send([msg]);\n}\n\n// settings\n\n// Chek \"settings\" entity existence\nfor (const k in settings) {\n    let entity = {\n        'id': k,\n        'source': 'dknr',\n        'value': settings[k][0],\n        'parent': settings[k][1],\n        'type': settings[k][2],\n        'unit': settings[k][3],\n        'element': settings[k][4],\n        'name': settings[k][5],\n        'room': settings[k][1] === 'domotic' ? 'home' : 'system',\n        'seen': Date.now(),\n        'hidden': 0\n    };\n\n    msg.payload = entity;\n    node.send([msg]);\n}\n\nreturn;",
+        "func": "let enums = msg.dknr_enums;\nlet settings = msg.dknr_settings;\ndelete msg.dknr_enums;\ndelete msg.dknr_settings;\n\nlet names = {};\nlet name = global.get('name', 'memoryOnly') || {};\n\n// Force room creation\nif (typeof name['room']['home'] !== 'string') {\n    name['room']['home'] = '► Home';\n}\nif (typeof name['room']['system'] !== 'string') {\n    name['room']['system'] = '► System';\n}\n// Force device creation\nif (typeof name['device']['dknr_config'] !== 'string') {\n    name['device']['dknr_config'] = 'Configuration';\n}\nif (typeof name['device']['dknr_domotic'] !== 'string') {\n    name['device']['dknr_domotic'] = 'Domotic';\n}\n\nglobal.set('name', name, 'memoryOnly');\n\n// Modes\n\n// Chek \"system\" entity existence\nfor (const k in enums) {\n    let entity = {\n        'id': k,\n        'source': 'dknr',\n        'value': Object.keys(enums[k])[0],\n        'parent': 'config',\n        'type': 'command',\n        'unit': 'enum',\n        'element': 'mode',\n        'name': k.charAt(0).toUpperCase() + k.slice(1),\n        'room': 'system',\n        'seen': Date.now(),\n        'hidden': 0\n    };\n\n    msg.payload = entity;\n    node.send([msg]);\n}\n\n// settings\n\n// Chek \"settings\" entity existence\nfor (const k in settings) {\n    let entity = {\n        'id': k,\n        'source': 'dknr',\n        'value': settings[k][0],\n        'parent': settings[k][1],\n        'type': settings[k][2],\n        'unit': settings[k][3],\n        'element': settings[k][4],\n        'name': settings[k][5],\n        'room': settings[k][1] === 'domotic' ? 'home' : 'system',\n        'seen': Date.now(),\n        'hidden': 0\n    };\n\n    msg.payload = entity;\n    node.send([msg]);\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -8069,7 +8071,9 @@
         "g": "d509ef3b5101effa",
         "name": "home - page",
         "mode": "link",
-        "links": [],
+        "links": [
+            "dcbdec0233106eb8"
+        ],
         "x": 635,
         "y": 140,
         "wires": []
@@ -8146,6 +8150,157 @@
                 "054bd47295999ad7"
             ]
         ]
+    },
+    {
+        "id": "dcbdec0233106eb8",
+        "type": "link in",
+        "z": "10a4e1188aad61a2",
+        "name": "home  - room",
+        "links": [
+            "054bd47295999ad7"
+        ],
+        "x": 145,
+        "y": 360,
+        "wires": [
+            [
+                "5daa4f5b0c61c827"
+            ]
+        ]
+    },
+    {
+        "id": "5daa4f5b0c61c827",
+        "type": "link call",
+        "z": "10a4e1188aad61a2",
+        "name": "",
+        "links": [
+            "5a1d16fa45e115fa"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 320,
+        "y": 360,
+        "wires": [
+            [
+                "b871e3d16b300b3d"
+            ]
+        ]
+    },
+    {
+        "id": "b871e3d16b300b3d",
+        "type": "function",
+        "z": "10a4e1188aad61a2",
+        "name": "data",
+        "func": "msg.payload = [];\n\nif (!msg.enabled) {\n\n    return msg;\n}\n\nlet colors = global.get('describe.colors', 'memoryOnly') || {};\nlet options = {\n    'motion': ['motion-sensor-off', 'motion-sensor'],\n    'temperature': ['thermometer-off', 'thermometer'],\n    'humidity': ['water-off', 'water']\n};\n\nlet entity = global.get('entity', 'memoryOnly') || {};\nlet entities = {};\nlet e_num = 0;\n\nfor (const e in entity) {\n    if (typeof entities[entity[e]['room']] !== 'object') {\n        entities[entity[e]['room']] = {};\n    }\n\n    // Motion\n    if (typeof entities[entity[e]['room']]['motion'] !== 'number') {\n        entities[entity[e]['room']]['motion'] = 0;\n    }\n    if (entity[e]['element'] === 'motion' && entity[e]['value'] > 0) {\n        entities[entity[e]['room']]['motion'] = 1;\n    }\n}\n\nlet room = global.get('name[\"room\"]', 'memoryOnly') || {};\nlet r_num = 0;\n\nlet dropdownOptions = [];\nfor (const r in room) {\n    if (['system', 'home'].includes(r)) {\n\n        continue;\n    }\n\n    let option = '';\n    for (const o in options) {\n        let option_icon = options[o][0];\n        let option_color = colors.empty;\n        if (typeof entities[r][o] !== 'undefined') {\n            option_icon = entities[r][o] > 0 ? options[o][1] : options[o][0];\n            option_color = entities[r][o] > 0 ? colors.none : colors.empty;\n            \n        }\n        option += '<i class=\"icon-in-row mdi mdi-' + option_icon + '\" style=\"color:' + option_color + '\" title=\"' + o + '\"></i>';\n    }\n\n    dropdownOptions[r_num++] = {\n        'room': r,\n        'room_name': room[r],\n        'option': '<span style=\"white-space: nowrap;\">' + option + '</span>'\n    };\n}\n\nif (r_num > 0) {\n    dropdownOptions.sort((a, b) => a.room_name.localeCompare(b.room_name));\n\n    msg.payload = dropdownOptions;\n    msg.ui_update = {\n        'label': '',\n    }\n\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 360,
+        "wires": [
+            [
+                "ecee862ad724750f"
+            ]
+        ]
+    },
+    {
+        "id": "ecee862ad724750f",
+        "type": "ui-table",
+        "z": "10a4e1188aad61a2",
+        "group": "950b05cd455c3a56",
+        "name": "home - room - table",
+        "label": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "maxrows": 0,
+        "passthru": false,
+        "autocols": false,
+        "showSearch": false,
+        "deselect": true,
+        "selectionType": "click",
+        "columns": [
+            {
+                "title": "",
+                "key": "room_name",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "end"
+            },
+            {
+                "title": "",
+                "key": "option",
+                "keyType": "key",
+                "type": "html",
+                "width": "60px",
+                "align": "end"
+            }
+        ],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "",
+        "x": 730,
+        "y": 360,
+        "wires": [
+            [
+                "2ab6aa3fbd653341"
+            ]
+        ]
+    },
+    {
+        "id": "2ab6aa3fbd653341",
+        "type": "link call",
+        "z": "10a4e1188aad61a2",
+        "name": "",
+        "links": [
+            "56e6a7b9b0e66451"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 970,
+        "y": 360,
+        "wires": [
+            [
+                "bb9dbf7f4b23d96f"
+            ]
+        ]
+    },
+    {
+        "id": "bb9dbf7f4b23d96f",
+        "type": "function",
+        "z": "10a4e1188aad61a2",
+        "name": "data",
+        "func": "global.set('user[\"' + msg.hmi.id + '\"][\"room\"]', msg.payload.room, 'memoryOnly');\n\nlet page = global.get('describe.pages.room.name', 'memoryOnly') || '';\n\nmsg.payload = {\n    page: page,\n    query: {\n        room: msg.payload.room\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 360,
+        "wires": [
+            [
+                "d74d6fbf0abd6f0f"
+            ]
+        ]
+    },
+    {
+        "id": "d74d6fbf0abd6f0f",
+        "type": "link out",
+        "z": "10a4e1188aad61a2",
+        "name": "home - room",
+        "mode": "link",
+        "links": [
+            "289e0a6cd1209c38"
+        ],
+        "x": 1295,
+        "y": 360,
+        "wires": []
     },
     {
         "id": "e0e64bf3607382ef",
@@ -8297,7 +8452,7 @@
         "z": "560376d6bba621ec",
         "g": "1465a47c930ed8e1",
         "name": "data",
-        "func": "if (!msg.enabled) {\n\n    return msg;\n}\n\nflow.set('room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n\nmsg.payload = '';\nlet rooms = global.get('name[\"room\"]', 'memoryOnly') || {};\nlet i = 0;\n\nlet dropdownOptions = [];\nfor (const room in rooms) {\n    dropdownOptions[i++] = {\n        'label': rooms[room],\n        'value': room\n    };\n}\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.ui_update = {\n    'label': msg.dictionary.group_room.room_select,\n    'options': dropdownOptions\n}\n\n\nreturn msg;",
+        "func": "if (!msg.enabled) {\n\n    return msg;\n}\n\nmsg.payload = '';\nflow.set('room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n\n// From home page\nlet redirection = global.get('user[\"' + msg.hmi.id + '\"][\"room\"]', 'memoryOnly') || '';\nif (redirection !== '') {\n    msg.payload = redirection;\n}\n\nlet rooms = global.get('name[\"room\"]', 'memoryOnly') || {};\nlet i = 0;\n\nlet dropdownOptions = [];\nfor (const room in rooms) {\n    dropdownOptions[i++] = {\n        'label': rooms[room],\n        'value': room\n    };\n}\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.ui_update = {\n    'label': msg.dictionary.group_room.room_select,\n    'options': dropdownOptions\n}\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -8324,7 +8479,7 @@
         "order": 2,
         "width": 0,
         "height": 0,
-        "passthru": false,
+        "passthru": true,
         "multiple": false,
         "chips": false,
         "clearable": false,
@@ -8355,7 +8510,7 @@
         "z": "560376d6bba621ec",
         "g": "1465a47c930ed8e1",
         "name": "entity",
-        "func": "// raz\nmsg.enabled = false;\nnode.send([msg]);\nawait new Promise(resolve => setTimeout(resolve, 50)); // wait 50ms\n\n// room has entities\nlet room = msg.payload;\nflow.set('room[\"' + msg.hmi.id + '\"]', room, 'memoryOnly');\n\nmsg.enabled = true;\nreturn msg;",
+        "func": "// raz\nmsg.enabled = false;\nnode.send([msg]);\nawait new Promise(resolve => setTimeout(resolve, 50)); // wait 50ms\n\n// room has entities\nlet room = msg.payload;\nflow.set('room[\"' + msg.hmi.id + '\"]', room, 'memoryOnly');\nif (msg.payload !== '') {\n    global.set('user[\"' + msg.hmi.id + '\"][\"room\"]', room, 'memoryOnly');\n}\n\nmsg.enabled = true;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -8382,7 +8537,7 @@
             "fb7da4dbb76c9223",
             "217d334d78a1a033"
         ],
-        "x": 1615,
+        "x": 1775,
         "y": 260,
         "wires": []
     },
@@ -8447,7 +8602,7 @@
         "y": 260,
         "wires": [
             [
-                "b6b16c9ce4cb114d"
+                "30042ae566db1c6f"
             ]
         ]
     },
@@ -8605,7 +8760,7 @@
         "z": "560376d6bba621ec",
         "g": "b9c606401bb8c37c",
         "name": "data",
-        "func": "let room = flow.get('room[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--';\nlet entity = global.get('entity', 'memoryOnly') || {};\nlet colors = global.get('describe.colors', 'memoryOnly') || {};\nlet icons = global.get('describe.elements', 'memoryOnly') || {};\nlet enums = global.get('describe.enum', 'memoryOnly') || {};\nlet sources = global.get('describe.sources', 'memoryOnly') || {};\nlet reverts = global.get('describe.reverts', 'memoryOnly') || [];\n\nlet groups = {\n    'switch': [\n        'light',\n        'switch',\n        'plug',\n        'mode',\n        'fan',\n        'direction',\n        'heater',\n        'sound',\n        'shield'\n    ],\n    'enum': [],\n    'aperture': [\n        'aperture',\n        'door',\n        'window',\n        'lock',\n        'shutter',\n        'slider'\n    ],\n    'climate': [\n        'humidity',\n        'temperature',\n        'illuminance',\n        'pressure',\n        'motion'\n    ],\n    'energy': [\n        'current',\n        'energy',\n        'power',\n        'battery'\n    ],\n    'various': [\n        'remote',\n        'text',\n        'time'\n    ]\n};\n\nlet labels = {\n    'switch': msg.dictionary.option_element['switch'],\n    'enum': msg.dictionary.group_room.label_select,\n    'aperture': msg.dictionary.option_element['aperture'],\n    'climate': msg.dictionary.option_element['climate'],\n    'energy': msg.dictionary.option_element['energy'],\n    'various': msg.dictionary.group_room.label_various,\n    'unknown': msg.dictionary.group_room.label_unknown\n};\n\nlet inc = {\n    'switch': 0,\n    'enum': 0,\n    'aperture': 0,\n    'climate': 0,\n    'energy': 0,\n    'various': 0,\n    'unknown': 0\n};\nlet res = {\n    'switch': [],\n    'enum': [],\n    'aperture': [],\n    'climate': [],\n    'energy': [],\n    'various': [],\n    'unknown': []\n};\n\nlet exists = false;\n\nfor (const uid in entity) {\n    if (entity[uid]['room'] === room && \n        entity[uid]['hidden'] === 0\n    ) {\n        let group = 'unknown';\n        for (const g in groups) {\n            if (groups[g].includes(entity[uid]['element'])) {\n                group = g;\n            }\n        }\n\n        if (group !== '') {\n            let value = entity[uid]['value'] || 0;\n            let unit = entity[uid]['unit'];\n            let name = global.get('name[\"entity\"][\"' + uid + '\"]', 'memoryOnly') || '';\n            let parent = global.get('name[\"device\"][\"' + entity[uid]['parent'] + '\"]', 'memoryOnly') || entity[uid]['parent'];\n            let icon = '';\n            let color = 'empty';\n            let element = entity[uid]['element'];\n            let element_name = msg.dictionary.option_element[element];\n            let element_icon = '';\n            let source = sources[entity[uid]['source']] || ['help', entity[uid]['source']];\n\n            // Revert value for some \"rb\" unit\n            if (unit === 'rb') {\n                value = value === 0 ? 1 : 0;\n            }\n            // Revert text for some elements (see describe.reverts)\n            if (reverts.includes(element)) {\n                value = value === 0 ? 1 : 0;\n            }\n            // Get icon from value\n            if (typeof icons[element] !== 'undefined') {\n                if (value) {\n                    icon = icons[element][1];\n                    color = colors.theme;\n                } else {\n                    icon = icons[element][0];\n                    color = colors.empty;\n                }\n                element_icon = icons[element][1];\n            }\n\n            // Battery alert color\n            if (element === 'battery' && value < 15) {\n                color = colors.off;\n            }\n\n            // Get special enum value\n            if (unit === 'enum') {\n                let cur_enum = enums[entity[uid]['source']][entity[uid]['id']][value] || [icon, value];\n                icon = cur_enum[0];\n                value = cur_enum[1];\n                group = 'enum';\n            }\n\n            // Format value\n            if (!['8b', 'rb', 'b', 'enum', 'ts', 'time', 'text'].includes(unit) && unit !== '') {\n                // Add unit text\n                value = value + ' ' + unit;\n            }\n            else if (unit === '8b') {\n                // Convert 8b in %\n                value = Math.ceil(Number(value) * 100 / 255) + '%'\n            }\n            else if (unit === 'ts') {\n                // Convert to date\n                value = new Date(value).toLocaleString(msg.dictionary.common.locales);\n            }\n            else if (['b', 'rb'].includes(unit)) {\n                // Convert to text\n                if (group === 'aperture') {\n                    value = value === 0 ? msg.dictionary.group_room.close : msg.dictionary.group_room.open;\n                }\n                else if (group === 'switch') {\n                    if (element === 'shield') {\n                        value = value === 0 ? msg.dictionary.group_room.inactive : msg.dictionary.group_room.active;\n                    } else {\n                        value = value === 0 ? msg.dictionary.group_room.off : msg.dictionary.group_room.on;\n                    }\n                }\n            }\n\n            // Get name from parent if none or default is set\n            if (name === '' || name === entity[uid]['id']) {\n                name = parent;\n            }\n\n            // Colorize unresponsive entity\n            let type_icon = entity[uid]['type'] === 'sensor' ? 'leak': 'button-pointer';\n            let type_color = entity[uid]['type'] === 'sensor' ? colors.empty : colors.none;\n            if ((entity[uid]['seen'] + 86400000) < Date.now()) { // 24h\n                type_color = colors.off;\n            }\n\n            res[group][inc[group]] = {\n                'uid': uid,\n                'name': name,\n                'value': value,\n                'icon': '<i class=\"icon-in-row mdi mdi-' + icon + '\" style=\"color:' + color + '; font-size: 2em;\"></i>',\n                'icons': '<span style=\"white-space: nowrap;\">' +\n                    '<i class=\"icon-in-row mdi mdi-' + source[0] + '\" style=\"color:' + colors.empty + '\" title=\"' + source[1] + '\"></i> ' +\n                    '<i class=\"icon-in-row mdi mdi-' + element_icon + '\" style=\"color:' + colors.empty + '\" title=\"' + element_name + '\"></i> ' +\n                    '<i class=\"icon-in-row mdi mdi-' + type_icon + '\" style=\"color:' + type_color + '\" title=\"' + msg.dictionary.option_type[entity[uid]['type']] + '\"></i>' +\n                    '</span>'\n            };\n\n            inc[group] = inc[group] + 1;\n            exists = true;\n        }\n    }\n}\n\nlet rres = {};\nfor (const k in res) {\n    if (res[k].length > 0) {\n        res[k].sort((a, b) => a.name.localeCompare(b.name));\n        rres[k] = {...msg, ...{\n            'label': labels[k],\n            'payload': res[k]\n        }};\n    } else {\n        rres[k] = {\n            'topic': '',\n            'class': 'remove',\n            'enabled': false,\n            'payload': {}\n        };\n    }\n}\n\nif (exists) {\n\n    node.send([rres['energy'], rres['aperture'], rres['switch'], rres['climate'], rres['enum'], rres['various'], rres['unknown']]);\n}\n\nreturn;",
+        "func": "let room = flow.get('room[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--';\nlet entity = global.get('entity', 'memoryOnly') || {};\nlet colors = global.get('describe.colors', 'memoryOnly') || {};\nlet icons = global.get('describe.elements', 'memoryOnly') || {};\nlet enums = global.get('describe.enum', 'memoryOnly') || {};\nlet sources = global.get('describe.sources', 'memoryOnly') || {};\nlet reverts = global.get('describe.reverts', 'memoryOnly') || [];\n\nlet groups = {\n    'switch': [\n        'light',\n        'switch',\n        'plug',\n        'mode',\n        'fan',\n        'direction',\n        'heater',\n        'sound',\n        'shield'\n    ],\n    'enum': [],\n    'aperture': [\n        'aperture',\n        'door',\n        'window',\n        'lock',\n        'shutter',\n        'slider'\n    ],\n    'climate': [\n        'humidity',\n        'temperature',\n        'illuminance',\n        'pressure',\n        'motion',\n        'location'\n    ],\n    'energy': [\n        'current',\n        'energy',\n        'power',\n        'battery'\n    ],\n    'various': [\n        'remote',\n        'text',\n        'time'\n    ]\n};\n\nlet labels = {\n    'switch': msg.dictionary.option_element['switch'],\n    'enum': msg.dictionary.group_room.label_select,\n    'aperture': msg.dictionary.option_element['aperture'],\n    'climate': msg.dictionary.option_element['climate'],\n    'energy': msg.dictionary.option_element['energy'],\n    'various': msg.dictionary.group_room.label_various,\n    'unknown': msg.dictionary.group_room.label_unknown\n};\n\nlet inc = {\n    'switch': 0,\n    'enum': 0,\n    'aperture': 0,\n    'climate': 0,\n    'energy': 0,\n    'various': 0,\n    'unknown': 0\n};\nlet res = {\n    'switch': [],\n    'enum': [],\n    'aperture': [],\n    'climate': [],\n    'energy': [],\n    'various': [],\n    'unknown': []\n};\n\nlet exists = false;\n\nfor (const uid in entity) {\n    if (entity[uid]['room'] === room && \n        entity[uid]['hidden'] === 0\n    ) {\n        let group = 'unknown';\n        for (const g in groups) {\n            if (groups[g].includes(entity[uid]['element'])) {\n                group = g;\n            }\n        }\n\n        if (group !== '') {\n            let value = entity[uid]['value'] || 0;\n            let unit = entity[uid]['unit'];\n            let name = global.get('name[\"entity\"][\"' + uid + '\"]', 'memoryOnly') || '';\n            let parent = global.get('name[\"device\"][\"' + entity[uid]['parent'] + '\"]', 'memoryOnly') || entity[uid]['parent'];\n            let icon = '';\n            let color = 'empty';\n            let element = entity[uid]['element'];\n            let element_name = msg.dictionary.option_element[element];\n            let element_icon = '';\n            let source = sources[entity[uid]['source']] || ['help', entity[uid]['source']];\n\n            // Revert value for some \"rb\" unit\n            if (unit === 'rb') {\n                value = value === 0 ? 1 : 0;\n            }\n            // Revert text for some elements (see describe.reverts)\n            if (reverts.includes(element)) {\n                value = value === 0 ? 1 : 0;\n            }\n            // Get icon from value\n            if (typeof icons[element] !== 'undefined') {\n                if (value) {\n                    icon = icons[element][1];\n                    color = colors.theme;\n                } else {\n                    icon = icons[element][0];\n                    color = colors.empty;\n                }\n                element_icon = icons[element][1];\n            }\n\n            // Battery alert color\n            if (element === 'battery' && value < 15) {\n                color = colors.off;\n            }\n\n            // Get special enum value\n            if (unit === 'enum') {\n                let cur_enum = enums[entity[uid]['source']][entity[uid]['id']][value] || [icon, value];\n                icon = cur_enum[0];\n                value = cur_enum[1];\n                group = 'enum';\n            }\n\n            // Format value\n            if (!['8b', 'rb', 'b', 'enum', 'ts', 'time', 'text'].includes(unit) && unit !== '') {\n                // Add unit text\n                value = value + ' ' + unit;\n            }\n            else if (unit === '8b') {\n                // Convert 8b in %\n                value = Math.ceil(Number(value) * 100 / 255) + '%'\n            }\n            else if (unit === 'ts') {\n                // Convert to date\n                value = new Date(value).toLocaleString(msg.dictionary.common.locales);\n            }\n            else if (['b', 'rb'].includes(unit)) {\n                // Convert to text\n                if (group === 'aperture') {\n                    value = value === 0 ? msg.dictionary.group_room.close : msg.dictionary.group_room.open;\n                }\n                else if (group === 'switch') {\n                    if (element === 'shield') {\n                        value = value === 0 ? msg.dictionary.group_room.inactive : msg.dictionary.group_room.active;\n                    } else {\n                        value = value === 0 ? msg.dictionary.group_room.off : msg.dictionary.group_room.on;\n                    }\n                }\n            }\n\n            // Get name from parent if none or default is set\n            if (name === '' || name === entity[uid]['id']) {\n                name = parent;\n            }\n\n            // Colorize unresponsive entity\n            let type_icon = entity[uid]['type'] === 'sensor' ? 'leak': 'button-pointer';\n            let type_color = entity[uid]['type'] === 'sensor' ? colors.empty : colors.none;\n            if ((entity[uid]['seen'] + 86400000) < Date.now()) { // 24h\n                type_color = colors.off;\n            }\n\n            res[group][inc[group]] = {\n                'uid': uid,\n                'name': name,\n                'value': value,\n                'icon': '<i class=\"icon-in-row mdi mdi-' + icon + '\" style=\"color:' + color + '; font-size: 2em;\"></i>',\n                'icons': '<span style=\"white-space: nowrap;\">' +\n                    '<i class=\"icon-in-row mdi mdi-' + source[0] + '\" style=\"color:' + colors.empty + '\" title=\"' + source[1] + '\"></i> ' +\n                    '<i class=\"icon-in-row mdi mdi-' + element_icon + '\" style=\"color:' + colors.empty + '\" title=\"' + element_name + '\"></i> ' +\n                    '<i class=\"icon-in-row mdi mdi-' + type_icon + '\" style=\"color:' + type_color + '\" title=\"' + msg.dictionary.option_type[entity[uid]['type']] + '\"></i>' +\n                    '</span>'\n            };\n\n            inc[group] = inc[group] + 1;\n            exists = true;\n        }\n    }\n}\n\nlet rres = {};\nfor (const k in res) {\n    if (res[k].length > 0) {\n        res[k].sort((a, b) => a.name.localeCompare(b.name));\n        rres[k] = {...msg, ...{\n            'label': labels[k],\n            'payload': res[k]\n        }};\n    } else {\n        rres[k] = {\n            'topic': '',\n            'class': 'remove',\n            'enabled': false,\n            'payload': {}\n        };\n    }\n}\n\nif (exists) {\n\n    node.send([rres['energy'], rres['aperture'], rres['switch'], rres['climate'], rres['enum'], rres['various'], rres['unknown']]);\n}\n\nreturn;",
         "outputs": 7,
         "timeout": 0,
         "noerr": 0,
@@ -10474,7 +10629,7 @@
         "z": "560376d6bba621ec",
         "g": "1465a47c930ed8e1",
         "name": "reset",
-        "func": "flow.set('room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('detail[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nmsg.enabled = false;\nmsg.payload = '-';\n\nreturn msg;",
+        "func": "flow.set('room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nflow.set('detail[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\nglobal.set('user[\"' + msg.hmi.id + '\"][\"room\"]', '', 'memoryOnly');\n\nmsg.enabled = false;\nmsg.payload = '-';\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -10816,6 +10971,27 @@
         "x": 730,
         "y": 1700,
         "wires": []
+    },
+    {
+        "id": "30042ae566db1c6f",
+        "type": "function",
+        "z": "560376d6bba621ec",
+        "g": "1465a47c930ed8e1",
+        "name": "data",
+        "func": "if (msg.payload !== '') {\n    msg.ui_update = {\n        'label': '',\n        'options': []\n    }\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1650,
+        "y": 260,
+        "wires": [
+            [
+                "b6b16c9ce4cb114d"
+            ]
+        ]
     },
     {
         "id": "7179cc22cb3792c0",
