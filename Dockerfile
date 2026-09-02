@@ -1,6 +1,6 @@
 
 # Use fix Node-red docker release
-FROM nodered/node-red:5.0.4
+FROM nodered/node-red:5.0.6
 
 # Switch to root user
 USER root
