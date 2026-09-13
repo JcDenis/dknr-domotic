@@ -753,12 +753,13 @@
             "01640e249844688e",
             "3eac18093565d50f",
             "eb700ff3d5f00e78",
-            "24aef456d3dfebf4"
+            "24aef456d3dfebf4",
+            "4863434ca638c34e"
         ],
         "x": 104,
         "y": 339,
         "w": 1532,
-        "h": 2482
+        "h": 2542
     },
     {
         "id": "0a9a5f5f4e641599",
@@ -1765,12 +1766,18 @@
             "93671a9e19b8b9cf",
             "dab0400118880437",
             "87f50458a3c79a83",
-            "57c508c99d2cdcad"
+            "57c508c99d2cdcad",
+            "2e8a83fff0849513",
+            "7dcf708ffe2256a9",
+            "e18be8c988d94739",
+            "13781a89a231ad0c",
+            "a1f80b8aaa201c4f",
+            "bcfa144f2ae07f50"
         ],
         "x": 94,
         "y": 4899,
-        "w": 932,
-        "h": 1102
+        "w": 672,
+        "h": 1402
     },
     {
         "id": "df7710b4b2c4e55b",
@@ -2515,7 +2522,7 @@
         "group": "3a30762508b6edae",
         "name": "spacer",
         "tooltip": "",
-        "order": 16,
+        "order": 15,
         "width": "6",
         "height": 1,
         "className": ""
@@ -2983,7 +2990,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "describe",
-        "func": "const describe = global.get('describe', 'memoryOnly') || {};\n\nif (typeof describe.pages !== 'object') {\n    describe.pages = {};\n}\n\n// Set default app values\ndescribe.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\ndescribe.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['scene'] = {\n    'id': '1e9f5bde9636a371',\n    'name': 'scene',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['entity'] = {\n    'id': '2b12391aa314ef62',\n    'name': 'entity',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': false,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// Sources\ndescribe.sources['dknr'] = ['eye', 'Domotic'];\n\n// Binary element with revert value\ndescribe.reverts = ['aperture', 'door', 'window', 'lock'];\n\n// Non numeric units\ndescribe.texts = ['', 'chex', 'enum', 'text', 'time'];\n\n// Elements icons\ndescribe.elements = {\n    'switch': ['toggle-switch-off-outline', 'toggle-switch-outline', 'Switch'],\n    'plug': ['power-plug-off', 'power-plug', 'Plug'],\n    'power': ['flash-outline', 'flash', 'Power'],\n    'current': ['current-ac', 'sine-wave', 'Current'],\n    'energy': ['meter-electric-outline', 'meter-electric', 'Energy'],\n    'light': ['lightbulb-off', 'lightbulb', 'Light'],\n    'remote': ['remote-off', 'remote', 'Remote'],\n    'door': ['door-closed', 'door-open', 'Door'], // 0=open\n    'window': ['window-closed-variant', 'window-open-variant', 'Window'], //0=open\n    'lock': ['lock-off', 'lock', 'Lock'], //0=open\n    //'shield': ['shield-lock-outline', 'shield-lock'],\n    //'aperture': ['electric-switch-closed', 'electric-switch'], // 0=open\n    'shutter': ['window-shutter', 'window-shutter-open', 'Shutter'],\n    'slider': ['door-sliding', 'door-sliding-open', 'Slider'],\n    //'heater': ['radiator-off', 'radiator'], => temperature\n    //'cooler': ['radiator-off', 'radiator'], => temperature\n    //'airconditioner': ['radiator-off', 'radiator'], => temparature\n    'waterboiler': ['water-boiler-off', 'water-boiler', 'Waterboiler'],\n    'alert': ['bell-off', 'bell', 'Alert'],\n    'sound': ['volume-off', 'volume-high', 'Sound'],\n    'motion': ['motion-sensor-off', 'motion-sensor', 'Motion'],\n    //'presence': ['location-exit', 'location-enter'], => motion\n    'temperature': ['thermometer-off', 'thermometer', 'Temperature'],\n    'humidity': ['water-percent-alert', 'water-percent', 'Humidity'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless', 'Illuminance'],\n    'pressure': ['gauge', 'gauge', 'Pressure'],\n    //'wind': ['weather-windy', 'weather-dust'],\n    //'airflow': ['fan-off', 'fan'], => humidity\n    'fan': ['fan-off', 'fan', 'Fan'],\n    'direction': ['swap-horizontal', 'swap-horizontal-bold', 'Direction'],\n    'time': ['clock-outline', 'clock', 'Time'],\n    'battery': ['battery-low', 'battery', 'Battery'],\n    //'climate': ['home-thermometer-outline', 'home-thermometer'],\n    'mode': ['home-switch-outline', 'home-switch', 'Mode'],\n    'text': ['clipboard-text-off', 'clipboard-text', 'Text'],\n    'location': ['map-marker-off-outline', 'map-marker', 'Location'],\n    //'camera': ['camera-off', 'camera'],\n    'color': ['palette', 'palette', 'Color']\n};\n\ndescribe.units = {\n    '': 'None',\n    '°C': 'Degree celsuis',\n    '°F': 'Degree fahrenheit',\n    'mA': 'Milliampere',\n    'A': 'Ampere',\n    'mW': 'Milliwatt',\n    'W': 'Watt',\n    'kW': 'Kilowatt',\n    'MW': 'Megawatt',\n    'mWh': 'Milliwatt/hour',\n    'Wh': 'Watt/Hour',\n    'mVA': 'Millivoltampere',\n    'VA': 'Voltampere',\n    'lx': 'Lux',\n    'ppm': 'Parts per million',\n    '%': 'Percent (0-100)',\n    'b': 'Binary (0-1)',\n    'rb': 'Revert binary',\n    '8b': '8-bit (0-255)',\n    'n': 'Number',\n    's': 'Second',\n    'ms': 'Millisecond',\n    'time': 'Time',\n    'enum': 'Enumerator',\n    'text': 'Text',\n    'chex': 'Hexadécimal color'\n};\n\n// Value color\ndescribe.colors = {\n    'on': '#008000',\n    'off': '#FF0000',\n    'median': '#F08000',\n    'none': '#808000',\n    'theme': '#0094CE',\n    'empty': '#CCCCCC'\n};\n\n// Scene elements fields\ndescribe.scenes = {\n    'humidity': ['enabled', 'on', 'off', 'duration', 'humidity'],\n    'light': ['enabled', 'on', 'off', 'motion', 'retention', 'duration', 'diurnal', 'nocturnal', 'nightlight', 'illuminance', 'darkness'],\n    'shutter': ['enabled', 'on', 'off', 'aperture', 'diurnal', 'nocturnal', 'illuminance', 'darkness', 'openwork', 'daily'],\n    'waterboiler': ['enabled', 'on', 'off', 'duration', 'power', 'tariff', 'daily'],\n    'temperature': ['enabled', 'on', 'off', 'duration']\n};\n\n// Scene routines fields\ndescribe.routines = {\n    'motion': ['motion-sensor-off', 'motion-sensor'],\n    'aperture': ['door-closed', 'door-open'],\n    'nocturnal': ['shield-moon-outline', 'shield-moon'],\n    'diurnal': ['shield-sun-outline', 'shield-sun'],\n    'nightlight': ['lightbulb-night-outline', 'lightbulb-night'],\n    'retention': ['timeline-clock-outline', 'timeline-clock'],\n    'daily': ['calendar-remove', 'calendar-check'],\n    'openwork': ['storefront-remove-outline', 'storefront-check'],\n    'duration': ['timer-remove-outline', 'timer-check'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless'],\n    'darkness': ['brightness-5', 'brightness-4'],\n    'humidity': ['water-percent-alert', 'water-percent']\n};\n\n// Templates\ndescribe.template = {\n    'hmi': {\n        'id': '',\n        'login': '',\n        'level': 'visitor',\n        'lang': 'en',\n        'name': 'auth', // ui page\n        'room': '',\n        'time': 0\n    },\n    'entity': {\n        'uid': '',\n        'source': '',\n        'id': '',\n        'parent': '',\n        'value': '',\n        'type': '',\n        'room': '',\n        'element': '',\n        'unit': '',\n        'seen': 0,\n        'hidden': 0\n    },\n    'scene': {\n        'target': '',\n        'enabled': 0,\n        'on': 1,\n        'off': 0,\n        'motion': 0,\n        'aperture': 0,\n        'nocturnal': 0,\n        'diurnal': 0,\n        'nightlight': 0,\n        'retention': 0,\n        'duration': 60, //minutes\n        'high': '70',\n        'low': '30',\n        'illuminance': 0, //2000\n        'darkness': 0, //200\n        'humidity': 0,\n        'daily': 0,\n        'openwork': 0,\n        'delay': 0, //seconds\n        'min': 0,\n        'max': 0,\n        'step': 0,\n        'tariff': 0, // limit to a given tariff (see dknr_config_fulltariff)\n        'power': 0, // to check if target is really off\n        'timer': 0, // for duration routine\n        'today': 0 // for daily routine, 1=executed today else 0\n    },\n    'trigger': {\n        'inputhigh': 1, // Minimal input level for high level\n        'inputlow': 0, // Maximal input level for low high level\n        'outputhigh': 'high', // Output level on high input level. [none,high,low,toggle]\n        'outputlow': 'low' // output level for low input level [none, high, low, toggle]\n    },\n    'routine': {\n        'topic': '',\n        'payload': false,\n        'replay': false,\n        'rsp': true,\n        'iam': false,\n        'scene': {},\n        'param': {},\n        'trigger': {},\n        'target': {},\n        'routines': []\n    }\n};\n\n// Save config\nglobal.set('describe', describe, 'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/.config.projects.json'\n};",
+        "func": "const describe = global.get('describe', 'memoryOnly') || {};\n\nif (typeof describe.pages !== 'object') {\n    describe.pages = {};\n}\n\n// Set default app values\ndescribe.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\ndescribe.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['scene'] = {\n    'id': '1e9f5bde9636a371',\n    'name': 'scene',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['entity'] = {\n    'id': '2b12391aa314ef62',\n    'name': 'entity',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': false,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// Sources\ndescribe.sources['dknr'] = ['eye', 'Domotic'];\n\n// Binary element with revert value\ndescribe.reverts = ['aperture', 'door', 'window', 'lock'];\n\n// Non numeric units\ndescribe.texts = ['', 'chex', 'enum', 'text', 'time'];\n\n// Elements icons\ndescribe.elements = {\n    'switch': ['toggle-switch-off-outline', 'toggle-switch-outline', 'Switch'],\n    'plug': ['power-plug-off', 'power-plug', 'Plug'],\n    'power': ['flash-outline', 'flash', 'Power'],\n    'current': ['current-ac', 'sine-wave', 'Current'],\n    'energy': ['meter-electric-outline', 'meter-electric', 'Energy'],\n    'light': ['lightbulb-off', 'lightbulb', 'Light'],\n    'remote': ['remote-off', 'remote', 'Remote'],\n    'door': ['door-closed', 'door-open', 'Door'], // 0=open\n    'window': ['window-closed-variant', 'window-open-variant', 'Window'], //0=open\n    'lock': ['lock-off', 'lock', 'Lock'], //0=open\n    //'shield': ['shield-lock-outline', 'shield-lock'],\n    //'aperture': ['electric-switch-closed', 'electric-switch'], // 0=open\n    'shutter': ['window-shutter', 'window-shutter-open', 'Shutter'],\n    'slider': ['door-sliding', 'door-sliding-open', 'Slider'],\n    //'heater': ['radiator-off', 'radiator'], => temperature\n    //'cooler': ['radiator-off', 'radiator'], => temperature\n    //'airconditioner': ['radiator-off', 'radiator'], => temparature\n    'waterboiler': ['water-boiler-off', 'water-boiler', 'Waterboiler'],\n    'alert': ['bell-off', 'bell', 'Alert'],\n    'sound': ['volume-off', 'volume-high', 'Sound'],\n    'motion': ['motion-sensor-off', 'motion-sensor', 'Motion'],\n    //'presence': ['location-exit', 'location-enter'], => motion\n    'temperature': ['thermometer-off', 'thermometer', 'Temperature'],\n    'humidity': ['water-percent-alert', 'water-percent', 'Humidity'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless', 'Illuminance'],\n    'pressure': ['gauge', 'gauge', 'Pressure'],\n    //'wind': ['weather-windy', 'weather-dust'],\n    //'airflow': ['fan-off', 'fan'], => humidity\n    'fan': ['fan-off', 'fan', 'Fan'],\n    'direction': ['swap-horizontal', 'swap-horizontal-bold', 'Direction'],\n    'time': ['clock-outline', 'clock', 'Time'],\n    'battery': ['battery-low', 'battery', 'Battery'],\n    //'climate': ['home-thermometer-outline', 'home-thermometer'],\n    'mode': ['home-switch-outline', 'home-switch', 'Mode'],\n    'text': ['clipboard-text-off', 'clipboard-text', 'Text'],\n    'location': ['map-marker-off-outline', 'map-marker', 'Location'],\n    //'camera': ['camera-off', 'camera'],\n    'color': ['palette', 'palette', 'Color'],\n    'tariff': ['currency-eur-off', 'currency-eur', 'Tariff']\n};\n\ndescribe.units = {\n    '': 'None',\n    '°C': 'Degree celsuis',\n    '°F': 'Degree fahrenheit',\n    'mA': 'Milliampere',\n    'A': 'Ampere',\n    'mW': 'Milliwatt',\n    'W': 'Watt',\n    'kW': 'Kilowatt',\n    'MW': 'Megawatt',\n    'mWh': 'Milliwatt/hour',\n    'Wh': 'Watt/Hour',\n    'mVA': 'Millivoltampere',\n    'VA': 'Voltampere',\n    'lx': 'Lux',\n    'ppm': 'Parts per million',\n    '%': 'Percent (0-100)',\n    'b': 'Binary (0-1)',\n    'rb': 'Revert binary',\n    '8b': '8-bit (0-255)',\n    'n': 'Number',\n    's': 'Second',\n    'ms': 'Millisecond',\n    'time': 'Time',\n    'enum': 'Enumerator',\n    'text': 'Text',\n    'chex': 'Hexadécimal color'\n};\n\n// Value color\ndescribe.colors = {\n    'on': '#008000',\n    'off': '#FF0000',\n    'median': '#F08000',\n    'none': '#808000',\n    'theme': '#0094CE',\n    'empty': '#CCCCCC'\n};\n\n// Scene elements fields\ndescribe.scenes = {\n    'humidity': ['enabled', 'on', 'off', 'duration', 'humidity'],\n    'light': ['enabled', 'on', 'off', 'high', 'low', 'motion', 'retention', 'duration', 'diurnal', 'nocturnal', 'nightlight', 'illuminance', 'darkness'],\n    'shutter': ['enabled', 'on', 'off', 'aperture', 'diurnal', 'nocturnal', 'illuminance', 'darkness', 'openwork', 'daily'],\n    'waterboiler': ['enabled', 'on', 'off', 'duration', 'power', 'tariff', 'daily'],\n    'temperature': ['enabled', 'on', 'off', 'duration']\n};\n\n// Scene routines fields\ndescribe.routines = {\n    'motion': ['motion-sensor-off', 'motion-sensor'],\n    'aperture': ['door-closed', 'door-open'],\n    'nocturnal': ['shield-moon-outline', 'shield-moon'],\n    'diurnal': ['shield-sun-outline', 'shield-sun'],\n    'nightlight': ['lightbulb-night-outline', 'lightbulb-night'],\n    'retention': ['timeline-clock-outline', 'timeline-clock'],\n    'daily': ['calendar-remove', 'calendar-check'],\n    'openwork': ['storefront-remove-outline', 'storefront-check'],\n    'duration': ['timer-remove-outline', 'timer-check'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless'],\n    'darkness': ['brightness-5', 'brightness-4'],\n    'humidity': ['water-percent-alert', 'water-percent']\n};\n\n// Templates\ndescribe.template = {\n    'hmi': {\n        'id': '',\n        'login': '',\n        'level': 'visitor',\n        'lang': 'en',\n        'name': 'auth', // ui page\n        'room': '',\n        'time': 0\n    },\n    'entity': {\n        'uid': '',\n        'source': '',\n        'id': '',\n        'parent': '',\n        'value': '',\n        'type': '',\n        'room': '',\n        'element': '',\n        'unit': '',\n        'seen': 0,\n        'hidden': 0\n    },\n    'scene': {\n        'target': '',\n        'enabled': 0,\n        'on': 1,\n        'off': 0,\n        'motion': 0,\n        'aperture': 0,\n        'nocturnal': 0,\n        'diurnal': 0,\n        'nightlight': 0,\n        'retention': 0,\n        'duration': 60, //minutes\n        'high': '70',\n        'low': '30',\n        'illuminance': 0, //2000\n        'darkness': 0, //200\n        'humidity': 0,\n        'daily': 0,\n        'openwork': 0,\n        'delay': 0, //seconds\n        'min': 0,\n        'max': 0,\n        'step': 0,\n        'tariff': 0, // limit to a given tariff (see dknr_config_fulltariff)\n        'power': 0, // to check if target is really off\n        'timer': 0, // for duration routine\n        'today': 0 // for daily routine, 1=executed today else 0\n    },\n    'trigger': {\n        'inputhigh': 1, // Minimal input level for high level\n        'inputlow': 0, // Maximal input level for low high level\n        'outputhigh': 'high', // Output level on high input level. [none,high,low,toggle]\n        'outputlow': 'low' // output level for low input level [none, high, low, toggle]\n    },\n    'routine': {\n        'topic': '',\n        'payload': false,\n        'replay': false,\n        'rsp': true,\n        'iam': false,\n        'scene': {},\n        'param': {},\n        'trigger': {},\n        'target': {},\n        'routines': []\n    }\n};\n\n// Save config\nglobal.set('describe', describe, 'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/.config.projects.json'\n};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4886,7 +4893,7 @@
         "z": "4bc72a1112cb448c",
         "g": "aa28e51660bead4f",
         "name": "parse",
-        "func": "// ping\nmsg.payload = {\n    'id': 'ping',\n    'source': 'dknr',\n    'parent': 'sensor',\n    'value': Date.now(),\n    'type': 'sensor',\n    'unit': 'ts',\n    'name': 'Ping',\n    'seen': Date.now()\n};\n\nnode.send([msg]);\n\nmsg.payload = {};\n\n// nycthemer\nlet sensor_nycthemer = {...(global.get('entity.dknr_sensor_nycthemer', 'memoryOnly') || {})};\nlet sensor_light = { ...(global.get('entity.dknr_sensor_light', 'memoryOnly') || {}) };\nlet sensor_sound = { ...(global.get('entity.dknr_sensor_sound', 'memoryOnly') || {}) };\nlet sensor_shutter = { ...(global.get('entity.dknr_sensor_shutter', 'memoryOnly') || {}) };\nlet sensor_morning = {...(global.get('entity.dknr_sensor_morning_limit', 'memoryOnly') || {})};\nlet sensor_evening = {...(global.get('entity.dknr_sensor_evening_limit', 'memoryOnly') || {})};\n\nlet sensor_sunrise = global.get('entity.dknr_sensor_sunrise.value', 'memoryOnly') || '07:00';\nlet sensor_sunset = global.get('entity.dknr_sensor_sunset.value', 'memoryOnly') || '19:00';\n\nlet command_nycthemer = global.get('entity.dknr_command_nycthemer.value', 'memoryOnly') ||'auto';\nlet command_light = global.get('entity.dknr_command_light.value', 'memoryOnly') || 'auto';\nlet command_sound = global.get('entity.dknr_command_sound.value', 'memoryOnly') || 'auto';\nlet command_shutter = global.get('entity.dknr_command_shutter.value', 'memoryOnly') || 'auto';\nlet workday_morning_limit = global.get('entity.dknr_command_workday_morning_limit.value', 'memoryOnly') || '07:15';\nlet workday_evening_limit = global.get('entity.dknr_command_workday_evening_limit.value', 'memoryOnly') || '19:15';\n// TODO: restday\n\nlet current = new Date().toTimeString().slice(0, 5);\n\n// Automate, humidity, temperature: sensor = command\nconst same = ['automate', 'humidity', 'temperature'];\nfor (const s of same) {\n    let sensor = { ...(global.get('entity[\"dknr_sensor_' + s + '\"]', 'memoryOnly') || {}) };\n    let command = { ...(global.get('entity[\"dknr_command_' + s + '\"]', 'memoryOnly') || {}) };\n\n    if (typeof sensor.id === 'string' && \n        typeof command.id === 'string'\n    ) {\n        sensor.value = command.value;\n\n        msg.payload = sensor;\n        node.send([msg]);\n    }\n}\n\n// \"scene related\"\n// TODO: waterboiler\n// TODO: airflow\n\n// Nycthemer related\nif (typeof sensor_nycthemer === 'object' && \n    typeof sensor_morning === 'object' && \n    typeof sensor_evening === 'object' && \n    typeof command_nycthemer === 'string' &&\n    typeof sensor_sunrise === 'string' && \n    typeof sensor_sunset === 'string'\n) {\n    let tcurrent = Number(current.split(':').join(''));\n    let tsunrise = Number(sensor_sunrise.split(':').join(''));\n    let tsunset = Number(sensor_sunset.split(':').join(''));\n    let tworkday_morning_limit = Number(workday_morning_limit.split(':').join(''));\n    let tworkday_evening_limit = Number(workday_evening_limit.split(':').join(''));\n\n    // dknr_sensor_morning_limit\n    let tmorning = tsunrise > tworkday_morning_limit ? tsunrise : tworkday_morning_limit;\n    sensor_morning.value = tsunrise > tworkday_morning_limit ? sensor_sunrise : workday_morning_limit;\n\n    msg.payload = sensor_morning;\n    node.send([msg]);\n\n    // dknr_sensor_evening_limit\n    let tevening = tsunset < tworkday_evening_limit ? tsunset : tworkday_evening_limit;\n    sensor_evening.value = tsunset < tworkday_evening_limit ? sensor_sunset : workday_evening_limit;\n\n    msg.payload = sensor_evening;\n    node.send([msg]);\n\n    // dknr_sensor_nycthemer\n    if (command_nycthemer === 'auto') {\n        sensor_nycthemer.value = tcurrent > tmorning && tcurrent < tevening ? 'day' : 'night';\n    } else if (['day', 'night'].includes(command_nycthemer)) {\n        sensor_nycthemer.value = command_nycthemer;\n    }\n\n    msg.payload = sensor_nycthemer;\n    node.send([msg]);\n\n    // dknr_sensor_light\n    if (command_light === 'auto') {\n        sensor_light.value = sensor_nycthemer.value === 'day' ? 'high' : 'low';\n        msg.payload = sensor_light;\n        node.send([msg]);\n    } else if (['high', 'low'].includes(command_light)) {\n        sensor_light.value = command_light;\n        msg.payload = sensor_light;\n        node.send([msg]);\n    }\n\n    // dknr_sensor_sound\n    if (command_sound == 'auto') {\n        sensor_sound.value = sensor_nycthemer.value === 'day' ? 'high' : 'low';\n        msg.payload = sensor_sound;\n        node.send([msg]);\n    } else if (['high', 'low'].includes(command_sound)) {\n        sensor_sound.value = command_sound;\n        msg.payload = sensor_sound;\n        node.send([msg]);\n    }\n\n    // dknr_sensor_shutter\n    if (command_shutter === 'auto') {\n        sensor_shutter.value = sensor_nycthemer.value === 'day' ? 'high' : 'low';\n        msg.payload = sensor_shutter;\n        node.send([msg]);\n    } else if (['high', 'low'].includes(command_shutter)) {\n        sensor_shutter.value = command_shutter;\n        msg.payload = sensor_shutter;\n        node.send([msg]);\n    }\n\n    node.status({ text: sensor_nycthemer.value + ', ' + sensor_morning.value + ', ' + sensor_evening.value });\n}\n\nreturn;",
+        "func": "// ping\nmsg.payload = {\n    'id': 'ping',\n    'source': 'dknr',\n    'parent': 'sensor',\n    'value': Date.now(),\n    'type': 'sensor',\n    'unit': 'ts',\n    'name': 'Ping',\n    'seen': Date.now()\n};\n\nnode.send([msg]);\n\nmsg.payload = {};\n\n// nycthemer\nlet sensor_nycthemer = {...(global.get('entity.dknr_sensor_nycthemer', 'memoryOnly') || {})};\nlet sensor_light = { ...(global.get('entity.dknr_sensor_light', 'memoryOnly') || {}) };\nlet sensor_sound = { ...(global.get('entity.dknr_sensor_sound', 'memoryOnly') || {}) };\nlet sensor_shutter = { ...(global.get('entity.dknr_sensor_shutter', 'memoryOnly') || {}) };\nlet sensor_waterboiler = { ...(global.get('entity.dknr_sensor_waterboiler', 'memoryOnly') || {}) };\nlet sensor_morning = {...(global.get('entity.dknr_sensor_morning_limit', 'memoryOnly') || {})};\nlet sensor_evening = {...(global.get('entity.dknr_sensor_evening_limit', 'memoryOnly') || {})};\n\nlet sensor_sunrise = global.get('entity.dknr_sensor_sunrise.value', 'memoryOnly') || '07:00';\nlet sensor_sunset = global.get('entity.dknr_sensor_sunset.value', 'memoryOnly') || '19:00';\n\nlet command_nycthemer = global.get('entity.dknr_command_nycthemer.value', 'memoryOnly') ||'auto';\nlet command_light = global.get('entity.dknr_command_light.value', 'memoryOnly') || 'auto';\nlet command_sound = global.get('entity.dknr_command_sound.value', 'memoryOnly') || 'auto';\nlet command_shutter = global.get('entity.dknr_command_shutter.value', 'memoryOnly') || 'auto';\nlet command_waterboiler = global.get('entity.dknr_command_waterboiler.value', 'memoryOnly') || 'auto';\nlet workday_morning_limit = global.get('entity.dknr_command_workday_morning_limit.value', 'memoryOnly') || '07:15';\nlet workday_evening_limit = global.get('entity.dknr_command_workday_evening_limit.value', 'memoryOnly') || '19:15';\n// TODO: restday\n\nlet current = new Date().toTimeString().slice(0, 5);\n\n// Automate, humidity, temperature: sensor = command\nconst same = ['automate', 'humidity', 'temperature'];\nfor (const s of same) {\n    let sensor = { ...(global.get('entity[\"dknr_sensor_' + s + '\"]', 'memoryOnly') || {}) };\n    let command = { ...(global.get('entity[\"dknr_command_' + s + '\"]', 'memoryOnly') || {}) };\n\n    if (typeof sensor.id === 'string' && \n        typeof command.id === 'string'\n    ) {\n        sensor.value = command.value;\n\n        msg.payload = sensor;\n        node.send([msg]);\n    }\n}\n\n// \"scene related\"\n// TODO: airflow\n\n// Nycthemer related\nif (typeof sensor_nycthemer === 'object' && \n    typeof sensor_morning === 'object' && \n    typeof sensor_evening === 'object' && \n    typeof command_nycthemer === 'string' &&\n    typeof sensor_sunrise === 'string' && \n    typeof sensor_sunset === 'string'\n) {\n    let tcurrent = Number(current.split(':').join(''));\n    let tsunrise = Number(sensor_sunrise.split(':').join(''));\n    let tsunset = Number(sensor_sunset.split(':').join(''));\n    let tworkday_morning_limit = Number(workday_morning_limit.split(':').join(''));\n    let tworkday_evening_limit = Number(workday_evening_limit.split(':').join(''));\n\n    // dknr_sensor_morning_limit\n    let tmorning = tsunrise > tworkday_morning_limit ? tsunrise : tworkday_morning_limit;\n    sensor_morning.value = tsunrise > tworkday_morning_limit ? sensor_sunrise : workday_morning_limit;\n\n    msg.payload = sensor_morning;\n    node.send([msg]);\n\n    // dknr_sensor_evening_limit\n    let tevening = tsunset < tworkday_evening_limit ? tsunset : tworkday_evening_limit;\n    sensor_evening.value = tsunset < tworkday_evening_limit ? sensor_sunset : workday_evening_limit;\n\n    msg.payload = sensor_evening;\n    node.send([msg]);\n\n    // dknr_sensor_nycthemer\n    if (command_nycthemer === 'auto') {\n        sensor_nycthemer.value = tcurrent > tmorning && tcurrent < tevening ? 'day' : 'night';\n    } else if (['day', 'night'].includes(command_nycthemer)) {\n        sensor_nycthemer.value = command_nycthemer;\n    }\n\n    msg.payload = sensor_nycthemer;\n    node.send([msg]);\n\n    // dknr_sensor_light\n    if (command_light === 'auto') {\n        sensor_light.value = sensor_nycthemer.value === 'day' ? 'high' : 'low';\n        msg.payload = sensor_light;\n        node.send([msg]);\n    } else if (['high', 'low'].includes(command_light)) {\n        sensor_light.value = command_light;\n        msg.payload = sensor_light;\n        node.send([msg]);\n    }\n\n    // dknr_sensor_sound\n    if (command_sound == 'auto') {\n        sensor_sound.value = sensor_nycthemer.value === 'day' ? 'high' : 'low';\n        msg.payload = sensor_sound;\n        node.send([msg]);\n    } else if (['high', 'low'].includes(command_sound)) {\n        sensor_sound.value = command_sound;\n        msg.payload = sensor_sound;\n        node.send([msg]);\n    }\n\n    // dknr_sensor_shutter\n    if (command_shutter === 'auto') {\n        sensor_shutter.value = sensor_nycthemer.value === 'day' ? 'high' : 'low';\n        msg.payload = sensor_shutter;\n        node.send([msg]);\n    } else if (['high', 'low'].includes(command_shutter)) {\n        sensor_shutter.value = command_shutter;\n        msg.payload = sensor_shutter;\n        node.send([msg]);\n    }\n\n    // dknr_sensor_waterboiler\n    if (command_waterboiler === 'auto') {\n        sensor_waterboiler.value = sensor_nycthemer.value === 'day' ? 'off' : 'on';\n        msg.payload = sensor_waterboiler;\n        node.send([msg]);\n    } else if (['on', 'off'].includes(command_waterboiler)) {\n        sensor_waterboiler.value = command_waterboiler;\n        msg.payload = sensor_waterboiler;\n        node.send([msg]);\n    }\n\n    node.status({ text: sensor_nycthemer.value + ', ' + sensor_morning.value + ', ' + sensor_evening.value });\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5412,7 +5419,7 @@
         "z": "4bc72a1112cb448c",
         "g": "4350d3ede367f1ca",
         "name": "parse",
-        "func": "// Limit for some values\nif (msg.topic.includes(\"/lastActive\") ||\n    msg.topic.includes(\"/set\")\n) {\n\n    return;\n}\n\nlet res = {\n    'topic':'',\n    'payload': {}\n};\n\n// Split topic\nlet path = msg.topic.slice(global.get('mqtt.zwave', 'memoryOnly').length + 1).split('/');\n\n// Limit for some values\nif (path.length < 4) {\n    return;\n}\n\nres.payload.source = 'zwave';\nres.payload.parent = path.shift();\nres.payload.id = path.join('_');\nres.payload.seen = Date.now();\nres.payload.value = msg.payload;\n\n// See: https://z-wave.me/manual/z-way/Command_Class_Reference.htm\nswitch (path[0]) {\n    case \"32\": // common binary sensor\n        res.payload.unit = 'b';\n        res.payload.name = 'Alert';\n    case \"37\": // common binary switch\n        res.payload.unit = 'b';\n        res.payload.name = 'Switch';\n        break;\n    case \"38\": // common level switch\n        switch (path[2]) {\n            case \"On\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Switch on';\n                break;\n            case \"Off\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Switch off';\n                break;\n            case \"currentValue\":\n                res.payload.unit = '%';\n                res.payload.name = 'Level switch state';\n                break;\n            case \"targetValue\":\n                res.payload.unit = '%';\n                res.payload.name = 'Level switch target';\n                break;\n            case \"Up\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Level switch up';\n                break;\n            case \"Down\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Level switch down';\n                break;\n            default:\n                return;\n        }\n        break;\n    case \"48\":\n        switch (path[2]) {\n            case \"Any\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Binary sensor';\n                break;\n            default:\n                return;\n        }\n        break;\n    case \"49\":\n        switch (path[2]) {\n            case \"Power\":\n                res.payload.unit = 'W';\n                res.payload.name = 'Power';\n                break;\n            case \"Illuminance\":\n                res.payload.unit = 'lx';\n                res.payload.name = 'Illuminance';\n                break;\n            case \"Air_temperature\":\n                res.payload.unit = '°C';\n                res.payload.name = 'Temperature';\n                break;\n            case \"Humidity\":\n                res.payload.unit = '%';\n                res.payload.name = 'Humidity';\n                break;\n            case \"Ultraviolet\":\n                res.payload.unit = '';\n                res.payload.name = 'Ultraviolet';\n                break;\n            case \"Seismic_Intensity\":\n            case \"Seismic_magnitude\":\n                res.payload.unit = '';\n                res.payload.name = 'Seismic';\n                break;\n            case \"Carbon_dioxide_(CO₂)_level\": // FGDW002\n                res.payload.unit = 'ppm';\n                res.payload.name = 'Carbon dioxide';\n                break;\n            case \"Barometric_pressure\":\n                res.payload.unit = 'kPa';\n                res.payload.name = 'Barometric pressure';\n                break;\n            default:\n                return;\n        }\n        break;\n    case \"50\":\n        switch (path[3]) {\n            case \"65536\":\n            case \"65537\":\n                res.payload.unit = 'kWh';\n                res.payload.name = 'Power';\n                break;\n            case \"66048\":\n            case \"66049\":\n            case \"66051\":\n                res.payload.unit = 'W';\n                res.payload.name = 'Power';\n                break;\n            default:\n                return;\n        };\n        break;\n    case \"113\":\n        switch (path[3]) {\n            case \"Motion_sensor_status\":\n                res.payload.value = !res.payload.value ? 0 : 1;\n                res.payload.element = 'motion';\n                res.payload.unit = 'b';\n                res.payload.type = 'sensor';\n                res.payload.name = 'Motion';\n                break;\n            case \"Heat_sensor_status\":\n                res.payload.value = !res.payload.value ? 0 : 1;\n                res.payload.element = 'alert';\n                res.payload.unit = 'b';\n                res.payload.type = 'sensor';\n                res.payload.name = 'Heat alert';\n                break;\n            case \"Sensor_status\":\n                res.payload.value = !res.payload.value ? 0 : 1;\n                res.payload.element = 'alert';\n                res.payload.unit = 'b';\n                res.payload.type = 'sensor';\n                res.payload.name = 'Smoke alert';\n                break;\n            case \"Door_state\":\n                res.payload.value = res.payload.value === 23 ? 0 : 1;\n                res.payload.element = 'door';\n                res.payload.unit = 'b';\n                res.payload.type = 'sensor';\n                res.payload.name = 'Contact';\n                break;\n            default:\n                return;\n        };\n        break;\n    case \"128\":\n        res.payload.unit = '%';\n        res.payload.name = 'Battery';\n        break;\n    default:\n        return;\n};\n\nres.payload.name = res.payload.name + ' ' + path[1];\n\nnode.status({ text: res.payload.parent + ' / ' + res.payload.id });\nreturn res;",
+        "func": "// Limit for some values\nif (msg.topic.includes(\"/lastActive\") ||\n    msg.topic.includes(\"/set\")\n) {\n\n    return;\n}\n\nlet res = {\n    'topic':'',\n    'payload': {}\n};\n\n// Split topic\nlet path = msg.topic.slice(global.get('mqtt.zwave', 'memoryOnly').length + 1).split('/');\n\n// Limit for some values\nif (path.length < 4) {\n    return;\n}\n\nres.payload.source = 'zwave';\nres.payload.parent = path.shift();\nres.payload.id = path.join('_');\nres.payload.seen = Date.now();\nres.payload.value = msg.payload;\n\n// See: https://z-wave.me/manual/z-way/Command_Class_Reference.htm\nswitch (path[0]) {\n    case \"32\": // common binary sensor\n        res.payload.unit = 'b';\n        res.payload.name = 'Alert';\n    case \"37\": // common binary switch\n        res.payload.unit = 'b';\n        res.payload.name = 'Switch';\n        break;\n    case \"38\": // common level switch\n        switch (path[2]) {\n            case \"On\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Switch on';\n                break;\n            case \"Off\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Switch off';\n                break;\n            case \"currentValue\":\n                res.payload.unit = '%';\n                res.payload.name = 'Level switch state';\n                break;\n            case \"targetValue\":\n                res.payload.unit = '%';\n                res.payload.name = 'Level switch target';\n                break;\n            case \"Up\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Level switch up';\n                break;\n            case \"Down\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Level switch down';\n                break;\n            default:\n                return;\n        }\n        break;\n    case \"48\":\n        switch (path[2]) {\n            case \"Any\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Binary sensor';\n                break;\n            default:\n                return;\n        }\n        break;\n    case \"49\":\n        switch (path[2]) {\n            case \"Power\":\n                res.payload.unit = 'W';\n                res.payload.name = 'Power';\n                break;\n            case \"Illuminance\":\n                res.payload.unit = 'lx';\n                res.payload.name = 'Illuminance';\n                break;\n            case \"Air_temperature\":\n                res.payload.unit = '°C';\n                res.payload.name = 'Temperature';\n                break;\n            case \"Humidity\":\n                res.payload.unit = '%';\n                res.payload.name = 'Humidity';\n                break;\n            case \"Ultraviolet\":\n                res.payload.unit = '';\n                res.payload.name = 'Ultraviolet';\n                break;\n            case \"Seismic_Intensity\":\n            case \"Seismic_magnitude\":\n                res.payload.unit = '';\n                res.payload.name = 'Seismic';\n                break;\n            case \"Carbon_dioxide_(CO₂)_level\": // FGDW002\n                res.payload.unit = 'ppm';\n                res.payload.name = 'Carbon dioxide';\n                break;\n            case \"Barometric_pressure\":\n                res.payload.unit = 'kPa';\n                res.payload.name = 'Barometric pressure';\n                break;\n            default:\n                return;\n        }\n        break;\n    case \"50\":\n        switch (path[3]) {\n            case \"65536\":\n            case \"65537\":\n                res.payload.unit = 'kWh';\n                res.payload.name = 'Power';\n                break;\n            case \"66048\":\n            case \"66049\":\n            case \"66051\":\n                res.payload.unit = 'W';\n                res.payload.name = 'Power';\n                break;\n            default:\n                return;\n        };\n        break;\n    case \"113\":\n        switch (path[3]) {\n            case \"Motion_sensor_status\":\n                res.payload.value = !res.payload.value ? 0 : 1;\n                res.payload.element = 'motion';\n                res.payload.unit = 'b';\n                res.payload.type = 'sensor';\n                res.payload.name = 'Motion';\n                break;\n            case \"Heat_sensor_status\":\n                res.payload.value = !res.payload.value ? 0 : 1;\n                res.payload.element = 'alert';\n                res.payload.unit = 'b';\n                res.payload.type = 'sensor';\n                res.payload.name = 'Heat alert';\n                break;\n            case \"Sensor_status\":\n                res.payload.value = !res.payload.value ? 0 : 1;\n                res.payload.element = 'alert';\n                res.payload.unit = 'b';\n                res.payload.type = 'sensor';\n                res.payload.name = 'Smoke alert';\n                break;\n            case \"Door_state\":\n                res.payload.value = res.payload.value === 23 ? 1 : 0;\n                res.payload.element = 'door';\n                res.payload.unit = 'b';\n                res.payload.type = 'sensor';\n                res.payload.name = 'Contact';\n                break;\n            default:\n                return;\n        };\n        break;\n    case \"128\":\n        res.payload.unit = '%';\n        res.payload.name = 'Battery';\n        break;\n    default:\n        return;\n};\n\nres.payload.name = res.payload.name + ' ' + path[1];\n\nnode.status({ text: res.payload.parent + ' / ' + res.payload.id });\nreturn res;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7189,7 +7196,7 @@
         "z": "4bc72a1112cb448c",
         "g": "f362e0d82cb6210f",
         "name": "dictionary - fr",
-        "func": "msg.payload.dictionary.fr = {\n    'common': {\n        'locales': 'fr'\n    },\n    'option_page': {\n        'home': 'Accueil',\n        'room': 'Pièces',\n        'tuning': 'Ajustements',\n        'scene': 'Scènes',\n        'entity': 'Entités',\n        'config': 'Configuration',\n        'auth': 'Authentification'\n    },\n    'option_level': {\n        'visitor': 'Visiteur',\n        'child':  'Enfant',\n        'parent':'Parent',\n        'admin': 'Administrateur'\n    },\n    'option_team': {\n        'm': 'Maint',\n        'a': 'Après-midi',\n        'n': 'Nuit',\n        'd': 'Journée',\n        's': 'Samedi',\n        'w': 'Weekend'\n    },\n    'option_lang': {\n        'en': 'English',\n        'fr': 'French'\n    },\n    'option_type': {\n        'command': 'Commande',\n        'sensor': 'Capteur'\n    },\n    'option_element': {\n        'aperture': 'Ouverture',\n        'battery': 'Batterie',\n        'climate': 'Climat',\n        'current': 'Intensité',\n        'energy': 'Energie',\n        'power': 'Puissance',\n        'pressure': 'Pression',\n        'temperature': 'Température',\n        'humidity': 'Humidité',\n        'illuminance': 'Luminosité',\n        'light': 'Lumière',\n        'switch': 'Interrupteur',\n        'plug': 'Prise',\n        'remote': 'Télécommande',\n        'door': 'Porte',\n        'window': 'Fenêtre',\n        'shutter': 'Volet',\n        'slider': 'Porte coulissante',\n        'heater': 'Chauffage',\n        'waterboiler': 'Chauffe eau',\n        'motion': 'Mouvement',\n        'presence': 'Présence',\n        'lock': 'Cadenas',\n        'alert': 'Alerte',\n        'sound': 'Volume',\n        'wind': 'Vent',\n        'fan': 'Ventilation',\n        'direction': 'Direction',\n        'time': 'Horloge',\n        'mode': 'Mode',\n        'text': 'Texte',\n        'location': 'Emplacement',\n        'camera': 'Camera',\n        'shield': 'Bouclier',\n        'color': 'Couleur'\n    },\n    'notice': {\n        'file_write_success': 'Fichier sauvegardé avec suucès',\n        'file_write_fail': 'Impossiblde de sauvegarder le fichier',\n        'login_fail': \"Mauvais nom d'utilisateur ou de mot de passe\",\n        'save_success': 'Sauvergardé avec succès'\n    },\n    'group_room': {\n        'room_select': 'Sélectionner une pièce',\n        'open': 'Ouvert',\n        'close': 'Fermé',\n        'on': 'Allumé',\n        'off': 'Eteint',\n        'active': 'Actif',\n        'inactive': 'Inactif',\n        'label_select': 'Sélecteur',\n        'label_various': 'Divers',\n        'label_unknown': 'Inconnu',\n        'list_title': 'Eléments',\n        'detail_title': \"Détail d'un élément\"\n    },\n    'scene': {\n        'addscene_title': 'Configurer des scenes',\n        'addscene_room': 'Sélectionner la pièce du déclencheur',\n    },\n    'group_entity': {\n        'room_title': 'Configuration des pièces',\n        'room_add': 'Ajouter ou modifier une pièce',\n        'room_del': 'Supprimer une pièce',\n        'room_id': 'Identifant',\n        'room_name': 'Nom',\n\n        'camera_title': 'Configration de camera',\n        'camera_ip': 'IP',\n        'camera_user': 'Utilisateur',\n        'camera_pass': 'Mot de passe',\n        'camera_token': 'Jeton',\n        'camera_type': 'Type',\n\n        'entity_title': 'Liste des entités reçu',\n        'entity_edit_title': 'Configurer une entité',\n        'entity_edit_name': 'Nom',\n        'entity_edit_room': 'Pièces',\n        'entity_edit_type': 'Type',\n        'entity_edit_element': 'Elément',\n        'entity_edit_action': 'Action',\n        'entity_show': 'Afficher',\n        'entity_hide': 'Masquer',\n        'entity_delete': 'Supprimer',\n\n        'device_edit_title': 'Configurer un appareil',\n        'device_edit_name': \"Nom de l'appareil\"\n    },\n    'group_config': {\n        'mqtt_title': 'Configuration MQTT',\n        'mqtt_host': 'Adresse IP du broker',\n        'mqtt_port': 'Port',\n        'mqtt_topic': 'Topic',\n        'mqtt_username': 'Utilisateur',\n        'mqtt_password': 'Mot de passe',\n        'mqtt_discovery': 'Home Assistant Discovery topic',\n        'mqtt_dknrteleinfo': 'Teleinfo topic from dknr-teleinfo docker',\n        'mqtt_dknrapsystems': 'APSystems topic from dknr-apsystems docker',\n        'mqtt_dknrdaikin': 'Daikin topic from dknr-daikin docker',\n        'mqtt_zwavejs': 'Zwave topic from zwave-js-ui docker',\n        'mqtt_zigbee2mqtt': 'Zigbee topic from zigbee2mqtt docker',\n        'mqtt_rfxcom2mqtt': 'RFXCom topic from rfxcom2mqtt docker',\n        'mqtt_enabled': 'Activer MQTT',\n\n        'backup_title': \"Sauvergarde et restauration\",\n        'backup_room': 'Pièces',\n        'backup_entity': 'Entités',\n        'backup_scene': 'Scènes',\n        'backup_user': 'Utilisateurs',\n        'backup_mqtt': 'MQTT'\n    },\n    'group_auth': {\n        'login': 'Identifiant',\n        'pass': 'Mot de passe',\n        'user': 'Utilisateur'\n    }\n}\n\nreturn msg;",
+        "func": "msg.payload.dictionary.fr = {\n    'common': {\n        'locales': 'fr'\n    },\n    'option_page': {\n        'home': 'Accueil',\n        'room': 'Pièces',\n        'tuning': 'Ajustements',\n        'scene': 'Scènes',\n        'entity': 'Entités',\n        'config': 'Configuration',\n        'auth': 'Authentification'\n    },\n    'option_level': {\n        'visitor': 'Visiteur',\n        'child':  'Enfant',\n        'parent':'Parent',\n        'admin': 'Administrateur'\n    },\n    'option_team': {\n        'm': 'Maint',\n        'a': 'Après-midi',\n        'n': 'Nuit',\n        'd': 'Journée',\n        's': 'Samedi',\n        'w': 'Weekend'\n    },\n    'option_lang': {\n        'en': 'English',\n        'fr': 'French'\n    },\n    'option_type': {\n        'command': 'Commande',\n        'sensor': 'Capteur'\n    },\n    'option_element': {\n        'aperture': 'Ouverture',\n        'battery': 'Batterie',\n        'climate': 'Climat',\n        'current': 'Intensité',\n        'energy': 'Energie',\n        'power': 'Puissance',\n        'pressure': 'Pression',\n        'temperature': 'Température',\n        'humidity': 'Humidité',\n        'illuminance': 'Luminosité',\n        'light': 'Lumière',\n        'switch': 'Interrupteur',\n        'plug': 'Prise',\n        'remote': 'Télécommande',\n        'door': 'Porte',\n        'window': 'Fenêtre',\n        'shutter': 'Volet',\n        'slider': 'Porte coulissante',\n        'heater': 'Chauffage',\n        'waterboiler': 'Chauffe eau',\n        'motion': 'Mouvement',\n        'presence': 'Présence',\n        'lock': 'Cadenas',\n        'alert': 'Alerte',\n        'sound': 'Volume',\n        'wind': 'Vent',\n        'fan': 'Ventilation',\n        'direction': 'Direction',\n        'time': 'Horloge',\n        'mode': 'Mode',\n        'text': 'Texte',\n        'location': 'Emplacement',\n        'camera': 'Camera',\n        'shield': 'Bouclier',\n        'color': 'Couleur',\n        'tariff': 'Tariff'\n    },\n    'notice': {\n        'file_write_success': 'Fichier sauvegardé avec suucès',\n        'file_write_fail': 'Impossiblde de sauvegarder le fichier',\n        'login_fail': \"Mauvais nom d'utilisateur ou de mot de passe\",\n        'save_success': 'Sauvergardé avec succès'\n    },\n    'group_room': {\n        'room_select': 'Sélectionner une pièce',\n        'open': 'Ouvert',\n        'close': 'Fermé',\n        'on': 'Allumé',\n        'off': 'Eteint',\n        'active': 'Actif',\n        'inactive': 'Inactif',\n        'label_select': 'Sélecteur',\n        'label_various': 'Divers',\n        'label_unknown': 'Inconnu',\n        'list_title': 'Eléments',\n        'detail_title': \"Détail d'un élément\"\n    },\n    'scene': {\n        'addscene_title': 'Configurer des scenes',\n        'addscene_room': 'Sélectionner la pièce du déclencheur',\n    },\n    'group_entity': {\n        'room_title': 'Configuration des pièces',\n        'room_add': 'Ajouter ou modifier une pièce',\n        'room_del': 'Supprimer une pièce',\n        'room_id': 'Identifant',\n        'room_name': 'Nom',\n\n        'camera_title': 'Configration de camera',\n        'camera_ip': 'IP',\n        'camera_user': 'Utilisateur',\n        'camera_pass': 'Mot de passe',\n        'camera_token': 'Jeton',\n        'camera_type': 'Type',\n\n        'entity_title': 'Liste des entités reçu',\n        'entity_edit_title': 'Configurer une entité',\n        'entity_edit_name': 'Nom',\n        'entity_edit_room': 'Pièces',\n        'entity_edit_type': 'Type',\n        'entity_edit_element': 'Elément',\n        'entity_edit_action': 'Action',\n        'entity_show': 'Afficher',\n        'entity_hide': 'Masquer',\n        'entity_delete': 'Supprimer',\n\n        'device_edit_title': 'Configurer un appareil',\n        'device_edit_name': \"Nom de l'appareil\"\n    },\n    'group_config': {\n        'mqtt_title': 'Configuration MQTT',\n        'mqtt_host': 'Adresse IP du broker',\n        'mqtt_port': 'Port',\n        'mqtt_topic': 'Topic',\n        'mqtt_username': 'Utilisateur',\n        'mqtt_password': 'Mot de passe',\n        'mqtt_discovery': 'Home Assistant Discovery topic',\n        'mqtt_dknrteleinfo': 'Teleinfo topic from dknr-teleinfo docker',\n        'mqtt_dknrapsystems': 'APSystems topic from dknr-apsystems docker',\n        'mqtt_dknrdaikin': 'Daikin topic from dknr-daikin docker',\n        'mqtt_zwavejs': 'Zwave topic from zwave-js-ui docker',\n        'mqtt_zigbee2mqtt': 'Zigbee topic from zigbee2mqtt docker',\n        'mqtt_rfxcom2mqtt': 'RFXCom topic from rfxcom2mqtt docker',\n        'mqtt_enabled': 'Activer MQTT',\n\n        'backup_title': \"Sauvergarde et restauration\",\n        'backup_room': 'Pièces',\n        'backup_entity': 'Entités',\n        'backup_scene': 'Scènes',\n        'backup_user': 'Utilisateurs',\n        'backup_mqtt': 'MQTT'\n    },\n    'group_auth': {\n        'login': 'Identifiant',\n        'pass': 'Mot de passe',\n        'user': 'Utilisateur'\n    }\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7241,7 +7248,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "dictionary",
-        "func": "const dictionary = global.get('dictionary', 'memoryOnly') || {};\n\ndictionary.en = {\n    'common': {\n        'locales': 'en-GB'\n    },\n    'home': {},\n    'room': {},\n    'scene': {},\n    'entity': {},\n    'config': {},\n    'auth': {},\n    'option_page': {\n        'home': 'Home',\n        'room': 'Rooms',\n        'tuning': 'Adjustments',\n        'scene': 'Scenes',\n        'entity': 'Entities',\n        'config': 'Configuration',\n        'auth': 'Authentication'\n    },\n    'option_level': {\n        'visitor': 'Visitor',\n        'child':  'Child',\n        'parent':'Parent',\n        'admin': 'Administrator'\n    },\n    'option_team': {\n        'm': 'Morning',\n        'a': 'Afternoon',\n        'n': 'Night',\n        'd': 'Day',\n        'w': 'Weekend',\n        's': 'Saturday'\n    },\n    'option_lang': {\n        'en': 'English',\n        'fr': 'French'\n    },\n    'option_type': {\n        'command': 'Command',\n        'sensor': 'Sensor'\n    },\n    'option_element': {\n        'aperture': 'Aperture',\n        'battery': 'Battery',\n        'climate': 'Climate',\n        'current': 'Current',\n        'energy': 'Energy',\n        'power': 'Power',\n        'pressure': 'Pressure',\n        'temperature': 'Temperature',\n        'humidity': 'Humidity',\n        'illuminance': 'Illuminance',\n        'light': 'Light',\n        'switch': 'Switch',\n        'plug': 'Plug',\n        'remote': 'Remote',\n        'door': 'Door',\n        'window': 'Window',\n        'shutter': 'Shutter',\n        'slider': 'Sliding door',\n        'heater': 'Heating',\n        'waterboiler': 'Waterboiler',\n        'motion': 'Motion',\n        'presence': 'Presence',\n        'lock': 'Lock',\n        'alert': 'Alert',\n        'sound': 'Volume',\n        'wind': 'Wind',\n        'fan': 'Fan',\n        'direction': 'Direction',\n        'time': 'Clock',\n        'mode': 'Mode',\n        'text': 'Text',\n        'location': 'Location',\n        'camera': 'Camera',\n        'shield': 'Shield',\n        'color': 'Color'\n    },\n    'option_unit': {\n        '': 'None',\n        '°C': 'Degree celsuis',\n        '°F': 'Degree fahrenheit',\n        'mA': 'Milliampere',\n        'A': 'Ampere',\n        'mW': 'Milliwatt',\n        'W': 'Watt',\n        'kW': 'Kilowatt',\n        'MW': 'Megawatt',\n        'mWh': 'Milliwatt/hour',\n        'Wh': 'Watt/Hour',\n        'mVA': 'Millivoltampere',\n        'VA': 'Voltampere',\n        'lx': 'Lux',\n        'ppm': 'Parts per million',\n        '%': 'Percent (0-100)',\n        'b': 'Binary (0-1)',\n        'rb': 'Revert binary',\n        '8b': '8-bit (0-255)',\n        'n': 'Number',\n        's': 'Second',\n        'ms': 'Millisecond',\n        'time': 'Time',\n        'enum': 'Enumerator',\n        'text': 'Text',\n        'chex': 'Hexadécimal color'\n    },\n    'option_scene': {\n        'enabled': 'Enabled',\n        'mode': 'Scene',\n        'on': 'On level',\n        'off': 'Off level',\n        'high': 'High dimmer',\n        'low': 'Low dimmer',\n        'delay': 'Delay',\n        'step': 'Step',\n        'min': 'Miminum',\n        'max': 'Maximm',\n        'motion': 'Motion',\n        'retention': 'Retention',\n        'aperture': 'Aperture',\n        'nocturnal': 'Nocturnal',\n        'diurnal': 'Diurnal',\n        'nightlight': 'Nightlight',\n        'daily': 'Daily',\n        'openwork': 'Openwork',\n        'duration': 'Duration',\n        'illuminance': 'Illuminance',\n        'darkness': 'Darkness',\n        'humidity': 'Humidity',\n        'power': 'Power',\n        'tariff': 'tariff',\n        \n        'target': 'Target',\n        'timer': 'Timer',\n        'today': 'Today',\n        'trigger': 'Triggers'\n    },\n    'option_trigger': {\n        'none': 'None',\n        'high': 'High output level',\n        'low': 'Low output level',\n        'toggle': 'Toggle output'\n    },\n    'option_column': {\n        'name': 'Name',\n        'room': 'Room',\n        'element': 'Element',\n        'type': 'Type',\n        'unit': 'Unit',\n        'action': 'Action'\n    },\n    'notice': {\n        'file_write_success': 'Saved file successfully',\n        'file_write_fail': 'Failed to save file',\n        'login_fail': 'Wrong username or password',\n        'save_success': 'Successfully saved'\n    },\n    'group_room': {\n        'room_select': 'Select a room',\n        'open': 'Opened',\n        'close': 'Closed',\n        'on': 'On',\n        'off': 'Off',\n        'active': 'Active',\n        'inactive': 'Inactive',\n        'label_select': 'Selector',\n        'label_various': 'Various',\n        'label_unknown': 'Unknown',\n        'list_title': 'Elements',\n        'detail_title': 'Element detail'\n    },\n    'group_tuning': {\n        'mode_title': 'Mode',\n        'automate': 'Automate',\n        'auto': 'Automatic',\n        'manual': 'Manual'\n    },\n    'group_entity': {\n        'room_title': 'Rooms configuration',\n        'room_add': 'Add or edit a room',\n        'room_del': 'Delete a room',\n        'room_id': 'Ident',\n        'room_name': 'Name',\n\n        'camera_title': 'Camera configuraion',\n        'camera_ip': 'IP',\n        'camera_user': 'Login',\n        'camera_pass': 'Password',\n        'camera_token': 'Token',\n        'camera_type': 'Type',\n\n        'entity_title': 'List of received entities',\n        'entity_edit_title': 'Configure entity',\n        'entity_edit_name': 'Name',\n        'entity_edit_room': 'Room',\n        'entity_edit_type': 'Type',\n        'entity_edit_element': 'Element',\n        'entity_edit_action': 'Action',\n        'entity_show': 'Show',\n        'entity_hide': 'Hide',\n        'entity_delete': 'Delete',\n\n        'device_edit_title': 'Configure device',\n        'device_edit_name': 'Device name'\n    },\n    'group_config': {\n        'mqtt_title': 'MQTT configuration',\n        'mqtt_host': 'Broker IP address',\n        'mqtt_port': 'Port',\n        'mqtt_topic': 'Topic',\n        'mqtt_username': 'Username',\n        'mqtt_password': 'Password',\n        'mqtt_discovery': 'Home Assistant Discovery topic',\n        'mqtt_dknrteleinfo': 'Teleinfo topic from dknr-teleinfo docker',\n        'mqtt_dknrapsystems': 'APSystems topic from dknr-apsystems docker',\n        'mqtt_dknrdaikin': 'Daikin topic from dknr-daikin docker',\n        'mqtt_zwavejs': 'Zwave topic from zwave-js-ui docker',\n        'mqtt_zigbee2mqtt': 'Zigbee topic from zigbee2mqtt docker',\n        'mqtt_rfxcom2mqtt': 'RFXCom topic from rfxcom2mqtt docker',\n        'mqtt_enabled': 'Enable MQTT',\n\n        'backup_title': 'Backup and restore',\n        'backup_room': 'Rooms',\n        'backup_entity': 'Entities',\n        'backup_scene': 'Scenes',\n        'backup_user': 'Users',\n        'backup_mqtt': 'MQTT'\n    },\n    'group_auth': {\n        'login': 'Login',\n        'pass': 'Password',\n        'auth_user': 'User'\n    }\n}\n\n// Fill dictionaries with \"en\" sentences\nfor (const lang in dictionary) {\n    if (lang !== 'en') {\n        dictionary[lang] = {...dictionary['en'], ...dictionary[lang] };\n    }\n}\n\nglobal.set('dictionary', dictionary, 'memoryOnly');\n\nreturn msg;",
+        "func": "const dictionary = global.get('dictionary', 'memoryOnly') || {};\n\ndictionary.en = {\n    'common': {\n        'locales': 'en-GB'\n    },\n    'home': {},\n    'room': {},\n    'scene': {},\n    'entity': {},\n    'config': {},\n    'auth': {},\n    'option_page': {\n        'home': 'Home',\n        'room': 'Rooms',\n        'tuning': 'Adjustments',\n        'scene': 'Scenes',\n        'entity': 'Entities',\n        'config': 'Configuration',\n        'auth': 'Authentication'\n    },\n    'option_level': {\n        'visitor': 'Visitor',\n        'child':  'Child',\n        'parent':'Parent',\n        'admin': 'Administrator'\n    },\n    'option_team': {\n        'm': 'Morning',\n        'a': 'Afternoon',\n        'n': 'Night',\n        'd': 'Day',\n        'w': 'Weekend',\n        's': 'Saturday'\n    },\n    'option_lang': {\n        'en': 'English',\n        'fr': 'French'\n    },\n    'option_type': {\n        'command': 'Command',\n        'sensor': 'Sensor'\n    },\n    'option_element': {\n        'aperture': 'Aperture',\n        'battery': 'Battery',\n        'climate': 'Climate',\n        'current': 'Current',\n        'energy': 'Energy',\n        'power': 'Power',\n        'pressure': 'Pressure',\n        'temperature': 'Temperature',\n        'humidity': 'Humidity',\n        'illuminance': 'Illuminance',\n        'light': 'Light',\n        'switch': 'Switch',\n        'plug': 'Plug',\n        'remote': 'Remote',\n        'door': 'Door',\n        'window': 'Window',\n        'shutter': 'Shutter',\n        'slider': 'Sliding door',\n        'heater': 'Heating',\n        'waterboiler': 'Waterboiler',\n        'motion': 'Motion',\n        'presence': 'Presence',\n        'lock': 'Lock',\n        'alert': 'Alert',\n        'sound': 'Volume',\n        'wind': 'Wind',\n        'fan': 'Fan',\n        'direction': 'Direction',\n        'time': 'Clock',\n        'mode': 'Mode',\n        'text': 'Text',\n        'location': 'Location',\n        'camera': 'Camera',\n        'shield': 'Shield',\n        'color': 'Color',\n        'tariff': 'Tariff'\n    },\n    'option_unit': {\n        '': 'None',\n        '°C': 'Degree celsuis',\n        '°F': 'Degree fahrenheit',\n        'mA': 'Milliampere',\n        'A': 'Ampere',\n        'mW': 'Milliwatt',\n        'W': 'Watt',\n        'kW': 'Kilowatt',\n        'MW': 'Megawatt',\n        'mWh': 'Milliwatt/hour',\n        'Wh': 'Watt/Hour',\n        'mVA': 'Millivoltampere',\n        'VA': 'Voltampere',\n        'lx': 'Lux',\n        'ppm': 'Parts per million',\n        '%': 'Percent (0-100)',\n        'b': 'Binary (0-1)',\n        'rb': 'Revert binary',\n        '8b': '8-bit (0-255)',\n        'n': 'Number',\n        's': 'Second',\n        'ms': 'Millisecond',\n        'time': 'Time',\n        'enum': 'Enumerator',\n        'text': 'Text',\n        'chex': 'Hexadécimal color'\n    },\n    'option_scene': {\n        'enabled': 'Enabled',\n        'mode': 'Scene',\n        'on': 'On level',\n        'off': 'Off level',\n        'high': 'High dimmer',\n        'low': 'Low dimmer',\n        'delay': 'Delay',\n        'step': 'Step',\n        'min': 'Miminum',\n        'max': 'Maximm',\n        'motion': 'Motion',\n        'retention': 'Retention',\n        'aperture': 'Aperture',\n        'nocturnal': 'Nocturnal',\n        'diurnal': 'Diurnal',\n        'nightlight': 'Nightlight',\n        'daily': 'Daily',\n        'openwork': 'Openwork',\n        'duration': 'Duration',\n        'illuminance': 'Illuminance',\n        'darkness': 'Darkness',\n        'humidity': 'Humidity',\n        'power': 'Power',\n        'tariff': 'tariff',\n        \n        'target': 'Target',\n        'timer': 'Timer',\n        'today': 'Today',\n        'trigger': 'Triggers'\n    },\n    'option_trigger': {\n        'none': 'None',\n        'high': 'High output level',\n        'low': 'Low output level',\n        'toggle': 'Toggle output'\n    },\n    'option_column': {\n        'name': 'Name',\n        'room': 'Room',\n        'element': 'Element',\n        'type': 'Type',\n        'unit': 'Unit',\n        'action': 'Action'\n    },\n    'notice': {\n        'file_write_success': 'Saved file successfully',\n        'file_write_fail': 'Failed to save file',\n        'login_fail': 'Wrong username or password',\n        'save_success': 'Successfully saved'\n    },\n    'group_room': {\n        'room_select': 'Select a room',\n        'open': 'Opened',\n        'close': 'Closed',\n        'on': 'On',\n        'off': 'Off',\n        'active': 'Active',\n        'inactive': 'Inactive',\n        'label_select': 'Selector',\n        'label_various': 'Various',\n        'label_unknown': 'Unknown',\n        'list_title': 'Elements',\n        'detail_title': 'Element detail'\n    },\n    'group_tuning': {\n        'mode_title': 'Mode',\n        'automate': 'Automate',\n        'auto': 'Automatic',\n        'manual': 'Manual'\n    },\n    'group_entity': {\n        'room_title': 'Rooms configuration',\n        'room_add': 'Add or edit a room',\n        'room_del': 'Delete a room',\n        'room_id': 'Ident',\n        'room_name': 'Name',\n\n        'camera_title': 'Camera configuraion',\n        'camera_ip': 'IP',\n        'camera_user': 'Login',\n        'camera_pass': 'Password',\n        'camera_token': 'Token',\n        'camera_type': 'Type',\n\n        'entity_title': 'List of received entities',\n        'entity_edit_title': 'Configure entity',\n        'entity_edit_name': 'Name',\n        'entity_edit_room': 'Room',\n        'entity_edit_type': 'Type',\n        'entity_edit_element': 'Element',\n        'entity_edit_action': 'Action',\n        'entity_show': 'Show',\n        'entity_hide': 'Hide',\n        'entity_delete': 'Delete',\n\n        'device_edit_title': 'Configure device',\n        'device_edit_name': 'Device name'\n    },\n    'group_config': {\n        'mqtt_title': 'MQTT configuration',\n        'mqtt_host': 'Broker IP address',\n        'mqtt_port': 'Port',\n        'mqtt_topic': 'Topic',\n        'mqtt_username': 'Username',\n        'mqtt_password': 'Password',\n        'mqtt_discovery': 'Home Assistant Discovery topic',\n        'mqtt_dknrteleinfo': 'Teleinfo topic from dknr-teleinfo docker',\n        'mqtt_dknrapsystems': 'APSystems topic from dknr-apsystems docker',\n        'mqtt_dknrdaikin': 'Daikin topic from dknr-daikin docker',\n        'mqtt_zwavejs': 'Zwave topic from zwave-js-ui docker',\n        'mqtt_zigbee2mqtt': 'Zigbee topic from zigbee2mqtt docker',\n        'mqtt_rfxcom2mqtt': 'RFXCom topic from rfxcom2mqtt docker',\n        'mqtt_enabled': 'Enable MQTT',\n\n        'backup_title': 'Backup and restore',\n        'backup_room': 'Rooms',\n        'backup_entity': 'Entities',\n        'backup_scene': 'Scenes',\n        'backup_user': 'Users',\n        'backup_mqtt': 'MQTT'\n    },\n    'group_auth': {\n        'login': 'Login',\n        'pass': 'Password',\n        'auth_user': 'User'\n    }\n}\n\n// Fill dictionaries with \"en\" sentences\nfor (const lang in dictionary) {\n    if (lang !== 'en') {\n        dictionary[lang] = {...dictionary['en'], ...dictionary[lang] };\n    }\n}\n\nglobal.set('dictionary', dictionary, 'memoryOnly');\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7384,8 +7391,8 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - loop",
-        "func": "/*\nloop (preroutine) : \nPrepare message recevied from loop for routine.\n*/\n\n//node.status({ });\n\n// Boot\nif (flow.get('stop', 'memoryOnly') === true) {\n\n    return;\n}\n\n// Get used data\nconst scenes = { ...(global.get('scene', 'memoryOnly') || {}) };\nconst entities = { ...(global.get('entity', 'memoryOnly') || {}) };\nconst template = { ...(global.get('describe.template', 'memoryOnly') || {}) };\nconst routine = { ...(global.get('describe.template.routine', 'memoryOnly') || {}) };\nconst elements = { ...(global.get('describe.scenes', 'memoryOnly') || {}) };\n\nfor (const e in scenes) {\n    // Keep scene template up to date\n    const scene = { ...template.scene, ...scenes[e] };\n\n    // Ignore unexisting scene\n    if (typeof scene.trigger !== 'object'\n     || typeof scene.trigger[msg.payload.uid] !== 'object'\n     || typeof entities[msg.payload.uid] !== 'object'\n     || typeof entities[e] !== 'object'\n    ) {\n        continue;\n    }\n\n    const param = { ...template.trigger, ...scene.trigger[msg.payload.uid] };\n    const trigger = { ...template.entity, ...msg.payload };\n    const target = { ...template.entity, ...entities[e] };\n    const routines = [ ...(elements[target.element] || []) ];\n\n    // Clone data to msg\n    let newMsg = { ...routine, ...{\n        'topic': scene.target,\n        'iam': trigger.uid === target.uid,\n        'scene': scene,\n        'param': param,\n        'trigger': trigger,\n        'target': target,\n        'routines': routines\n    }};\n\n    // Prevent flood\n    await new Promise(resolve => setTimeout(resolve, 250));\n\n    node.status({ 'fill': 'green', 'text': e });\n\n    if (newMsg.iam === true) {\n\n        node.send([newMsg, null]);\n    }\n    else {\n\n        node.send([null, newMsg]);\n    }\n}\n\nreturn;",
-        "outputs": 2,
+        "func": "/*\nloop (preroutine) : \nPrepare message recevied from loop for routine.\n*/\n\n//node.status({ });\n\n// Boot\nif (flow.get('stop', 'memoryOnly') === true) {\n\n    return;\n}\n\n// Get used data\nconst scenes = { ...(global.get('scene', 'memoryOnly') || {}) };\nconst entities = { ...(global.get('entity', 'memoryOnly') || {}) };\nconst template = { ...(global.get('describe.template', 'memoryOnly') || {}) };\nconst routine = { ...(global.get('describe.template.routine', 'memoryOnly') || {}) };\nconst elements = { ...(global.get('describe.scenes', 'memoryOnly') || {}) };\n\nfor (const e in scenes) {\n    // Keep scene template up to date\n    const scene = { ...template.scene, ...scenes[e] };\n\n    // Ignore unexisting scene\n    if (typeof scene.trigger !== 'object'\n     || typeof scene.trigger[msg.payload.uid] !== 'object'\n     || typeof entities[msg.payload.uid] !== 'object'\n     || typeof entities[e] !== 'object'\n    ) {\n        continue;\n    }\n\n    const param = { ...template.trigger, ...scene.trigger[msg.payload.uid] };\n    const trigger = { ...template.entity, ...msg.payload };\n    const target = { ...template.entity, ...entities[e] };\n    const routines = [ ...(elements[target.element] || []) ];\n\n    // Clone data to msg\n    let newMsg = { ...routine, ...{\n        'topic': scene.target,\n        'iam': trigger.uid === target.uid,\n        'scene': scene,\n        'param': param,\n        'trigger': trigger,\n        'target': target,\n        'routines': routines\n    }};\n\n    node.status({ 'fill': 'green', 'text': e });\n\n    if (newMsg.iam === true) {\n        // As we did not use zwave target value, use high delay for shutter value update\n        if (target.element === 'shutter') {\n\n            node.send([newMsg, null, null]);\n        }\n        else {\n            \n            node.send([null, newMsg, null]);\n        }\n    }\n    else {\n\n        node.send([null, null, newMsg]);\n    }\n}\n\nreturn;",
+        "outputs": 3,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
@@ -7398,7 +7405,10 @@
                 "dab0400118880437"
             ],
             [
-                "d5fab7943a3e6f71"
+                "e18be8c988d94739"
+            ],
+            [
+                "13781a89a231ad0c"
             ]
         ]
     },
@@ -7471,7 +7481,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - nocturnal",
-        "func": "/*\nnocturnal :\nStop routine for low level if it is night.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('nocturnal')\n || msg.scene.nocturnal === 0\n || msg.payload !== true\n || msg.iam\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\nconst sensor = global.get('entity.dknr_sensor_nycthemer.value', 'memoryOnly') || '';\nif (sensor !== 'night') {\n    msg.rsp = false;\n\n    node.status({ 'fill': 'red', 'text': 'nycthemer is ' + sensor });\n}\nelse {\n\n    node.status({ 'fill': 'green', 'text': 'nycthemer is ' + sensor });\n}\n\nreturn msg;",
+        "func": "/*\nnocturnal :\nStop routine for low level if it is night, and high level if it's day.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('nocturnal')\n || msg.scene.nocturnal === 0\n || msg.iam\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\nconst sensor = global.get('entity.dknr_sensor_nycthemer.value', 'memoryOnly') || '';\nif (sensor === 'night' && msg.payload === false\n || sensor === 'day' && msg.payload === true\n) {\n    msg.rsp = false;\n\n    node.status({ 'fill': 'red', 'text': 'nycthemer is ' + sensor });\n}\nelse {\n\n    node.status({ 'fill': 'green', 'text': 'nycthemer is ' + sensor });\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7492,7 +7502,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - diurnal",
-        "func": "/*\ndiurnal :\nStop routine for low level if it is day.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('diurnal')\n || msg.scene.diurnal === 0\n || msg.payload !== true\n || msg.iam\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\nconst sensor = global.get('entity.dknr_sensor_nycthemer.value', 'memoryOnly') || '';\nif (sensor !== 'day') {\n    msg.rsp = false;\n\n    node.status({ 'fill': 'red', 'text': 'nycthemer is ' + sensor });\n}\nelse {\n\n    node.status({ 'fill': 'green', 'text': 'nycthemer is ' + sensor });\n}\n\nreturn msg;",
+        "func": "/*\ndiurnal :\nStop routine for low level if it is day, and high level if its night.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('diurnal')\n || msg.scene.diurnal === 0\n || msg.iam\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\nconst sensor = global.get('entity.dknr_sensor_nycthemer.value', 'memoryOnly') || '';\nif (sensor === 'day' && msg.payload === false\n || sensor === 'night' && msg.payload === true\n) {\n    msg.rsp = false;\n\n    node.status({ 'fill': 'red', 'text': 'nycthemer is ' + sensor });\n}\nelse {\n\n    node.status({ 'fill': 'green', 'text': 'nycthemer is ' + sensor });\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7513,7 +7523,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - humidity",
-        "func": "/*\nhumidity :\nAlways pilot target level according to trigger humidity.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('humidity')\n || msg.scene.humidity === 0\n// || msg.iam\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Find humidity entity in scene triggers\nlet num = 0;\nlet humidity = 0;\nfor (const e in msg.scene.trigger) {\n    if (entity[e]['element'] === 'humidity') {\n        humidity += Number(entity[e]['value']);\n        num++;\n    }\n}\n\n// If there are humidity entities, compare them to scene requirement\nif (num > 0) {\n    humidity = Math.round(parseInt(humidity * 10) / num) / 10;\n    if (humidity >= msg.scene.humidity) {\n        msg.payload = true;\n\n        node.status({ 'fill': 'green', 'text': 'humidity is ' + humidity });\n    } else {\n        msg.payload = false;\n\n        node.status({ 'fill': 'green', 'text': 'humidity is ' + humidity });\n    }\n} else {\n\n    node.status({ 'fill': 'blue', 'text': 'humidity is not found' });\n}\n\nreturn msg;",
+        "func": "/*\nhumidity :\nAlways pilot target level according to trigger humidity.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('humidity')\n || msg.scene.humidity === 0\n// || msg.iam\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Find humidity entity in scene triggers\nlet exists = false;\nfor (const e in msg.scene.trigger) {\n    if (typeof entity[e] === 'object'\n     && entity[e]['hidden'] === 0\n     && entity[e]['element'] === 'humidity'\n    ) {\n        // If humidity is high, set target to high level\n        if (Number(entity[e]['value']) >= msg.scene.humidity) {\n            msg.payload = true;\n\n            node.status({ 'fill': 'green', 'text': 'humidity is high' });\n            return msg;\n        }\n        exists = true;\n    }\n}\n\nif (exists == true) {\n    msg.payload = false;\n\n    node.status({ 'fill': 'green', 'text': 'humidity is low' });\n} else {\n\n    node.status({ 'fill': 'blue', 'text': 'humidity is not found' });\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7534,7 +7544,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - illuminance",
-        "func": "/*\nilluminance :\nStop routine for high level if triggers illuminances is low.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('illuminance')\n || msg.scene.illuminance === 0\n || msg.payload === false\n || msg.iam\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Find illuminance entity in scene triggers\nlet num = 0;\nlet illuminance = 0;\nfor (const e in msg.scene.trigger) {\n    if (typeof entity[e] === 'object' && entity[e]['element'] === 'illuminance') {\n        illuminance += Number(entity[e]['value']);\n        num++;\n    }\n}\n\n// If there are illuminance entities, compare them to scene requirement\nif (num > 0) {\n    illuminance = Math.round(parseInt(illuminance * 10) / num) / 10;\n    if (illuminance >= msg.scene.illuminance) {\n\n        node.status({ 'fill': 'green', 'text': 'illuminance is ' + illuminance });\n    } else {\n        msg.rsp = false;\n        msg.replay = true;\n\n        node.status({ 'fill': 'red', 'text': 'illuminance is ' + illuminance });\n    }\n} else {\n\n    node.status({ 'fill': 'blue', 'text': 'illuminance is not found' });\n}\n\nreturn msg;",
+        "func": "/*\nilluminance :\nStop routine for high level if triggers illuminances is low.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('illuminance')\n || msg.scene.illuminance === 0\n || msg.payload === false\n || msg.iam\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Find illuminance entity in scene triggers\nlet num = 0;\nlet illuminance = 0;\nfor (const e in msg.scene.trigger) {\n    if (typeof entity[e] === 'object'\n     && entity[e]['hidden'] === 0\n     && entity[e]['element'] === 'illuminance'\n    ) {\n        illuminance += Number(entity[e]['value']);\n        num++;\n    }\n}\n\n// If there are illuminance entities, compare them to scene requirement\nif (num > 0) {\n    illuminance = Math.round(parseInt(illuminance * 10) / num) / 10;\n    if (illuminance >= msg.scene.illuminance) {\n\n        node.status({ 'fill': 'green', 'text': 'illuminance is ' + illuminance });\n    } else {\n        msg.rsp = false;\n        msg.replay = true;\n\n        node.status({ 'fill': 'red', 'text': 'illuminance is ' + illuminance });\n    }\n} else {\n\n    node.status({ 'fill': 'blue', 'text': 'illuminance is not found' });\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7555,7 +7565,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - darkness",
-        "func": "/*\nilluminance :\nStop routine for high level if triggers illuminances is high.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('darkness')\n || msg.scene.darkness === 0\n || msg.payload === false\n || msg.iam\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Find illuminance entity in room\nlet num = 0;\nlet illuminance = 0;\nfor (const e in msg.scene.trigger) {\n    if (entity[e]['element'] === 'illuminance') {\n        illuminance += Number(entity[e]['value']);\n        num++;\n    }\n}\n\n// If there are illuminance entities, compare them to scene requirement\nif (num > 0) {\n    illuminance = Math.round(parseInt(illuminance * 10) / num) / 10;\n    if (illuminance <= msg.scene.darkness) {\n\n        node.status({ 'fill': 'green', 'text': 'illuminance is ' + illuminance });\n    } else {\n        msg.rsp = false;\n        msg.replay = true;\n\n        node.status({ 'fill': 'red', 'text': 'illuminance is ' + illuminance });\n    }\n} else {\n\n    node.status({ 'fill': 'blue', 'text': 'illuminance is not found' });\n}\n\nreturn msg;",
+        "func": "/*\nilluminance :\nStop routine for high level if triggers illuminances is high.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('darkness')\n || msg.scene.darkness === 0\n || msg.payload === false\n || msg.iam\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Find illuminance entity in room\nlet num = 0;\nlet illuminance = 0;\nfor (const e in msg.scene.trigger) {\n    if (typeof entity[e] === 'object'\n     && entity[e]['hidden'] === 0\n     && entity[e]['element'] === 'illuminance'\n    ) {\n        illuminance += Number(entity[e]['value']);\n        num++;\n    }\n}\n\n// If there are illuminance entities, compare them to scene requirement\nif (num > 0) {\n    illuminance = Math.round(parseInt(illuminance * 10) / num) / 10;\n    if (illuminance <= msg.scene.darkness) {\n\n        node.status({ 'fill': 'green', 'text': 'illuminance is ' + illuminance });\n    } else {\n        msg.rsp = false;\n        msg.replay = true;\n\n        node.status({ 'fill': 'red', 'text': 'illuminance is ' + illuminance });\n    }\n} else {\n\n    node.status({ 'fill': 'blue', 'text': 'illuminance is not found' });\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7576,7 +7586,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - motion",
-        "func": "/*\nmotion :\nStop routine for low level if triggers motion is high.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// If trigger is motion, replay output (to update timer)\nif (msg.trigger.element === 'motion' && msg.payload === true) {\n    msg.replay = true;\n}\n\n// Exceptions\nif (!msg.routines.includes('motion')\n || msg.scene.motion === 0\n || msg.payload === true\n || msg.iam\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Find motion entity in scene triggers\nlet num = 0;\nlet motion = 0;\nfor (const e in msg.scene.trigger) {\n    if (entity[e]['element'] === 'motion' && !!entity[e]['value']) {\n        motion += 1;\n    }\n    num++;\n}\n\n// If there are motion entities, compare them to other scene requirement\nif (num > 0) {\n    if (motion > 0) {\n        msg.rsp = false;\n        msg.replay = true;\n\n        node.status({ 'fill': 'red', 'text': 'Activ motion' + motion });\n    } else {\n\n        node.status({ 'fill': 'green', 'text': 'Activ motion' + motion });\n    }\n} else {\n\n    node.status({ 'fill': 'blue', 'text': 'Motion is not found' });\n}\n\nreturn msg;",
+        "func": "/*\nmotion :\nStop routine for low level if triggers motion is high.\nUsefull if motion is activ longer than \"duration\"\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// If trigger is motion, replay output (to update timer)\nif (msg.trigger.element === 'motion' && msg.payload === true) {\n    msg.replay = true;\n}\n\n// Exceptions\nif (!msg.routines.includes('motion')\n || msg.scene.motion === 0\n || msg.payload === true\n || msg.iam\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Find motion entity in scene triggers\nfor (const e in msg.scene.trigger) {\n    if (typeof entity[e] === 'object'\n     && entity[e]['hidden'] === 0\n     && entity[e]['element'] === 'motion'\n     && !!entity[e]['value']\n    ) {\n        msg.rsp = false;\n        msg.replay = true;\n\n        node.status({ 'fill': 'red', 'text': 'motion is still activ' });\n        return msg;\n    }\n}\n\nnode.status({ 'fill': 'green', 'text': 'no motion or not active' });\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7597,7 +7607,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - retention",
-        "func": "/*\nretention (motion):\nStop routine for low level if triggers motion is high and target is high.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('retention')\n || msg.scene.motion === 0\n || msg.payload === true\n || msg.iam\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\n// Target if off\nif (msg.target.value.toString() === msg.scene.off.toString()) {\n    msg.rsp = false;\n    \n    node.status({ 'fill': 'red', 'text': 'Target is off' });\n    return msg;\n}\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Find motion entity in scene triggers\nlet num = 0;\nlet motion = 0;\nfor (const e in msg.scene.trigger) {\n    if (entity[e]['element'] === 'motion' && !!entity[e]['value']) {\n        motion += 1;\n    }\n    num++;\n}\n\n// If there are motion entities, compare them to other scene requirement\nif (num > 0) {\n    if (motion > 0) {\n        msg.rsp = false;\n        msg.replay = true;\n\n        node.status({ 'fill': 'red', 'text': 'Activ motion' + motion });\n    } else {\n\n        node.status({ 'fill': 'green', 'text': 'Activ motion' + motion });\n    }\n} else {\n\n    node.status({ 'fill': 'blue', 'text': 'Motion is not found' });\n}\n\nreturn msg;",
+        "func": "/*\nretention (motion):\nOn motion trigger, update target if motion is high and target is high.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('retention')\n || msg.scene.retention === 0\n || msg.trigger.element !== 'motion'\n || msg.iam\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\nif (msg.trigger.element === 'motion') {\n    // Target is off, stop\n    if (msg.target.value.toString() === msg.scene.off.toString()) {\n        msg.rsp = false;\n        \n        node.status({ 'fill': 'red', 'text': 'Target is off' });\n    }\n\n    // Motion is off, stop\n    else if (msg.payload === false) {\n        msg.rsp = false;\n\n        node.status({ 'fill': 'red', 'text': 'Motion is off' });\n    }\n\n    else {\n\n        node.status({ 'fill': 'green', 'text': 'Motion and target are actives' });\n    }\n}\nelse if (msg.payload === false) {\n    // Get latest values of entities\n    const entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n    // Find motion entity in scene triggers\n    for (const e in msg.scene.trigger) {\n        if (typeof entity[e] === 'object'\n        && entity[e]['hidden'] === 0\n        && entity[e]['element'] === 'motion'\n        && !!entity[e]['value']\n        ) {\n            msg.rsp = false;\n            msg.replay = true;\n\n            node.status({ 'fill': 'red', 'text': 'motion is still active' });\n            return msg;\n        }\n    }\n\n    node.status({ 'fill': 'green', 'text': 'no motion or not active' });\n}\nelse {\n\n    node.status({ 'fill': 'blue', 'text': 'bypass' });\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7629,7 +7639,7 @@
         "y": 5780,
         "wires": [
             [
-                "da627346767980a2"
+                "2e8a83fff0849513"
             ]
         ]
     },
@@ -7639,7 +7649,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - aperture",
-        "func": "/*\naperture :\nStop routine if at least one of triggers apertures is opened.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('aperture')\n || msg.scene.aperture === 0\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\nconst aperture = ['door', 'window', 'slider'];\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Loop through triggers to find related apertures\nfor (const e in msg.scene.trigger) {\n    if (typeof entity[e] !== 'object') {\n\n        continue;\n    }\n\n    // If at least one aperture is opened, stop routine\n    if (aperture.includes(entity[e]['value']) && !entity[e]['value']) {\n        msg.rsp = false;\n\n        node.status({ 'fill': 'red', 'text': 'Aperture opened' });\n        return msg;\n    }\n}\n\nnode.status({ 'fill': 'green', 'text': 'Aperture closed' });\nreturn msg;",
+        "func": "/*\naperture :\nStop routine if at least one of triggers apertures is opened.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('aperture')\n || msg.scene.aperture === 0\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\nconst aperture = ['door', 'window', 'slider'];\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Loop through triggers to find related apertures\nfor (const e in msg.scene.trigger) {\n    // If at least one aperture is opened, stop routine\n    if (typeof entity[e] === 'object'\n     && entity[e]['hidden'] === 0\n     && aperture.includes(entity[e]['element'])\n     && entity[e]['value'] !== msg.scene['trigger'][e]['inputhigh'] // trigger input high must be set to aperture closed\n    ) {\n        msg.rsp = false;\n\n        node.status({ 'fill': 'red', 'text': 'Aperture opened' + entity[e]['element']});\n        return msg;\n    }\n}\n\nnode.status({ 'fill': 'green', 'text': 'Aperture closed' });\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7660,7 +7670,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine value",
-        "func": "/*\nvalue:\nParse target value according to previous routines.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\nconst old_value = msg.target.value;\nconst high = ['on', 'high'];\nconst low = ['off', 'low'];\n\n// Check if a mode as same name as scene, and if its level is high or low (value)\nconst sensor = global.get('entity.dknr_sensor_' + msg.target.element + '.value', 'memoryOnly') || '-';\n\nif (['rb', 'b'].includes(msg.target.unit) || (!high.includes(sensor) && !low.includes(sensor))) {\n    msg.target.value = msg.payload === true ? msg.scene.on : msg.scene.off;\n\n} else {\n    // special case\n    if (msg.trigger.element === 'illuminance' && msg.scene.openwork > 1 && msg.payload === true){\n        // On high illuminance instead of set output to off, if openwork in activ, set it to low dimmer level\n        // use case is shutter\n        msg.target.value = msg.scene.openwork\n    }\n    else if (msg.payload === true) {\n        // Normal on\n        msg.target.value = msg.scene.on;\n\n        // Dimmer on level\n        if (high.includes(sensor)) {\n            msg.target.value = msg.scene.high;\n        }\n        else if (low.includes(sensor)) {\n            msg.target.value = msg.scene.low;\n        }\n    } else if (msg.payload === false) {\n        // Normal off\n        msg.target.value = msg.scene.off;\n    }\n}\n\nif (msg.rsp === false) {\n\n    node.status({ 'fill': 'red', 'text': 'unmatch: ' + msg.target.value });\n} else if (msg.target.value === old_value) {\n    if (msg.replay === true) {\n        msg.rsp = true;\n\n        node.status({ 'fill': 'red', 'text': 'replay: ' + msg.target.value });\n    } else {\n        msg.rsp = false;\n\n        node.status({ 'fill': 'red', 'text': 'unchange: ' + msg.target.value });\n    }\n} else {\n\n    node.status({ 'fill': 'green', 'text': 'new value: ' + msg.target.value });\n}\n\nreturn msg;",
+        "func": "/*\nvalue:\nParse target value according to previous routines.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\nconst old_value = msg.target.value;\nconst high = ['on', 'high'];\nconst low = ['off', 'low'];\n\n// Check if a mode as same name as scene, and if its level is high or low (value)\nconst sensor = global.get('entity.dknr_sensor_' + msg.target.element + '.value', 'memoryOnly') || '-';\n\nif (['rb', 'b'].includes(msg.target.unit) || (!high.includes(sensor) && !low.includes(sensor))) {\n    msg.target.value = msg.payload === true ? msg.scene.on : msg.scene.off;\n\n} else {\n    // special case\n    if (/*msg.trigger.element === 'illuminance' && */msg.scene.openwork > 1 && msg.payload === true){\n        // On high illuminance instead of set output to off, if openwork in activ, set it to low dimmer level\n        // use case is shutter\n        msg.target.value = msg.scene.openwork\n    }\n    else if (msg.payload === true) {\n        // Normal on\n        msg.target.value = msg.scene.on;\n\n        // Dimmer on level\n        if (high.includes(sensor)) {\n            msg.target.value = msg.scene.high;\n        }\n        else if (low.includes(sensor)) {\n            msg.target.value = msg.scene.low;\n        }\n    } else if (msg.payload === false) {\n        // Normal off\n        msg.target.value = msg.scene.off;\n    }\n}\n\nif (msg.rsp === false) {\n\n    node.status({ 'fill': 'red', 'text': 'unmatch: ' + msg.target.value });\n} else if (msg.target.value === old_value) {\n    if (msg.replay === true) {\n        msg.rsp = true;\n\n        node.status({ 'fill': 'red', 'text': 'replay: ' + msg.target.value });\n    } else {\n        msg.rsp = false;\n\n        node.status({ 'fill': 'red', 'text': 'unchange: ' + msg.target.value });\n    }\n} else {\n\n    node.status({ 'fill': 'green', 'text': 'new value: ' + msg.target.value });\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7668,7 +7678,7 @@
         "finalize": "",
         "libs": [],
         "x": 370,
-        "y": 5840,
+        "y": 5960,
         "wires": [
             [
                 "75f2b6a4ccf3147a"
@@ -7681,7 +7691,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - daily",
-        "func": "/*\ndaily:\nStop routine if it alread done today.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Limit daily routine to given trigger elements\nconst elements = ['nycthemer', 'door', 'window', 'slider'];\n\n// Exceptions\nif (!msg.routines.includes('daily')\n || msg.scene.daily === 0\n || !elements.includes(msg.trigger.element)\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\n// In fact we execute scene twice a day\nif (msg.trigger.uid === 'dknr_sensor_nycthemer') {\n    if (['day', 'night'].includes(msg.trigger.value)) {\n        msg.scene.today = 0;\n    }\n}\n\nif (msg.scene.today === 1) {\n    msg.rsp = false;\n\n    node.status({ 'fill': 'red', 'text': 'scene is excuted today' });\n} else {\n    const scene = { ...(global.get('scene', 'memoryOnly') || {}) };\n    scene[msg.scene.target]['today'] = 1;\n    global.set('scene', scene, 'memoryOnly');\n\n    node.status({ 'fill': 'green', 'text': 'scene is not executed today' });\n}\n\nreturn msg;",
+        "func": "/*\ndaily:\nStop routine if it alread done today.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Limit daily routine to given trigger elements\nconst elements = ['nycthemer', 'door', 'window', 'slider', 'waterboiler'];\n\n// Exceptions\nif (!msg.routines.includes('daily')\n || msg.scene.daily === 0\n || !elements.includes(msg.trigger.element)\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\nif (msg.trigger.uid === 'dknr_sensor_nycthemer' && 'day' === msg.trigger.value) {\n    msg.scene.today = 0;\n}\n/*\n// In fact we execute scene twice a day\nif (msg.trigger.uid === 'dknr_sensor_nycthemer') {\n    if (['day', 'night'].includes(msg.trigger.value)) {\n        msg.scene.today = 0;\n    }\n}\n*/\n\nif (msg.scene.today === 1) {\n    msg.rsp = false;\n\n    node.status({ 'fill': 'red', 'text': 'scene is excuted today' });\n} else {\n    const scene = { ...(global.get('scene', 'memoryOnly') || {}) };\n    scene[msg.scene.target]['today'] = 1;\n    global.set('scene', scene, 'memoryOnly');\n\n    node.status({ 'fill': 'green', 'text': 'scene is not executed today' });\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7689,7 +7699,7 @@
         "finalize": "",
         "libs": [],
         "x": 380,
-        "y": 5900,
+        "y": 6020,
         "wires": [
             [
                 "0bf8d5a3edf7096a"
@@ -7710,10 +7720,11 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 5960,
+        "y": 6080,
         "wires": [
             [
-                "5075e5842b20c135"
+                "5075e5842b20c135",
+                "a1f80b8aaa201c4f"
             ]
         ]
     },
@@ -7731,8 +7742,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 870,
-        "y": 5060,
+        "x": 610,
+        "y": 6260,
         "wires": []
     },
     {
@@ -7748,8 +7759,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 810,
-        "y": 4940,
+        "x": 550,
+        "y": 6140,
         "wires": [
             [
                 "e5777951d9eac0fa"
@@ -7766,8 +7777,8 @@
         "links": [
             "cc0a7c14f877c371"
         ],
-        "x": 935,
-        "y": 4940,
+        "x": 675,
+        "y": 6140,
         "wires": []
     },
     {
@@ -7780,8 +7791,8 @@
         "links": [
             "c6d0d480067b06fa"
         ],
-        "x": 935,
-        "y": 5000,
+        "x": 675,
+        "y": 6200,
         "wires": []
     },
     {
@@ -7797,8 +7808,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 810,
-        "y": 5000,
+        "x": 550,
+        "y": 6200,
         "wires": [
             [
                 "38a611ec8e34d6a9"
@@ -7818,8 +7829,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 630,
-        "y": 4940,
+        "x": 370,
+        "y": 6140,
         "wires": [
             [
                 "09fd5ad00fb1ea56",
@@ -7868,7 +7879,7 @@
         "op2": "",
         "op1type": "nul",
         "op2type": "payl",
-        "duration": "5",
+        "duration": "30",
         "extend": false,
         "overrideDelay": false,
         "units": "s",
@@ -7876,11 +7887,11 @@
         "bytopic": "topic",
         "topic": "topic",
         "outputs": 1,
-        "x": 570,
+        "x": 610,
         "y": 5000,
         "wires": [
             [
-                "d5fab7943a3e6f71"
+                "13781a89a231ad0c"
             ]
         ]
     },
@@ -7925,6 +7936,144 @@
                 "47c5bf82adab9184"
             ]
         ]
+    },
+    {
+        "id": "2e8a83fff0849513",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "6c942117c5c5ebe1",
+        "name": "routine - tariff",
+        "func": "/*\ntariff :\nSet target to low level if scene trigger \"tariff\" is low level.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('tariff')\n || msg.scene.tariff === 0\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Loop through triggers to find related tariff entity\nfor (const e in msg.scene.trigger) {\n\n    if (typeof entity[e] === 'object'\n     && entity[e]['hidden'] === 0\n     && entity[e]['element'] === \"tariff\"\n    ) {\n        if (entity[e]['value'] === msg.scene['trigger'][e]['inputlow'] && msg.target.value !== msg.scene.off) {\n            msg.payload = false;\n\n            node.status({ 'fill': 'red', 'text': 'tariff is' + entity[e]['value'] });\n            return msg;\n        } else {\n\n            node.status({ 'fill': 'green', 'text': 'tariff is' + entity[e]['value'] });\n            return msg;\n        }\n    }\n}\n\nnode.status({ 'fill': 'blue', 'text': 'tariff not found' });\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 5840,
+        "wires": [
+            [
+                "7dcf708ffe2256a9"
+            ]
+        ]
+    },
+    {
+        "id": "7dcf708ffe2256a9",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "6c942117c5c5ebe1",
+        "name": "routine - power",
+        "func": "/*\npower :\nSet target to low level if scene trigger \"power\" is low level. (check twice)\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('power')\n || msg.scene.power === 0\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Loop through triggers to find related tariff entity\nfor (const e in msg.scene.trigger) {\n\n    if (typeof entity[e] === 'object'\n     && entity[e]['hidden'] === 0\n     && entity[e]['element'] === \"power\"\n    ) {\n        if (entity[e]['value'] === msg.scene['trigger'][e]['inputlow'] && msg.target.value !== msg.scene.off) {\n            // Wait 5s and rechck entity\n            await new Promise(resolve => setTimeout(resolve, 5000));\n            // still low\n            if (global.get('entity[\"' + e + '\"][\"value\"]', 'memoryOnly') === msg.scene['trigger'][e]['inputlow']) {\n                msg.payload = false;\n\n                node.status({ 'fill': 'red', 'text': 'power is low' });\n                return msg;\n            }\n        }\n    }\n}\n\nnode.status({ 'fill': 'blue', 'text': 'power not found or still activ' });\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 5900,
+        "wires": [
+            [
+                "da627346767980a2"
+            ]
+        ]
+    },
+    {
+        "id": "e18be8c988d94739",
+        "type": "trigger",
+        "z": "4bc72a1112cb448c",
+        "g": "6c942117c5c5ebe1",
+        "name": "routine - iam",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "5",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "topic",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 610,
+        "y": 5060,
+        "wires": [
+            [
+                "13781a89a231ad0c"
+            ]
+        ]
+    },
+    {
+        "id": "13781a89a231ad0c",
+        "type": "delay",
+        "z": "4bc72a1112cb448c",
+        "g": "6c942117c5c5ebe1",
+        "name": "10/s/t",
+        "pauseType": "queue",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "10",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 190,
+        "y": 5060,
+        "wires": [
+            [
+                "d5fab7943a3e6f71"
+            ]
+        ]
+    },
+    {
+        "id": "a1f80b8aaa201c4f",
+        "type": "switch",
+        "z": "4bc72a1112cb448c",
+        "g": "6c942117c5c5ebe1",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "zigbee_Cave_Ballon_state",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 640,
+        "y": 6060,
+        "wires": [
+            [
+                "bcfa144f2ae07f50"
+            ]
+        ]
+    },
+    {
+        "id": "bcfa144f2ae07f50",
+        "type": "debug",
+        "z": "4bc72a1112cb448c",
+        "g": "6c942117c5c5ebe1",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 5920,
+        "wires": []
     },
     {
         "id": "d7bc8fc74bfc07cb",
@@ -8073,7 +8222,7 @@
         "z": "10a4e1188aad61a2",
         "g": "0954ea9c8e3ae379",
         "name": "data",
-        "func": "msg.payload = [];\nmsg.topic = msg.hmi.id;\n\nif (!msg.enabled) {\n    msg.reset = true;\n\n    return msg;\n}\n\nlet colors = global.get('describe.colors', 'memoryOnly') || {};\nlet elements = {...global.get('describe.elements', 'memoryOnly') || {}};\nelements.seen = ['lan-connect', 'lan-disconnect'];\nelements.battery = [elements.battery[1], elements.battery[0]];\nlet options = {\n    'motion': '',\n    'temperature': '°C',\n    'humidity': '%',\n    'illuminance': ' lx',\n    'door': '',\n    'window': '',\n    'light': '',\n    'battery': '',\n    'seen': ''\n};\n\nlet entity = global.get('entity', 'memoryOnly') || {};\nlet entities = {};\nlet e_num = 0;\n\nfor (const e in entity) {\n    if (entity[e]['hidden'] !== 0 || \n        entity[e]['room'] === '' || \n        entity[e]['value'] === ''\n    ) {\n\n        continue;\n    }\n\n    if (typeof entities[entity[e]['room']] !== 'object') {\n        entities[entity[e]['room']] = { };\n    }\n\n    // Seen\n    if (typeof entities[entity[e]['room']]['seen'] !== 'number') {\n        entities[entity[e]['room']]['seen'] = 0;\n    }\n    if ((entity[e]['seen'] + 86400000) < Date.now()) { // 24h\n        entities[entity[e]['room']]['seen']++;\n    }\n\n    // Battery\n    if (typeof entities[entity[e]['room']]['battery'] !== 'number') {\n        entities[entity[e]['room']]['battery'] = 0;\n    }\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'battery' && entity[e]['value'] < 15) {\n        entities[entity[e]['room']]['battery'] += 1;\n    }\n\n    // Motion\n    if (entity[e]['type'] !== 'command' && typeof entities[entity[e]['room']]['motion'] !== 'number') {\n        entities[entity[e]['room']]['motion'] = 0;\n    }\n    if (entity[e]['element'] === 'motion' && entity[e]['value'] > 0) {\n        entities[entity[e]['room']]['motion'] += 1;\n    }\n\n    // Door\n    if (entity[e]['type'] !== 'command' && typeof entities[entity[e]['room']]['door'] !== 'number') {\n        entities[entity[e]['room']]['door'] = 0;\n    }\n    if (['door', 'slider'].includes(entity[e]['element']) && !entity[e]['value']) {\n        entities[entity[e]['room']]['door'] += 1;\n    }\n\n    // Window\n    if (entity[e]['type'] !== 'command' && typeof entities[entity[e]['room']]['window'] !== 'number') {\n        entities[entity[e]['room']]['window'] = 0;\n    }\n    if (entity[e]['element'] === 'window' && !entity[e]['value']) {\n        entities[entity[e]['room']]['window'] += 1;\n    }\n\n    // Light\n    if (typeof entities[entity[e]['room']]['light'] !== 'number') {\n        entities[entity[e]['room']]['light'] = 0;\n    }\n    if (entity[e]['element'] === 'light' && entity[e]['value'] > 0) {\n        entities[entity[e]['room']]['light'] += 1;\n    }\n\n    // Temperature\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'temperature') {\n        if (typeof entities[entity[e]['room']]['temperature'] === 'undefined') {\n            entities[entity[e]['room']]['temperature'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['temperature'] = (parseInt(entities[entity[e]['room']]['temperature'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n\n    // Humidity\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'humidity') {\n        if (typeof entities[entity[e]['room']]['humidity'] === 'undefined') {\n            entities[entity[e]['room']]['humidity'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['humidity'] = (parseInt(entities[entity[e]['room']]['humidity'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n\n    // Illuminance\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'illuminance') {\n        if (typeof entities[entity[e]['room']]['illuminance'] === 'undefined') {\n            entities[entity[e]['room']]['illuminance'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['illuminance'] = (parseInt(entities[entity[e]['room']]['illuminance'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n}\n\nlet room = global.get('name[\"room\"]', 'memoryOnly') || {};\nlet r_num = 0;\n\nlet dropdownOptions = [];\nfor (const r in room) {\n    if (['system', 'home'].includes(r)) {\n\n        continue;\n    }\n\n    dropdownOptions[r_num] = {\n        'room': r,\n        'room_name': room[r]\n    };\n\n    let option = '';\n    for (const o in options) {\n        let option_icon = elements[o][0];\n        let option_color = colors.empty;\n        let option_text = '';\n        if (typeof entities[r][o] !== 'undefined') {\n            option_icon = entities[r][o] > 0 ? elements[o][1] : elements[o][0];\n            option_color = entities[r][o] > 0 ? colors.theme : colors.empty;\n            option_text = entities[r][o] > 0 ? entities[r][o] + options[o] : '';\n        }\n\n        dropdownOptions[r_num][o] = \n            '<span style=\"white-space: nowrap;\">' + \n            option_text + \n            '<i class=\"icon-in-row mdi mdi-' + option_icon + '\" style=\"color:' + option_color + '\" title=\"' + o + '\"></i>' + \n            '</span>';\n    };\n\n    r_num++;\n}\n\nif (r_num > 0) {\n    dropdownOptions.sort((a, b) => a.room_name.localeCompare(b.room_name));\n\n    msg.payload = dropdownOptions;\n    msg.ui_update = {\n        'label': '',\n    }\n\n    return msg;\n}",
+        "func": "msg.payload = [];\nmsg.topic = msg.hmi.id;\n\nif (!msg.enabled) {\n    msg.reset = true;\n\n    return msg;\n}\n\nlet colors = global.get('describe.colors', 'memoryOnly') || {};\nlet elements = {...global.get('describe.elements', 'memoryOnly') || {}};\nelements.seen = ['lan-connect', 'lan-disconnect'];\nelements.battery = [elements.battery[1], elements.battery[0]];\nlet options = {\n    'motion': '',\n    'temperature': '°C',\n    'humidity': '%',\n    'illuminance': ' lx',\n    'door': '',\n    'window': '',\n    'light': '',\n    'battery': '',\n    'seen': ''\n};\n\nlet entity = global.get('entity', 'memoryOnly') || {};\nlet entities = {};\nlet e_num = 0;\n\nfor (const e in entity) {\n    if (entity[e]['hidden'] !== 0 || \n        entity[e]['room'] === '' || \n        entity[e]['value'] === ''\n    ) {\n\n        continue;\n    }\n\n    if (typeof entities[entity[e]['room']] !== 'object') {\n        entities[entity[e]['room']] = { };\n    }\n\n    // Seen\n    if (typeof entities[entity[e]['room']]['seen'] !== 'number') {\n        entities[entity[e]['room']]['seen'] = 0;\n    }\n    if ((entity[e]['seen'] + 86400000) < Date.now()) { // 24h\n        entities[entity[e]['room']]['seen']++;\n    }\n\n    // Battery\n    if (typeof entities[entity[e]['room']]['battery'] !== 'number') {\n        entities[entity[e]['room']]['battery'] = 0;\n    }\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'battery' && entity[e]['value'] < 15) {\n        entities[entity[e]['room']]['battery'] += 1;\n    }\n\n    // Motion\n    if (entity[e]['type'] !== 'command' && typeof entities[entity[e]['room']]['motion'] !== 'number') {\n        entities[entity[e]['room']]['motion'] = 0;\n    }\n    if (entity[e]['element'] === 'motion' && entity[e]['value'] > 0) {\n        entities[entity[e]['room']]['motion'] += 1;\n    }\n\n    // Door\n    if (entity[e]['type'] !== 'command' && typeof entities[entity[e]['room']]['door'] !== 'number') {\n        entities[entity[e]['room']]['door'] = 0;\n    }\n    if (['door', 'slider'].includes(entity[e]['element']) && !entity[e]['value']) {\n        entities[entity[e]['room']]['door'] += 1;\n    }\n\n    // Window\n    if (entity[e]['type'] !== 'command' && typeof entities[entity[e]['room']]['window'] !== 'number') {\n        entities[entity[e]['room']]['window'] = 0;\n    }\n    if (entity[e]['element'] === 'window' && !entity[e]['value']) {\n        entities[entity[e]['room']]['window'] += 1;\n    }\n\n    // Light\n    if (typeof entities[entity[e]['room']]['light'] !== 'number') {\n        entities[entity[e]['room']]['light'] = 0;\n    }\n    if (entity[e]['element'] === 'light' && entity[e]['value'] > 0) {\n        entities[entity[e]['room']]['light'] += 1;\n    }\n\n    // Temperature\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'temperature') {\n        if (typeof entities[entity[e]['room']]['temperature'] === 'undefined') {\n            entities[entity[e]['room']]['temperature'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['temperature'] = (parseInt(entities[entity[e]['room']]['temperature'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n\n    // Humidity\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'humidity') {\n        if (typeof entities[entity[e]['room']]['humidity'] === 'undefined') {\n            entities[entity[e]['room']]['humidity'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['humidity'] = (parseInt(entities[entity[e]['room']]['humidity'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n\n    // Illuminance\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'illuminance') {\n        if (typeof entities[entity[e]['room']]['illuminance'] === 'undefined') {\n            entities[entity[e]['room']]['illuminance'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['illuminance'] = (parseInt(entities[entity[e]['room']]['illuminance'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n}\n\nlet room = global.get('name[\"room\"]', 'memoryOnly') || {};\nlet r_num = 0;\n\nlet dropdownOptions = [];\nfor (const r in room) {\n    if (['system', 'home'].includes(r)) {\n\n        continue;\n    }\n\n    dropdownOptions[r_num] = {\n        'room': r,\n        'room_name': room[r]\n    };\n\n    for (const o in options) {\n        let option_icon = elements[o][0];\n        let option_color = colors.empty;\n        let option_text = '';\n        if (typeof entities[r][o] !== 'undefined') {\n            option_icon = entities[r][o] > 0 ? elements[o][1] : elements[o][0];\n            option_color = entities[r][o] > 0 ? colors.theme : colors.empty;\n            option_text = entities[r][o] > 0 ? entities[r][o] + options[o] : '';\n        }\n\n        dropdownOptions[r_num][o] = \n            '<span style=\"white-space: nowrap;\">' + \n            option_text + \n            '<i class=\"icon-in-row mdi mdi-' + option_icon + '\" style=\"color:' + option_color + '\" title=\"' + o + '\"></i>' + \n            '</span>';\n    };\n\n    r_num++;\n}\n\nif (r_num > 0) {\n    dropdownOptions.sort((a, b) => a.room_name.localeCompare(b.room_name));\n\n    msg.payload = dropdownOptions;\n    msg.ui_update = {\n        'label': '',\n    }\n\n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -8713,7 +8862,7 @@
         "z": "560376d6bba621ec",
         "g": "b9c606401bb8c37c",
         "name": "data",
-        "func": "if (!msg.enabled) {\n\n    return;\n}\n\nconst room = flow.get('room[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--';\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\nconst colors = { ...(global.get('describe.colors', 'memoryOnly') || {}) };\nconst icons = { ...(global.get('describe.elements', 'memoryOnly') || {}) };\nconst enums = { ...(global.get('describe.enum', 'memoryOnly') || {}) };\nconst sources = { ...(global.get('describe.sources', 'memoryOnly') || {}) };\nconst reverts = [ ...(global.get('describe.reverts', 'memoryOnly') || []) ];\n\nconst groups = {\n    'switch': [\n        'light',\n        'switch',\n        'plug',\n        'mode',\n        'fan',\n        'direction',\n        'heater',\n        'waterboiler',\n        'sound',\n        'shield'\n    ],\n    'enum': [],\n    'aperture': [\n        'aperture',\n        'door',\n        'window',\n        'lock',\n        'shutter',\n        'slider'\n    ],\n    'climate': [\n        'humidity',\n        'temperature',\n        'illuminance',\n        'pressure',\n        'motion',\n        'location'\n    ],\n    'energy': [\n        'current',\n        'energy',\n        'power',\n        'battery'\n    ],\n    'various': [\n        'remote',\n        'text',\n        'time',\n        'color'\n    ]\n};\n\nconst labels = {\n    'switch': msg.dictionary.option_element['switch'],\n    'enum': msg.dictionary.group_room.label_select,\n    'aperture': msg.dictionary.option_element['aperture'],\n    'climate': msg.dictionary.option_element['climate'],\n    'energy': msg.dictionary.option_element['energy'],\n    'various': msg.dictionary.group_room.label_various,\n    'unknown': msg.dictionary.group_room.label_unknown\n};\n\nlet inc = {\n    'switch': 0,\n    'enum': 0,\n    'aperture': 0,\n    'climate': 0,\n    'energy': 0,\n    'various': 0,\n    'unknown': 0\n};\nlet res = {\n    'switch': [],\n    'enum': [],\n    'aperture': [],\n    'climate': [],\n    'energy': [],\n    'various': [],\n    'unknown': []\n};\n\nlet exists = false;\n\nfor (const uid in entity) {\n    if (entity[uid]['room'] === room && \n        entity[uid]['hidden'] === 0\n    ) {\n        let group = 'unknown';\n        for (const g in groups) {\n            if (groups[g].includes(entity[uid]['element'])) {\n                group = g;\n            }\n        }\n\n        if (group !== '') {\n            let value = entity[uid]['value'] || 0;\n            let unit = entity[uid]['unit'];\n            let name = global.get('name[\"entity\"][\"' + uid + '\"]', 'memoryOnly') || '';\n            let parent = global.get('name[\"device\"][\"' + entity[uid]['parent'] + '\"]', 'memoryOnly') || entity[uid]['parent'];\n            let icon = '';\n            let color = 'empty';\n            let element = entity[uid]['element'];\n            let element_name = msg.dictionary.option_element[element];\n            let element_icon = '';\n            let source = sources[entity[uid]['source']] || ['help', entity[uid]['source']];\n\n            // Revert value for some \"rb\" unit\n            if (unit === 'rb') {\n                value = value === 0 ? 1 : 0;\n            }\n            // Revert text for some elements (see describe.reverts)\n            if (reverts.includes(element)) {\n                value = value === 0 ? 1 : 0;\n            }\n            // Get icon from value\n            if (typeof icons[element] !== 'undefined') {\n                if (value) {\n                    icon = icons[element][1];\n                    color = colors.theme;\n                } else {\n                    icon = icons[element][0];\n                    color = colors.empty;\n                }\n                element_icon = icons[element][1];\n            }\n\n            // Battery alert color\n            if (element === 'battery' && value < 15) {\n                color = colors.off;\n            }\n\n            // Get special enum value\n            if (unit === 'enum') {\n                let cur_enum = enums[entity[uid]['source']][entity[uid]['id']][value] || [icon, value];\n                icon = cur_enum[0];\n                value = cur_enum[1];\n                group = 'enum';\n            }\n\n            // Format value\n            if (!['8b', 'rb', 'b', 'enum', 'ts', 'time', 'text', 'chex'].includes(unit) && unit !== '') {\n                // Add unit text\n                value = value + ' ' + unit;\n            }\n            else if (unit === '8b') {\n                // Convert 8b in %\n                value = Math.ceil(Number(value) * 100 / 255) + '%'\n            }\n            else if (unit === 'ts') {\n                // Convert to date\n                value = new Date(value).toLocaleString(msg.dictionary.common.locales);\n            }\n            else if (['b', 'rb'].includes(unit)) {\n                // Convert to text\n                if (group === 'aperture') {\n                    value = value === 0 ? msg.dictionary.group_room.close : msg.dictionary.group_room.open;\n                }\n                else if (group === 'switch') {\n                    if (element === 'shield') {\n                        value = value === 0 ? msg.dictionary.group_room.inactive : msg.dictionary.group_room.active;\n                    } else {\n                        value = value === 0 ? msg.dictionary.group_room.off : msg.dictionary.group_room.on;\n                    }\n                }\n            }\n\n            // Get name from parent if none or default is set\n            if (name === '' || name === entity[uid]['id']) {\n                name = parent;\n            }\n\n            // Colorize unresponsive entity\n            let type_icon = entity[uid]['type'] === 'sensor' ? 'leak': 'button-pointer';\n            let type_color = entity[uid]['type'] === 'sensor' ? colors.empty : colors.none;\n            if ((entity[uid]['seen'] + 86400000) < Date.now()) { // 24h\n                type_color = colors.off;\n            }\n\n            res[group][inc[group]] = {\n                'uid': uid,\n                'name': name,\n                'value': value,\n                'icon': '<i class=\"icon-in-row mdi mdi-' + icon + '\" style=\"color:' + color + '; font-size: 2em;\" title=\"' + uid + '\"></i>',\n                'icons': '<span style=\"white-space: nowrap;\">' +\n                    '<i class=\"icon-in-row mdi mdi-' + source[0] + '\" style=\"color:' + colors.empty + '\" title=\"' + source[1] + '\"></i> ' +\n                    '<i class=\"icon-in-row mdi mdi-' + element_icon + '\" style=\"color:' + colors.empty + '\" title=\"' + element_name + '\"></i> ' +\n                    '<i class=\"icon-in-row mdi mdi-' + type_icon + '\" style=\"color:' + type_color + '\" title=\"' + msg.dictionary.option_type[entity[uid]['type']] + '\"></i>' +\n                    '</span>'\n            };\n\n            inc[group] = inc[group] + 1;\n            exists = true;\n        }\n    }\n}\n\nlet rres = {};\nfor (const k in res) {\n    if (res[k].length > 0) {\n        res[k].sort((a, b) => a.name.localeCompare(b.name));\n        rres[k] = {...msg, ...{\n            'label': labels[k],\n            'payload': res[k]\n        }};\n    } else {\n        rres[k] = {...msg, ...{\n            'topic': '',\n            'class': 'remove',\n            'enabled': false,\n            'payload': {}\n        }};\n    }\n}\n\nif (exists) {\n\n    node.send([rres['energy'], rres['aperture'], rres['switch'], rres['climate'], rres['enum'], rres['various'], rres['unknown']]);\n}\n\nreturn;",
+        "func": "if (!msg.enabled) {\n\n    return;\n}\n\nconst room = flow.get('room[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '--';\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\nconst colors = { ...(global.get('describe.colors', 'memoryOnly') || {}) };\nconst icons = { ...(global.get('describe.elements', 'memoryOnly') || {}) };\nconst enums = { ...(global.get('describe.enum', 'memoryOnly') || {}) };\nconst sources = { ...(global.get('describe.sources', 'memoryOnly') || {}) };\nconst reverts = [ ...(global.get('describe.reverts', 'memoryOnly') || []) ];\n\nconst groups = {\n    'switch': [\n        'light',\n        'switch',\n        'plug',\n        'mode',\n        'fan',\n        'direction',\n        'heater',\n        'waterboiler',\n        'sound',\n        'shield'\n    ],\n    'enum': [],\n    'aperture': [\n        'aperture',\n        'door',\n        'window',\n        'lock',\n        'shutter',\n        'slider'\n    ],\n    'climate': [\n        'humidity',\n        'temperature',\n        'illuminance',\n        'pressure',\n        'motion',\n        'location'\n    ],\n    'energy': [\n        'current',\n        'energy',\n        'power',\n        'battery',\n        'tariff'\n    ],\n    'various': [\n        'remote',\n        'text',\n        'time',\n        'color'\n    ]\n};\n\nconst labels = {\n    'switch': msg.dictionary.option_element['switch'],\n    'enum': msg.dictionary.group_room.label_select,\n    'aperture': msg.dictionary.option_element['aperture'],\n    'climate': msg.dictionary.option_element['climate'],\n    'energy': msg.dictionary.option_element['energy'],\n    'various': msg.dictionary.group_room.label_various,\n    'unknown': msg.dictionary.group_room.label_unknown\n};\n\nlet inc = {\n    'switch': 0,\n    'enum': 0,\n    'aperture': 0,\n    'climate': 0,\n    'energy': 0,\n    'various': 0,\n    'unknown': 0\n};\nlet res = {\n    'switch': [],\n    'enum': [],\n    'aperture': [],\n    'climate': [],\n    'energy': [],\n    'various': [],\n    'unknown': []\n};\n\nlet exists = false;\n\nfor (const uid in entity) {\n    if (entity[uid]['room'] === room && \n        entity[uid]['hidden'] === 0\n    ) {\n        let group = 'unknown';\n        for (const g in groups) {\n            if (groups[g].includes(entity[uid]['element'])) {\n                group = g;\n            }\n        }\n\n        if (group !== '') {\n            let value = entity[uid]['value'] || 0;\n            let unit = entity[uid]['unit'];\n            //let type = entity[uid]['type'];\n            let name = global.get('name[\"entity\"][\"' + uid + '\"]', 'memoryOnly') || '';\n            let parent = global.get('name[\"device\"][\"' + entity[uid]['parent'] + '\"]', 'memoryOnly') || entity[uid]['parent'];\n            let icon = '';\n            let color = 'empty';\n            let element = entity[uid]['element'];\n            let element_name = msg.dictionary.option_element[element];\n            let element_icon = '';\n            let source = sources[entity[uid]['source']] || ['help', entity[uid]['source']];\n\n            // Revert value for some \"rb\" unit\n            if (unit === 'rb') {\n                value = value === 0 ? 1 : 0;\n            }\n            // Revert text for some elements (see describe.reverts)\n            if (reverts.includes(element)) {\n                value = value === 0 ? 1 : 0;\n            }\n            // Get icon from value\n            if (typeof icons[element] !== 'undefined') {\n                if (value) {\n                    icon = icons[element][1];\n                    color = colors.theme;\n                } else {\n                    icon = icons[element][0];\n                    color = colors.empty;\n                }\n                element_icon = icons[element][1];\n            }\n\n            // Battery alert color\n            if (element === 'battery' && value < 15) {\n                color = colors.off;\n            }\n\n            // Get special enum value\n            if (unit === 'enum') {// && type === 'command') {\n                let cur_enum = enums[entity[uid]['source']][entity[uid]['id']][value] || [icon, value];\n                icon = cur_enum[0];\n                value = cur_enum[1];\n                group = 'enum';\n            }\n\n            // Format value\n            if (!['8b', 'rb', 'b', 'enum', 'ts', 'time', 'text', 'chex'].includes(unit) && unit !== '') {\n                // Add unit text\n                value = value + ' ' + unit;\n            }\n            else if (unit === '8b') {\n                // Convert 8b in %\n                value = Math.ceil(Number(value) * 100 / 255) + '%'\n            }\n            else if (unit === 'ts') {\n                // Convert to date\n                value = new Date(value).toLocaleString(msg.dictionary.common.locales);\n            }\n            else if (['b', 'rb'].includes(unit)) {\n                // Convert to text\n                if (group === 'aperture') {\n                    value = value === 0 ? msg.dictionary.group_room.close : msg.dictionary.group_room.open;\n                }\n                else if (group === 'switch') {\n                    if (element === 'shield') {\n                        value = value === 0 ? msg.dictionary.group_room.inactive : msg.dictionary.group_room.active;\n                    } else {\n                        value = value === 0 ? msg.dictionary.group_room.off : msg.dictionary.group_room.on;\n                    }\n                }\n            }\n\n            // Get name from parent if none or default is set\n            if (name === '' || name === entity[uid]['id']) {\n                name = parent;\n            }\n\n            // Colorize unresponsive entity\n            let type_icon = entity[uid]['type'] === 'sensor' ? 'leak': 'button-pointer';\n            let type_color = entity[uid]['type'] === 'sensor' ? colors.empty : colors.none;\n            if ((entity[uid]['seen'] + 86400000) < Date.now()) { // 24h\n                type_color = colors.off;\n            }\n\n            res[group][inc[group]] = {\n                'uid': uid,\n                'name': name,\n                'value': value,\n                'icon': '<i class=\"icon-in-row mdi mdi-' + icon + '\" style=\"color:' + color + '; font-size: 2em;\" title=\"' + uid + '\"></i>',\n                'icons': '<span style=\"white-space: nowrap;\">' +\n                    '<i class=\"icon-in-row mdi mdi-' + source[0] + '\" style=\"color:' + colors.empty + '\" title=\"' + source[1] + '\"></i> ' +\n                    '<i class=\"icon-in-row mdi mdi-' + element_icon + '\" style=\"color:' + colors.empty + '\" title=\"' + element_name + '\"></i> ' +\n                    '<i class=\"icon-in-row mdi mdi-' + type_icon + '\" style=\"color:' + type_color + '\" title=\"' + msg.dictionary.option_type[entity[uid]['type']] + '\"></i>' +\n                    '</span>'\n            };\n\n            inc[group] = inc[group] + 1;\n            exists = true;\n        }\n    }\n}\n\nlet rres = {};\nfor (const k in res) {\n    if (res[k].length > 0) {\n        res[k].sort((a, b) => a.name.localeCompare(b.name));\n        rres[k] = {...msg, ...{\n            'label': labels[k],\n            'payload': res[k]\n        }};\n    } else {\n        rres[k] = {...msg, ...{\n            'topic': '',\n            'class': 'remove',\n            'enabled': false,\n            'payload': {}\n        }};\n    }\n}\n\nif (exists) {\n\n    node.send([rres['energy'], rres['aperture'], rres['switch'], rres['climate'], rres['enum'], rres['various'], rres['unknown']]);\n}\n\nreturn;",
         "outputs": 7,
         "timeout": 0,
         "noerr": 0,
@@ -10731,7 +10880,7 @@
         "z": "560376d6bba621ec",
         "g": "32fd2df8e6be1ebb",
         "name": "data",
-        "func": "let scenes = global.get('scene', 'memoryOnly') || {};\n\nif (typeof scenes[msg.payload.scene][msg.payload.target] === 'object') {\n    scenes[msg.payload.scene][msg.payload.target]['enabled'] = msg.payload.enabled ? 0 : 1;\n}\n\nglobal.set('scene', scenes, 'memoryOnly');\n\nmsg.enabled = true;\nmsg.payload = msg.dictionary.room.scene_save_success || 'Successfully saved';\n\nreturn msg;",
+        "func": "let scenes = global.get('scene', 'memoryOnly') || {};\n\nif (typeof scenes[msg.payload.target] === 'object') {\n    scenes[msg.payload.target]['enabled'] = msg.payload.enabled ? 0 : 1;\n}\n\nglobal.set('scene', scenes, 'memoryOnly');\n\nmsg.enabled = true;\nmsg.payload = msg.dictionary.room.scene_save_success || 'Successfully saved';\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -11771,7 +11920,7 @@
         "name": "scene - sceneadd  - on - binary",
         "label": "",
         "group": "3a30762508b6edae",
-        "order": 6,
+        "order": 5,
         "width": "6",
         "height": "1",
         "passthru": false,
@@ -11806,7 +11955,7 @@
         "name": "scene - sceneadd - off - binary",
         "label": "",
         "group": "3a30762508b6edae",
-        "order": 7,
+        "order": 6,
         "width": "6",
         "height": "1",
         "passthru": false,
@@ -11909,7 +12058,7 @@
         "name": "scene - sceneadd - on - percent 8b",
         "label": "",
         "tooltip": "",
-        "order": 8,
+        "order": 7,
         "width": "6",
         "height": "1",
         "passthru": false,
@@ -11945,7 +12094,7 @@
         "name": "scene - sceneadd - off - percent 8b",
         "label": "",
         "tooltip": "",
-        "order": 9,
+        "order": 8,
         "width": "6",
         "height": "1",
         "passthru": false,
@@ -12004,7 +12153,7 @@
         "group": "3a30762508b6edae",
         "name": "scene - sceneadd - on - number",
         "label": "",
-        "order": 10,
+        "order": 9,
         "width": "6",
         "height": "1",
         "topic": "on",
@@ -12038,7 +12187,7 @@
         "group": "3a30762508b6edae",
         "name": "scene - sceneadd - off - number",
         "label": "",
-        "order": 11,
+        "order": 10,
         "width": "6",
         "height": "1",
         "topic": "off",
@@ -12096,7 +12245,7 @@
         "group": "3a30762508b6edae",
         "name": "scene - sceneadd - on - text",
         "label": "",
-        "order": 14,
+        "order": 13,
         "width": "6",
         "height": "1",
         "topic": "on",
@@ -12130,7 +12279,7 @@
         "group": "3a30762508b6edae",
         "name": "scene - sceneadd - off - text",
         "label": "",
-        "order": 15,
+        "order": 14,
         "width": "6",
         "height": "1",
         "topic": "off",
@@ -12189,7 +12338,7 @@
         "name": "scene - sceneadd - on - enum",
         "label": "",
         "tooltip": "",
-        "order": 12,
+        "order": 11,
         "width": "6",
         "height": "1",
         "passthru": false,
@@ -12226,7 +12375,7 @@
         "name": "scene - sceneadd - off - enum",
         "label": "",
         "tooltip": "",
-        "order": 13,
+        "order": 12,
         "width": "6",
         "height": "1",
         "passthru": false,
@@ -12283,7 +12432,7 @@
         "name": "scene - sceneadd - motion",
         "label": "",
         "group": "3a30762508b6edae",
-        "order": 17,
+        "order": 16,
         "width": "6",
         "height": "1",
         "passthru": false,
@@ -12490,7 +12639,7 @@
         "name": "scene - sceneadd - retention",
         "label": "",
         "group": "3a30762508b6edae",
-        "order": 18,
+        "order": 17,
         "width": "6",
         "height": "1",
         "passthru": false,
@@ -12567,7 +12716,7 @@
         "colorThumb": "",
         "showTextField": true,
         "x": 760,
-        "y": 2120,
+        "y": 2180,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -12588,7 +12737,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2120,
+        "y": 2180,
         "wires": [
             [
                 "2175f2ab97508f14"
@@ -12599,10 +12748,9 @@
         "id": "14ce5e758a88c497",
         "type": "function",
         "z": "56c0b44ca387382c",
-        "d": true,
         "g": "82df6aae63bd1422",
         "name": "value",
-        "func": "if (!msg.enabled) {\n\n    msg.payload = 0;\n    return msg;\n}\n\nconst field = 'high';\n\nif (['%'].includes(msg.target.unit)) {\n    msg.payload = Number(msg.scene[field]);\n\n    msg.ui_update = {\n        'label': msg.dictionary.option_scene[field] || field\n    };\n    return msg;\n}\n\nreturn;",
+        "func": "if (!msg.enabled) {\n\n    msg.payload = 0;\n    return msg;\n}\n\nconst field = 'high';\n\nif (!msg.fields.includes(field)) {\n\n    return;\n}\n\nif (['%'].includes(msg.target.unit)) {\n    msg.payload = Number(msg.scene[field]);\n\n    msg.ui_update = {\n        'label': msg.dictionary.option_scene[field] || field\n    };\n    return msg;\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -12610,7 +12758,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2420,
+        "y": 2480,
         "wires": [
             [
                 "a27b8e3d925973e6"
@@ -12621,7 +12769,6 @@
         "id": "a27b8e3d925973e6",
         "type": "ui-slider",
         "z": "56c0b44ca387382c",
-        "d": true,
         "g": "82df6aae63bd1422",
         "group": "3a30762508b6edae",
         "name": "scene - sceneadd - high - percent",
@@ -12647,7 +12794,7 @@
         "colorThumb": "",
         "showTextField": true,
         "x": 780,
-        "y": 2420,
+        "y": 2480,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -12658,10 +12805,9 @@
         "id": "0fe4bcaa51dd9a03",
         "type": "function",
         "z": "56c0b44ca387382c",
-        "d": true,
         "g": "82df6aae63bd1422",
         "name": "value",
-        "func": "if (!msg.enabled) {\n\n    msg.payload = 0;\n    return msg;\n}\n\nconst field = 'low';\n\nif (['%'].includes(msg.target.unit)) {\n    msg.payload = Number(msg.scene[field]);\n\n    msg.ui_update = {\n        'label': msg.dictionary.option_scene[field] || field\n    };\n\n    return msg;\n}\n\nreturn;",
+        "func": "if (!msg.enabled) {\n\n    msg.payload = 0;\n    return msg;\n}\n\nconst field = 'low';\n\nif (!msg.fields.includes(field)) {\n\n    return;\n}\n\nif (['%'].includes(msg.target.unit)) {\n    msg.payload = Number(msg.scene[field]);\n\n    msg.ui_update = {\n        'label': msg.dictionary.option_scene[field] || field\n    };\n\n    return msg;\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -12669,7 +12815,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2480,
+        "y": 2540,
         "wires": [
             [
                 "3a6204d2c51df3aa"
@@ -12680,7 +12826,6 @@
         "id": "3a6204d2c51df3aa",
         "type": "ui-slider",
         "z": "56c0b44ca387382c",
-        "d": true,
         "g": "82df6aae63bd1422",
         "group": "3a30762508b6edae",
         "name": "scene - sceneadd - low - percent",
@@ -12706,7 +12851,7 @@
         "colorThumb": "",
         "showTextField": true,
         "x": 770,
-        "y": 2480,
+        "y": 2540,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -12742,7 +12887,7 @@
         "colorThumb": "",
         "showTextField": true,
         "x": 770,
-        "y": 2180,
+        "y": 2240,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -12778,7 +12923,7 @@
         "colorThumb": "",
         "showTextField": true,
         "x": 760,
-        "y": 2240,
+        "y": 2300,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -12799,7 +12944,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2180,
+        "y": 2240,
         "wires": [
             [
                 "4744ecf4e024c429"
@@ -12820,7 +12965,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2240,
+        "y": 2300,
         "wires": [
             [
                 "dc38ac715bb0bf9c"
@@ -12835,7 +12980,7 @@
         "name": "scene - sceneadd - daily",
         "label": "switch",
         "group": "3a30762508b6edae",
-        "order": 20,
+        "order": 19,
         "width": "6",
         "height": "1",
         "passthru": false,
@@ -12868,8 +13013,8 @@
         "z": "56c0b44ca387382c",
         "g": "82df6aae63bd1422",
         "name": "value",
-        "func": "if(!msg.enabled) {\n\n    msg.payload = false;\n    return msg;\n}\n\nconst field = 'daily';\n\nif (!msg.fields.includes(field)) {\n\n    return;\n}\n\nmsg.payload = Boolean(msg.scene[field]);\nmsg.ui_update = {\n    'label': msg.dictionary.option_scene[field] || field\n};\n\nreturn msg;",
-        "outputs": 1,
+        "func": "if(!msg.enabled) {\n    msg.payload = false;\n\n    node.send([msg, msg]);\n    return;\n}\n\nconst field = 'daily';\n\nif (!msg.fields.includes(field)) {\n\n    return;\n}\n\nmsg.payload = Boolean(msg.scene[field]);\nmsg.ui_update = {\n    'label': msg.dictionary.option_scene[field] || field\n};\n\nnode.send([msg, null]);\n\nmsg.payload = Boolean(msg.scene['today']);\nmsg.ui_update = {\n    'label': msg.dictionary.option_scene['today'] || 'today'\n};\n\nnode.send([null, msg]);\n\n\nreturn;",
+        "outputs": 2,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
@@ -12880,6 +13025,9 @@
         "wires": [
             [
                 "f0c45817e50295aa"
+            ],
+            [
+                "4863434ca638c34e"
             ]
         ]
     },
@@ -12912,7 +13060,7 @@
         "colorThumb": "",
         "showTextField": true,
         "x": 770,
-        "y": 2360,
+        "y": 2420,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -12933,7 +13081,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2360,
+        "y": 2420,
         "wires": [
             [
                 "c3423d086410d36d"
@@ -12970,7 +13118,7 @@
         "colorThumb": "",
         "showTextField": true,
         "x": 750,
-        "y": 2600,
+        "y": 2660,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -12992,7 +13140,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2600,
+        "y": 2660,
         "wires": [
             [
                 "8d70884261d1f2da"
@@ -13029,7 +13177,7 @@
         "colorThumb": "",
         "showTextField": true,
         "x": 750,
-        "y": 2660,
+        "y": 2720,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -13051,7 +13199,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2660,
+        "y": 2720,
         "wires": [
             [
                 "3263d20900780876"
@@ -13088,7 +13236,7 @@
         "colorThumb": "",
         "showTextField": true,
         "x": 750,
-        "y": 2720,
+        "y": 2780,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -13110,7 +13258,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2720,
+        "y": 2780,
         "wires": [
             [
                 "d4f3a3489ac1c348"
@@ -13147,7 +13295,7 @@
         "colorThumb": "",
         "showTextField": true,
         "x": 750,
-        "y": 2780,
+        "y": 2840,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -13169,7 +13317,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2780,
+        "y": 2840,
         "wires": [
             [
                 "53e71c77a16629c7"
@@ -13184,7 +13332,7 @@
         "name": "scene - sceneadd - enabled",
         "label": "",
         "group": "3a30762508b6edae",
-        "order": 5,
+        "order": 4,
         "width": "6",
         "height": "1",
         "passthru": false,
@@ -14901,7 +15049,7 @@
                 "align": "start"
             },
             {
-                "title": "High out",
+                "title": "On high in",
                 "key": "outputhigh",
                 "keyType": "key",
                 "type": "text",
@@ -14909,7 +15057,7 @@
                 "align": "start"
             },
             {
-                "title": "Low out",
+                "title": "On low in",
                 "key": "outputlow",
                 "keyType": "key",
                 "type": "text",
@@ -15687,7 +15835,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2000,
+        "y": 2060,
         "wires": [
             [
                 "208f31de791933fd"
@@ -15708,7 +15856,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2060,
+        "y": 2120,
         "wires": [
             [
                 "21094ae6180f8244"
@@ -15729,7 +15877,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 2300,
+        "y": 2360,
         "wires": [
             [
                 "34e1083d99d6c99c"
@@ -15765,7 +15913,7 @@
         "colorThumb": "",
         "showTextField": true,
         "x": 760,
-        "y": 2300,
+        "y": 2360,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -15800,7 +15948,7 @@
         "officon": "",
         "offcolor": "",
         "x": 750,
-        "y": 2000,
+        "y": 2060,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -15835,7 +15983,7 @@
         "officon": "",
         "offcolor": "",
         "x": 750,
-        "y": 2060,
+        "y": 2120,
         "wires": [
             [
                 "3805b06d11ef0cf7"
@@ -15890,7 +16038,7 @@
         "name": "scene - sceneadd - aperture",
         "label": "",
         "group": "3a30762508b6edae",
-        "order": 19,
+        "order": 18,
         "width": "6",
         "height": "1",
         "passthru": false,
@@ -16068,6 +16216,41 @@
         "wires": [
             [
                 "6ab22375c63091ec"
+            ]
+        ]
+    },
+    {
+        "id": "4863434ca638c34e",
+        "type": "ui-switch",
+        "z": "56c0b44ca387382c",
+        "g": "82df6aae63bd1422",
+        "name": "scene - sceneadd - today",
+        "label": "",
+        "group": "3a30762508b6edae",
+        "order": 20,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "decouple": false,
+        "topic": "today",
+        "topicType": "str",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "label",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 750,
+        "y": 2000,
+        "wires": [
+            [
+                "3805b06d11ef0cf7"
             ]
         ]
     },
