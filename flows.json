@@ -625,7 +625,7 @@
         ],
         "x": 68,
         "y": 13,
-        "w": 3074,
+        "w": 3224,
         "h": 794
     },
     {
@@ -1042,6 +1042,63 @@
         "h": 142
     },
     {
+        "id": "6c942117c5c5ebe1",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "name": "common - scene",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "dc45776ae2f10ba7",
+            "47c5bf82adab9184",
+            "d5fab7943a3e6f71",
+            "721e748c243fdd56",
+            "426c0755e692fb12",
+            "371036e77e74d030",
+            "a207538e0e9bf388",
+            "bbe2bb02375537d4",
+            "348a4c108e5704cb",
+            "2df305474f453f98",
+            "cea6d6bde6c4152c",
+            "6ad5d4d28e6f6cc7",
+            "eb115f6465263869",
+            "22388e92c457cf9d",
+            "da627346767980a2",
+            "75f2b6a4ccf3147a",
+            "0bf8d5a3edf7096a",
+            "9239b7d5a5cc4adb",
+            "09fd5ad00fb1ea56",
+            "e5777951d9eac0fa",
+            "38a611ec8e34d6a9",
+            "45450f1a8cb9e778",
+            "5075e5842b20c135",
+            "93671a9e19b8b9cf",
+            "dab0400118880437",
+            "87f50458a3c79a83",
+            "57c508c99d2cdcad",
+            "2e8a83fff0849513",
+            "7dcf708ffe2256a9",
+            "e18be8c988d94739",
+            "13781a89a231ad0c",
+            "2d5a7f8e000e1844",
+            "a4c84ddaf232432c",
+            "b2bbbed3eff36c5e",
+            "0ff19681841951f6",
+            "52f9bd91e4b55341",
+            "a6888fda5f177703",
+            "176e6b395a7de8e8",
+            "96cc723fc51b1198",
+            "40c1abe753f89c56"
+        ],
+        "x": 94,
+        "y": 4839,
+        "w": 952,
+        "h": 1582
+    },
+    {
         "id": "f822aa69af66c546",
         "type": "group",
         "z": "4bc72a1112cb448c",
@@ -1107,11 +1164,12 @@
             "67cca85c91edaff0",
             "7aba25c7ca11c967",
             "d5f0398700283618",
-            "2a8ab3813bd1eab3"
+            "2a8ab3813bd1eab3",
+            "36eabfdcb75b1aa3"
         ],
         "x": 94,
         "y": 39,
-        "w": 3022,
+        "w": 3172,
         "h": 202
     },
     {
@@ -1185,7 +1243,6 @@
             "label": true
         },
         "nodes": [
-            "9d2be55b974f961e",
             "c6c1765c8ced2f28",
             "36ceb75b76d5eff1",
             "a7c97185682980e6",
@@ -1195,7 +1252,8 @@
             "6cc5d113c7e2b326",
             "5e692d972f19ef9a",
             "2749cc3403e8ded6",
-            "6d499c8c39f75c9b"
+            "6d499c8c39f75c9b",
+            "2b0dce043fcbd8b3"
         ],
         "x": 104,
         "y": 2919,
@@ -1254,7 +1312,6 @@
             "label": true
         },
         "nodes": [
-            "1a8726b2de605ecb",
             "8f0b88d6a682a1e4",
             "9052d70bbd0bb619",
             "ea429b3e01991411",
@@ -1267,7 +1324,8 @@
             "5d4843dd49b4478b",
             "41af64d15abfcb75",
             "42b9b89e3ee6717c",
-            "4e39726c1725f1cf"
+            "4e39726c1725f1cf",
+            "ca0816fa69729bee"
         ],
         "x": 104,
         "y": 3159,
@@ -1287,7 +1345,6 @@
             "label": true
         },
         "nodes": [
-            "344c6f9b1cdd2cc1",
             "3ef7839a35b0f5f1",
             "b7e6a5d320beb1f6",
             "2ed8557b81e7c605",
@@ -1301,7 +1358,8 @@
             "2e769390f22a4eb7",
             "0b110dae421cde2a",
             "4bed2e6513fc8d52",
-            "39f58c630debf66e"
+            "39f58c630debf66e",
+            "0d364f8869406041"
         ],
         "x": 104,
         "y": 3399,
@@ -1321,7 +1379,6 @@
             "label": true
         },
         "nodes": [
-            "6a90a7dc8131bd16",
             "e9bbb6c6378abf81",
             "e28bab796f882c1f",
             "e67c2e3e94b1325a",
@@ -1335,7 +1392,8 @@
             "7f0cf300d60b5706",
             "6c46a2c3cc175aa3",
             "350bee34353cb1c3",
-            "1182f6b3aa28170f"
+            "1182f6b3aa28170f",
+            "68c4a05370085e3e"
         ],
         "x": 104,
         "y": 3639,
@@ -1561,7 +1619,6 @@
             "label": true
         },
         "nodes": [
-            "cbfdc74d983213d0",
             "be7d1f37913582e7",
             "ac2aeef92b94161a",
             "5590b32c1df283bb",
@@ -1572,7 +1629,8 @@
             "09d4db1484d96e21",
             "c5925e090dba4959",
             "f2bf274fc1eaf00c",
-            "16babd12a2233bb8"
+            "16babd12a2233bb8",
+            "5bbb992212cbedd1"
         ],
         "x": 104,
         "y": 3879,
@@ -1705,55 +1763,27 @@
         "h": 82
     },
     {
-        "id": "6c942117c5c5ebe1",
+        "id": "dbf81e22acbbc881",
         "type": "group",
-        "z": "4bc72a1112cb448c",
-        "name": "common - scene",
+        "z": "d90937c9d5b88b24",
+        "name": "config - various",
         "style": {
-            "fill": "#ff0000",
+            "fill": "#6f2fa0",
             "fill-opacity": "0.05",
             "label": true
         },
         "nodes": [
-            "dc45776ae2f10ba7",
-            "47c5bf82adab9184",
-            "d5fab7943a3e6f71",
-            "721e748c243fdd56",
-            "426c0755e692fb12",
-            "371036e77e74d030",
-            "a207538e0e9bf388",
-            "bbe2bb02375537d4",
-            "348a4c108e5704cb",
-            "2df305474f453f98",
-            "cea6d6bde6c4152c",
-            "6ad5d4d28e6f6cc7",
-            "eb115f6465263869",
-            "22388e92c457cf9d",
-            "da627346767980a2",
-            "75f2b6a4ccf3147a",
-            "0bf8d5a3edf7096a",
-            "9239b7d5a5cc4adb",
-            "09fd5ad00fb1ea56",
-            "e5777951d9eac0fa",
-            "38a611ec8e34d6a9",
-            "45450f1a8cb9e778",
-            "5075e5842b20c135",
-            "93671a9e19b8b9cf",
-            "dab0400118880437",
-            "87f50458a3c79a83",
-            "57c508c99d2cdcad",
-            "2e8a83fff0849513",
-            "7dcf708ffe2256a9",
-            "e18be8c988d94739",
-            "13781a89a231ad0c",
-            "2d5a7f8e000e1844",
-            "a4c84ddaf232432c",
-            "b2bbbed3eff36c5e"
+            "22138aef9be04d5a",
+            "3c781a086eedf51a",
+            "27e1d29ece95b47d",
+            "72c3dca9c2eb40f4",
+            "ac351119ddd3d758",
+            "e0794c54615c6774"
         ],
-        "x": 94,
-        "y": 4839,
-        "w": 772,
-        "h": 1522
+        "x": 104,
+        "y": 639,
+        "w": 892,
+        "h": 142
     },
     {
         "id": "df7710b4b2c4e55b",
@@ -1882,7 +1912,7 @@
     {
         "id": "4c116fe2697e0aa9",
         "type": "ui-group",
-        "name": "config_mqtt",
+        "name": "config - mqtt  - group",
         "page": "f081fa7a92c9aeb7",
         "width": "3",
         "height": 1,
@@ -2182,7 +2212,7 @@
     {
         "id": "73c6d9f7f62493d8",
         "type": "ui-group",
-        "name": "config_backup",
+        "name": "config - backup - group",
         "page": "f081fa7a92c9aeb7",
         "width": 6,
         "height": 1,
@@ -2245,7 +2275,7 @@
         "page": "2b12391aa314ef62",
         "width": 6,
         "height": 1,
-        "order": 4,
+        "order": 3,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -2259,7 +2289,7 @@
         "page": "2b12391aa314ef62",
         "width": "6",
         "height": 1,
-        "order": 5,
+        "order": 4,
         "showTitle": false,
         "className": "",
         "visible": "false",
@@ -2273,7 +2303,7 @@
         "page": "2b12391aa314ef62",
         "width": 6,
         "height": 1,
-        "order": 6,
+        "order": 5,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -2504,6 +2534,20 @@
         "className": ""
     },
     {
+        "id": "c9a255e77cf5a886",
+        "type": "ui-group",
+        "name": "config - various - group",
+        "page": "f081fa7a92c9aeb7",
+        "width": 6,
+        "height": 1,
+        "order": 3,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
         "id": "025edbd02daf82d0",
         "type": "http response",
         "z": "4bc72a1112cb448c",
@@ -2591,8 +2635,7 @@
             "f32e8939b64dd232",
             "80e3952b8f56d1da",
             "d269bc78686a5a01",
-            "02d1069a252bcc78",
-            "dd06c13d3070664c"
+            "02d1069a252bcc78"
         ],
         "x": 145,
         "y": 920,
@@ -2659,7 +2702,12 @@
             "344c6f9b1cdd2cc1",
             "6a90a7dc8131bd16",
             "cbfdc74d983213d0",
-            "d3cc94988c84bfdc"
+            "d3cc94988c84bfdc",
+            "5bbb992212cbedd1",
+            "68c4a05370085e3e",
+            "0d364f8869406041",
+            "ca0816fa69729bee",
+            "2b0dce043fcbd8b3"
         ],
         "x": 3075,
         "y": 80,
@@ -3085,7 +3133,8 @@
         "y": 80,
         "wires": [
             [
-                "92c098c716e46e3b"
+                "92c098c716e46e3b",
+                "36eabfdcb75b1aa3"
             ]
         ]
     },
@@ -3917,7 +3966,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "init",
-        "func": "if (msg.payload === true) {\n\n    return;\n}\n\nflow.set('stop', false, 'memoryOnly');\n\n// Reset \"per user\" variables\nconst peruser = {\n    'browser': {},\n    'describe': {\n        'project': '',\n        'app': {},\n        'pages': {},\n        'sources': {},\n        'enum': {},\n        'elements': {},\n        'reverts': {},\n        'texts': {},\n        'untis': {},\n        'colors': {},\n        'scenes': {},\n        'routines': {},\n        'template': {}\n    },\n    'dictionary': {},\n    'auth': {},\n    'form': {},\n    'user': {}\n};\nfor (const key in peruser) {\n    global.set(key, peruser[key], 'memoryOnly');\n}\n\n// start\nmsg.payload = {\n    'pages': {},\n    'sources': {},\n    'enum': {},\n    'dictionary': {}\n};\n\nreturn msg;",
+        "func": "flow.set('stop', false, 'memoryOnly');\n\n// Reset \"per user\" variables\nconst peruser = {\n    'browser': {},\n    'describe': {\n        'project': '',\n        'app': {},\n        'pages': {},\n        'sources': {},\n        'enum': {},\n        'elements': {},\n        'reverts': {},\n        'texts': {},\n        'untis': {},\n        'colors': {},\n        'scenes': {},\n        'routines': {},\n        'template': {}\n    },\n    'dictionary': {},\n    'auth': {},\n    'form': {},\n    'user': {}\n};\nfor (const key in peruser) {\n    global.set(key, peruser[key], 'memoryOnly');\n}\n\n// start\nmsg.payload = {\n    'pages': {},\n    'sources': {},\n    'enum': {},\n    'dictionary': {}\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4404,7 +4453,7 @@
         "z": "4bc72a1112cb448c",
         "g": "fb34af284a5fbd90",
         "name": "data",
-        "func": "msg.broker = {};\n\nlet mqtt = global.get('mqtt', 'memoryOnly');\nif (typeof mqtt == 'object' && mqtt.enabled == true && mqtt.teleinfo != '') {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.teleinfo.length > 0\n    ) {\n        msg.broker = {\n            'broker': mqtt.host,\n            'port': mqtt.port,\n            'clientid': 'teleinfo' + (global.get('describe.app.project', 'memoryOnly') || 'dknr'),\n            'force': true\n        };\n\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.teleinfo + '/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'memoryOnly');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
+        "func": "// Prevent flood on reconnect\nflow.set('mqtt_teleinfo_boot', (new Date()).getTime(), 'memoryOnly');\nawait new Promise(resolve => setTimeout(resolve, 50));\n\nmsg.broker = {};\n\nlet mqtt = global.get('mqtt', 'memoryOnly');\nif (typeof mqtt == 'object' && mqtt.enabled == true && mqtt.teleinfo != '') {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.teleinfo.length > 0\n    ) {\n        msg.broker = {\n            'broker': mqtt.host,\n            'port': mqtt.port,\n            'clientid': 'teleinfo' + (global.get('describe.app.project', 'memoryOnly') || 'dknr'),\n            'force': true\n        };\n\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.teleinfo + '/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'memoryOnly');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4492,7 +4541,7 @@
         "z": "4bc72a1112cb448c",
         "g": "fb34af284a5fbd90",
         "name": "parse",
-        "func": "let res = {\n    'topic':'',\n    'payload': {}\n};\n\nif (typeof msg.payload === 'object' && \n    typeof msg.payload.ADCO === 'object' && \n    typeof msg.payload.ADCO.raw === 'string'\n) {\n    node.status({ text: msg.payload.ADCO.raw });\n\n    for (const key in msg.payload){\n        if (['ADCO', 'PTEC', 'OPTARIF', 'HHPHC'].includes(key)) {\n            msg.payload[key]['unit'] = 'text';\n        }\n\n        res.payload.id = key;\n        res.payload.source = 'teleinfo';\n        res.payload.parent = msg.payload.ADCO.raw;\n        res.payload.unit = msg.payload[key]['unit'];\n        res.payload.value = msg.payload[key]['value'];\n        res.payload.name = msg.payload[key]['name'];\n        res.payload.seen = Date.now();\n\n        node.send(res);\n    }\n}\n\nreturn;",
+        "func": "// Prevent flood on reconnect\nif (((flow.get('mqtt_teleinfo_boot', 'memoryOnly') || 0) + 30000) > (new Date()).getTime()) {\n    node.status({ 'fill': 'red', 'text': 'reconnect' });\n\n    return;\n}\n\nlet res = {\n    'topic':'',\n    'payload': {}\n};\n\nif (typeof msg.payload === 'object' && \n    typeof msg.payload.ADCO === 'object' && \n    typeof msg.payload.ADCO.raw === 'string'\n) {\n    node.status({ text: msg.payload.ADCO.raw });\n\n    for (const key in msg.payload){\n        if (['ADCO', 'PTEC', 'OPTARIF', 'HHPHC'].includes(key)) {\n            msg.payload[key]['unit'] = 'text';\n        }\n\n        res.payload.id = key;\n        res.payload.source = 'teleinfo';\n        res.payload.parent = msg.payload.ADCO.raw;\n        res.payload.unit = msg.payload[key]['unit'];\n        res.payload.value = msg.payload[key]['value'];\n        res.payload.name = msg.payload[key]['name'];\n        res.payload.seen = Date.now();\n\n        node.send(res);\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4536,7 +4585,6 @@
             "d4a958696ac0d5bc",
             "9d415c5d88aaac86",
             "7640309cc9eba43c",
-            "039b1817300dafaf",
             "e5777951d9eac0fa"
         ],
         "x": 145,
@@ -4582,8 +4630,8 @@
             "5d4843dd49b4478b",
             "2e769390f22a4eb7",
             "83ee9be1aa2cf49f",
-            "82e64870d41a24cf",
-            "dc45776ae2f10ba7"
+            "dc45776ae2f10ba7",
+            "c3d9027b04eec84e"
         ],
         "x": 715,
         "y": 2480,
@@ -4651,7 +4699,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "copy",
-        "func": "// First announce we boot, (stop scene)\nif (msg.payload === true) {\n    global.set('boot', true, 'memoryOnly');\n}\n\nconst places = ['default', 'memoryOnly'];\nconst place = msg.payload === true ? places : [places[1], places[0]];\n\n// copy from memory to file\nconst memorized = {\n    'auth': {},\n    'block': {},\n    'camera': {},\n    'entity': {},\n    'mqtt': {},\n    'name': { 'room': {}, 'device': {} },\n    'scene': {}\n}\n\n// Copy backup or at least init\nfor (const key in memorized) {\n    let src = global.get(key, place[0]);\n    if (typeof src !== 'object') {\n        src = memorized[key];\n    }\n    global.set(key, src, place[1]);\n}\n\nnode.status({text: place[0] + ' to ' + place[1]});\n\nreturn msg;",
+        "func": "// First announce we boot, (stop scene)\nif (msg.payload === true) {\n    global.set('boot', true, 'memoryOnly');\n}\n\nconst places = ['default', 'memoryOnly'];\nconst place = msg.payload === true ? places : [places[1], places[0]];\n\n// copy from memory to file\nconst memorized = {\n    'auth': {},\n    'block': {},\n    'camera': {},\n    'entity': {},\n    'mqtt': {},\n    'name': { 'room': {}, 'device': {} },\n    'scene': {}\n}\n\n// Copy backup or at least init\nfor (const key in memorized) {\n    let src = global.get(key, place[0]);\n    if (typeof src !== 'object') {\n        src = memorized[key];\n    }\n    global.set(key, src, place[1]);\n}\n\nnode.status({text: place[0] + ' to ' + place[1]});\n\nif (msg.payload === true) {\n\n    return msg;\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4697,30 +4745,12 @@
         ]
     },
     {
-        "id": "9d2be55b974f961e",
-        "type": "link in",
-        "z": "4bc72a1112cb448c",
-        "g": "3db71c2c17730bd8",
-        "name": "common - mqtt - apsystems",
-        "links": [
-            "92c098c716e46e3b",
-            "f2cd63b49ac325ec"
-        ],
-        "x": 145,
-        "y": 3020,
-        "wires": [
-            [
-                "c6c1765c8ced2f28"
-            ]
-        ]
-    },
-    {
         "id": "c6c1765c8ced2f28",
         "type": "function",
         "z": "4bc72a1112cb448c",
         "g": "3db71c2c17730bd8",
         "name": "data",
-        "func": "msg.broker = {};\n\nlet mqtt = global.get('mqtt', 'memoryOnly');\nif (typeof mqtt == 'object' && mqtt.enabled == true && mqtt.apsystems != '') {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.apsystems.length > 0\n    ) {\n        msg.broker = {\n            'broker': mqtt.host,\n            'port': mqtt.port,\n            'clientid': 'apsystems' + (global.get('describe.app.project', 'memoryOnly') || 'dknr'),\n            'force': true\n        };\n\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.apsystems + '/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'memoryOnly');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
+        "func": "// Prevent flood on reconnect\nflow.set('mqtt_apsystems_boot', (new Date()).getTime(), 'memoryOnly');\nawait new Promise(resolve => setTimeout(resolve, 50));\n\nmsg.broker = {};\n\nlet mqtt = global.get('mqtt', 'memoryOnly');\nif (typeof mqtt == 'object' && mqtt.enabled == true && mqtt.apsystems != '') {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.apsystems.length > 0\n    ) {\n        msg.broker = {\n            'broker': mqtt.host,\n            'port': mqtt.port,\n            'clientid': 'apsystems' + (global.get('describe.app.project', 'memoryOnly') || 'dknr'),\n            'force': true\n        };\n\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.apsystems + '/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'memoryOnly');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4790,7 +4820,7 @@
         "z": "4bc72a1112cb448c",
         "g": "3db71c2c17730bd8",
         "name": "parse",
-        "func": "let res = {\n    'topic':'',\n    'payload': {}\n};\n\n// limit ot these keys\nconst ecu = {\n    'energy_total': ['energy', 'kWh'],\n    'energy_today': ['energy', 'kWh'],\n    'power_instant': ['power', 'W']\n};\n\nif (msg.topic.includes(\"/ecu/\") && \n    typeof msg.payload === 'object' && \n    typeof msg.payload.id === 'string'\n) {\n    node.status({ text: msg.payload.id });\n\n    for (const k in ecu) {\n        res.payload.id = k\n        res.payload.source = 'apsystems';\n        res.payload.parent = 'ecu_' + msg.payload.id;\n        res.payload.type = 'sensor';\n        res.payload.element = ecu[k][0];\n        res.payload.unit = ecu[k][1];\n        res.payload.value = msg.payload[ecu[k]];\n        res.payload.seen = Date.now();\n\n        node.send(res);\n    }\n}\n\n// limit ot these keys\nconst inv = {\n    //id: unit, element\n    'power_instant': ['power', 'W'], \n    'temperature': ['temperature', '°C'],\n    'online': ['plug', 'b']\n};\n\nif (msg.topic.includes(\"/inverter/\") && \n    typeof msg.payload === 'object' && \n    typeof msg.payload.id === 'string'\n) {\n    for (const i in inv) {\n        res.payload.id = i\n        res.payload.source = 'apsystems';\n        res.payload.parent = 'inverter_' + msg.payload.id;\n        res.payload.type = 'sensor';\n        res.payload.element = inv[i][0]\n        res.payload.unit = inv[i][1];\n        res.payload.value = msg.payload[i];\n        res.payload.seen = Date.now();\n\n        node.send(res);\n    }\n}\n\nreturn;",
+        "func": "// Prevent flood on reconnect\nif (((flow.get('mqtt_apsystems_boot', 'memoryOnly') || 0) + 30000) > (new Date()).getTime()) {\n    node.status({ 'fill': 'red', 'text': 'reconnect' });\n\n    return;\n}\n\nlet res = {\n    'topic':'',\n    'payload': {}\n};\n\n// limit ot these keys\nconst ecu = {\n    'energy_total': ['energy', 'kWh'],\n    'energy_today': ['energy', 'kWh'],\n    'power_instant': ['power', 'W']\n};\n\nif (msg.topic.includes(\"/ecu/\") && \n    typeof msg.payload === 'object' && \n    typeof msg.payload.id === 'string'\n) {\n    node.status({ text: msg.payload.id });\n\n    for (const k in ecu) {\n        res.payload.id = k\n        res.payload.source = 'apsystems';\n        res.payload.parent = 'ecu_' + msg.payload.id;\n        res.payload.type = 'sensor';\n        res.payload.element = ecu[k][0];\n        res.payload.unit = ecu[k][1];\n        res.payload.value = msg.payload[ecu[k]];\n        res.payload.seen = Date.now();\n\n        node.send(res);\n    }\n}\n\n// limit ot these keys\nconst inv = {\n    //id: unit, element\n    'power_instant': ['power', 'W'], \n    'temperature': ['temperature', '°C'],\n    'online': ['plug', 'b']\n};\n\nif (msg.topic.includes(\"/inverter/\") && \n    typeof msg.payload === 'object' && \n    typeof msg.payload.id === 'string'\n) {\n    for (const i in inv) {\n        res.payload.id = i\n        res.payload.source = 'apsystems';\n        res.payload.parent = 'inverter_' + msg.payload.id;\n        res.payload.type = 'sensor';\n        res.payload.element = inv[i][0]\n        res.payload.unit = inv[i][1];\n        res.payload.value = msg.payload[i];\n        res.payload.seen = Date.now();\n\n        node.send(res);\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4885,30 +4915,12 @@
         "wires": []
     },
     {
-        "id": "1a8726b2de605ecb",
-        "type": "link in",
-        "z": "4bc72a1112cb448c",
-        "g": "89ac7be96aabaa70",
-        "name": "common - mqtt - daikin",
-        "links": [
-            "92c098c716e46e3b",
-            "f2cd63b49ac325ec"
-        ],
-        "x": 145,
-        "y": 3260,
-        "wires": [
-            [
-                "8f0b88d6a682a1e4"
-            ]
-        ]
-    },
-    {
         "id": "8f0b88d6a682a1e4",
         "type": "function",
         "z": "4bc72a1112cb448c",
         "g": "89ac7be96aabaa70",
         "name": "data",
-        "func": "msg.broker = {};\n\nlet mqtt = global.get('mqtt', 'memoryOnly');\nif (typeof mqtt == 'object' && mqtt.enabled == true && mqtt.daikin != '') {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.daikin.length > 0\n    ) {\n        msg.broker = {\n            'broker': mqtt.host,\n            'port': mqtt.port,\n            'clientid': 'daikin' + (global.get('describe.app.project', 'memoryOnly') || 'dknr'),\n            'force': true\n        };\n\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.daikin + '/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'memoryOnly');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
+        "func": "// Prevent flood on reconnect\nflow.set('mqtt_daikin_boot', (new Date()).getTime(), 'memoryOnly');\nawait new Promise(resolve => setTimeout(resolve, 50));\n\nmsg.broker = {};\n\nlet mqtt = global.get('mqtt', 'memoryOnly');\nif (typeof mqtt == 'object' && mqtt.enabled == true && mqtt.daikin != '') {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.daikin.length > 0\n    ) {\n        msg.broker = {\n            'broker': mqtt.host,\n            'port': mqtt.port,\n            'clientid': 'daikin' + (global.get('describe.app.project', 'memoryOnly') || 'dknr'),\n            'force': true\n        };\n\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.daikin + '/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'memoryOnly');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4978,7 +4990,7 @@
         "z": "4bc72a1112cb448c",
         "g": "89ac7be96aabaa70",
         "name": "parse",
-        "func": "let res = {\n    'topic':'',\n    'payload': {}\n};\n\n// limit ot these keys\nlet units = {\n    'pow': 'b',\n    'mode': 'enum',\n    'stemp': '°C',\n    'f_rate': 'enum',\n    'f_dir': 'enum',\n    'htemp': '°C',\n    'otemp': '°C',\n    'host': 'text'\n};\n\nif (typeof msg.payload === 'object' && \n    typeof msg.payload.id === 'object'\n) {\n    node.status({ text: msg.payload.id.value });\n\n    for (const k in units) {\n        res.payload.id = k\n        res.payload.source = 'daikin';\n        res.payload.parent = msg.payload.id.value;\n        res.payload.unit = units[k];\n        res.payload.value = msg.payload[k]['value'];\n        res.payload.name = msg.payload[k]['label'];\n        res.payload.seen = Date.now();\n\n        node.send(res);\n    }\n}\n\nreturn;",
+        "func": "// Prevent flood on reconnect\nif (((flow.get('mqtt_daikin_boot', 'memoryOnly') || 0) + 30000) > (new Date()).getTime()) {\n    node.status({ 'fill': 'red', 'text': 'reconnect' });\n\n    return;\n}\n\nlet res = {\n    'topic':'',\n    'payload': {}\n};\n\n// limit ot these keys\nlet units = {\n    'pow': 'b',\n    'mode': 'enum',\n    'stemp': '°C',\n    'f_rate': 'enum',\n    'f_dir': 'enum',\n    'htemp': '°C',\n    'otemp': '°C',\n    'host': 'text'\n};\n\nif (typeof msg.payload === 'object' && \n    typeof msg.payload.id === 'object'\n) {\n    node.status({ text: msg.payload.id.value });\n\n    for (const k in units) {\n        res.payload.id = k\n        res.payload.source = 'daikin';\n        res.payload.parent = msg.payload.id.value;\n        res.payload.unit = units[k];\n        res.payload.value = msg.payload[k]['value'];\n        res.payload.name = msg.payload[k]['label'];\n        res.payload.seen = Date.now();\n\n        node.send(res);\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5102,30 +5114,12 @@
         "wires": []
     },
     {
-        "id": "344c6f9b1cdd2cc1",
-        "type": "link in",
-        "z": "4bc72a1112cb448c",
-        "g": "42c8cfb80db1c77e",
-        "name": "common - mqtt - zigbee2mqtt",
-        "links": [
-            "92c098c716e46e3b",
-            "f2cd63b49ac325ec"
-        ],
-        "x": 145,
-        "y": 3500,
-        "wires": [
-            [
-                "3ef7839a35b0f5f1"
-            ]
-        ]
-    },
-    {
         "id": "3ef7839a35b0f5f1",
         "type": "function",
         "z": "4bc72a1112cb448c",
         "g": "42c8cfb80db1c77e",
         "name": "data",
-        "func": "msg.broker = {};\n\nlet mqtt = global.get('mqtt', 'memoryOnly');\nif (typeof mqtt == 'object' && mqtt.enabled == true && mqtt.zigbee != '') {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.zigbee.length > 0\n    ) {\n        msg.broker = {\n            'broker': mqtt.host,\n            'port': mqtt.port,\n            'clientid': 'zigbee' + (global.get('describe.app.project', 'memoryOnly') || 'dknr'),\n            'force': true\n        };\n\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.zigbee + '/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'memoryOnly');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
+        "func": "// Prevent flood on reconnect\nflow.set('mqtt_zigbee2mqtt_boot', (new Date()).getTime(), 'memoryOnly');\nawait new Promise(resolve => setTimeout(resolve, 50));\n\nmsg.broker = {};\n\nlet mqtt = global.get('mqtt', 'memoryOnly');\nif (typeof mqtt == 'object' && mqtt.enabled == true && mqtt.zigbee != '') {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.zigbee.length > 0\n    ) {\n        msg.broker = {\n            'broker': mqtt.host,\n            'port': mqtt.port,\n            'clientid': 'zigbee' + (global.get('describe.app.project', 'memoryOnly') || 'dknr'),\n            'force': true\n        };\n\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.zigbee + '/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'memoryOnly');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5195,7 +5189,7 @@
         "z": "4bc72a1112cb448c",
         "g": "42c8cfb80db1c77e",
         "name": "parse",
-        "func": "if (typeof msg.payload !== 'object' ||\n    msg.topic.includes(\"/availability\") ||\n    msg.topic.includes(\"/set\") ||\n    msg.topic.includes(\"zigbee_bridge/\")\n) {\n\n    return;\n}\n\nlet res = {\n    'topic':'',\n    'payload': {}\n};\n\nlet parent = msg.topic.slice(global.get('mqtt.zigbee', 'memoryOnly').length + 1);\nnode.status({ text: parent });\n\n// limit ot these keys\nlet keys = {\n    'current': 'A',\n    'energy': 'Wh',\n    'power': 'W',\n    'linkquatlity': '',\n    'battery': '%',\n    'humidity': '%',\n    'temperature': '°C',\n    'occupancy': 'b', // motion\n    'contact': 'b',\n    'state': 'b', // \"OFF/ON\"\n    'action': 'enum', // swicth \"single/double\"...\n    'brightness': '8b', // ex: led\n    //'color_mode': 'text', // ex: xy, color_temp\n    //'color_temp': 'text', // should be 0-370 but rework to %\n    //'color_xy': 'text', //\n    'color': 'text' //\n};\n\nlet on = ['ON', 'On', 'on', 1, true ];\n\nfor (const k in keys) {\n    if (typeof msg.payload[k] !== 'undefined') {\n        res.payload.id = k;\n        res.payload.source = 'zigbee';\n        res.payload.parent = parent;\n        res.payload.value = msg.payload[k];\n        res.payload.unit = keys[k];\n        res.payload.seen = Date.now();\n\n        if (k === 'occupancy') {\n            res.payload.id = 'motion';\n            res.payload.value = on.includes(res.payload.value) ? 1 : 0;\n        }\n        else if (['switch', 'state', 'contact'].includes(k)) {\n            res.payload.id = 'state';\n            res.payload.value = on.includes(res.payload.value) ? 1 : 0;\n        }\n        //else if (['color', 'color_mode', 'color_temp', 'color_xy'].includes(k)) {\n        else if (k === 'color') {\n            res.payload.id = 'color';\n            res.payload.value = typeof res.payload.value === 'string' ? res.payload.value : '#ffff00';\n        }\n\n        node.send(res);\n    }\n}\n\nreturn;",
+        "func": "// Prevent flood on reconnect\nif (((flow.get('mqtt_zigbee2mqtt_boot', 'memoryOnly') || 0) + 30000) > (new Date()).getTime()) {\n    node.status({ 'fill': 'red', 'text': 'reconnect' });\n\n    return;\n}\n\nif (typeof msg.payload !== 'object' ||\n    msg.topic.includes(\"/availability\") ||\n    msg.topic.includes(\"/set\") ||\n    msg.topic.includes(\"zigbee_bridge/\")\n) {\n\n    return;\n}\n\nlet res = {\n    'topic':'',\n    'payload': {}\n};\n\nlet parent = msg.topic.slice(global.get('mqtt.zigbee', 'memoryOnly').length + 1);\nnode.status({ text: parent });\n\n// limit ot these keys\nlet keys = {\n    'current': 'A',\n    'energy': 'Wh',\n    'power': 'W',\n    'linkquatlity': '',\n    'battery': '%',\n    'humidity': '%',\n    'temperature': '°C',\n    'occupancy': 'b', // motion\n    'contact': 'b',\n    'state': 'b', // \"OFF/ON\"\n    'action': 'enum', // swicth \"single/double\"...\n    'brightness': '8b', // ex: led\n    //'color_mode': 'text', // ex: xy, color_temp\n    //'color_temp': 'text', // should be 0-370 but rework to %\n    //'color_xy': 'text', //\n    'color': 'text' //\n};\n\nlet on = ['ON', 'On', 'on', 1, true ];\n\nfor (const k in keys) {\n    if (typeof msg.payload[k] !== 'undefined') {\n        res.payload.id = k;\n        res.payload.source = 'zigbee';\n        res.payload.parent = parent;\n        res.payload.value = msg.payload[k];\n        res.payload.unit = keys[k];\n        res.payload.seen = Date.now();\n\n        if (k === 'occupancy') {\n            res.payload.id = 'motion';\n            res.payload.value = on.includes(res.payload.value) ? 1 : 0;\n        }\n        else if (['switch', 'state', 'contact'].includes(k)) {\n            res.payload.id = 'state';\n            res.payload.value = on.includes(res.payload.value) ? 1 : 0;\n        }\n        //else if (['color', 'color_mode', 'color_temp', 'color_xy'].includes(k)) {\n        else if (k === 'color') {\n            res.payload.id = 'color';\n            res.payload.value = typeof res.payload.value === 'string' ? res.payload.value : '#ffff00';\n        }\n\n        node.send(res);\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5288,30 +5282,12 @@
         "wires": []
     },
     {
-        "id": "6a90a7dc8131bd16",
-        "type": "link in",
-        "z": "4bc72a1112cb448c",
-        "g": "4350d3ede367f1ca",
-        "name": "common - mqtt - zwave",
-        "links": [
-            "92c098c716e46e3b",
-            "f2cd63b49ac325ec"
-        ],
-        "x": 145,
-        "y": 3740,
-        "wires": [
-            [
-                "e9bbb6c6378abf81"
-            ]
-        ]
-    },
-    {
         "id": "e9bbb6c6378abf81",
         "type": "function",
         "z": "4bc72a1112cb448c",
         "g": "4350d3ede367f1ca",
         "name": "data",
-        "func": "msg.broker = {};\n\nlet mqtt = global.get('mqtt', 'memoryOnly');\nif (typeof mqtt == 'object' && mqtt.enabled == true && mqtt.zwave != '') {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.zwave.length > 0\n    ) {\n        msg.broker = {\n            'broker': mqtt.host,\n            'port': mqtt.port,\n            'clientid': 'zwave' + (global.get('describe.app.project', 'memoryOnly') || 'dknr'),\n            'force': true\n        };\n\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.zwave + '/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'memoryOnly');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
+        "func": "// Prevent flood on reconnect\nflow.set('mqtt_zwave_boot', (new Date()).getTime(), 'memoryOnly');\nawait new Promise(resolve => setTimeout(resolve, 50));\n\nmsg.broker = {};\n\nlet mqtt = global.get('mqtt', 'memoryOnly');\nif (typeof mqtt == 'object' && mqtt.enabled == true && mqtt.zwave != '') {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.zwave.length > 0\n    ) {\n        msg.broker = {\n            'broker': mqtt.host,\n            'port': mqtt.port,\n            'clientid': 'zwave' + (global.get('describe.app.project', 'memoryOnly') || 'dknr'),\n            'force': true\n        };\n\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.zwave + '/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'memoryOnly');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5381,7 +5357,7 @@
         "z": "4bc72a1112cb448c",
         "g": "4350d3ede367f1ca",
         "name": "parse",
-        "func": "// Limit for some values\nif (msg.topic.includes(\"/lastActive\") ||\n    msg.topic.includes(\"/set\")\n) {\n\n    return;\n}\n\nlet res = {\n    'topic':'',\n    'payload': {}\n};\n\n// Split topic\nlet path = msg.topic.slice(global.get('mqtt.zwave', 'memoryOnly').length + 1).split('/');\n\n// Limit for some values\nif (path.length < 4) {\n    return;\n}\n\nres.payload.source = 'zwave';\nres.payload.parent = path.shift();\nres.payload.id = path.join('_');\nres.payload.seen = Date.now();\nres.payload.value = msg.payload;\n\n// See: https://z-wave.me/manual/z-way/Command_Class_Reference.htm\nswitch (path[0]) {\n    case \"32\": // common binary sensor\n        res.payload.unit = 'b';\n        res.payload.name = 'Alert';\n    case \"37\": // common binary switch\n        res.payload.unit = 'b';\n        res.payload.name = 'Switch';\n        break;\n    case \"38\": // common level switch\n        switch (path[2]) {\n            case \"On\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Switch on';\n                break;\n            case \"Off\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Switch off';\n                break;\n            case \"currentValue\":\n                res.payload.unit = '%';\n                res.payload.name = 'Level switch state';\n                break;\n            case \"targetValue\":\n                res.payload.unit = '%';\n                res.payload.name = 'Level switch target';\n                break;\n            case \"Up\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Level switch up';\n                break;\n            case \"Down\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Level switch down';\n                break;\n            default:\n                return;\n        }\n        break;\n    case \"48\":\n        switch (path[2]) {\n            case \"Any\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Binary sensor';\n                break;\n            default:\n                return;\n        }\n        break;\n    case \"49\":\n        switch (path[2]) {\n            case \"Power\":\n                res.payload.unit = 'W';\n                res.payload.name = 'Power';\n                break;\n            case \"Illuminance\":\n                res.payload.unit = 'lx';\n                res.payload.name = 'Illuminance';\n                break;\n            case \"Air_temperature\":\n                res.payload.unit = '°C';\n                res.payload.name = 'Temperature';\n                break;\n            case \"Humidity\":\n                res.payload.unit = '%';\n                res.payload.name = 'Humidity';\n                break;\n            case \"Ultraviolet\":\n                res.payload.unit = '';\n                res.payload.name = 'Ultraviolet';\n                break;\n            case \"Seismic_Intensity\":\n            case \"Seismic_magnitude\":\n                res.payload.unit = '';\n                res.payload.name = 'Seismic';\n                break;\n            case \"Carbon_dioxide_(CO₂)_level\": // FGDW002\n                res.payload.unit = 'ppm';\n                res.payload.name = 'Carbon dioxide';\n                break;\n            case \"Barometric_pressure\":\n                res.payload.unit = 'kPa';\n                res.payload.name = 'Barometric pressure';\n                break;\n            default:\n                return;\n        }\n        break;\n    case \"50\":\n        switch (path[3]) {\n            case \"65536\":\n            case \"65537\":\n                res.payload.unit = 'kWh';\n                res.payload.name = 'Power';\n                break;\n            case \"66048\":\n            case \"66049\":\n            case \"66051\":\n                res.payload.unit = 'W';\n                res.payload.name = 'Power';\n                break;\n            default:\n                return;\n        };\n        break;\n    case \"113\":\n        switch (path[3]) {\n            case \"Motion_sensor_status\":\n                res.payload.value = !res.payload.value ? 0 : 1;\n                res.payload.element = 'motion';\n                res.payload.unit = 'b';\n                res.payload.type = 'sensor';\n                res.payload.name = 'Motion';\n                break;\n            case \"Heat_sensor_status\":\n                res.payload.value = !res.payload.value ? 0 : 1;\n                res.payload.element = 'alert';\n                res.payload.unit = 'b';\n                res.payload.type = 'sensor';\n                res.payload.name = 'Heat alert';\n                break;\n            case \"Sensor_status\":\n                res.payload.value = !res.payload.value ? 0 : 1;\n                res.payload.element = 'alert';\n                res.payload.unit = 'b';\n                res.payload.type = 'sensor';\n                res.payload.name = 'Smoke alert';\n                break;\n            case \"Door_state\":\n                res.payload.value = res.payload.value === 23 ? 1 : 0;\n                res.payload.element = 'door';\n                res.payload.unit = 'b';\n                res.payload.type = 'sensor';\n                res.payload.name = 'Contact';\n                break;\n            default:\n                return;\n        };\n        break;\n    case \"128\":\n        res.payload.unit = '%';\n        res.payload.name = 'Battery';\n        break;\n    default:\n        return;\n};\n\nres.payload.name = res.payload.name + ' ' + path[1];\n\nnode.status({ text: res.payload.parent + ' / ' + res.payload.id });\nreturn res;",
+        "func": "// Prevent flood on reconnect\nif (((flow.get('mqtt_zwave_boot', 'memoryOnly') || 0) + 30000) > (new Date()).getTime()) {\n    node.status({ 'fill': 'red', 'text': 'reconnect' });\n\n    return;\n}\n\n// Limit for some values\nif (msg.topic.includes(\"/lastActive\") ||\n    msg.topic.includes(\"/set\")\n) {\n\n    return;\n}\n\nlet res = {\n    'topic':'',\n    'payload': {}\n};\n\n// Split topic\nlet path = msg.topic.slice(global.get('mqtt.zwave', 'memoryOnly').length + 1).split('/');\n\n// Limit for some values\nif (path.length < 4) {\n    return;\n}\n\nres.payload.source = 'zwave';\nres.payload.parent = path.shift();\nres.payload.id = path.join('_');\nres.payload.seen = Date.now();\nres.payload.value = msg.payload;\n\n// See: https://z-wave.me/manual/z-way/Command_Class_Reference.htm\nswitch (path[0]) {\n    case \"32\": // common binary sensor\n        res.payload.unit = 'b';\n        res.payload.name = 'Alert';\n    case \"37\": // common binary switch\n        res.payload.unit = 'b';\n        res.payload.name = 'Switch';\n        break;\n    case \"38\": // common level switch\n        switch (path[2]) {\n            case \"On\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Switch on';\n                break;\n            case \"Off\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Switch off';\n                break;\n            case \"currentValue\":\n                res.payload.unit = '%';\n                res.payload.name = 'Level switch state';\n                break;\n            case \"targetValue\":\n                res.payload.unit = '%';\n                res.payload.name = 'Level switch target';\n                break;\n            case \"Up\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Level switch up';\n                break;\n            case \"Down\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Level switch down';\n                break;\n            default:\n                return;\n        }\n        break;\n    case \"48\":\n        switch (path[2]) {\n            case \"Any\":\n                res.payload.unit = 'b';\n                res.payload.name = 'Binary sensor';\n                break;\n            default:\n                return;\n        }\n        break;\n    case \"49\":\n        switch (path[2]) {\n            case \"Power\":\n                res.payload.unit = 'W';\n                res.payload.name = 'Power';\n                break;\n            case \"Illuminance\":\n                res.payload.unit = 'lx';\n                res.payload.name = 'Illuminance';\n                break;\n            case \"Air_temperature\":\n                res.payload.unit = '°C';\n                res.payload.name = 'Temperature';\n                break;\n            case \"Humidity\":\n                res.payload.unit = '%';\n                res.payload.name = 'Humidity';\n                break;\n            case \"Ultraviolet\":\n                res.payload.unit = '';\n                res.payload.name = 'Ultraviolet';\n                break;\n            case \"Seismic_Intensity\":\n            case \"Seismic_magnitude\":\n                res.payload.unit = '';\n                res.payload.name = 'Seismic';\n                break;\n            case \"Carbon_dioxide_(CO₂)_level\": // FGDW002\n                res.payload.unit = 'ppm';\n                res.payload.name = 'Carbon dioxide';\n                break;\n            case \"Barometric_pressure\":\n                res.payload.unit = 'kPa';\n                res.payload.name = 'Barometric pressure';\n                break;\n            default:\n                return;\n        }\n        break;\n    case \"50\":\n        switch (path[3]) {\n            case \"65536\":\n            case \"65537\":\n                res.payload.unit = 'kWh';\n                res.payload.name = 'Power';\n                break;\n            case \"66048\":\n            case \"66049\":\n            case \"66051\":\n                res.payload.unit = 'W';\n                res.payload.name = 'Power';\n                break;\n            default:\n                return;\n        };\n        break;\n    case \"113\":\n        switch (path[3]) {\n            case \"Motion_sensor_status\":\n                res.payload.value = !res.payload.value ? 0 : 1;\n                res.payload.element = 'motion';\n                res.payload.unit = 'b';\n                res.payload.type = 'sensor';\n                res.payload.name = 'Motion';\n                break;\n            case \"Heat_sensor_status\":\n                res.payload.value = !res.payload.value ? 0 : 1;\n                res.payload.element = 'alert';\n                res.payload.unit = 'b';\n                res.payload.type = 'sensor';\n                res.payload.name = 'Heat alert';\n                break;\n            case \"Sensor_status\":\n                res.payload.value = !res.payload.value ? 0 : 1;\n                res.payload.element = 'alert';\n                res.payload.unit = 'b';\n                res.payload.type = 'sensor';\n                res.payload.name = 'Smoke alert';\n                break;\n            case \"Door_state\":\n                res.payload.value = res.payload.value === 23 ? 1 : 0;\n                res.payload.element = 'door';\n                res.payload.unit = 'b';\n                res.payload.type = 'sensor';\n                res.payload.name = 'Contact';\n                break;\n            default:\n                return;\n        };\n        break;\n    case \"128\":\n        res.payload.unit = '%';\n        res.payload.name = 'Battery';\n        break;\n    default:\n        return;\n};\n\nres.payload.name = res.payload.name + ' ' + path[1];\n\nnode.status({ text: res.payload.parent + ' / ' + res.payload.id });\nreturn res;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5883,30 +5859,12 @@
         ]
     },
     {
-        "id": "cbfdc74d983213d0",
-        "type": "link in",
-        "z": "4bc72a1112cb448c",
-        "g": "c2f0711b621df28f",
-        "name": "common - mqtt - rfxcom2mqtt",
-        "links": [
-            "92c098c716e46e3b",
-            "f2cd63b49ac325ec"
-        ],
-        "x": 145,
-        "y": 3980,
-        "wires": [
-            [
-                "be7d1f37913582e7"
-            ]
-        ]
-    },
-    {
         "id": "be7d1f37913582e7",
         "type": "function",
         "z": "4bc72a1112cb448c",
         "g": "c2f0711b621df28f",
         "name": "data",
-        "func": "msg.broker = {};\n\nlet mqtt = global.get('mqtt', 'memoryOnly');\nif (typeof mqtt == 'object' && mqtt.enabled == true && mqtt.rfxcom != '') {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.rfxcom.length > 0\n    ) {\n        msg.broker = {\n            'broker': mqtt.host,\n            'port': mqtt.port,\n            'clientid': 'rfxcom' + (global.get('describe.app.project', 'memoryOnly') || 'dknr'),\n            'force': true\n        };\n\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.rfxcom + '/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'memoryOnly');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
+        "func": "// Bloc mqtt output on reconnect\nflow.set('mqtt_rfxcom2mqtt_boot', (new Date()).getTime(), 'memoryOnly');\nawait new Promise(resolve => setTimeout(resolve, 50));\n\nmsg.broker = {};\n\nlet mqtt = global.get('mqtt', 'memoryOnly');\nif (typeof mqtt == 'object' && mqtt.enabled == true && mqtt.rfxcom != '') {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.rfxcom.length > 0\n    ) {\n        msg.broker = {\n            'broker': mqtt.host,\n            'port': mqtt.port,\n            'clientid': 'rfxcom' + (global.get('describe.app.project', 'memoryOnly') || 'dknr'),\n            'force': true\n        };\n\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.rfxcom + '/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'memoryOnly');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5976,7 +5934,7 @@
         "z": "4bc72a1112cb448c",
         "g": "c2f0711b621df28f",
         "name": "parse",
-        "func": "if (typeof msg.payload !== 'object' ||\n    typeof msg.payload.id !== 'string' ||\n    msg.topic.includes(\"/bridges\")\n) {\n\n    return;\n}\n\nlet topic = msg.topic.slice(global.get('mqtt.rfxcom', 'memoryOnly').length + 1);\nlet path = topic.split('/');\nif (path.length < 2 && path.length > 3) {\n\n    return;\n}\n\nif (path[0] !== 'devices') {\n\n    return;\n}\n\nfor (const k in msg.payload) {\n    let exists = false;\n    let res = {\n        topic: '',\n        payload: {\n            'source': 'rfxcom',\n            'parent': msg.payload['id'],\n            'id': k,\n            'seen': Date.now(),\n            'value': '',\n        }\n    };\n\n    switch (k) {\n        case 'temperature':\n            res.payload.type = 'sensor';\n            res.payload.element = 'temperature';\n            res.payload.unit = '°C';\n            res.payload.value = msg.payload[k];\n            exists = true;\n            break;\n        case 'humidity':\n            res.payload.type = 'sensor';\n            res.payload.element = 'humidity';\n            res.payload.unit = '%';\n            res.payload.value = msg.payload[k];\n            exists = true;\n            break;\n        case 'batteryLevel':\n            res.payload.type = 'sensor';\n            res.payload.element = 'battery';\n            res.payload.unit = '%';\n            res.payload.value = msg.payload[k] * 10;\n            exists = true;\n            break;\n        case 'command':\n            res.payload.type = 'sensor';\n            res.payload.element = 'remote';\n            res.payload.unit = 'b';\n            res.payload.value = msg.payload.commandNumber;\n            exists = true;\n            break;\n        default:\n    }\n\n    if (exists) {\n        if (typeof msg.payload['unitCode'] === 'number') {\n            res.payload.id = msg.payload['unitCode'] + '_' + res.payload.id;\n        }\n\n        node.status({ text: res.payload.parent });\n        node.send(res);\n    }\n}\n\nreturn;",
+        "func": "// Prevent flood on reconnect\nif (((flow.get('mqtt_rfxcom2mqtt_boot', 'memoryOnly') || 0) + 30000) > (new Date()).getTime()) {\n    node.status({ 'fill': 'red', 'text': 'reconnect' });\n\n    return;\n}\n\nif (typeof msg.payload !== 'object' ||\n    typeof msg.payload.id !== 'string' ||\n    msg.topic.includes(\"/bridges\")\n) {\n\n    return;\n}\n\nlet topic = msg.topic.slice(global.get('mqtt.rfxcom', 'memoryOnly').length + 1);\nlet path = topic.split('/');\nif (path.length < 2 && path.length > 3) {\n\n    return;\n}\n\nif (path[0] !== 'devices') {\n\n    return;\n}\n\nfor (const k in msg.payload) {\n    let exists = false;\n    let res = {\n        topic: '',\n        payload: {\n            'source': 'rfxcom',\n            'parent': msg.payload['id'],\n            'id': k,\n            'seen': Date.now(),\n            'value': '',\n        }\n    };\n\n    switch (k) {\n        case 'temperature':\n            res.payload.type = 'sensor';\n            res.payload.element = 'temperature';\n            res.payload.unit = '°C';\n            res.payload.value = msg.payload[k];\n            exists = true;\n            break;\n        case 'humidity':\n            res.payload.type = 'sensor';\n            res.payload.element = 'humidity';\n            res.payload.unit = '%';\n            res.payload.value = msg.payload[k];\n            exists = true;\n            break;\n        case 'batteryLevel':\n            res.payload.type = 'sensor';\n            res.payload.element = 'battery';\n            res.payload.unit = '%';\n            res.payload.value = msg.payload[k] * 10;\n            exists = true;\n            break;\n        case 'command':\n            res.payload.type = 'sensor';\n            res.payload.element = 'remote';\n            res.payload.unit = 'b';\n            res.payload.value = msg.payload.commandNumber;\n            exists = true;\n            break;\n        default:\n    }\n\n    if (exists) {\n        if (typeof msg.payload['unitCode'] === 'number') {\n            res.payload.id = msg.payload['unitCode'] + '_' + res.payload.id;\n        }\n\n        node.status({ text: res.payload.parent });\n        node.send(res);\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6062,11 +6020,11 @@
         "type": "delay",
         "z": "4bc72a1112cb448c",
         "g": "c2f0711b621df28f",
-        "name": "50/s",
+        "name": "25/s",
         "pauseType": "rate",
         "timeout": "10",
         "timeoutUnits": "milliseconds",
-        "rate": "50",
+        "rate": "25",
         "nbRateUnits": "1",
         "rateUnits": "second",
         "randomFirst": "1",
@@ -6079,8 +6037,8 @@
         "y": 3980,
         "wires": [
             [
-                "7640309cc9eba43c",
-                "f2bf274fc1eaf00c"
+                "f2bf274fc1eaf00c",
+                "7640309cc9eba43c"
             ]
         ]
     },
@@ -7291,15 +7249,15 @@
         "type": "trigger",
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
-        "name": "1m",
+        "name": "30s",
         "op1": "",
         "op2": "true",
         "op1type": "nul",
         "op2type": "bool",
-        "duration": "1",
+        "duration": "30",
         "extend": false,
         "overrideDelay": false,
-        "units": "min",
+        "units": "s",
         "reset": "",
         "bytopic": "all",
         "topic": "topic",
@@ -7340,7 +7298,7 @@
             "a29ec7554a818a6f"
         ],
         "x": 145,
-        "y": 5000,
+        "y": 5060,
         "wires": [
             [
                 "47c5bf82adab9184"
@@ -7353,7 +7311,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - loop",
-        "func": "/*\nloop (preroutine) : \nPrepare message recevied from loop for routine.\n*/\n\n//node.status({ });\n\n// Boot\nif (flow.get('stop', 'memoryOnly') === true \n || global.get('boot', 'memoryOnly') === true\n) {\n\n    return;\n}\n\n// Get used data\nconst scenes = { ...(global.get('scene', 'memoryOnly') || {}) };\nconst entities = { ...(global.get('entity', 'memoryOnly') || {}) };\nconst template = { ...(global.get('describe.template', 'memoryOnly') || {}) };\nconst routine = { ...(global.get('describe.template.routine', 'memoryOnly') || {}) };\nconst elements = { ...(global.get('describe.scenes', 'memoryOnly') || {}) };\n\nfor (const e in scenes) {\n    // Keep scene template up to date\n    const scene = { ...template.scene, ...scenes[e] };\n\n    // Ignore unexisting scene\n    if (typeof scene.trigger !== 'object'\n     || typeof scene.trigger[msg.payload.uid] !== 'object'\n     || typeof entities[msg.payload.uid] !== 'object'\n     || typeof entities[e] !== 'object'\n    ) {\n        node.status({ 'fill': 'red', 'text': 'Unknown trigger ' + e });\n\n        continue;\n    }\n\n    const param = { ...template.trigger, ...scene.trigger[msg.payload.uid] };\n    const trigger = { ...template.entity, ...msg.payload };\n    const target = { ...template.entity, ...entities[e] };\n    const routines = [ ...(elements[target.element] || []) ];\n\n    // Clone data to msg\n    let newMsg = { ...routine, ...{\n        'topic': scene.target,\n        'iam': trigger.uid === target.uid,\n        'scene': scene,\n        'param': param,\n        'trigger': trigger,\n        'target': target,\n        'routines': routines\n    }};\n\n    node.status({ 'fill': 'green', 'text': e });\n\n    if (newMsg.iam === true) {\n        // As we did not use zwave target value, use high delay for shutter value update\n        if (target.element === 'shutter') {\n\n            node.send([newMsg, null, null]);\n        }\n        else {\n            \n            node.send([null, newMsg, null]);\n        }\n    }\n    else {\n\n        node.send([null, null, newMsg]);\n    }\n}\n\nreturn;",
+        "func": "/*\nloop (preroutine) : \nPrepare message recevied from loop for routine.\n*/\n\n//node.status({ });\n\n// Boot\nif (flow.get('stop', 'memoryOnly') === true \n || global.get('boot', 'memoryOnly') === true\n) {\n\n    return;\n}\n\n// Get used data\nconst scenes = { ...(global.get('scene', 'memoryOnly') || {}) };\nconst entities = { ...(global.get('entity', 'memoryOnly') || {}) };\nconst template = { ...(global.get('describe.template', 'memoryOnly') || {}) };\nconst routine = { ...(global.get('describe.template.routine', 'memoryOnly') || {}) };\nconst elements = { ...(global.get('describe.scenes', 'memoryOnly') || {}) };\n\nfor (const e in scenes) {\n    // Keep scene template up to date\n    const scene = { ...template.scene, ...scenes[e] };\n\n    // Ignore unexisting scene\n    if (typeof scene.trigger !== 'object'\n     || typeof scene.trigger[msg.payload.uid] !== 'object'\n     || typeof entities[msg.payload.uid] !== 'object'\n     || typeof entities[e] !== 'object'\n    ) {\n        node.status({ 'fill': 'red', 'text': 'Unknown trigger ' + e });\n\n        continue;\n    }\n\n    const param = { ...template.trigger, ...scene.trigger[msg.payload.uid] };\n    const trigger = { ...template.entity, ...msg.payload };\n    const target = { ...template.entity, ...entities[e] };\n    const routines = [ ...(elements[target.element] || []) ];\n\n    // Clone data to msg\n    let newMsg = { ...routine, ...{\n        'topic': scene.target,\n        'iam': trigger.uid === target.uid,\n        'scene': scene,\n        'param': param,\n        'trigger': trigger,\n        'target': target,\n        'routines': routines,\n        'summary': {}\n    }};\n\n    node.status({ 'fill': 'green', 'text': e });\n\n    if (newMsg.iam === true) {\n        // As we did not use zwave target value, use high delay for shutter value update\n        if (target.element === 'shutter') {\n\n            node.send([newMsg, null, null]);\n        }\n        else {\n            \n            node.send([null, newMsg, null]);\n        }\n    }\n    else {\n\n        node.send([null, null, newMsg]);\n    }\n}\n\nreturn;",
         "outputs": 3,
         "timeout": 0,
         "noerr": 0,
@@ -7361,7 +7319,7 @@
         "finalize": "",
         "libs": [],
         "x": 370,
-        "y": 5000,
+        "y": 5060,
         "wires": [
             [
                 "dab0400118880437"
@@ -7380,7 +7338,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - automate",
-        "func": "/*\nautomate (preroutine) : \nStop routine if automate mode is not in auto.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\nconst mode = global.get('entity.dknr_sensor_automate.value') || 'unknown';\nif (mode === 'auto') {\n\n    node.status({ 'fill': 'green', 'text': 'automate is ' + mode });\n}\nelse {\n    msg.rsp = false;\n\n    node.status({ 'fill': 'red', 'text': 'automate is ' + mode });\n}\n\nreturn msg;",
+        "func": "/*\nautomate (preroutine) : \nStop routine if automate mode is not in auto.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\nconst mode = global.get('entity.dknr_sensor_automate.value') || 'unknown';\nif (mode === 'auto') {\n\n    msg.summary.automate = 'automate is ' + mode;\n    node.status({ 'fill': 'green', 'text': 'automate is ' + mode });\n}\nelse {\n    msg.rsp = false;\n\n    msg.summary.automate = 'automate is ' + mode;\n    node.status({ 'fill': 'red', 'text': 'automate is ' + mode });\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7388,7 +7346,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 5120,
+        "y": 5180,
         "wires": [
             [
                 "87f50458a3c79a83"
@@ -7401,7 +7359,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - manual",
-        "func": "/*\nmanual (preroutine) : \nStop routine if scene mode is in manual mode.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Check if a dknr mode as same name as target element, and if it is in manuel (config)\nconst sensor = global.get('entity.dknr_sensor_' + msg.target.element + '.value', 'memoryOnly') || '';\n\nif (sensor === '') {\n    msg.rsp = false;\n\n    node.status({ 'fill': 'red', 'text': 'sensor ' + msg.target.element + ' is not found' });\n}\nelse if (sensor === 'manual') {\n    msg.rsp = false;\n\n    node.status({ 'fill': 'red', 'text': 'sensor ' + msg.target.element + ' is ' + sensor });\n}\nelse {\n\n    node.status({ 'fill': 'green', 'text': 'sensor ' + msg.target.element + ' is ' + sensor });\n}\n\nreturn msg;",
+        "func": "/*\nmanual (preroutine) : \nStop routine if scene mode is in manual mode.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Check if a dknr mode as same name as target element, and if it is in manuel (config)\nconst sensor = global.get('entity.dknr_sensor_' + msg.target.element + '.value', 'memoryOnly') || '';\n\nif (sensor === '') {\n    msg.rsp = false;\n\n    msg.summary.manual = 'sensor ' + msg.target.element + ' is not found';\n    node.status({ 'fill': 'red', 'text': 'sensor ' + msg.target.element + ' is not found' });\n}\nelse if (sensor === 'manual') {\n    msg.rsp = false;\n\n    msg.summary.manual = 'sensor ' + msg.target.element + ' is ' + sensor;\n    node.status({ 'fill': 'red', 'text': 'sensor ' + msg.target.element + ' is ' + sensor });\n}\nelse {\n\n    msg.summary.manual = 'sensor ' + msg.target.element + ' is ' + sensor;\n    node.status({ 'fill': 'green', 'text': 'sensor ' + msg.target.element + ' is ' + sensor });\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7409,7 +7367,7 @@
         "finalize": "",
         "libs": [],
         "x": 380,
-        "y": 5240,
+        "y": 5300,
         "wires": [
             [
                 "426c0755e692fb12"
@@ -7422,7 +7380,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - level",
-        "func": "/*\nlevel (preroutine) : \nTranform input value in output level (true / false) according to scene trigger parameters.\nStop routine if output parameter if set to none.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\nconst textuals = [ ...(global.get('describe.texts', 'memoryOnly') || []) ];\n\n// Get trigger values\nlet inputvalue = msg.trigger.value;\nlet inputhigh = msg.param.inputhigh;\nlet inputlow = msg.param.inputlow;\nlet is_num = textuals.includes(msg.trigger.unit) ? false : true;\n\n// Need to convert time in num\nif (msg.trigger.unit === 'time') {\n    inputvalue = inputvalue.split(':').join('');\n    inputhigh = Number(inputhigh.split(':').join(''));\n    inputlow = Number(inputlow.split(':').join(''));\n    is_num = true;\n}\n\n// Check if high and low levels are reverted\nlet is_rev = is_num && inputhigh < inputlow ? true : false;\n\n// Prepare toggle value\nlet toggle = msg.target.value === msg.scene.off ? true : false;\n\n// On high input\nif (!is_num && inputvalue === inputhigh\n || is_num && !is_rev && Number(inputvalue) >= inputhigh\n || is_num && is_rev && Number(inputvalue) <= inputhigh\n) {\n    if (msg.param.outputhigh === 'high') {\n        msg.payload = true;\n    }\n    else if (msg.param.outputhigh === 'low') {\n        msg.payload = false;\n    }\n    else if (msg.param.outputhigh === 'toggle') {\n        msg.payload = toggle;\n    }\n    else {\n        msg.rsp = false;\n\n        node.status({ 'fill': 'red', 'text': 'no output for high input' });\n    }\n}\n// On low input\nelse if (!is_num && inputvalue === inputlow\n || is_num && !is_rev && Number(inputvalue) <= inputlow\n || is_num && is_rev && Number(inputvalue) >= inputlow\n) {\n    if (msg.param.outputlow === 'high') {\n        msg.payload = true;\n    }\n    else if (msg.param.outputlow === 'low') {\n        msg.payload = false;\n    }\n    else if (msg.param.outputlow === 'toggle') {\n        msg.payload = toggle;\n    }\n    else {\n        msg.rsp = false;\n\n        node.status({ 'fill': 'red', 'text': 'no output for low input' });\n    }\n}\nelse {\n    msg.rsp = false;\n\n    node.status({ 'fill': 'red', 'text': 'input level not found' });\n}\n\nif (msg.rsp === true) {\n\n    node.status({ 'fill': 'green', 'text': 'level ' + msg.payload });\n}\n\nreturn msg;",
+        "func": "/*\nlevel (preroutine) : \nTranform input value in output level (true / false) according to scene trigger parameters.\nStop routine if output parameter if set to none.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\nconst textuals = [ ...(global.get('describe.texts', 'memoryOnly') || []) ];\n\n// Get trigger values\nlet inputvalue = msg.trigger.value;\nlet inputhigh = msg.param.inputhigh;\nlet inputlow = msg.param.inputlow;\nlet is_num = textuals.includes(msg.trigger.unit) ? false : true;\n\n// Need to convert time in num\nif (msg.trigger.unit === 'time') {\n    inputvalue = inputvalue.split(':').join('');\n    inputhigh = Number(inputhigh.split(':').join(''));\n    inputlow = Number(inputlow.split(':').join(''));\n    is_num = true;\n}\n\n// Check if high and low levels are reverted\nlet is_rev = is_num && inputhigh < inputlow ? true : false;\n\n// Prepare toggle value\nlet toggle = msg.target.value === msg.scene.off ? true : false;\n\n// On high input\nif (!is_num && inputvalue === inputhigh\n || is_num && !is_rev && Number(inputvalue) >= inputhigh\n || is_num && is_rev && Number(inputvalue) <= inputhigh\n) {\n    if (msg.param.outputhigh === 'high') {\n        msg.payload = true;\n    }\n    else if (msg.param.outputhigh === 'low') {\n        msg.payload = false;\n    }\n    else if (msg.param.outputhigh === 'toggle') {\n        msg.payload = toggle;\n    }\n    else {\n        msg.rsp = false;\n\n        msg.summary.level = 'no output for high input';\n        node.status({ 'fill': 'red', 'text': 'no output for high input' });\n    }\n}\n// On low input\nelse if (!is_num && inputvalue === inputlow\n || is_num && !is_rev && Number(inputvalue) <= inputlow\n || is_num && is_rev && Number(inputvalue) >= inputlow\n) {\n    if (msg.param.outputlow === 'high') {\n        msg.payload = true;\n    }\n    else if (msg.param.outputlow === 'low') {\n        msg.payload = false;\n    }\n    else if (msg.param.outputlow === 'toggle') {\n        msg.payload = toggle;\n    }\n    else {\n        msg.rsp = false;\n\n        msg.summary.level = 'no output for low input';\n        node.status({ 'fill': 'red', 'text': 'no output for low input' });\n    }\n}\nelse {\n    msg.rsp = false;\n\n    msg.summary.level = 'input level not found';\n    node.status({ 'fill': 'red', 'text': 'input level not found' });\n}\n\nif (msg.rsp === true) {\n\n    msg.summary.level = 'level ' + msg.payload;\n    node.status({ 'fill': 'green', 'text': 'level ' + msg.payload });\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7430,7 +7388,7 @@
         "finalize": "",
         "libs": [],
         "x": 380,
-        "y": 5300,
+        "y": 5360,
         "wires": [
             [
                 "371036e77e74d030"
@@ -7443,7 +7401,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - nocturnal",
-        "func": "/*\nnocturnal :\nStop routine for low level if it is night, and high level if it's day.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('nocturnal')\n || msg.scene.nocturnal === 0\n || msg.trigger.element === 'remote'\n || msg.iam\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\nconst sensor = global.get('entity.dknr_sensor_nycthemer.value', 'memoryOnly') || '';\nif (sensor === 'night' && msg.payload === false\n || sensor === 'day' && msg.payload === true\n) {\n    msg.rsp = false;\n\n    node.status({ 'fill': 'red', 'text': 'nycthemer is ' + sensor });\n}\nelse {\n\n    node.status({ 'fill': 'green', 'text': 'nycthemer is ' + sensor });\n}\n\nreturn msg;",
+        "func": "/*\nnocturnal :\nStop routine for low level if it is night, and high level if it's day.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('nocturnal')\n || msg.scene.nocturnal === 0\n || msg.trigger.element === 'remote'\n || msg.iam\n) {\n\n    msg.summary.nocturnal = 'bypass';\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\nconst sensor = global.get('entity.dknr_sensor_nycthemer.value', 'memoryOnly') || '';\nif (sensor === 'night' && msg.payload === false\n || sensor === 'day' && msg.payload === true\n) {\n    msg.rsp = false;\n\n    msg.summary.nocturnal = 'nycthemer is ' + sensor;\n    node.status({ 'fill': 'red', 'text': 'nycthemer is ' + sensor });\n}\nelse {\n\n    msg.summary.nocturnal = 'nycthemer is ' + sensor;\n    node.status({ 'fill': 'green', 'text': 'nycthemer is ' + sensor });\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7451,7 +7409,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 5360,
+        "y": 5420,
         "wires": [
             [
                 "a207538e0e9bf388"
@@ -7464,7 +7422,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - diurnal",
-        "func": "/*\ndiurnal :\nStop routine for low level if it is day, and high level if its night.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('diurnal')\n || msg.scene.diurnal === 0\n || msg.trigger.element === 'remote'\n || msg.iam\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\nconst sensor = global.get('entity.dknr_sensor_nycthemer.value', 'memoryOnly') || '';\nif (sensor === 'day' && msg.payload === false\n || sensor === 'night' && msg.payload === true\n) {\n    msg.rsp = false;\n\n    node.status({ 'fill': 'red', 'text': 'nycthemer is ' + sensor });\n}\nelse {\n\n    node.status({ 'fill': 'green', 'text': 'nycthemer is ' + sensor });\n}\n\nreturn msg;",
+        "func": "/*\ndiurnal :\nStop routine for low level if it is day, and high level if its night.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('diurnal')\n || msg.scene.diurnal === 0\n || msg.trigger.element === 'remote'\n || msg.iam\n) {\n\n    msg.summary.diurnal = 'bypass';\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\nconst sensor = global.get('entity.dknr_sensor_nycthemer.value', 'memoryOnly') || '';\nif (sensor === 'day' && msg.payload === false\n || sensor === 'night' && msg.payload === true\n) {\n    msg.rsp = false;\n\n    msg.summary.diurnal = 'nycthemer is ' + sensor;\n    node.status({ 'fill': 'red', 'text': 'nycthemer is ' + sensor });\n}\nelse {\n\n    msg.summary.diurnal = 'nycthemer is ' + sensor;\n    node.status({ 'fill': 'green', 'text': 'nycthemer is ' + sensor });\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7472,7 +7430,7 @@
         "finalize": "",
         "libs": [],
         "x": 380,
-        "y": 5420,
+        "y": 5480,
         "wires": [
             [
                 "348a4c108e5704cb"
@@ -7485,7 +7443,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - humidity",
-        "func": "/*\nhumidity :\nAlways pilot target level according to trigger humidity.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('humidity')\n || msg.scene.humidity === 0\n || msg.trigger.element === 'remote'\n// || msg.iam\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Find humidity entity in scene triggers\nlet exists = false;\nfor (const e in msg.scene.trigger) {\n    if (typeof entity[e] === 'object'\n     && entity[e]['hidden'] === 0\n     && entity[e]['element'] === 'humidity'\n    ) {\n        // If humidity is high, set target to high level\n        if (Number(entity[e]['value']) >= msg.scene.humidity) {\n            msg.payload = true;\n\n            node.status({ 'fill': 'green', 'text': 'humidity is high' });\n            return msg;\n        }\n        exists = true;\n    }\n}\n\nif (exists == true) {\n    msg.payload = false;\n\n    node.status({ 'fill': 'green', 'text': 'humidity is low' });\n} else {\n\n    node.status({ 'fill': 'blue', 'text': 'humidity is not found' });\n}\n\nreturn msg;",
+        "func": "/*\nhumidity :\nAlways pilot target level according to trigger humidity.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('humidity')\n || msg.scene.humidity === 0\n || msg.trigger.element === 'remote'\n// || msg.iam\n) {\n\n    msg.summary.humidity = 'bypass';\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Find humidity entity in scene triggers\nlet exists = false;\nfor (const e in msg.scene.trigger) {\n    if (typeof entity[e] === 'object'\n     && entity[e]['hidden'] === 0\n     && entity[e]['element'] === 'humidity'\n    ) {\n        // If humidity is high, set target to high level\n        if (Number(entity[e]['value']) >= msg.scene.humidity) {\n            msg.payload = true;\n\n            msg.summary.humidity = 'humidity is high';\n            node.status({ 'fill': 'green', 'text': 'humidity is high' });\n            return msg;\n        }\n        exists = true;\n    }\n}\n\nif (exists == true) {\n    msg.payload = false;\n\n    msg.summary.humidity = 'humidity is low';\n    node.status({ 'fill': 'green', 'text': 'humidity is low' });\n} else {\n\n    msg.summary.humidity = 'humidity is not found';\n    node.status({ 'fill': 'blue', 'text': 'humidity is not found' });\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7493,7 +7451,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 5780,
+        "y": 5840,
         "wires": [
             [
                 "eb115f6465263869"
@@ -7506,7 +7464,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - illuminance",
-        "func": "/*\nilluminance :\nStop routine for high level if triggers illuminances is low.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('illuminance')\n || msg.scene.illuminance === 0\n || msg.payload === false\n || msg.trigger.element === 'remote'\n || msg.iam\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Find illuminance entity in scene triggers\nlet num = 0;\nlet illuminance = 0;\nfor (const e in msg.scene.trigger) {\n    if (typeof entity[e] === 'object'\n     && entity[e]['hidden'] === 0\n     && entity[e]['element'] === 'illuminance'\n    ) {\n        illuminance += Number(entity[e]['value']);\n        num++;\n    }\n}\n\n// If there are illuminance entities, compare them to scene requirement\nif (num > 0) {\n    illuminance = Math.round(parseInt(illuminance * 10) / num) / 10;\n    if (illuminance >= msg.scene.illuminance) {\n        // See also special case for openwork in \"routine - value\"\n\n        node.status({ 'fill': 'green', 'text': 'illuminance is ' + illuminance });\n    } else {\n        msg.rsp = false;\n        msg.replay = true;\n\n        node.status({ 'fill': 'red', 'text': 'illuminance is ' + illuminance });\n    }\n} else {\n\n    node.status({ 'fill': 'blue', 'text': 'illuminance is not found' });\n}\n\nreturn msg;",
+        "func": "/*\nilluminance :\nStop routine for high level if triggers illuminances is low.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('illuminance')\n || msg.scene.illuminance === 0\n || msg.payload === false\n || msg.trigger.element === 'remote'\n || msg.iam\n) {\n\n    msg.summary.illuminance = 'bypass';\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Find illuminance entity in scene triggers\nlet num = 0;\nlet illuminance = 0;\nfor (const e in msg.scene.trigger) {\n    if (typeof entity[e] === 'object'\n     && entity[e]['hidden'] === 0\n     && entity[e]['element'] === 'illuminance'\n    ) {\n        illuminance += Number(entity[e]['value']);\n        num++;\n    }\n}\n\n// If there are illuminance entities, compare them to scene requirement\nif (num > 0) {\n    illuminance = Math.round(parseInt(illuminance * 10) / num) / 10;\n    if (illuminance >= msg.scene.illuminance) {\n        // See also special case for openwork in \"routine - value\"\n\n        msg.summary.illuminance = 'illuminance is ' + illuminance;\n        node.status({ 'fill': 'green', 'text': 'illuminance is ' + illuminance });\n    } else {\n        msg.rsp = false;\n        msg.replay = true;\n\n        msg.summary.illuminance = 'illuminance is ' + illuminance;\n        node.status({ 'fill': 'red', 'text': 'illuminance is ' + illuminance });\n    }\n} else {\n\n    msg.summary.illuminance = 'illuminance is not found';\n    node.status({ 'fill': 'blue', 'text': 'illuminance is not found' });\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7514,7 +7472,7 @@
         "finalize": "",
         "libs": [],
         "x": 400,
-        "y": 5480,
+        "y": 5540,
         "wires": [
             [
                 "2df305474f453f98"
@@ -7527,7 +7485,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - darkness",
-        "func": "/*\nilluminance :\nStop routine for high level if triggers illuminances is high.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('darkness')\n || msg.scene.darkness === 0\n || msg.payload === false\n || msg.trigger.element === 'remote'\n || msg.iam\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Find illuminance entity in room\nlet num = 0;\nlet illuminance = 0;\nfor (const e in msg.scene.trigger) {\n    if (typeof entity[e] === 'object'\n     && entity[e]['hidden'] === 0\n     && entity[e]['element'] === 'illuminance'\n    ) {\n        illuminance += Number(entity[e]['value']);\n        num++;\n    }\n}\n\n// If there are illuminance entities, compare them to scene requirement\nif (num > 0) {\n    illuminance = Math.round(parseInt(illuminance * 10) / num) / 10;\n    if (illuminance <= msg.scene.darkness) {\n\n        node.status({ 'fill': 'green', 'text': 'illuminance is ' + illuminance });\n    } else {\n        msg.rsp = false;\n        msg.replay = true;\n\n        node.status({ 'fill': 'red', 'text': 'illuminance is ' + illuminance });\n    }\n} else {\n\n    node.status({ 'fill': 'blue', 'text': 'illuminance is not found' });\n}\n\nreturn msg;",
+        "func": "/*\nilluminance :\nStop routine for high level if triggers illuminances is high.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('darkness')\n || msg.scene.darkness === 0\n || msg.payload === false\n || msg.trigger.element === 'remote'\n || msg.iam\n) {\n\n    msg.summary.darkness = 'bypass';\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Find illuminance entity in room\nlet num = 0;\nlet illuminance = 0;\nfor (const e in msg.scene.trigger) {\n    if (typeof entity[e] === 'object'\n     && entity[e]['hidden'] === 0\n     && entity[e]['element'] === 'illuminance'\n    ) {\n        illuminance += Number(entity[e]['value']);\n        num++;\n    }\n}\n\n// If there are illuminance entities, compare them to scene requirement\nif (num > 0) {\n    illuminance = Math.round(parseInt(illuminance * 10) / num) / 10;\n    if (illuminance <= msg.scene.darkness) {\n\n        msg.summary.darkness = 'illuminance is ' + illuminance;\n        node.status({ 'fill': 'green', 'text': 'illuminance is ' + illuminance });\n    } else {\n        msg.rsp = false;\n        msg.replay = true;\n\n        msg.summary.darkness = 'illuminance is ' + illuminance;\n        node.status({ 'fill': 'red', 'text': 'illuminance is ' + illuminance });\n    }\n} else {\n\n    msg.summary.darkness = 'illuminance is not found';\n    node.status({ 'fill': 'blue', 'text': 'illuminance is not found' });\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7535,7 +7493,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 5540,
+        "y": 5600,
         "wires": [
             [
                 "cea6d6bde6c4152c"
@@ -7548,7 +7506,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - motion",
-        "func": "/*\nmotion :\nStop routine for low level if triggers motion is high.\nUsefull if motion is activ longer than \"duration\"\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// If trigger is motion, replay output (to update timer)\nif (msg.trigger.element === 'motion' && msg.payload === true) {\n    msg.replay = true;\n}\n\n// Exceptions\nif (!msg.routines.includes('motion')\n || msg.scene.motion === 0\n || msg.payload === true\n || msg.trigger.element === 'remote'\n || msg.iam\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Find motion entity in scene triggers\nfor (const e in msg.scene.trigger) {\n    if (typeof entity[e] === 'object'\n     && entity[e]['hidden'] === 0\n     && entity[e]['element'] === 'motion'\n     && !!entity[e]['value']\n    ) {\n        msg.rsp = false;\n        msg.replay = true;\n\n        node.status({ 'fill': 'red', 'text': 'motion is still activ' });\n        return msg;\n    }\n}\n\nnode.status({ 'fill': 'green', 'text': 'no motion or not active' });\n\nreturn msg;",
+        "func": "/*\nmotion :\nStop routine for low level if triggers motion is high.\nUsefull if motion is activ longer than \"duration\"\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// If trigger is motion, replay output (to update timer)\nif (msg.trigger.element === 'motion' && msg.payload === true) {\n    msg.replay = true;\n}\n\n// Exceptions\nif (!msg.routines.includes('motion')\n || msg.scene.motion === 0\n || msg.payload === true\n || msg.trigger.element === 'remote'\n || msg.iam\n) {\n\n    msg.summary.motion = 'bypass';\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Find motion entity in scene triggers\nfor (const e in msg.scene.trigger) {\n    if (typeof entity[e] === 'object'\n     && entity[e]['hidden'] === 0\n     && entity[e]['element'] === 'motion'\n     && !!entity[e]['value']\n    ) {\n        msg.rsp = false;\n        msg.replay = true;\n\n        msg.summary.motion = 'motion is still activ';\n        node.status({ 'fill': 'red', 'text': 'motion is still activ' });\n        return msg;\n    }\n}\n\nmsg.summary.motion = 'no motion or not active';\nnode.status({ 'fill': 'green', 'text': 'no motion or not active' });\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7556,7 +7514,7 @@
         "finalize": "",
         "libs": [],
         "x": 380,
-        "y": 5600,
+        "y": 5660,
         "wires": [
             [
                 "6ad5d4d28e6f6cc7"
@@ -7569,7 +7527,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - retention",
-        "func": "/*\nretention (motion):\nOn motion trigger, update target if motion is high and target is high.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('retention')\n || msg.scene.retention === 0\n || msg.trigger.element !== 'motion'\n || msg.trigger.element === 'remote'\n || msg.iam\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\nif (msg.trigger.element === 'motion') {\n    // Target is off, stop\n    if (msg.target.value.toString() === msg.scene.off.toString()) {\n        msg.rsp = false;\n        \n        node.status({ 'fill': 'red', 'text': 'Target is off' });\n    }\n\n    // Motion is off, stop\n    else if (msg.payload === false) {\n        msg.rsp = false;\n\n        node.status({ 'fill': 'red', 'text': 'Motion is off' });\n    }\n\n    else {\n\n        node.status({ 'fill': 'green', 'text': 'Motion and target are actives' });\n    }\n}\nelse if (msg.payload === false) {\n    // Get latest values of entities\n    const entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n    // Find motion entity in scene triggers\n    for (const e in msg.scene.trigger) {\n        if (typeof entity[e] === 'object'\n        && entity[e]['hidden'] === 0\n        && entity[e]['element'] === 'motion'\n        && !!entity[e]['value']\n        ) {\n            msg.rsp = false;\n            msg.replay = true;\n\n            node.status({ 'fill': 'red', 'text': 'motion is still active' });\n            return msg;\n        }\n    }\n\n    node.status({ 'fill': 'green', 'text': 'no motion or not active' });\n}\nelse {\n\n    node.status({ 'fill': 'blue', 'text': 'bypass' });\n}\n\nreturn msg;",
+        "func": "/*\nretention (motion):\nOn motion trigger, update target if motion is high and target is high.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('retention')\n || msg.scene.retention === 0\n || msg.trigger.element !== 'motion'\n || msg.trigger.element === 'remote'\n || msg.iam\n) {\n\n    msg.summary.retention = 'bypass';\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\nif (msg.trigger.element === 'motion') {\n    // Target is off, stop\n    if (msg.target.value.toString() === msg.scene.off.toString()) {\n        msg.rsp = false;\n\n        msg.summary.retention = 'Target is off';\n        node.status({ 'fill': 'red', 'text': 'Target is off' });\n    }\n\n    // Motion is off, stop\n    else if (msg.payload === false) {\n        msg.rsp = false;\n\n        msg.summary.retention = 'Motion is off';\n        node.status({ 'fill': 'red', 'text': 'Motion is off' });\n    }\n\n    else {\n\n        msg.summary.retention = 'Motion and target are actives';\n        node.status({ 'fill': 'green', 'text': 'Motion and target are actives' });\n    }\n}\nelse if (msg.payload === false) {\n    // Get latest values of entities\n    const entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n    // Find motion entity in scene triggers\n    for (const e in msg.scene.trigger) {\n        if (typeof entity[e] === 'object'\n        && entity[e]['hidden'] === 0\n        && entity[e]['element'] === 'motion'\n        && !!entity[e]['value']\n        ) {\n            msg.rsp = false;\n            msg.replay = true;\n\n            msg.summary.retention = 'motion is still active';\n            node.status({ 'fill': 'red', 'text': 'motion is still active' });\n            return msg;\n        }\n    }\n\n    msg.summary.retention = 'no motion or not active';\n    node.status({ 'fill': 'green', 'text': 'no motion or not active' });\n}\nelse {\n\n    msg.summary.retention = 'bypass';\n    node.status({ 'fill': 'blue', 'text': 'bypass' });\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7577,7 +7535,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 5660,
+        "y": 5720,
         "wires": [
             [
                 "22388e92c457cf9d"
@@ -7590,7 +7548,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - nightlight",
-        "func": "/*\nnightlight :\nAlways set level high if it is night.\n*/\n\nnode.status({});\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('nightlight')\n || msg.scene.nightlight === 0\n || msg.iam\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\nconst sensor = global.get('entity.dknr_sensor_nycthemer.value', 'memoryOnly') || '';\nif (sensor === 'night') {\n    msg.payload = true;\n\n    node.status({ 'fill': 'green', 'text': 'nycthemer is ' + sensor });\n}\nelse {\n    msg.payload = false;\n\n    node.status({ 'fill': 'green', 'text': 'nycthemer is ' + sensor });\n}\n\nreturn msg;",
+        "func": "/*\nnightlight :\nAlways set level high if it is night.\n*/\n\nnode.status({});\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('nightlight')\n || msg.scene.nightlight === 0\n || msg.iam\n) {\n\n    msg.summary.nightlight = 'bypass';\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\nconst sensor = global.get('entity.dknr_sensor_nycthemer.value', 'memoryOnly') || '';\nif (sensor === 'night') {\n    msg.payload = true;\n\n    msg.summary.nightlight = 'nycthemer is ' + sensor;\n    node.status({ 'fill': 'green', 'text': 'nycthemer is ' + sensor });\n}\nelse {\n    msg.payload = false;\n\n    msg.summary.nightlight = 'nycthemer is ' + sensor;\n    node.status({ 'fill': 'green', 'text': 'nycthemer is ' + sensor });\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7598,7 +7556,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 5840,
+        "y": 5900,
         "wires": [
             [
                 "2e8a83fff0849513"
@@ -7611,7 +7569,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - aperture",
-        "func": "/*\naperture :\nStop routine if at least one of triggers apertures is opened.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('aperture')\n || msg.scene.aperture === 0\n || msg.trigger.element === 'remote'\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\nconst aperture = ['door', 'window', 'slider'];\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Loop through triggers to find related apertures\nfor (const e in msg.scene.trigger) {\n    // If at least one aperture is opened, stop routine\n    if (typeof entity[e] === 'object'\n     && entity[e]['hidden'] === 0\n     && aperture.includes(entity[e]['element'])\n     && entity[e]['value'] !== msg.scene['trigger'][e]['inputhigh'] // trigger input high must be set to aperture closed\n    ) {\n        msg.rsp = false;\n\n        node.status({ 'fill': 'red', 'text': 'Aperture opened' + entity[e]['element']});\n        return msg;\n    }\n}\n\nnode.status({ 'fill': 'green', 'text': 'Aperture closed' });\nreturn msg;",
+        "func": "/*\naperture :\nStop routine if at least one of triggers apertures is opened.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('aperture')\n || msg.scene.aperture === 0\n || msg.trigger.element === 'remote'\n) {\n\n    msg.summary.aperture = 'bypass';\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\nconst aperture = ['door', 'window', 'slider'];\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Loop through triggers to find related apertures\nfor (const e in msg.scene.trigger) {\n    // If at least one aperture is opened, stop routine\n    if (typeof entity[e] === 'object'\n     && entity[e]['hidden'] === 0\n     && aperture.includes(entity[e]['element'])\n     && entity[e]['value'] !== msg.scene['trigger'][e]['inputhigh'] // trigger input high must be set to aperture closed\n    ) {\n        msg.rsp = false;\n\n        msg.summary.aperture = 'Aperture opened' + entity[e]['element'];\n        node.status({ 'fill': 'red', 'text': 'Aperture opened' + entity[e]['element'] });\n        return msg;\n    }\n}\n\nmsg.summary.aperture = 'Aperture closed';\nnode.status({ 'fill': 'green', 'text': 'Aperture closed' });\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7619,7 +7577,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 5720,
+        "y": 5780,
         "wires": [
             [
                 "bbe2bb02375537d4"
@@ -7632,7 +7590,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine value",
-        "func": "/*\nvalue:\nParse target value according to previous routines.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\nconst old_value = msg.target.value;\nconst high = ['on', 'high'];\nconst low = ['off', 'low'];\n\n// Check if a mode as same name as scene, and if its level is high or low (value)\nconst sensor = global.get('entity.dknr_sensor_' + msg.target.element + '.value', 'memoryOnly') || '-';\n\nif (['rb', 'b'].includes(msg.target.unit) || (!high.includes(sensor) && !low.includes(sensor))) {\n    msg.target.value = msg.payload === true ? msg.scene.on : msg.scene.off;\n\n} else {\n    if (msg.payload === true) {\n        // Openwork\n        if (msg.trigger.element === 'illuminance' && msg.scene.openwork > 1){\n            msg.target.value = Number(msg.scene.openwork)\n        }\n        // Dimmer on level\n        else if (high.includes(sensor)) {\n            msg.target.value = msg.scene.high;\n        }\n        //Dimmer off level\n        else if (low.includes(sensor)) {\n            msg.target.value = msg.scene.low;\n        }\n        // Normal on\n        else {\n            msg.target.value = msg.scene.on;\n        }\n    }\n    else if (msg.payload === false) {\n        // Normal off\n        msg.target.value = msg.scene.off;\n    }\n}\n\nif (msg.rsp === false) {\n\n    node.status({ 'fill': 'red', 'text': 'unmatch: ' + msg.target.value });\n}\nelse if (msg.target.value === old_value) {\n    if (msg.replay === true) {\n        msg.rsp = true;\n\n        node.status({ 'fill': 'red', 'text': 'replay: ' + msg.target.value });\n    }\n    else {\n        msg.rsp = false;\n\n        node.status({ 'fill': 'red', 'text': 'unchange: ' + msg.target.value });\n    }\n}\nelse {\n\n    node.status({ 'fill': 'green', 'text': 'new value: ' + msg.target.value });\n}\n\nreturn msg;",
+        "func": "/*\nvalue:\nParse target value according to previous routines.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\nconst old_value = msg.target.value;\nconst high = ['on', 'high'];\nconst low = ['off', 'low'];\n\n// Check if a mode as same name as scene, and if its level is high or low (value)\nconst sensor = global.get('entity.dknr_sensor_' + msg.target.element + '.value', 'memoryOnly') || '-';\n\nif (['rb', 'b'].includes(msg.target.unit) || (!high.includes(sensor) && !low.includes(sensor))) {\n    msg.target.value = msg.payload === true ? msg.scene.on : msg.scene.off;\n\n} else {\n    if (msg.payload === true) {\n        // Openwork\n        if (msg.trigger.element === 'illuminance' && msg.scene.openwork > 1){\n            msg.target.value = Number(msg.scene.openwork)\n        }\n        // Dimmer on level\n        else if (high.includes(sensor)) {\n            msg.target.value = msg.scene.high;\n        }\n        //Dimmer off level\n        else if (low.includes(sensor)) {\n            msg.target.value = msg.scene.low;\n        }\n        // Normal on\n        else {\n            msg.target.value = msg.scene.on;\n        }\n    }\n    else if (msg.payload === false) {\n        // Normal off\n        msg.target.value = msg.scene.off;\n    }\n}\n\nif (msg.rsp === false) {\n\n    msg.summary.value = 'unmatch: ' + msg.target.value;\n    node.status({ 'fill': 'red', 'text': 'unmatch: ' + msg.target.value });\n}\nelse if (msg.target.value === old_value) {\n    if (msg.replay === true) {\n        msg.rsp = true;\n\n        msg.summary.value = 'replay: ' + msg.target.value;\n        node.status({ 'fill': 'red', 'text': 'replay: ' + msg.target.value });\n    }\n    else {\n        msg.rsp = false;\n\n        msg.summary.value = 'unchange: ' + msg.target.value;\n        node.status({ 'fill': 'red', 'text': 'unchange: ' + msg.target.value });\n    }\n}\nelse {\n\n    msg.summary.value = 'new value: ' + msg.target.value;\n    node.status({ 'fill': 'green', 'text': 'new value: ' + msg.target.value });\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7640,7 +7598,7 @@
         "finalize": "",
         "libs": [],
         "x": 370,
-        "y": 6020,
+        "y": 6080,
         "wires": [
             [
                 "75f2b6a4ccf3147a"
@@ -7653,7 +7611,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - daily",
-        "func": "/*\ndaily:\nStop routine if target high level is allready done today.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('daily')\n || msg.scene.daily === 0\n || msg.trigger.element === 'remote'\n || msg.target.value !== msg.scene.on\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\nif (msg.scene.today === 1) {\n    msg.rsp = false;\n\n    node.status({ 'fill': 'red', 'text': 'scene is excuted today' });\n} else {\n    const scene = { ...(global.get('scene', 'memoryOnly') || {}) };\n    scene[msg.scene.target]['today'] = 1;\n    global.set('scene', scene, 'memoryOnly');\n\n    node.status({ 'fill': 'green', 'text': 'scene is not executed today' });\n}\n\nreturn msg;",
+        "func": "/*\ndaily:\nStop routine if target high level is allready done today.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('daily')\n || msg.scene.daily === 0\n || msg.trigger.element === 'remote'\n || msg.target.value !== msg.scene.on // from \"routine - value\"\n) {\n\n    msg.summary.daily = 'bypass';\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\nif (msg.scene.today === 1) {\n    msg.rsp = false;\n\n    msg.summary.daily = 'scene is excuted today';\n    node.status({ 'fill': 'red', 'text': 'scene is excuted today' });\n} else {\n    const scene = { ...(global.get('scene', 'memoryOnly') || {}) };\n    scene[msg.scene.target]['today'] = 1;\n    global.set('scene', scene, 'memoryOnly');\n\n    msg.summary.daily = 'scene is not executed today';\n    node.status({ 'fill': 'green', 'text': 'scene is not executed today' });\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7661,7 +7619,7 @@
         "finalize": "",
         "libs": [],
         "x": 380,
-        "y": 6080,
+        "y": 6140,
         "wires": [
             [
                 "0bf8d5a3edf7096a"
@@ -7674,7 +7632,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - duration",
-        "func": "/*\nduration:\nUpdate timer if routines response is true.\n*/\n\nnode.status({});\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// If duration is not set, do not take car of this routine\nif (!msg.routines.includes('duration')\n || msg.scene.duration === 0\n) {\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n\n    return msg;\n}\n\nconst scene = { ...(global.get('scene', 'memoryOnly') || {}) };\nscene[msg.target.uid]['timer'] = msg.payload === false ? 0 : (new Date()).getTime();\nglobal.set('scene', scene, 'memoryOnly');\n\nnode.status({ 'fill': 'green', 'text': 'timer is ' + (msg.payload ? 'on' : 'off') });\n\nreturn msg;",
+        "func": "/*\nduration:\nUpdate timer if routines response is true.\n*/\n\nnode.status({});\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// If duration is not set, do not take car of this routine\nif (!msg.routines.includes('duration')\n || msg.scene.duration === 0\n) {\n    msg.summary.duration = 'bypass';\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n\n    return msg;\n}\n\nconst scene = { ...(global.get('scene', 'memoryOnly') || {}) };\nscene[msg.target.uid]['timer'] = msg.payload === false ? 0 : (new Date()).getTime();\nglobal.set('scene', scene, 'memoryOnly');\n\nmsg.summary.duration = 'timer is ' + (msg.payload ? 'on' : 'off');\nnode.status({ 'fill': 'green', 'text': 'timer is ' + (msg.payload ? 'on' : 'off') });\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7682,10 +7640,11 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 6140,
+        "y": 6200,
         "wires": [
             [
-                "5075e5842b20c135"
+                "5075e5842b20c135",
+                "0ff19681841951f6"
             ]
         ]
     },
@@ -7704,7 +7663,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 610,
-        "y": 6320,
+        "y": 6380,
         "wires": []
     },
     {
@@ -7721,7 +7680,7 @@
         "finalize": "",
         "libs": [],
         "x": 550,
-        "y": 6200,
+        "y": 6260,
         "wires": [
             [
                 "e5777951d9eac0fa"
@@ -7739,7 +7698,7 @@
             "cc0a7c14f877c371"
         ],
         "x": 675,
-        "y": 6200,
+        "y": 6260,
         "wires": []
     },
     {
@@ -7753,7 +7712,7 @@
             "c6d0d480067b06fa"
         ],
         "x": 675,
-        "y": 6260,
+        "y": 6320,
         "wires": []
     },
     {
@@ -7770,7 +7729,7 @@
         "finalize": "",
         "libs": [],
         "x": 550,
-        "y": 6260,
+        "y": 6320,
         "wires": [
             [
                 "38a611ec8e34d6a9"
@@ -7783,7 +7742,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - rsp",
-        "func": "node.status({fill: msg.rsp ? 'green' : 'red', text: msg.target.element + ' : ' + msg.trigger.uid + ' => ' + msg.target.uid + ' = ' + msg.target.value });\n\nif (msg.rsp) {\n    return msg;\n}\n\nreturn;",
+        "func": "msg.summary.rsp = msg.target.element + ' : ' + msg.trigger.uid + ' => ' + msg.target.uid + ' = ' + msg.target.value;\nnode.status({fill: msg.rsp ? 'green' : 'red', 'text': msg.target.element + ' : ' + msg.trigger.uid + ' => ' + msg.target.uid + ' = ' + msg.target.value });\n\nif (msg.rsp) {\n    return msg;\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7791,7 +7750,7 @@
         "finalize": "",
         "libs": [],
         "x": 370,
-        "y": 6200,
+        "y": 6260,
         "wires": [
             [
                 "09fd5ad00fb1ea56",
@@ -7823,7 +7782,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 190,
-        "y": 4940,
+        "y": 5000,
         "wires": [
             [
                 "57c508c99d2cdcad"
@@ -7849,7 +7808,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 610,
-        "y": 4880,
+        "y": 4940,
         "wires": [
             [
                 "13781a89a231ad0c"
@@ -7862,7 +7821,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - enabled",
-        "func": "/*\nenabled (preroutine) : \nStop routine if scene is disabled.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\nif (msg.scene.enabled === 1) {\n\n    node.status({ 'fill': 'green', 'text': 'scene is enabled' });\n} else {\n    msg.rsp = false;\n\n    node.status({ 'fill': 'red', 'text': 'scene is disabled' });\n}\n\nreturn msg;",
+        "func": "/*\nenabled (preroutine) : \nStop routine if scene is disabled.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\nif (msg.scene.enabled === 1) {\n\n    msg.summary.enabled = 'scene is enabled';\n    node.status({ 'fill': 'green', 'text': 'scene is enabled' });\n} else {\n    msg.rsp = false;\n\n    msg.summary.enabled = 'scene is disabled';\n    node.status({ 'fill': 'red', 'text': 'scene is disabled' });\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7870,7 +7829,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 5180,
+        "y": 5240,
         "wires": [
             [
                 "721e748c243fdd56"
@@ -7891,7 +7850,7 @@
         "finalize": "",
         "libs": [],
         "x": 370,
-        "y": 4940,
+        "y": 5000,
         "wires": [
             [
                 "47c5bf82adab9184"
@@ -7904,7 +7863,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - tariff",
-        "func": "/*\ntariff :\nSet target to low level if scene trigger \"tariff\" is low level.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('tariff')\n || msg.scene.tariff === 0\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Loop through triggers to find related tariff entity\nfor (const e in msg.scene.trigger) {\n\n    if (typeof entity[e] === 'object'\n     && entity[e]['hidden'] === 0\n     && entity[e]['element'] === \"tariff\"\n    ) {\n        if (entity[e]['value'] === msg.scene['trigger'][e]['inputlow'] && msg.target.value !== msg.scene.off) {\n            msg.payload = false;\n\n            node.status({ 'fill': 'red', 'text': 'tariff is ' + entity[e]['value'] });\n            return msg;\n        } else {\n\n            node.status({ 'fill': 'green', 'text': 'tariff is ' + entity[e]['value'] });\n            return msg;\n        }\n    }\n}\n\nnode.status({ 'fill': 'blue', 'text': 'tariff not found' });\n\nreturn msg;",
+        "func": "/*\ntariff :\nSet target to low level if scene trigger \"tariff\" is low level.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('tariff')\n || msg.scene.tariff === 0\n) {\n\n    msg.summary.tariff = 'bypass';\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Loop through triggers to find related tariff entity\nfor (const e in msg.scene.trigger) {\n\n    if (typeof entity[e] === 'object'\n     && entity[e]['hidden'] === 0\n     && entity[e]['element'] === \"tariff\"\n    ) {\n        if (entity[e]['value'] === msg.scene['trigger'][e]['inputlow'] && msg.target.value !== msg.scene.off) {\n            msg.payload = false;\n\n            msg.summary.tariff = 'false as tariff is ' + entity[e]['value'];\n            node.status({ 'fill': 'red', 'text': 'false as tariff is ' + entity[e]['value'] });\n            return msg;\n        } else {\n\n            msg.summary.tariff = 'tariff is ' + entity[e]['value'];\n            node.status({ 'fill': 'green', 'text': 'tariff is ' + entity[e]['value'] });\n            return msg;\n        }\n    }\n}\n\nmsg.summary.tariff = 'tariff not found';\nnode.status({ 'fill': 'blue', 'text': 'tariff not found' });\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7912,7 +7871,7 @@
         "finalize": "",
         "libs": [],
         "x": 370,
-        "y": 5900,
+        "y": 5960,
         "wires": [
             [
                 "7dcf708ffe2256a9"
@@ -7925,16 +7884,19 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - power",
-        "func": "/*\npower :\nSet target to low level if scene trigger \"power\" is low level. (check twice)\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('power')\n || msg.scene.power === 0\n) {\n\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Loop through triggers to find related tariff entity\nfor (const e in msg.scene.trigger) {\n\n    if (typeof entity[e] === 'object'\n     && entity[e]['hidden'] === 0\n     && entity[e]['element'] === \"power\"\n    ) {\n        if (entity[e]['value'] === msg.scene['trigger'][e]['inputlow'] && msg.target.value !== msg.scene.off) {\n            // Wait 5s and rechck entity\n            await new Promise(resolve => setTimeout(resolve, 5000));\n            // still low\n            if (global.get('entity[\"' + e + '\"][\"value\"]', 'memoryOnly') === msg.scene['trigger'][e]['inputlow']) {\n                msg.payload = false;\n\n                node.status({ 'fill': 'red', 'text': 'power is low' });\n                return msg;\n            }\n        }\n    }\n}\n\nnode.status({ 'fill': 'blue', 'text': 'power not found or still activ' });\n\nreturn msg;",
-        "outputs": 1,
+        "func": "/*\npower :\nSet target to low level if scene trigger \"power\" is low level. (check twice)\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    node.send([null, msg]);\n}\n\n// Exceptions\nif (!msg.routines.includes('power')\n || msg.scene.power === 0\n || msg.target.value === msg.scene.off\n) {\n\n    msg.summary.power = 'bypass';\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    node.send([null, msg]);\n}\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Loop through triggers to find related power entity\nfor (const e in msg.scene.trigger) {\n\n    if (typeof entity[e] === 'object'\n     && entity[e]['hidden'] === 0\n     && entity[e]['element'] === \"power\"\n    ) {\n        if (entity[e]['value'] === msg.scene['trigger'][e]['inputlow'] ) {\n            msg.e = e;\n            node.send([msg, null]);\n\n            delete msg.e;\n            msg.rsp = false\n\n            msg.summary.power = 'power is low, waiting for 10 s';\n            node.status({ 'fill': 'red', 'text': 'power is low, waiting for 10 s' });\n            node.send([null, msg]);\n            return;\n/*\n            // Wait 5s and rechck entity\n            await new Promise(resolve => setTimeout(resolve, 10000));\n            // still low\n            if (global.get('entity[\"' + e + '\"][\"value\"]', 'memoryOnly') === msg.scene['trigger'][e]['inputlow']) {\n                msg.payload = false;\n\n                msg.summary.power = 'power is low';\n                node.status({ 'fill': 'red', 'text': 'power is low' });\n                return msg;\n            }\n*/\n        }\n    }\n}\n\nmsg.summary.power = 'power not found or still activ';\nnode.status({ 'fill': 'blue', 'text': 'power not found or still activ' });\nnode.send([null, msg]);\n\nreturn;",
+        "outputs": 2,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 380,
-        "y": 5960,
+        "y": 6020,
         "wires": [
+            [
+                "40c1abe753f89c56"
+            ],
             [
                 "da627346767980a2"
             ]
@@ -7959,7 +7921,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 610,
-        "y": 4940,
+        "y": 5000,
         "wires": [
             [
                 "13781a89a231ad0c"
@@ -7985,7 +7947,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 790,
-        "y": 5000,
+        "y": 5060,
         "wires": [
             [
                 "b2bbbed3eff36c5e"
@@ -8036,7 +7998,7 @@
         "finalize": "",
         "libs": [],
         "x": 380,
-        "y": 4880,
+        "y": 4940,
         "wires": []
     },
     {
@@ -8045,7 +8007,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - trigger",
-        "func": "/*\ntrigger (preroutine) : \nSimply show trigger uid on this admin dashboard node.\n*/\n\nnode.status({ 'fill': 'green', 'text': msg.trigger.uid })\n\nreturn msg;",
+        "func": "/*\ntrigger (preroutine) : \nSimply show trigger uid on this admin dashboard node.\n*/\n\nmsg.summary.trigger = msg.trigger.uid;\nnode.status({ 'fill': 'green', 'text': msg.trigger.uid })\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -8053,10 +8015,252 @@
         "finalize": "",
         "libs": [],
         "x": 380,
-        "y": 5060,
+        "y": 5120,
         "wires": [
             [
                 "d5fab7943a3e6f71"
+            ]
+        ]
+    },
+    {
+        "id": "5bbb992212cbedd1",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "c2f0711b621df28f",
+        "name": "common - mqtt - rfxcom2mqtt",
+        "links": [
+            "92c098c716e46e3b",
+            "f2cd63b49ac325ec"
+        ],
+        "x": 145,
+        "y": 3980,
+        "wires": [
+            [
+                "be7d1f37913582e7"
+            ]
+        ]
+    },
+    {
+        "id": "68c4a05370085e3e",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "4350d3ede367f1ca",
+        "name": "common - mqtt - zwave",
+        "links": [
+            "92c098c716e46e3b",
+            "f2cd63b49ac325ec"
+        ],
+        "x": 145,
+        "y": 3740,
+        "wires": [
+            [
+                "e9bbb6c6378abf81"
+            ]
+        ]
+    },
+    {
+        "id": "0d364f8869406041",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "42c8cfb80db1c77e",
+        "name": "common - mqtt - zigbee2mqtt",
+        "links": [
+            "92c098c716e46e3b",
+            "f2cd63b49ac325ec"
+        ],
+        "x": 145,
+        "y": 3500,
+        "wires": [
+            [
+                "3ef7839a35b0f5f1"
+            ]
+        ]
+    },
+    {
+        "id": "ca0816fa69729bee",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "89ac7be96aabaa70",
+        "name": "common - mqtt - daikin",
+        "links": [
+            "92c098c716e46e3b",
+            "f2cd63b49ac325ec"
+        ],
+        "x": 145,
+        "y": 3260,
+        "wires": [
+            [
+                "8f0b88d6a682a1e4"
+            ]
+        ]
+    },
+    {
+        "id": "2b0dce043fcbd8b3",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "3db71c2c17730bd8",
+        "name": "common - lqtt - apsystems",
+        "links": [
+            "92c098c716e46e3b",
+            "f2cd63b49ac325ec"
+        ],
+        "x": 145,
+        "y": 3020,
+        "wires": [
+            [
+                "c6c1765c8ced2f28"
+            ]
+        ]
+    },
+    {
+        "id": "36eabfdcb75b1aa3",
+        "type": "debug",
+        "z": "4bc72a1112cb448c",
+        "g": "bcc6f36c217d1643",
+        "name": "common - boot",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3140,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "0ff19681841951f6",
+        "type": "switch",
+        "z": "4bc72a1112cb448c",
+        "g": "6c942117c5c5ebe1",
+        "name": "",
+        "property": "target.uid",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "zigbee_Cave_Ballon_state",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 720,
+        "y": 5300,
+        "wires": [
+            [
+                "52f9bd91e4b55341"
+            ]
+        ]
+    },
+    {
+        "id": "52f9bd91e4b55341",
+        "type": "debug",
+        "z": "4bc72a1112cb448c",
+        "g": "6c942117c5c5ebe1",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 5360,
+        "wires": []
+    },
+    {
+        "id": "a6888fda5f177703",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "6c942117c5c5ebe1",
+        "name": "common - scene - reset",
+        "links": [
+            "e0794c54615c6774"
+        ],
+        "x": 145,
+        "y": 4940,
+        "wires": [
+            [
+                "a4c84ddaf232432c"
+            ]
+        ]
+    },
+    {
+        "id": "176e6b395a7de8e8",
+        "type": "delay",
+        "z": "4bc72a1112cb448c",
+        "g": "6c942117c5c5ebe1",
+        "name": "1/10s/t",
+        "pauseType": "queue",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 730,
+        "y": 6020,
+        "wires": [
+            [
+                "96cc723fc51b1198"
+            ]
+        ]
+    },
+    {
+        "id": "96cc723fc51b1198",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "6c942117c5c5ebe1",
+        "name": "routine - power wait",
+        "func": "node.status({ });\n\n// Still low\nif (global.get('entity[\"' + msg.e + '\"][\"value\"]', 'memoryOnly') === msg.scene['trigger'][msg.e]['inputlow']) {\n    msg.payload = false;\n\n    msg.summary.power = 'power is low, set target to low level';\n    node.status({ 'fill': 'green', 'text': 'power is low, set target to low level' });\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 6020,
+        "wires": [
+            [
+                "da627346767980a2"
+            ]
+        ]
+    },
+    {
+        "id": "40c1abe753f89c56",
+        "type": "delay",
+        "z": "4bc72a1112cb448c",
+        "g": "6c942117c5c5ebe1",
+        "name": "10s",
+        "pauseType": "delay",
+        "timeout": "10",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 570,
+        "y": 6020,
+        "wires": [
+            [
+                "176e6b395a7de8e8"
             ]
         ]
     },
@@ -13573,7 +13777,7 @@
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "name": "data",
-        "func": "node.status({ 'text': '' });\n\n// Hide page elements\nif (!msg.enabled) {\n\n    return msg;\n}\n\n// Get form\nconst form = { ...(global.get('form', 'memoryOnly') || {}) };\nif (typeof form[msg.hmi.id]['scene']['triggeradd'] !== 'object') {\n\n    return;\n}\n\n// Shortcut\nlet current = form[msg.hmi.id]['scene']['triggeradd']; // Shortcut\nif (typeof current.target !== 'string' ||\n    current.target === '' ||\n    typeof current.trigger !== 'string' ||\n    current.trigger === ''\n) {\n\n    return;\n}\n\n// Get detail\nconst scene = { ...(global.get('scene[\"' + current.target + '\"]', 'memoryOnly') || {}) };\nconst target = { ...(global.get('entity[\"' + current.target + '\"]', 'memoryOnly') || {}) };\nconst trigger = { ...(global.get('entity[\"' + current.trigger + '\"]', 'memoryOnly') || {}) };\nconst update = typeof scene['trigger'] === 'object' && typeof scene['trigger'][current.trigger] === 'object' ? true : false;\n\n// Update from\nif (update) {\n    current = { ...current, ...scene['trigger'][current.trigger] };\n}\nform[msg.hmi.id]['scene']['triggeradd'] = current;\n\nglobal.set('form', form, 'memoryOnly');\n\n// Prepare next form elements\nmsg.payload = '';\nmsg.form = current;\nmsg.scene = scene;\nmsg.target = target;\nmsg.trigger = trigger\nmsg.update = update;\n\nnode.status({text: msg.update ? 'update' : 'add'});\n\nreturn msg;",
+        "func": "node.status({ 'text': '' });\n\n// Hide page elements\nif (!msg.enabled) {\n\n    return msg;\n}\n\n// Get form\nconst form = { ...(global.get('form', 'memoryOnly') || {}) };\nif (typeof form[msg.hmi.id]['scene']['triggeradd'] !== 'object') {\n\n    return;\n}\n\n// Shortcut\nlet current = form[msg.hmi.id]['scene']['triggeradd']; // Shortcut\nif (typeof current.target !== 'string' ||\n    current.target === '' ||\n    typeof current.trigger !== 'string' ||\n    current.trigger === ''\n) {\n\n    return;\n}\n\n// Get detail\nconst scene = { ...(global.get('scene[\"' + current.target + '\"]', 'memoryOnly') || {}) };\nconst target = { ...(global.get('entity[\"' + current.target + '\"]', 'memoryOnly') || {}) };\nconst trigger = { ...(global.get('entity[\"' + current.trigger + '\"]', 'memoryOnly') || {}) };\nconst update = typeof scene['trigger'] === 'object' && typeof scene['trigger'][current.trigger] === 'object' ? true : false;\n\n// Update form\nif (update) {\n    current = { ...current, ...scene['trigger'][current.trigger] };\n}\nform[msg.hmi.id]['scene']['triggeradd'] = current;\n\nglobal.set('form', form, 'memoryOnly');\n\n// Prepare next form elements\nmsg.payload = '';\nmsg.form = current;\nmsg.scene = scene;\nmsg.target = target;\nmsg.trigger = trigger\nmsg.update = update;\n\nnode.status({text: msg.update ? 'update' : 'add'});\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -15111,7 +15315,7 @@
         "z": "56c0b44ca387382c",
         "g": "82df6aae63bd1422",
         "name": "data",
-        "func": "node.status({ 'text': '' });\n\n// Check form fields\nconst loop = msg.payload.loop;\nconst e = msg.payload.target || '';\nconst t = msg.payload.trigger || '';\nif (e === '' || t === '') {\n    node.status({ 'fill': 'red','text': 'field' });\n\n    return;\n}\n\nif (msg.action == 'button_click' && msg.column === 'delete') {\n\n    // Get scenes\n    const scene = { ...(global.get('scene', 'memoryOnly') || {}) };\n\n    // Delete scene trigger\n    delete scene[e]['trigger'][t];\n\n    //Save scenes\n    global.set('scene', scene, 'memoryOnly');\n\n    // Notice\n    msg.enabled = true;\n    msg.payload = msg.dictionary.scene.triggerlist_delete_success || 'Successfully deleted';\n\n    node.send([msg, null, null]);\n\n    await new Promise(resolve => setTimeout(resolve, 150));\n\n    // Refresh\n    msg.payload = '';\n    msg.scene = loop;\n\n    node.send([null, msg, null]);\n\n}\nelse if (msg.action === 'row_click') {\n    // Get form\n    const form = { ...(global.get('form', 'memoryOnly') || {}) };\n    if (typeof form[msg.hmi.id]['scene']['triggeradd'] !== 'object') {\n        node.status({ 'fill': 'red', 'text': 'form' });\n\n        return;\n    }\n\n    // Update trigger form\n    form[msg.hmi.id]['scene']['triggeradd'] = {\n        'target': e,\n        'trigger': t\n    }\n\n    // Save form\n    global.set('form', form, 'memoryOnly');\n\n    // Prepare next form\n    msg.class = '';\n    msg.enabled = true;\n    msg.payload = '';\n\n    node.send([null, null, msg]);\n}\nelse {\n    node.status({ 'fill': 'red', 'text': 'action' });\n\n    return;\n}\n\nnode.status({ 'fill': 'green', 'text': e + ' / ' + t });\n\nreturn;",
+        "func": "node.status({ 'text': '' });\n\n// Check form fields\nconst loop = msg.payload.loop;\nconst e = msg.payload.target || '';\nconst t = msg.payload.trigger || '';\nif (e === '' || t === '') {\n    node.status({ 'fill': 'red','text': 'field' });\n\n    return;\n}\n\nif (msg.action == 'button_click' && msg.column === 'delete') {\n\n    // Get scenes\n    const scene = { ...(global.get('scene', 'memoryOnly') || {}) };\n\n    // Delete scene trigger\n    delete scene[e]['trigger'][t];\n\n    //Save scenes\n    global.set('scene', scene, 'memoryOnly');\n\n    // Notice\n    msg.enabled = true;\n    msg.payload = msg.dictionary.scene.triggerlist_delete_success || 'Successfully deleted';\n    \n    await new Promise(resolve => setTimeout(resolve, 150));\n\n    node.send([msg, null, null]);\n\n\n    // Refresh\n    msg.payload = '';\n    msg.scene = loop;\n\n    node.send([null, msg, null]);\n\n}\nelse if (msg.action === 'row_click') {\n    // Get form\n    const form = { ...(global.get('form', 'memoryOnly') || {}) };\n    if (typeof form[msg.hmi.id]['scene']['triggeradd'] !== 'object') {\n        node.status({ 'fill': 'red', 'text': 'form' });\n\n        return;\n    }\n\n    // Update trigger form\n    form[msg.hmi.id]['scene']['triggeradd'] = {\n        'target': e,\n        'trigger': t\n    }\n\n    // Save form\n    global.set('form', form, 'memoryOnly');\n\n    // Prepare next form\n    msg.class = '';\n    msg.enabled = true;\n    msg.payload = '';\n\n    node.send([null, null, msg]);\n}\nelse {\n    node.status({ 'fill': 'red', 'text': 'action' });\n\n    return;\n}\n\nnode.status({ 'fill': 'green', 'text': e + ' / ' + t });\n\nreturn;",
         "outputs": 3,
         "timeout": 0,
         "noerr": 0,
@@ -15271,7 +15475,7 @@
         "z": "56c0b44ca387382c",
         "g": "82df6aae63bd1422",
         "name": "data",
-        "func": "node.status({ 'text': '' });\n\n// Get form\nconst form = { ...(global.get('form', 'memoryOnly') || {}) };\n\n// Check form fields\nconst e = msg.scene.target || '';\nif (e === '') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\n\n// Update trigger form\nform[msg.hmi.id]['scene']['triggeradd'] = {\n    'target': e,\n    'trigger': ''\n}\n\n// Save form\nglobal.set('from', form, 'memoryOnly');\n\nnode.status({ 'fill': 'green', 'text': e });\n\nreturn msg;",
+        "func": "node.status({ 'text': '' });\n\n// Get form\nconst form = { ...(global.get('form', 'memoryOnly') || {}) };\n\n// Check form fields\nconst e = msg.scene.target || '';\nif (e === '') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\n\n// Update trigger form\nform[msg.hmi.id]['scene']['triggeradd'] = {\n    'target': e,\n    'trigger': ''\n}\n\n// Save form\nglobal.set('form', form, 'memoryOnly');\n\nnode.status({ 'fill': 'green', 'text': e });\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -15603,7 +15807,6 @@
         "g": "c378c7e8b391f73b",
         "name": "scene - eventlist - log",
         "links": [
-            "6c031b4f4fd87bac",
             "38a611ec8e34d6a9"
         ],
         "x": 145,
@@ -16283,8 +16486,7 @@
         "links": [
             "ad848617eded124c",
             "c6104f486096a92f",
-            "52a5b6f988f1d10a",
-            "e72cadfd86356f01"
+            "52a5b6f988f1d10a"
         ],
         "x": 635,
         "y": 140,
@@ -18014,7 +18216,8 @@
         "mode": "link",
         "links": [
             "df19be1275e79b1c",
-            "0faf68b39e3ca1d8"
+            "0faf68b39e3ca1d8",
+            "22138aef9be04d5a"
         ],
         "x": 635,
         "y": 140,
@@ -18200,14 +18403,18 @@
         "name": "config - mqtt",
         "mode": "link",
         "links": [
-            "3fa36de74a10eac1",
-            "df19be1275e79b1c",
-            "4418090c31b190b3",
-            "9d2be55b974f961e",
             "1a8726b2de605ecb",
             "344c6f9b1cdd2cc1",
+            "3fa36de74a10eac1",
+            "4418090c31b190b3",
+            "5bbb992212cbedd1",
             "6a90a7dc8131bd16",
-            "cbfdc74d983213d0"
+            "9d2be55b974f961e",
+            "df19be1275e79b1c",
+            "68c4a05370085e3e",
+            "0d364f8869406041",
+            "ca0816fa69729bee",
+            "2b0dce043fcbd8b3"
         ],
         "x": 1455,
         "y": 260,
@@ -18593,6 +18800,145 @@
         ],
         "x": 1355,
         "y": 560,
+        "wires": []
+    },
+    {
+        "id": "22138aef9be04d5a",
+        "type": "link in",
+        "z": "d90937c9d5b88b24",
+        "g": "dbf81e22acbbc881",
+        "name": "config - various",
+        "links": [
+            "fa8da6e72a733b2f"
+        ],
+        "x": 145,
+        "y": 740,
+        "wires": [
+            [
+                "3c781a086eedf51a"
+            ]
+        ]
+    },
+    {
+        "id": "3c781a086eedf51a",
+        "type": "link call",
+        "z": "d90937c9d5b88b24",
+        "g": "dbf81e22acbbc881",
+        "name": "",
+        "links": [
+            "5a1d16fa45e115fa"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 320,
+        "y": 740,
+        "wires": [
+            [
+                "72c3dca9c2eb40f4"
+            ]
+        ]
+    },
+    {
+        "id": "27e1d29ece95b47d",
+        "type": "ui-text",
+        "z": "d90937c9d5b88b24",
+        "g": "dbf81e22acbbc881",
+        "group": "c9a255e77cf5a886",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "config - vairous - title",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "ui-title",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 740,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "72c3dca9c2eb40f4",
+        "type": "function",
+        "z": "d90937c9d5b88b24",
+        "g": "dbf81e22acbbc881",
+        "name": "data",
+        "func": "if (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\n\nmsg.payload = msg.dictionary.config.various_title || 'Various';\nmsg.ui_update = {\n    'label': ''\n};\nnode.send([msg, null]);\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.config.various_resetdaily || 'Reset daily routines'\n};\nnode.send([null, msg]);\n\nreturn;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 740,
+        "wires": [
+            [
+                "27e1d29ece95b47d"
+            ],
+            [
+                "ac351119ddd3d758"
+            ]
+        ]
+    },
+    {
+        "id": "ac351119ddd3d758",
+        "type": "ui-button",
+        "z": "d90937c9d5b88b24",
+        "g": "dbf81e22acbbc881",
+        "group": "c9a255e77cf5a886",
+        "name": "config - various - reset daily",
+        "label": "",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 760,
+        "y": 740,
+        "wires": [
+            [
+                "e0794c54615c6774"
+            ]
+        ]
+    },
+    {
+        "id": "e0794c54615c6774",
+        "type": "link out",
+        "z": "d90937c9d5b88b24",
+        "g": "dbf81e22acbbc881",
+        "name": "link out 2",
+        "mode": "link",
+        "links": [
+            "a6888fda5f177703"
+        ],
+        "x": 955,
+        "y": 740,
         "wires": []
     },
     {
