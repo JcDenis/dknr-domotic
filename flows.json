@@ -970,7 +970,7 @@
         ],
         "x": 104,
         "y": 219,
-        "w": 1402,
+        "w": 1392,
         "h": 142
     },
     {
@@ -1189,7 +1189,8 @@
             "7aba25c7ca11c967",
             "d5f0398700283618",
             "2a8ab3813bd1eab3",
-            "36eabfdcb75b1aa3"
+            "36eabfdcb75b1aa3",
+            "2c505f2fa6af909e"
         ],
         "x": 94,
         "y": 39,
@@ -1817,6 +1818,54 @@
         "h": 202
     },
     {
+        "id": "2858d8e23dbbc969",
+        "type": "group",
+        "z": "3d7897ba0ee14173",
+        "name": "entity - energy",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "3790dfc240bc5f6d",
+            "d856c1f2126cfe8d",
+            "96cc3da1f3e135dd",
+            "088f2fca643818c2",
+            "453a5521de9c43f0",
+            "9d9be3102bf89bf0",
+            "cc446bb513a039e3",
+            "20c33d6d50aa3ee3"
+        ],
+        "x": 104,
+        "y": 2099,
+        "w": 1252,
+        "h": 142
+    },
+    {
+        "id": "8aae9bef01ec071c",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "name": "common - energy",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "cdcf8ab31b9723f0",
+            "ce30409f0eac0e23",
+            "f39bab3566c6a359",
+            "3ed6069e981aef21",
+            "3bd9259bd9a1de62",
+            "45cf0be2427364c5"
+        ],
+        "x": 104,
+        "y": 4839,
+        "w": 822,
+        "h": 142
+    },
+    {
         "id": "df7710b4b2c4e55b",
         "type": "ui-base",
         "name": "Tableau de bord",
@@ -1997,7 +2046,7 @@
         "page": "ba855b55e831d2b6",
         "width": 6,
         "height": 1,
-        "order": 1,
+        "order": 2,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -2306,7 +2355,7 @@
         "page": "2b12391aa314ef62",
         "width": 6,
         "height": 1,
-        "order": 3,
+        "order": 4,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -2320,7 +2369,7 @@
         "page": "2b12391aa314ef62",
         "width": "6",
         "height": 1,
-        "order": 4,
+        "order": 5,
         "showTitle": false,
         "className": "",
         "visible": "false",
@@ -2334,7 +2383,7 @@
         "page": "2b12391aa314ef62",
         "width": 6,
         "height": 1,
-        "order": 5,
+        "order": 6,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -2610,6 +2659,34 @@
         "sessionExpiry": ""
     },
     {
+        "id": "a6601e1fe5c357e9",
+        "type": "ui-group",
+        "name": "entity - energy - group",
+        "page": "2b12391aa314ef62",
+        "width": 6,
+        "height": 1,
+        "order": 3,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "f871c246adaba03b",
+        "type": "ui-group",
+        "name": "home - energy - group",
+        "page": "ba855b55e831d2b6",
+        "width": 6,
+        "height": "4",
+        "order": 1,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
         "id": "025edbd02daf82d0",
         "type": "http response",
         "z": "4bc72a1112cb448c",
@@ -2697,7 +2774,8 @@
             "f32e8939b64dd232",
             "80e3952b8f56d1da",
             "d269bc78686a5a01",
-            "02d1069a252bcc78"
+            "02d1069a252bcc78",
+            "20c33d6d50aa3ee3"
         ],
         "x": 145,
         "y": 920,
@@ -2759,7 +2837,6 @@
             "7179cc22cb3792c0",
             "ab17703b4908cbf8",
             "4418090c31b190b3",
-            "d3cc94988c84bfdc",
             "5bbb992212cbedd1",
             "68c4a05370085e3e",
             "0d364f8869406041",
@@ -4580,7 +4657,7 @@
         "z": "4bc72a1112cb448c",
         "g": "fb34af284a5fbd90",
         "name": "parse",
-        "func": "// Prevent flood on reconnect\nif (((flow.get('mqtt_teleinfo_boot', 'memoryOnly') || 0) + 30000) > Date.now()) {\n    node.status({ 'fill': 'red', 'text': 'reconnect' });\n\n    return;\n}\n\nlet res = {\n    'topic':'',\n    'payload': {}\n};\n\nif (typeof msg.payload === 'object' && \n    typeof msg.payload.ADCO === 'object' && \n    typeof msg.payload.ADCO.raw === 'string'\n) {\n    node.status({ text: msg.payload.ADCO.raw });\n\n    for (const key in msg.payload){\n        if (['ADCO', 'PTEC', 'OPTARIF', 'HHPHC'].includes(key)) {\n            msg.payload[key]['unit'] = 'text';\n        }\n\n        res.payload.id = key;\n        res.payload.source = 'teleinfo';\n        res.payload.parent = msg.payload.ADCO.raw;\n        res.payload.unit = msg.payload[key]['unit'];\n        res.payload.value = msg.payload[key]['value'];\n        res.payload.name = msg.payload[key]['name'];\n        res.payload.seen = Date.now();\n\n        node.send(res);\n    }\n}\n\nreturn;",
+        "func": "// Prevent flood on reconnect\nif (((flow.get('mqtt_teleinfo_boot', 'memoryOnly') || 0) + 30000) > Date.now()) {\n    node.status({ 'fill': 'red', 'text': 'reconnect' });\n\n    return;\n}\n\nlet res = {\n    'topic':'',\n    'payload': {}\n};\n\nif (typeof msg.payload === 'object' && \n    typeof msg.payload.ADCO === 'object' && \n    typeof msg.payload.ADCO.raw === 'string'\n) {\n    node.status({ text: msg.payload.ADCO.raw });\n\n    for (const key in msg.payload){\n        if (['ADCO', 'PTEC', 'OPTARIF', 'HHPHC'].includes(key)) {\n            msg.payload[key]['unit'] = 'text';\n        }\n        else if (['PREFERRED'].includes(key)) {\n            msg.payload[key]['unit'] = 'b';\n            msg.payload[key]['element'] = 'tariff';\n        }\n\n        res.payload.id = key;\n        res.payload.source = 'teleinfo';\n        res.payload.parent = msg.payload.ADCO.raw;\n        res.payload.unit = msg.payload[key]['unit'];\n        res.payload.value = msg.payload[key]['value'];\n        res.payload.name = msg.payload[key]['name'];\n        res.payload.seen = Date.now();\n\n        node.send(res);\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4625,7 +4702,8 @@
             "9d415c5d88aaac86",
             "7640309cc9eba43c",
             "e5777951d9eac0fa",
-            "b6c6972d3eeaeaf0"
+            "b6c6972d3eeaeaf0",
+            "45cf0be2427364c5"
         ],
         "x": 145,
         "y": 2540,
@@ -4670,7 +4748,8 @@
             "5d4843dd49b4478b",
             "2e769390f22a4eb7",
             "83ee9be1aa2cf49f",
-            "dc45776ae2f10ba7"
+            "dc45776ae2f10ba7",
+            "cdcf8ab31b9723f0"
         ],
         "x": 715,
         "y": 2480,
@@ -4738,7 +4817,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "data",
-        "func": "// Copy data from/to memory\n\n// First announce we boot, (stop scene)\nif (msg.payload === true) {\n    global.set('boot', true, 'memoryOnly');\n}\n\nconst places = ['default', 'memoryOnly'];\nconst place = msg.payload === true ? places : [places[1], places[0]];\n\n// copy from memory to file\nconst memorized = {\n    'auth': {},\n    'block': {},\n    'camera': {},\n    'entity': {},\n    'mqtt': {},\n    'parent': {},\n    'room': {},\n    'scene': {}\n}\n\n// Copy backup or at least init\nfor (const key in memorized) {\n    let src = global.get(key, place[0]);\n    if (typeof src !== 'object') {\n        src = memorized[key];\n    }\n    global.set(key, src, place[1]);\n}\n\nnode.status({text: place[0] + ' to ' + place[1]});\n\nif (msg.payload === false) {\n\n    return;\n}\n\nflow.set('stop', false, 'memoryOnly');\n\n// Reset \"per user\" variables\nconst peruser = {\n    'browser': {},\n    'describe': {\n        'project': '',\n        'app': {},\n        'pages': {},\n        'sources': {},\n        'enum': {},\n        'elements': {},\n        'reverts': {},\n        'texts': {},\n        'untis': {},\n        'colors': {},\n        'scenes': {},\n        'routines': {},\n        'template': {}\n    },\n    'dictionary': {},\n    'auth': {},\n    'form': {},\n    'user': {}\n};\nfor (const key in peruser) {\n    global.set(key, peruser[key], 'memoryOnly');\n}\n\n// start\nmsg.payload = {\n    'pages': {},\n    'sources': {},\n    'enum': {},\n    'dictionary': {}\n};\n\nreturn msg;",
+        "func": "// Copy data from/to memory\n\n// First announce we boot, (stop scene)\nif (msg.payload === true) {\n    global.set('boot', true, 'memoryOnly');\n}\n\nconst places = ['default', 'memoryOnly'];\nconst place = msg.payload === true ? places : [places[1], places[0]];\n\n// copy from memory to file\nconst memorized = {\n    'auth': {},\n    'block': {},\n    'camera': {},\n    'energy': {},\n    'entity': {},\n    'mqtt': {},\n    'parent': {},\n    'room': {},\n    'scene': {}\n}\n\n// Copy backup or at least init\nfor (const key in memorized) {\n    let src = global.get(key, place[0]);\n    if (typeof src !== 'object') {\n        src = memorized[key];\n    }\n    global.set(key, src, place[1]);\n}\n\nnode.status({text: place[0] + ' to ' + place[1]});\n\nif (msg.payload === false) {\n\n    return;\n}\n\nflow.set('stop', false, 'memoryOnly');\n\n// Reset \"per user\" variables\nconst peruser = {\n    'browser': {},\n    'describe': {\n        'project': '',\n        'app': {},\n        'pages': {},\n        'sources': {},\n        'enum': {},\n        'elements': {},\n        'reverts': {},\n        'texts': {},\n        'untis': {},\n        'colors': {},\n        'scenes': {},\n        'routines': {},\n        'template': {}\n    },\n    'dictionary': {},\n    'auth': {},\n    'form': {},\n    'user': {}\n};\nfor (const key in peruser) {\n    global.set(key, peruser[key], 'memoryOnly');\n}\n\n// start\nmsg.payload = {\n    'pages': {},\n    'sources': {},\n    'enum': {},\n    'dictionary': {}\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6569,7 +6648,7 @@
         "g": "aa28e51660bead4f",
         "name": "common - local - dknr",
         "links": [
-            "92c098c716e46e3b"
+            "2c505f2fa6af909e"
         ],
         "x": 145,
         "y": 4460,
@@ -6585,7 +6664,7 @@
         "z": "4bc72a1112cb448c",
         "g": "aa28e51660bead4f",
         "name": "parse",
-        "func": "let enums = { ...(msg.dknr_enum || {})  };\nlet entities = { ...(msg.dknr_entity || {}) };\ndelete msg.dknr_enum;\ndelete msg.dknr_entity;\n\nconst template = { ...(global.get('template', 'memoryOnly') || {}) };\nconst room = { ...(global.get('room', 'memoryOnly') || {}) };\nconst parent = { ...(global.get('parent', 'memoryOnly') || {}) };\nconst existing = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Force room creation\nif (typeof room['home'] !== 'string') {\n    room['home'] = { ...template.room, ...{ 'id': 'home', 'name': '► Home' } };\n}\nif (typeof room['system'] !== 'string') {\n    room['system'] = { ...template.room, ...{ 'id': 'system', 'name': '► System' } };\n}\nglobal.set('room', room, 'memoryOnly');\n\n// Force parent creation\nif (typeof parent['dknr_sensor'] !== 'object') {\n    parent['dknr_sensor'] = { ...template.parent, ...{ 'id': 'dknr_sensor', 'name': 'Configuration' } };\n}\nif (typeof parent['dknr_command'] !== 'object') {\n    parent['dknr_command'] = { ...template.parent, ...{ 'id': 'dknr_command', 'name': 'Domotic' } };\n}\nglobal.set('parent', parent, 'memoryOnly');\n\nfor (const t in entities) {\n    for (const k in entities[t]) {\n        // Do not overwrite existing value\n        let uid = ['dknr', t, k].join('_');\n\n        let entity = {\n            'id': k,\n            'source': 'dknr',\n            'value': typeof existing[uid] === 'object' ? existing[uid]['value'] : entities[t][k][0],\n            'parent': t,\n            'type': t,\n            'unit': entities[t][k][1],\n            'element': entities[t][k][2],\n            'name': entities[t][k][3],\n            'room': t === 'sensor' ? 'home' : 'system',\n            'seen': Date.now(),\n            'hidden': 0\n        };\n\n        msg.payload = entity;\n        node.send([msg]);\n    }\n}\n\nreturn;",
+        "func": "let enums = { ...(msg.dknr_enum || {})  };\nlet entities = { ...(msg.dknr_entity || {}) };\ndelete msg.dknr_enum;\ndelete msg.dknr_entity;\n\nconst template = { ...(global.get('template', 'memoryOnly') || {}) };\nconst room = { ...(global.get('room', 'memoryOnly') || {}) };\nconst parent = { ...(global.get('parent', 'memoryOnly') || {}) };\nconst existing = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Force room creation\nif (typeof room['home'] !== 'string') {\n    room['home'] = { ...template.room, ...{ 'id': 'home', 'name': '► Home' } };\n}\nif (typeof room['system'] !== 'string') {\n    room['system'] = { ...template.room, ...{ 'id': 'system', 'name': '► System' } };\n}\nglobal.set('room', room, 'memoryOnly');\n\n// Force parent creation\nif (typeof parent['dknr_sensor'] !== 'object') {\n    parent['dknr_sensor'] = { ...template.parent, ...{ 'id': 'dknr_sensor', 'name': 'Configuration' } };\n}\nif (typeof parent['dknr_command'] !== 'object') {\n    parent['dknr_command'] = { ...template.parent, ...{ 'id': 'dknr_command', 'name': 'Domotic' } };\n}\nglobal.set('parent', parent, 'memoryOnly');\n\nconst s = 'dknr';\n\nfor (const t in entities) {\n    for (const k in entities[t]) {\n        // Do not overwrite existing value\n        let uid = [s, t, k].join('_');\n\n        let entity = {\n            'id': k,\n            'source': s,\n            'value': typeof existing[uid] === 'object' ? existing[uid]['value'] : entities[t][k][0],\n            'parent': t,\n            'type': t,\n            'unit': entities[t][k][1],\n            'element': entities[t][k][2],\n            'name': entities[t][k][3],\n            'room': t === 'sensor' ? 'home' : 'system',\n            'seen': Date.now(),\n            'hidden': 0\n        };\n\n        msg.payload = entity;\n        node.send([msg]);\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6621,7 +6700,7 @@
         "z": "4bc72a1112cb448c",
         "g": "aa28e51660bead4f",
         "name": "dknr",
-        "func": "// Default system enums\nmsg.dknr_enum = {\n    'automate': {\n        'high': ['refresh-auto', 'Automatic'],\n        'low': ['gesture-double-tap', 'Manual']\n    },\n    'nycthemer': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'high': ['weather-sunny', 'Day'],\n        'low': ['weather-night', 'Night'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'light': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'high': ['lightbulb-on', 'Bright'],\n        'low': ['lightbulb-outline', 'Dark'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'temperature': {\n        'thawing': ['theme-light-dark', 'Thawning'],\n        'heating': ['heat-wave', 'Heating'],\n        'cooling': ['snowflake', 'Cooling'],\n        'off': ['stop', 'Off'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'waterboiler': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'high': ['water-boiler', 'On'],\n        'low': ['water-boiler-off', 'Off'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'humidity': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'on': ['water-percent', 'On'],\n        'off': ['water-off-outline', 'Off'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'sound': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'high': ['volume-high', 'High'],\n        'low': ['volume-medium', 'Low'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'shutter': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'high': ['window-shutter-open', 'Open'],\n        'low': ['window-shutter', 'Close'],\n        'manual': ['gesture-double-tap', 'Manual']\n    }/*,\n    'notice': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'write': ['lead-pencil', 'Writing'],\n        'off': ['stop', 'Off']\n    },\n    'offloading': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'high': ['play', 'On'],\n        'low': ['stop', 'Off'],\n        'manual': ['gesture-double-tap', 'Manual']\n    }*/\n};\n\n// id: [value, unit, element, name]\nmsg.dknr_entity = {\n    'sensor': {\n        'automate': ['high', 'enum', 'text', 'Automate'],\n        'nycthemer': ['', 'enum', 'text', 'Nycthemer'],\n        'light': ['', 'enum', 'text', 'Lighting'],\n        'temperature': ['', 'enum', 'text', 'Temperature'],\n        'waterboiler': ['', 'enum', 'text', 'Waterboiler'],\n        'humidity': ['', 'enum', 'text', 'Air flow'],\n        'sound': ['', 'enum', 'text', 'Sound'],\n        'shutter': ['', 'enum', 'text', 'Shutter'],\n        //'notice': ['', 'enum', 'text', 'Notice'],\n        //'offloading': ['', 'enum', 'text', 'Offloading'],\n\n        'sunrise': ['07:00', 'time', 'time', 'Sunrise'],\n        'sunset': ['19:00', 'time', 'time', 'Sunset'],\n        'morning_limit': ['07:00', 'time', 'time', 'Hour limit of morning'],\n        'evening_limit': ['19:00', 'time', 'time', 'Hour limit of evening']\n    },\n\n    'command': {\n        'automate': ['high', 'enum', 'mode', 'Automate'],\n        'nycthemer': ['auto', 'enum', 'illuminance', 'Nycthemer'],\n        'light': ['auto', 'enum', 'light', 'Lighting'],\n        'temperature': ['thawing', 'enum', 'temperature', 'Temperature'],\n        'waterboiler': ['auto', 'enum', 'waterboiler', 'Waterboiler'],\n        'humidity': ['auto', 'enum', 'humidity', 'Air flow'],\n        'sound': ['auto', 'enum', 'sound', 'Sound'],\n        'shutter': ['auto', 'enum', 'shutter', 'Shutter'],\n\n        //'notice': ['auto', 'enum', 'text', 'Notice'],\n        //'offloading': ['auto', 'enum', 'text', 'Offloading'],\n\n        'workday_morning_limit': ['07:00', 'time', 'time', 'Hour limit of work day morning'],\n        'workday_evening_limit': ['20:00', 'time', 'time', 'Hour limit of work day evening'],\n        'restday_morning_limit': ['09:00', 'time', 'time', 'Hour limit of rest day monring'],\n        'restday_evening_limit': ['21:00', 'time', 'time', 'Hour limit of rest day evening'],\n        'latitude': ['48.8743', 'text', 'location', 'Home latitude'],\n        'longitude': ['2.2950', 'text', 'location', 'Home longitude'],\n        'auth': [0, 'rb', 'switch', 'Authentication']\n    }\n};\n\nreturn msg;",
+        "func": "// Default system enums\nmsg.dknr_enum = {\n    'automate': {\n        'high': ['refresh-auto', 'Automatic'],\n        'low': ['gesture-double-tap', 'Manual']\n    },\n    'nycthemer': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'high': ['weather-sunny', 'Day'],\n        'low': ['weather-night', 'Night'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'light': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'high': ['lightbulb-on', 'Bright'],\n        'low': ['lightbulb-outline', 'Dark'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'temperature': {\n        'thawing': ['theme-light-dark', 'Thawning'],\n        'heating': ['heat-wave', 'Heating'],\n        'cooling': ['snowflake', 'Cooling'],\n        'off': ['stop', 'Off'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'waterboiler': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'high': ['water-boiler', 'On'],\n        'low': ['water-boiler-off', 'Off'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'humidity': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'on': ['water-percent', 'On'],\n        'off': ['water-off-outline', 'Off'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'sound': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'high': ['volume-high', 'High'],\n        'low': ['volume-medium', 'Low'],\n        'manual': ['gesture-double-tap', 'Manual']\n    },\n    'shutter': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'high': ['window-shutter-open', 'Open'],\n        'low': ['window-shutter', 'Close'],\n        'manual': ['gesture-double-tap', 'Manual']\n    }/*,\n    'notice': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'write': ['lead-pencil', 'Writing'],\n        'off': ['stop', 'Off']\n    },\n    'offloading': {\n        'auto': ['refresh-auto', 'Automatic'],\n        'high': ['play', 'On'],\n        'low': ['stop', 'Off'],\n        'manual': ['gesture-double-tap', 'Manual']\n    }*/\n};\n\n// id: [value, unit, element, name]\nmsg.dknr_entity = {\n    'sensor': {\n        'automate': ['high', 'enum', 'text', 'Automate'],\n        'nycthemer': ['', 'enum', 'text', 'Nycthemer'],\n        'light': ['', 'enum', 'text', 'Lighting'],\n        'temperature': ['', 'enum', 'text', 'Temperature'],\n        'waterboiler': ['', 'enum', 'text', 'Waterboiler'],\n        'humidity': ['', 'enum', 'text', 'Air flow'],\n        'sound': ['', 'enum', 'text', 'Sound'],\n        'shutter': ['', 'enum', 'text', 'Shutter'],\n        //'notice': ['', 'enum', 'text', 'Notice'],\n        //'offloading': ['', 'enum', 'text', 'Offloading'],\n\n        'sunrise': ['07:00', 'time', 'time', 'Sunrise'],\n        'sunset': ['19:00', 'time', 'time', 'Sunset'],\n        'morning_limit': ['07:00', 'time', 'time', 'Hour limit of morning'],\n        'evening_limit': ['19:00', 'time', 'time', 'Hour limit of evening'],\n\n        'home_power': [0, 'W', 'power', 'Home power net consumption'],\n    },\n\n    'command': {\n        'automate': ['high', 'enum', 'mode', 'Automate'],\n        'nycthemer': ['auto', 'enum', 'illuminance', 'Nycthemer'],\n        'light': ['auto', 'enum', 'light', 'Lighting'],\n        'temperature': ['thawing', 'enum', 'temperature', 'Temperature'],\n        'waterboiler': ['auto', 'enum', 'waterboiler', 'Waterboiler'],\n        'humidity': ['auto', 'enum', 'humidity', 'Air flow'],\n        'sound': ['auto', 'enum', 'sound', 'Sound'],\n        'shutter': ['auto', 'enum', 'shutter', 'Shutter'],\n\n        //'notice': ['auto', 'enum', 'text', 'Notice'],\n        //'offloading': ['auto', 'enum', 'text', 'Offloading'],\n\n        'workday_morning_limit': ['07:00', 'time', 'time', 'Hour limit of work day morning'],\n        'workday_evening_limit': ['20:00', 'time', 'time', 'Hour limit of work day evening'],\n        'restday_morning_limit': ['09:00', 'time', 'time', 'Hour limit of rest day monring'],\n        'restday_evening_limit': ['21:00', 'time', 'time', 'Hour limit of rest day evening'],\n        'latitude': ['48.8743', 'text', 'location', 'Home latitude'],\n        'longitude': ['2.2950', 'text', 'location', 'Home longitude'],\n        'auth': [0, 'rb', 'switch', 'Authentication']\n    }\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6770,7 +6849,7 @@
         "z": "4bc72a1112cb448c",
         "g": "f822aa69af66c546",
         "name": "data",
-        "func": "const rnd = global.get('random', 'memoryOnly') || '--';\nif (typeof rnd !== 'number' || \n    typeof msg.payload.rnd !== 'string' || \n    rnd !== Number(msg.payload.rnd)\n) {\n\n    node.send([null, msg]);\n}\n\nmsg.payload = JSON.stringify({\n    'auth': {...global.get('auth', 'memoryOnly') || {}},\n    'block': {...global.get('block', 'memoryOnly') || {}},\n    'camera': {...global.get('camera', 'memoryOnly') || {}},\n    'entity': {...global.get('entity', 'memoryOnly') || {}},\n    'mqtt': {...global.get('mqtt', 'memoryOnly') || {}},\n    'room': {...global.get('room', 'memoryOnly') || {}},\n    'parent': {...global.get('parent', 'memoryOnly') || {}},\n    'scene': {...global.get('scene', 'memoryOnly') || {}}\n}, null, 4);\n\nmsg.headers = {\n    'Content-Type':'application/json',\n    'Content-Disposition':'attachment; filename=\"backup.json\"',\n    'Content-Length': msg.payload.length,\n    'Connection':'close'\t\n};\n\nnode.send([msg, null]);\n\nreturn;",
+        "func": "const rnd = global.get('random', 'memoryOnly') || '--';\nif (typeof rnd !== 'number' || \n    typeof msg.payload.rnd !== 'string' || \n    rnd !== Number(msg.payload.rnd)\n) {\n\n    node.send([null, msg]);\n}\n\nmsg.payload = JSON.stringify({\n    'auth': {...global.get('auth', 'memoryOnly') || {}},\n    'block': {...global.get('block', 'memoryOnly') || {}},\n    'camera': { ...global.get('camera', 'memoryOnly') || {} },\n    'energy': { ...global.get('energy', 'memoryOnly') || {} },\n    'entity': { ...global.get('entity', 'memoryOnly') || {} },\n    'mqtt': {...global.get('mqtt', 'memoryOnly') || {}},\n    'room': {...global.get('room', 'memoryOnly') || {}},\n    'parent': {...global.get('parent', 'memoryOnly') || {}},\n    'scene': {...global.get('scene', 'memoryOnly') || {}}\n}, null, 4);\n\nmsg.headers = {\n    'Content-Type':'application/json',\n    'Content-Disposition':'attachment; filename=\"backup.json\"',\n    'Content-Length': msg.payload.length,\n    'Connection':'close'\t\n};\n\nnode.send([msg, null]);\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -7316,8 +7395,8 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "data",
-        "func": "global.set('boot', false, 'memoryOnly');\n\nreturn;",
-        "outputs": 0,
+        "func": "global.set('boot', false, 'memoryOnly');\n\nmsg.topic = '';\nmsg.payload = '';\n\nreturn msg;",
+        "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
@@ -7325,7 +7404,11 @@
         "libs": [],
         "x": 510,
         "y": 140,
-        "wires": []
+        "wires": [
+            [
+                "2c505f2fa6af909e"
+            ]
+        ]
     },
     {
         "id": "dc45776ae2f10ba7",
@@ -8561,6 +8644,138 @@
         "wires": []
     },
     {
+        "id": "cdcf8ab31b9723f0",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "8aae9bef01ec071c",
+        "name": "common - energy",
+        "links": [
+            "a29ec7554a818a6f"
+        ],
+        "x": 145,
+        "y": 4880,
+        "wires": [
+            [
+                "ce30409f0eac0e23"
+            ]
+        ]
+    },
+    {
+        "id": "ce30409f0eac0e23",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "8aae9bef01ec071c",
+        "name": "data",
+        "func": "// Ear energy entity and udate home energey value\n\nmsg.ids = ['grid_power', 'solar_power', 'battery_power'];\nmsg.energy = { ...(global.get('energy', 'memoryOnly') || { }) };\n\nfor (const e in msg.energy) {\n    if (msg.ids.includes(e) && msg.energy[e] === msg.payload.uid) {\n        node.status({ 'text': e });\n    \n        return msg;\n    }\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 4880,
+        "wires": [
+            [
+                "3ed6069e981aef21"
+            ]
+        ]
+    },
+    {
+        "id": "f39bab3566c6a359",
+        "type": "debug",
+        "z": "4bc72a1112cb448c",
+        "g": "8aae9bef01ec071c",
+        "name": "common - energy",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 4940,
+        "wires": []
+    },
+    {
+        "id": "2c505f2fa6af909e",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "bcc6f36c217d1643",
+        "name": "common - boot - open",
+        "mode": "link",
+        "links": [
+            "d3cc94988c84bfdc"
+        ],
+        "x": 635,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "3ed6069e981aef21",
+        "type": "delay",
+        "z": "4bc72a1112cb448c",
+        "g": "8aae9bef01ec071c",
+        "name": "1m/s",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 430,
+        "y": 4880,
+        "wires": [
+            [
+                "3bd9259bd9a1de62"
+            ]
+        ]
+    },
+    {
+        "id": "3bd9259bd9a1de62",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "8aae9bef01ec071c",
+        "name": "data",
+        "func": "// Ear energy entity and udate home energey value\n\nconst entity = { ...(global.get('entity', 'memoryOnly') || { }) };\n\nlet value = 0;\nlet exists = false;\nfor (const e in msg.energy) {\n    if (msg.ids.includes(e) && typeof entity[msg.energy[e]] === 'object' && entity[msg.energy[e]]['hidden'] === 0) {\n        value += Math.round(entity[msg.energy[e]]['value']);\n        exists = true;\n\n        node.status({ 'text': value });\n    }\n}\n\nif (exists) {\n    let res = {\n        topic: '',\n        payload: entity['dknr_sensor_home_power'] || {}\n    };\n    res.payload.value = value;\n    res.payload.seen = Date.now();\n    res.replay = true; //???\n\n    return res;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 4880,
+        "wires": [
+            [
+                "f39bab3566c6a359",
+                "45cf0be2427364c5"
+            ]
+        ]
+    },
+    {
+        "id": "45cf0be2427364c5",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "8aae9bef01ec071c",
+        "name": "common - energy",
+        "mode": "link",
+        "links": [
+            "cc0a7c14f877c371"
+        ],
+        "x": 715,
+        "y": 4880,
+        "wires": []
+    },
+    {
         "id": "d7bc8fc74bfc07cb",
         "type": "link in",
         "z": "10a4e1188aad61a2",
@@ -8586,7 +8801,8 @@
         "name": "home - page",
         "mode": "link",
         "links": [
-            "dcbdec0233106eb8"
+            "dcbdec0233106eb8",
+            "f3d552c9df022dca"
         ],
         "x": 635,
         "y": 140,
@@ -8708,7 +8924,7 @@
         "z": "10a4e1188aad61a2",
         "g": "0954ea9c8e3ae379",
         "name": "data",
-        "func": "msg.payload = [];\nmsg.topic = msg.hmi.id;\n\nif (!msg.enabled) {\n    msg.reset = true;\n\n    return msg;\n}\n\nlet colors = global.get('describe.colors', 'memoryOnly') || {};\nlet elements = {...global.get('describe.elements', 'memoryOnly') || {}};\nelements.seen = ['lan-connect', 'lan-disconnect'];\nelements.battery = [elements.battery[1], elements.battery[0]];\nlet options = {\n    'motion': '',\n    'temperature': '°C',\n    'humidity': '%',\n    'illuminance': ' lx',\n    'door': '',\n    'window': '',\n    'light': '',\n    'battery': '',\n    'seen': ''\n};\n\nlet entity = global.get('entity', 'memoryOnly') || {};\nlet entities = {};\nlet e_num = 0;\n\nfor (const e in entity) {\n    if (entity[e]['hidden'] !== 0 || \n        entity[e]['room'] === '' || \n        entity[e]['value'] === ''\n    ) {\n\n        continue;\n    }\n\n    if (typeof entities[entity[e]['room']] !== 'object') {\n        entities[entity[e]['room']] = { };\n    }\n\n    // Seen\n    if (typeof entities[entity[e]['room']]['seen'] !== 'number') {\n        entities[entity[e]['room']]['seen'] = 0;\n    }\n    if ((entity[e]['seen'] + 86400000) < Date.now()) { // 24h\n        entities[entity[e]['room']]['seen']++;\n    }\n\n    // Battery\n    if (typeof entities[entity[e]['room']]['battery'] !== 'number') {\n        entities[entity[e]['room']]['battery'] = 0;\n    }\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'battery' && entity[e]['value'] < 15) {\n        entities[entity[e]['room']]['battery'] += 1;\n    }\n\n    // Motion\n    if (entity[e]['type'] !== 'command' && typeof entities[entity[e]['room']]['motion'] !== 'number') {\n        entities[entity[e]['room']]['motion'] = 0;\n    }\n    if (entity[e]['element'] === 'motion' && entity[e]['value'] > 0) {\n        entities[entity[e]['room']]['motion'] += 1;\n    }\n\n    // Door\n    if (entity[e]['type'] !== 'command' && typeof entities[entity[e]['room']]['door'] !== 'number') {\n        entities[entity[e]['room']]['door'] = 0;\n    }\n    if (['door', 'slider'].includes(entity[e]['element']) && !entity[e]['value']) {\n        entities[entity[e]['room']]['door'] += 1;\n    }\n\n    // Window\n    if (entity[e]['type'] !== 'command' && typeof entities[entity[e]['room']]['window'] !== 'number') {\n        entities[entity[e]['room']]['window'] = 0;\n    }\n    if (entity[e]['element'] === 'window' && !entity[e]['value']) {\n        entities[entity[e]['room']]['window'] += 1;\n    }\n\n    // Light\n    if (typeof entities[entity[e]['room']]['light'] !== 'number') {\n        entities[entity[e]['room']]['light'] = 0;\n    }\n    if (entity[e]['element'] === 'light' && entity[e]['value'] > 0) {\n        entities[entity[e]['room']]['light'] += 1;\n    }\n\n    // Temperature\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'temperature') {\n        if (typeof entities[entity[e]['room']]['temperature'] === 'undefined') {\n            entities[entity[e]['room']]['temperature'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['temperature'] = (parseInt(entities[entity[e]['room']]['temperature'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n\n    // Humidity\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'humidity') {\n        if (typeof entities[entity[e]['room']]['humidity'] === 'undefined') {\n            entities[entity[e]['room']]['humidity'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['humidity'] = (parseInt(entities[entity[e]['room']]['humidity'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n\n    // Illuminance\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'illuminance') {\n        if (typeof entities[entity[e]['room']]['illuminance'] === 'undefined') {\n            entities[entity[e]['room']]['illuminance'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['illuminance'] = (parseInt(entities[entity[e]['room']]['illuminance'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n}\n\nconst room = { ...(global.get('room', 'memoryOnly') || {}) };\nlet r_num = 0;\n\nlet dropdownOptions = [];\nfor (const r in room) {\n    if (['system', 'home'].includes(r)) {\n\n        continue;\n    }\n\n    dropdownOptions[r_num] = {\n        'room': r,\n        'room_name': room[r]['name']\n    };\n\n    for (const o in options) {\n        let option_icon = elements[o][0];\n        let option_color = colors.empty;\n        let option_text = '';\n        if (typeof entities[r][o] !== 'undefined') {\n            option_icon = entities[r][o] > 0 ? elements[o][1] : elements[o][0];\n            option_color = entities[r][o] > 0 ? colors.theme : colors.empty;\n            option_text = entities[r][o] > 0 ? entities[r][o] + options[o] : '';\n        }\n\n        dropdownOptions[r_num][o] = \n            '<span style=\"white-space: nowrap;\">' + \n            option_text + \n            '<i class=\"icon-in-row mdi mdi-' + option_icon + '\" style=\"color:' + option_color + '\" title=\"' + o + '\"></i>' + \n            '</span>';\n    };\n\n    r_num++;\n}\n\nif (r_num > 0) {\n    dropdownOptions.sort((a, b) => a.room_name.localeCompare(b.room_name));\n\n    msg.payload = dropdownOptions;\n    msg.ui_update = {\n        'label': '',\n    }\n\n    return msg;\n}",
+        "func": "msg.payload = [];\nmsg.topic = msg.hmi.id;\nif (typeof global.get('user[\"' + msg.hmi.id + '\"]', 'memoryOnly') !== 'object') {\n    msg.enabled = false;\n}\n\nif (!msg.enabled) {\n    msg.reset = true;\n\n    return msg;\n}\n\nlet colors = global.get('describe.colors', 'memoryOnly') || {};\nlet elements = {...global.get('describe.elements', 'memoryOnly') || {}};\nelements.seen = ['lan-connect', 'lan-disconnect'];\nelements.battery = [elements.battery[1], elements.battery[0]];\nlet options = {\n    'motion': '',\n    'temperature': '°C',\n    'humidity': '%',\n    'illuminance': ' lx',\n    'door': '',\n    'window': '',\n    'light': '',\n    'battery': '',\n    'seen': ''\n};\n\nlet entity = global.get('entity', 'memoryOnly') || {};\nlet entities = {};\nlet e_num = 0;\n\nfor (const e in entity) {\n    if (entity[e]['hidden'] !== 0 || \n        entity[e]['room'] === '' || \n        entity[e]['value'] === ''\n    ) {\n\n        continue;\n    }\n\n    if (typeof entities[entity[e]['room']] !== 'object') {\n        entities[entity[e]['room']] = { };\n    }\n\n    // Seen\n    if (typeof entities[entity[e]['room']]['seen'] !== 'number') {\n        entities[entity[e]['room']]['seen'] = 0;\n    }\n    if ((entity[e]['seen'] + 86400000) < Date.now()) { // 24h\n        entities[entity[e]['room']]['seen']++;\n    }\n\n    // Battery\n    if (typeof entities[entity[e]['room']]['battery'] !== 'number') {\n        entities[entity[e]['room']]['battery'] = 0;\n    }\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'battery' && entity[e]['value'] < 15) {\n        entities[entity[e]['room']]['battery'] += 1;\n    }\n\n    // Motion\n    if (entity[e]['type'] !== 'command' && typeof entities[entity[e]['room']]['motion'] !== 'number') {\n        entities[entity[e]['room']]['motion'] = 0;\n    }\n    if (entity[e]['element'] === 'motion' && entity[e]['value'] > 0) {\n        entities[entity[e]['room']]['motion'] += 1;\n    }\n\n    // Door\n    if (entity[e]['type'] !== 'command' && typeof entities[entity[e]['room']]['door'] !== 'number') {\n        entities[entity[e]['room']]['door'] = 0;\n    }\n    if (['door', 'slider'].includes(entity[e]['element']) && !entity[e]['value']) {\n        entities[entity[e]['room']]['door'] += 1;\n    }\n\n    // Window\n    if (entity[e]['type'] !== 'command' && typeof entities[entity[e]['room']]['window'] !== 'number') {\n        entities[entity[e]['room']]['window'] = 0;\n    }\n    if (entity[e]['element'] === 'window' && !entity[e]['value']) {\n        entities[entity[e]['room']]['window'] += 1;\n    }\n\n    // Light\n    if (typeof entities[entity[e]['room']]['light'] !== 'number') {\n        entities[entity[e]['room']]['light'] = 0;\n    }\n    if (entity[e]['element'] === 'light' && entity[e]['value'] > 0) {\n        entities[entity[e]['room']]['light'] += 1;\n    }\n\n    // Temperature\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'temperature') {\n        if (typeof entities[entity[e]['room']]['temperature'] === 'undefined') {\n            entities[entity[e]['room']]['temperature'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['temperature'] = (parseInt(entities[entity[e]['room']]['temperature'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n\n    // Humidity\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'humidity') {\n        if (typeof entities[entity[e]['room']]['humidity'] === 'undefined') {\n            entities[entity[e]['room']]['humidity'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['humidity'] = (parseInt(entities[entity[e]['room']]['humidity'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n\n    // Illuminance\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'illuminance') {\n        if (typeof entities[entity[e]['room']]['illuminance'] === 'undefined') {\n            entities[entity[e]['room']]['illuminance'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['illuminance'] = (parseInt(entities[entity[e]['room']]['illuminance'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n}\n\nconst room = { ...(global.get('room', 'memoryOnly') || {}) };\nlet r_num = 0;\n\nlet dropdownOptions = [];\nfor (const r in room) {\n    if (['system', 'home'].includes(r)) {\n\n        continue;\n    }\n\n    dropdownOptions[r_num] = {\n        'room': r,\n        'room_name': room[r]['name']\n    };\n\n    for (const o in options) {\n        let option_icon = elements[o][0];\n        let option_color = colors.empty;\n        let option_text = '';\n        if (typeof entities[r][o] !== 'undefined') {\n            option_icon = entities[r][o] > 0 ? elements[o][1] : elements[o][0];\n            option_color = entities[r][o] > 0 ? colors.theme : colors.empty;\n            option_text = entities[r][o] > 0 ? entities[r][o] + options[o] : '';\n        }\n\n        dropdownOptions[r_num][o] = \n            '<span style=\"white-space: nowrap;\">' + \n            option_text + \n            '<i class=\"icon-in-row mdi mdi-' + option_icon + '\" style=\"color:' + option_color + '\" title=\"' + o + '\"></i>' + \n            '</span>';\n    };\n\n    r_num++;\n}\n\nif (r_num > 0) {\n    dropdownOptions.sort((a, b) => a.room_name.localeCompare(b.room_name));\n\n    msg.payload = dropdownOptions;\n    msg.ui_update = {\n        'label': '',\n    }\n\n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -8827,7 +9043,7 @@
         "mobileBreakpointType": "defaults",
         "action": "replace",
         "className": "",
-        "x": 900,
+        "x": 890,
         "y": 260,
         "wires": [
             [
@@ -8846,7 +9062,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1140,
+        "x": 1130,
         "y": 260,
         "wires": [
             [
@@ -8867,7 +9083,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1340,
+        "x": 1330,
         "y": 260,
         "wires": [
             [
@@ -8885,7 +9101,7 @@
         "links": [
             "289e0a6cd1209c38"
         ],
-        "x": 1465,
+        "x": 1455,
         "y": 260,
         "wires": []
     },
@@ -8913,6 +9129,316 @@
             [
                 "b871e3d16b300b3d",
                 "ecee862ad724750f"
+            ]
+        ]
+    },
+    {
+        "id": "f3d552c9df022dca",
+        "type": "link in",
+        "z": "10a4e1188aad61a2",
+        "name": "home - energy",
+        "links": [
+            "054bd47295999ad7"
+        ],
+        "x": 145,
+        "y": 480,
+        "wires": [
+            [
+                "b72a32f49227a4f7"
+            ]
+        ]
+    },
+    {
+        "id": "b72a32f49227a4f7",
+        "type": "link call",
+        "z": "10a4e1188aad61a2",
+        "name": "",
+        "links": [
+            "5a1d16fa45e115fa"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 320,
+        "y": 480,
+        "wires": [
+            [
+                "3bb3af6b09f9d58d",
+                "ed2ba7fbd238280f"
+            ]
+        ]
+    },
+    {
+        "id": "3bb3af6b09f9d58d",
+        "type": "function",
+        "z": "10a4e1188aad61a2",
+        "name": "data",
+        "func": "msg.payload = [];\nmsg.topic = msg.hmi.id;\nif (typeof global.get('user[\"' + msg.hmi.id + '\"]', 'memoryOnly') !== 'object') {\n    msg.enabled = false;\n}\n\nif (!msg.enabled) {\n    msg.reset = true;\n\n    return msg;\n}\n\nconst colors = { ...(global.get('describe.colors', 'memoryOnly') || {}) };\nconst energy = { ...(global.get('energy', 'memoryOnly') || {}) };\nif (typeof energy['grid_power'] !== 'string') {\n\n    return;\n}\n\nconst table = {\n    'grid_power': ['transmission-tower', 'median', 'none', 'Grid'],\n    'solar_power': ['sun-wireless', 'none', 'median', 'Solar'],\n    'battery_power': ['car-battery', 'none', 'median', 'Battery'],\n}\n\nlet i = 0;\nlet dropdownOptions = [];\nlet home_value = 0;\n\nfor (const k in table) {\n    if (energy[k] !== '') {\n        let data = global.get('entity[\"' + energy[k] + '\"]', 'memoryOnly') || 0;\n        let name = data.name;\n        let dir = data.value > 0 ? 'arrow-right-bold' : 'arrow-left-bold';\n        let color = colors[data.value > 0 ? table[k][1] : table[k][2]];\n        let value = Math.round(Number(data.value));\n\n        if (name === '') {\n            name = table[k][3];\n        }\n        if (k === 'battery_power' && energy.battery_level !== '') {\n            let level = global.get('entity[\"' + energy.battery_level + '\"][\"value\"]', 'memoryOnly') || 0;\n            name = name + ' (' + level + '%)';\n        }\n\n        dropdownOptions[i++] = {\n            'icon': '<span style=\"white-space: nowrap;\">' + \n                '<i class=\"icon-in-row mdi mdi-' + table[k][0] + '\" style=\"color:' + color + '\"></i> ' +\n                '<i class=\"icon-in-row mdi mdi-' + dir + '\" style=\"color:' + color + '\"></i> ' +\n                '<i class=\"icon-in-row mdi mdi-home\" style=\"color:' + color + '\"></i>' +\n                '</span>',\n            'name': name,\n            'value': value,\n            'unit': data.unit\n        };\n    \n        home_value += value;\n    }\n}\n\nconst home = global.get('entity.dknr_sensor_home_power', 'memoryOnly');\nif (typeof home === 'object') {\n    let color = colors['theme'];\n    let value = home.value;\n    if (home.unit === 'mW') {\n        value = home / 1000;\n    }\n    else if (home.unit === 'kW') {\n        value = home * 1000;\n    }\n\n    dropdownOptions[i++] = {\n        'icon': '<span style=\"white-space: nowrap;\">' + \n            '<i class=\"icon-in-row mdi mdi-human-male-child\" style=\"color:' + color + '\"></i> ' +\n            '<i class=\"icon-in-row mdi mdi-arrow-left-bold\" style=\"color:' + color + '\"></i> ' +\n            '<i class=\"icon-in-row mdi mdi-home\" style=\"color:' + color + '\"></i>' +\n            '</span>',\n        'name': home.name,\n        'value': home.value,\n        'unit': 'W'\n    };\n}\n\nmsg.payload = dropdownOptions;\nmsg.ui_update = {\n    'label': '',\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 480,
+        "wires": [
+            [
+                "1be9c4338accb553",
+                "ec0a6f88f88b8cfe"
+            ]
+        ]
+    },
+    {
+        "id": "1be9c4338accb553",
+        "type": "ui-table",
+        "z": "10a4e1188aad61a2",
+        "group": "f871c246adaba03b",
+        "name": "home - energy - table",
+        "label": "",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "maxrows": 0,
+        "passthru": false,
+        "autocols": false,
+        "showSearch": false,
+        "deselect": true,
+        "selectionType": "click",
+        "columns": [
+            {
+                "title": "",
+                "key": "name",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "end"
+            },
+            {
+                "title": "",
+                "key": "icon",
+                "keyType": "key",
+                "type": "html",
+                "width": "20px",
+                "align": "center"
+            },
+            {
+                "title": "",
+                "key": "value",
+                "keyType": "key",
+                "type": "text",
+                "width": "20px",
+                "align": "end"
+            },
+            {
+                "title": "",
+                "key": "unit",
+                "keyType": "key",
+                "type": "text",
+                "width": "20px",
+                "align": "start"
+            }
+        ],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "",
+        "x": 740,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ec0a6f88f88b8cfe",
+        "type": "trigger",
+        "z": "10a4e1188aad61a2",
+        "name": "1s",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "1",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "topic",
+        "topic": "hmi.id",
+        "outputs": 1,
+        "x": 530,
+        "y": 540,
+        "wires": [
+            [
+                "3bb3af6b09f9d58d",
+                "1be9c4338accb553"
+            ]
+        ]
+    },
+    {
+        "id": "ed2ba7fbd238280f",
+        "type": "function",
+        "z": "10a4e1188aad61a2",
+        "name": "data",
+        "func": "msg.payload = [];\nmsg.topic = msg.hmi.id;\nif (typeof global.get('user[\"' + msg.hmi.id + '\"]', 'memoryOnly') !== 'object') {\n    msg.enabled = false;\n}\n\nif (!msg.enabled) {\n    msg.reset = true;\n\n    node.send([msg, msg]);\n    return;\n}\n\nconst entity = { ...(global.get('entity', 'memoryOnly') || { }) };\nconst energy = { ...(global.get('energy', 'memoryOnly') || { }) };\nlet or = '';\nfor (const e in energy) {\n    if (['grid_power', 'solar_power', 'battery_power'].includes(e) \n        && typeof entity[energy[e]] === 'object'\n        && entity[energy[e]]['hidden'] === 0\n    ) {\n        or = or + ' or r[\"_field\"] == \"' + energy[e] + '\"';\n    }\n}\n\nmsg.query = \n'from(bucket: \"domotic\")' +\n'|> range(start: -1d, stop:now())' +\n'|> filter(fn: (r) => r[\"_measurement\"] == \"power\")' +\n'|> filter(fn: (r) => r[\"_field\"] == \"dknr_sensor_home_power\"' + or + ')' +\n'|> aggregateWindow(every: 15m, fn: mean, createEmpty: false)' +\n'|> yield(name: \"mean\")';\n\nnode.send([null, msg]);\n\nreturn msg;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 600,
+        "wires": [
+            [
+                "a8c5090ac8e20652"
+            ],
+            [
+                "d03b469d9ba955c9",
+                "a447bfbc1cc0509d"
+            ]
+        ]
+    },
+    {
+        "id": "d03b469d9ba955c9",
+        "type": "influxdb in",
+        "z": "10a4e1188aad61a2",
+        "influxdb": "cf56c7fff4df45c2",
+        "name": "",
+        "query": "",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "dknr",
+        "x": 750,
+        "y": 660,
+        "wires": [
+            [
+                "352871ecae45e5b5",
+                "b8c212c065fb656c"
+            ]
+        ]
+    },
+    {
+        "id": "a447bfbc1cc0509d",
+        "type": "trigger",
+        "z": "10a4e1188aad61a2",
+        "name": "15s",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "15",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "topic",
+        "topic": "hmi.id",
+        "outputs": 1,
+        "x": 530,
+        "y": 660,
+        "wires": [
+            [
+                "ed2ba7fbd238280f",
+                "d03b469d9ba955c9"
+            ]
+        ]
+    },
+    {
+        "id": "352871ecae45e5b5",
+        "type": "debug",
+        "z": "10a4e1188aad61a2",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "a8c5090ac8e20652",
+        "type": "ui-chart",
+        "z": "10a4e1188aad61a2",
+        "group": "f871c246adaba03b",
+        "name": "home- energy - chart",
+        "label": "",
+        "order": 3,
+        "chartType": "line",
+        "category": "_field",
+        "categoryType": "property",
+        "xAxisLabel": "",
+        "xAxisProperty": "_time",
+        "xAxisPropertyType": "property",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "{HH}:{mm}",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "_value",
+        "yAxisPropertyType": "property",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "replace",
+        "stackSeries": false,
+        "pointShape": "false",
+        "pointRadius": "2",
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "86400",
+        "removeOlderPoints": "150",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 1180,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b8c212c065fb656c",
+        "type": "function",
+        "z": "10a4e1188aad61a2",
+        "name": "data",
+        "func": "const entity = { ...(global.get('entity', 'memoryOnly') || { }) };\n\nfor (let i = 0; i < msg.payload.length; i++) {\n    msg.payload[i]['_field'] = entity[msg.payload[i]['_field']]['name'] || msg.payload[i]['_field'];\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 660,
+        "wires": [
+            [
+                "a8c5090ac8e20652"
             ]
         ]
     },
@@ -11491,7 +12017,7 @@
         "z": "560376d6bba621ec",
         "g": "b9c606401bb8c37c",
         "name": "room",
-        "func": "if (!msg.enabled) {\n\n    return;\n}\n\nconst room = flow.get('room[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '-';\n\nmsg.room = room;\nmsg.topic = msg.hmi.id;\n\nreturn msg;\n",
+        "func": "\nif (typeof global.get('user[\"' + msg.hmi.id + '\"]', 'memoryOnly') !== 'object') {\n    msg.enabled = false;\n}\n\nif (!msg.enabled) {\n\n    return;\n}\n\nconst room = flow.get('room[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '-';\n\nmsg.room = room;\nmsg.topic = msg.hmi.id;\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -11593,7 +12119,7 @@
         "z": "560376d6bba621ec",
         "g": "1465a47c930ed8e1",
         "name": "data",
-        "func": "msg.topic = msg.hmi.id;\n\nreturn msg;",
+        "func": "msg.topic = msg.hmi.id;\n\nif (typeof global.get('user[\"' + msg.hmi.id + '\"]', 'memoryOnly') !== 'object') {\n    msg.reset = true;\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -16785,7 +17311,8 @@
         "links": [
             "ad848617eded124c",
             "c6104f486096a92f",
-            "52a5b6f988f1d10a"
+            "52a5b6f988f1d10a",
+            "3790dfc240bc5f6d"
         ],
         "x": 635,
         "y": 140,
@@ -17013,7 +17540,8 @@
         "mode": "link",
         "links": [
             "ad848617eded124c",
-            "f4a2353e5f92576c"
+            "f4a2353e5f92576c",
+            "3790dfc240bc5f6d"
         ],
         "x": 1495,
         "y": 700,
@@ -18497,6 +19025,221 @@
         ]
     },
     {
+        "id": "3790dfc240bc5f6d",
+        "type": "link in",
+        "z": "3d7897ba0ee14173",
+        "g": "2858d8e23dbbc969",
+        "name": "entity - energy",
+        "links": [
+            "9e0b692686687926",
+            "b3e8adf92527c468",
+            "20c33d6d50aa3ee3"
+        ],
+        "x": 145,
+        "y": 2200,
+        "wires": [
+            [
+                "d856c1f2126cfe8d"
+            ]
+        ]
+    },
+    {
+        "id": "d856c1f2126cfe8d",
+        "type": "link call",
+        "z": "3d7897ba0ee14173",
+        "g": "2858d8e23dbbc969",
+        "name": "",
+        "links": [
+            "5a1d16fa45e115fa"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 320,
+        "y": 2200,
+        "wires": [
+            [
+                "96cc3da1f3e135dd"
+            ]
+        ]
+    },
+    {
+        "id": "96cc3da1f3e135dd",
+        "type": "function",
+        "z": "3d7897ba0ee14173",
+        "g": "2858d8e23dbbc969",
+        "name": "data",
+        "func": "if (!msg.enabled) {\n    node.send([msg, msg]);\n\n    return;\n}\n\nconst units = ['mW', 'W', 'kW'];\nconst entity = { ...(global.get('entity', 'memoryOnly') || { }) };\nconst parent = { ...(global.get('parent', 'memoryOnly') || { }) };\nconst room = { ...(global.get('room', 'memoryOnly') || { }) };\n\nlet d = 0;\nlet dropdownOptions = [];\nfor (const e in entity) {\n    if (entity[e]['hidden'] === 0 && units.includes(entity[e]['unit'])) {\n        let entity_name = entity[e]['name'];\n        if (entity_name === '') {\n            entity_name = parent[entity[e]['parent']]['name'] || e;\n        }\n        let room_name = room[entity[e]['room']]['name'] || entity[e]['room'];\n        let element_name = msg.dictionary.option_element[entity[e]['element']] || entity[e]['element']\n\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'grid_power'\n        };\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'solar_power'\n        };\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'battery_power'\n        };\n    }\n\n    if (entity[e]['hidden'] === 0 && entity[e]['element'] === 'battery') {\n        let entity_name = entity[e]['name'];\n        if (entity_name === '') {\n            entity_name = parent[entity[e]['parent']]['name'] || e;\n        }\n        let room_name = room[entity[e]['room']]['name'] || entity[e]['room'];\n        let element_name = msg.dictionary.option_element[entity[e]['element']] || entity[e]['element']\n\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'battery_level'\n        };\n    }\n\n    if (entity[e]['hidden'] === 0 && entity[e]['element'] === 'tariff') {\n        let entity_name = entity[e]['name'];\n        if (entity_name === '') {\n            entity_name = parent[entity[e]['parent']]['name'] || e;\n        }\n        let room_name = room[entity[e]['room']]['name'] || entity[e]['room'];\n        let element_name = msg.dictionary.option_element[entity[e]['element']] || entity[e]['element']\n\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'preferred_tariff'\n        };\n    }\n}\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\n// entity - energy - title\nmsg.payload = msg.dictionary.entity.enegry_title || 'Energy';\n\nnode.send([msg, null]);\n\n// entity - energy - form\nmsg.payload = {};\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.room.energy_grid_power || 'Grid power',\n            \"key\": \"grid_power\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.room.energy_solar_power || 'Solar power',\n            \"key\": \"solar_power\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.room.energy_battery_power || 'Battery power',\n            \"key\": \"battery_power\",\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.room.energy_battery_level || 'Battery level',\n            \"key\": \"battery_level\",\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.room.energy_preferred_tariff || 'Preferred tariff in progress',\n            \"key\": \"preferred_tariff\",\n        }\n    ],\n    'dropdownOptions': dropdownOptions\n};\n\nmsg.payload = { ...(global.get('energy', 'memoryOnly') || { }) };\n\nnode.send([null, msg]);\n\nreturn;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 2200,
+        "wires": [
+            [
+                "453a5521de9c43f0"
+            ],
+            [
+                "088f2fca643818c2"
+            ]
+        ]
+    },
+    {
+        "id": "088f2fca643818c2",
+        "type": "ui-form",
+        "z": "3d7897ba0ee14173",
+        "g": "2858d8e23dbbc969",
+        "name": "entity - energy - form",
+        "group": "a6601e1fe5c357e9",
+        "label": "",
+        "order": 2,
+        "width": "6",
+        "height": "7",
+        "options": [
+            {
+                "label": "solar",
+                "key": "solar_power",
+                "type": "dropdown",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "grid",
+                "key": "grid_power",
+                "type": "dropdown",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "battery",
+                "key": "battery_power",
+                "type": "dropdown",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "level",
+                "key": "battery_level",
+                "type": "dropdown",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "preferred",
+                "key": "preferred_tariff",
+                "type": "dropdown",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "solar_power": "",
+            "grid_power": "",
+            "battery_power": "",
+            "battery_level": "",
+            "preferred_tariff": ""
+        },
+        "payload": "",
+        "submit": "►",
+        "cancel": "",
+        "resetOnSubmit": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "passthru": false,
+        "dropdownOptions": [],
+        "x": 740,
+        "y": 2200,
+        "wires": [
+            [
+                "cc446bb513a039e3"
+            ]
+        ]
+    },
+    {
+        "id": "453a5521de9c43f0",
+        "type": "ui-text",
+        "z": "3d7897ba0ee14173",
+        "g": "2858d8e23dbbc969",
+        "group": "a6601e1fe5c357e9",
+        "order": 1,
+        "width": "6",
+        "height": "1",
+        "name": "entity - energy - title",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "ui-title",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 730,
+        "y": 2140,
+        "wires": []
+    },
+    {
+        "id": "9d9be3102bf89bf0",
+        "type": "function",
+        "z": "3d7897ba0ee14173",
+        "g": "2858d8e23dbbc969",
+        "name": "data",
+        "func": "global.set('energy', msg.payload, 'memoryOnly');\n\nmsg.payload = '';\nmsg.enabled = true;\nmsg.payload = msg.dictionary.notice.save_success;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 2200,
+        "wires": [
+            [
+                "20c33d6d50aa3ee3"
+            ]
+        ]
+    },
+    {
+        "id": "cc446bb513a039e3",
+        "type": "link call",
+        "z": "3d7897ba0ee14173",
+        "g": "2858d8e23dbbc969",
+        "name": "",
+        "links": [
+            "56e6a7b9b0e66451"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 990,
+        "y": 2200,
+        "wires": [
+            [
+                "9d9be3102bf89bf0"
+            ]
+        ]
+    },
+    {
+        "id": "20c33d6d50aa3ee3",
+        "type": "link out",
+        "z": "3d7897ba0ee14173",
+        "g": "2858d8e23dbbc969",
+        "name": "entity - energy",
+        "mode": "link",
+        "links": [
+            "f4a2353e5f92576c",
+            "3790dfc240bc5f6d"
+        ],
+        "x": 1315,
+        "y": 2200,
+        "wires": []
+    },
+    {
         "id": "7374df2eb856c2bc",
         "type": "link in",
         "z": "d90937c9d5b88b24",
@@ -19077,7 +19820,7 @@
         "z": "d90937c9d5b88b24",
         "g": "5175d903a670b8a9",
         "name": "data",
-        "func": "if (msg.hmi.level !== 'admin' || msg.payload === '') {\n\n    return;\n}\n\nlet backup = {};\ntry {\n    backup = JSON.parse(msg.payload);\n\n} catch (error) {\n\n    return;\n}\n\nif (typeof backup['auth'] === 'object') {\n    let auth = global.get('auth', 'memoryOnly') || {};\n    for (const k in backup['auth']) {\n        if (typeof auth[k] !== 'object') {\n            auth[k] = backup['auth'][k];\n        }\n    }\n    global.set('auth', auth, 'memoryOnly');\n}\n\nif (typeof backup['block'] === 'object') {\n    let block = global.get('block', 'memoryOnly') || {};\n    for (const k in backup['block']) {\n        if (typeof block[k] !== 'object') {\n            block[k] = true;\n        }\n    }\n    global.set('block', block, 'memoryOnly');\n}\n\nif (typeof backup['camera'] === 'object') {\n    let camera = global.get('camera', 'memoryOnly') || {};\n    for (const k in backup['camera']) {\n        if (typeof camera[k] !== 'object') {\n            camera[k] = backup['camera'][k];\n        }\n    }\n    global.set('camera', camera, 'memoryOnly');\n}\n\nif (typeof backup['entity'] === 'object') {\n    let entity = global.get('entity', 'memoryOnly') || {};\n    for (const k in backup['entity']) {\n        if (typeof entity[k] !== 'object') {\n            entity[k] = backup['entity'][k];\n        }\n    }\n    global.set('entity', entity, 'memoryOnly');\n}\n\nif (typeof backup['mqtt'] === 'object') {\n    let mqtt = global.get('mqtt', 'memoryOnly') || {};\n    for (const k in backup['mqtt']) {\n        if (typeof mqtt[k] !== 'undefined') {\n            mqtt[k] = backup['mqtt'][k];\n        }\n    }\n    global.set('mqtt', backup['mqtt'], 'memoryOnly');\n}\n\nif (typeof backup['name'] === 'object') {\n    let name = global.get('name', 'memoryOnly') || {};\n    for (const k in name) {\n        if (typeof backup['name'][k] === 'object') {\n            for (const l in backup['name'][k]) {\n                if (typeof name[k][l] !== 'string') {\n                    name[k][l] = backup['name'][k][l];\n                }\n            }\n        }\n    }\n    global.set('name', name, 'memoryOnly');\n}\n\nif (typeof backup['parent'] === 'object') {\n    let parent = global.get('parent', 'memoryOnly') || {};\n    for (const k in backup['parent']) {\n        if (typeof parent[k] !== 'object') {\n            parent[k] = backup['parent'][k];\n        }\n    }\n    global.set('parent', parent, 'memoryOnly');\n}\n\nif (typeof backup['room'] === 'object') {\n    let room = global.get('room', 'memoryOnly') || {};\n    for (const k in backup['room']) {\n        if (typeof room[k] !== 'object') {\n            room[k] = backup['room'][k];\n        }\n    }\n    global.set('room', room, 'memoryOnly');\n}\n\nif (typeof backup['scene'] === 'object') {\n    let scene = global.get('scene', 'memoryOnly') || {};\n    for (const k in backup['scene']) {\n        if (typeof scene[k] !== 'object') {\n            scene[k] = {};\n        }\n\n        for (const l in backup['scene'][k]) {\n            if (typeof scene[k][l] !== 'object') {\n                scene[k][l] = {};\n            }\n\n            scene[k][l] = backup['scene'][k][l];\n        }\n    }\n    global.set('scene', scene, 'memoryOnly');\n}\n\nmsg.payload = msg.dictionary.config.import_success || 'Updoaded successfully';\n\nreturn msg;",
+        "func": "if (msg.hmi.level !== 'admin' || msg.payload === '') {\n\n    return;\n}\n\nlet backup = {};\ntry {\n    backup = JSON.parse(msg.payload);\n\n} catch (error) {\n\n    return;\n}\n\nif (typeof backup['auth'] === 'object') {\n    let auth = global.get('auth', 'memoryOnly') || {};\n    for (const k in backup['auth']) {\n        if (typeof auth[k] !== 'object') {\n            auth[k] = backup['auth'][k];\n        }\n    }\n    global.set('auth', auth, 'memoryOnly');\n}\n\nif (typeof backup['block'] === 'object') {\n    let block = global.get('block', 'memoryOnly') || {};\n    for (const k in backup['block']) {\n        if (typeof block[k] !== 'object') {\n            block[k] = true;\n        }\n    }\n    global.set('block', block, 'memoryOnly');\n}\n\nif (typeof backup['camera'] === 'object') {\n    let camera = global.get('camera', 'memoryOnly') || {};\n    for (const k in backup['camera']) {\n        if (typeof camera[k] !== 'object') {\n            camera[k] = backup['camera'][k];\n        }\n    }\n    global.set('camera', camera, 'memoryOnly');\n}\n\nif (typeof backup['energy'] === 'object') {\n    let energy = global.get('energy', 'memoryOnly') || {};\n    for (const k in backup['energy']) {\n        if (typeof energy[k] !== 'object') {\n            energy[k] = backup['energy'][k];\n        }\n    }\n    global.set('energy', energy, 'memoryOnly');\n}\n\nif (typeof backup['entity'] === 'object') {\n    let entity = global.get('entity', 'memoryOnly') || {};\n    for (const k in backup['entity']) {\n        if (typeof entity[k] !== 'object') {\n            entity[k] = backup['entity'][k];\n        }\n    }\n    global.set('entity', entity, 'memoryOnly');\n}\n\nif (typeof backup['mqtt'] === 'object') {\n    let mqtt = global.get('mqtt', 'memoryOnly') || {};\n    for (const k in backup['mqtt']) {\n        if (typeof mqtt[k] !== 'undefined') {\n            mqtt[k] = backup['mqtt'][k];\n        }\n    }\n    global.set('mqtt', backup['mqtt'], 'memoryOnly');\n}\n\nif (typeof backup['name'] === 'object') {\n    let name = global.get('name', 'memoryOnly') || {};\n    for (const k in name) {\n        if (typeof backup['name'][k] === 'object') {\n            for (const l in backup['name'][k]) {\n                if (typeof name[k][l] !== 'string') {\n                    name[k][l] = backup['name'][k][l];\n                }\n            }\n        }\n    }\n    global.set('name', name, 'memoryOnly');\n}\n\nif (typeof backup['parent'] === 'object') {\n    let parent = global.get('parent', 'memoryOnly') || {};\n    for (const k in backup['parent']) {\n        if (typeof parent[k] !== 'object') {\n            parent[k] = backup['parent'][k];\n        }\n    }\n    global.set('parent', parent, 'memoryOnly');\n}\n\nif (typeof backup['room'] === 'object') {\n    let room = global.get('room', 'memoryOnly') || {};\n    for (const k in backup['room']) {\n        if (typeof room[k] !== 'object') {\n            room[k] = backup['room'][k];\n        }\n    }\n    global.set('room', room, 'memoryOnly');\n}\n\nif (typeof backup['scene'] === 'object') {\n    let scene = global.get('scene', 'memoryOnly') || {};\n    for (const k in backup['scene']) {\n        if (typeof scene[k] !== 'object') {\n            scene[k] = {};\n        }\n\n        for (const l in backup['scene'][k]) {\n            if (typeof scene[k][l] !== 'object') {\n                scene[k][l] = {};\n            }\n\n            scene[k][l] = backup['scene'][k][l];\n        }\n    }\n    global.set('scene', scene, 'memoryOnly');\n}\n\nmsg.payload = msg.dictionary.config.import_success || 'Updoaded successfully';\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
