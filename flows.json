@@ -479,7 +479,7 @@
         "x": 78,
         "y": 433,
         "w": 3284,
-        "h": 974
+        "h": 1034
     },
     {
         "id": "c54a4526abcec6bc",
@@ -604,7 +604,7 @@
         ],
         "x": 68,
         "y": 13,
-        "w": 2824,
+        "w": 2664,
         "h": 794
     },
     {
@@ -736,12 +736,14 @@
             "68099a66afd2c964",
             "9f4c3a561c4b24fd",
             "026fa6a62abe2a3e",
-            "5378ac71ccb6301d"
+            "5378ac71ccb6301d",
+            "590abae543742c27",
+            "1c0bf08f3f416b9a"
         ],
         "x": 94,
         "y": 339,
         "w": 1102,
-        "h": 2902
+        "h": 2962
     },
     {
         "id": "0a9a5f5f4e641599",
@@ -796,7 +798,7 @@
             "c5272524801e6973",
             "1c88fe3bb40921f1"
         ],
-        "x": 1934,
+        "x": 1294,
         "y": 339,
         "w": 1272,
         "h": 1042
@@ -1032,22 +1034,15 @@
             "96cc723fc51b1198",
             "40c1abe753f89c56",
             "5dd7f22ae60d0ae7",
-            "0864d2310d5096ec",
-            "dca0159812f2de35",
-            "f88386c2a8482889",
-            "12d3fc5b95897b11",
-            "628d7713f06b1424",
-            "4303d87879088acd",
-            "c9e238ffb09f052f",
-            "66dc6b179b2c1bb9",
-            "f05fb90728b44fe9",
-            "5221df35fe29e550",
-            "b1401ca270d8299e"
+            "b1401ca270d8299e",
+            "20a58d08ceb281ef",
+            "eaef811166ad5081",
+            "7727440a7f10e83f"
         ],
         "x": 94,
         "y": 5339,
-        "w": 1252,
-        "h": 1642
+        "w": 952,
+        "h": 1702
     },
     {
         "id": "dbf81e22acbbc881",
@@ -1116,6 +1111,66 @@
         "y": 4839,
         "w": 822,
         "h": 142
+    },
+    {
+        "id": "b828708d51f09ccc",
+        "type": "group",
+        "z": "77269fd32cdb1638",
+        "name": "energy - chart",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "3bb3af6b09f9d58d",
+            "1be9c4338accb553",
+            "ec0a6f88f88b8cfe",
+            "ed2ba7fbd238280f",
+            "d03b469d9ba955c9",
+            "a447bfbc1cc0509d",
+            "a8c5090ac8e20652",
+            "b8c212c065fb656c",
+            "3cc949b1dce97a7f",
+            "1de2d406744746ce",
+            "71c7640e718ec808",
+            "d0e7cf5b630e14bb",
+            "0c7695b73246298b",
+            "c5405938a9a7095b",
+            "cbaa549673dce10c",
+            "8d039354be97a91f",
+            "64bf4ecc57a1f540",
+            "450ea29bbe944daa",
+            "5397038e1b8466e2",
+            "f3fadf6fc5d10708",
+            "fe4f08e6fb5e72b4",
+            "0b72d65e0990815b",
+            "40cee7992ff2a035"
+        ],
+        "x": 104,
+        "y": 219,
+        "w": 1622,
+        "h": 382
+    },
+    {
+        "id": "3b7269d3cbadfee6",
+        "type": "group",
+        "z": "77269fd32cdb1638",
+        "name": "energy - page",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "6542d322125c22c0",
+            "66048b5b43cc0248",
+            "f4ff4572e061287d"
+        ],
+        "x": 104,
+        "y": 99,
+        "w": 332,
+        "h": 82
     },
     {
         "id": "f362e0d82cb6210f",
@@ -1189,7 +1244,6 @@
             "26bca8d17b597ed1",
             "73f3212ba921a620",
             "91b9129907358afa",
-            "558522ead4ae24ea",
             "091abc67148a2c55",
             "18ea6555f6dbc2f5",
             "afa71edf80d855b7",
@@ -1208,7 +1262,7 @@
         ],
         "x": 94,
         "y": 39,
-        "w": 2772,
+        "w": 2612,
         "h": 202
     },
     {
@@ -1765,12 +1819,17 @@
             "1277b3cb65a928a5",
             "0b4a1a85f2ad907f",
             "23c0d2a25f48ae52",
-            "d545bd465be22ecc"
+            "d545bd465be22ecc",
+            "afbd8bf525171357",
+            "0422442a8e7248e8",
+            "f960619b3cce8963",
+            "19ba39cf5c4ae89e",
+            "e41067e156320212"
         ],
         "x": 1574,
         "y": 579,
         "w": 1762,
-        "h": 742
+        "h": 862
     },
     {
         "id": "f41bf09b8682c536",
@@ -1823,66 +1882,6 @@
         "y": 4119,
         "w": 812,
         "h": 202
-    },
-    {
-        "id": "b828708d51f09ccc",
-        "type": "group",
-        "z": "77269fd32cdb1638",
-        "name": "energy - chart",
-        "style": {
-            "fill": "#6f2fa0",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "3bb3af6b09f9d58d",
-            "1be9c4338accb553",
-            "ec0a6f88f88b8cfe",
-            "ed2ba7fbd238280f",
-            "d03b469d9ba955c9",
-            "a447bfbc1cc0509d",
-            "a8c5090ac8e20652",
-            "b8c212c065fb656c",
-            "3cc949b1dce97a7f",
-            "1de2d406744746ce",
-            "71c7640e718ec808",
-            "d0e7cf5b630e14bb",
-            "0c7695b73246298b",
-            "c5405938a9a7095b",
-            "cbaa549673dce10c",
-            "8d039354be97a91f",
-            "64bf4ecc57a1f540",
-            "450ea29bbe944daa",
-            "5397038e1b8466e2",
-            "f3fadf6fc5d10708",
-            "fe4f08e6fb5e72b4",
-            "0b72d65e0990815b",
-            "40cee7992ff2a035"
-        ],
-        "x": 104,
-        "y": 219,
-        "w": 1622,
-        "h": 382
-    },
-    {
-        "id": "3b7269d3cbadfee6",
-        "type": "group",
-        "z": "77269fd32cdb1638",
-        "name": "energy - page",
-        "style": {
-            "fill": "#ff0000",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "6542d322125c22c0",
-            "66048b5b43cc0248",
-            "f4ff4572e061287d"
-        ],
-        "x": 104,
-        "y": 99,
-        "w": 332,
-        "h": 82
     },
     {
         "id": "df7710b4b2c4e55b",
@@ -1952,6 +1951,257 @@
         "willMsg": {},
         "userProps": "",
         "sessionExpiry": ""
+    },
+    {
+        "id": "a619830c5e5eadfb",
+        "type": "mqtt-broker",
+        "name": "mqtt - teleinfo",
+        "broker": "192.168.0.11",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": false,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "1f942ba50a9a898b",
+        "type": "mqtt-broker",
+        "name": "mqtt - zwave",
+        "broker": "192.168.0.11",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": false,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "0e0c7f65d7976645",
+        "type": "mqtt-broker",
+        "name": "mqtt - zigbee2mqtt",
+        "broker": "192.168.0.11",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": false,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "c16ec4b19c5752ca",
+        "type": "mqtt-broker",
+        "name": "mqtt - daikin",
+        "broker": "192.168.0.11",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": false,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "76311abf5cc118a2",
+        "type": "mqtt-broker",
+        "name": "mqtt - apsystems",
+        "broker": "192.168.0.11",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": false,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "ef46def79d290757",
+        "type": "mqtt-broker",
+        "name": "mqtt - rfxcom2mqtt",
+        "broker": "192.168.0.11",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": false,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "cf56c7fff4df45c2",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": 8086,
+        "protocol": "http",
+        "database": "database",
+        "name": "influxdb - domotic",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://dknr_influxdb:8086",
+        "timeout": 10,
+        "rejectUnauthorized": false
+    },
+    {
+        "id": "8a07b2ad5f79dfba",
+        "type": "mqtt-broker",
+        "name": "mqtt - zendure",
+        "broker": "192.168.0.11",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "addbd6502a1ad56e",
+        "type": "ui-theme",
+        "name": "Theme 2",
+        "colors": {
+            "surface": "#3b4252",
+            "primary": "#88c0d0",
+            "bgPage": "#2e3440",
+            "groupBg": "#3b4252",
+            "groupOutline": "#4c566a"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "10px",
+            "groupGap": "10px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "10px"
+        }
     },
     {
         "id": "f081fa7a92c9aeb7",
@@ -2242,7 +2492,7 @@
     {
         "id": "3a30762508b6edae",
         "type": "ui-group",
-        "name": "scene_main",
+        "name": "scene - main - group",
         "page": "1e9f5bde9636a371",
         "width": 6,
         "height": 1,
@@ -2318,44 +2568,13 @@
         "groupType": "default"
     },
     {
-        "id": "a619830c5e5eadfb",
-        "type": "mqtt-broker",
-        "name": "mqtt - teleinfo",
-        "broker": "192.168.0.11",
-        "port": 1883,
-        "clientid": "",
-        "autoConnect": false,
-        "usetls": false,
-        "protocolVersion": 4,
-        "keepalive": 60,
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
         "id": "79512e64340aeb66",
         "type": "ui-group",
-        "name": "entity_list",
+        "name": "entity - list - group",
         "page": "2b12391aa314ef62",
         "width": 6,
         "height": 1,
-        "order": 5,
+        "order": 4,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -2365,11 +2584,11 @@
     {
         "id": "ab792e98013972e4",
         "type": "ui-group",
-        "name": "entity_entity_edit",
+        "name": "entity - entity - edit - dialog",
         "page": "2b12391aa314ef62",
         "width": "6",
         "height": 1,
-        "order": 6,
+        "order": 5,
         "showTitle": false,
         "className": "",
         "visible": "false",
@@ -2379,11 +2598,11 @@
     {
         "id": "371d8326aa7242fd",
         "type": "ui-group",
-        "name": "entity_parent_edit",
+        "name": "entity - parent - edit - dialog",
         "page": "2b12391aa314ef62",
         "width": 6,
         "height": 1,
-        "order": 7,
+        "order": 6,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -2405,161 +2624,6 @@
         "groupType": "dialog"
     },
     {
-        "id": "1f942ba50a9a898b",
-        "type": "mqtt-broker",
-        "name": "mqtt - zwave",
-        "broker": "192.168.0.11",
-        "port": 1883,
-        "clientid": "",
-        "autoConnect": false,
-        "usetls": false,
-        "protocolVersion": 4,
-        "keepalive": 60,
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "0e0c7f65d7976645",
-        "type": "mqtt-broker",
-        "name": "mqtt - zigbee2mqtt",
-        "broker": "192.168.0.11",
-        "port": 1883,
-        "clientid": "",
-        "autoConnect": false,
-        "usetls": false,
-        "protocolVersion": 4,
-        "keepalive": 60,
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "c16ec4b19c5752ca",
-        "type": "mqtt-broker",
-        "name": "mqtt - daikin",
-        "broker": "192.168.0.11",
-        "port": 1883,
-        "clientid": "",
-        "autoConnect": false,
-        "usetls": false,
-        "protocolVersion": 4,
-        "keepalive": 60,
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "76311abf5cc118a2",
-        "type": "mqtt-broker",
-        "name": "mqtt - apsystems",
-        "broker": "192.168.0.11",
-        "port": 1883,
-        "clientid": "",
-        "autoConnect": false,
-        "usetls": false,
-        "protocolVersion": 4,
-        "keepalive": 60,
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "ef46def79d290757",
-        "type": "mqtt-broker",
-        "name": "mqtt - rfxcom2mqtt",
-        "broker": "192.168.0.11",
-        "port": 1883,
-        "clientid": "",
-        "autoConnect": false,
-        "usetls": false,
-        "protocolVersion": 4,
-        "keepalive": 60,
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
         "id": "d76afa629b7bd0b0",
         "type": "ui-group",
         "name": "entity - camera - group",
@@ -2574,24 +2638,9 @@
         "groupType": "default"
     },
     {
-        "id": "cf56c7fff4df45c2",
-        "type": "influxdb",
-        "hostname": "127.0.0.1",
-        "port": 8086,
-        "protocol": "http",
-        "database": "database",
-        "name": "influxdb - domotic",
-        "usetls": false,
-        "tls": "",
-        "influxdbVersion": "2.0",
-        "url": "http://dknr_influxdb:8086",
-        "timeout": 10,
-        "rejectUnauthorized": false
-    },
-    {
         "id": "59faf735ca9b8988",
         "type": "ui-group",
-        "name": "scene_trigger_add",
+        "name": "scene - trigger - add - dialog",
         "page": "1e9f5bde9636a371",
         "width": 6,
         "height": 1,
@@ -2628,54 +2677,9 @@
         "groupType": "default"
     },
     {
-        "id": "8a07b2ad5f79dfba",
-        "type": "mqtt-broker",
-        "name": "mqtt - zendure",
-        "broker": "192.168.0.11",
-        "port": 1883,
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": 4,
-        "keepalive": 60,
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
         "id": "a6601e1fe5c357e9",
         "type": "ui-group",
         "name": "entity - energy - group",
-        "page": "2b12391aa314ef62",
-        "width": 6,
-        "height": 1,
-        "order": 4,
-        "showTitle": false,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
-    },
-    {
-        "id": "f5be3b78a4cf8a3a",
-        "type": "ui-group",
-        "name": "entity - thermostat - group",
         "page": "2b12391aa314ef62",
         "width": 6,
         "height": 1,
@@ -2735,25 +2739,6 @@
         "visible": "true",
         "disabled": "false",
         "groupType": "default"
-    },
-    {
-        "id": "addbd6502a1ad56e",
-        "type": "ui-theme",
-        "name": "Theme 2",
-        "colors": {
-            "surface": "#3b4252",
-            "primary": "#88c0d0",
-            "bgPage": "#2e3440",
-            "groupBg": "#3b4252",
-            "groupOutline": "#4c566a"
-        },
-        "sizes": {
-            "density": "default",
-            "pagePadding": "10px",
-            "groupGap": "10px",
-            "groupBorderRadius": "4px",
-            "widgetGap": "10px"
-        }
     },
     {
         "id": "025edbd02daf82d0",
@@ -2913,7 +2898,7 @@
             "2b0dce043fcbd8b3",
             "9809530d07fc6ddc"
         ],
-        "x": 2675,
+        "x": 2515,
         "y": 80,
         "wires": []
     },
@@ -3060,7 +3045,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 2210,
+        "x": 2050,
         "y": 80,
         "wires": [
             [
@@ -3077,7 +3062,7 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 2390,
+        "x": 2230,
         "y": 80,
         "wires": [
             [
@@ -3098,7 +3083,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2550,
+        "x": 2390,
         "y": 80,
         "wires": [
             [
@@ -3206,14 +3191,14 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "describe",
-        "func": "const describe = global.get('describe', 'memoryOnly') || {};\n\nif (typeof describe.pages !== 'object') {\n    describe.pages = {};\n}\n\n// Set default app values\ndescribe.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\ndescribe.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['energy'] = {\n    'id': '34a13cfdebc90220',\n    'name': 'energy',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['scene'] = {\n    'id': '1e9f5bde9636a371',\n    'name': 'scene',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['entity'] = {\n    'id': '2b12391aa314ef62',\n    'name': 'entity',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': false,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// Sources\ndescribe.sources['dknr'] = ['eye', 'Domotic'];\n\n// Binary element with revert value\ndescribe.reverts = ['aperture', 'door', 'window', 'lock'];\n\n// Non numeric units\ndescribe.texts = ['', 'chex', 'enum', 'text', 'time'];\n\n// Elements icons\ndescribe.elements = {\n    'switch': ['toggle-switch-off-outline', 'toggle-switch-outline', 'Switch'],\n    'plug': ['power-plug-off', 'power-plug', 'Plug'],\n    'power': ['flash-outline', 'flash', 'Power'],\n    'current': ['current-ac', 'current-ac', 'Current'],\n    'frequency': ['sine-wave', 'sine-wave', 'Frequency'],\n    'voltage': ['current-dc', 'current-dc', 'Frequency'],\n    'energy': ['meter-electric-outline', 'meter-electric', 'Energy'],\n    'light': ['lightbulb-off', 'lightbulb', 'Light'],\n    'remote': ['remote-off', 'remote', 'Remote'],\n    'door': ['door-closed', 'door-open', 'Door'], // 0=open\n    'window': ['window-closed-variant', 'window-open-variant', 'Window'], //0=open\n    'lock': ['lock-off', 'lock', 'Lock'], //0=open\n    //'shield': ['shield-lock-outline', 'shield-lock'],\n    //'aperture': ['electric-switch-closed', 'electric-switch'], // 0=open\n    'shutter': ['window-shutter', 'window-shutter-open', 'Shutter'],\n    'slider': ['door-sliding', 'door-sliding-open', 'Slider'],\n    //'heater': ['radiator-off', 'radiator'], => temperature\n    //'cooler': ['radiator-off', 'radiator'], => temperature\n    //'airconditioner': ['radiator-off', 'radiator'], => temparature\n    'waterboiler': ['water-boiler-off', 'water-boiler', 'Waterboiler'],\n    'alert': ['bell-off', 'bell', 'Alert'],\n    'sound': ['volume-off', 'volume-high', 'Sound'],\n    'motion': ['motion-sensor-off', 'motion-sensor', 'Motion'],\n    //'presence': ['location-exit', 'location-enter'], => motion\n    'temperature': ['thermometer-off', 'thermometer', 'Temperature'],\n    'humidity': ['water-percent-alert', 'water-percent', 'Humidity'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless', 'Illuminance'],\n    'pressure': ['gauge', 'gauge', 'Pressure'],\n    //'wind': ['weather-windy', 'weather-dust'],\n    //'airflow': ['fan-off', 'fan'], => humidity\n    'fan': ['fan-off', 'fan', 'Fan'],\n    'direction': ['swap-horizontal', 'swap-horizontal-bold', 'Direction'],\n    'time': ['clock-outline', 'clock', 'Time'],\n    'battery': ['battery-low', 'battery', 'Battery'],\n    //'climate': ['home-thermometer-outline', 'home-thermometer'],\n    'mode': ['home-switch-outline', 'home-switch', 'Mode'],\n    'text': ['clipboard-text-off', 'clipboard-text', 'Text'],\n    'location': ['map-marker-off-outline', 'map-marker', 'Location'],\n    //'camera': ['camera-off', 'camera'],\n    'color': ['palette', 'palette', 'Color'],\n    'tariff': ['currency-eur-off', 'currency-eur', 'Tariff']\n};\n\ndescribe.units = {\n    '': 'None',\n    '°C': 'Degree celsuis',\n    '°F': 'Degree fahrenheit',\n    'mA': 'Milliampere',\n    'A': 'Ampere',\n    'Hz': 'Hertz',\n    'mW': 'Milliwatt',\n    'W': 'Watt',\n    'kW': 'Kilowatt',\n    'MW': 'Megawatt',\n    'mWh': 'Milliwatt/hour',\n    'Wh': 'Watt/Hour',\n    'mVA': 'Millivoltampere',\n    'VA': 'Voltampere',\n    'mV': 'Millivolt',\n    'V': 'Volt',\n    'lx': 'Lux',\n    'ppm': 'Parts per million',\n    '%': 'Percent (0-100)',\n    'b': 'Binary (0-1)',\n    'rb': 'Revert binary',\n    '8b': '8-bit (0-255)',\n    'n': 'Number',\n    's': 'Second',\n    'ms': 'Millisecond',\n    'time': 'Time',\n    'enum': 'Enumerator',\n    'text': 'Text',\n    'chex': 'Hexadécimal color'\n};\n\n// Value color\ndescribe.colors = {\n    'on': '#008000',\n    'off': '#FF0000',\n    'median': '#F08000',\n    'none': '#808000',\n    'theme': '#0094CE',\n    'empty': '#CCCCCC'\n};\n\n// Scene elements fields\ndescribe.scenes = {\n    'humidity': [\n        'enabled',\n        'on',\n        'off',\n        'duration',\n        'humidity'\n    ],\n    'light': [\n        'enabled',\n        'on',\n        'off',\n        'high',\n        'low',\n        'motion',\n        'retention',\n        'duration',\n        'diurnal',\n        'nocturnal',\n        'nightlight',\n        'illuminance',\n        'darkness'\n    ],\n    'shutter': [\n        'enabled',\n        'on',\n        'off',\n        'aperture',\n        'diurnal',\n        'nocturnal',\n        'illuminance',\n        'darkness',\n        'openwork',\n        'daily'\n    ],\n    'waterboiler': [\n        'enabled',\n        'on',\n        'off',\n        'duration',\n        'power',\n        'tariff',\n        'daily'\n    ],\n    'temperature': [\n        'enabled',\n        'on',\n        'off',\n        'temperature_setpoint_eco',\n        'temperature_setpoint_confort',\n        'temperature_setpoint_cold',\n        'temperature_coefficient_indoor',\n        'temperature_coefficient_outdoor',\n        'temperature_duration_aperture',\n        'temperature_duration_preheat',\n        'temperature_duration_cycle',\n        'temperature_duration_offloading',\n        'temperature_power_offloading',\n    ]\n};\n\n// Scene routines fields\ndescribe.routines = {\n    'motion': ['motion-sensor-off', 'motion-sensor'],\n    'aperture': ['door-closed', 'door-open'],\n    'nocturnal': ['shield-moon-outline', 'shield-moon'],\n    'diurnal': ['shield-sun-outline', 'shield-sun'],\n    'nightlight': ['lightbulb-night-outline', 'lightbulb-night'],\n    'retention': ['timeline-clock-outline', 'timeline-clock'],\n    'daily': ['calendar-remove', 'calendar-check'],\n    'openwork': ['storefront-remove-outline', 'storefront-check'],\n    'duration': ['timer-remove-outline', 'timer-check'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless'],\n    'darkness': ['brightness-5', 'brightness-4'],\n    'humidity': ['water-percent-alert', 'water-percent']\n};\n\n// Templates\ndescribe.template = {\n    'hmi': {\n        'id': '',\n        'login': '',\n        'level': 'visitor',\n        'lang': 'en',\n        'name': 'auth', // ui page\n        'room': '',\n        'time': 0\n    },\n    'room': {\n        'id': '',\n        'name': '',\n        'outdoor': 0\n    },\n    'parent': {\n        'id': '',\n        'name': '',\n        'seen': 0\n    },\n    'entity': {\n        'uid': '',\n        'source': '',\n        'id': '',\n        'name': '',\n        'parent': '',\n        'value': '',\n        'type': '',\n        'room': '',\n        'element': '',\n        'unit': '',\n        'seen': 0,\n        'hidden': 0\n    },\n    'scene': {\n        'target': '',\n        'enabled': 0,\n        'on': 1,\n        'off': 0,\n        'motion': 0,\n        'aperture': 0,\n        'nocturnal': 0,\n        'diurnal': 0,\n        'nightlight': 0,\n        'retention': 0,\n        'duration': 60, //minutes\n        'high': '70',\n        'low': '30',\n        'illuminance': 0, //2000\n        'darkness': 0, //200\n        'humidity': 0,\n        'daily': 0,\n        'openwork': 0,\n        'tariff': 0, // limit to a given tariff (see dknr_config_fulltariff)\n        'power': 0, // to check if target is really off\n        'timer': 0, // for duration routine\n        'today': 0, // for daily routine, 1=executed today else 0\n\n        'temperature_setpoint_eco': 19,\n        'temperature_setpoint_confort': 21,\n        'temperature_setpoint_cold': 18,\n        'temperature_coefficient_indoor': 100,\n        'temperature_coefficient_outdoor': 10,\n        'temperature_duration_aperture': 5,\n        'temperature_duration_preheat': 10,\n        'temperature_duration_cycle': 60,\n        'temperature_duration_offloading': 60,\n        'temperature_power_offloading': 1000,\n\n        'temperature_aperture_closed': 0,\n        'temperature_aperture_timer': 0\n    },\n    'trigger': {\n        'inputhigh': 1, // Minimal input level for high level\n        'inputlow': 0, // Maximal input level for low high level\n        'outputhigh': 'high', // Output level on high input level. [none,high,low,toggle]\n        'outputlow': 'low' // output level for low input level [none, high, low, toggle]\n    },\n    'routine': {\n        'topic': '',\n        'payload': false,\n        'replay': false,\n        'rsp': true,\n        'iam': false,\n        'scene': {},\n        'param': {},\n        'trigger': {},\n        'target': {},\n        'routines': []\n    },\n    'thermostat': {\n        'target': '',\n        'setpoint_eco': 19,\n        'setpoint_confort': 21,\n        'setpoint_cold': 18,\n        'coefficient_indoor': 100,\n        'coefficient_outdoor': 10,\n        'duration_aperture': 5,\n        'duration_preheat': 10,\n        'duration_cycle': 60,\n        'duration_offloading': 60,\n        'power_device': 1000,\n        'aperture': {},\n\n        'status': 'stopped',\n        'temperature_setpoint': 19,\n        'aperture_opened': 0,\n        'aperture_delayed': 0,\n        'pilot_request': 0,\n        'pilot_last': 0,\n        'offloading_state': 0,\n        'offloading_count': 0\n\n    }\n};\n\n// Save config\nglobal.set('describe', describe, 'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/.config.projects.json'\n};",
+        "func": "const describe = global.get('describe', 'memoryOnly') || {};\n\nif (typeof describe.pages !== 'object') {\n    describe.pages = {};\n}\n\n// Set default app values\ndescribe.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\ndescribe.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['energy'] = {\n    'id': '34a13cfdebc90220',\n    'name': 'energy',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['scene'] = {\n    'id': '1e9f5bde9636a371',\n    'name': 'scene',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['entity'] = {\n    'id': '2b12391aa314ef62',\n    'name': 'entity',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': false,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// Sources\ndescribe.sources['dknr'] = ['eye', 'Domotic'];\n\n// Binary element with revert value\ndescribe.reverts = ['aperture', 'door', 'window', 'lock'];\n\n// Non numeric units\ndescribe.texts = ['', 'chex', 'enum', 'text', 'time'];\n\n// Elements icons\ndescribe.elements = {\n    'switch': ['toggle-switch-off-outline', 'toggle-switch-outline', 'Switch'],\n    'plug': ['power-plug-off', 'power-plug', 'Plug'],\n    'power': ['flash-outline', 'flash', 'Power'],\n    'current': ['current-ac', 'current-ac', 'Current'],\n    'frequency': ['sine-wave', 'sine-wave', 'Frequency'],\n    'voltage': ['current-dc', 'current-dc', 'Frequency'],\n    'energy': ['meter-electric-outline', 'meter-electric', 'Energy'],\n    'light': ['lightbulb-off', 'lightbulb', 'Light'],\n    'remote': ['remote-off', 'remote', 'Remote'],\n    'door': ['door-closed', 'door-open', 'Door'], // 0=open\n    'window': ['window-closed-variant', 'window-open-variant', 'Window'], //0=open\n    'lock': ['lock-off', 'lock', 'Lock'], //0=open\n    //'shield': ['shield-lock-outline', 'shield-lock'],\n    //'aperture': ['electric-switch-closed', 'electric-switch'], // 0=open\n    'shutter': ['window-shutter', 'window-shutter-open', 'Shutter'],\n    'slider': ['door-sliding', 'door-sliding-open', 'Slider'],\n    //'heater': ['radiator-off', 'radiator'], => temperature\n    //'cooler': ['radiator-off', 'radiator'], => temperature\n    //'airconditioner': ['radiator-off', 'radiator'], => temparature\n    'waterboiler': ['water-boiler-off', 'water-boiler', 'Waterboiler'],\n    'alert': ['bell-off', 'bell', 'Alert'],\n    'sound': ['volume-off', 'volume-high', 'Sound'],\n    'motion': ['motion-sensor-off', 'motion-sensor', 'Motion'],\n    //'presence': ['location-exit', 'location-enter'], => motion\n    'temperature': ['thermometer-off', 'thermometer', 'Temperature'],\n    'humidity': ['water-percent-alert', 'water-percent', 'Humidity'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless', 'Illuminance'],\n    'pressure': ['gauge', 'gauge', 'Pressure'],\n    //'wind': ['weather-windy', 'weather-dust'],\n    //'airflow': ['fan-off', 'fan'], => humidity\n    'fan': ['fan-off', 'fan', 'Fan'],\n    'direction': ['swap-horizontal', 'swap-horizontal-bold', 'Direction'],\n    'time': ['clock-outline', 'clock', 'Time'],\n    'battery': ['battery-low', 'battery', 'Battery'],\n    //'climate': ['home-thermometer-outline', 'home-thermometer'],\n    'mode': ['home-switch-outline', 'home-switch', 'Mode'],\n    'text': ['clipboard-text-off', 'clipboard-text', 'Text'],\n    'location': ['map-marker-off-outline', 'map-marker', 'Location'],\n    //'camera': ['camera-off', 'camera'],\n    'color': ['palette', 'palette', 'Color'],\n    'tariff': ['currency-eur-off', 'currency-eur', 'Tariff']\n};\n\ndescribe.units = {\n    '': 'None',\n    '°C': 'Degree celsuis',\n    '°F': 'Degree fahrenheit',\n    'mA': 'Milliampere',\n    'A': 'Ampere',\n    'Hz': 'Hertz',\n    'mW': 'Milliwatt',\n    'W': 'Watt',\n    'kW': 'Kilowatt',\n    'MW': 'Megawatt',\n    'mWh': 'Milliwatt/hour',\n    'Wh': 'Watt/Hour',\n    'mVA': 'Millivoltampere',\n    'VA': 'Voltampere',\n    'mV': 'Millivolt',\n    'V': 'Volt',\n    'lx': 'Lux',\n    'ppm': 'Parts per million',\n    '%': 'Percent (0-100)',\n    'b': 'Binary (0-1)',\n    'rb': 'Revert binary',\n    '8b': '8-bit (0-255)',\n    'n': 'Number',\n    's': 'Second',\n    'ms': 'Millisecond',\n    'time': 'Time',\n    'enum': 'Enumerator',\n    'text': 'Text',\n    'chex': 'Hexadécimal color'\n};\n\n// Value color\ndescribe.colors = {\n    'on': '#008000',\n    'off': '#FF0000',\n    'median': '#F08000',\n    'none': '#808000',\n    'theme': '#0094CE',\n    'empty': '#CCCCCC'\n};\n\n// Scene elements fields\ndescribe.scenes = {\n    'humidity': [\n        'enabled',\n        'on',\n        'off',\n        'duration',\n        'humidity'\n    ],\n    'light': [\n        'enabled',\n        'on',\n        'off',\n        'high',\n        'low',\n        'motion',\n        'retention',\n        'duration',\n        'diurnal',\n        'nocturnal',\n        'nightlight',\n        'illuminance',\n        'darkness'\n    ],\n    'shutter': [\n        'enabled',\n        'on',\n        'off',\n        'aperture',\n        'diurnal',\n        'nocturnal',\n        'illuminance',\n        'darkness',\n        'openwork',\n        'daily'\n    ],\n    'waterboiler': [\n        'enabled',\n        'on',\n        'off',\n        'duration',\n        'power',\n        'tariff',\n        'daily'\n    ],\n    'temperature': [\n        'enabled',\n        'on',\n        'off',\n        'temperature_setpoint_eco',\n        'temperature_setpoint_confort',\n        'temperature_setpoint_cold',\n        'temperature_coefficient_indoor',\n        'temperature_coefficient_outdoor',\n        'temperature_duration_aperture',\n        'temperature_duration_preheat',\n        'temperature_duration_cycle',\n        'temperature_duration_offloading',\n        'temperature_power_consumption',\n        'temperature_energy_free'\n    ]\n};\n\n// Scene routines fields\ndescribe.routines = {\n    'motion': ['motion-sensor-off', 'motion-sensor'],\n    'aperture': ['door-closed', 'door-open'],\n    'nocturnal': ['shield-moon-outline', 'shield-moon'],\n    'diurnal': ['shield-sun-outline', 'shield-sun'],\n    'nightlight': ['lightbulb-night-outline', 'lightbulb-night'],\n    'retention': ['timeline-clock-outline', 'timeline-clock'],\n    'daily': ['calendar-remove', 'calendar-check'],\n    'openwork': ['storefront-remove-outline', 'storefront-check'],\n    'duration': ['timer-remove-outline', 'timer-check'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless'],\n    'darkness': ['brightness-5', 'brightness-4'],\n    'humidity': ['water-percent-alert', 'water-percent'],\n    'temperature_energy_free': ['lightning-bolt-outline', 'lightning-bolt']\n};\n\n// Templates\ndescribe.template = {\n    'hmi': {\n        'id': '',\n        'login': '',\n        'level': 'visitor',\n        'lang': 'en',\n        'name': 'auth', // ui page\n        'room': '',\n        'time': 0\n    },\n    'room': {\n        'id': '',\n        'name': '',\n        'outdoor': 0\n    },\n    'parent': {\n        'id': '',\n        'name': '',\n        'seen': 0\n    },\n    'entity': {\n        'uid': '',\n        'source': '',\n        'id': '',\n        'name': '',\n        'parent': '',\n        'value': '',\n        'type': '',\n        'room': '',\n        'element': '',\n        'unit': '',\n        'seen': 0,\n        'hidden': 0\n    },\n    'scene': {\n        'target': '',\n        'enabled': 0,\n        'on': 1,\n        'off': 0,\n        'motion': 0,\n        'aperture': 0,\n        'nocturnal': 0,\n        'diurnal': 0,\n        'nightlight': 0,\n        'retention': 0,\n        'duration': 60, //minutes\n        'high': '70',\n        'low': '30',\n        'illuminance': 0, //2000\n        'darkness': 0, //200\n        'humidity': 0,\n        'daily': 0,\n        'openwork': 0,\n        'tariff': 0, // limit to a given tariff (see dknr_config_fulltariff)\n        'power': 0, // to check if target is really off\n        'timer': 0, // for duration routine\n        'today': 0, // for daily routine, 1=executed today else 0\n\n        'temperature_setpoint_eco': 19,\n        'temperature_setpoint_confort': 21,\n        'temperature_setpoint_cold': 18,\n        'temperature_coefficient_indoor': 100,\n        'temperature_coefficient_outdoor': 10,\n        'temperature_duration_aperture': 5,\n        'temperature_duration_preheat': 10,\n        'temperature_duration_cycle': 60,\n        'temperature_duration_offloading': 60,\n        'temperature_power_consumption': 1000,\n        'temperature_energy_free': 0,\n\n        'temperature_aperture_opened': 0,\n        'temperature_aperture_timer': 0,\n        'temperature_pilot_state': 'stopped',\n        'temperature_pilot_last': 0\n    },\n    'trigger': {\n        'inputhigh': 1, // Minimal input level for high level\n        'inputlow': 0, // Maximal input level for low high level\n        'outputhigh': 'high', // Output level on high input level. [none,high,low,toggle]\n        'outputlow': 'low' // output level for low input level [none, high, low, toggle]\n    },\n    'routine': {\n        'topic': '',\n        'payload': false,\n        'replay': false,\n        'rsp': true,\n        'iam': false,\n        'scene': {},\n        'param': {},\n        'trigger': {},\n        'target': {},\n        'routines': []\n    }\n};\n\n// Save config\nglobal.set('describe', describe, 'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/.config.projects.json'\n};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1300,
+        "x": 1140,
         "y": 80,
         "wires": [
             [
@@ -4298,7 +4283,7 @@
         "y": 80,
         "wires": [
             [
-                "558522ead4ae24ea"
+                "91b9129907358afa"
             ]
         ]
     },
@@ -4308,44 +4293,18 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "check",
-        "func": "// Check payload\nif (typeof msg.payload !== 'object') {\n    msg.payload = {};\n}\nif (typeof msg.payload.pages !== 'object') {\n    msg.payload.pages = {};\n}\nif (typeof msg.payload.sources !== 'object') {\n    msg.payload.sources = {};\n}\nif (typeof msg.payload.enum !== 'object') {\n    msg.payload.enum = {};\n}\nif (typeof msg.payload.dictionary !== 'object') {\n    msg.payload.dictionary = {};\n}\n\n// Update describe\nconst describe = global.get('describe', 'memoryOnly') || {};\nfor (const p in msg.payload.pages) {\n    describe.pages[p] = msg.payload.pages[p];\n}\nfor (const s in msg.payload.sources) {\n    describe.sources[s] = msg.payload.sources[s];\n}\nfor (const e in msg.payload.enum) {\n    describe.enum[e] = msg.payload.enum[e];\n}\n\nglobal.set('describe', describe, 'memoryOnly');\n\n// Update dictionary\nconst dictionary = global.get('dictionary', 'memoryOnly') || {};\nfor (const lang in msg.payload.dictionary) {\n    if (typeof dictionary[lang] !== 'object') {\n        dictionary[lang] = {};\n    }\n    if (typeof msg.payload.dictionary[lang] === 'object') {\n        for (const group in msg.payload.dictionary[lang]) {\n            if (typeof dictionary[lang][group] !== 'object') {\n                dictionary[lang][group] = {};\n            }\n            if (typeof msg.payload.dictionary[lang][group] === 'object') {\n                for (const sentence in msg.payload.dictionary[lang][group]) {\n                    // custom sentence overwrite existing ones\n                    dictionary[lang][group][sentence] = msg.payload.dictionary[lang][group][sentence];\n                }\n            }\n        }\n    }\n}\n\nglobal.set('dictionary', dictionary, 'memoryOnly');\n\nreturn msg;",
+        "func": "// wait data was saved\nawait new Promise(resolve => setTimeout(resolve, 10));\n\n// Check payload\nif (typeof msg.payload !== 'object') {\n    msg.payload = {};\n}\nif (typeof msg.payload.pages !== 'object') {\n    msg.payload.pages = {};\n}\nif (typeof msg.payload.sources !== 'object') {\n    msg.payload.sources = {};\n}\nif (typeof msg.payload.enum !== 'object') {\n    msg.payload.enum = {};\n}\nif (typeof msg.payload.dictionary !== 'object') {\n    msg.payload.dictionary = {};\n}\n\n// Update describe\nconst describe = global.get('describe', 'memoryOnly') || {};\nfor (const p in msg.payload.pages) {\n    describe.pages[p] = msg.payload.pages[p];\n}\nfor (const s in msg.payload.sources) {\n    describe.sources[s] = msg.payload.sources[s];\n}\nfor (const e in msg.payload.enum) {\n    describe.enum[e] = msg.payload.enum[e];\n}\n\nglobal.set('describe', describe, 'memoryOnly');\n\n// Update dictionary\nconst dictionary = global.get('dictionary', 'memoryOnly') || {};\nfor (const lang in msg.payload.dictionary) {\n    if (typeof dictionary[lang] !== 'object') {\n        dictionary[lang] = {};\n    }\n    if (typeof msg.payload.dictionary[lang] === 'object') {\n        for (const group in msg.payload.dictionary[lang]) {\n            if (typeof dictionary[lang][group] !== 'object') {\n                dictionary[lang][group] = {};\n            }\n            if (typeof msg.payload.dictionary[lang][group] === 'object') {\n                for (const sentence in msg.payload.dictionary[lang][group]) {\n                    // custom sentence overwrite existing ones\n                    dictionary[lang][group][sentence] = msg.payload.dictionary[lang][group][sentence];\n                }\n            }\n        }\n    }\n}\n\nglobal.set('dictionary', dictionary, 'memoryOnly');\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 970,
-        "y": 80,
-        "wires": [
-            [
-                "091abc67148a2c55"
-            ]
-        ]
-    },
-    {
-        "id": "558522ead4ae24ea",
-        "type": "delay",
-        "z": "4bc72a1112cb448c",
-        "g": "bcc6f36c217d1643",
-        "name": "10ms",
-        "pauseType": "delay",
-        "timeout": "10",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
         "x": 810,
         "y": 80,
         "wires": [
             [
-                "91b9129907358afa"
+                "091abc67148a2c55"
             ]
         ]
     },
@@ -4367,7 +4326,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1130,
+        "x": 970,
         "y": 80,
         "wires": [
             [
@@ -4409,7 +4368,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 1670,
+        "x": 1510,
         "y": 80,
         "wires": [
             [
@@ -4426,7 +4385,7 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 1850,
+        "x": 1690,
         "y": 80,
         "wires": [
             [
@@ -4447,7 +4406,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2020,
+        "x": 1860,
         "y": 80,
         "wires": [
             [
@@ -6244,7 +6203,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "data",
-        "func": "// Maintenance for memory var\n\nflow.set('stop', true, 'memoryOnly');\nnode.status({ fill: 'red' });\n\nconst template = { ...(global.get('describe.template', 'memoryOnly') || {}) };\n\n// Clean name\nlet new_p = {};\nconst p = global.get('parent', 'memoryOnly') || {};\nconst l = global.get('entity', 'memoryOnly') || {}\nfor (const k in l) {\n    if (l[k]['parent'] !== '' && typeof p[l[k]['parent']] === 'object') {\n        new_p[l[k]['parent']] = p[l[k]['parent']];\n    }\n}\n\nglobal.set('parent', new_p, 'memoryOnly');\n\n// Clean entity\nconst template_entity = Object.keys(template.entity);\nlet entity = {...global.get('entity', 'memoryOnly')};\nfor (const k in entity) {\n    for (const l in entity[k]) {\n        if (!template_entity.includes(l)) {\n            delete entity[k][l];\n        }\n    }\n}\nglobal.set('entity', entity, 'memoryOnly');\n\n\n// Clean up scenes\nlet scene = { ...(global.get('scene', 'memoryOnly') || {}) };\n\nfor (const e in scene) {\n    let clean = { };\n\n    const type = global.get('entity[\"' + e + '\"][\"element\"]', 'memoryOnly') || '';\n    if (type === '') {\n\n        continue;\n    }\n    const fields = [ ...(global.get('describe[\"scenes\"][\"' + type + '\"]', 'memoryOnly') || []) ];\n    if (fields.length === 0) {\n\n        continue;\n    }\n\n    for (const field in template.scene) {\n        if (fields.includes(field)) {\n            clean[field] = scene[e][field] || template['scene'][field];\n        }\n        else {\n            clean[field] = template['scene'][field];\n        }\n    }\n\n    clean['target'] = e;\n    clean['trigger'] = scene[e]['trigger'] || {};\n    clean['today'] = scene[e]['today'] || 0;\n    clean['timer'] = scene[e]['timer'] || 0;\n\n    scene[e] = clean;\n}\nglobal.set('scene', scene, 'memoryOnly');\n\n\nnode.status({ fill: 'green' });\nflow.set('stop', false, 'memoryOnly');\n\nreturn msg;",
+        "func": "// Maintenance for memory var\n\nflow.set('stop', true, 'memoryOnly');\nnode.status({ fill: 'red' });\n\nconst template = { ...(global.get('describe.template', 'memoryOnly') || {}) };\n\n// Clean name\nlet new_p = {};\nconst p = global.get('parent', 'memoryOnly') || {};\nconst l = global.get('entity', 'memoryOnly') || {}\nfor (const k in l) {\n    if (l[k]['parent'] !== '' && typeof p[l[k]['parent']] === 'object') {\n        new_p[l[k]['parent']] = p[l[k]['parent']];\n    }\n}\n\nglobal.set('parent', new_p, 'memoryOnly');\n\n// Clean entity\nconst template_entity = Object.keys(template.entity);\nlet entity = {...global.get('entity', 'memoryOnly')};\nfor (const k in entity) {\n    for (const l in entity[k]) {\n        if (!template_entity.includes(l)) {\n            delete entity[k][l];\n        }\n    }\n}\nglobal.set('entity', entity, 'memoryOnly');\n\n\n// Clean up scenes\nlet scene = { ...(global.get('scene', 'memoryOnly') || {}) };\n\nfor (const e in scene) {\n    let clean = { };\n\n    const type = global.get('entity[\"' + e + '\"][\"element\"]', 'memoryOnly') || '';\n    if (type === '') {\n\n        continue;\n    }\n    const fields = [ ...(global.get('describe[\"scenes\"][\"' + type + '\"]', 'memoryOnly') || []) ];\n    if (fields.length === 0) {\n\n        continue;\n    }\n\n    for (const field in template.scene) {\n        if (fields.includes(field)) {\n            clean[field] = scene[e][field] || template['scene'][field];\n        }\n        else {\n            clean[field] = template['scene'][field];\n        }\n    }\n\n    clean['target'] = e;\n    clean['trigger'] = scene[e]['trigger'] || { };\n    clean['today'] = scene[e]['today'] || 0;\n    clean['timer'] = scene[e]['timer'] || 0;\n    \n    clean['temperature_aperture_opened'] = scene[e]['temperature_aperture_opened'] || 0;\n    clean['temperature_aperture_timer'] = scene[e]['temperature_aperture_timer'] || 0;\n    clean['temperature_pilot_state'] = scene[e]['temperature_pilot_state'] || 'stopped';\n    clean['temperature_pilot_last'] = scene[e]['temperature_pilot_last'] || 0;\n\n    scene[e] = clean;\n}\nglobal.set('scene', scene, 'memoryOnly');\n\n\nnode.status({ fill: 'green' });\nflow.set('stop', false, 'memoryOnly');\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7268,7 +7227,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1480,
+        "x": 1320,
         "y": 80,
         "wires": [
             [
@@ -7443,7 +7402,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 5680,
+        "y": 5740,
         "wires": [
             [
                 "87f50458a3c79a83"
@@ -7464,7 +7423,7 @@
         "finalize": "",
         "libs": [],
         "x": 380,
-        "y": 5800,
+        "y": 5860,
         "wires": [
             [
                 "426c0755e692fb12"
@@ -7485,10 +7444,10 @@
         "finalize": "",
         "libs": [],
         "x": 380,
-        "y": 5860,
+        "y": 5920,
         "wires": [
             [
-                "f88386c2a8482889"
+                "20a58d08ceb281ef"
             ]
         ]
     },
@@ -7506,7 +7465,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 5980,
+        "y": 6040,
         "wires": [
             [
                 "a207538e0e9bf388"
@@ -7527,7 +7486,7 @@
         "finalize": "",
         "libs": [],
         "x": 380,
-        "y": 6040,
+        "y": 6100,
         "wires": [
             [
                 "348a4c108e5704cb"
@@ -7548,7 +7507,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 6400,
+        "y": 6460,
         "wires": [
             [
                 "eb115f6465263869"
@@ -7569,7 +7528,7 @@
         "finalize": "",
         "libs": [],
         "x": 400,
-        "y": 6100,
+        "y": 6160,
         "wires": [
             [
                 "2df305474f453f98"
@@ -7590,7 +7549,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 6160,
+        "y": 6220,
         "wires": [
             [
                 "cea6d6bde6c4152c"
@@ -7611,7 +7570,7 @@
         "finalize": "",
         "libs": [],
         "x": 380,
-        "y": 6220,
+        "y": 6280,
         "wires": [
             [
                 "6ad5d4d28e6f6cc7"
@@ -7632,7 +7591,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 6280,
+        "y": 6340,
         "wires": [
             [
                 "22388e92c457cf9d"
@@ -7653,7 +7612,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 6460,
+        "y": 6520,
         "wires": [
             [
                 "2e8a83fff0849513"
@@ -7674,7 +7633,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 6340,
+        "y": 6400,
         "wires": [
             [
                 "bbe2bb02375537d4"
@@ -7695,7 +7654,7 @@
         "finalize": "",
         "libs": [],
         "x": 370,
-        "y": 6640,
+        "y": 6700,
         "wires": [
             [
                 "75f2b6a4ccf3147a"
@@ -7716,7 +7675,7 @@
         "finalize": "",
         "libs": [],
         "x": 380,
-        "y": 6700,
+        "y": 6760,
         "wires": [
             [
                 "0bf8d5a3edf7096a"
@@ -7737,7 +7696,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 6760,
+        "y": 6820,
         "wires": [
             [
                 "5075e5842b20c135"
@@ -7759,7 +7718,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 610,
-        "y": 6940,
+        "y": 7000,
         "wires": []
     },
     {
@@ -7776,7 +7735,7 @@
         "finalize": "",
         "libs": [],
         "x": 550,
-        "y": 6820,
+        "y": 6880,
         "wires": [
             [
                 "e5777951d9eac0fa"
@@ -7794,7 +7753,7 @@
             "cc0a7c14f877c371"
         ],
         "x": 675,
-        "y": 6820,
+        "y": 6880,
         "wires": []
     },
     {
@@ -7808,7 +7767,7 @@
             "c6d0d480067b06fa"
         ],
         "x": 675,
-        "y": 6880,
+        "y": 6940,
         "wires": []
     },
     {
@@ -7825,7 +7784,7 @@
         "finalize": "",
         "libs": [],
         "x": 550,
-        "y": 6880,
+        "y": 6940,
         "wires": [
             [
                 "38a611ec8e34d6a9"
@@ -7846,13 +7805,12 @@
         "finalize": "",
         "libs": [],
         "x": 370,
-        "y": 6820,
+        "y": 6880,
         "wires": [
             [
                 "09fd5ad00fb1ea56",
                 "9239b7d5a5cc4adb",
-                "45450f1a8cb9e778",
-                "0864d2310d5096ec"
+                "45450f1a8cb9e778"
             ]
         ]
     },
@@ -7926,7 +7884,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 5740,
+        "y": 5800,
         "wires": [
             [
                 "721e748c243fdd56"
@@ -7968,7 +7926,7 @@
         "finalize": "",
         "libs": [],
         "x": 370,
-        "y": 6520,
+        "y": 6580,
         "wires": [
             [
                 "7dcf708ffe2256a9"
@@ -7989,7 +7947,7 @@
         "finalize": "",
         "libs": [],
         "x": 380,
-        "y": 6580,
+        "y": 6640,
         "wires": [
             [
                 "40c1abe753f89c56"
@@ -8115,7 +8073,7 @@
         "y": 5620,
         "wires": [
             [
-                "d5fab7943a3e6f71"
+                "7727440a7f10e83f"
             ]
         ]
     },
@@ -8223,7 +8181,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2740,
+        "x": 2580,
         "y": 140,
         "wires": []
     },
@@ -8263,7 +8221,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 730,
-        "y": 6580,
+        "y": 6640,
         "wires": [
             [
                 "96cc723fc51b1198"
@@ -8284,7 +8242,7 @@
         "finalize": "",
         "libs": [],
         "x": 930,
-        "y": 6580,
+        "y": 6640,
         "wires": [
             [
                 "da627346767980a2"
@@ -8310,7 +8268,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 570,
-        "y": 6580,
+        "y": 6640,
         "wires": [
             [
                 "176e6b395a7de8e8"
@@ -8342,50 +8300,6 @@
                 "13781a89a231ad0c"
             ]
         ]
-    },
-    {
-        "id": "0864d2310d5096ec",
-        "type": "switch",
-        "z": "4bc72a1112cb448c",
-        "g": "6c942117c5c5ebe1",
-        "name": "",
-        "property": "target.element",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "shutter",
-                "vt": "str"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 1,
-        "x": 680,
-        "y": 6680,
-        "wires": [
-            [
-                "dca0159812f2de35"
-            ]
-        ]
-    },
-    {
-        "id": "dca0159812f2de35",
-        "type": "debug",
-        "z": "4bc72a1112cb448c",
-        "g": "6c942117c5c5ebe1",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 780,
-        "y": 6740,
-        "wires": []
     },
     {
         "id": "faeb4267b27bf0b6",
@@ -8751,101 +8665,55 @@
         "wires": []
     },
     {
-        "id": "f88386c2a8482889",
+        "id": "b1401ca270d8299e",
         "type": "function",
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
-        "name": "routine - type",
-        "func": "switch (msg.target.element) {\n    case 'humidity':\n    case 'light' :\n    case 'shutter':\n    case 'waterboiler':\n        node.send([ msg, null ]);\n        break;\n    case 'temperature':\n        node.send([ null, msg ]);\n        break;\n}\n\nreturn;",
-        "outputs": 2,
+        "name": "function 2",
+        "func": "if (msg.target.element === 'temperature') {\n    node.status({ 'fill': msg.payload ? 'green' : 'red', 'text': msg.target.uid });\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 370,
-        "y": 5920,
+        "x": 660,
+        "y": 6020,
         "wires": [
             [
-                "371036e77e74d030"
-            ],
-            [
-                "5221df35fe29e550"
+                "eaef811166ad5081"
             ]
         ]
     },
     {
-        "id": "12d3fc5b95897b11",
+        "id": "20a58d08ceb281ef",
         "type": "function",
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - thermostat",
-        "func": "\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n//node.status({ 'text': msg.target.uid });\n\nconst entities = { ...(global.get('entity', 'memoryOnly') || { }) };\n\nconst now = Date.now();\nconst thermostat = {\n    'temperature_mode': 'off',\n    'temperature_setpoint': 0,\n    'temperature_indoor': 0,\n    'temperature_outdoor': 0,\n    'temperature_aperture': 0,\n    'temperature_compute': 0\n};\n\n// Get thermostat mode\nthermostat.temperature_mode = global.get('entity[\"dknr_sensor_temperature\"][\"value\"]', 'memoryOnly') || 'off';\n\n// Get requested temperature\nswitch (thermostat.temperature_mode) {\n    case 'off':\n        msg.rsp = false;\n        msg.summary.thermostat = 'thermostat mode is off';\n        node.status({ 'fill': 'red', 'text': msg.summary.thermostat });\n\n        return msg;\n    case 'heating':\n        thermostat.temperature_setpoint = msg.scene.temperature_setpoint_eco;\n        //thermostat.temperature_setpoint = msg.scene.temperature_setpoint_confort;\n        break;\n    case 'cooling':\n        thermostat.temperature_setpoint = msg.scene.temperature_setpoint_cold;\n        break;\n    case 'thawing':\n        thermostat.temperature_setpoint = 7;\n        break;\n    default:\n        msg.rsp = false;\n        msg.summary.thermostat = 'thermostat has no temperautre setpoint';\n        node.status({ 'fill': 'red', 'text': msg.summary.thermostat });\n\n        return msg;\n}\n\n// Disabled cold on 18° setpoint\nif (thermostat.temperature_mode === 'cooling' && thermostat.temperature_setpoint === 18) {\n    msg.target.value = 0;\n    msg.summary.thermostat = 'thermostat has disabled cold mode';\n    node.status({ 'fill': 'blue', 'text': msg.summary.thermostat  });\n\n    return msg;\n}\n\nlet temperature_indoor_count = 0;\nlet temperature_outdoor_count = 0;\n\nfor (const t in msg.scene.trigger) {\n    if (typeof entities[t] !== 'object' || entities[t]['hidden'] !== 0) {\n\n        continue;\n    }\n\n    // Get temperatures\n    if ([ 'temperature' ].includes(entities[t]['element'])) {\n        // 0 is considered as wrong value.\n        if (entities[t]['value'] === 0) {\n\n            continue;\n        }\n\n        // Outdoor temperature\n        if (global.get('room[\"' + entities[t]['room'] + '\"][\"outdoor\"]') === 1) {\n            temperature_outdoor_count++;\n            thermostat.temperature_outdoor += parseInt(entities[t]['value'] * 10);\n        }\n        // Indoor temperature\n        else {\n            temperature_indoor_count++;\n            thermostat.temperature_indoor += parseInt(entities[t]['value'] * 10);\n        }\n    }\n\n    // Get apertures states\n    if ([ 'door', 'window', 'slider' ].includes(entities[t]['element'])) {\n        if (entities[t]['value'] === 1) {\n            thermostat.temperature_aperture = 1;\n        }\n    }\n}\n\n// Temperature is required\nif (temperature_indoor_count === 0 || temperature_outdoor_count === 0) {\n    msg.rsp = false;\n    msg.summary.thermostat = 'thermostat has no temperature sensors';\n    node.status({ 'fill': 'red', 'text': msg.summary.thermostat });\n\n    return msg;\n}\n\n// Compute temperatures\nthermostat.temperature_indoor = Math.round(thermostat.temperature_indoor / temperature_indoor_count) / 10;\nthermostat.temperature_outdoor = Math.round(thermostat.temperature_outdoor / temperature_outdoor_count) / 10;\n\n// Compute request\nif (thermostat.temperature_mode === 'cooling') {\n    // compute cold request\n    // We have not a good cooling calcul, so we can adjust with that:\n    const adjust = 2;\n    \n    let souscalcul = ((thermostat.temperature_indoor - thermostat.temperature_setpoint - adjust) * msg.scene.temperature_coefficient_indoor) + ((thermostat.temperature_outdoor - thermostat.temperature_indoor + adjust) * msg.scene.temperature_coefficient_outdoor);\n    let calculb = (souscalcul / 100 * msg.scene.temperature_duration_cycle);\n    let calculc = (msg.scene.temperature_duration_cycle * msg.scene.temperature_duration_preheat / 100);\n    calculb = calculb.toFixed(1);\n    calculc = calculc.toFixed(1);\n    // positive result for heat request\n    thermostat.temperature_compute = calculb - calculc;\n\n\n    if (thermostat.temperature_compute > 0) {\n        msg.summary.thermostat = 'cool is resquested at ' + thermostat.temperature_compute;\n        node.status({ 'fill': \"green\", 'text': msg.summary.thermostat });\n    }\n    if (thermostat.temperature_compute <= 0) {\n        msg.summary.thermostat = 'cool is not resquested at ' + thermostat.temperature_compute;\n        node.status({ 'fill': \"yellow\", 'text': msg.summary.thermostat });\n    }\n\n}\nelse {\n    // Compute heat request\n    let souscalcul = ((thermostat.temperature_setpoint - thermostat.temperature_indoor) * msg.scene.temperature_coefficient_indoor) + ((thermostat.temperature_indoor - thermostat.temperature_outdoor) * msg.scene.temperature_coefficient_outdoor);\n    let calculb = (souscalcul / 100 * msg.scene.temperature_duration_cycle);\n    let calculc = (msg.scene.temperature_duration_cycle * msg.scene.temperature_duration_preheat / 100);\n    calculb = calculb.toFixed(1);\n    calculc = calculc.toFixed(1);\n\n    // positive result for heat request\n    thermostat.temperature_compute = calculb - calculc;\n\n    if (thermostat.temperature_compute > 0) {\n        msg.summary.thermostat = 'heat is resquested at ' + thermostat.temperature_compute;\n        node.status({ 'fill': \"green\", 'text': msg.summary.thermostat });\n    }\n    if (thermostat.temperature_compute <= 0) {\n        msg.summary.thermostat = 'heat is not resquested at ' + thermostat.temperature_compute;\n        node.status({ 'fill': \"yellow\", 'text': msg.summary.thermostat });\n    }\n}\n\n\n// Compute aperture\nif (thermostat.temperature_aperture !== msg.scene.temperature_aperture_closed) {\n    // Aperture state changes, set a timer and stop routine\n    msg.scene.temperature_aperture_closed = thermostat.temperature_aperture;\n    msg.scene.temperature_aperture_timer = now;\n\n    // Update scene\n    const scene = { ...(global.get('scene', 'memoryOnly') || { }) };\n    scene[msg.target.uid] = msg.scene;\n    global.set('scene', scene, 'memoryOnly');\n\n    msg.rsp = false;\n    msg.summary.thermostat = 'thermostat has delayed aperture';\n    node.status({ 'fill': 'red', 'text': msg.summary.thermostat });\n\n    return msg;\n}\nif (msg.scene.temperature_aperture_timer > 0 && (msg.scene.temperature_aperture_timer + msg.scene.duration_aperture) < now) {\n    // Aperture timer is ongoing, stop routine\n    msg.rsp = false;\n    msg.summary.thermostat = 'thermostat has delayed aperture';\n    node.status({ 'fill': 'red', 'text': msg.summary.thermostat });\n\n    return msg;\n}\n\nif (msg.scene.temperature_aperture_timer > 0) {\n    // Aperture timer is perempted, update it and go on\n    msg.scene.temperature_aperture_timer = 0;\n\n    // Update scene\n    const scene = { ...(global.get('scene', 'memoryOnly') || {}) };\n    scene[msg.target.uid] = msg.scene;\n    global.set('scene', scene, 'memoryOnly');\n}\n\n// Pilot to off if aperture is opened\nif (msg.scene.temperature_aperture_closed === 0) {\n    msg.target.value = 0;\n    \n    msg.summary.thermostat = 'thermostat aperture is opened';\n    node.status({ 'fill': 'blue', 'text': msg.summary.thermostat });\n}\n// Pilot to on if it is requested and aperture is closed\nelse if (thermostat.temperature_compute > 0) {\n    msg.target.value = 1;\n}\n\n// debug\nmsg.payload = thermostat;\n\nreturn msg;",
+        "func": "/*\ntemperature :\nDo all the job for thermostat.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (msg.target.element !== 'temperature') {\n    msg.summary.temperature = 'bypass';\n    node.status({\n        'fill': 'yellow',\n        'text': 'bypass'\n    });\n\n    return msg;\n}\n\n// Get usefull data\nconst entities = { ...(global.get('entity', 'memoryOnly') || { }) };\nconst now = Date.now();\nconst current = {\n    'indoor': 0,\n    'outdoor': 0,\n    'aperture': 0,\n    'mode': 'off',\n    'setpoint': 7,\n    'calculation': -10000 // positive result to pilot\n};\n\n\n//\n// Compute triggers\n//\n\nlet temperature_outdoor_count = 0;\nlet temperature_indoor_count = 0;\n\nfor (const t in msg.scene.trigger) {\n    // Trigger is already in used\n    if (typeof entities[t] !== 'object' || entities[t]['hidden'] !== 0) {\n\n        continue;\n    }\n\n    // Get temperatures\n    if ([ 'temperature' ].includes(entities[t]['element'])) {\n        // 0 is considered as wrong value.\n        if (entities[t]['value'] === 0) {\n\n            continue;\n        }\n\n        // Outdoor temperature\n        if (global.get('room[\"' + entities[t]['room'] + '\"][\"outdoor\"]') === 1) {\n            temperature_outdoor_count++;\n            current.outdoor += parseInt(entities[t]['value'] * 10);\n        }\n        // Indoor temperature\n        else {\n            temperature_indoor_count++;\n            current.indoor += parseInt(entities[t]['value'] * 10);\n        }\n    }\n\n    // Get apertures states\n    if ([ 'door', 'window', 'slider' ].includes(entities[t]['element'])) {\n        if (entities[t]['value'] === 0) { // 0 = opened\n            current.aperture = 1; // 1 = opened\n        }\n    }\n}\n\n// Temperature is required\nif (temperature_indoor_count === 0 || temperature_outdoor_count === 0) {\n    msg.rsp = false;\n    msg.summary.thermostat = 'thermostat has no temperature sensors';\n    node.status({\n        'fill': 'red',\n        'text': msg.summary.thermostat\n    });\n\n    return msg;\n}\n\n// Compute temperatures\ncurrent.indoor = Math.round(current.indoor / temperature_indoor_count) / 10;\ncurrent.outdoor = Math.round(current.outdoor / temperature_outdoor_count) / 10;\n\n// Get thermostat mode\ncurrent.mode = global.get('entity[\"dknr_sensor_temperature\"][\"value\"]', 'memoryOnly') || 'off';\n\n\n//\n// Compute data\n//\n\n// Get requested temperature\nswitch (current.mode) {\n    case 'off':\n/*        msg.rsp = false;\n        msg.summary.thermostat = 'thermostat mode is off';\n        node.status({\n            'fill': 'red',\n            'text': msg.summary.thermostat\n        });\n\n        return msg;\n*/\n        break;\n    case 'heating':\n        current.setpoint = msg.scene.temperature_setpoint_eco;\n        //thermostat.temperature_setpoint = msg.scene.temperature_setpoint_confort;\n        break;\n    case 'cooling':\n        current.setpoint = msg.scene.temperature_setpoint_cold;\n        break;\n    case 'thawing':\n        current.setpoint = 7;\n        break;\n    default:\n        msg.rsp = false;\n        msg.summary.thermostat = 'thermostat has no temperautre setpoint';\n        node.status({\n            'fill': 'red',\n            'text': msg.summary.thermostat\n        });\n\n        return msg;\n}\n\n// Compute cold request\nif (current.mode === 'cooling') {\n    // Cold temperature is set to 18° means cooling is disabled\n    if (current.setpoint > 18) {\n        current.calculation = ((current.indoor - current.setpoint) * msg.scene.temperature_coefficient_indoor) + ((current.outdoor - current.indoor) * msg.scene.temperature_coefficient_outdoor);\n    }\n}\n// Compute heat request\nelse {\n    current.calculation = ((current.setpoint - current.indoor) * msg.scene.temperature_coefficient_indoor) + ((current.indoor - current.outdoor) * msg.scene.temperature_coefficient_outdoor);\n}\n\n// Final compute heat/cold request\nlet calculb = (current.calculation / 100 * msg.scene.temperature_duration_cycle);\nlet calculc = (msg.scene.temperature_duration_cycle * msg.scene.temperature_duration_preheat / 100);\ncurrent.calculation = Number(calculb.toFixed(1)) - Number(calculc.toFixed(1));\n\n// Aperture state changes, set a timer\nif (current.aperture !== msg.scene.temperature_aperture_opened) {\n    msg.scene.temperature_aperture_opened = current.aperture;\n    msg.scene.temperature_aperture_timer = now;\n}\n\n// Aperture timer is perempted, update it and go on\nif (msg.scene.temperature_aperture_timer > 0 && (msg.scene.temperature_aperture_timer + msg.scene.temperature_duration_aperture * 60000) < now) {\n    msg.scene.temperature_aperture_timer = 0;\n}\n\n// State\nif (current.mode === 'off') {\n    msg.scene.temperature_pilot_state = 'stopped';\n}\nelse if (msg.scene.temperature_aperture_timer > 0) {\n    msg.scene.temperature_pilot_state = 'suspended';\n}\nelse if (msg.scene.temperature_aperture_opened === 1) {\n    msg.scene.temperature_pilot_state = 'stopped';\n}\nelse if (current.mode === 'cooling' && msg.scene.temperature_energy_free === 1) {\n    // Find solar power entity\n    const solar_entity = global.get('energy[\"solar_power\"]', 'memoryOnly') || '';\n    if (solar_entity !== ''\n        && typeof entities[solar_entity] === 'object'\n        && entities[solar_entity]['hidden'] === 0\n    ) {\n        // If not enought solar power, stop\n        if (entities[solar_entity]['value'] < msg.scene.temperature_power_consumption) {\n            msg.scene.temperature_pilot_state = 'stopped';\n        }\n    }\n}\nelse if (current.calculation > 0) {\n    msg.scene.temperature_pilot_state = 'powered';\n}\nelse if ((now - msg.scene.temperature_duration_cycle * 60000) > msg.scene.temperature_pilot_last) {\n    msg.scene.temperature_pilot_state = 'reached';\n}\nelse {\n    // unchanged\n}\n\n// Pilot final order\nif ([ 'powered' ] .includes(msg.scene.temperature_pilot_state)) {\n    // Start heating, update timer\n    if (msg.target.value === msg.scene.off) {\n        msg.scene.temperature_pilot_last = now;\n    }\n    msg.payload = true;\n}\nelse if ([ 'reached', 'stopped' ].includes(msg.scene.temperature_pilot_state)) {\n    // Stop heating, update timer\n    if (msg.target.value === msg.scene.on) {\n        msg.scene.temperature_pilot_last = now;\n    }\n    msg.payload = false;\n}\nelse {\n    // Keep unchanged\n    msg.payload = msg.target.value === msg.scene.on ? true : false;\n}\n\nmsg.summary.thermostat = 'thermostat is ' + msg.scene.temperature_pilot_state + ' (' + current.calculation + ')';\nnode.status({\n    'fill': msg.scene.temperature_pilot_state === 'powered' ? 'green' : 'blue',\n    'text': msg.summary.thermostat\n});\n\n// Update scene\nconst scene = { ...(global.get('scene', 'memoryOnly') || {}) };\nscene[msg.target.uid] = msg.scene;\nglobal.set('scene', scene, 'memoryOnly');\n\n// debug\nmsg.thermostat = current;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
-        "y": 5920,
+        "x": 390,
+        "y": 5980,
         "wires": [
             [
-                "b1401ca270d8299e"
+                "b1401ca270d8299e",
+                "371036e77e74d030"
             ]
         ]
     },
     {
-        "id": "628d7713f06b1424",
+        "id": "eaef811166ad5081",
         "type": "debug",
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "summary.thermostat",
-        "statusType": "msg",
-        "x": 1240,
-        "y": 5920,
-        "wires": []
-    },
-    {
-        "id": "4303d87879088acd",
-        "type": "switch",
-        "z": "4bc72a1112cb448c",
-        "g": "6c942117c5c5ebe1",
-        "name": "",
-        "property": "target.element",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "temperature",
-                "vt": "str"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 1,
-        "x": 700,
-        "y": 5740,
-        "wires": [
-            [
-                "c9e238ffb09f052f"
-            ]
-        ]
-    },
-    {
-        "id": "c9e238ffb09f052f",
-        "type": "debug",
-        "z": "4bc72a1112cb448c",
-        "g": "6c942117c5c5ebe1",
-        "name": "debug 5",
-        "active": true,
+        "name": "debug 2",
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -8853,97 +8721,28 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 860,
-        "y": 5740,
+        "x": 840,
+        "y": 6020,
         "wires": []
     },
     {
-        "id": "66dc6b179b2c1bb9",
-        "type": "debug",
-        "z": "4bc72a1112cb448c",
-        "g": "6c942117c5c5ebe1",
-        "name": "debug 6",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "summary.thermostat",
-        "statusType": "msg",
-        "x": 1240,
-        "y": 5980,
-        "wires": []
-    },
-    {
-        "id": "f05fb90728b44fe9",
-        "type": "switch",
-        "z": "4bc72a1112cb448c",
-        "g": "6c942117c5c5ebe1",
-        "name": "",
-        "property": "rsp",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 1060,
-        "y": 5920,
-        "wires": [
-            [
-                "628d7713f06b1424"
-            ],
-            [
-                "66dc6b179b2c1bb9"
-            ]
-        ]
-    },
-    {
-        "id": "5221df35fe29e550",
+        "id": "7727440a7f10e83f",
         "type": "function",
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
-        "name": "function 1",
-        "func": "node.status({ 'text': msg.target.uid });\n\nreturn msg;",
+        "name": "routine - target",
+        "func": "/*\ntarget (preroutine) : \nSimply show trigger uid on this admin dashboard node.\n*/\n\nnode.status({ 'fill': 'green', 'text': msg.target.uid })\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 640,
-        "y": 5860,
+        "x": 380,
+        "y": 5680,
         "wires": [
             [
-                "12d3fc5b95897b11"
-            ]
-        ]
-    },
-    {
-        "id": "b1401ca270d8299e",
-        "type": "function",
-        "z": "4bc72a1112cb448c",
-        "g": "6c942117c5c5ebe1",
-        "name": "function 2",
-        "func": "node.status({ 'fill': msg.target.value === 1 ? 'green' : 'red', 'text': msg.target.uid });\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 880,
-        "y": 5920,
-        "wires": [
-            [
-                "f05fb90728b44fe9"
+                "d5fab7943a3e6f71"
             ]
         ]
     },
@@ -10650,7 +10449,7 @@
         "z": "560376d6bba621ec",
         "g": "a2828ff4910e05b9",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\ndelete msg.action;\n\nlet uid = msg.payload.uid;\n\nlet entity = global.get('entity[\"' + uid + '\"]', 'memoryOnly');\nif (typeof entity !== 'object' ||\n    entity.type === 'sensor' // for now, no sensor details\n) {\n    return;\n}\n\nmsg.class = '';\nmsg.enabled = true;\nmsg.payload = entity;\nmsg.topic = msg.payload.uid; // bug\n\n// msg.topic on ui-xxx bugs on node-red 5.04\nflow.set('detail[\"' + msg.hmi.id + '\"]', msg.payload.uid, 'memoryOnly');\n\nreturn msg;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\ndelete msg.action;\n\nlet uid = msg.payload.uid;\n\nlet entity = global.get('entity[\"' + uid + '\"]', 'memoryOnly');\nif (typeof entity !== 'object' ||\n    entity.hidden === 1\n) {\n    return;\n}\n\nmsg.class = '';\nmsg.enabled = true;\nmsg.payload = entity;\nmsg.topic = msg.payload.uid; // bug\n\n// msg.topic on ui-xxx bugs on node-red 5.04\nflow.set('detail[\"' + msg.hmi.id + '\"]', msg.payload.uid, 'memoryOnly');\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -10662,7 +10461,8 @@
         "wires": [
             [
                 "338c8f021cf57c15",
-                "1755ed7972b3a965"
+                "1755ed7972b3a965",
+                "0422442a8e7248e8"
             ]
         ]
     },
@@ -12046,7 +11846,7 @@
         "z": "560376d6bba621ec",
         "g": "32fd2df8e6be1ebb",
         "name": "data",
-        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nmsg.payload = [];\n\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\nlet room = flow.get('room[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '';\nif (room === '') {\n\n    return;\n}\n\nlet colors = global.get('describe.colors', 'memoryOnly') || {};\nlet scene = global.get('scene', 'memoryOnly') || {};\nlet parent = global.get('parent', 'memoryOnly') || {};\nlet options = { ...(global.get('describe.routines', 'memoryOnly') || {}) };\n\nlet i = 0;\nlet dropdownOptions = [];\n\nfor (const e in scene) {\n    let entity = global.get('entity[\"' + e + '\"]', 'memoryOnly') || {};\n    if (typeof entity === 'object' && entity['room'] === room) {\n        let enabled = Boolean(scene[e]['enabled']);\n        let color = enabled ? colors.theme : colors.empty;\n        let ticon = global.get('describe[\"elements\"][\"' + entity['element'] + '\"]', 'memoryOnly') || ['pause', 'play', 'Unkonwn'];\n        let icon = enabled ? ticon[1] : ticon[0];\n        \n        \n        let name = entity['name'];\n        if (name === '' || name === entity['id']) {\n            name = typeof parent[entity['parent']] === 'object' ? parent[entity['parent']]['name'] : '';\n            if (name === '') {\n                name = entity['parent'];\n            }\n        }\n\n        let option = '';\n        for (const o in options) {\n            if (scene[e][o] > 0) {\n                let option_icon = options[o][1];\n                let option_color = colors.none;\n                let option_name = msg.dictionary.option_scene[o] || o;\n                option += '<i class=\"icon-in-row mdi mdi-' + option_icon + '\" style=\"color:' + option_color + '\" title=\"' + option_name + '\"></i>';\n            }\n        }\n\n        dropdownOptions[i++] = {\n            'scene_icon': '<i class=\"icon-in-row mdi mdi-' + icon + '\" style=\"color:' + color + '\" title=\"' + ticon[2] + '\"></i>',\n            'target': e,\n            'name': name,\n            'option': '<span style=\"white-space: nowrap;\">' + option + '</span>',\n            'enabled': enabled\n        };\n    }\n}\n\nnode.status({ text: i });\n\nif (i > 0) {\n    msg.payload = msg.dictionary.room.scene_title || 'Scenes';\n    msg.ui_update = {\n        'label': ''\n    }\n\n    node.send([msg, null]);\n\n    dropdownOptions.sort((a, b) => a.name.localeCompare(b.name));\n\n    msg.payload = dropdownOptions;\n    msg.ui_update = {\n        'label': ''\n    }\n\n    await new Promise(resolve => setTimeout(resolve, 250));\n    node.send([null, msg]);\n}\n\nreturn;",
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nmsg.payload = [];\n\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\nlet room = flow.get('room[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '';\nif (room === '') {\n\n    return;\n}\n\nlet colors = global.get('describe.colors', 'memoryOnly') || {};\nlet scene = global.get('scene', 'memoryOnly') || {};\nlet parent = global.get('parent', 'memoryOnly') || {};\nlet options = { ...(global.get('describe.routines', 'memoryOnly') || {}) };\nlet template = { ...(global.get('describe.scenes', 'memoryOnly') || {}) };\n\nlet i = 0;\nlet dropdownOptions = [];\n\nfor (const e in scene) {\n    let entity = global.get('entity[\"' + e + '\"]', 'memoryOnly') || {};\n    if (typeof entity === 'object' && entity['room'] === room) {\n        let enabled = Boolean(scene[e]['enabled']);\n        let color = enabled ? colors.theme : colors.empty;\n        let ticon = global.get('describe[\"elements\"][\"' + entity['element'] + '\"]', 'memoryOnly') || ['pause', 'play', 'Unkonwn'];\n        let icon = enabled ? ticon[1] : ticon[0];\n        \n        \n        let name = entity['name'];\n        if (name === '' || name === entity['id']) {\n            name = typeof parent[entity['parent']] === 'object' ? parent[entity['parent']]['name'] : '';\n            if (name === '') {\n                name = entity['parent'];\n            }\n        }\n\n        let option = '';\n        for (const o in options) {\n            if (template[entity['element']].includes(o) && scene[e][o] > 0) {\n                let option_icon = options[o][1];\n                let option_color = colors.none;\n                let option_name = msg.dictionary.option_scene[o] || o;\n                option += '<i class=\"icon-in-row mdi mdi-' + option_icon + '\" style=\"color:' + option_color + '\" title=\"' + option_name + '\"></i>';\n            }\n        }\n\n        dropdownOptions[i++] = {\n            'scene_icon': '<i class=\"icon-in-row mdi mdi-' + icon + '\" style=\"color:' + color + '\" title=\"' + ticon[2] + '\"></i>',\n            'target': e,\n            'name': name,\n            'option': '<span style=\"white-space: nowrap;\">' + option + '</span>',\n            'enabled': enabled\n        };\n    }\n}\n\nnode.status({ text: i });\n\nif (i > 0) {\n    msg.payload = msg.dictionary.room.scene_title || 'Scenes';\n    msg.ui_update = {\n        'label': ''\n    }\n\n    node.send([msg, null]);\n\n    dropdownOptions.sort((a, b) => a.name.localeCompare(b.name));\n\n    msg.payload = dropdownOptions;\n    msg.ui_update = {\n        'label': ''\n    }\n\n    await new Promise(resolve => setTimeout(resolve, 250));\n    node.send([null, msg]);\n}\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -12125,7 +11925,7 @@
         "z": "560376d6bba621ec",
         "g": "32fd2df8e6be1ebb",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nlet scenes = global.get('scene', 'memoryOnly') || {};\n\nif (typeof scenes[msg.payload.target] === 'object') {\n    scenes[msg.payload.target]['enabled'] = msg.payload.enabled ? 0 : 1;\n}\n\nglobal.set('scene', scenes, 'memoryOnly');\n\nmsg.enabled = true;\nmsg.payload = msg.dictionary.room.scene_save_success || 'Successfully saved';\n\nreturn msg;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nlet scenes = global.get('scene', 'memoryOnly') || {};\n\nif (typeof scenes[msg.payload.target] !== 'object') {\n    return;\n}\n\nscenes[msg.payload.target]['enabled'] = msg.payload.enabled ? 0 : 1;\n\nglobal.set('scene', scenes, 'memoryOnly');\n\nmsg.enabled = true;\nmsg.payload = msg.dictionary.room.scene_save_success || 'Successfully saved';\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -12438,6 +12238,198 @@
         ]
     },
     {
+        "id": "afbd8bf525171357",
+        "type": "influxdb in",
+        "z": "560376d6bba621ec",
+        "g": "a2828ff4910e05b9",
+        "influxdb": "cf56c7fff4df45c2",
+        "name": "db",
+        "query": "",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "dknr",
+        "x": 1970,
+        "y": 1400,
+        "wires": [
+            [
+                "19ba39cf5c4ae89e"
+            ]
+        ]
+    },
+    {
+        "id": "0422442a8e7248e8",
+        "type": "function",
+        "z": "560376d6bba621ec",
+        "g": "a2828ff4910e05b9",
+        "name": "data",
+        "func": "// Get historic\n\nmsg.query = \n'from(bucket: \"domotic\")' +\n'|> range(start: -1d, stop:now())' +\n'|> filter(fn: (r) => r[\"_field\"] == \"' + msg.payload.uid + '\")' +\n'|> aggregateWindow(every: 1m, fn: last, createEmpty: false)' +\n'|> yield(name: \"last\")';\n\nmsg.payload = [];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1810,
+        "y": 1340,
+        "wires": [
+            [
+                "19ba39cf5c4ae89e",
+                "afbd8bf525171357"
+            ]
+        ]
+    },
+    {
+        "id": "f960619b3cce8963",
+        "type": "ui-chart",
+        "z": "560376d6bba621ec",
+        "g": "a2828ff4910e05b9",
+        "group": "9dca42b48aec683d",
+        "name": "room - detail - chart smooth",
+        "label": "",
+        "order": 12,
+        "chartType": "line",
+        "category": "_field",
+        "categoryType": "property",
+        "xAxisLabel": "",
+        "xAxisProperty": "_time",
+        "xAxisPropertyType": "property",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "{HH}:{mm}",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "_value",
+        "yAxisPropertyType": "property",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "replace",
+        "stackSeries": false,
+        "pointShape": "false",
+        "pointRadius": "2",
+        "showLegend": false,
+        "removeOlder": 1,
+        "removeOlderUnit": "86400",
+        "removeOlderPoints": "1440",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": "6",
+        "height": "5",
+        "className": "",
+        "interpolation": "smooth",
+        "x": 2360,
+        "y": 1400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "19ba39cf5c4ae89e",
+        "type": "function",
+        "z": "560376d6bba621ec",
+        "g": "a2828ff4910e05b9",
+        "name": "data",
+        "func": "\nlet newMsg = {\n    'topic' : '',\n    'class': 'remove',\n    'enabled': false,\n    'payload': []\n};\n\nif (msg.payload.length < 2) {\n\n    return [ newMsg, newMsg ];\n}\n\nawait new Promise(resolve => setTimeout(resolve, 100));\n\nconst entity = global.get('entity[\"' + msg.topic + '\"]', 'memoryOnly');\n\nif (['b', 'rb'].includes(entity.unit)) {\n\n    return [ msg, null ];\n}\nelse {\n\n    return [ null, msg ];\n}",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2130,
+        "y": 1340,
+        "wires": [
+            [
+                "e41067e156320212"
+            ],
+            [
+                "f960619b3cce8963"
+            ]
+        ]
+    },
+    {
+        "id": "e41067e156320212",
+        "type": "ui-chart",
+        "z": "560376d6bba621ec",
+        "g": "a2828ff4910e05b9",
+        "group": "9dca42b48aec683d",
+        "name": "room - detail - chart step",
+        "label": "",
+        "order": 13,
+        "chartType": "line",
+        "category": "_field",
+        "categoryType": "property",
+        "xAxisLabel": "",
+        "xAxisProperty": "_time",
+        "xAxisPropertyType": "property",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "{HH}:{mm}",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "_value",
+        "yAxisPropertyType": "property",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "replace",
+        "stackSeries": false,
+        "pointShape": "false",
+        "pointRadius": "2",
+        "showLegend": false,
+        "removeOlder": 1,
+        "removeOlderUnit": "86400",
+        "removeOlderPoints": "1440",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": "6",
+        "height": "5",
+        "className": "",
+        "interpolation": "step",
+        "x": 2350,
+        "y": 1340,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "7179cc22cb3792c0",
         "type": "link in",
         "z": "56c0b44ca387382c",
@@ -12486,7 +12478,7 @@
             "5da931c9323d8033",
             "5bd7ba227d627de7"
         ],
-        "x": 2045,
+        "x": 1405,
         "y": 380,
         "wires": [
             [
@@ -12507,7 +12499,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2170,
+        "x": 1530,
         "y": 440,
         "wires": [
             [
@@ -12531,7 +12523,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2670,
+        "x": 2030,
         "y": 440,
         "wires": [
             [
@@ -12568,7 +12560,7 @@
         "className": "",
         "typeIsComboBox": true,
         "msgTrigger": "onChange",
-        "x": 2390,
+        "x": 1750,
         "y": 440,
         "wires": [
             [
@@ -12605,7 +12597,7 @@
         "className": "",
         "typeIsComboBox": true,
         "msgTrigger": "onChange",
-        "x": 2400,
+        "x": 1760,
         "y": 500,
         "wires": [
             [
@@ -12626,7 +12618,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2170,
+        "x": 1530,
         "y": 500,
         "wires": [
             [
@@ -12650,7 +12642,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2670,
+        "x": 2030,
         "y": 500,
         "wires": [
             [
@@ -12671,7 +12663,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2670,
+        "x": 2030,
         "y": 380,
         "wires": [
             [
@@ -12977,7 +12969,8 @@
                 "62950b7e59e79f9f",
                 "7143b3f6e520b7b7",
                 "9f4c3a561c4b24fd",
-                "5378ac71ccb6301d"
+                "5378ac71ccb6301d",
+                "1c0bf08f3f416b9a"
             ]
         ]
     },
@@ -13746,7 +13739,7 @@
         "name": "scene - sceneadd - duration",
         "label": "",
         "tooltip": "",
-        "order": 40,
+        "order": 30,
         "width": "6",
         "height": "1",
         "passthru": false,
@@ -13917,7 +13910,7 @@
         "name": "scene - sceneadd - illuminance",
         "label": "",
         "tooltip": "",
-        "order": 37,
+        "order": 27,
         "width": "6",
         "height": "1",
         "passthru": false,
@@ -13953,7 +13946,7 @@
         "name": "scene - sceneadd - darkness",
         "label": "",
         "tooltip": "",
-        "order": 38,
+        "order": 28,
         "width": "6",
         "height": "1",
         "passthru": false,
@@ -14090,7 +14083,7 @@
         "name": "scene - sceneadd - openwork",
         "label": "",
         "tooltip": "",
-        "order": 39,
+        "order": 29,
         "width": "6",
         "height": "1",
         "passthru": false,
@@ -14202,7 +14195,7 @@
         "group": "3a30762508b6edae",
         "name": "scene - sceneadd - save",
         "label": "",
-        "order": 43,
+        "order": 44,
         "width": "2",
         "height": "1",
         "emulateClick": false,
@@ -14242,7 +14235,7 @@
         "group": "3a30762508b6edae",
         "name": "scene - sceneadd - delete",
         "label": "",
-        "order": 42,
+        "order": 43,
         "width": "2",
         "height": "1",
         "emulateClick": false,
@@ -14371,7 +14364,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2010,
+        "x": 1370,
         "y": 560,
         "wires": [
             [
@@ -14399,7 +14392,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2170,
+        "x": 1530,
         "y": 680,
         "wires": [
             [
@@ -14437,7 +14430,7 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 2410,
+        "x": 1770,
         "y": 680,
         "wires": [
             [
@@ -14472,7 +14465,7 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 2410,
+        "x": 1770,
         "y": 740,
         "wires": [
             [
@@ -14493,7 +14486,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2670,
+        "x": 2030,
         "y": 740,
         "wires": [
             [
@@ -14514,7 +14507,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2670,
+        "x": 2030,
         "y": 680,
         "wires": [
             [
@@ -14535,7 +14528,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2170,
+        "x": 1530,
         "y": 560,
         "wires": [
             [
@@ -14556,7 +14549,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2670,
+        "x": 2030,
         "y": 560,
         "wires": [
             [
@@ -14596,7 +14589,7 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 2390,
+        "x": 1750,
         "y": 560,
         "wires": [
             [
@@ -14615,7 +14608,7 @@
             "f4a2353e5f92576c",
             "825c2d70a0eda50b"
         ],
-        "x": 2795,
+        "x": 2155,
         "y": 560,
         "wires": []
     },
@@ -14632,7 +14625,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2170,
+        "x": 1530,
         "y": 800,
         "wires": [
             [
@@ -14671,7 +14664,7 @@
         "colorTrack": "",
         "colorThumb": "",
         "showTextField": true,
-        "x": 2420,
+        "x": 1780,
         "y": 800,
         "wires": [
             [
@@ -14707,7 +14700,7 @@
         "colorTrack": "",
         "colorThumb": "",
         "showTextField": true,
-        "x": 2420,
+        "x": 1780,
         "y": 860,
         "wires": [
             [
@@ -14741,7 +14734,7 @@
         "icon": "",
         "iconPosition": "left",
         "iconInnerPosition": "inside",
-        "x": 2420,
+        "x": 1780,
         "y": 920,
         "wires": [
             [
@@ -14775,7 +14768,7 @@
         "icon": "",
         "iconPosition": "left",
         "iconInnerPosition": "inside",
-        "x": 2420,
+        "x": 1780,
         "y": 980,
         "wires": [
             [
@@ -14812,7 +14805,7 @@
         "className": "",
         "typeIsComboBox": false,
         "msgTrigger": "onChange",
-        "x": 2410,
+        "x": 1770,
         "y": 1040,
         "wires": [
             [
@@ -14849,7 +14842,7 @@
         "className": "",
         "typeIsComboBox": false,
         "msgTrigger": "onChange",
-        "x": 2410,
+        "x": 1770,
         "y": 1100,
         "wires": [
             [
@@ -14883,7 +14876,7 @@
         "icon": "",
         "iconPosition": "left",
         "iconInnerPosition": "inside",
-        "x": 2410,
+        "x": 1770,
         "y": 1160,
         "wires": [
             [
@@ -14917,7 +14910,7 @@
         "icon": "",
         "iconPosition": "left",
         "iconInnerPosition": "inside",
-        "x": 2410,
+        "x": 1770,
         "y": 1220,
         "wires": [
             [
@@ -14938,7 +14931,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2170,
+        "x": 1530,
         "y": 920,
         "wires": [
             [
@@ -14962,7 +14955,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2170,
+        "x": 1530,
         "y": 1040,
         "wires": [
             [
@@ -14986,7 +14979,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2170,
+        "x": 1530,
         "y": 1160,
         "wires": [
             [
@@ -15011,7 +15004,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2870,
+        "x": 2230,
         "y": 680,
         "wires": []
     },
@@ -15028,7 +15021,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2170,
+        "x": 1530,
         "y": 620,
         "wires": [
             [
@@ -15049,7 +15042,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2670,
+        "x": 2030,
         "y": 620,
         "wires": [
             [
@@ -15089,7 +15082,7 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 2390,
+        "x": 1750,
         "y": 620,
         "wires": [
             [
@@ -15144,7 +15137,7 @@
         "group": "3a30762508b6edae",
         "name": "scene - scenelist - table",
         "label": "",
-        "order": 45,
+        "order": 46,
         "width": 0,
         "height": 0,
         "maxrows": 0,
@@ -15221,7 +15214,7 @@
         "z": "56c0b44ca387382c",
         "g": "690005b9a6f433cf",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nmsg = await node.linkcall('scene - scenelist -list2detail', msg);\n\nif (msg.action === 'button_click') {\n    if (msg.column === 'delete') {\n\n        const scene = { ...(global.get('scene', 'memoryOnly') || {}) };\n        delete scene[msg.payload.target];\n        global.set('scene', scene, 'memoryOnly');\n\n        msg.enabled = true;\n        msg.payload = msg.dictionary.scene.scenelist_delete_success || 'Successfully deleted';\n\n        node.send([msg, null]);\n\n        msg.payload = msg.payload.target;    \n        await new Promise(resolve => setTimeout(resolve, 50));\n\n        node.send([null, msg]);\n    }\n    else if (msg.column === 'disable') {\n\n        const scene = { ...(global.get('scene', 'memoryOnly') || {}) };\n        scene[msg.payload.target]['enabled'] = msg.payload.enabled ? 0 : 1;\n        global.set('scene', scene, 'memoryOnly');\n\n        msg.enabled = true;\n        msg.payload = msg.dictionary.scene.scenelist_update_success || 'Successfully updated';\n\n        node.send([msg, null]);\n\n        msg.payload = msg.payload.target;    \n        await new Promise(resolve => setTimeout(resolve, 50));\n\n        node.send([null, msg]);\n\n    }\n}\n\nreturn;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nmsg = await node.linkcall('scene - scenelist - list2detail', msg);\n\nif (msg.action === 'button_click') {\n    if (msg.column === 'delete') {\n\n        const scene = { ...(global.get('scene', 'memoryOnly') || {}) };\n        delete scene[msg.payload.target];\n        global.set('scene', scene, 'memoryOnly');\n\n        msg.enabled = true;\n        msg.payload = msg.dictionary.scene.scenelist_delete_success || 'Successfully deleted';\n\n        node.send([msg, null]);\n\n        msg.payload = msg.payload.target;    \n        await new Promise(resolve => setTimeout(resolve, 50));\n\n        node.send([null, msg]);\n    }\n    else if (msg.column === 'disable') {\n\n        const scene = { ...(global.get('scene', 'memoryOnly') || {}) };\n        scene[msg.payload.target]['enabled'] = msg.payload.enabled ? 0 : 1;\n        global.set('scene', scene, 'memoryOnly');\n\n        msg.enabled = true;\n        msg.payload = msg.dictionary.scene.scenelist_update_success || 'Successfully updated';\n\n        node.send([msg, null]);\n\n        msg.payload = msg.payload.target;    \n        await new Promise(resolve => setTimeout(resolve, 50));\n\n        node.send([null, msg]);\n\n    }\n}\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -15300,7 +15293,7 @@
         "group": "3a30762508b6edae",
         "name": "scene - triggerlist - table",
         "label": "",
-        "order": 46,
+        "order": 47,
         "width": 0,
         "height": 0,
         "maxrows": "50",
@@ -15409,7 +15402,7 @@
         "z": "56c0b44ca387382c",
         "g": "5d38062b01fae17a",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nmsg = await node.linkcall('scene - scenelist -list2detail', msg);\n\nif (msg.action === 'button_click' && msg.column === 'delete') {\n\n    const scene = { ...(global.get('scene', 'memoryOnly') || {}) };\n    delete scene[msg.payload.target]['trigger'][msg.payload.trigger];\n    global.set('scene', scene, 'memoryOnly');\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.scene.triggerlist_delete_success || 'Successfully deleted';\n\n    node.send([msg, null]);\n\n    msg.payload = '';    \n    await new Promise(resolve => setTimeout(resolve, 50));\n\n    node.send([null, msg]);\n}",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nmsg = await node.linkcall('scene - scenelist - list2detail', msg);\n\nif (msg.action === 'button_click' && msg.column === 'delete') {\n\n    const scene = { ...(global.get('scene', 'memoryOnly') || {}) };\n    delete scene[msg.payload.target]['trigger'][msg.payload.trigger];\n    global.set('scene', scene, 'memoryOnly');\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.scene.triggerlist_delete_success || 'Successfully deleted';\n\n    node.send([msg, null]);\n\n    msg.payload = '';    \n    await new Promise(resolve => setTimeout(resolve, 50));\n\n    node.send([null, msg]);\n}",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -15487,7 +15480,7 @@
         "z": "56c0b44ca387382c",
         "g": "5ee9c437401835c9",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nmsg = await node.linkcall('scene - scenelist -list2detail', msg);\n\nif (msg.action === 'button_click' && msg.column === 'delete') {\n\n    const scene = {...(global.get('scene', 'memoryOnly') || {}) };\n    scene[msg.payload.target]['timer'] = 0;\n    global.set('scene', scene, 'memoryOnly');\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.scene.scenelist_delete_success || 'Successfully deleted';\n\n    node.send([msg, null]);\n\n    msg.payload = '';    \n    await new Promise(resolve => setTimeout(resolve, 50));\n\n    node.send([null, msg]);\n}",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nmsg = await node.linkcall('scene - scenelist - list2detail', msg);\n\nif (msg.action === 'button_click' && msg.column === 'delete') {\n\n    const scene = {...(global.get('scene', 'memoryOnly') || {}) };\n    scene[msg.payload.target]['timer'] = 0;\n    global.set('scene', scene, 'memoryOnly');\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.scene.scenelist_delete_success || 'Successfully deleted';\n\n    node.send([msg, null]);\n\n    msg.payload = '';    \n    await new Promise(resolve => setTimeout(resolve, 50));\n\n    node.send([null, msg]);\n}",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -15513,7 +15506,7 @@
         "group": "3a30762508b6edae",
         "name": "scene - timerlist - table",
         "label": "",
-        "order": 48,
+        "order": 49,
         "width": 0,
         "height": 0,
         "maxrows": 0,
@@ -15604,7 +15597,7 @@
         "z": "56c0b44ca387382c",
         "g": "82df6aae63bd1422",
         "name": "data",
-        "func": "await new Promise(resolve => setTimeout(resolve, 10));\nnode.status({ text: '' });\nif (!msg.enabled) {\n    msg.payload = [];\n\n    return msg;\n}\n\nif (typeof msg.scene.trigger !== 'object') {\n\n    return;\n}\n\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\nconst parent = { ...(global.get('parent', 'memoryOnly') || {}) };\nconst room = { ...(global.get('room', 'memoryOnly') || {}) };\nconst color = { ...(global.get('describe.colors', 'memoryOnly') || {}) };\n\nlet i = 0;\nlet dropdownOptions = [];\n\nfor (const t in msg.scene.trigger) {\n    if (typeof entity[t] !== 'object') {\n        continue;\n    }\n\n    let troom = typeof room[entity[t]['room']] === 'object' ? room[entity[t]['room']]['name'] : entity[t]['room'];\n    let tname = entity[t]['name'];\n    if (tname === '' || tname === entity[t]['id']) {\n        tname = typeof parent[entity[t]['parent']] === 'object' ? parent[entity[t]['parent']]['name'] : '';\n        if (tname === '') {\n            tname = entity[t]['parent'];\n        }\n    }\n    let ticon = global.get('describe[\"elements\"][\"' + entity[t]['element'] + '\"]', 'memoryOnly') || ['help', 'help'];\n    let toffline = (entity[t]['seen'] + (24 * 60 * 60 * 1000)) < Date.now() ? true : false;\n    let tcolor = toffline ? color.off : color.theme;\n    let ttitle = entity[t]['element'] + (toffline ? ' ' + (msg.dictionary.scene.triggerlist_offline || 'offline') : '');\n\n    let outputhigh = msg.dictionary.option_trigger[msg.scene.trigger[t]['outputhigh']] || '';\n    let outputlow = msg.dictionary.option_trigger[msg.scene.trigger[t]['outputlow']] || '';\n\n    dropdownOptions[i++] = {\n        'target': msg.scene.target,\n        'trigger_icon': '<i class=\"icon-in-row mdi mdi-' + ticon[1] + '\" title=\"' + ttitle + '\" style=\"color: ' + tcolor + '\"></i>',\n        'trigger': t,\n        'trigger_name': troom + ' / ' + tname,\n        'inputhigh': msg.scene.trigger[t]['inputhigh'],\n        'inputlow': msg.scene.trigger[t]['inputlow'],\n        'outputhigh': outputhigh,\n        'outputlow': outputlow,\n\n        'delete': msg.dictionary.scene.triggerlist_delete || 'Delete',\n        'loop': msg.scene\n    };\n}\n            \nnode.status({ text: i });\n\ndropdownOptions.sort((a, b) => a.trigger.localeCompare(b.trigger));\n\nmsg.payload = dropdownOptions;\nmsg.ui_update = {\n    'label': ''\n}\n\nawait new Promise(resolve => setTimeout(resolve, 250));\nreturn msg;",
+        "func": "await new Promise(resolve => setTimeout(resolve, 10));\nnode.status({ text: '' });\nif (!msg.enabled) {\n    msg.payload = [];\n\n    return msg;\n}\n\nif (typeof msg.scene.trigger !== 'object') {\n\n    return;\n}\n\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\nconst parent = { ...(global.get('parent', 'memoryOnly') || {}) };\nconst room = { ...(global.get('room', 'memoryOnly') || {}) };\nconst color = { ...(global.get('describe.colors', 'memoryOnly') || {}) };\n\nlet i = 0;\nlet dropdownOptions = [];\n\nfor (const t in msg.scene.trigger) {\n    if (typeof entity[t] !== 'object') {\n        continue;\n    }\n\n    let troom = typeof room[entity[t]['room']] === 'object' ? room[entity[t]['room']]['name'] : entity[t]['room'];\n    let tname = entity[t]['name'];\n    if (tname === '' || tname === entity[t]['id']) {\n        tname = typeof parent[entity[t]['parent']] === 'object' ? parent[entity[t]['parent']]['name'] : '';\n        if (tname === '') {\n            tname = entity[t]['parent'];\n        }\n    }\n    let ticon = global.get('describe[\"elements\"][\"' + entity[t]['element'] + '\"]', 'memoryOnly') || ['help', 'help'];\n    let toffline = (entity[t]['seen'] + (24 * 60 * 60 * 1000)) < Date.now() ? true : false;\n    let tcolor = toffline ? color.off : color.theme;\n    let ttitle = entity[t]['element'] + ' : ' + entity[t]['value'].toString() + (toffline ? ' ' + (msg.dictionary.scene.triggerlist_offline || ' / offline') : '');\n\n    let outputhigh = msg.dictionary.option_trigger[msg.scene.trigger[t]['outputhigh']] || '';\n    let outputlow = msg.dictionary.option_trigger[msg.scene.trigger[t]['outputlow']] || '';\n\n    dropdownOptions[i++] = {\n        'target': msg.scene.target,\n        'trigger_icon': '<i class=\"icon-in-row mdi mdi-' + ticon[1] + '\" title=\"' + ttitle + '\" style=\"color: ' + tcolor + '\"></i>',\n        'trigger': t,\n        'trigger_name': troom + ' / ' + tname,\n        'inputhigh': msg.scene.trigger[t]['inputhigh'],\n        'inputlow': msg.scene.trigger[t]['inputlow'],\n        'outputhigh': outputhigh,\n        'outputlow': outputlow,\n\n        'delete': msg.dictionary.scene.triggerlist_delete || 'Delete',\n        'loop': msg.scene\n    };\n}\n            \nnode.status({ text: i });\n\ndropdownOptions.sort((a, b) => a.trigger.localeCompare(b.trigger));\n\nmsg.payload = dropdownOptions;\nmsg.ui_update = {\n    'label': ''\n}\n\nawait new Promise(resolve => setTimeout(resolve, 250));\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -15627,7 +15620,7 @@
         "group": "3a30762508b6edae",
         "name": "scene - triggerlist - table",
         "label": "",
-        "order": 47,
+        "order": 48,
         "width": "0",
         "height": "0",
         "maxrows": "50",
@@ -15755,7 +15748,7 @@
         "z": "56c0b44ca387382c",
         "g": "82df6aae63bd1422",
         "name": "show dialog",
-        "func": "// Hide scene_trigger_add UI dialog group\nmsg.payload = {\n    groups: {\n        show: ['scene_trigger_add']\n    }\n}\n\nreturn msg;",
+        "func": "// Hide scene_trigger_add UI dialog group\nmsg.payload = {\n    groups: {\n        show: ['scene - trigger - add - dialog']\n    }\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -15776,7 +15769,7 @@
         "z": "56c0b44ca387382c",
         "g": "82df6aae63bd1422",
         "name": "hide dialog",
-        "func": "// Hide scene_trigger_add UI dialog group\nmsg.payload = {\n    groups: {\n        hide: ['scene_trigger_add']\n    }\n}\n\nreturn msg;",
+        "func": "// Hide scene_trigger_add UI dialog group\nmsg.payload = {\n    groups: {\n        hide: ['scene - trigger - add - dialog']\n    }\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -15834,7 +15827,7 @@
         "group": "3a30762508b6edae",
         "name": "scene - sceneadd - triggeradd",
         "label": "",
-        "order": 44,
+        "order": 45,
         "width": "2",
         "height": "1",
         "emulateClick": false,
@@ -15923,7 +15916,7 @@
         "className": "ui-title",
         "value": "payload",
         "valueType": "msg",
-        "x": 3050,
+        "x": 2410,
         "y": 380,
         "wires": []
     },
@@ -15940,7 +15933,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2830,
+        "x": 2190,
         "y": 380,
         "wires": [
             [
@@ -15964,7 +15957,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2170,
+        "x": 1530,
         "y": 380,
         "wires": [
             [
@@ -15993,7 +15986,7 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 3060,
+        "x": 2420,
         "y": 440,
         "wires": []
     },
@@ -16148,7 +16141,7 @@
         "group": "3a30762508b6edae",
         "name": "scene - eventlist - table",
         "label": "",
-        "order": 49,
+        "order": 50,
         "width": 0,
         "height": 0,
         "maxrows": 0,
@@ -16363,7 +16356,7 @@
         "name": "scene - sceneadd - humidity",
         "label": "",
         "tooltip": "",
-        "order": 41,
+        "order": 31,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -16620,7 +16613,7 @@
         "className": "",
         "typeIsComboBox": true,
         "msgTrigger": "onChange",
-        "x": 2390,
+        "x": 1750,
         "y": 1280,
         "wires": [
             [
@@ -16641,7 +16634,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2170,
+        "x": 1530,
         "y": 1280,
         "wires": [
             [
@@ -16681,7 +16674,7 @@
         "className": "",
         "typeIsComboBox": true,
         "msgTrigger": "onChange",
-        "x": 2390,
+        "x": 1750,
         "y": 1340,
         "wires": [
             [
@@ -17924,7 +17917,7 @@
         "name": "scene - sceneadd - temperature_setpoint_eco",
         "label": "",
         "tooltip": "",
-        "order": 27,
+        "order": 32,
         "width": "6",
         "height": "1",
         "passthru": false,
@@ -17981,7 +17974,7 @@
         "name": "scene - sceneadd - temperature_setpoint_confort",
         "label": "",
         "tooltip": "",
-        "order": 28,
+        "order": 33,
         "width": "6",
         "height": "1",
         "passthru": false,
@@ -18017,7 +18010,7 @@
         "name": "scene - sceneadd - temperature_setpoint_cold",
         "label": "",
         "tooltip": "",
-        "order": 29,
+        "order": 34,
         "width": "6",
         "height": "1",
         "passthru": false,
@@ -18074,7 +18067,7 @@
         "name": "scene - sceneadd - temperature_coefficient_indoor",
         "label": "",
         "tooltip": "",
-        "order": 30,
+        "order": 35,
         "width": "6",
         "height": "1",
         "passthru": false,
@@ -18131,7 +18124,7 @@
         "name": "scene - sceneadd - temperature_coefficient_outdoor",
         "label": "",
         "tooltip": "",
-        "order": 31,
+        "order": 36,
         "width": "6",
         "height": "1",
         "passthru": false,
@@ -18188,7 +18181,7 @@
         "name": "scene - sceneadd - temperature_duration_aperture",
         "label": "",
         "tooltip": "",
-        "order": 32,
+        "order": 37,
         "width": "6",
         "height": "1",
         "passthru": false,
@@ -18266,7 +18259,7 @@
         "name": "scene - sceneadd - temperature_duration_preheat",
         "label": "",
         "tooltip": "",
-        "order": 33,
+        "order": 38,
         "width": "6",
         "height": "1",
         "passthru": false,
@@ -18302,7 +18295,7 @@
         "name": "scene - sceneadd - temperature_duration_cycle",
         "label": "",
         "tooltip": "",
-        "order": 34,
+        "order": 39,
         "width": "6",
         "height": "1",
         "passthru": false,
@@ -18359,7 +18352,7 @@
         "name": "scene - sceneadd - temperature_duration_offloading",
         "label": "",
         "tooltip": "",
-        "order": 35,
+        "order": 40,
         "width": "6",
         "height": "1",
         "passthru": false,
@@ -18413,15 +18406,15 @@
         "z": "56c0b44ca387382c",
         "g": "82df6aae63bd1422",
         "group": "3a30762508b6edae",
-        "name": "scene - sceneadd - temperature_power_offloading",
+        "name": "scene - sceneadd - temperature_power_consumption",
         "label": "",
         "tooltip": "",
-        "order": 36,
+        "order": 41,
         "width": "6",
         "height": "1",
         "passthru": false,
         "outs": "end",
-        "topic": "temperature_power_offloading",
+        "topic": "temperature_power_consumption",
         "topicType": "str",
         "thumbLabel": "true",
         "showTicks": "false",
@@ -18435,7 +18428,7 @@
         "colorTrack": "",
         "colorThumb": "",
         "showTextField": true,
-        "x": 630,
+        "x": 640,
         "y": 3200,
         "wires": [
             [
@@ -18449,7 +18442,7 @@
         "z": "56c0b44ca387382c",
         "g": "82df6aae63bd1422",
         "name": "value",
-        "func": "if (!msg.enabled) {\n\n    msg.payload = 0;\n    return msg;\n}\n\nconst field = 'temperature_power_offloading';\n\nif (!msg.fields.includes(field)) {\n\n    return;\n}\n\nmsg.payload = Number(msg.scene[field]);\n\nmsg.ui_update = {\n    'label': msg.dictionary.option_scene[field] || field\n};\n\nreturn msg;",
+        "func": "if (!msg.enabled) {\n\n    msg.payload = 0;\n    return msg;\n}\n\nconst field = 'temperature_power_consumption';\n\nif (!msg.fields.includes(field)) {\n\n    return;\n}\n\nmsg.payload = Number(msg.scene[field]);\n\nmsg.ui_update = {\n    'label': msg.dictionary.option_scene[field] || field\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -18470,7 +18463,7 @@
         "z": "56c0b44ca387382c",
         "g": "c378c7e8b391f73b",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nmsg = await node.linkcall('scene - scenelist -list2detail', msg);\n\nreturn msg;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nmsg = await node.linkcall('scene - scenelist - list2detail', msg);\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -18505,6 +18498,62 @@
         ]
     },
     {
+        "id": "590abae543742c27",
+        "type": "ui-switch",
+        "z": "56c0b44ca387382c",
+        "g": "82df6aae63bd1422",
+        "name": "scene - sceneadd - temperature_energy_free",
+        "label": "",
+        "group": "3a30762508b6edae",
+        "order": 42,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "decouple": false,
+        "topic": "temperature_energy_free",
+        "topicType": "str",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "label",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 610,
+        "y": 3260,
+        "wires": [
+            [
+                "3805b06d11ef0cf7"
+            ]
+        ]
+    },
+    {
+        "id": "1c0bf08f3f416b9a",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "g": "82df6aae63bd1422",
+        "name": "value",
+        "func": "if(!msg.enabled) {\n\n    msg.payload = false;\n    return msg;\n}\n\nconst field = 'temperature_energy_free';\n\nif (!msg.fields.includes(field)) {\n\n    return;\n}\n\nmsg.payload = Boolean(msg.scene[field]);\nmsg.ui_update = {\n    'label': msg.dictionary.option_scene[field] || field\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 3260,
+        "wires": [
+            [
+                "590abae543742c27"
+            ]
+        ]
+    },
+    {
         "id": "ab17703b4908cbf8",
         "type": "link in",
         "z": "3d7897ba0ee14173",
@@ -18533,8 +18582,7 @@
             "ad848617eded124c",
             "c6104f486096a92f",
             "52a5b6f988f1d10a",
-            "3790dfc240bc5f6d",
-            "c4f2ad002020b64e"
+            "3790dfc240bc5f6d"
         ],
         "x": 395,
         "y": 140,
@@ -18941,7 +18989,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "group": "79512e64340aeb66",
-        "name": "entity_list_table",
+        "name": "entity - list - table",
         "label": "",
         "order": 2,
         "width": 0,
@@ -19022,7 +19070,7 @@
         "mobileBreakpointType": "defaults",
         "action": "replace",
         "className": "",
-        "x": 460,
+        "x": 470,
         "y": 1000,
         "wires": [
             [
@@ -19107,19 +19155,59 @@
         "group": "ab792e98013972e4",
         "label": "",
         "order": 3,
-        "width": "6",
-        "height": "8",
+        "width": "0",
+        "height": "0",
         "options": [
+            {
+                "label": "name",
+                "key": "name",
+                "type": "text",
+                "required": false,
+                "rows": null
+            },
             {
                 "label": "room",
                 "key": "room",
                 "type": "dropdown",
-                "required": true,
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "element",
+                "key": "element",
+                "type": "dropdown",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "type",
+                "key": "type",
+                "type": "dropdown",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "unit",
+                "key": "unit",
+                "type": "dropdown",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "action",
+                "key": "action",
+                "type": "dropdown",
+                "required": false,
                 "rows": null
             }
         ],
         "formValue": {
-            "room": ""
+            "name": "",
+            "room": "",
+            "element": "",
+            "type": "",
+            "unit": "",
+            "action": ""
         },
         "payload": "",
         "submit": "►",
@@ -19151,7 +19239,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "show dialog",
-        "func": "msg.payload = {\n    groups: {\n        show: ['entity_entity_edit']\n    }\n}\nreturn msg;",
+        "func": "msg.payload = {\n    groups: {\n        show: ['entity - entity - edit - dialog']\n    }\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -19172,7 +19260,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "hide dialog",
-        "func": "msg.payload = {\n    groups: {\n        hide: ['entity_entity_edit']\n    }\n}\nreturn msg;",
+        "func": "msg.payload = {\n    groups: {\n        hide: ['entity - entity - edit - dialog']\n    }\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -19438,7 +19526,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "show dialog",
-        "func": "msg.payload = {\n    groups: {\n        show: ['entity_parent_edit']\n    }\n}\nreturn msg;",
+        "func": "msg.payload = {\n    groups: {\n        show: ['entity - parent - edit - dialog']\n    }\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -19459,7 +19547,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "hide dialog",
-        "func": "msg.payload = {\n    groups: {\n        hide: ['entity_parent_edit']\n    }\n}\nreturn msg;",
+        "func": "msg.payload = {\n    groups: {\n        hide: ['entity - parent - edit - dialog']\n    }\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -19497,14 +19585,14 @@
         "group": "371d8326aa7242fd",
         "label": "",
         "order": 3,
-        "width": "6",
-        "height": "4",
+        "width": "0",
+        "height": "0",
         "options": [
             {
                 "label": "name",
                 "key": "name",
                 "type": "text",
-                "required": true,
+                "required": false,
                 "rows": null
             }
         ],
@@ -19667,7 +19755,7 @@
         "z": "3d7897ba0ee14173",
         "g": "828e6c8b870dac58",
         "name": "data",
-        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\nmsg.payload = msg.dictionary.entity.camera_title || 'Camera';\n\nnode.send([msg, null]);\n\n// room - camera - form\nflow.set('room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n\nlet rooms = global.get('room', 'memoryOnly') || {};\nlet i = 0;\n\nlet dropdownOptions = [];\nfor (const room in rooms) {\n    dropdownOptions[i++] = {\n        'label': rooms[room]['name'],\n        'value': room\n    };\n}\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.group_room.room_select,\n    'options': dropdownOptions\n}\n\nnode.send([null, msg]);\n\nreturn;",
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\nmsg.payload = msg.dictionary.entity.camera_title || 'Camera';\n\nnode.send([msg, null]);\n\n// room - camera - form\nflow.set('room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n\nlet rooms = global.get('room', 'memoryOnly') || {};\nlet i = 0;\nlet dropdownOptions = [];\n\ndropdownOptions[i++] = {\n    'label': '',\n    'value': ''\n};\n\nfor (const room in rooms) {\n    dropdownOptions[i++] = {\n        'label': rooms[room]['name'],\n        'value': room\n    };\n}\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.group_room.room_select,\n    'options': dropdownOptions\n}\n\nnode.send([null, msg]);\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -19728,7 +19816,7 @@
         "z": "3d7897ba0ee14173",
         "g": "828e6c8b870dac58",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\n// room has entities\nlet room = msg.payload;\nflow.set('room[\"' + msg.hmi.id + '\"]', room, 'memoryOnly');\n\nlet camera = {\n    'room': room,\n    'login': '',\n    'pass': '',\n    'ip': '',\n    'type': 'reolinksnap'\n};\n\nmsg.payload = global.get('camera[\"' + room + '\"]', 'memoryOnly') || camera;\n\nlet dropdownOptions = [\n    {\n        'label': 'Reolink snapshot',\n        'value': 'reolinksnap',\n        'dropdown': 'type'\n    }\n];\n\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.camera_ip,\n            \"key\": \"ip\"\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.camera_user,\n            \"key\": \"login\"\n        },\n        {\n            \"type\": \"password\",\n            \"label\": msg.dictionary.group_entity.camera_pass,\n            \"key\": \"pass\"\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.camera_token,\n            \"key\": \"token\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.camera_type,\n            \"key\": \"type\"\n        }\n    ],\n    'dropdownOptions': dropdownOptions\n};\n\nmsg.class = '';\nmsg.enabled = true;\nreturn msg;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (msg.payload === '') {\n    msg.class = 'remove';\n    msg.enabled = false;\n    msg.ui_update = { };\n\n    return msg;\n}\n\n// room has entities\nlet room = msg.payload;\nflow.set('room[\"' + msg.hmi.id + '\"]', room, 'memoryOnly');\n\nlet camera = {\n    'room': room,\n    'login': '',\n    'pass': '',\n    'ip': '',\n    'type': 'reolinksnap'\n};\n\nmsg.payload = global.get('camera[\"' + room + '\"]', 'memoryOnly') || camera;\n\nlet dropdownOptions = [\n    {\n        'label': 'Reolink snapshot',\n        'value': 'reolinksnap',\n        'dropdown': 'type'\n    }\n];\n\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.camera_ip,\n            \"key\": \"ip\"\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.camera_user,\n            \"key\": \"login\"\n        },\n        {\n            \"type\": \"password\",\n            \"label\": msg.dictionary.group_entity.camera_pass,\n            \"key\": \"pass\"\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.group_entity.camera_token,\n            \"key\": \"token\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.camera_type,\n            \"key\": \"type\"\n        }\n    ],\n    'dropdownOptions': dropdownOptions\n};\n\nmsg.class = '';\nmsg.enabled = true;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -19781,15 +19869,47 @@
         "height": "7",
         "options": [
             {
-                "label": "url",
-                "key": "url",
+                "label": "ip",
+                "key": "ip",
                 "type": "text",
-                "required": true,
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "login",
+                "key": "login",
+                "type": "text",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "pass",
+                "key": "pass",
+                "type": "text",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "token",
+                "key": "token",
+                "type": "text",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "type",
+                "key": "type",
+                "type": "dropdown",
+                "required": false,
                 "rows": null
             }
         ],
         "formValue": {
-            "url": ""
+            "ip": "",
+            "login": "",
+            "pass": "",
+            "token": "",
+            "type": ""
         },
         "payload": "",
         "submit": "►",
@@ -20166,124 +20286,6 @@
         "x": 815,
         "y": 2200,
         "wires": []
-    },
-    {
-        "id": "c4f2ad002020b64e",
-        "type": "link in",
-        "z": "3d7897ba0ee14173",
-        "name": "entity -thermostat",
-        "links": [
-            "b3e8adf92527c468"
-        ],
-        "x": 145,
-        "y": 2400,
-        "wires": [
-            [
-                "ec2e0a1ae7a88c34"
-            ]
-        ]
-    },
-    {
-        "id": "ec2e0a1ae7a88c34",
-        "type": "function",
-        "z": "3d7897ba0ee14173",
-        "name": "data",
-        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (!msg.enabled) {\n\n    return [ msg, msg ];\n}\n\nmsg.payload = msg.dictionary.entity.thermostat_title || 'Thermostat';\n\nnode.send([ msg, null ]);\n\n// room - thermostat - form\nflow.set('room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n\nlet rooms = global.get('room', 'memoryOnly') || {};\nlet i = 0;\n\nlet dropdownOptions = [];\nfor (const room in rooms) {\n    dropdownOptions[i++] = {\n        'label': rooms[room]['name'],\n        'value': room\n    };\n}\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.entity.room_select || 'Select room',\n    'options': dropdownOptions\n}\n\nreturn [ null, msg ];",
-        "outputs": 2,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 270,
-        "y": 2400,
-        "wires": [
-            [
-                "6020044b27d60f78"
-            ],
-            [
-                "9f3da5328b8bbd1f"
-            ]
-        ]
-    },
-    {
-        "id": "6020044b27d60f78",
-        "type": "ui-text",
-        "z": "3d7897ba0ee14173",
-        "group": "f5be3b78a4cf8a3a",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "entity - thermostat- title",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "ui-title",
-        "value": "payload",
-        "valueType": "msg",
-        "x": 480,
-        "y": 2340,
-        "wires": []
-    },
-    {
-        "id": "9f3da5328b8bbd1f",
-        "type": "ui-dropdown",
-        "z": "3d7897ba0ee14173",
-        "group": "f5be3b78a4cf8a3a",
-        "name": "entity - thermostat - room",
-        "label": "",
-        "tooltip": "",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "multiple": false,
-        "chips": false,
-        "clearable": false,
-        "options": [
-            {
-                "label": "none",
-                "value": "",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "typeIsComboBox": false,
-        "msgTrigger": "onChange",
-        "x": 490,
-        "y": 2400,
-        "wires": [
-            [
-                "bd3df4c905b6b498"
-            ]
-        ]
-    },
-    {
-        "id": "bd3df4c905b6b498",
-        "type": "function",
-        "z": "3d7897ba0ee14173",
-        "d": true,
-        "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\n// room has entities\nlet room = msg.payload;\nflow.set('room[\"' + msg.hmi.id + '\"]', room, 'memoryOnly');\n\nconst template = { ...(global.get('describe.template.thermostat') || { }) };\nlet thermostat = { ...template, ...{ 'room': room } };\nmsg.payload = { ... (global.get('thermostat[\"' + room + '\"]', 'memoryOnly') || { }) };\n\n\n// Get entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\nconst parent = { ...(global.get('parent', 'memoryOnly') || {}) };\nconst room = { ...(global.get('room', 'memoryOnly') || {}) };\n\nlet i = 0;\nlet dropdownOptions = [];\ndropdownOptions[i++] = {\n    'label': '',\n    'value': ''\n};\n\nfor (const e in entity) {\n    if (entity[e]['type'] === 'command' &&\n        entity[e]['hidden'] === 0 &&\n        entity[e]['room'] !== 'system' && \n        scenes.includes(entity[e]['element'])\n    ) {\n        const eroom = typeof room[entity[e]['room']] === 'object' ? room[entity[e]['room']]['name'] : entity[e]['room'];\n        const eelement = msg.dictionary.option_element[entity[e]['element']] || entity[e]['element'];\n        let eparent = typeof parent[entity[e]['parent']] === 'object' ? parent[entity[e]['parent']]['name'] : '';\n        if (eparent === '') {\n            eparent = entity[e]['parent'];\n        }\n        const ename = entity[e]['name'] !== '' ?  entity[e]['name'] : eparent;\n        dropdownOptions[i++] = {\n            'label': eroom + ' / ' + ename + ' / ' + eelement,\n            'value': entity[e]['uid']\n        };\n    }\n}\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.thermostat_target || 'Pilot',\n            \"key\": \"target\"\n        },\n        {\n            \"type\": \"number\",\n            \"label\": msg.dictionary.group_entity.thermostat_setpoint_eco,\n            \"key\": \"setpoint_eco\"\n        }\n    ],\n    'dropdownOptions': dropdownOptions\n};\n\nmsg.class = '';\nmsg.enabled = true;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 3,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 710,
-        "y": 2400,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "f3597c2d6aae540d",
