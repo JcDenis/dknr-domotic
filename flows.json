@@ -1915,6 +1915,40 @@
         "h": 82
     },
     {
+        "id": "192c9d61b22bea8d",
+        "type": "group",
+        "z": "c84dae3356e4a4bc",
+        "name": "calendar - list",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "f032a62ad2f13bb9",
+            "ba1539c07824ae7c",
+            "5743e8bd13f0cf67",
+            "2d9aef161a7ceb35",
+            "26d8d3d7bc111e9a",
+            "ca73fe66b198a5b0",
+            "9d77bd1f2df13ea4",
+            "9427955ef0d7bf44",
+            "775f42f6ba6074b0",
+            "faded2d379f7fa0d",
+            "92d3b5dcbaa54461",
+            "564e0ab4d7132995",
+            "ed061748213efa22",
+            "98ba5ee73c6ab71c",
+            "21ac8b957ae78ebf",
+            "ba4f659a82ef38e6",
+            "f8f6115ba56b682c"
+        ],
+        "x": 104,
+        "y": 219,
+        "w": 1352,
+        "h": 382
+    },
+    {
         "id": "df7710b4b2c4e55b",
         "type": "ui-base",
         "name": "Tableau de bord",
@@ -2814,7 +2848,7 @@
         "page": "05291fac72588064",
         "width": 6,
         "height": 1,
-        "order": 1,
+        "order": 2,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -2848,6 +2882,34 @@
         "visible": "true",
         "disabled": "false",
         "groupType": "default"
+    },
+    {
+        "id": "c25c0e2416c15529",
+        "type": "ui-group",
+        "name": "calendar - detail - dialog",
+        "page": "05291fac72588064",
+        "width": 6,
+        "height": 1,
+        "order": 3,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "dialog"
+    },
+    {
+        "id": "47cf17cc0748666a",
+        "type": "ui-group",
+        "name": "calendar - add - dialog",
+        "page": "05291fac72588064",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "dialog"
     },
     {
         "id": "025edbd02daf82d0",
@@ -2938,7 +3000,8 @@
             "80e3952b8f56d1da",
             "d269bc78686a5a01",
             "02d1069a252bcc78",
-            "20c33d6d50aa3ee3"
+            "20c33d6d50aa3ee3",
+            "26d8d3d7bc111e9a"
         ],
         "x": 145,
         "y": 920,
@@ -3084,7 +3147,10 @@
             "337d29d853fc2716",
             "b5e5ddf712b53493",
             "d74d6fbf0abd6f0f",
-            "23a03a17de1c95e7"
+            "23a03a17de1c95e7",
+            "0ee5313925c20525",
+            "a1ed79cdb41c3f96",
+            "f8f6115ba56b682c"
         ],
         "x": 145,
         "y": 1160,
@@ -3302,7 +3368,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "describe",
-        "func": "const describe = global.get('describe', 'memoryOnly') || {};\n\nif (typeof describe.pages !== 'object') {\n    describe.pages = {};\n}\n\n// Set default app values\ndescribe.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\ndescribe.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['energy'] = {\n    'id': '34a13cfdebc90220',\n    'name': 'energy',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['calendar'] = {\n    'id': '05291fac72588064',\n    'name': 'calendar',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['scene'] = {\n    'id': '1e9f5bde9636a371',\n    'name': 'scene',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['entity'] = {\n    'id': '2b12391aa314ef62',\n    'name': 'entity',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': false,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// Sources\ndescribe.sources['dknr'] = ['eye', 'Domotic'];\n\n// Binary element with revert value\ndescribe.reverts = ['aperture', 'door', 'window', 'lock'];\n\n// Non numeric units\ndescribe.texts = ['', 'chex', 'enum', 'text', 'time'];\n\n// Elements icons\ndescribe.elements = {\n    'switch': ['toggle-switch-off-outline', 'toggle-switch-outline', 'Switch'],\n    'plug': ['power-plug-off', 'power-plug', 'Plug'],\n    'power': ['flash-outline', 'flash', 'Power'],\n    'current': ['current-ac', 'current-ac', 'Current'],\n    'frequency': ['sine-wave', 'sine-wave', 'Frequency'],\n    'voltage': ['current-dc', 'current-dc', 'Frequency'],\n    'energy': ['meter-electric-outline', 'meter-electric', 'Energy'],\n    'light': ['lightbulb-off', 'lightbulb', 'Light'],\n    'remote': ['remote-off', 'remote', 'Remote'],\n    'door': ['door-closed', 'door-open', 'Door'], // 0=open\n    'window': ['window-closed-variant', 'window-open-variant', 'Window'], //0=open\n    'lock': ['lock-off', 'lock', 'Lock'], //0=open\n    //'shield': ['shield-lock-outline', 'shield-lock'],\n    //'aperture': ['electric-switch-closed', 'electric-switch'], // 0=open\n    'shutter': ['window-shutter', 'window-shutter-open', 'Shutter'],\n    'slider': ['door-sliding', 'door-sliding-open', 'Slider'],\n    //'heater': ['radiator-off', 'radiator'], => temperature\n    //'cooler': ['radiator-off', 'radiator'], => temperature\n    //'airconditioner': ['radiator-off', 'radiator'], => temparature\n    'waterboiler': ['water-boiler-off', 'water-boiler', 'Waterboiler'],\n    'alert': ['bell-off', 'bell', 'Alert'],\n    'sound': ['volume-off', 'volume-high', 'Sound'],\n    'motion': ['motion-sensor-off', 'motion-sensor', 'Motion'],\n    //'presence': ['location-exit', 'location-enter'], => motion\n    'temperature': ['thermometer-off', 'thermometer', 'Temperature'],\n    'humidity': ['water-percent-alert', 'water-percent', 'Humidity'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless', 'Illuminance'],\n    'pressure': ['gauge', 'gauge', 'Pressure'],\n    //'wind': ['weather-windy', 'weather-dust'],\n    //'airflow': ['fan-off', 'fan'], => humidity\n    'fan': ['fan-off', 'fan', 'Fan'],\n    'direction': ['swap-horizontal', 'swap-horizontal-bold', 'Direction'],\n    'time': ['clock-outline', 'clock', 'Time'],\n    'battery': ['battery-low', 'battery', 'Battery'],\n    //'climate': ['home-thermometer-outline', 'home-thermometer'],\n    'mode': ['home-switch-outline', 'home-switch', 'Mode'],\n    'text': ['clipboard-text-off', 'clipboard-text', 'Text'],\n    'location': ['map-marker-off-outline', 'map-marker', 'Location'],\n    //'camera': ['camera-off', 'camera'],\n    'color': ['palette', 'palette', 'Color'],\n    'tariff': ['currency-eur-off', 'currency-eur', 'Tariff']\n};\n\ndescribe.units = {\n    '': 'None',\n    '°C': 'Degree celsuis',\n    '°F': 'Degree fahrenheit',\n    'mA': 'Milliampere',\n    'A': 'Ampere',\n    'Hz': 'Hertz',\n    'mW': 'Milliwatt',\n    'W': 'Watt',\n    'kW': 'Kilowatt',\n    'MW': 'Megawatt',\n    'mWh': 'Milliwatt/hour',\n    'Wh': 'Watt/Hour',\n    'mVA': 'Millivoltampere',\n    'VA': 'Voltampere',\n    'mV': 'Millivolt',\n    'V': 'Volt',\n    'lx': 'Lux',\n    'ppm': 'Parts per million',\n    '%': 'Percent (0-100)',\n    'b': 'Binary (0-1)',\n    'rb': 'Revert binary',\n    '8b': '8-bit (0-255)',\n    'n': 'Number',\n    's': 'Second',\n    'ms': 'Millisecond',\n    'time': 'Time',\n    'enum': 'Enumerator',\n    'text': 'Text',\n    'chex': 'Hexadécimal color'\n};\n\n// Value color\ndescribe.colors = {\n    'on': '#008000',\n    'off': '#FF0000',\n    'median': '#F08000',\n    'none': '#808000',\n    'theme': '#0094CE',\n    'empty': '#CCCCCC'\n};\n\n// Scene elements fields\ndescribe.scenes = {\n    'humidity': [\n        'enabled',\n        'on',\n        'off',\n        'duration',\n        'humidity'\n    ],\n    'light': [\n        'enabled',\n        'on',\n        'off',\n        'high',\n        'low',\n        'motion',\n        'retention',\n        'duration',\n        'diurnal',\n        'nocturnal',\n        'nightlight',\n        'illuminance',\n        'darkness'\n    ],\n    'shutter': [\n        'enabled',\n        'on',\n        'off',\n        'aperture',\n        'diurnal',\n        'nocturnal',\n        'illuminance',\n        'darkness',\n        'openwork',\n        'daily'\n    ],\n    'waterboiler': [\n        'enabled',\n        'on',\n        'off',\n        'duration',\n        'power',\n        'tariff',\n        'daily'\n    ],\n    'temperature': [\n        'enabled',\n        'on',\n        'off',\n        'temperature_setpoint_eco',\n        'temperature_setpoint_confort',\n        'temperature_setpoint_cold',\n        'temperature_coefficient_indoor',\n        'temperature_coefficient_outdoor',\n        'temperature_duration_aperture',\n        'temperature_duration_preheat',\n        'temperature_duration_cycle',\n        'temperature_duration_offloading',\n        'temperature_power_consumption',\n        'temperature_energy_free'\n    ]\n};\n\n// Scene routines fields\ndescribe.routines = {\n    'motion': ['motion-sensor-off', 'motion-sensor'],\n    'aperture': ['door-closed', 'door-open'],\n    'nocturnal': ['shield-moon-outline', 'shield-moon'],\n    'diurnal': ['shield-sun-outline', 'shield-sun'],\n    'nightlight': ['lightbulb-night-outline', 'lightbulb-night'],\n    'retention': ['timeline-clock-outline', 'timeline-clock'],\n    'daily': ['calendar-remove', 'calendar-check'],\n    'openwork': ['storefront-remove-outline', 'storefront-check'],\n    'duration': ['timer-remove-outline', 'timer-check'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless'],\n    'darkness': ['brightness-5', 'brightness-4'],\n    'humidity': ['water-percent-alert', 'water-percent'],\n    'temperature_energy_free': ['lightning-bolt-outline', 'lightning-bolt']\n};\n\n// Templates\ndescribe.template = {\n    'hmi': {\n        'id': '',\n        'login': '',\n        'level': 'visitor',\n        'lang': 'en',\n        'name': 'auth', // ui page\n        'room': '',\n        'time': 0\n    },\n    'room': {\n        'id': '',\n        'name': '',\n        'outdoor': 0\n    },\n    'parent': {\n        'id': '',\n        'name': '',\n        'seen': 0\n    },\n    'entity': {\n        'uid': '',\n        'source': '',\n        'id': '',\n        'name': '',\n        'parent': '',\n        'value': '',\n        'type': '',\n        'room': '',\n        'element': '',\n        'unit': '',\n        'seen': 0,\n        'hidden': 0\n    },\n    'scene': {\n        'target': '',\n        'enabled': 0,\n        'on': 1,\n        'off': 0,\n        'motion': 0,\n        'aperture': 0,\n        'nocturnal': 0,\n        'diurnal': 0,\n        'nightlight': 0,\n        'retention': 0,\n        'duration': 60, //minutes\n        'high': '70',\n        'low': '30',\n        'illuminance': 0, //2000\n        'darkness': 0, //200\n        'humidity': 0,\n        'daily': 0,\n        'openwork': 0,\n        'tariff': 0, // limit to a given tariff (see dknr_config_fulltariff)\n        'power': 0, // to check if target is really off\n        'timer': 0, // for duration routine\n        'today': 0, // for daily routine, 1=executed today else 0\n\n        'temperature_setpoint_eco': 19,\n        'temperature_setpoint_confort': 21,\n        'temperature_setpoint_cold': 18,\n        'temperature_coefficient_indoor': 100,\n        'temperature_coefficient_outdoor': 10,\n        'temperature_duration_aperture': 5,\n        'temperature_duration_preheat': 10,\n        'temperature_duration_cycle': 60,\n        'temperature_duration_offloading': 60,\n        'temperature_power_consumption': 1000,\n        'temperature_energy_free': 0,\n\n        'temperature_aperture_opened': 0,\n        'temperature_aperture_timer': 0,\n        'temperature_pilot_state': 'stopped',\n        'temperature_pilot_last': 0\n    },\n    'trigger': {\n        'inputhigh': 1, // Minimal input level for high level\n        'inputlow': 0, // Maximal input level for low high level\n        'outputhigh': 'high', // Output level on high input level. [none,high,low,toggle]\n        'outputlow': 'low' // output level for low input level [none, high, low, toggle]\n    },\n    'routine': {\n        'topic': '',\n        'payload': false,\n        'replay': false,\n        'rsp': true,\n        'iam': false,\n        'scene': {},\n        'param': {},\n        'trigger': {},\n        'target': {},\n        'routines': []\n    }\n};\n\n// Save config\nglobal.set('describe', describe, 'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/.config.projects.json'\n};",
+        "func": "const describe = global.get('describe', 'memoryOnly') || {};\n\nif (typeof describe.pages !== 'object') {\n    describe.pages = {};\n}\n\n// Set default app values\ndescribe.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\ndescribe.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['energy'] = {\n    'id': '34a13cfdebc90220',\n    'name': 'energy',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['calendar'] = {\n    'id': '05291fac72588064',\n    'name': 'calendar',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['scene'] = {\n    'id': '1e9f5bde9636a371',\n    'name': 'scene',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['entity'] = {\n    'id': '2b12391aa314ef62',\n    'name': 'entity',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': false,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// Sources\ndescribe.sources['dknr'] = ['eye', 'Domotic'];\n\n// Binary element with revert value\ndescribe.reverts = ['aperture', 'door', 'window', 'lock'];\n\n// Non numeric units\ndescribe.texts = ['', 'chex', 'enum', 'text', 'time'];\n\n// Elements icons\ndescribe.elements = {\n    'switch': ['toggle-switch-off-outline', 'toggle-switch-outline', 'Switch'],\n    'plug': ['power-plug-off', 'power-plug', 'Plug'],\n    'power': ['flash-outline', 'flash', 'Power'],\n    'current': ['current-ac', 'current-ac', 'Current'],\n    'frequency': ['sine-wave', 'sine-wave', 'Frequency'],\n    'voltage': ['current-dc', 'current-dc', 'Frequency'],\n    'energy': ['meter-electric-outline', 'meter-electric', 'Energy'],\n    'light': ['lightbulb-off', 'lightbulb', 'Light'],\n    'remote': ['remote-off', 'remote', 'Remote'],\n    'door': ['door-closed', 'door-open', 'Door'], // 0=open\n    'window': ['window-closed-variant', 'window-open-variant', 'Window'], //0=open\n    'lock': ['lock-off', 'lock', 'Lock'], //0=open\n    //'shield': ['shield-lock-outline', 'shield-lock'],\n    //'aperture': ['electric-switch-closed', 'electric-switch'], // 0=open\n    'shutter': ['window-shutter', 'window-shutter-open', 'Shutter'],\n    'slider': ['door-sliding', 'door-sliding-open', 'Slider'],\n    //'heater': ['radiator-off', 'radiator'], => temperature\n    //'cooler': ['radiator-off', 'radiator'], => temperature\n    //'airconditioner': ['radiator-off', 'radiator'], => temparature\n    'waterboiler': ['water-boiler-off', 'water-boiler', 'Waterboiler'],\n    'alert': ['bell-off', 'bell', 'Alert'],\n    'sound': ['volume-off', 'volume-high', 'Sound'],\n    'motion': ['motion-sensor-off', 'motion-sensor', 'Motion'],\n    //'presence': ['location-exit', 'location-enter'], => motion\n    'temperature': ['thermometer-off', 'thermometer', 'Temperature'],\n    'humidity': ['water-percent-alert', 'water-percent', 'Humidity'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless', 'Illuminance'],\n    'pressure': ['gauge', 'gauge', 'Pressure'],\n    //'wind': ['weather-windy', 'weather-dust'],\n    //'airflow': ['fan-off', 'fan'], => humidity\n    'fan': ['fan-off', 'fan', 'Fan'],\n    'direction': ['swap-horizontal', 'swap-horizontal-bold', 'Direction'],\n    'time': ['clock-outline', 'clock', 'Time'],\n    'battery': ['battery-low', 'battery', 'Battery'],\n    //'climate': ['home-thermometer-outline', 'home-thermometer'],\n    'mode': ['home-switch-outline', 'home-switch', 'Mode'],\n    'text': ['clipboard-text-off', 'clipboard-text', 'Text'],\n    'location': ['map-marker-off-outline', 'map-marker', 'Location'],\n    //'camera': ['camera-off', 'camera'],\n    'color': ['palette', 'palette', 'Color'],\n    'tariff': ['currency-eur-off', 'currency-eur', 'Tariff']\n};\n\ndescribe.units = {\n    '': 'None',\n    '°C': 'Degree celsuis',\n    '°F': 'Degree fahrenheit',\n    'mA': 'Milliampere',\n    'A': 'Ampere',\n    'Hz': 'Hertz',\n    'mW': 'Milliwatt',\n    'W': 'Watt',\n    'kW': 'Kilowatt',\n    'MW': 'Megawatt',\n    'mWh': 'Milliwatt/hour',\n    'Wh': 'Watt/Hour',\n    'mVA': 'Millivoltampere',\n    'VA': 'Voltampere',\n    'mV': 'Millivolt',\n    'V': 'Volt',\n    'lx': 'Lux',\n    'ppm': 'Parts per million',\n    '%': 'Percent (0-100)',\n    'b': 'Binary (0-1)',\n    'rb': 'Revert binary',\n    '8b': '8-bit (0-255)',\n    'n': 'Number',\n    's': 'Second',\n    'ms': 'Millisecond',\n    'time': 'Time',\n    'enum': 'Enumerator',\n    'text': 'Text',\n    'chex': 'Hexadécimal color'\n};\n\n// Value color\ndescribe.colors = {\n    'on': '#008000',\n    'off': '#FF0000',\n    'median': '#F08000',\n    'none': '#808000',\n    'theme': '#0094CE',\n    'empty': '#CCCCCC'\n};\n\n// Calendar event type\ndescribe.calendar = {\n    'birthday': [ 'cake-variant-outline', 'cake-variant' ],\n    'rendezvous': [ 'alarm-off', 'alarm' ],\n    'trashbin': [ 'trash-can-outline', 'trash-can' ],\n    'recyclebin': [ 'recycle-vairant', 'recycle' ]\n};\n\n// Scene elements fields\ndescribe.scenes = {\n    'humidity': [\n        'enabled',\n        'on',\n        'off',\n        'duration',\n        'humidity'\n    ],\n    'light': [\n        'enabled',\n        'on',\n        'off',\n        'high',\n        'low',\n        'motion',\n        'retention',\n        'duration',\n        'diurnal',\n        'nocturnal',\n        'nightlight',\n        'illuminance',\n        'darkness'\n    ],\n    'shutter': [\n        'enabled',\n        'on',\n        'off',\n        'aperture',\n        'diurnal',\n        'nocturnal',\n        'illuminance',\n        'darkness',\n        'openwork',\n        'daily'\n    ],\n    'waterboiler': [\n        'enabled',\n        'on',\n        'off',\n        'duration',\n        'power',\n        'tariff',\n        'daily'\n    ],\n    'temperature': [\n        'enabled',\n        'on',\n        'off',\n        'temperature_setpoint_eco',\n        'temperature_setpoint_confort',\n        'temperature_setpoint_cold',\n        'temperature_coefficient_indoor',\n        'temperature_coefficient_outdoor',\n        'temperature_duration_aperture',\n        'temperature_duration_preheat',\n        'temperature_duration_cycle',\n        'temperature_duration_offloading',\n        'temperature_power_consumption',\n        'temperature_energy_free'\n    ]\n};\n\n// Scene routines fields\ndescribe.routines = {\n    'motion': ['motion-sensor-off', 'motion-sensor'],\n    'aperture': ['door-closed', 'door-open'],\n    'nocturnal': ['shield-moon-outline', 'shield-moon'],\n    'diurnal': ['shield-sun-outline', 'shield-sun'],\n    'nightlight': ['lightbulb-night-outline', 'lightbulb-night'],\n    'retention': ['timeline-clock-outline', 'timeline-clock'],\n    'daily': ['calendar-remove', 'calendar-check'],\n    'openwork': ['storefront-remove-outline', 'storefront-check'],\n    'duration': ['timer-remove-outline', 'timer-check'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless'],\n    'darkness': ['brightness-5', 'brightness-4'],\n    'humidity': ['water-percent-alert', 'water-percent'],\n    'temperature_energy_free': ['lightning-bolt-outline', 'lightning-bolt']\n};\n\n// Templates\ndescribe.template = {\n    'hmi': {\n        'id': '',\n        'login': '',\n        'level': 'visitor',\n        'lang': 'en',\n        'name': 'auth', // ui page\n        'room': '',\n        'time': 0\n    },\n    'room': {\n        'id': '',\n        'name': '',\n        'outdoor': 0\n    },\n    'parent': {\n        'id': '',\n        'name': '',\n        'seen': 0\n    },\n    'entity': {\n        'uid': '',\n        'source': '',\n        'id': '',\n        'name': '',\n        'parent': '',\n        'value': '',\n        'type': '',\n        'room': '',\n        'element': '',\n        'unit': '',\n        'seen': 0,\n        'hidden': 0\n    },\n    'scene': {\n        'target': '',\n        'enabled': 0,\n        'on': 1,\n        'off': 0,\n        'motion': 0,\n        'aperture': 0,\n        'nocturnal': 0,\n        'diurnal': 0,\n        'nightlight': 0,\n        'retention': 0,\n        'duration': 60, //minutes\n        'high': '70',\n        'low': '30',\n        'illuminance': 0, //2000\n        'darkness': 0, //200\n        'humidity': 0,\n        'daily': 0,\n        'openwork': 0,\n        'tariff': 0, // limit to a given tariff (see dknr_config_fulltariff)\n        'power': 0, // to check if target is really off\n        'timer': 0, // for duration routine\n        'today': 0, // for daily routine, 1=executed today else 0\n\n        'temperature_setpoint_eco': 19,\n        'temperature_setpoint_confort': 21,\n        'temperature_setpoint_cold': 18,\n        'temperature_coefficient_indoor': 100,\n        'temperature_coefficient_outdoor': 10,\n        'temperature_duration_aperture': 5,\n        'temperature_duration_preheat': 10,\n        'temperature_duration_cycle': 60,\n        'temperature_duration_offloading': 60,\n        'temperature_power_consumption': 1000,\n        'temperature_energy_free': 0,\n\n        'temperature_aperture_opened': 0,\n        'temperature_aperture_timer': 0,\n        'temperature_pilot_state': 'stopped',\n        'temperature_pilot_last': 0\n    },\n    'trigger': {\n        'inputhigh': 1, // Minimal input level for high level\n        'inputlow': 0, // Maximal input level for low high level\n        'outputhigh': 'high', // Output level on high input level. [none,high,low,toggle]\n        'outputlow': 'low' // output level for low input level [none, high, low, toggle]\n    },\n    'routine': {\n        'topic': '',\n        'payload': false,\n        'replay': false,\n        'rsp': true,\n        'iam': false,\n        'scene': {},\n        'param': {},\n        'trigger': {},\n        'target': {},\n        'routines': []\n    }\n};\n\n// Save config\nglobal.set('describe', describe, 'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/.config.projects.json'\n};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7331,7 +7397,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "dictionary",
-        "func": "const dictionary = global.get('dictionary', 'memoryOnly') || {};\n\ndictionary.en = {\n    'common': {\n        'locales': 'en-GB'\n    },\n    'option_page': {\n        'home': 'Home',\n        'energy': 'Energy',\n        'calendar': 'Calendar',\n        'room': 'Rooms',\n        'tuning': 'Adjustments',\n        'scene': 'Scenes',\n        'entity': 'Entities',\n        'config': 'Configuration',\n        'auth': 'Authentication'\n    },\n    'option_level': {\n        'visitor': 'Visitor',\n        'child':  'Child',\n        'parent':'Parent',\n        'admin': 'Administrator'\n    },\n    'option_team': {\n        'm': 'Morning',\n        'a': 'Afternoon',\n        'n': 'Night',\n        'd': 'Day',\n        'w': 'Weekend',\n        's': 'Saturday'\n    },\n    'option_lang': {\n        'en': 'English',\n        'fr': 'French'\n    },\n    'option_type': {\n        'command': 'Command',\n        'sensor': 'Sensor'\n    },\n    'option_element': {\n        'aperture': 'Aperture',\n        'battery': 'Battery',\n        'climate': 'Climate',\n        'current': 'Current',\n        'frequency': 'Frequency',\n        'voltage': 'Voltage',\n        'energy': 'Energy',\n        'power': 'Power',\n        'pressure': 'Pressure',\n        'temperature': 'Temperature',\n        'humidity': 'Humidity',\n        'illuminance': 'Illuminance',\n        'light': 'Light',\n        'switch': 'Switch',\n        'plug': 'Plug',\n        'remote': 'Remote',\n        'door': 'Door',\n        'window': 'Window',\n        'shutter': 'Shutter',\n        'slider': 'Sliding door',\n        'heater': 'Heating',\n        'waterboiler': 'Waterboiler',\n        'motion': 'Motion',\n        'presence': 'Presence',\n        'lock': 'Lock',\n        'alert': 'Alert',\n        'sound': 'Volume',\n        'wind': 'Wind',\n        'fan': 'Fan',\n        'direction': 'Direction',\n        'time': 'Clock',\n        'mode': 'Mode',\n        'text': 'Text',\n        'location': 'Location',\n        'camera': 'Camera',\n        'shield': 'Shield',\n        'color': 'Color',\n        'tariff': 'Tariff'\n    },\n    'option_unit': {\n        '': 'None',\n        '°C': 'Degree celsuis',\n        '°F': 'Degree fahrenheit',\n        'mA': 'Milliampere',\n        'A': 'Ampere',\n        'Hz': 'Hertz',\n        'mW': 'Milliwatt',\n        'W': 'Watt',\n        'kW': 'Kilowatt',\n        'MW': 'Megawatt',\n        'mWh': 'Milliwatt/hour',\n        'Wh': 'Watt/Hour',\n        'mVA': 'Millivoltampere',\n        'VA': 'Voltampere',\n        'mV': 'Millivolt',\n        'V': 'Volt',\n        'lx': 'Lux',\n        'ppm': 'Parts per million',\n        '%': 'Percent (0-100)',\n        'b': 'Binary (0-1)',\n        'rb': 'Revert binary',\n        '8b': '8-bit (0-255)',\n        'n': 'Number',\n        's': 'Second',\n        'ms': 'Millisecond',\n        'time': 'Time',\n        'enum': 'Enumerator',\n        'text': 'Text',\n        'chex': 'Hexadécimal color'\n    },\n    'option_scene': {\n        'enabled': 'Enabled',\n        'mode': 'Scene',\n        'on': 'On level',\n        'off': 'Off level',\n        'high': 'High dimmer',\n        'low': 'Low dimmer',\n        'delay': 'Delay',\n        'step': 'Step',\n        'min': 'Miminum',\n        'max': 'Maximm',\n        'motion': 'Motion',\n        'retention': 'Retention',\n        'aperture': 'Aperture',\n        'nocturnal': 'Nocturnal',\n        'diurnal': 'Diurnal',\n        'nightlight': 'Nightlight',\n        'daily': 'Daily',\n        'openwork': 'Openwork',\n        'duration': 'Duration',\n        'illuminance': 'Illuminance',\n        'darkness': 'Darkness',\n        'humidity': 'Humidity',\n        'power': 'Power',\n        'tariff': 'tariff',\n\n        'target': 'Target',\n        'timer': 'Timer',\n        'today': 'Today',\n        'trigger': 'Triggers'\n    },\n    'option_trigger': {\n        'none': 'None',\n        'high': 'High output level',\n        'low': 'Low output level',\n        'toggle': 'Toggle output'\n    },\n    'option_column': {\n        'name': 'Name',\n        'room': 'Room',\n        'element': 'Element',\n        'type': 'Type',\n        'unit': 'Unit',\n        'action': 'Action'\n    },\n    'notice': {\n        'file_write_success': 'Saved file successfully',\n        'file_write_fail': 'Failed to save file',\n        'login_fail': 'Wrong username or password',\n        'save_success': 'Successfully saved'\n    },\n    'group_tuning': {\n        'mode_title': 'Mode',\n        'automate': 'Automate',\n        'auto': 'Automatic',\n        'manual': 'Manual'\n    },\n    'group_entity': {\n        'room_title': 'Rooms configuration',\n        'room_add': 'Add or edit a room',\n        'room_del': 'Delete a room',\n        'room_id': 'Ident',\n        'room_name': 'Name',\n\n        'camera_title': 'Camera configuraion',\n        'camera_ip': 'IP',\n        'camera_user': 'Login',\n        'camera_pass': 'Password',\n        'camera_token': 'Token',\n        'camera_type': 'Type',\n\n        'entity_title': 'List of received entities',\n        'entity_edit_title': 'Configure entity',\n        'entity_edit_name': 'Name',\n        'entity_edit_room': 'Room',\n        'entity_edit_type': 'Type',\n        'entity_edit_element': 'Element',\n        'entity_edit_action': 'Action',\n        'entity_show': 'Show',\n        'entity_hide': 'Hide',\n        'entity_delete': 'Delete',\n\n        'device_edit_title': 'Configure device',\n        'device_edit_name': 'Device name'\n    }\n}\n\n// Add pages dictionary group if nto present\nconst pages = { ...(global.get('describe.pages', 'memoryOnly') || { }) };\nfor (const p in pages) {\n    if (typeof dictionary['en'][p] !== 'object') {\n        dictionary['en'][p] = { };\n    }\n}\n\n// Fill dictionaries with \"en\" sentences\nfor (const lang in dictionary) {\n    if (lang !== 'en') {\n        dictionary[lang] = {...dictionary['en'], ...dictionary[lang] };\n    }\n}\n\nglobal.set('dictionary', dictionary, 'memoryOnly');\n\nreturn msg;",
+        "func": "const dictionary = global.get('dictionary', 'memoryOnly') || {};\n\ndictionary.en = {\n    'common': {\n        'locales': 'en-GB'\n    },\n    'option_page': {\n        'home': 'Home',\n        'energy': 'Energy',\n        'calendar': 'Calendar',\n        'room': 'Rooms',\n        'tuning': 'Adjustments',\n        'scene': 'Scenes',\n        'entity': 'Entities',\n        'config': 'Configuration',\n        'auth': 'Authentication'\n    },\n    'option_level': {\n        'visitor': 'Visitor',\n        'child':  'Child',\n        'parent':'Parent',\n        'admin': 'Administrator'\n    },\n    'option_team': {\n        'm': 'Morning',\n        'a': 'Afternoon',\n        'n': 'Night',\n        'd': 'Day',\n        'w': 'Weekend',\n        's': 'Saturday'\n    },\n    'option_lang': {\n        'en': 'English',\n        'fr': 'French'\n    },\n    'option_type': {\n        'command': 'Command',\n        'sensor': 'Sensor'\n    },\n    'option_element': {\n        'aperture': 'Aperture',\n        'battery': 'Battery',\n        'climate': 'Climate',\n        'current': 'Current',\n        'frequency': 'Frequency',\n        'voltage': 'Voltage',\n        'energy': 'Energy',\n        'power': 'Power',\n        'pressure': 'Pressure',\n        'temperature': 'Temperature',\n        'humidity': 'Humidity',\n        'illuminance': 'Illuminance',\n        'light': 'Light',\n        'switch': 'Switch',\n        'plug': 'Plug',\n        'remote': 'Remote',\n        'door': 'Door',\n        'window': 'Window',\n        'shutter': 'Shutter',\n        'slider': 'Sliding door',\n        'heater': 'Heating',\n        'waterboiler': 'Waterboiler',\n        'motion': 'Motion',\n        'presence': 'Presence',\n        'lock': 'Lock',\n        'alert': 'Alert',\n        'sound': 'Volume',\n        'wind': 'Wind',\n        'fan': 'Fan',\n        'direction': 'Direction',\n        'time': 'Clock',\n        'mode': 'Mode',\n        'text': 'Text',\n        'location': 'Location',\n        'camera': 'Camera',\n        'shield': 'Shield',\n        'color': 'Color',\n        'tariff': 'Tariff'\n    },\n    'option_unit': {\n        '': 'None',\n        '°C': 'Degree celsuis',\n        '°F': 'Degree fahrenheit',\n        'mA': 'Milliampere',\n        'A': 'Ampere',\n        'Hz': 'Hertz',\n        'mW': 'Milliwatt',\n        'W': 'Watt',\n        'kW': 'Kilowatt',\n        'MW': 'Megawatt',\n        'mWh': 'Milliwatt/hour',\n        'Wh': 'Watt/Hour',\n        'mVA': 'Millivoltampere',\n        'VA': 'Voltampere',\n        'mV': 'Millivolt',\n        'V': 'Volt',\n        'lx': 'Lux',\n        'ppm': 'Parts per million',\n        '%': 'Percent (0-100)',\n        'b': 'Binary (0-1)',\n        'rb': 'Revert binary',\n        '8b': '8-bit (0-255)',\n        'n': 'Number',\n        's': 'Second',\n        'ms': 'Millisecond',\n        'time': 'Time',\n        'enum': 'Enumerator',\n        'text': 'Text',\n        'chex': 'Hexadécimal color'\n    },\n    'option_calendar': {\n        'birthday': 'Birthday',\n        'rendezvous': 'Rendez-vous',\n        'trashbin': 'Trash bin',\n        'recyclebin': 'Recycle bin'\n    },\n    'option_scene': {\n        'enabled': 'Enabled',\n        'mode': 'Scene',\n        'on': 'On level',\n        'off': 'Off level',\n        'high': 'High dimmer',\n        'low': 'Low dimmer',\n        'delay': 'Delay',\n        'step': 'Step',\n        'min': 'Miminum',\n        'max': 'Maximm',\n        'motion': 'Motion',\n        'retention': 'Retention',\n        'aperture': 'Aperture',\n        'nocturnal': 'Nocturnal',\n        'diurnal': 'Diurnal',\n        'nightlight': 'Nightlight',\n        'daily': 'Daily',\n        'openwork': 'Openwork',\n        'duration': 'Duration',\n        'illuminance': 'Illuminance',\n        'darkness': 'Darkness',\n        'humidity': 'Humidity',\n        'power': 'Power',\n        'tariff': 'tariff',\n\n        'target': 'Target',\n        'timer': 'Timer',\n        'today': 'Today',\n        'trigger': 'Triggers'\n    },\n    'option_trigger': {\n        'none': 'None',\n        'high': 'High output level',\n        'low': 'Low output level',\n        'toggle': 'Toggle output'\n    },\n    'option_column': {\n        'name': 'Name',\n        'room': 'Room',\n        'element': 'Element',\n        'type': 'Type',\n        'unit': 'Unit',\n        'action': 'Action'\n    },\n    'notice': {\n        'file_write_success': 'Saved file successfully',\n        'file_write_fail': 'Failed to save file',\n        'login_fail': 'Wrong username or password',\n        'save_success': 'Successfully saved'\n    },\n    'group_tuning': {\n        'mode_title': 'Mode',\n        'automate': 'Automate',\n        'auto': 'Automatic',\n        'manual': 'Manual'\n    },\n    'group_entity': {\n        'room_title': 'Rooms configuration',\n        'room_add': 'Add or edit a room',\n        'room_del': 'Delete a room',\n        'room_id': 'Ident',\n        'room_name': 'Name',\n\n        'camera_title': 'Camera configuraion',\n        'camera_ip': 'IP',\n        'camera_user': 'Login',\n        'camera_pass': 'Password',\n        'camera_token': 'Token',\n        'camera_type': 'Type',\n\n        'entity_title': 'List of received entities',\n        'entity_edit_title': 'Configure entity',\n        'entity_edit_name': 'Name',\n        'entity_edit_room': 'Room',\n        'entity_edit_type': 'Type',\n        'entity_edit_element': 'Element',\n        'entity_edit_action': 'Action',\n        'entity_show': 'Show',\n        'entity_hide': 'Hide',\n        'entity_delete': 'Delete',\n\n        'device_edit_title': 'Configure device',\n        'device_edit_name': 'Device name'\n    }\n}\n\n// Add pages dictionary group if nto present\nconst pages = { ...(global.get('describe.pages', 'memoryOnly') || { }) };\nfor (const p in pages) {\n    if (typeof dictionary['en'][p] !== 'object') {\n        dictionary['en'][p] = { };\n    }\n}\n\n// Fill dictionaries with \"en\" sentences\nfor (const lang in dictionary) {\n    if (lang !== 'en') {\n        dictionary[lang] = {...dictionary['en'], ...dictionary[lang] };\n    }\n}\n\nglobal.set('dictionary', dictionary, 'memoryOnly');\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -10013,7 +10079,8 @@
             "217d334d78a1a033",
             "7f4aee4ddcd7320f",
             "d1d7ca12d01768ca",
-            "fb7da4dbb76c9223"
+            "fb7da4dbb76c9223",
+            "ca73fe66b198a5b0"
         ],
         "x": 395,
         "y": 140,
@@ -10044,24 +10111,498 @@
         "id": "f032a62ad2f13bb9",
         "type": "ui-text",
         "z": "c84dae3356e4a4bc",
-        "group": "2fee009978c5262b",
+        "g": "192c9d61b22bea8d",
+        "group": "47cf17cc0748666a",
         "order": 1,
         "width": 0,
         "height": 0,
-        "name": "",
-        "label": "text",
+        "name": "calendar - add - title",
+        "label": "",
         "format": "{{msg.payload}}",
-        "layout": "row-spread",
+        "layout": "row-left",
         "style": false,
         "font": "",
         "fontSize": 16,
         "color": "#717171",
         "wrapText": false,
-        "className": "",
+        "className": "ui-title",
         "value": "payload",
         "valueType": "msg",
-        "x": 390,
+        "x": 880,
         "y": 260,
+        "wires": []
+    },
+    {
+        "id": "ba1539c07824ae7c",
+        "type": "function",
+        "z": "c84dae3356e4a4bc",
+        "g": "192c9d61b22bea8d",
+        "name": "data",
+        "func": "\nawait new Promise(resolve => setTimeout(resolve, 50));\n\nconst option_calendar = { ...(global.get('describe.calendar', 'memoryOnly') || { }) };\n\nlet d = 0;\nlet dropdownOptions = [];\nfor (const o in option_calendar) {\n    dropdownOptions[d++] = {\n        'label': msg.dictionary.option_calendar[o] || o,\n        'value': o,\n        'dropdown': 'type'\n    };\n}\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            'type': 'date',\n            'label': msg.dictionary.calendar.date || 'Date',\n            'key': 'date',\n            'required': true\n        },\n        {\n            'type': 'time',\n            'label': msg.dictionary.calendar.time || 'Time',\n            'key': 'time',\n            'required': true\n        },\n        {\n            'type': 'dropdown',\n            'label': msg.dictionary.calendar.type || 'Type',\n            'key': 'type',\n            'required': true\n        },\n        {\n            'type': 'text',\n            'label': msg.dictionary.calendar.title || 'Title',\n            'key': 'title',\n            'required': true\n        },\n        {\n            'type': 'multiline',\n            'label': msg.dictionary.calendar.detail || 'Detail',\n            'key': 'detail',\n            'rows': 3,\n            'required': false\n        },\n        {\n            'type': 'checkbox',\n            'label': msg.dictionary.calendar.past || 'Delete when perempted',\n            'key': 'perempted',\n            'required': false\n        }\n\n    ],\n    'dropdownOptions': dropdownOptions\n};\n\nnode.send([ null, msg ]);\n\nmsg.payload = msg.dictionary.calendar_add_title || 'Add event';\n\nnode.send([ msg, null ]);\n\nreturn;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 320,
+        "wires": [
+            [
+                "f032a62ad2f13bb9"
+            ],
+            [
+                "5743e8bd13f0cf67"
+            ]
+        ]
+    },
+    {
+        "id": "5743e8bd13f0cf67",
+        "type": "ui-form",
+        "z": "c84dae3356e4a4bc",
+        "g": "192c9d61b22bea8d",
+        "name": "calendar - add - form",
+        "group": "47cf17cc0748666a",
+        "label": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "date",
+                "key": "date",
+                "type": "date",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "time",
+                "key": "time",
+                "type": "time",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "type",
+                "key": "type",
+                "type": "dropdown",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "title",
+                "key": "title",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "detail",
+                "key": "detail",
+                "type": "multiline",
+                "required": false,
+                "rows": 3
+            },
+            {
+                "label": "perempted",
+                "key": "perempted",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "date": "",
+            "time": "",
+            "type": "",
+            "title": "",
+            "detail": "",
+            "perempted": false
+        },
+        "payload": "",
+        "submit": "►",
+        "cancel": "",
+        "resetOnSubmit": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "passthru": false,
+        "dropdownOptions": [],
+        "x": 880,
+        "y": 320,
+        "wires": [
+            [
+                "2d9aef161a7ceb35"
+            ]
+        ]
+    },
+    {
+        "id": "2d9aef161a7ceb35",
+        "type": "function",
+        "z": "c84dae3356e4a4bc",
+        "g": "192c9d61b22bea8d",
+        "name": "data",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nconst now = Date.now();\nlet calendar = [ ...(global.get('calendar', 'memoryOnly') || [ ]) ];\n\nmsg.payload.id = now;\ncalendar.push(msg.payload);\n\nglobal.set('calendar', calendar, 'memoryOnly');\n\nmsg.payload = '';\nmsg.enabled = true;\n\nawait new Promise(resolve => setTimeout(resolve, 50));\n\nnode.send([ null, msg ]);\n\nmsg.payload = msg.dictionary.notice.save_success;\n\nnode.send([ msg, null ]);\n\nreturn;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 320,
+        "wires": [
+            [
+                "26d8d3d7bc111e9a"
+            ],
+            [
+                "ba4f659a82ef38e6"
+            ]
+        ]
+    },
+    {
+        "id": "26d8d3d7bc111e9a",
+        "type": "link out",
+        "z": "c84dae3356e4a4bc",
+        "g": "192c9d61b22bea8d",
+        "name": "calendar - list - notice",
+        "mode": "link",
+        "links": [
+            "f4a2353e5f92576c"
+        ],
+        "x": 1215,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "ca73fe66b198a5b0",
+        "type": "link in",
+        "z": "c84dae3356e4a4bc",
+        "g": "192c9d61b22bea8d",
+        "name": "calendar - list",
+        "links": [
+            "84d3ab68d3d3217b",
+            "f8f6115ba56b682c"
+        ],
+        "x": 145,
+        "y": 440,
+        "wires": [
+            [
+                "9d77bd1f2df13ea4"
+            ]
+        ]
+    },
+    {
+        "id": "9d77bd1f2df13ea4",
+        "type": "function",
+        "z": "c84dae3356e4a4bc",
+        "g": "192c9d61b22bea8d",
+        "name": "data",
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (!msg.enabled) {\n    msg.payload = '';\n\n    return [ msg, msg ];\n}\n\n\nconst now = new Date();\nconst colors = { ...(global.get('describe.colors', 'memoryOnly') || { }) };\nconst icons = { ...(global.get('describe.calendar', 'memoryOnly') || { }) };\nlet calendar = [ ...(global.get('calendar', 'memoryOnly') || [ ]) ];\n\ncalendar.sort((a, b) => b.date.localeCompare(a.date));\n\nmsg.payload = [ ];\nfor (let i = 0; i < calendar.length; i++) {\n    if (typeof calendar[i] !== 'object') {\n\n        continue;\n    }\n\n    msg.payload[i] = {\n        'id': calendar[i]['id'],\n        'date': (new Date(calendar[i]['date'])).toLocaleDateString(msg.dictionary.common.locales) + ' ' + calendar[i]['time'],\n        'title': calendar[i]['title'],\n        'detail': calendar[i]['detail'],\n        'type': '<i class=\"icon-in-row mdi mdi-' + icons[calendar[i]['type']][1] + '\" style=\"color:' + (calendar[i]['peremtped'] ? colors.none : colors.theme) + '\" title=\"' + calendar[i]['type'] + '\"></i>',\n        'delete': msg.dictionary.calendar.delete || 'Delete'\n    };\n\n    let dt = new Date(calendar[i]['date']);\n    if (dt < now) {\n        break;\n    }\n}\n\nnode.send([ null, msg ]);\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.calendar_add_title || 'Add event'\n};\n\nnode.send([ msg, null ]);\n\nreturn;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 440,
+        "wires": [
+            [
+                "98ba5ee73c6ab71c"
+            ],
+            [
+                "9427955ef0d7bf44"
+            ]
+        ]
+    },
+    {
+        "id": "9427955ef0d7bf44",
+        "type": "ui-table",
+        "z": "c84dae3356e4a4bc",
+        "g": "192c9d61b22bea8d",
+        "group": "2fee009978c5262b",
+        "name": "calendar - list - table",
+        "label": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "maxrows": 0,
+        "passthru": false,
+        "autocols": false,
+        "showSearch": true,
+        "deselect": true,
+        "selectionType": "click",
+        "columns": [
+            {
+                "title": "",
+                "key": "type",
+                "keyType": "key",
+                "type": "html",
+                "width": "20px",
+                "align": "center"
+            },
+            {
+                "title": "",
+                "key": "date",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            },
+            {
+                "title": "",
+                "key": "title",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            },
+            {
+                "title": "",
+                "key": "delete",
+                "keyType": "key",
+                "type": "button",
+                "width": "20px",
+                "align": "end"
+            }
+        ],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "",
+        "x": 480,
+        "y": 440,
+        "wires": [
+            [
+                "775f42f6ba6074b0"
+            ]
+        ]
+    },
+    {
+        "id": "775f42f6ba6074b0",
+        "type": "function",
+        "z": "c84dae3356e4a4bc",
+        "g": "192c9d61b22bea8d",
+        "name": "data",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\n\nif (msg.action === 'row_click' && msg.payload.detail !== '') {\n\n    return [ msg, null];\n}\nelse if (msg.action === 'button_click') {\n    const calendar = [ ...(global.get('calendar', 'memoryOnly') || [ ]) ];\n    for (let i = 0; i < calendar.length; i++) {\n        if (typeof calendar[i] !== 'object') {\n\n            calendar.splice(i, 1);\n        }\n        else if (calendar[i]['id'] === msg.payload.id) {\n            calendar.splice(i, 1);\n\n            global.set('calendar', calendar, 'memoryOnly');\n            \n            await new Promise(resolve => setTimeout(resolve, 50));\n\n            msg.enabled = true;\n\n            return [null, msg];\n        }\n    }\n}\n\nreturn;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 440,
+        "wires": [
+            [
+                "faded2d379f7fa0d",
+                "564e0ab4d7132995"
+            ],
+            [
+                "9d77bd1f2df13ea4"
+            ]
+        ]
+    },
+    {
+        "id": "faded2d379f7fa0d",
+        "type": "function",
+        "z": "c84dae3356e4a4bc",
+        "g": "192c9d61b22bea8d",
+        "name": "show dialog",
+        "func": "msg.payload = {\n    groups: {\n        show: ['calendar - detail - dialog']\n    }\n};\nmsg.enabled = true;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 440,
+        "wires": [
+            [
+                "f8f6115ba56b682c"
+            ]
+        ]
+    },
+    {
+        "id": "92d3b5dcbaa54461",
+        "type": "ui-text",
+        "z": "c84dae3356e4a4bc",
+        "g": "192c9d61b22bea8d",
+        "group": "c25c0e2416c15529",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "calendar - detail - title",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "ui-title",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1080,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "564e0ab4d7132995",
+        "type": "function",
+        "z": "c84dae3356e4a4bc",
+        "g": "192c9d61b22bea8d",
+        "name": "data",
+        "func": "await new Promise(resolve => setTimeout(resolve, 50));\n\nconst title = msg.payload.title;\nconst detail = msg.payload.detail;\nconst date = msg.payload.date;\n\nmsg.payload = title;\n\nnode.send([ msg, null ]);\n\nmsg.payload = detail;\nmsg.enabled = false;\nmsg.ui_update = {\n    'label': date\n};\n\nnode.send([ null, msg ]);\n\nreturn;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 560,
+        "wires": [
+            [
+                "92d3b5dcbaa54461"
+            ],
+            [
+                "ed061748213efa22"
+            ]
+        ]
+    },
+    {
+        "id": "ed061748213efa22",
+        "type": "ui-text-input",
+        "z": "c84dae3356e4a4bc",
+        "g": "192c9d61b22bea8d",
+        "group": "c25c0e2416c15529",
+        "name": "",
+        "label": "",
+        "order": 2,
+        "width": "6",
+        "height": "4",
+        "topic": "topic",
+        "topicType": "msg",
+        "mode": "textarea",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": false,
+        "sendOnDelay": false,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 1060,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "98ba5ee73c6ab71c",
+        "type": "ui-button",
+        "z": "c84dae3356e4a4bc",
+        "g": "192c9d61b22bea8d",
+        "group": "2fee009978c5262b",
+        "name": "calendar - list - add",
+        "label": "",
+        "order": 1,
+        "width": "1",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 470,
+        "y": 380,
+        "wires": [
+            [
+                "21ac8b957ae78ebf",
+                "ba1539c07824ae7c"
+            ]
+        ]
+    },
+    {
+        "id": "21ac8b957ae78ebf",
+        "type": "function",
+        "z": "c84dae3356e4a4bc",
+        "g": "192c9d61b22bea8d",
+        "name": "show dialog",
+        "func": "msg.payload = {\n    groups: {\n        show: ['calendar - add - dialog']\n    }\n};\nmsg.enabled = true;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 380,
+        "wires": [
+            [
+                "f8f6115ba56b682c"
+            ]
+        ]
+    },
+    {
+        "id": "ba4f659a82ef38e6",
+        "type": "function",
+        "z": "c84dae3356e4a4bc",
+        "g": "192c9d61b22bea8d",
+        "name": "hide dialog",
+        "func": "msg.payload = {\n    groups: {\n        hide: ['calendar - add - dialog']\n    }\n};\nmsg.enabled = true;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 320,
+        "wires": [
+            [
+                "f8f6115ba56b682c"
+            ]
+        ]
+    },
+    {
+        "id": "f8f6115ba56b682c",
+        "type": "link out",
+        "z": "c84dae3356e4a4bc",
+        "g": "192c9d61b22bea8d",
+        "name": "calendar - list - dialog",
+        "mode": "link",
+        "links": [
+            "289e0a6cd1209c38",
+            "ca73fe66b198a5b0"
+        ],
+        "x": 1415,
+        "y": 380,
         "wires": []
     },
     {
