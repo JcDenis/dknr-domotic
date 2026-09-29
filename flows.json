@@ -943,7 +943,7 @@
             "964a72dc1d8cb0bf"
         ],
         "x": 104,
-        "y": 219,
+        "y": 519,
         "w": 892,
         "h": 202
     },
@@ -1947,6 +1947,29 @@
         "y": 219,
         "w": 1352,
         "h": 382
+    },
+    {
+        "id": "38cccbb457700923",
+        "type": "group",
+        "z": "10a4e1188aad61a2",
+        "name": "home - calendar",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "0a5e55d9d664d599",
+            "ca35d761a2b2b274",
+            "3bca2397c24007a9",
+            "e38ef5b74fe9821a",
+            "cf18b482d91f72fe",
+            "2164f2e26943a9e7"
+        ],
+        "x": 104,
+        "y": 219,
+        "w": 562,
+        "h": 262
     },
     {
         "id": "df7710b4b2c4e55b",
@@ -4966,7 +4989,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "data",
-        "func": "// Copy data from/to memory\n\n// First announce we boot, (stop scene)\nif (msg.payload === true) {\n    global.set('boot', true, 'memoryOnly');\n}\n\nconst places = ['default', 'memoryOnly'];\nconst place = msg.payload === true ? places : [places[1], places[0]];\n\n// copy from memory to file\nconst memorized = {\n    'auth': {},\n    'block': {},\n    'camera': {},\n    'energy': {},\n    'entity': {},\n    'mqtt': {},\n    'parent': {},\n    'room': {},\n    'scene': {}\n}\n\n// Copy backup or at least init\nfor (const key in memorized) {\n    let src = global.get(key, place[0]);\n    if (typeof src !== 'object') {\n        src = memorized[key];\n    }\n    global.set(key, src, place[1]);\n}\n\nnode.status({text: place[0] + ' to ' + place[1]});\n\nif (msg.payload === false) {\n\n    return;\n}\n\nflow.set('stop', false, 'memoryOnly');\n\n// Reset \"per user\" variables\nconst peruser = {\n    'browser': {},\n    'describe': {\n        'project': '',\n        'app': {},\n        'pages': {},\n        'sources': {},\n        'enum': {},\n        'elements': {},\n        'reverts': {},\n        'texts': {},\n        'untis': {},\n        'colors': {},\n        'scenes': {},\n        'routines': {},\n        'template': {}\n    },\n    'dictionary': {},\n    'auth': {},\n    'form': {},\n    'user': {}\n};\nfor (const key in peruser) {\n    global.set(key, peruser[key], 'memoryOnly');\n}\n\n// start\nmsg.payload = {\n    'pages': {},\n    'sources': {},\n    'enum': {},\n    'dictionary': {}\n};\n\nreturn msg;",
+        "func": "// Copy data from/to memory\n\n// First announce we boot, (stop scene)\nif (msg.payload === true) {\n    global.set('boot', true, 'memoryOnly');\n}\n\nconst places = ['default', 'memoryOnly'];\nconst place = msg.payload === true ? places : [places[1], places[0]];\n\n// copy from memory to file\nconst memorized = {\n    'auth': { },\n    'block': { },\n    'calendar': { },\n    'camera': { },\n    'energy': { },\n    'entity': { },\n    'mqtt': { },\n    'parent': { },\n    'room': { },\n    'scene': { }\n}\n\n// Copy backup or at least init\nfor (const key in memorized) {\n    let src = global.get(key, place[0]);\n    if (typeof src !== 'object') {\n        src = memorized[key];\n    }\n    global.set(key, src, place[1]);\n}\n\nnode.status({text: place[0] + ' to ' + place[1]});\n\nif (msg.payload === false) {\n\n    return;\n}\n\nflow.set('stop', false, 'memoryOnly');\n\n// Reset \"per user\" variables\nconst peruser = {\n    'browser': {},\n    'describe': {\n        'project': '',\n        'app': {},\n        'pages': {},\n        'sources': {},\n        'enum': {},\n        'elements': {},\n        'reverts': {},\n        'texts': {},\n        'untis': {},\n        'colors': {},\n        'scenes': {},\n        'routines': {},\n        'template': {}\n    },\n    'dictionary': {},\n    'auth': {},\n    'form': {},\n    'user': {}\n};\nfor (const key in peruser) {\n    global.set(key, peruser[key], 'memoryOnly');\n}\n\n// start\nmsg.payload = {\n    'pages': {},\n    'sources': {},\n    'enum': {},\n    'dictionary': {}\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6380,7 +6403,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "data",
-        "func": "// Maintenance for memory var\n\nflow.set('stop', true, 'memoryOnly');\nnode.status({ fill: 'red' });\n\nconst template = { ...(global.get('describe.template', 'memoryOnly') || {}) };\n\n// Clean name\nlet new_p = {};\nconst p = global.get('parent', 'memoryOnly') || {};\nconst l = global.get('entity', 'memoryOnly') || {}\nfor (const k in l) {\n    if (l[k]['parent'] !== '' && typeof p[l[k]['parent']] === 'object') {\n        new_p[l[k]['parent']] = p[l[k]['parent']];\n    }\n}\n\nglobal.set('parent', new_p, 'memoryOnly');\n\n// Clean entity\nconst template_entity = Object.keys(template.entity);\nlet entity = {...global.get('entity', 'memoryOnly')};\nfor (const k in entity) {\n    for (const l in entity[k]) {\n        if (!template_entity.includes(l)) {\n            delete entity[k][l];\n        }\n    }\n}\nglobal.set('entity', entity, 'memoryOnly');\n\n\n// Clean up scenes\nlet scene = { ...(global.get('scene', 'memoryOnly') || {}) };\n\nfor (const e in scene) {\n    let clean = { };\n\n    const type = global.get('entity[\"' + e + '\"][\"element\"]', 'memoryOnly') || '';\n    if (type === '') {\n\n        continue;\n    }\n    const fields = [ ...(global.get('describe[\"scenes\"][\"' + type + '\"]', 'memoryOnly') || []) ];\n    if (fields.length === 0) {\n\n        continue;\n    }\n\n    for (const field in template.scene) {\n        if (fields.includes(field)) {\n            clean[field] = scene[e][field] || template['scene'][field];\n        }\n        else {\n            clean[field] = template['scene'][field];\n        }\n    }\n\n    clean['target'] = e;\n    clean['trigger'] = scene[e]['trigger'] || { };\n    clean['today'] = scene[e]['today'] || 0;\n    clean['timer'] = scene[e]['timer'] || 0;\n    \n    clean['temperature_aperture_opened'] = scene[e]['temperature_aperture_opened'] || 0;\n    clean['temperature_aperture_timer'] = scene[e]['temperature_aperture_timer'] || 0;\n    clean['temperature_pilot_state'] = scene[e]['temperature_pilot_state'] || 'stopped';\n    clean['temperature_pilot_last'] = scene[e]['temperature_pilot_last'] || 0;\n\n    scene[e] = clean;\n}\nglobal.set('scene', scene, 'memoryOnly');\n\n\nnode.status({ fill: 'green' });\nflow.set('stop', false, 'memoryOnly');\n\nreturn msg;",
+        "func": "// Maintenance for memory var\n\nflow.set('stop', true, 'memoryOnly');\nnode.status({ fill: 'red' });\n\nconst template = { ...(global.get('describe.template', 'memoryOnly') || {}) };\n\n// Clean name\nlet new_p = {};\nconst p = global.get('parent', 'memoryOnly') || {};\nconst l = global.get('entity', 'memoryOnly') || {}\nfor (const k in l) {\n    if (l[k]['parent'] !== '' && typeof p[l[k]['parent']] === 'object') {\n        new_p[l[k]['parent']] = p[l[k]['parent']];\n    }\n}\n\nglobal.set('parent', new_p, 'memoryOnly');\n\n// Clean entity\nconst template_entity = Object.keys(template.entity);\nlet entity = {...global.get('entity', 'memoryOnly')};\nfor (const k in entity) {\n    for (const l in entity[k]) {\n        if (!template_entity.includes(l)) {\n            delete entity[k][l];\n        }\n    }\n}\nglobal.set('entity', entity, 'memoryOnly');\n\n\n// Clean up scenes\nlet scene = { ...(global.get('scene', 'memoryOnly') || {}) };\n\nfor (const e in scene) {\n    let clean = { };\n\n    const type = global.get('entity[\"' + e + '\"][\"element\"]', 'memoryOnly') || '';\n    if (type === '') {\n\n        continue;\n    }\n    const fields = [ ...(global.get('describe[\"scenes\"][\"' + type + '\"]', 'memoryOnly') || []) ];\n    if (fields.length === 0) {\n\n        continue;\n    }\n\n    for (const field in template.scene) {\n        if (fields.includes(field)) {\n            clean[field] = scene[e][field] || template['scene'][field];\n        }\n        else {\n            clean[field] = template['scene'][field];\n        }\n    }\n\n    clean['target'] = e;\n    clean['trigger'] = scene[e]['trigger'] || { };\n    clean['today'] = scene[e]['today'] || 0;\n    clean['timer'] = scene[e]['timer'] || 0;\n    \n    clean['temperature_aperture_opened'] = scene[e]['temperature_aperture_opened'] || 0;\n    clean['temperature_aperture_timer'] = scene[e]['temperature_aperture_timer'] || 0;\n    clean['temperature_pilot_state'] = scene[e]['temperature_pilot_state'] || 'stopped';\n    clean['temperature_pilot_last'] = scene[e]['temperature_pilot_last'] || 0;\n\n    scene[e] = clean;\n}\nglobal.set('scene', scene, 'memoryOnly');\n\n// delete perempted calendar entries\nconst calendar = { ...(global.get('calendar', 'memoryOnly') || { }) };\nconst now = new Date();\nfor (const id in calendar) {\n    if (calendar[id]['perempted'] === true) {\n        let dt  = new Date(calendar[id]['ts']);\n        if (dt < now) {\n            delete calendar[id];\n        }\n    }\n}\nglobal.set('calendar', calendar, 'memoryOnly');\n\n\nnode.status({ fill: 'green' });\nflow.set('stop', false, 'memoryOnly');\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6960,7 +6983,7 @@
         "z": "4bc72a1112cb448c",
         "g": "f822aa69af66c546",
         "name": "data",
-        "func": "const rnd = global.get('random', 'memoryOnly') || '--';\nif (typeof rnd !== 'number' || \n    typeof msg.payload.rnd !== 'string' || \n    rnd !== Number(msg.payload.rnd)\n) {\n\n    node.send([null, msg]);\n}\n\nmsg.payload = JSON.stringify({\n    'auth': {...global.get('auth', 'memoryOnly') || {}},\n    'block': {...global.get('block', 'memoryOnly') || {}},\n    'camera': { ...global.get('camera', 'memoryOnly') || {} },\n    'energy': { ...global.get('energy', 'memoryOnly') || {} },\n    'entity': { ...global.get('entity', 'memoryOnly') || {} },\n    'mqtt': {...global.get('mqtt', 'memoryOnly') || {}},\n    'room': {...global.get('room', 'memoryOnly') || {}},\n    'parent': {...global.get('parent', 'memoryOnly') || {}},\n    'scene': {...global.get('scene', 'memoryOnly') || {}}\n}, null, 4);\n\nmsg.headers = {\n    'Content-Type':'application/json',\n    'Content-Disposition':'attachment; filename=\"backup.json\"',\n    'Content-Length': msg.payload.length,\n    'Connection':'close'\t\n};\n\nnode.send([msg, null]);\n\nreturn;",
+        "func": "const rnd = global.get('random', 'memoryOnly') || '--';\nif (typeof rnd !== 'number' || \n    typeof msg.payload.rnd !== 'string' || \n    rnd !== Number(msg.payload.rnd)\n) {\n\n    node.send([null, msg]);\n}\n\nmsg.payload = JSON.stringify({\n    'auth': {...global.get('auth', 'memoryOnly') || {}},\n    'block': {...global.get('block', 'memoryOnly') || {}},\n    'calendar': { ...global.get('calendar', 'memoryOnly') || {} },\n    'camera': { ...global.get('camera', 'memoryOnly') || {} },\n    'energy': { ...global.get('energy', 'memoryOnly') || {} },\n    'entity': { ...global.get('entity', 'memoryOnly') || {} },\n    'mqtt': {...global.get('mqtt', 'memoryOnly') || {}},\n    'room': {...global.get('room', 'memoryOnly') || {}},\n    'parent': {...global.get('parent', 'memoryOnly') || {}},\n    'scene': {...global.get('scene', 'memoryOnly') || {}}\n}, null, 4);\n\nmsg.headers = {\n    'Content-Type':'application/json',\n    'Content-Disposition':'attachment; filename=\"backup.json\"',\n    'Content-Length': msg.payload.length,\n    'Connection':'close'\t\n};\n\nnode.send([msg, null]);\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -7823,7 +7846,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine value",
-        "func": "/*\nvalue:\nParse target value according to previous routines.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\nconst old_value = msg.target.value;\nconst high = ['on', 'high'];\nconst low = ['off', 'low'];\nconst exception = ['shutter'];\n\n// Check if a mode as same name as scene, and if its level is high or low (value)\nconst sensor = global.get('entity.dknr_sensor_' + msg.target.element + '.value', 'memoryOnly') || '-';\n\nif (['rb', 'b'].includes(msg.target.unit) || (!high.includes(sensor) && !low.includes(sensor))) {\n    msg.target.value = msg.payload === true ? msg.scene.on : msg.scene.off;\n\n} else {\n    if (msg.payload === true) {\n        // Openwork\n        if (msg.trigger.element === 'illuminance' && msg.scene.openwork > 1){\n            msg.target.value = Number(msg.scene.openwork);\n        }\n        // Dimmer on level\n        else if (!exception.includes(msg.target.element) && high.includes(sensor)) {\n            msg.target.value = msg.scene.high;\n        }\n        //Dimmer off level\n        else if (!exception.includes(msg.target.element) && low.includes(sensor)) {\n            msg.target.value = msg.scene.low;\n        }\n        // Normal on\n        else {\n            msg.target.value = msg.scene.on;\n        }\n    }\n    else if (msg.payload === false) {\n        // Normal off\n        msg.target.value = msg.scene.off;\n    }\n}\n\nif (msg.rsp === false) {\n\n    msg.summary.value = 'unmatch: ' + msg.target.value;\n    node.status({ 'fill': 'red', 'text': 'unmatch: ' + msg.target.value });\n}\nelse if (msg.target.value.toString() === old_value.toString()) {\n    if (msg.replay === true) {\n        msg.rsp = true;\n\n        msg.summary.value = 'replay: ' + msg.target.value;\n        node.status({ 'fill': 'red', 'text': 'replay: ' + msg.target.value });\n    }\n    else {\n        msg.rsp = false;\n\n        msg.summary.value = 'unchange: ' + msg.target.value;\n        node.status({ 'fill': 'red', 'text': 'unchange: ' + msg.target.value });\n    }\n}\nelse {\n\n    msg.summary.value = 'new value: ' + msg.target.value;\n    node.status({ 'fill': 'green', 'text': 'new value: ' + msg.target.value });\n}\n\n// Convert to number if applicable\nif (/^-?\\d+(\\.\\d+)?$/.test(msg.target.value)) {\n    msg.target.value = Number(msg.target.value);\n}\n\nreturn msg;",
+        "func": "/*\nvalue:\nParse target value according to previous routines.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\nconst old_value = msg.target.value;\nconst high = ['on', 'high'];\nconst low = ['off', 'low'];\nconst exception = ['shutter'];\n\n// Check if a mode as same name as scene, and if its level is high or low (value)\nconst sensor = global.get('entity.dknr_sensor_' + msg.target.element + '.value', 'memoryOnly') || '-';\n\nif (['rb', 'b'].includes(msg.target.unit) || (!high.includes(sensor) && !low.includes(sensor))) {\n    msg.target.value = msg.payload === true ? msg.scene.on : msg.scene.off;\n\n} else {\n    if (msg.payload === true) {\n        // Openwork\n        if (msg.trigger.element === 'illuminance' && msg.scene.openwork > 1){\n            msg.target.value = Number(msg.scene.openwork);\n        }\n        // Dimmer on level\n        else if (!exception.includes(msg.target.element) && high.includes(sensor)) {\n            msg.target.value = msg.scene.high;\n        }\n        // Dimmer off level\n        else if (!exception.includes(msg.target.element) && low.includes(sensor)) {\n            msg.target.value = msg.scene.low;\n        }\n        // Normal on\n        else {\n            msg.target.value = msg.scene.on;\n        }\n    }\n    else if (msg.payload === false) {\n        // Normal off\n        msg.target.value = msg.scene.off;\n    }\n}\n\nif (msg.rsp === false) {\n\n    msg.summary.value = 'unmatch: ' + msg.target.value;\n    node.status({ 'fill': 'red', 'text': 'unmatch: ' + msg.target.value });\n}\nelse if (msg.target.value.toString() === old_value.toString()) {\n    if (msg.replay === true) {\n        msg.rsp = true;\n\n        msg.summary.value = 'replay: ' + msg.target.value;\n        node.status({ 'fill': 'red', 'text': 'replay: ' + msg.target.value });\n    }\n    else {\n        msg.rsp = false;\n\n        msg.summary.value = 'unchange: ' + msg.target.value;\n        node.status({ 'fill': 'red', 'text': 'unchange: ' + msg.target.value });\n    }\n}\nelse {\n\n    msg.summary.value = 'new value: ' + msg.target.value;\n    node.status({ 'fill': 'green', 'text': 'new value: ' + msg.target.value });\n}\n\n// Convert to number if applicable\nif (/^-?\\d+(\\.\\d+)?$/.test(msg.target.value)) {\n    msg.target.value = Number(msg.target.value);\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7844,7 +7867,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - daily",
-        "func": "/*\ndaily:\nStop routine if target high level is allready done today.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('daily')\n || msg.scene.daily === 0\n || msg.trigger.element === 'remote'\n || msg.target.value !== msg.scene.on // from \"routine - value\"\n) {\n\n    msg.summary.daily = 'bypass';\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\nif (msg.scene.today === 1) {\n    msg.rsp = false;\n\n    msg.summary.daily = 'scene is excuted today';\n    node.status({ 'fill': 'red', 'text': 'scene is excuted today' });\n} else {\n    const scene = { ...(global.get('scene', 'memoryOnly') || {}) };\n    scene[msg.scene.target]['today'] = 1;\n    global.set('scene', scene, 'memoryOnly');\n\n    msg.summary.daily = 'scene is not executed today';\n    node.status({ 'fill': 'green', 'text': 'scene is not executed today' });\n}\n\nreturn msg;",
+        "func": "/*\ndaily:\nStop routine if target high level is allready done today.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('daily')\n || msg.scene.daily === 0\n || msg.trigger.element === 'remote'\n || msg.payload === false\n) {\n\n    msg.summary.daily = 'bypass';\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\nif (msg.scene.today === 1) {\n    msg.rsp = false;\n\n    msg.summary.daily = 'scene is excuted today';\n    node.status({ 'fill': 'red', 'text': 'scene is excuted today' });\n} else {\n    const scene = { ...(global.get('scene', 'memoryOnly') || {}) };\n    scene[msg.scene.target]['today'] = 1;\n    global.set('scene', scene, 'memoryOnly');\n\n    msg.summary.daily = 'scene is not executed today';\n    node.status({ 'fill': 'green', 'text': 'scene is not executed today' });\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7865,7 +7888,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - duration",
-        "func": "/*\nduration:\nUpdate timer if routines response is true.\n*/\n\nnode.status({});\n\n// Remove expired target timer\nif (msg.scene.timer > 0 && msg.target.value.toString() === msg.scene.off.toString()) {\n\n    const scene = { ...(global.get('scene', 'memoryOnly') || {}) };\n    scene[msg.target.uid]['timer'] = 0;\n    global.set('scene', scene, 'memoryOnly');\n\n    msg.summary.duration = 'remove expired timer';\n    node.status({ 'fill': 'blue', 'text': msg.summary.duration });\n\n    return msg;\n}\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// If duration is not set, do not take care of this routine\nif (!msg.routines.includes('duration')\n || msg.scene.duration === 0\n) {\n    msg.summary.duration = 'bypass';\n    node.status({ 'fill': 'yellow', 'text': msg.summary.duration });\n\n    return msg;\n}\n\nconst scene = { ...(global.get('scene', 'memoryOnly') || {}) };\nscene[msg.target.uid]['timer'] = msg.payload === false ? 0 : Date.now();\nglobal.set('scene', scene, 'memoryOnly');\n\nmsg.summary.duration = 'timer is ' + (msg.payload ? 'on' : 'off');\nnode.status({ 'fill': 'green', 'text': msg.summary.duration });\n\nreturn msg;",
+        "func": "/*\nduration:\nUpdate timer if routines response is true.\n*/\n\nnode.status({ });\n\n// Remove expired target timer\nif (msg.scene.timer > 0 && msg.target.value.toString() === msg.scene.off.toString()) {\n\n    const scene = { ...(global.get('scene', 'memoryOnly') || {}) };\n    scene[msg.target.uid]['timer'] = 0;\n    global.set('scene', scene, 'memoryOnly');\n\n    msg.summary.duration = 'remove expired timer';\n    node.status({ 'fill': 'blue', 'text': msg.summary.duration });\n\n    return msg;\n}\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// If duration is not set, do not take care of this routine\nif (!msg.routines.includes('duration')\n || msg.scene.duration === 0\n) {\n    msg.summary.duration = 'bypass';\n    node.status({ 'fill': 'yellow', 'text': msg.summary.duration });\n\n    return msg;\n}\n\nconst scene = { ...(global.get('scene', 'memoryOnly') || {}) };\nscene[msg.target.uid]['timer'] = msg.payload === false ? 0 : Date.now();\nglobal.set('scene', scene, 'memoryOnly');\n\nmsg.summary.duration = 'timer is ' + (msg.payload ? 'on' : 'off');\nnode.status({ 'fill': 'green', 'text': msg.summary.duration });\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -8095,7 +8118,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - tariff",
-        "func": "/*\ntariff :\nSet target to low level if scene trigger \"tariff\" is low level.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('tariff')\n || msg.scene.tariff === 0\n) {\n\n    msg.summary.tariff = 'bypass';\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    return msg;\n}\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Loop through triggers to find related tariff entity\nfor (const e in msg.scene.trigger) {\n\n    if (typeof entity[e] === 'object'\n     && entity[e]['hidden'] === 0\n     && entity[e]['element'] === \"tariff\"\n    ) {\n        if (entity[e]['value'] === msg.scene['trigger'][e]['inputlow'] && msg.target.value !== msg.scene.off) {\n            msg.payload = false;\n\n            msg.summary.tariff = 'false as tariff is ' + entity[e]['value'];\n            node.status({ 'fill': 'red', 'text': 'false as tariff is ' + entity[e]['value'] });\n            return msg;\n        } else {\n\n            msg.summary.tariff = 'tariff is ' + entity[e]['value'];\n            node.status({ 'fill': 'green', 'text': 'tariff is ' + entity[e]['value'] });\n            return msg;\n        }\n    }\n}\n\nmsg.summary.tariff = 'tariff not found';\nnode.status({ 'fill': 'blue', 'text': 'tariff not found' });\n\nreturn msg;",
+        "func": "/*\ntariff :\nSet target to low level if dknr \"preferred_tariff\" is off.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (!msg.routines.includes('tariff')\n || msg.scene.tariff === 0\n) {\n\n    msg.summary.tariff = 'bypass';\n    node.status({ 'fill': 'yellow', 'text': msg.summary.tariff });\n    return msg;\n}\n\n// Find dknr preferred tariff\nconst preferred = global.get('energy.preferred_tariff', 'memoryOnly') || '-';\nconst entity = { ...(global.get('entity[\"' + preferred + '\"]', 'memoryOnly') || { }) };\nif (typeof entity !== 'object' || entity.hidden !== 0) {\n    msg.summary.tariff = 'tariff not found';\n    node.status({ 'fill': 'blue', 'text': msg.summary.tariff });\n\n    return msg;\n}\n\n// Check tariff\nif (!!entity.value) {\n    msg.summary.tariff = 'tariff is favorable';\n    node.status({ 'fill': 'green', 'text': msg.summary.tariff });\n}\nelse {\n    msg.payload = false;\n\n    msg.summary.tariff = 'tariff is unfavorable' + entity.value;\n    node.status({ 'fill': 'red', 'text': msg.summary.tariff });\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -8116,7 +8139,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - power",
-        "func": "/*\npower :\nSet target to low level if scene trigger \"power\" is low level. (check twice)\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    node.send([null, msg]);\n\n    return;\n}\n\n// Exceptions\nif (!msg.routines.includes('power')\n || msg.scene.power === 0\n || msg.target.value === msg.scene.off\n) {\n\n    msg.summary.power = 'bypass';\n    node.status({ 'fill': 'yellow', 'text': 'bypass' });\n    node.send([null, msg]);\n\n    return;\n}\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Loop through triggers to find related power entity\nfor (const e in msg.scene.trigger) {\n\n    if (typeof entity[e] === 'object'\n     && entity[e]['hidden'] === 0\n     && entity[e]['element'] === \"power\"\n    ) {\n        if (entity[e]['value'] === msg.scene['trigger'][e]['inputlow'] ) {\n            msg.e = e;\n            node.send([msg, null]);\n\n            delete msg.e;\n            msg.rsp = false\n\n            msg.summary.power = 'power is low, waiting for 10 s';\n            node.status({ 'fill': 'red', 'text': 'power is low, waiting for 10 s' });\n            node.send([null, msg]);\n            return;\n/*\n            // Wait 5s and rechck entity\n            await new Promise(resolve => setTimeout(resolve, 10000));\n            // still low\n            if (global.get('entity[\"' + e + '\"][\"value\"]', 'memoryOnly') === msg.scene['trigger'][e]['inputlow']) {\n                msg.payload = false;\n\n                msg.summary.power = 'power is low';\n                node.status({ 'fill': 'red', 'text': 'power is low' });\n                return msg;\n            }\n*/\n        }\n    }\n}\n\nmsg.summary.power = 'power not found or still activ';\nnode.status({ 'fill': 'blue', 'text': 'power not found or still activ' });\nnode.send([null, msg]);\n\nreturn;",
+        "func": "/*\npower :\nSet target to low level if scene trigger \"power\" is low level. (check twice)\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return [ null, msg ];\n}\n\n// Exceptions\nif (!msg.routines.includes('power')\n || msg.scene.power === 0\n || msg.target.value === msg.scene.off\n) {\n\n    msg.summary.power = 'bypass';\n    node.status({ 'fill': 'yellow', 'text': msg.summary.power });\n    \n    return [ null, msg ];\n}\n\n// Get latest values of entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || { }) };\n\n// Loop through triggers to find related power entity\nfor (const e in msg.scene.trigger) {\n\n    if (typeof entity[e] === 'object'\n     && entity[e]['hidden'] === 0\n     && entity[e]['element'] === \"power\"\n    ) {\n        if (entity[e]['value'] === msg.scene['trigger'][e]['inputlow'] ) {\n            msg.e = e;\n            node.send([ msg, null ]);\n\n            delete msg.e;\n            msg.rsp = false\n\n            msg.summary.power = 'power is low, waiting for 10 s';\n            node.status({ 'fill': 'red', 'text': msg.summary.power });\n\n            return [ null, msg ];\n        }\n        else {\n            msg.summary.power = 'power is still activ';\n            node.status({ 'fill': 'blue', 'text': msg.summary.power });\n\n            return [ null, msg ];\n        }\n    }\n}\n\nmsg.summary.power = 'power not found';\nnode.status({ 'fill': 'blue', 'text': msg.summary.power });\n\nreturn [ null, msg ];",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -8411,7 +8434,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - power wait",
-        "func": "node.status({ });\n\n// Still low\nif (global.get('entity[\"' + msg.e + '\"][\"value\"]', 'memoryOnly') === msg.scene['trigger'][msg.e]['inputlow']) {\n    msg.payload = false;\n\n    msg.summary.power = 'power is low, set target to low level';\n    node.status({ 'fill': 'green', 'text': 'power is low, set target to low level' });\n    return msg;\n}\n\nreturn;",
+        "func": "node.status({ });\n\n// Still low\nif (global.get('entity[\"' + msg.e + '\"][\"value\"]', 'memoryOnly') === msg.scene['trigger'][msg.e]['inputlow']) {\n    msg.payload = false;\n\n    msg.summary.power = 'power is low, set target to low level';\n    node.status({ 'fill': 'green', 'text': msg.summary.power });\n    return msg;\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -8908,7 +8931,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - target",
-        "func": "/*\ntarget (preroutine) : \nSimply show trigger uid on this admin dashboard node.\n*/\n\nnode.status({ 'fill': 'green', 'text': msg.target.uid })\n\nreturn msg;",
+        "func": "/*\ntarget (preroutine) : \nSimply show trigger uid on this admin dashboard node.\n*/\n\nmsg.summary.target = msg.target.uid;\nnode.status({ 'fill': 'green', 'text': msg.target.uid })\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -8967,7 +8990,7 @@
             "054bd47295999ad7"
         ],
         "x": 145,
-        "y": 320,
+        "y": 620,
         "wires": [
             [
                 "b871e3d16b300b3d"
@@ -8988,7 +9011,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 320,
+        "y": 620,
         "wires": [
             [
                 "ecee862ad724750f",
@@ -9101,7 +9124,7 @@
         "action": "replace",
         "className": "",
         "x": 630,
-        "y": 320,
+        "y": 620,
         "wires": [
             [
                 "bb9dbf7f4b23d96f"
@@ -9122,7 +9145,7 @@
         "finalize": "",
         "libs": [],
         "x": 830,
-        "y": 320,
+        "y": 620,
         "wires": [
             [
                 "d74d6fbf0abd6f0f"
@@ -9140,7 +9163,7 @@
             "289e0a6cd1209c38"
         ],
         "x": 955,
-        "y": 320,
+        "y": 620,
         "wires": []
     },
     {
@@ -9162,7 +9185,7 @@
         "topic": "hmi.id",
         "outputs": 1,
         "x": 430,
-        "y": 380,
+        "y": 680,
         "wires": [
             [
                 "b871e3d16b300b3d",
@@ -9213,7 +9236,7 @@
         "value": "payload",
         "valueType": "msg",
         "x": 630,
-        "y": 260,
+        "y": 560,
         "wires": []
     },
     {
@@ -9230,7 +9253,7 @@
         "finalize": "",
         "libs": [],
         "x": 430,
-        "y": 260,
+        "y": 560,
         "wires": [
             [
                 "3e2c5ff81fcda310"
@@ -9241,6 +9264,7 @@
         "id": "0a5e55d9d664d599",
         "type": "ui-text",
         "z": "10a4e1188aad61a2",
+        "g": "38cccbb457700923",
         "group": "154dee38b740d3be",
         "order": 1,
         "width": 0,
@@ -9257,8 +9281,8 @@
         "className": "ui-title",
         "value": "payload",
         "valueType": "msg",
-        "x": 640,
-        "y": 500,
+        "x": 480,
+        "y": 260,
         "wires": []
     },
     {
@@ -9281,20 +9305,21 @@
         "className": "ui-title",
         "value": "payload",
         "valueType": "msg",
-        "x": 640,
-        "y": 560,
+        "x": 620,
+        "y": 800,
         "wires": []
     },
     {
         "id": "ca35d761a2b2b274",
         "type": "link in",
         "z": "10a4e1188aad61a2",
-        "name": "home  - room",
+        "g": "38cccbb457700923",
+        "name": "home - calendar",
         "links": [
             "054bd47295999ad7"
         ],
-        "x": 165,
-        "y": 500,
+        "x": 145,
+        "y": 320,
         "wires": [
             [
                 "3bca2397c24007a9"
@@ -9309,8 +9334,8 @@
         "links": [
             "054bd47295999ad7"
         ],
-        "x": 165,
-        "y": 560,
+        "x": 145,
+        "y": 800,
         "wires": [
             [
                 "a9f85a48ff31a646"
@@ -9321,19 +9346,29 @@
         "id": "3bca2397c24007a9",
         "type": "function",
         "z": "10a4e1188aad61a2",
+        "g": "38cccbb457700923",
         "name": "data",
-        "func": "msg.payload = msg.dictionary.home.calendar_title || 'Calendar';\n\nreturn msg;",
-        "outputs": 1,
+        "func": "if (!msg.enabled) {\n    msg.payload = '';\n\n    return [ msg, msg, msg, msg ];\n}\n\nmsg.payload = msg.dictionary.home.calendar_title || 'Calendar';\n\nnode.send ([ msg, null, null ]);\n\nconst icons = { ...(global.get('describe.calendar', 'memoryOnly') || { }) }; \nconst colors = { ...(global.get('describe.colors', 'memoryOnly') || { }) };\nconst calendar = { ...(global.get('calendar', 'memoryOnly') || { }) };\n\nlet b = 0;\nlet birthday = [ ];\nlet r = 0;\nlet rendezvous = [ ];\nlet t = 0;\nlet trash = [ ];\n\nconst now = new Date();\n\nfunction cleanCalendar(entry, long) {\n    let res = { ...entry };\n\n    // Set readble date\n    let date = new Date(res['ts']);\n    res['fulldate'] = date.toLocaleDateString(msg.dictionary.common.locales) + (long ? ' ' + res['time'] : '');\n\n    // Convert date to current year date\n    date.setFullYear(now.getFullYear());\n    if (date < now) {\n        date.setFullYear(now.getFullYear() + 1);\n    }\n    res['thisyear'] = date.getTime();\n\n    // Compute icon\n    let icon = icons[res['type']][1];\n    let color = colors.empty;\n    if ((now.getTime() - 86400000) < date.getTime() && (now.getTime() + 86400000) > date.getTime()) {\n        icon = icons[res['type']][1];\n        color = colors.theme;\n    }\n    res['icon'] = '<i class=\"icon-in-row mdi mdi-' + icon + '\" style=\"color:' + color + '\" title=\"' + res['type'] + '\"></i>';\n\n    return res;\n}\n\n// This method is time consuming as we need to parse all dates to get the last ones\nfor (const id in calendar) {\n    if (calendar[id]['type'] === 'birthday') {\n        birthday[b++] = cleanCalendar(calendar[id], false);\n    }\n    else if (calendar[id]['type'] === 'rendezvous') {\n        if (calendar[id]['ts'] > now.getTime()) {\n            rendezvous[r++] = cleanCalendar(calendar[id], true);\n        }\n    }\n    else if ([ 'trashbin', 'recyclebin' ].includes(calendar[id]['type'])) {\n        if (calendar[id]['ts'] > now.getTime()) {\n            trash[t++] = cleanCalendar(calendar[id], false);\n        }\n    }\n}\n\nif (birthday.length > 0) {\n    birthday.sort((a, b) => a.thisyear - b.thisyear);\n    msg.payload = birthday.slice(0, 10);\n    node.send([ null, msg, null, null ]);\n}\n\nif (rendezvous.length > 0) {\n    rendezvous.sort((a, b) => a.ts - b.ts);\n    msg.payload = rendezvous.slice(0, 10);\n    node.send([ null, null, msg, null ]);\n}\n\nif (trash.length > 0) {\n    trash.sort((a, b) => a.ts - b.ts);\n    msg.payload = trash.slice(0, 2);\n    node.send([ null, null, null, msg ]);\n}\n\nreturn;",
+        "outputs": 4,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 290,
-        "y": 500,
+        "x": 270,
+        "y": 320,
         "wires": [
             [
                 "0a5e55d9d664d599"
+            ],
+            [
+                "e38ef5b74fe9821a"
+            ],
+            [
+                "cf18b482d91f72fe"
+            ],
+            [
+                "2164f2e26943a9e7"
             ]
         ]
     },
@@ -9349,12 +9384,171 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 290,
-        "y": 560,
+        "x": 270,
+        "y": 800,
         "wires": [
             [
                 "a4441a5b673a17a8"
             ]
+        ]
+    },
+    {
+        "id": "e38ef5b74fe9821a",
+        "type": "ui-table",
+        "z": "10a4e1188aad61a2",
+        "g": "38cccbb457700923",
+        "group": "154dee38b740d3be",
+        "name": "home - calendar - birthday",
+        "label": "",
+        "order": 4,
+        "width": "3",
+        "height": "6",
+        "maxrows": "0",
+        "passthru": false,
+        "autocols": false,
+        "showSearch": false,
+        "deselect": true,
+        "selectionType": "click",
+        "columns": [
+            {
+                "title": "",
+                "key": "fulldate",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "end"
+            },
+            {
+                "title": "",
+                "key": "icon",
+                "keyType": "key",
+                "type": "html",
+                "width": "20px",
+                "align": "center"
+            },
+            {
+                "title": "",
+                "key": "title",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            }
+        ],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "",
+        "x": 490,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cf18b482d91f72fe",
+        "type": "ui-table",
+        "z": "10a4e1188aad61a2",
+        "g": "38cccbb457700923",
+        "group": "154dee38b740d3be",
+        "name": "home - calendar - rendezvous",
+        "label": "",
+        "order": 3,
+        "width": "3",
+        "height": "6",
+        "maxrows": 0,
+        "passthru": false,
+        "autocols": false,
+        "showSearch": false,
+        "deselect": true,
+        "selectionType": "click",
+        "columns": [
+            {
+                "title": "",
+                "key": "fulldate",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "end"
+            },
+            {
+                "title": "",
+                "key": "icon",
+                "keyType": "key",
+                "type": "html",
+                "width": "20px",
+                "align": "center"
+            },
+            {
+                "title": "",
+                "key": "title",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            }
+        ],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "",
+        "x": 510,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2164f2e26943a9e7",
+        "type": "ui-table",
+        "z": "10a4e1188aad61a2",
+        "g": "38cccbb457700923",
+        "group": "154dee38b740d3be",
+        "name": "home - calendar - trash",
+        "label": "",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "maxrows": 0,
+        "passthru": false,
+        "autocols": false,
+        "showSearch": false,
+        "deselect": true,
+        "selectionType": "click",
+        "columns": [
+            {
+                "title": "",
+                "key": "fulldate",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "end"
+            },
+            {
+                "title": "",
+                "key": "icon",
+                "keyType": "key",
+                "type": "html",
+                "width": "20px",
+                "align": "center"
+            },
+            {
+                "title": "",
+                "key": "title",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            }
+        ],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "",
+        "x": 490,
+        "y": 440,
+        "wires": [
+            []
         ]
     },
     {
@@ -10243,7 +10437,7 @@
         "z": "c84dae3356e4a4bc",
         "g": "192c9d61b22bea8d",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nconst now = Date.now();\nlet calendar = [ ...(global.get('calendar', 'memoryOnly') || [ ]) ];\n\nmsg.payload.id = now;\ncalendar.push(msg.payload);\n\nglobal.set('calendar', calendar, 'memoryOnly');\n\nmsg.payload = '';\nmsg.enabled = true;\n\nawait new Promise(resolve => setTimeout(resolve, 50));\n\nnode.send([ null, msg ]);\n\nmsg.payload = msg.dictionary.notice.save_success;\n\nnode.send([ msg, null ]);\n\nreturn;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nconst now = Date.now();\nconst calendar = { ...(global.get('calendar', 'memoryOnly') || { }) };\n\nlet dt = new Date();\nlet date_split = msg.payload.date.split('-');\nlet time_split = msg.payload.time.split(':');\ndt.setFullYear(date_split[0]);\ndt.setMonth(date_split[1] - 1);\ndt.setDate(date_split[2]);\ndt.setHours(time_split[0], time_split[1], 0);\n\nmsg.payload.id = now;\nmsg.payload.ts = dt.getTime();\ncalendar[now]= msg.payload;\n\nglobal.set('calendar', calendar, 'memoryOnly');\n\nmsg.payload = '';\nmsg.enabled = true;\n\nawait new Promise(resolve => setTimeout(resolve, 50));\n\nnode.send([ null, msg ]);\n\nmsg.payload = msg.dictionary.notice.save_success;\n\nnode.send([ msg, null ]);\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -10299,7 +10493,7 @@
         "z": "c84dae3356e4a4bc",
         "g": "192c9d61b22bea8d",
         "name": "data",
-        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (!msg.enabled) {\n    msg.payload = '';\n\n    return [ msg, msg ];\n}\n\n\nconst now = new Date();\nconst colors = { ...(global.get('describe.colors', 'memoryOnly') || { }) };\nconst icons = { ...(global.get('describe.calendar', 'memoryOnly') || { }) };\nlet calendar = [ ...(global.get('calendar', 'memoryOnly') || [ ]) ];\n\ncalendar.sort((a, b) => b.date.localeCompare(a.date));\n\nmsg.payload = [ ];\nfor (let i = 0; i < calendar.length; i++) {\n    if (typeof calendar[i] !== 'object') {\n\n        continue;\n    }\n\n    msg.payload[i] = {\n        'id': calendar[i]['id'],\n        'date': (new Date(calendar[i]['date'])).toLocaleDateString(msg.dictionary.common.locales) + ' ' + calendar[i]['time'],\n        'title': calendar[i]['title'],\n        'detail': calendar[i]['detail'],\n        'type': '<i class=\"icon-in-row mdi mdi-' + icons[calendar[i]['type']][1] + '\" style=\"color:' + (calendar[i]['peremtped'] ? colors.none : colors.theme) + '\" title=\"' + calendar[i]['type'] + '\"></i>',\n        'delete': msg.dictionary.calendar.delete || 'Delete'\n    };\n\n    let dt = new Date(calendar[i]['date']);\n    if (dt < now) {\n        break;\n    }\n}\n\nnode.send([ null, msg ]);\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.calendar_add_title || 'Add event'\n};\n\nnode.send([ msg, null ]);\n\nreturn;",
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (!msg.enabled) {\n    msg.payload = '';\n\n    return [ msg, msg ];\n}\n\n\nconst now = new Date();\nconst colors = { ...(global.get('describe.colors', 'memoryOnly') || { }) };\nconst icons = { ...(global.get('describe.calendar', 'memoryOnly') || { }) };\nlet calendar = { ...(global.get('calendar', 'memoryOnly') || { }) };\n\ncalendar = [ ...Object.values(calendar)];\ncalendar.sort((a, b) => b.date.localeCompare(a.date));\n\nmsg.payload = [ ];\nfor (let i = 0; i < calendar.length; i++) {\n    if (typeof calendar[i] !== 'object') {\n\n        continue;\n    }\n\n    msg.payload[i] = {\n        'id': calendar[i]['id'],\n        'date': (new Date(calendar[i]['ts'])).toLocaleDateString(msg.dictionary.common.locales) + ' ' + calendar[i]['time'],\n        'title': calendar[i]['title'],\n        'detail': calendar[i]['detail'],\n        'type': '<i class=\"icon-in-row mdi mdi-' + icons[calendar[i]['type']][1] + '\" style=\"color:' + (calendar[i]['peremtped'] ? colors.none : colors.theme) + '\" title=\"' + calendar[i]['type'] + '\"></i>',\n        'perempted': calendar[i]['perempted'] ? colors.theme : colors.empty,\n        'delete': msg.dictionary.calendar.delete || 'Delete'\n    };\n\n    let dt = new Date(calendar[i]['ts']);\n    if (dt < now) {\n        //break;\n    }\n}\n\nnode.send([ null, msg ]);\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.calendar_add_title || 'Add event'\n};\n\nnode.send([ msg, null ]);\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -10361,6 +10555,14 @@
             },
             {
                 "title": "",
+                "key": "perempted",
+                "keyType": "key",
+                "type": "color",
+                "width": "20px",
+                "align": "center"
+            },
+            {
+                "title": "",
                 "key": "delete",
                 "keyType": "key",
                 "type": "button",
@@ -10386,7 +10588,7 @@
         "z": "c84dae3356e4a4bc",
         "g": "192c9d61b22bea8d",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\n\nif (msg.action === 'row_click' && msg.payload.detail !== '') {\n\n    return [ msg, null];\n}\nelse if (msg.action === 'button_click') {\n    const calendar = [ ...(global.get('calendar', 'memoryOnly') || [ ]) ];\n    for (let i = 0; i < calendar.length; i++) {\n        if (typeof calendar[i] !== 'object') {\n\n            calendar.splice(i, 1);\n        }\n        else if (calendar[i]['id'] === msg.payload.id) {\n            calendar.splice(i, 1);\n\n            global.set('calendar', calendar, 'memoryOnly');\n            \n            await new Promise(resolve => setTimeout(resolve, 50));\n\n            msg.enabled = true;\n\n            return [null, msg];\n        }\n    }\n}\n\nreturn;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\n\nif (msg.action === 'row_click' && msg.payload.detail !== '') {\n\n    return [ msg, null];\n}\nelse if (msg.action === 'button_click') {\n    const calendar = { ...(global.get('calendar', 'memoryOnly') || { }) };\n    if (typeof calendar[msg.payload.id] === 'object') {\n        delete calendar[msg.payload.id];\n\n        global.set('calendar', calendar, 'memoryOnly');\n        \n        await new Promise(resolve => setTimeout(resolve, 50));\n\n        msg.enabled = true;\n\n        return [null, msg];\n    }\n}\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -21725,7 +21927,7 @@
         "z": "d90937c9d5b88b24",
         "g": "5175d903a670b8a9",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (msg.hmi.level !== 'admin' || msg.payload === '') {\n\n    return;\n}\n\nlet backup = {};\ntry {\n    backup = JSON.parse(msg.payload);\n\n} catch (error) {\n\n    return;\n}\n\nif (typeof backup['auth'] === 'object') {\n    let auth = global.get('auth', 'memoryOnly') || {};\n    for (const k in backup['auth']) {\n        if (typeof auth[k] !== 'object') {\n            auth[k] = backup['auth'][k];\n        }\n    }\n    global.set('auth', auth, 'memoryOnly');\n}\n\nif (typeof backup['block'] === 'object') {\n    let block = global.get('block', 'memoryOnly') || {};\n    for (const k in backup['block']) {\n        if (typeof block[k] !== 'object') {\n            block[k] = true;\n        }\n    }\n    global.set('block', block, 'memoryOnly');\n}\n\nif (typeof backup['camera'] === 'object') {\n    let camera = global.get('camera', 'memoryOnly') || {};\n    for (const k in backup['camera']) {\n        if (typeof camera[k] !== 'object') {\n            camera[k] = backup['camera'][k];\n        }\n    }\n    global.set('camera', camera, 'memoryOnly');\n}\n\nif (typeof backup['energy'] === 'object') {\n    let energy = global.get('energy', 'memoryOnly') || {};\n    for (const k in backup['energy']) {\n        if (typeof energy[k] !== 'object') {\n            energy[k] = backup['energy'][k];\n        }\n    }\n    global.set('energy', energy, 'memoryOnly');\n}\n\nif (typeof backup['entity'] === 'object') {\n    let entity = global.get('entity', 'memoryOnly') || {};\n    for (const k in backup['entity']) {\n        if (typeof entity[k] !== 'object') {\n            entity[k] = backup['entity'][k];\n        }\n    }\n    global.set('entity', entity, 'memoryOnly');\n}\n\nif (typeof backup['mqtt'] === 'object') {\n    let mqtt = global.get('mqtt', 'memoryOnly') || {};\n    for (const k in backup['mqtt']) {\n        if (typeof mqtt[k] !== 'undefined') {\n            mqtt[k] = backup['mqtt'][k];\n        }\n    }\n    global.set('mqtt', backup['mqtt'], 'memoryOnly');\n}\n\nif (typeof backup['name'] === 'object') {\n    let name = global.get('name', 'memoryOnly') || {};\n    for (const k in name) {\n        if (typeof backup['name'][k] === 'object') {\n            for (const l in backup['name'][k]) {\n                if (typeof name[k][l] !== 'string') {\n                    name[k][l] = backup['name'][k][l];\n                }\n            }\n        }\n    }\n    global.set('name', name, 'memoryOnly');\n}\n\nif (typeof backup['parent'] === 'object') {\n    let parent = global.get('parent', 'memoryOnly') || {};\n    for (const k in backup['parent']) {\n        if (typeof parent[k] !== 'object') {\n            parent[k] = backup['parent'][k];\n        }\n    }\n    global.set('parent', parent, 'memoryOnly');\n}\n\nif (typeof backup['room'] === 'object') {\n    let room = global.get('room', 'memoryOnly') || {};\n    for (const k in backup['room']) {\n        if (typeof room[k] !== 'object') {\n            room[k] = backup['room'][k];\n        }\n    }\n    global.set('room', room, 'memoryOnly');\n}\n\nif (typeof backup['scene'] === 'object') {\n    let scene = global.get('scene', 'memoryOnly') || {};\n    for (const k in backup['scene']) {\n        if (typeof scene[k] !== 'object') {\n            scene[k] = {};\n        }\n\n        for (const l in backup['scene'][k]) {\n            if (typeof scene[k][l] !== 'object') {\n                scene[k][l] = {};\n            }\n\n            scene[k][l] = backup['scene'][k][l];\n        }\n    }\n    global.set('scene', scene, 'memoryOnly');\n}\n\nmsg.payload = msg.dictionary.config.import_success || 'Updoaded successfully';\n\nreturn msg;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (msg.hmi.level !== 'admin' || msg.payload === '') {\n\n    return;\n}\n\nlet backup = {};\ntry {\n    backup = JSON.parse(msg.payload);\n\n} catch (error) {\n\n    return;\n}\n\nif (typeof backup['auth'] === 'object') {\n    let auth = global.get('auth', 'memoryOnly') || {};\n    for (const k in backup['auth']) {\n        if (typeof auth[k] !== 'object') {\n            auth[k] = backup['auth'][k];\n        }\n    }\n    global.set('auth', auth, 'memoryOnly');\n}\n\nif (typeof backup['block'] === 'object') {\n    let block = global.get('block', 'memoryOnly') || {};\n    for (const k in backup['block']) {\n        if (typeof block[k] !== 'object') {\n            block[k] = true;\n        }\n    }\n    global.set('block', block, 'memoryOnly');\n}\n\nif (typeof backup['calendar'] === 'object') {\n    let calendar = global.get('calendar', 'memoryOnly') || {};\n    for (const k in backup['calendar']) {\n        if (typeof calendar[k] !== 'object') {\n            calendar[k] = backup['calendar'][k];\n        }\n    }\n    global.set('calendar', calendar, 'memoryOnly');\n}\n\nif (typeof backup['camera'] === 'object') {\n    let camera = global.get('camera', 'memoryOnly') || {};\n    for (const k in backup['camera']) {\n        if (typeof camera[k] !== 'object') {\n            camera[k] = backup['camera'][k];\n        }\n    }\n    global.set('camera', camera, 'memoryOnly');\n}\n\nif (typeof backup['energy'] === 'object') {\n    let energy = global.get('energy', 'memoryOnly') || {};\n    for (const k in backup['energy']) {\n        if (typeof energy[k] !== 'object') {\n            energy[k] = backup['energy'][k];\n        }\n    }\n    global.set('energy', energy, 'memoryOnly');\n}\n\nif (typeof backup['entity'] === 'object') {\n    let entity = global.get('entity', 'memoryOnly') || {};\n    for (const k in backup['entity']) {\n        if (typeof entity[k] !== 'object') {\n            entity[k] = backup['entity'][k];\n        }\n    }\n    global.set('entity', entity, 'memoryOnly');\n}\n\nif (typeof backup['mqtt'] === 'object') {\n    let mqtt = global.get('mqtt', 'memoryOnly') || {};\n    for (const k in backup['mqtt']) {\n        if (typeof mqtt[k] !== 'undefined') {\n            mqtt[k] = backup['mqtt'][k];\n        }\n    }\n    global.set('mqtt', backup['mqtt'], 'memoryOnly');\n}\n\nif (typeof backup['name'] === 'object') {\n    let name = global.get('name', 'memoryOnly') || {};\n    for (const k in name) {\n        if (typeof backup['name'][k] === 'object') {\n            for (const l in backup['name'][k]) {\n                if (typeof name[k][l] !== 'string') {\n                    name[k][l] = backup['name'][k][l];\n                }\n            }\n        }\n    }\n    global.set('name', name, 'memoryOnly');\n}\n\nif (typeof backup['parent'] === 'object') {\n    let parent = global.get('parent', 'memoryOnly') || {};\n    for (const k in backup['parent']) {\n        if (typeof parent[k] !== 'object') {\n            parent[k] = backup['parent'][k];\n        }\n    }\n    global.set('parent', parent, 'memoryOnly');\n}\n\nif (typeof backup['room'] === 'object') {\n    let room = global.get('room', 'memoryOnly') || {};\n    for (const k in backup['room']) {\n        if (typeof room[k] !== 'object') {\n            room[k] = backup['room'][k];\n        }\n    }\n    global.set('room', room, 'memoryOnly');\n}\n\nif (typeof backup['scene'] === 'object') {\n    let scene = global.get('scene', 'memoryOnly') || {};\n    for (const k in backup['scene']) {\n        if (typeof scene[k] !== 'object') {\n            scene[k] = {};\n        }\n\n        for (const l in backup['scene'][k]) {\n            if (typeof scene[k][l] !== 'object') {\n                scene[k][l] = {};\n            }\n\n            scene[k][l] = backup['scene'][k][l];\n        }\n    }\n    global.set('scene', scene, 'memoryOnly');\n}\n\nmsg.payload = msg.dictionary.config.import_success || 'Updoaded successfully';\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
