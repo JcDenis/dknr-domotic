@@ -99,7 +99,7 @@
             "fc6029b7d49d1e93"
         ],
         "x": 78,
-        "y": 1633,
+        "y": 1693,
         "w": 1934,
         "h": 734
     },
@@ -301,7 +301,7 @@
             "f41bf09b8682c536"
         ],
         "x": 78,
-        "y": 853,
+        "y": 913,
         "w": 1284,
         "h": 734
     },
@@ -362,16 +362,16 @@
             "1f6ea442bbd4d849",
             "ad48804fec92e759",
             "9e0b692686687926",
-            "27c3f33db4e79a46",
-            "1e5dd3712a1d6e5d",
             "e56daf17aa5fb143",
-            "d6082b7d11736655",
-            "a5b60bb102d09ad6"
+            "cb2cfb96f7f9464e",
+            "58d8fb7ff7861d4c",
+            "7385c91ca49ccb1a",
+            "03c0ca28883d9235"
         ],
         "x": 104,
-        "y": 539,
-        "w": 932,
-        "h": 322
+        "y": 219,
+        "w": 1292,
+        "h": 202
     },
     {
         "id": "5cf193e5430d3bde",
@@ -418,7 +418,7 @@
             "07f13b83c52dee2f"
         ],
         "x": 104,
-        "y": 899,
+        "y": 1119,
         "w": 1512,
         "h": 742
     },
@@ -468,7 +468,7 @@
             "0b84426ed74fcabd"
         ],
         "x": 104,
-        "y": 2439,
+        "y": 2499,
         "w": 652,
         "h": 142
     },
@@ -538,7 +538,7 @@
             "98d49e7a6df7f643"
         ],
         "x": 104,
-        "y": 1859,
+        "y": 879,
         "w": 1172,
         "h": 202
     },
@@ -587,7 +587,7 @@
             "84ccb927a803109f"
         ],
         "x": 78,
-        "y": 2653,
+        "y": 2713,
         "w": 884,
         "h": 2114
     },
@@ -613,7 +613,7 @@
         "x": 68,
         "y": 13,
         "w": 2664,
-        "h": 794
+        "h": 854
     },
     {
         "id": "810571340280cc3c",
@@ -940,10 +940,11 @@
             "d74d6fbf0abd6f0f",
             "6ef0e2abe2b710ad",
             "3e2c5ff81fcda310",
-            "964a72dc1d8cb0bf"
+            "964a72dc1d8cb0bf",
+            "c178f334d7d41aae"
         ],
         "x": 104,
-        "y": 519,
+        "y": 759,
         "w": 892,
         "h": 202
     },
@@ -1095,7 +1096,7 @@
             "20c33d6d50aa3ee3"
         ],
         "x": 104,
-        "y": 2099,
+        "y": 699,
         "w": 752,
         "h": 142
     },
@@ -1118,7 +1119,7 @@
             "45cf0be2427364c5"
         ],
         "x": 104,
-        "y": 4839,
+        "y": 4899,
         "w": 822,
         "h": 142
     },
@@ -1183,6 +1184,160 @@
         "h": 82
     },
     {
+        "id": "f7e4d21e583be33d",
+        "type": "group",
+        "z": "c84dae3356e4a4bc",
+        "name": "calendar - page",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "bf16c43041851145",
+            "84d3ab68d3d3217b",
+            "d6a81f8db6997ecc"
+        ],
+        "x": 104,
+        "y": 99,
+        "w": 332,
+        "h": 82
+    },
+    {
+        "id": "192c9d61b22bea8d",
+        "type": "group",
+        "z": "c84dae3356e4a4bc",
+        "name": "calendar - list",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "f032a62ad2f13bb9",
+            "ba1539c07824ae7c",
+            "5743e8bd13f0cf67",
+            "2d9aef161a7ceb35",
+            "26d8d3d7bc111e9a",
+            "ca73fe66b198a5b0",
+            "9d77bd1f2df13ea4",
+            "9427955ef0d7bf44",
+            "775f42f6ba6074b0",
+            "faded2d379f7fa0d",
+            "92d3b5dcbaa54461",
+            "564e0ab4d7132995",
+            "ed061748213efa22",
+            "98ba5ee73c6ab71c",
+            "21ac8b957ae78ebf",
+            "ba4f659a82ef38e6",
+            "f8f6115ba56b682c"
+        ],
+        "x": 104,
+        "y": 219,
+        "w": 1352,
+        "h": 382
+    },
+    {
+        "id": "38cccbb457700923",
+        "type": "group",
+        "z": "10a4e1188aad61a2",
+        "name": "home - calendar",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "0a5e55d9d664d599",
+            "ca35d761a2b2b274",
+            "3bca2397c24007a9",
+            "e38ef5b74fe9821a",
+            "cf18b482d91f72fe",
+            "2164f2e26943a9e7"
+        ],
+        "x": 104,
+        "y": 219,
+        "w": 562,
+        "h": 262
+    },
+    {
+        "id": "b9ef6ee2712a8f7f",
+        "type": "group",
+        "z": "3d7897ba0ee14173",
+        "name": "entity - map",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "f0fac60fcc4894dd",
+            "b625a7700f9ad71e",
+            "7d1b090f6789c960",
+            "89f0f35d8e2aca9c",
+            "57dcb40556d75c44",
+            "114012f716c70f1c",
+            "363d7280dcf81d46",
+            "47ca56a2035f2f16",
+            "64449417b141ec78",
+            "3dbec754b3f07280",
+            "9c99971ef2371043",
+            "1bc680d065f7ca6a"
+        ],
+        "x": 104,
+        "y": 459,
+        "w": 1492,
+        "h": 202
+    },
+    {
+        "id": "6023ed32683fd2f4",
+        "type": "group",
+        "z": "10a4e1188aad61a2",
+        "name": "home - map",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "8f8ad1a68a13cf0c",
+            "c0c254ecdf4a12f7",
+            "95468e9c5d429aac",
+            "55152003bbd25c3a",
+            "c740b6a6eb799115",
+            "c0ce37e4f3397459",
+            "17e1f1fc4b08ab48",
+            "1f04f039f3b6b715",
+            "5d500b126b29afba"
+        ],
+        "x": 104,
+        "y": 999,
+        "w": 892,
+        "h": 202
+    },
+    {
+        "id": "45895e821b5414ec",
+        "type": "group",
+        "z": "10a4e1188aad61a2",
+        "name": "home - group",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "0bc70d85144d3fd9",
+            "415aa9f902c85e54",
+            "ad006895f2f05500",
+            "2c867cda0a9e301a",
+            "57e31677497bf898"
+        ],
+        "x": 104,
+        "y": 519,
+        "w": 332,
+        "h": 202
+    },
+    {
         "id": "f362e0d82cb6210f",
         "type": "group",
         "z": "4bc72a1112cb448c",
@@ -1198,7 +1353,7 @@
             "ae0bdeeb713be695",
             "d78c379455e3cf72"
         ],
-        "x": 984,
+        "x": 1044,
         "y": 279,
         "w": 372,
         "h": 82
@@ -1226,12 +1381,16 @@
             "ddc9374374b8e9ce",
             "7c97b773fbb94369",
             "1eef652177adf5cc",
-            "64dc69bff0efd344"
+            "64dc69bff0efd344",
+            "996829a941247944",
+            "c4b19dbcdd4df35a",
+            "ad00c0bf6ff55efe",
+            "8961fa8793ced740"
         ],
         "x": 94,
         "y": 279,
-        "w": 832,
-        "h": 262
+        "w": 872,
+        "h": 322
     },
     {
         "id": "bcc6f36c217d1643",
@@ -1300,7 +1459,7 @@
             "3c55ce54de56905b"
         ],
         "x": 104,
-        "y": 579,
+        "y": 639,
         "w": 812,
         "h": 202
     },
@@ -1329,7 +1488,7 @@
             "b8f6b833f8fd2b66"
         ],
         "x": 104,
-        "y": 2679,
+        "y": 2739,
         "w": 812,
         "h": 202,
         "info": "From docker dknr-teleinfo\r\nhttps://github.com/JcDenis/dknr-teleinfo"
@@ -1359,7 +1518,7 @@
             "2b0dce043fcbd8b3"
         ],
         "x": 104,
-        "y": 2919,
+        "y": 2979,
         "w": 812,
         "h": 202,
         "info": "From docker dknr-apsystems\r\nhttps://github.com/JcDenis/dknr-apsystems"
@@ -1397,7 +1556,7 @@
             "f82cf8ab4c808c75"
         ],
         "x": 104,
-        "y": 4359,
+        "y": 4419,
         "w": 832,
         "h": 382
     },
@@ -1429,7 +1588,7 @@
             "ca0816fa69729bee"
         ],
         "x": 104,
-        "y": 3159,
+        "y": 3219,
         "w": 812,
         "h": 202,
         "info": "From docker dknr-daikin\r\nhttps://github.com/JcDenis/dknr-daikin"
@@ -1463,7 +1622,7 @@
             "0d364f8869406041"
         ],
         "x": 104,
-        "y": 3399,
+        "y": 3459,
         "w": 812,
         "h": 202,
         "info": "From docker zigbee2mqtt"
@@ -1497,7 +1656,7 @@
             "68c4a05370085e3e"
         ],
         "x": 104,
-        "y": 3639,
+        "y": 3699,
         "w": 812,
         "h": 202,
         "info": "From docker zwave-js-ui"
@@ -1519,7 +1678,7 @@
             "7f15feb966b47505"
         ],
         "x": 104,
-        "y": 879,
+        "y": 939,
         "w": 502,
         "h": 82
     },
@@ -1551,7 +1710,7 @@
             "be56244e32363548"
         ],
         "x": 104,
-        "y": 999,
+        "y": 1059,
         "w": 1232,
         "h": 209.5
     },
@@ -1573,7 +1732,7 @@
             "d1b1e789f412bd08"
         ],
         "x": 104,
-        "y": 1359,
+        "y": 1419,
         "w": 332,
         "h": 82
     },
@@ -1595,7 +1754,7 @@
             "c026a3bb27b7e4d4"
         ],
         "x": 104,
-        "y": 1479,
+        "y": 1539,
         "w": 332,
         "h": 82
     },
@@ -1621,7 +1780,7 @@
             "02fe29cae83d1e2a"
         ],
         "x": 104,
-        "y": 2199,
+        "y": 2259,
         "w": 902,
         "h": 142
     },
@@ -1642,7 +1801,7 @@
             "670bb85f2c2aeaf5"
         ],
         "x": 104,
-        "y": 2079,
+        "y": 2139,
         "w": 622,
         "h": 82
     },
@@ -1668,7 +1827,7 @@
             "25946e03a69f38c2"
         ],
         "x": 104,
-        "y": 1899,
+        "y": 1959,
         "w": 882,
         "h": 142
     },
@@ -1702,7 +1861,7 @@
             "1e31ae9f27a06bd8"
         ],
         "x": 104,
-        "y": 1659,
+        "y": 1719,
         "w": 1882,
         "h": 202
     },
@@ -1732,7 +1891,7 @@
             "5bbb992212cbedd1"
         ],
         "x": 104,
-        "y": 3879,
+        "y": 3939,
         "w": 812,
         "h": 202,
         "info": "From docker rfxcom2mqtt"
@@ -1860,7 +2019,7 @@
             "aa5d2b32307ebf42"
         ],
         "x": 104,
-        "y": 1239,
+        "y": 1299,
         "w": 332,
         "h": 82
     },
@@ -1890,86 +2049,9 @@
             "893706ee590b4128"
         ],
         "x": 104,
-        "y": 4119,
+        "y": 4179,
         "w": 812,
         "h": 202
-    },
-    {
-        "id": "f7e4d21e583be33d",
-        "type": "group",
-        "z": "c84dae3356e4a4bc",
-        "name": "calendar - page",
-        "style": {
-            "fill": "#ff0000",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "bf16c43041851145",
-            "84d3ab68d3d3217b",
-            "d6a81f8db6997ecc"
-        ],
-        "x": 104,
-        "y": 99,
-        "w": 332,
-        "h": 82
-    },
-    {
-        "id": "192c9d61b22bea8d",
-        "type": "group",
-        "z": "c84dae3356e4a4bc",
-        "name": "calendar - list",
-        "style": {
-            "fill": "#6f2fa0",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "f032a62ad2f13bb9",
-            "ba1539c07824ae7c",
-            "5743e8bd13f0cf67",
-            "2d9aef161a7ceb35",
-            "26d8d3d7bc111e9a",
-            "ca73fe66b198a5b0",
-            "9d77bd1f2df13ea4",
-            "9427955ef0d7bf44",
-            "775f42f6ba6074b0",
-            "faded2d379f7fa0d",
-            "92d3b5dcbaa54461",
-            "564e0ab4d7132995",
-            "ed061748213efa22",
-            "98ba5ee73c6ab71c",
-            "21ac8b957ae78ebf",
-            "ba4f659a82ef38e6",
-            "f8f6115ba56b682c"
-        ],
-        "x": 104,
-        "y": 219,
-        "w": 1352,
-        "h": 382
-    },
-    {
-        "id": "38cccbb457700923",
-        "type": "group",
-        "z": "10a4e1188aad61a2",
-        "name": "home - calendar",
-        "style": {
-            "fill": "#6f2fa0",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "0a5e55d9d664d599",
-            "ca35d761a2b2b274",
-            "3bca2397c24007a9",
-            "e38ef5b74fe9821a",
-            "cf18b482d91f72fe",
-            "2164f2e26943a9e7"
-        ],
-        "x": 104,
-        "y": 219,
-        "w": 562,
-        "h": 262
     },
     {
         "id": "df7710b4b2c4e55b",
@@ -2384,7 +2466,7 @@
         "page": "ba855b55e831d2b6",
         "width": 6,
         "height": 1,
-        "order": 3,
+        "order": 4,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -2430,7 +2512,7 @@
     {
         "id": "db49fb380ab7d7fb",
         "type": "ui-group",
-        "name": "auth_main",
+        "name": "auth - main - group",
         "page": "5e643d262f1ac894",
         "width": 6,
         "height": 1,
@@ -2480,7 +2562,7 @@
     {
         "id": "703dbc1ce9d4713b",
         "type": "ui-group",
-        "name": "test_main",
+        "name": "test - main - group",
         "page": "a9acb2e8c23ee7ca",
         "width": 6,
         "height": 1,
@@ -2530,7 +2612,7 @@
     {
         "id": "dbf1f2065ded8405",
         "type": "ui-group",
-        "name": "room_main",
+        "name": "room - main - group",
         "page": "be3da16eb83104f6",
         "width": 6,
         "height": 1,
@@ -2662,7 +2744,7 @@
         "page": "2b12391aa314ef62",
         "width": 6,
         "height": 1,
-        "order": 4,
+        "order": 5,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -2672,11 +2754,11 @@
     {
         "id": "ab792e98013972e4",
         "type": "ui-group",
-        "name": "entity - entity - edit - dialog",
+        "name": "entity - entity - dialog",
         "page": "2b12391aa314ef62",
         "width": "6",
         "height": 1,
-        "order": 5,
+        "order": 6,
         "showTitle": false,
         "className": "",
         "visible": "false",
@@ -2686,11 +2768,11 @@
     {
         "id": "371d8326aa7242fd",
         "type": "ui-group",
-        "name": "entity - parent - edit - dialog",
+        "name": "entity - parent - dialog",
         "page": "2b12391aa314ef62",
         "width": 6,
         "height": 1,
-        "order": 6,
+        "order": 7,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -2700,7 +2782,7 @@
     {
         "id": "9dca42b48aec683d",
         "type": "ui-group",
-        "name": "room_detail",
+        "name": "room - detail - dialog",
         "page": "be3da16eb83104f6",
         "width": "6",
         "height": 1,
@@ -2718,7 +2800,7 @@
         "page": "2b12391aa314ef62",
         "width": 6,
         "height": 1,
-        "order": 2,
+        "order": 4,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -2728,7 +2810,7 @@
     {
         "id": "59faf735ca9b8988",
         "type": "ui-group",
-        "name": "scene - trigger - add - dialog",
+        "name": "scene - trigger - dialog",
         "page": "1e9f5bde9636a371",
         "width": 6,
         "height": 1,
@@ -2871,7 +2953,7 @@
         "page": "05291fac72588064",
         "width": 6,
         "height": 1,
-        "order": 2,
+        "order": 1,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -2885,7 +2967,7 @@
         "page": "ba855b55e831d2b6",
         "width": 6,
         "height": 1,
-        "order": 2,
+        "order": 3,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -2899,7 +2981,7 @@
         "page": "ba855b55e831d2b6",
         "width": 6,
         "height": 1,
-        "order": 1,
+        "order": 2,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -2913,7 +2995,7 @@
         "page": "05291fac72588064",
         "width": 6,
         "height": 1,
-        "order": 3,
+        "order": 2,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -2927,12 +3009,40 @@
         "page": "05291fac72588064",
         "width": 6,
         "height": 1,
-        "order": 1,
+        "order": 3,
         "showTitle": false,
         "className": "",
         "visible": "true",
         "disabled": "false",
         "groupType": "dialog"
+    },
+    {
+        "id": "8e73834b7f2acca7",
+        "type": "ui-group",
+        "name": "entity - map - group",
+        "page": "2b12391aa314ef62",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "b557e6dffa9d2e7c",
+        "type": "ui-group",
+        "name": "home - map - group",
+        "page": "ba855b55e831d2b6",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
     },
     {
         "id": "025edbd02daf82d0",
@@ -2944,7 +3054,7 @@
         "headers": {
             "Location": "/dashboard"
         },
-        "x": 850,
+        "x": 890,
         "y": 320,
         "wires": []
     },
@@ -2983,7 +3093,7 @@
         "expiry": "",
         "broker": "2c5e094fee5ae877",
         "x": 760,
-        "y": 680,
+        "y": 740,
         "wires": []
     },
     {
@@ -2997,7 +3107,7 @@
             "22681da9e4f0b1ce"
         ],
         "x": 145,
-        "y": 740,
+        "y": 800,
         "wires": [
             [
                 "3c55ce54de56905b"
@@ -3024,10 +3134,11 @@
             "d269bc78686a5a01",
             "02d1069a252bcc78",
             "20c33d6d50aa3ee3",
-            "26d8d3d7bc111e9a"
+            "26d8d3d7bc111e9a",
+            "3dbec754b3f07280"
         ],
         "x": 145,
-        "y": 920,
+        "y": 980,
         "wires": [
             [
                 "7f15feb966b47505"
@@ -3109,7 +3220,7 @@
             "f2cd63b49ac325ec"
         ],
         "x": 145,
-        "y": 620,
+        "y": 680,
         "wires": [
             [
                 "07e96d88edbef793"
@@ -3125,7 +3236,7 @@
         "ui": "df7710b4b2c4e55b",
         "events": "all",
         "x": 320,
-        "y": 1160,
+        "y": 1220,
         "wires": [
             [
                 "fd39d13ae9c195f3"
@@ -3151,7 +3262,7 @@
             "bf16c43041851145"
         ],
         "x": 1295,
-        "y": 1100,
+        "y": 1160,
         "wires": []
     },
     {
@@ -3171,12 +3282,12 @@
             "b5e5ddf712b53493",
             "d74d6fbf0abd6f0f",
             "23a03a17de1c95e7",
-            "0ee5313925c20525",
-            "a1ed79cdb41c3f96",
-            "f8f6115ba56b682c"
+            "f8f6115ba56b682c",
+            "c740b6a6eb799115",
+            "ad006895f2f05500"
         ],
         "x": 145,
-        "y": 1160,
+        "y": 1220,
         "wires": [
             [
                 "bbb6fa5ec8070fb8"
@@ -3203,7 +3314,7 @@
         "className": "",
         "name": "common - ui - notice",
         "x": 480,
-        "y": 920,
+        "y": 980,
         "wires": [
             []
         ]
@@ -3225,7 +3336,7 @@
         "repair": false,
         "outputs": 1,
         "x": 270,
-        "y": 920,
+        "y": 980,
         "wires": [
             [
                 "fecaee88b8c296ed"
@@ -3373,14 +3484,14 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": ".app-bar-actions-title {\n    margin: auto;\n    text-shadow: rgb(var(--v-theme-background)) 2px 2px 1px;\n}\n\n.v-card .remove,\n.v-card-text .remove,\n.v-card-item {\n    display: none !important;\n    visibility: hidden;\n    color: transparent !important;\n}\n\n.nrdb-ui-widget:hover {\n    margin-bottom: -1px;\n    border-bottom: 1px solid var(--nrdb-bg-color);\n}\n\n.center .nrdb-switch, \n.center .v-btn-group {\n    margin: auto;\n}\n\n.remove * {\n    display: none !important;\n    visibility: hidden;\n    color: transparent !important;\n}\n\ntbody td[data-column-key=lbl] {\n    font-weight: bold !important;\n}\n\n.icon-in-row {\n    font-size: 1.8em;\n}\n\n.v-tab-item--selected {\n    color: rgb(var(--v-theme-primary)) !important;\n}\n\n.v-main {\n    padding-bottom: 2em;\n}\n.ui-title span {\n    font-size: 1.4rem !important;\n    font-weight: normal !important;\n    padding: 0;\n    margin-top: 0.5em;\n    color: rgb(var(--v-theme-primary)) !important;\n}\n\n.ui-camera {\n    text-align: center !important;\n    flex: 1 0;\n}\n.ui-camera img {\n    width: 90%;\n    border-radius: 4px;\n    box-shadow: 3px 2px 2px rgba(var(--v-theme-group-outline));\n    border: 1px solid rgba(var(--v-theme-group-outline));\n}\n\n.nrdb-ui-group {\n    border-radius: 4px;\n    box-shadow: 3px 2px 2px rgba(var(--v-theme-group-outline));\n}\n.v-application {\n    border-top: 1px solid rgba(var(--v-theme-group-outline));\n    margin-top: -1px;\n}\n",
+        "format": ".app-bar-actions-title {\n    margin: auto;\n    text-shadow: rgb(var(--v-theme-background)) 2px 2px 1px;\n}\n\n.v-card .remove,\n.v-card-text .remove,\n.v-card-item {\n    display: none !important;\n    visibility: hidden;\n    color: transparent !important;\n}\n\n.nrdb-ui-widget:hover {\n    margin-bottom: -1px;\n    border-bottom: 1px solid var(--nrdb-bg-color);\n}\n\n.center .nrdb-switch, \n.center .v-btn-group {\n    margin: auto;\n}\n\n.remove * {\n    display: none !important;\n    visibility: hidden;\n    color: transparent !important;\n}\n\ntbody td[data-column-key=lbl] {\n    font-weight: bold !important;\n}\n\n.icon-in-row {\n    font-size: 1.8em;\n}\n\n.v-tab-item--selected {\n    color: rgb(var(--v-theme-primary)) !important;\n}\n\n.v-main {\n    padding-bottom: 2em;\n}\n.ui-title span {\n    font-size: 1.4rem !important;\n    font-weight: normal !important;\n    padding: 0;\n    margin-top: 0.5em;\n    color: rgb(var(--v-theme-primary)) !important;\n}\n\n.ui-camera {\n    text-align: center !important;\n    flex: 1 0;\n}\n.ui-camera img {\n    width: 90%;\n    border-radius: 4px;\n    box-shadow: 3px 2px 2px rgba(var(--v-theme-group-outline));\n    border: 1px solid rgba(var(--v-theme-group-outline));\n}\n\n.nrdb-ui-group {\n    border-radius: 4px;\n    box-shadow: 3px 2px 2px rgba(var(--v-theme-group-outline));\n}\n.v-application {\n    border-top: 1px solid rgba(var(--v-theme-group-outline));\n    margin-top: -1px;\n}\n\nbody {\n    background-color: rgb(var(--v-theme-background)) !important;\n    }\n}\n",
         "storeOutMessages": true,
         "passthru": false,
         "resendOnRefresh": true,
         "templateScope": "site:style",
         "className": "",
         "x": 310,
-        "y": 1040,
+        "y": 1100,
         "wires": [
             []
         ]
@@ -3391,7 +3502,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "describe",
-        "func": "const describe = global.get('describe', 'memoryOnly') || {};\n\nif (typeof describe.pages !== 'object') {\n    describe.pages = {};\n}\n\n// Set default app values\ndescribe.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\ndescribe.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['energy'] = {\n    'id': '34a13cfdebc90220',\n    'name': 'energy',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['calendar'] = {\n    'id': '05291fac72588064',\n    'name': 'calendar',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['scene'] = {\n    'id': '1e9f5bde9636a371',\n    'name': 'scene',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['entity'] = {\n    'id': '2b12391aa314ef62',\n    'name': 'entity',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': false,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// Sources\ndescribe.sources['dknr'] = ['eye', 'Domotic'];\n\n// Binary element with revert value\ndescribe.reverts = ['aperture', 'door', 'window', 'lock'];\n\n// Non numeric units\ndescribe.texts = ['', 'chex', 'enum', 'text', 'time'];\n\n// Elements icons\ndescribe.elements = {\n    'switch': ['toggle-switch-off-outline', 'toggle-switch-outline', 'Switch'],\n    'plug': ['power-plug-off', 'power-plug', 'Plug'],\n    'power': ['flash-outline', 'flash', 'Power'],\n    'current': ['current-ac', 'current-ac', 'Current'],\n    'frequency': ['sine-wave', 'sine-wave', 'Frequency'],\n    'voltage': ['current-dc', 'current-dc', 'Frequency'],\n    'energy': ['meter-electric-outline', 'meter-electric', 'Energy'],\n    'light': ['lightbulb-off', 'lightbulb', 'Light'],\n    'remote': ['remote-off', 'remote', 'Remote'],\n    'door': ['door-closed', 'door-open', 'Door'], // 0=open\n    'window': ['window-closed-variant', 'window-open-variant', 'Window'], //0=open\n    'lock': ['lock-off', 'lock', 'Lock'], //0=open\n    //'shield': ['shield-lock-outline', 'shield-lock'],\n    //'aperture': ['electric-switch-closed', 'electric-switch'], // 0=open\n    'shutter': ['window-shutter', 'window-shutter-open', 'Shutter'],\n    'slider': ['door-sliding', 'door-sliding-open', 'Slider'],\n    //'heater': ['radiator-off', 'radiator'], => temperature\n    //'cooler': ['radiator-off', 'radiator'], => temperature\n    //'airconditioner': ['radiator-off', 'radiator'], => temparature\n    'waterboiler': ['water-boiler-off', 'water-boiler', 'Waterboiler'],\n    'alert': ['bell-off', 'bell', 'Alert'],\n    'sound': ['volume-off', 'volume-high', 'Sound'],\n    'motion': ['motion-sensor-off', 'motion-sensor', 'Motion'],\n    //'presence': ['location-exit', 'location-enter'], => motion\n    'temperature': ['thermometer-off', 'thermometer', 'Temperature'],\n    'humidity': ['water-percent-alert', 'water-percent', 'Humidity'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless', 'Illuminance'],\n    'pressure': ['gauge', 'gauge', 'Pressure'],\n    //'wind': ['weather-windy', 'weather-dust'],\n    //'airflow': ['fan-off', 'fan'], => humidity\n    'fan': ['fan-off', 'fan', 'Fan'],\n    'direction': ['swap-horizontal', 'swap-horizontal-bold', 'Direction'],\n    'time': ['clock-outline', 'clock', 'Time'],\n    'battery': ['battery-low', 'battery', 'Battery'],\n    //'climate': ['home-thermometer-outline', 'home-thermometer'],\n    'mode': ['home-switch-outline', 'home-switch', 'Mode'],\n    'text': ['clipboard-text-off', 'clipboard-text', 'Text'],\n    'location': ['map-marker-off-outline', 'map-marker', 'Location'],\n    //'camera': ['camera-off', 'camera'],\n    'color': ['palette', 'palette', 'Color'],\n    'tariff': ['currency-eur-off', 'currency-eur', 'Tariff']\n};\n\ndescribe.units = {\n    '': 'None',\n    '°C': 'Degree celsuis',\n    '°F': 'Degree fahrenheit',\n    'mA': 'Milliampere',\n    'A': 'Ampere',\n    'Hz': 'Hertz',\n    'mW': 'Milliwatt',\n    'W': 'Watt',\n    'kW': 'Kilowatt',\n    'MW': 'Megawatt',\n    'mWh': 'Milliwatt/hour',\n    'Wh': 'Watt/Hour',\n    'mVA': 'Millivoltampere',\n    'VA': 'Voltampere',\n    'mV': 'Millivolt',\n    'V': 'Volt',\n    'lx': 'Lux',\n    'ppm': 'Parts per million',\n    '%': 'Percent (0-100)',\n    'b': 'Binary (0-1)',\n    'rb': 'Revert binary',\n    '8b': '8-bit (0-255)',\n    'n': 'Number',\n    's': 'Second',\n    'ms': 'Millisecond',\n    'time': 'Time',\n    'enum': 'Enumerator',\n    'text': 'Text',\n    'chex': 'Hexadécimal color'\n};\n\n// Value color\ndescribe.colors = {\n    'on': '#008000',\n    'off': '#FF0000',\n    'median': '#F08000',\n    'none': '#808000',\n    'theme': '#0094CE',\n    'empty': '#CCCCCC'\n};\n\n// Calendar event type\ndescribe.calendar = {\n    'birthday': [ 'cake-variant-outline', 'cake-variant' ],\n    'rendezvous': [ 'alarm-off', 'alarm' ],\n    'trashbin': [ 'trash-can-outline', 'trash-can' ],\n    'recyclebin': [ 'recycle-vairant', 'recycle' ]\n};\n\n// Scene elements fields\ndescribe.scenes = {\n    'humidity': [\n        'enabled',\n        'on',\n        'off',\n        'duration',\n        'humidity'\n    ],\n    'light': [\n        'enabled',\n        'on',\n        'off',\n        'high',\n        'low',\n        'motion',\n        'retention',\n        'duration',\n        'diurnal',\n        'nocturnal',\n        'nightlight',\n        'illuminance',\n        'darkness'\n    ],\n    'shutter': [\n        'enabled',\n        'on',\n        'off',\n        'aperture',\n        'diurnal',\n        'nocturnal',\n        'illuminance',\n        'darkness',\n        'openwork',\n        'daily'\n    ],\n    'waterboiler': [\n        'enabled',\n        'on',\n        'off',\n        'duration',\n        'power',\n        'tariff',\n        'daily'\n    ],\n    'temperature': [\n        'enabled',\n        'on',\n        'off',\n        'temperature_setpoint_eco',\n        'temperature_setpoint_confort',\n        'temperature_setpoint_cold',\n        'temperature_coefficient_indoor',\n        'temperature_coefficient_outdoor',\n        'temperature_duration_aperture',\n        'temperature_duration_preheat',\n        'temperature_duration_cycle',\n        'temperature_duration_offloading',\n        'temperature_power_consumption',\n        'temperature_energy_free'\n    ]\n};\n\n// Scene routines fields\ndescribe.routines = {\n    'motion': ['motion-sensor-off', 'motion-sensor'],\n    'aperture': ['door-closed', 'door-open'],\n    'nocturnal': ['shield-moon-outline', 'shield-moon'],\n    'diurnal': ['shield-sun-outline', 'shield-sun'],\n    'nightlight': ['lightbulb-night-outline', 'lightbulb-night'],\n    'retention': ['timeline-clock-outline', 'timeline-clock'],\n    'daily': ['calendar-remove', 'calendar-check'],\n    'openwork': ['storefront-remove-outline', 'storefront-check'],\n    'duration': ['timer-remove-outline', 'timer-check'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless'],\n    'darkness': ['brightness-5', 'brightness-4'],\n    'humidity': ['water-percent-alert', 'water-percent'],\n    'temperature_energy_free': ['lightning-bolt-outline', 'lightning-bolt']\n};\n\n// Templates\ndescribe.template = {\n    'hmi': {\n        'id': '',\n        'login': '',\n        'level': 'visitor',\n        'lang': 'en',\n        'name': 'auth', // ui page\n        'room': '',\n        'time': 0\n    },\n    'room': {\n        'id': '',\n        'name': '',\n        'outdoor': 0\n    },\n    'parent': {\n        'id': '',\n        'name': '',\n        'seen': 0\n    },\n    'entity': {\n        'uid': '',\n        'source': '',\n        'id': '',\n        'name': '',\n        'parent': '',\n        'value': '',\n        'type': '',\n        'room': '',\n        'element': '',\n        'unit': '',\n        'seen': 0,\n        'hidden': 0\n    },\n    'scene': {\n        'target': '',\n        'enabled': 0,\n        'on': 1,\n        'off': 0,\n        'motion': 0,\n        'aperture': 0,\n        'nocturnal': 0,\n        'diurnal': 0,\n        'nightlight': 0,\n        'retention': 0,\n        'duration': 60, //minutes\n        'high': '70',\n        'low': '30',\n        'illuminance': 0, //2000\n        'darkness': 0, //200\n        'humidity': 0,\n        'daily': 0,\n        'openwork': 0,\n        'tariff': 0, // limit to a given tariff (see dknr_config_fulltariff)\n        'power': 0, // to check if target is really off\n        'timer': 0, // for duration routine\n        'today': 0, // for daily routine, 1=executed today else 0\n\n        'temperature_setpoint_eco': 19,\n        'temperature_setpoint_confort': 21,\n        'temperature_setpoint_cold': 18,\n        'temperature_coefficient_indoor': 100,\n        'temperature_coefficient_outdoor': 10,\n        'temperature_duration_aperture': 5,\n        'temperature_duration_preheat': 10,\n        'temperature_duration_cycle': 60,\n        'temperature_duration_offloading': 60,\n        'temperature_power_consumption': 1000,\n        'temperature_energy_free': 0,\n\n        'temperature_aperture_opened': 0,\n        'temperature_aperture_timer': 0,\n        'temperature_pilot_state': 'stopped',\n        'temperature_pilot_last': 0\n    },\n    'trigger': {\n        'inputhigh': 1, // Minimal input level for high level\n        'inputlow': 0, // Maximal input level for low high level\n        'outputhigh': 'high', // Output level on high input level. [none,high,low,toggle]\n        'outputlow': 'low' // output level for low input level [none, high, low, toggle]\n    },\n    'routine': {\n        'topic': '',\n        'payload': false,\n        'replay': false,\n        'rsp': true,\n        'iam': false,\n        'scene': {},\n        'param': {},\n        'trigger': {},\n        'target': {},\n        'routines': []\n    }\n};\n\n// Save config\nglobal.set('describe', describe, 'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/.config.projects.json'\n};",
+        "func": "const describe = global.get('describe', 'memoryOnly') || {};\n\nif (typeof describe.pages !== 'object') {\n    describe.pages = {};\n}\n\n// Set default app values\ndescribe.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\ndescribe.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['energy'] = {\n    'id': '34a13cfdebc90220',\n    'name': 'energy',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['calendar'] = {\n    'id': '05291fac72588064',\n    'name': 'calendar',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['scene'] = {\n    'id': '1e9f5bde9636a371',\n    'name': 'scene',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['entity'] = {\n    'id': '2b12391aa314ef62',\n    'name': 'entity',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': false,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// Sources\ndescribe.sources['dknr'] = ['eye', 'Domotic'];\n\n// Binary element with revert value\ndescribe.reverts = ['aperture', 'door', 'window', 'lock'];\n\n// Non numeric units\ndescribe.texts = ['', 'chex', 'enum', 'text', 'time'];\n\n// Elements icons\ndescribe.elements = {\n    'switch': ['toggle-switch-off-outline', 'toggle-switch-outline', 'Switch'],\n    'plug': ['power-plug-off', 'power-plug', 'Plug'],\n    'power': ['flash-outline', 'flash', 'Power'],\n    'current': ['current-ac', 'current-ac', 'Current'],\n    'frequency': ['sine-wave', 'sine-wave', 'Frequency'],\n    'voltage': ['current-dc', 'current-dc', 'Frequency'],\n    'energy': ['meter-electric-outline', 'meter-electric', 'Energy'],\n    'light': ['lightbulb-off', 'lightbulb', 'Light'],\n    'remote': ['remote-off', 'remote', 'Remote'],\n    'door': ['door-closed', 'door-open', 'Door'], // 0=open\n    'window': ['window-closed-variant', 'window-open-variant', 'Window'], //0=open\n    'lock': ['lock-off', 'lock', 'Lock'], //0=open\n    //'shield': ['shield-lock-outline', 'shield-lock'],\n    //'aperture': ['electric-switch-closed', 'electric-switch'], // 0=open\n    'shutter': ['window-shutter', 'window-shutter-open', 'Shutter'],\n    'slider': ['door-sliding', 'door-sliding-open', 'Slider'],\n    //'heater': ['radiator-off', 'radiator'], => temperature\n    //'cooler': ['radiator-off', 'radiator'], => temperature\n    //'airconditioner': ['radiator-off', 'radiator'], => temparature\n    'waterboiler': ['water-boiler-off', 'water-boiler', 'Waterboiler'],\n    'alert': ['bell-off', 'bell', 'Alert'],\n    'sound': ['volume-off', 'volume-high', 'Sound'],\n    'motion': ['motion-sensor-off', 'motion-sensor', 'Motion'],\n    //'presence': ['location-exit', 'location-enter'], => motion\n    'temperature': ['thermometer-off', 'thermometer', 'Temperature'],\n    'humidity': ['water-percent-alert', 'water-percent', 'Humidity'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless', 'Illuminance'],\n    'pressure': ['gauge', 'gauge', 'Pressure'],\n    //'wind': ['weather-windy', 'weather-dust'],\n    //'airflow': ['fan-off', 'fan'], => humidity\n    'fan': ['fan-off', 'fan', 'Fan'],\n    'direction': ['swap-horizontal', 'swap-horizontal-bold', 'Direction'],\n    'time': ['clock-outline', 'clock', 'Time'],\n    'battery': ['battery-low', 'battery', 'Battery'],\n    //'climate': ['home-thermometer-outline', 'home-thermometer'],\n    'mode': ['home-switch-outline', 'home-switch', 'Mode'],\n    'text': ['clipboard-text-off', 'clipboard-text', 'Text'],\n    'location': ['map-marker-off-outline', 'map-marker', 'Location'],\n    //'camera': ['camera-off', 'camera'],\n    'color': ['palette', 'palette', 'Color'],\n    'tariff': ['currency-eur-off', 'currency-eur', 'Tariff']\n};\n\ndescribe.units = {\n    '': 'None',\n    '°C': 'Degree celsuis',\n    '°F': 'Degree fahrenheit',\n    'mA': 'Milliampere',\n    'A': 'Ampere',\n    'Hz': 'Hertz',\n    'mW': 'Milliwatt',\n    'W': 'Watt',\n    'kW': 'Kilowatt',\n    'MW': 'Megawatt',\n    'mWh': 'Milliwatt/hour',\n    'Wh': 'Watt/Hour',\n    'mVA': 'Millivoltampere',\n    'VA': 'Voltampere',\n    'mV': 'Millivolt',\n    'V': 'Volt',\n    'lx': 'Lux',\n    'ppm': 'Parts per million',\n    '%': 'Percent (0-100)',\n    'b': 'Binary (0-1)',\n    'rb': 'Revert binary',\n    '8b': '8-bit (0-255)',\n    'n': 'Number',\n    's': 'Second',\n    'ms': 'Millisecond',\n    'time': 'Time',\n    'enum': 'Enumerator',\n    'text': 'Text',\n    'chex': 'Hexadécimal color'\n};\n\n// Value color\ndescribe.colors = {\n    'on': '#008000',\n    'off': '#FF0000',\n    'median': '#F08000',\n    'none': '#808000',\n    'theme': '#0094CE',\n    'empty': '#CCCCCC'\n};\n\n// Calendar event type\ndescribe.calendar = {\n    'birthday': [ 'cake-variant-outline', 'cake-variant' ],\n    'rendezvous': [ 'alarm-off', 'alarm' ],\n    'trashbin': [ 'trash-can-outline', 'trash-can' ],\n    'recyclebin': [ 'recycle-vairant', 'recycle' ]\n};\n\n// Scene elements fields\ndescribe.scenes = {\n    'humidity': [\n        'enabled',\n        'on',\n        'off',\n        'duration',\n        'humidity'\n    ],\n    'light': [\n        'enabled',\n        'on',\n        'off',\n        'high',\n        'low',\n        'motion',\n        'retention',\n        'duration',\n        'diurnal',\n        'nocturnal',\n        'nightlight',\n        'illuminance',\n        'darkness'\n    ],\n    'shutter': [\n        'enabled',\n        'on',\n        'off',\n        'aperture',\n        'diurnal',\n        'nocturnal',\n        'illuminance',\n        'darkness',\n        'openwork',\n        'daily'\n    ],\n    'waterboiler': [\n        'enabled',\n        'on',\n        'off',\n        'duration',\n        'power',\n        'tariff',\n        'daily'\n    ],\n    'temperature': [\n        'enabled',\n        'on',\n        'off',\n        'temperature_setpoint_eco',\n        'temperature_setpoint_confort',\n        'temperature_setpoint_cold',\n        'temperature_coefficient_indoor',\n        'temperature_coefficient_outdoor',\n        'temperature_duration_aperture',\n        'temperature_duration_preheat',\n        'temperature_duration_cycle',\n        'temperature_duration_offloading',\n        'temperature_power_consumption',\n        'temperature_energy_free'\n    ]\n};\n\n// Scene routines fields\ndescribe.routines = {\n    'motion': ['motion-sensor-off', 'motion-sensor'],\n    'aperture': ['door-closed', 'door-open'],\n    'nocturnal': ['shield-moon-outline', 'shield-moon'],\n    'diurnal': ['shield-sun-outline', 'shield-sun'],\n    'nightlight': ['lightbulb-night-outline', 'lightbulb-night'],\n    'retention': ['timeline-clock-outline', 'timeline-clock'],\n    'daily': ['calendar-remove', 'calendar-check'],\n    'openwork': ['storefront-remove-outline', 'storefront-check'],\n    'duration': ['timer-remove-outline', 'timer-check'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless'],\n    'darkness': ['brightness-5', 'brightness-4'],\n    'humidity': ['water-percent-alert', 'water-percent'],\n    'temperature_energy_free': ['lightning-bolt-outline', 'lightning-bolt']\n};\n\n// Templates\ndescribe.template = {\n    'hmi': {\n        'id': '',\n        'login': '',\n        'level': 'visitor',\n        'lang': 'en',\n        'name': 'auth', // ui page\n        'room': '',\n        'time': 0\n    },\n    'room': {\n        'id': '',\n        'name': '',\n        'short': '',\n        'outdoor': 0,\n        'mapx': 0,\n        'mapy': 0,\n        'mapw': 0,\n        'maph': 0\n    },\n    'parent': {\n        'id': '',\n        'name': '',\n        'seen': 0\n    },\n    'entity': {\n        'uid': '',\n        'source': '',\n        'id': '',\n        'name': '',\n        'parent': '',\n        'value': '',\n        'type': '',\n        'room': '',\n        'element': '',\n        'unit': '',\n        'seen': 0,\n        'hidden': 0\n    },\n    'scene': {\n        'target': '',\n        'enabled': 0,\n        'on': 1,\n        'off': 0,\n        'motion': 0,\n        'aperture': 0,\n        'nocturnal': 0,\n        'diurnal': 0,\n        'nightlight': 0,\n        'retention': 0,\n        'duration': 60, //minutes\n        'high': '70',\n        'low': '30',\n        'illuminance': 0, //2000\n        'darkness': 0, //200\n        'humidity': 0,\n        'daily': 0,\n        'openwork': 0,\n        'tariff': 0, // limit to a given tariff (see dknr_config_fulltariff)\n        'power': 0, // to check if target is really off\n        'timer': 0, // for duration routine\n        'today': 0, // for daily routine, 1=executed today else 0\n\n        'temperature_setpoint_eco': 19,\n        'temperature_setpoint_confort': 21,\n        'temperature_setpoint_cold': 18,\n        'temperature_coefficient_indoor': 100,\n        'temperature_coefficient_outdoor': 10,\n        'temperature_duration_aperture': 5,\n        'temperature_duration_preheat': 10,\n        'temperature_duration_cycle': 60,\n        'temperature_duration_offloading': 60,\n        'temperature_power_consumption': 1000,\n        'temperature_energy_free': 0,\n\n        'temperature_aperture_opened': 0,\n        'temperature_aperture_timer': 0,\n        'temperature_pilot_state': 'stopped',\n        'temperature_pilot_last': 0\n    },\n    'trigger': {\n        'inputhigh': 1, // Minimal input level for high level\n        'inputlow': 0, // Maximal input level for low high level\n        'outputhigh': 'high', // Output level on high input level. [none,high,low,toggle]\n        'outputlow': 'low' // output level for low input level [none, high, low, toggle]\n    },\n    'routine': {\n        'topic': '',\n        'payload': false,\n        'replay': false,\n        'rsp': true,\n        'iam': false,\n        'scene': {},\n        'param': {},\n        'trigger': {},\n        'target': {},\n        'routines': []\n    }\n};\n\n// Save config\nglobal.set('describe', describe, 'memoryOnly');\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/.config.projects.json'\n};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3417,7 +3528,7 @@
             "70fa44d509342200"
         ],
         "x": 655,
-        "y": 1040,
+        "y": 1100,
         "wires": []
     },
     {
@@ -3430,7 +3541,7 @@
             "43663518deccb7c6"
         ],
         "x": 985,
-        "y": 1040,
+        "y": 1100,
         "wires": [
             [
                 "8f1a54f299198096"
@@ -3452,7 +3563,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 780,
-        "y": 740,
+        "y": 800,
         "wires": []
     },
     {
@@ -3475,7 +3586,7 @@
         "templateScope": "widget:ui",
         "className": "",
         "x": 900,
-        "y": 1100,
+        "y": 1160,
         "wires": [
             [
                 "8f1a54f299198096"
@@ -3490,7 +3601,7 @@
         "name": "common - ui - hmi",
         "links": [],
         "x": 145,
-        "y": 1400,
+        "y": 1460,
         "wires": [
             [
                 "d1b1e789f412bd08"
@@ -3506,7 +3617,7 @@
         "mode": "return",
         "links": [],
         "x": 395,
-        "y": 1400,
+        "y": 1460,
         "wires": []
     },
     {
@@ -3517,7 +3628,7 @@
         "name": "common - user - check",
         "links": [],
         "x": 145,
-        "y": 2300,
+        "y": 2360,
         "wires": [
             [
                 "20f654f00ef52950"
@@ -3539,7 +3650,7 @@
         "outputs": 2,
         "rounds": 10,
         "x": 440,
-        "y": 2240,
+        "y": 2300,
         "wires": [
             [
                 "8cdcab5e1a00fa52"
@@ -3558,7 +3669,7 @@
         "mode": "return",
         "links": [],
         "x": 775,
-        "y": 2240,
+        "y": 2300,
         "wires": []
     },
     {
@@ -3576,7 +3687,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 860,
-        "y": 2300,
+        "y": 2360,
         "wires": []
     },
     {
@@ -3593,7 +3704,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 2300,
+        "y": 2360,
         "wires": [
             [
                 "e0302181e220fb24"
@@ -3617,7 +3728,7 @@
         "finalize": "",
         "libs": [],
         "x": 620,
-        "y": 2240,
+        "y": 2300,
         "wires": [
             [
                 "4b4db5a5c5bcb3c6"
@@ -3638,7 +3749,7 @@
         "finalize": "",
         "libs": [],
         "x": 630,
-        "y": 2300,
+        "y": 2360,
         "wires": [
             [
                 "4b4db5a5c5bcb3c6",
@@ -3656,7 +3767,7 @@
             "7aba25c7ca11c967"
         ],
         "x": 145,
-        "y": 2120,
+        "y": 2180,
         "wires": [
             [
                 "670bb85f2c2aeaf5"
@@ -3678,7 +3789,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 580,
-        "y": 2120,
+        "y": 2180,
         "wires": []
     },
     {
@@ -3695,7 +3806,7 @@
         "finalize": "",
         "libs": [],
         "x": 320,
-        "y": 2120,
+        "y": 2180,
         "wires": [
             [
                 "0e94cde52c021d45"
@@ -3728,7 +3839,7 @@
         "to": "",
         "reg": false,
         "x": 280,
-        "y": 1940,
+        "y": 2000,
         "wires": [
             [
                 "efbcb97a4ab96940"
@@ -3748,7 +3859,7 @@
         "overwriteFile": "true",
         "encoding": "none",
         "x": 450,
-        "y": 1940,
+        "y": 2000,
         "wires": [
             [
                 "6e614b3f0adee365"
@@ -3776,7 +3887,7 @@
         "to": "",
         "reg": false,
         "x": 630,
-        "y": 1940,
+        "y": 2000,
         "wires": [
             [
                 "166b868a64df0e9f",
@@ -3795,7 +3906,7 @@
         ],
         "uncaught": false,
         "x": 460,
-        "y": 2000,
+        "y": 2060,
         "wires": [
             [
                 "f261b4c898eeec2e"
@@ -3823,7 +3934,7 @@
         "to": "",
         "reg": false,
         "x": 630,
-        "y": 2000,
+        "y": 2060,
         "wires": [
             [
                 "25946e03a69f38c2",
@@ -3846,7 +3957,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 840,
-        "y": 2000,
+        "y": 2060,
         "wires": []
     },
     {
@@ -3859,7 +3970,7 @@
             "44a9a10bea4cbb76"
         ],
         "x": 145,
-        "y": 1940,
+        "y": 2000,
         "wires": [
             [
                 "d1737d208c83ee99"
@@ -3875,7 +3986,7 @@
         "mode": "link",
         "links": [],
         "x": 755,
-        "y": 1940,
+        "y": 2000,
         "wires": []
     },
     {
@@ -3892,7 +4003,7 @@
         "encoding": "none",
         "allProps": false,
         "x": 450,
-        "y": 1760,
+        "y": 1820,
         "wires": [
             [
                 "0b2cf7bf91ae4d19"
@@ -3909,7 +4020,7 @@
         "action": "",
         "pretty": false,
         "x": 630,
-        "y": 1760,
+        "y": 1820,
         "wires": [
             [
                 "4cc3ed0d3ee8fb8d"
@@ -3927,7 +4038,7 @@
         ],
         "uncaught": false,
         "x": 460,
-        "y": 1820,
+        "y": 1880,
         "wires": [
             [
                 "cca39ee5b2794b76"
@@ -3944,7 +4055,7 @@
             "92c098c716e46e3b"
         ],
         "x": 145,
-        "y": 1760,
+        "y": 1820,
         "wires": [
             [
                 "1e31ae9f27a06bd8"
@@ -3971,7 +4082,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1130,
-        "y": 1760,
+        "y": 1820,
         "wires": [
             [
                 "62fd5d97d37862c8"
@@ -3996,7 +4107,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1840,
-        "y": 1760,
+        "y": 1820,
         "wires": []
     },
     {
@@ -4020,7 +4131,7 @@
         "to": "",
         "reg": false,
         "x": 1310,
-        "y": 1820,
+        "y": 1880,
         "wires": [
             [
                 "fa7160372fcfe3b2"
@@ -4042,7 +4153,7 @@
         "outputs": 1,
         "rounds": 10,
         "x": 1470,
-        "y": 1820,
+        "y": 1880,
         "wires": [
             [
                 "c207171ed4430df8"
@@ -4082,7 +4193,7 @@
         "to": "",
         "reg": false,
         "x": 1630,
-        "y": 1820,
+        "y": 1880,
         "wires": [
             [
                 "44a9a10bea4cbb76",
@@ -4101,7 +4212,7 @@
             "b75938c74c41ca5e"
         ],
         "x": 1755,
-        "y": 1820,
+        "y": 1880,
         "wires": []
     },
     {
@@ -4127,7 +4238,7 @@
         "payload": "",
         "payloadType": "str",
         "x": 1140,
-        "y": 1700,
+        "y": 1760,
         "wires": [
             [
                 "cca39ee5b2794b76"
@@ -4142,7 +4253,7 @@
         "name": "reset users, set main user as admin/admin",
         "info": "",
         "x": 1420,
-        "y": 1700,
+        "y": 1760,
         "wires": []
     },
     {
@@ -4164,7 +4275,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 950,
-        "y": 1760,
+        "y": 1820,
         "wires": [
             [
                 "8e12e262806af7b7"
@@ -4190,7 +4301,7 @@
         "to": "",
         "reg": false,
         "x": 1310,
-        "y": 1760,
+        "y": 1820,
         "wires": [
             [
                 "aae1f5d9a3931146"
@@ -4211,7 +4322,7 @@
         "finalize": "",
         "libs": [],
         "x": 790,
-        "y": 1760,
+        "y": 1820,
         "wires": [
             [
                 "45fec39ce210f1d4"
@@ -4237,7 +4348,7 @@
         "to": "",
         "reg": false,
         "x": 280,
-        "y": 1760,
+        "y": 1820,
         "wires": [
             [
                 "63e58cf7f88ce5af"
@@ -4258,7 +4369,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 1160,
+        "y": 1220,
         "wires": [
             [
                 "be56244e32363548",
@@ -4286,7 +4397,7 @@
         "finalize": "",
         "libs": [],
         "x": 1140,
-        "y": 1040,
+        "y": 1100,
         "wires": [
             [
                 "b02e3c2d96304d41"
@@ -4307,7 +4418,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 1520,
+        "y": 1580,
         "wires": [
             [
                 "c026a3bb27b7e4d4"
@@ -4322,7 +4433,7 @@
         "name": "common - ui - tab",
         "links": [],
         "x": 145,
-        "y": 1520,
+        "y": 1580,
         "wires": [
             [
                 "8c540395a0e469f7"
@@ -4338,7 +4449,7 @@
         "mode": "return",
         "links": [],
         "x": 395,
-        "y": 1520,
+        "y": 1580,
         "wires": []
     },
     {
@@ -4352,7 +4463,7 @@
             "289e0a6cd1209c38"
         ],
         "x": 1295,
-        "y": 1040,
+        "y": 1100,
         "wires": []
     },
     {
@@ -4366,7 +4477,7 @@
             "289e0a6cd1209c38"
         ],
         "x": 1295,
-        "y": 1160,
+        "y": 1220,
         "wires": []
     },
     {
@@ -4389,7 +4500,7 @@
         "templateScope": "widget:ui",
         "className": "",
         "x": 320,
-        "y": 1100,
+        "y": 1160,
         "wires": [
             []
         ]
@@ -4404,7 +4515,7 @@
             "92c098c716e46e3b"
         ],
         "x": 145,
-        "y": 1040,
+        "y": 1100,
         "wires": [
             [
                 "b490f62e4ba2632e",
@@ -4431,7 +4542,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 690,
-        "y": 1100,
+        "y": 1160,
         "wires": [
             [
                 "4841db186251fd55"
@@ -4548,7 +4659,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 1400,
+        "y": 1460,
         "wires": [
             [
                 "7214e26c1a5974bd"
@@ -4629,7 +4740,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 750,
-        "y": 620,
+        "y": 680,
         "wires": [
             [
                 "4e8306ceb80ac08b",
@@ -4651,7 +4762,7 @@
         "finalize": "",
         "libs": [],
         "x": 590,
-        "y": 620,
+        "y": 680,
         "wires": [
             [
                 "6bb58f3ec75915c5"
@@ -4667,7 +4778,7 @@
         "mode": "link",
         "links": [],
         "x": 875,
-        "y": 620,
+        "y": 680,
         "wires": []
     },
     {
@@ -4689,7 +4800,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 430,
-        "y": 680,
+        "y": 740,
         "wires": [
             [
                 "07e96d88edbef793"
@@ -4710,7 +4821,7 @@
         "finalize": "",
         "libs": [],
         "x": 430,
-        "y": 740,
+        "y": 800,
         "wires": [
             [
                 "305c8254ca65bf19"
@@ -4728,7 +4839,7 @@
             "f2cd63b49ac325ec"
         ],
         "x": 145,
-        "y": 2780,
+        "y": 2840,
         "wires": [
             [
                 "ae66a858fd8c7d7b"
@@ -4749,7 +4860,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 2780,
+        "y": 2840,
         "wires": [
             [
                 "b5ee6411deb05df3"
@@ -4771,7 +4882,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 430,
-        "y": 2780,
+        "y": 2840,
         "wires": [
             [
                 "91b6294e85a14007",
@@ -4798,7 +4909,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 590,
-        "y": 2720,
+        "y": 2780,
         "wires": [
             [
                 "ae66a858fd8c7d7b"
@@ -4820,7 +4931,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 620,
-        "y": 2540,
+        "y": 2600,
         "wires": []
     },
     {
@@ -4837,7 +4948,7 @@
         "finalize": "",
         "libs": [],
         "x": 590,
-        "y": 2780,
+        "y": 2840,
         "wires": [
             [
                 "ba0689c84b18f163"
@@ -4855,7 +4966,7 @@
             "cc0a7c14f877c371"
         ],
         "x": 875,
-        "y": 2780,
+        "y": 2840,
         "wires": []
     },
     {
@@ -4878,7 +4989,7 @@
             "45cf0be2427364c5"
         ],
         "x": 145,
-        "y": 2540,
+        "y": 2600,
         "wires": [
             [
                 "e964304a04d624f4"
@@ -4899,7 +5010,7 @@
         "finalize": "",
         "libs": [],
         "x": 430,
-        "y": 2540,
+        "y": 2600,
         "wires": [
             [
                 "540ace790f3fa1eb",
@@ -4924,7 +5035,7 @@
             "cdcf8ab31b9723f0"
         ],
         "x": 715,
-        "y": 2480,
+        "y": 2540,
         "wires": []
     },
     {
@@ -4946,7 +5057,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 270,
-        "y": 2540,
+        "y": 2600,
         "wires": [
             [
                 "b3e3b0dde3bcdd99"
@@ -4989,7 +5100,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "data",
-        "func": "// Copy data from/to memory\n\n// First announce we boot, (stop scene)\nif (msg.payload === true) {\n    global.set('boot', true, 'memoryOnly');\n}\n\nconst places = ['default', 'memoryOnly'];\nconst place = msg.payload === true ? places : [places[1], places[0]];\n\n// copy from memory to file\nconst memorized = {\n    'auth': { },\n    'block': { },\n    'calendar': { },\n    'camera': { },\n    'energy': { },\n    'entity': { },\n    'mqtt': { },\n    'parent': { },\n    'room': { },\n    'scene': { }\n}\n\n// Copy backup or at least init\nfor (const key in memorized) {\n    let src = global.get(key, place[0]);\n    if (typeof src !== 'object') {\n        src = memorized[key];\n    }\n    global.set(key, src, place[1]);\n}\n\nnode.status({text: place[0] + ' to ' + place[1]});\n\nif (msg.payload === false) {\n\n    return;\n}\n\nflow.set('stop', false, 'memoryOnly');\n\n// Reset \"per user\" variables\nconst peruser = {\n    'browser': {},\n    'describe': {\n        'project': '',\n        'app': {},\n        'pages': {},\n        'sources': {},\n        'enum': {},\n        'elements': {},\n        'reverts': {},\n        'texts': {},\n        'untis': {},\n        'colors': {},\n        'scenes': {},\n        'routines': {},\n        'template': {}\n    },\n    'dictionary': {},\n    'auth': {},\n    'form': {},\n    'user': {}\n};\nfor (const key in peruser) {\n    global.set(key, peruser[key], 'memoryOnly');\n}\n\n// start\nmsg.payload = {\n    'pages': {},\n    'sources': {},\n    'enum': {},\n    'dictionary': {}\n};\n\nreturn msg;",
+        "func": "// Copy data from/to memory\n\n// First announce we boot, (stop scene)\nif (msg.payload === true) {\n    global.set('boot', true, 'memoryOnly');\n}\n\nconst places = ['default', 'memoryOnly'];\nconst place = msg.payload === true ? places : [places[1], places[0]];\n\n// copy from memory to file\nconst memorized = {\n    'auth': { },\n    'block': { },\n    'calendar': { },\n    'camera': { },\n    'energy': { },\n    'entity': { },\n    'map': { },\n    'mqtt': { },\n    'parent': { },\n    'room': { },\n    'scene': { }\n}\n\n// Copy backup or at least init\nfor (const key in memorized) {\n    let src = global.get(key, place[0]);\n    if (typeof src !== 'object') {\n        src = memorized[key];\n    }\n    global.set(key, src, place[1]);\n}\n\nnode.status({text: place[0] + ' to ' + place[1]});\n\nif (msg.payload === false) {\n\n    return;\n}\n\nflow.set('stop', false, 'memoryOnly');\n\n// Reset \"per user\" variables\nconst peruser = {\n    'browser': {},\n    'describe': {\n        'project': '',\n        'app': {},\n        'pages': {},\n        'sources': {},\n        'enum': {},\n        'elements': {},\n        'reverts': {},\n        'texts': {},\n        'untis': {},\n        'colors': {},\n        'scenes': {},\n        'routines': {},\n        'template': {}\n    },\n    'dictionary': {},\n    'auth': {},\n    'form': {},\n    'user': {}\n};\nfor (const key in peruser) {\n    global.set(key, peruser[key], 'memoryOnly');\n}\n\n// start\nmsg.payload = {\n    'pages': {},\n    'sources': {},\n    'enum': {},\n    'dictionary': {}\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5048,7 +5159,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 3020,
+        "y": 3080,
         "wires": [
             [
                 "36ceb75b76d5eff1"
@@ -5070,7 +5181,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 430,
-        "y": 3020,
+        "y": 3080,
         "wires": [
             [
                 "a7c97185682980e6",
@@ -5097,7 +5208,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 590,
-        "y": 2960,
+        "y": 3020,
         "wires": [
             [
                 "c6c1765c8ced2f28"
@@ -5118,7 +5229,7 @@
         "finalize": "",
         "libs": [],
         "x": 590,
-        "y": 3020,
+        "y": 3080,
         "wires": [
             [
                 "2749cc3403e8ded6"
@@ -5136,7 +5247,7 @@
             "cc0a7c14f877c371"
         ],
         "x": 875,
-        "y": 3020,
+        "y": 3080,
         "wires": []
     },
     {
@@ -5162,7 +5273,7 @@
         "payload": "",
         "payloadType": "str",
         "x": 270,
-        "y": 4520,
+        "y": 4580,
         "wires": [
             [
                 "29c782ee02094a7a"
@@ -5183,7 +5294,7 @@
         "finalize": "",
         "libs": [],
         "x": 610,
-        "y": 4520,
+        "y": 4580,
         "wires": [
             [
                 "938e2afe4f3b8170"
@@ -5201,7 +5312,7 @@
             "cc0a7c14f877c371"
         ],
         "x": 895,
-        "y": 4460,
+        "y": 4520,
         "wires": []
     },
     {
@@ -5218,7 +5329,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 3260,
+        "y": 3320,
         "wires": [
             [
                 "9052d70bbd0bb619"
@@ -5240,7 +5351,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 430,
-        "y": 3260,
+        "y": 3320,
         "wires": [
             [
                 "ea429b3e01991411",
@@ -5267,7 +5378,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 590,
-        "y": 3200,
+        "y": 3260,
         "wires": [
             [
                 "8f0b88d6a682a1e4"
@@ -5288,7 +5399,7 @@
         "finalize": "",
         "libs": [],
         "x": 590,
-        "y": 3260,
+        "y": 3320,
         "wires": [
             [
                 "c0162f775400da9e"
@@ -5306,7 +5417,7 @@
             "cc0a7c14f877c371"
         ],
         "x": 875,
-        "y": 3260,
+        "y": 3320,
         "wires": []
     },
     {
@@ -5323,7 +5434,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 2720,
+        "y": 2780,
         "wires": [
             [
                 "af5a4db306f7c8b5"
@@ -5344,7 +5455,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 2960,
+        "y": 3020,
         "wires": [
             [
                 "5e692d972f19ef9a"
@@ -5365,7 +5476,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 3200,
+        "y": 3260,
         "wires": [
             [
                 "4e7136a46fab4070"
@@ -5382,7 +5493,7 @@
             "26bca8d17b597ed1"
         ],
         "x": 145,
-        "y": 3200,
+        "y": 3260,
         "wires": [
             [
                 "dac35c32b868aea8"
@@ -5400,7 +5511,7 @@
             "73f3212ba921a620"
         ],
         "x": 395,
-        "y": 3200,
+        "y": 3260,
         "wires": []
     },
     {
@@ -5417,7 +5528,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 3500,
+        "y": 3560,
         "wires": [
             [
                 "b7e6a5d320beb1f6"
@@ -5439,7 +5550,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 430,
-        "y": 3500,
+        "y": 3560,
         "wires": [
             [
                 "2ed8557b81e7c605",
@@ -5466,7 +5577,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 590,
-        "y": 3440,
+        "y": 3500,
         "wires": [
             [
                 "3ef7839a35b0f5f1"
@@ -5487,7 +5598,7 @@
         "finalize": "",
         "libs": [],
         "x": 590,
-        "y": 3500,
+        "y": 3560,
         "wires": [
             [
                 "db5def985887ea3f"
@@ -5505,7 +5616,7 @@
             "cc0a7c14f877c371"
         ],
         "x": 875,
-        "y": 3500,
+        "y": 3560,
         "wires": []
     },
     {
@@ -5522,7 +5633,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 3440,
+        "y": 3500,
         "wires": [
             [
                 "c56da29053349405"
@@ -5539,7 +5650,7 @@
             "26bca8d17b597ed1"
         ],
         "x": 145,
-        "y": 3440,
+        "y": 3500,
         "wires": [
             [
                 "661cf303d85905bb"
@@ -5557,7 +5668,7 @@
             "73f3212ba921a620"
         ],
         "x": 395,
-        "y": 3440,
+        "y": 3500,
         "wires": []
     },
     {
@@ -5585,7 +5696,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 3740,
+        "y": 3800,
         "wires": [
             [
                 "e28bab796f882c1f"
@@ -5607,7 +5718,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 430,
-        "y": 3740,
+        "y": 3800,
         "wires": [
             [
                 "e67c2e3e94b1325a",
@@ -5634,7 +5745,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 590,
-        "y": 3680,
+        "y": 3740,
         "wires": [
             [
                 "e9bbb6c6378abf81"
@@ -5655,7 +5766,7 @@
         "finalize": "",
         "libs": [],
         "x": 590,
-        "y": 3740,
+        "y": 3800,
         "wires": [
             [
                 "ba398e8e78d864fa"
@@ -5673,7 +5784,7 @@
             "cc0a7c14f877c371"
         ],
         "x": 875,
-        "y": 3740,
+        "y": 3800,
         "wires": []
     },
     {
@@ -5690,7 +5801,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 3680,
+        "y": 3740,
         "wires": [
             [
                 "017e88df33bc747c"
@@ -5707,7 +5818,7 @@
             "26bca8d17b597ed1"
         ],
         "x": 145,
-        "y": 3680,
+        "y": 3740,
         "wires": [
             [
                 "2d506fa6b9a372b2"
@@ -5725,7 +5836,7 @@
             "73f3212ba921a620"
         ],
         "x": 395,
-        "y": 3680,
+        "y": 3740,
         "wires": []
     },
     {
@@ -5743,7 +5854,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 650,
-        "y": 3800,
+        "y": 3860,
         "wires": []
     },
     {
@@ -5756,7 +5867,7 @@
             "26bca8d17b597ed1"
         ],
         "x": 145,
-        "y": 2720,
+        "y": 2780,
         "wires": [
             [
                 "41fc0776f67a9292"
@@ -5774,7 +5885,7 @@
             "73f3212ba921a620"
         ],
         "x": 395,
-        "y": 2720,
+        "y": 2780,
         "wires": []
     },
     {
@@ -5787,7 +5898,7 @@
             "26bca8d17b597ed1"
         ],
         "x": 145,
-        "y": 2960,
+        "y": 3020,
         "wires": [
             [
                 "72aae6174b64a06c"
@@ -5805,7 +5916,7 @@
             "73f3212ba921a620"
         ],
         "x": 395,
-        "y": 2960,
+        "y": 3020,
         "wires": []
     },
     {
@@ -5827,7 +5938,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 750,
-        "y": 2780,
+        "y": 2840,
         "wires": [
             [
                 "038df4153883408b",
@@ -5854,7 +5965,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 750,
-        "y": 3020,
+        "y": 3080,
         "wires": [
             [
                 "6ab72e116070c867",
@@ -5881,7 +5992,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 750,
-        "y": 3260,
+        "y": 3320,
         "wires": [
             [
                 "4c1329a43d9cd7ca",
@@ -5908,7 +6019,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 750,
-        "y": 3500,
+        "y": 3560,
         "wires": [
             [
                 "d4934016db111d04",
@@ -5935,7 +6046,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 750,
-        "y": 3740,
+        "y": 3800,
         "wires": [
             [
                 "d4a958696ac0d5bc",
@@ -5953,7 +6064,7 @@
             "a29ec7554a818a6f"
         ],
         "x": 145,
-        "y": 3800,
+        "y": 3860,
         "wires": [
             [
                 "6c46a2c3cc175aa3"
@@ -5974,7 +6085,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 3800,
+        "y": 3860,
         "wires": [
             [
                 "350bee34353cb1c3"
@@ -5996,7 +6107,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 660,
-        "y": 3560,
+        "y": 3620,
         "wires": []
     },
     {
@@ -6062,7 +6173,7 @@
         "expiry": "",
         "broker": "1f942ba50a9a898b",
         "x": 430,
-        "y": 3800,
+        "y": 3860,
         "wires": []
     },
     {
@@ -6075,7 +6186,7 @@
             "a29ec7554a818a6f"
         ],
         "x": 145,
-        "y": 3320,
+        "y": 3380,
         "wires": [
             [
                 "41af64d15abfcb75"
@@ -6096,7 +6207,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 3320,
+        "y": 3380,
         "wires": [
             [
                 "42b9b89e3ee6717c"
@@ -6119,7 +6230,7 @@
         "expiry": "",
         "broker": "c16ec4b19c5752ca",
         "x": 430,
-        "y": 3320,
+        "y": 3380,
         "wires": []
     },
     {
@@ -6141,7 +6252,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 590,
-        "y": 2480,
+        "y": 2540,
         "wires": [
             [
                 "a29ec7554a818a6f"
@@ -6162,7 +6273,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 3980,
+        "y": 4040,
         "wires": [
             [
                 "ac2aeef92b94161a"
@@ -6184,7 +6295,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 430,
-        "y": 3980,
+        "y": 4040,
         "wires": [
             [
                 "5590b32c1df283bb",
@@ -6211,7 +6322,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 590,
-        "y": 3920,
+        "y": 3980,
         "wires": [
             [
                 "be7d1f37913582e7"
@@ -6232,7 +6343,7 @@
         "finalize": "",
         "libs": [],
         "x": 590,
-        "y": 3980,
+        "y": 4040,
         "wires": [
             [
                 "c5925e090dba4959"
@@ -6250,7 +6361,7 @@
             "cc0a7c14f877c371"
         ],
         "x": 875,
-        "y": 3980,
+        "y": 4040,
         "wires": []
     },
     {
@@ -6267,7 +6378,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 3920,
+        "y": 3980,
         "wires": [
             [
                 "09d4db1484d96e21"
@@ -6284,7 +6395,7 @@
             "26bca8d17b597ed1"
         ],
         "x": 145,
-        "y": 3920,
+        "y": 3980,
         "wires": [
             [
                 "19c8f989e67b25e1"
@@ -6302,7 +6413,7 @@
             "73f3212ba921a620"
         ],
         "x": 395,
-        "y": 3920,
+        "y": 3980,
         "wires": []
     },
     {
@@ -6324,7 +6435,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 750,
-        "y": 3980,
+        "y": 4040,
         "wires": [
             [
                 "f2bf274fc1eaf00c",
@@ -6347,7 +6458,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 660,
-        "y": 4040,
+        "y": 4100,
         "wires": []
     },
     {
@@ -6437,7 +6548,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 590,
-        "y": 680,
+        "y": 740,
         "wires": [
             [
                 "f3c41b2acb15c9ea",
@@ -6453,7 +6564,7 @@
         "name": "UNCOMPLETE",
         "info": "",
         "x": 780,
-        "y": 3680,
+        "y": 3740,
         "wires": []
     },
     {
@@ -6464,7 +6575,7 @@
         "name": "UNCOMPLETE",
         "info": "",
         "x": 780,
-        "y": 3920,
+        "y": 3980,
         "wires": []
     },
     {
@@ -6482,7 +6593,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 660,
-        "y": 3080,
+        "y": 3140,
         "wires": []
     },
     {
@@ -6500,7 +6611,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 650,
-        "y": 2840,
+        "y": 2900,
         "wires": []
     },
     {
@@ -6637,7 +6748,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 270,
-        "y": 740,
+        "y": 800,
         "wires": [
             [
                 "8778ebdbb1f4ef56"
@@ -6654,7 +6765,7 @@
             "a29ec7554a818a6f"
         ],
         "x": 145,
-        "y": 3560,
+        "y": 3620,
         "wires": [
             [
                 "0b110dae421cde2a"
@@ -6675,7 +6786,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 3560,
+        "y": 3620,
         "wires": [
             [
                 "39f58c630debf66e"
@@ -6690,7 +6801,7 @@
         "name": "UNCOMPLETE",
         "info": "",
         "x": 780,
-        "y": 3440,
+        "y": 3500,
         "wires": []
     },
     {
@@ -6709,7 +6820,7 @@
         "expiry": "",
         "broker": "0e0c7f65d7976645",
         "x": 430,
-        "y": 3560,
+        "y": 3620,
         "wires": []
     },
     {
@@ -6720,7 +6831,7 @@
         "name": "common - ui - enable",
         "links": [],
         "x": 145,
-        "y": 1280,
+        "y": 1340,
         "wires": [
             [
                 "aa5d2b32307ebf42"
@@ -6736,7 +6847,7 @@
         "mode": "return",
         "links": [],
         "x": 395,
-        "y": 1280,
+        "y": 1340,
         "wires": []
     },
     {
@@ -6753,7 +6864,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 1280,
+        "y": 1340,
         "wires": [
             [
                 "d3c7bc3af2075553"
@@ -6774,7 +6885,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 4400,
+        "y": 4460,
         "wires": [
             [
                 "be54797dd460c3de"
@@ -6791,7 +6902,7 @@
             "26bca8d17b597ed1"
         ],
         "x": 145,
-        "y": 4400,
+        "y": 4460,
         "wires": [
             [
                 "89a4eac22d6b866f",
@@ -6810,7 +6921,7 @@
             "73f3212ba921a620"
         ],
         "x": 395,
-        "y": 4400,
+        "y": 4460,
         "wires": []
     },
     {
@@ -6823,7 +6934,7 @@
             "2c505f2fa6af909e"
         ],
         "x": 145,
-        "y": 4460,
+        "y": 4520,
         "wires": [
             [
                 "99c17f445801b029"
@@ -6844,7 +6955,7 @@
         "finalize": "",
         "libs": [],
         "x": 610,
-        "y": 4460,
+        "y": 4520,
         "wires": [
             [
                 "938e2afe4f3b8170"
@@ -6859,7 +6970,7 @@
         "name": "common - dknr - data",
         "links": [],
         "x": 645,
-        "y": 4400,
+        "y": 4460,
         "wires": [
             [
                 "7fc016215b15f119"
@@ -6880,7 +6991,7 @@
         "finalize": "",
         "libs": [],
         "x": 770,
-        "y": 4400,
+        "y": 4460,
         "wires": [
             [
                 "aff998eaeca88c3a"
@@ -6896,7 +7007,7 @@
         "mode": "return",
         "links": [],
         "x": 895,
-        "y": 4400,
+        "y": 4460,
         "wires": []
     },
     {
@@ -6911,7 +7022,7 @@
         "skipBodyParsing": false,
         "swaggerDoc": "",
         "x": 200,
-        "y": 440,
+        "y": 500,
         "wires": [
             [
                 "51fd87fb2d0f8249"
@@ -6937,7 +7048,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 370,
-        "y": 440,
+        "y": 500,
         "wires": [
             [
                 "7c97b773fbb94369"
@@ -6958,7 +7069,7 @@
         ],
         "uncaught": false,
         "x": 180,
-        "y": 500,
+        "y": 560,
         "wires": [
             [
                 "ddc9374374b8e9ce"
@@ -6973,8 +7084,8 @@
         "name": "404",
         "statusCode": "404",
         "headers": {},
-        "x": 850,
-        "y": 500,
+        "x": 890,
+        "y": 560,
         "wires": []
     },
     {
@@ -6990,8 +7101,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 690,
-        "y": 440,
+        "x": 730,
+        "y": 500,
         "wires": [
             [
                 "1eef652177adf5cc"
@@ -7009,7 +7120,7 @@
         "name": "200",
         "statusCode": "200",
         "headers": {},
-        "x": 850,
+        "x": 890,
         "y": 380,
         "wires": []
     },
@@ -7028,7 +7139,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 800,
-        "y": 4580,
+        "y": 4640,
         "wires": []
     },
     {
@@ -7050,7 +7161,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 770,
-        "y": 4460,
+        "y": 4520,
         "wires": [
             [
                 "1b6ec87a498d3297",
@@ -7073,7 +7184,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 640,
-        "y": 3320,
+        "y": 3380,
         "wires": []
     },
     {
@@ -7148,7 +7259,7 @@
         "outputs": 1,
         "options": [],
         "x": 440,
-        "y": 4580,
+        "y": 4640,
         "wires": [
             [
                 "34ed32e6a87f128a"
@@ -7169,7 +7280,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 4580,
+        "y": 4640,
         "wires": [
             [
                 "57d4182cc0e85388"
@@ -7199,7 +7310,7 @@
         "payload": "sunrise",
         "payloadType": "str",
         "x": 260,
-        "y": 4640,
+        "y": 4700,
         "wires": [
             [
                 "57d4182cc0e85388"
@@ -7220,7 +7331,7 @@
         "finalize": "",
         "libs": [],
         "x": 610,
-        "y": 4580,
+        "y": 4640,
         "wires": [
             [
                 "938e2afe4f3b8170"
@@ -7250,7 +7361,7 @@
         "payload": "sunset",
         "payloadType": "str",
         "x": 260,
-        "y": 4700,
+        "y": 4760,
         "wires": [
             [
                 "57d4182cc0e85388"
@@ -7359,7 +7470,7 @@
         "name": "TOD: do not replace existing settings",
         "info": "",
         "x": 680,
-        "y": 4660,
+        "y": 4720,
         "wires": []
     },
     {
@@ -7375,7 +7486,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1170,
+        "x": 1230,
         "y": 320,
         "wires": [
             [
@@ -7392,7 +7503,7 @@
         "links": [
             "26bca8d17b597ed1"
         ],
-        "x": 1025,
+        "x": 1085,
         "y": 320,
         "wires": [
             [
@@ -7410,7 +7521,7 @@
         "links": [
             "73f3212ba921a620"
         ],
-        "x": 1315,
+        "x": 1375,
         "y": 320,
         "wires": []
     },
@@ -7448,7 +7559,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 690,
+        "x": 730,
         "y": 380,
         "wires": [
             [
@@ -8288,7 +8399,7 @@
             "f2cd63b49ac325ec"
         ],
         "x": 145,
-        "y": 3980,
+        "y": 4040,
         "wires": [
             [
                 "be7d1f37913582e7"
@@ -8306,7 +8417,7 @@
             "f2cd63b49ac325ec"
         ],
         "x": 145,
-        "y": 3740,
+        "y": 3800,
         "wires": [
             [
                 "e9bbb6c6378abf81"
@@ -8324,7 +8435,7 @@
             "f2cd63b49ac325ec"
         ],
         "x": 145,
-        "y": 3500,
+        "y": 3560,
         "wires": [
             [
                 "3ef7839a35b0f5f1"
@@ -8342,7 +8453,7 @@
             "f2cd63b49ac325ec"
         ],
         "x": 145,
-        "y": 3260,
+        "y": 3320,
         "wires": [
             [
                 "8f0b88d6a682a1e4"
@@ -8360,7 +8471,7 @@
             "f2cd63b49ac325ec"
         ],
         "x": 145,
-        "y": 3020,
+        "y": 3080,
         "wires": [
             [
                 "c6c1765c8ced2f28"
@@ -8515,7 +8626,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 4160,
+        "y": 4220,
         "wires": [
             [
                 "3cbcb81a9684123d"
@@ -8536,7 +8647,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 4220,
+        "y": 4280,
         "wires": [
             [
                 "7d168d7e081fdc73"
@@ -8557,7 +8668,7 @@
         "finalize": "",
         "libs": [],
         "x": 590,
-        "y": 4220,
+        "y": 4280,
         "wires": [
             [
                 "a25590151fe926b5"
@@ -8583,7 +8694,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 590,
-        "y": 4160,
+        "y": 4220,
         "wires": [
             [
                 "2c49b82bcc1b7f70"
@@ -8609,7 +8720,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 750,
-        "y": 4220,
+        "y": 4280,
         "wires": [
             [
                 "e4acd9ec80e7f463",
@@ -8632,7 +8743,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 660,
-        "y": 4280,
+        "y": 4340,
         "wires": []
     },
     {
@@ -8645,7 +8756,7 @@
             "26bca8d17b597ed1"
         ],
         "x": 145,
-        "y": 4160,
+        "y": 4220,
         "wires": [
             [
                 "faeb4267b27bf0b6"
@@ -8663,7 +8774,7 @@
             "73f3212ba921a620"
         ],
         "x": 395,
-        "y": 4160,
+        "y": 4220,
         "wires": []
     },
     {
@@ -8681,7 +8792,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 430,
-        "y": 4220,
+        "y": 4280,
         "wires": [
             [
                 "812c4f38f038220f",
@@ -8700,7 +8811,7 @@
             "f2cd63b49ac325ec"
         ],
         "x": 145,
-        "y": 4220,
+        "y": 4280,
         "wires": [
             [
                 "2c49b82bcc1b7f70"
@@ -8718,7 +8829,7 @@
             "cc0a7c14f877c371"
         ],
         "x": 875,
-        "y": 4220,
+        "y": 4280,
         "wires": []
     },
     {
@@ -8729,7 +8840,7 @@
         "name": "UNCOMPLETE",
         "info": "From docker dknr-zendure\nhttps://github.com/JcDenis/dknr-zendure",
         "x": 780,
-        "y": 4160,
+        "y": 4220,
         "wires": []
     },
     {
@@ -8742,7 +8853,7 @@
             "a29ec7554a818a6f"
         ],
         "x": 145,
-        "y": 4880,
+        "y": 4940,
         "wires": [
             [
                 "ce30409f0eac0e23"
@@ -8763,7 +8874,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 4880,
+        "y": 4940,
         "wires": [
             [
                 "3ed6069e981aef21"
@@ -8785,7 +8896,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 790,
-        "y": 4940,
+        "y": 5000,
         "wires": []
     },
     {
@@ -8821,7 +8932,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 430,
-        "y": 4880,
+        "y": 4940,
         "wires": [
             [
                 "3bd9259bd9a1de62"
@@ -8842,7 +8953,7 @@
         "finalize": "",
         "libs": [],
         "x": 590,
-        "y": 4880,
+        "y": 4940,
         "wires": [
             [
                 "f39bab3566c6a359",
@@ -8861,7 +8972,7 @@
             "cc0a7c14f877c371"
         ],
         "x": 715,
-        "y": 4880,
+        "y": 4940,
         "wires": []
     },
     {
@@ -8947,6 +9058,86 @@
         ]
     },
     {
+        "id": "996829a941247944",
+        "type": "http in",
+        "z": "4bc72a1112cb448c",
+        "g": "f822aa69af66c546",
+        "name": "",
+        "url": "/:room/map.png",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 440,
+        "wires": [
+            [
+                "c4b19dbcdd4df35a"
+            ]
+        ]
+    },
+    {
+        "id": "c4b19dbcdd4df35a",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "f822aa69af66c546",
+        "name": "data",
+        "func": "if (typeof msg.req.params.room !== 'string') {\n\n    return [ null, msg ];\n}\n\nmsg.payload = global.get('map[\"' + msg.req.params.room + '\"]', 'memoryOnly') || '';\n\nif (msg.payload.length === 0) {\n\n    return [ null, msg ];\n}\n\nreturn  [ msg, null ];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 440,
+        "wires": [
+            [
+                "ad00c0bf6ff55efe"
+            ],
+            [
+                "ddc9374374b8e9ce"
+            ]
+        ]
+    },
+    {
+        "id": "ad00c0bf6ff55efe",
+        "type": "base64",
+        "z": "4bc72a1112cb448c",
+        "g": "f822aa69af66c546",
+        "name": "map",
+        "action": "",
+        "property": "payload",
+        "x": 570,
+        "y": 440,
+        "wires": [
+            [
+                "8961fa8793ced740"
+            ]
+        ]
+    },
+    {
+        "id": "8961fa8793ced740",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "f822aa69af66c546",
+        "name": "data",
+        "func": "// Get http reponse for app map\n\nmsg.statusCode = 200;\nmsg.headers = {\n    'Content-Type': 'image/png',\n    'Content-Length': msg.payload.length,\n    'Connection': 'close'\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 440,
+        "wires": [
+            [
+                "1eef652177adf5cc"
+            ]
+        ]
+    },
+    {
         "id": "d7bc8fc74bfc07cb",
         "type": "link in",
         "z": "10a4e1188aad61a2",
@@ -8972,9 +9163,9 @@
         "name": "home - page",
         "mode": "link",
         "links": [
-            "dcbdec0233106eb8",
             "ca35d761a2b2b274",
-            "c246e388d9882180"
+            "c246e388d9882180",
+            "415aa9f902c85e54"
         ],
         "x": 395,
         "y": 140,
@@ -8987,10 +9178,10 @@
         "g": "0954ea9c8e3ae379",
         "name": "home  - room",
         "links": [
-            "054bd47295999ad7"
+            "57e31677497bf898"
         ],
         "x": 145,
-        "y": 620,
+        "y": 860,
         "wires": [
             [
                 "b871e3d16b300b3d"
@@ -9003,7 +9194,7 @@
         "z": "10a4e1188aad61a2",
         "g": "0954ea9c8e3ae379",
         "name": "data",
-        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (msg.hmi.id === '' || typeof global.get('user[\"' + msg.hmi.id + '\"]', 'memoryOnly') !== 'object') {\n    msg.enabled = false;\n}\n\nif (!msg.enabled) {\n    msg.reset = true;\n\n    return msg;\n}\n\nmsg.payload = [];\nmsg.topic = msg.hmi.id;\n\nlet colors = global.get('describe.colors', 'memoryOnly') || {};\nlet elements = {...global.get('describe.elements', 'memoryOnly') || {}};\nelements.seen = ['lan-connect', 'lan-disconnect'];\nelements.battery = [elements.battery[1], elements.battery[0]];\nlet options = {\n    'motion': '',\n    'temperature': '°C',\n    'humidity': '%',\n    'illuminance': ' lx',\n    'door': '',\n    'window': '',\n    'light': '',\n    'battery': '',\n    'seen': ''\n};\n\nlet entity = global.get('entity', 'memoryOnly') || {};\nlet entities = {};\nlet e_num = 0;\n\nfor (const e in entity) {\n    if (entity[e]['hidden'] !== 0 || \n        entity[e]['room'] === '' || \n        entity[e]['value'] === ''\n    ) {\n\n        continue;\n    }\n\n    if (typeof entities[entity[e]['room']] !== 'object') {\n        entities[entity[e]['room']] = { };\n    }\n\n    // Seen\n    if (typeof entities[entity[e]['room']]['seen'] !== 'number') {\n        entities[entity[e]['room']]['seen'] = 0;\n    }\n    if ((entity[e]['seen'] + 86400000) < Date.now()) { // 24h\n        entities[entity[e]['room']]['seen']++;\n    }\n\n    // Battery\n    if (typeof entities[entity[e]['room']]['battery'] !== 'number') {\n        entities[entity[e]['room']]['battery'] = 0;\n    }\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'battery' && entity[e]['value'] < 15) {\n        entities[entity[e]['room']]['battery'] += 1;\n    }\n\n    // Motion\n    if (entity[e]['type'] !== 'command' && typeof entities[entity[e]['room']]['motion'] !== 'number') {\n        entities[entity[e]['room']]['motion'] = 0;\n    }\n    if (entity[e]['element'] === 'motion' && entity[e]['value'] > 0) {\n        entities[entity[e]['room']]['motion'] += 1;\n    }\n\n    // Door\n    if (entity[e]['type'] !== 'command' && typeof entities[entity[e]['room']]['door'] !== 'number') {\n        entities[entity[e]['room']]['door'] = 0;\n    }\n    if (['door', 'slider'].includes(entity[e]['element']) && !entity[e]['value']) {\n        entities[entity[e]['room']]['door'] += 1;\n    }\n\n    // Window\n    if (entity[e]['type'] !== 'command' && typeof entities[entity[e]['room']]['window'] !== 'number') {\n        entities[entity[e]['room']]['window'] = 0;\n    }\n    if (entity[e]['element'] === 'window' && !entity[e]['value']) {\n        entities[entity[e]['room']]['window'] += 1;\n    }\n\n    // Light\n    if (typeof entities[entity[e]['room']]['light'] !== 'number') {\n        entities[entity[e]['room']]['light'] = 0;\n    }\n    if (entity[e]['element'] === 'light' && entity[e]['value'] > 0) {\n        entities[entity[e]['room']]['light'] += 1;\n    }\n\n    // Temperature\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'temperature') {\n        if (typeof entities[entity[e]['room']]['temperature'] === 'undefined') {\n            entities[entity[e]['room']]['temperature'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['temperature'] = (parseInt(entities[entity[e]['room']]['temperature'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n\n    // Humidity\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'humidity') {\n        if (typeof entities[entity[e]['room']]['humidity'] === 'undefined') {\n            entities[entity[e]['room']]['humidity'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['humidity'] = (parseInt(entities[entity[e]['room']]['humidity'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n\n    // Illuminance\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'illuminance') {\n        if (typeof entities[entity[e]['room']]['illuminance'] === 'undefined') {\n            entities[entity[e]['room']]['illuminance'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['illuminance'] = (parseInt(entities[entity[e]['room']]['illuminance'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n}\n\nconst room = { ...(global.get('room', 'memoryOnly') || {}) };\nlet r_num = 0;\n\nlet dropdownOptions = [];\nfor (const r in room) {\n    if (['system', 'home'].includes(r)) {\n\n        continue;\n    }\n\n    dropdownOptions[r_num] = {\n        'room': r,\n        'room_name': room[r]['name']\n    };\n\n    for (const o in options) {\n        let option_icon = elements[o][0];\n        let option_color = colors.empty;\n        let option_text = '';\n        if (typeof entities[r][o] !== 'undefined') {\n            option_icon = entities[r][o] > 0 ? elements[o][1] : elements[o][0];\n            option_color = entities[r][o] > 0 ? colors.theme : colors.empty;\n            option_text = entities[r][o] > 0 ? entities[r][o] + options[o] : '';\n        }\n\n        dropdownOptions[r_num][o] = \n            '<span style=\"white-space: nowrap;\">' + \n            option_text + \n            '<i class=\"icon-in-row mdi mdi-' + option_icon + '\" style=\"color:' + option_color + '\" title=\"' + o + '\"></i>' + \n            '</span>';\n    };\n\n    r_num++;\n}\n\nif (r_num > 0) {\n    dropdownOptions.sort((a, b) => a.room_name.localeCompare(b.room_name));\n\n    msg.payload = dropdownOptions;\n    msg.ui_update = {\n        'label': '',\n    }\n\n    return msg;\n}",
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (msg.hmi.id === '' || typeof global.get('user[\"' + msg.hmi.id + '\"]', 'memoryOnly') !== 'object') {\n    msg.enabled = false;\n}\n\nif (!msg.enabled) {\n    msg.reset = true;\n    msg.payload = '';\n\n    return msg;\n}\n\nmsg.payload = [ ];\nmsg.topic = msg.hmi.id;\n\nlet colors = global.get('describe.colors', 'memoryOnly') || {};\nlet elements = {...global.get('describe.elements', 'memoryOnly') || {}};\nelements.seen = ['lan-connect', 'lan-disconnect'];\nelements.battery = [elements.battery[1], elements.battery[0]];\nlet options = {\n    'motion': '',\n    'temperature': '°C',\n    'humidity': '%',\n    'illuminance': ' lx',\n    'door': '',\n    'window': '',\n    'light': '',\n    'battery': '',\n    'seen': ''\n};\n\nlet entity = global.get('entity', 'memoryOnly') || {};\nlet entities = {};\nlet e_num = 0;\n\nfor (const e in entity) {\n    if (entity[e]['hidden'] !== 0 || \n        entity[e]['room'] === '' || \n        entity[e]['value'] === ''\n    ) {\n\n        continue;\n    }\n\n    if (typeof entities[entity[e]['room']] !== 'object') {\n        entities[entity[e]['room']] = { };\n    }\n\n    // Seen\n    if (typeof entities[entity[e]['room']]['seen'] !== 'number') {\n        entities[entity[e]['room']]['seen'] = 0;\n    }\n    if ((entity[e]['seen'] + 86400000) < Date.now()) { // 24h\n        entities[entity[e]['room']]['seen']++;\n    }\n\n    // Battery\n    if (typeof entities[entity[e]['room']]['battery'] !== 'number') {\n        entities[entity[e]['room']]['battery'] = 0;\n    }\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'battery' && entity[e]['value'] < 15) {\n        entities[entity[e]['room']]['battery'] += 1;\n    }\n\n    // Motion\n    if (entity[e]['type'] !== 'command' && typeof entities[entity[e]['room']]['motion'] !== 'number') {\n        entities[entity[e]['room']]['motion'] = 0;\n    }\n    if (entity[e]['element'] === 'motion' && entity[e]['value'] > 0) {\n        entities[entity[e]['room']]['motion'] += 1;\n    }\n\n    // Door\n    if (entity[e]['type'] !== 'command' && typeof entities[entity[e]['room']]['door'] !== 'number') {\n        entities[entity[e]['room']]['door'] = 0;\n    }\n    if (['door', 'slider'].includes(entity[e]['element']) && !entity[e]['value']) {\n        entities[entity[e]['room']]['door'] += 1;\n    }\n\n    // Window\n    if (entity[e]['type'] !== 'command' && typeof entities[entity[e]['room']]['window'] !== 'number') {\n        entities[entity[e]['room']]['window'] = 0;\n    }\n    if (entity[e]['element'] === 'window' && !entity[e]['value']) {\n        entities[entity[e]['room']]['window'] += 1;\n    }\n\n    // Light\n    if (typeof entities[entity[e]['room']]['light'] !== 'number') {\n        entities[entity[e]['room']]['light'] = 0;\n    }\n    if (entity[e]['element'] === 'light' && entity[e]['value'] > 0) {\n        entities[entity[e]['room']]['light'] += 1;\n    }\n\n    // Temperature\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'temperature') {\n        if (typeof entities[entity[e]['room']]['temperature'] === 'undefined') {\n            entities[entity[e]['room']]['temperature'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['temperature'] = (parseInt(entities[entity[e]['room']]['temperature'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n\n    // Humidity\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'humidity') {\n        if (typeof entities[entity[e]['room']]['humidity'] === 'undefined') {\n            entities[entity[e]['room']]['humidity'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['humidity'] = (parseInt(entities[entity[e]['room']]['humidity'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n\n    // Illuminance\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'illuminance') {\n        if (typeof entities[entity[e]['room']]['illuminance'] === 'undefined') {\n            entities[entity[e]['room']]['illuminance'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['illuminance'] = (parseInt(entities[entity[e]['room']]['illuminance'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n}\n\nconst room = { ...(global.get('room', 'memoryOnly') || {}) };\nlet r_num = 0;\n\nlet dropdownOptions = [];\nfor (const r in room) {\n    if (['system', 'home'].includes(r)) {\n\n        continue;\n    }\n\n    dropdownOptions[r_num] = {\n        'room': r,\n        'room_name': room[r]['name']\n    };\n\n    for (const o in options) {\n        if (typeof entities[r] !== 'object') {\n\n            continue;\n        }\n        let option_icon = elements[o][0];\n        let option_color = colors.empty;\n        let option_text = '';\n        if (typeof entities[r][o] !== 'undefined') {\n            option_icon = entities[r][o] > 0 ? elements[o][1] : elements[o][0];\n            option_color = entities[r][o] > 0 ? colors.theme : colors.empty;\n            option_text = entities[r][o] > 0 ? entities[r][o] + options[o] : '';\n        }\n\n        dropdownOptions[r_num][o] = \n            '<span style=\"white-space: nowrap;\">' + \n            option_text + \n            '<i class=\"icon-in-row mdi mdi-' + option_icon + '\" style=\"color:' + option_color + '\" title=\"' + o + '\"></i>' + \n            '</span>';\n    };\n\n    r_num++;\n}\n\nif (r_num > 0) {\n    dropdownOptions.sort((a, b) => a.room_name.localeCompare(b.room_name));\n\n    msg.payload = dropdownOptions;\n    msg.ui_update = {\n        'label': '',\n    }\n\n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -9011,7 +9202,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 620,
+        "y": 860,
         "wires": [
             [
                 "ecee862ad724750f",
@@ -9124,7 +9315,7 @@
         "action": "replace",
         "className": "",
         "x": 630,
-        "y": 620,
+        "y": 860,
         "wires": [
             [
                 "bb9dbf7f4b23d96f"
@@ -9145,7 +9336,7 @@
         "finalize": "",
         "libs": [],
         "x": 830,
-        "y": 620,
+        "y": 860,
         "wires": [
             [
                 "d74d6fbf0abd6f0f"
@@ -9163,7 +9354,7 @@
             "289e0a6cd1209c38"
         ],
         "x": 955,
-        "y": 620,
+        "y": 860,
         "wires": []
     },
     {
@@ -9185,11 +9376,11 @@
         "topic": "hmi.id",
         "outputs": 1,
         "x": 430,
-        "y": 680,
+        "y": 920,
         "wires": [
             [
-                "b871e3d16b300b3d",
-                "ecee862ad724750f"
+                "ecee862ad724750f",
+                "c178f334d7d41aae"
             ]
         ]
     },
@@ -9236,7 +9427,7 @@
         "value": "payload",
         "valueType": "msg",
         "x": 630,
-        "y": 560,
+        "y": 800,
         "wires": []
     },
     {
@@ -9253,7 +9444,7 @@
         "finalize": "",
         "libs": [],
         "x": 430,
-        "y": 560,
+        "y": 800,
         "wires": [
             [
                 "3e2c5ff81fcda310"
@@ -9306,7 +9497,7 @@
         "value": "payload",
         "valueType": "msg",
         "x": 620,
-        "y": 800,
+        "y": 1320,
         "wires": []
     },
     {
@@ -9335,7 +9526,7 @@
             "054bd47295999ad7"
         ],
         "x": 145,
-        "y": 800,
+        "y": 1320,
         "wires": [
             [
                 "a9f85a48ff31a646"
@@ -9385,7 +9576,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 800,
+        "y": 1320,
         "wires": [
             [
                 "a4441a5b673a17a8"
@@ -9549,6 +9740,310 @@
         "y": 440,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "8f8ad1a68a13cf0c",
+        "type": "link in",
+        "z": "10a4e1188aad61a2",
+        "g": "6023ed32683fd2f4",
+        "name": "link in 3",
+        "links": [
+            "2c867cda0a9e301a"
+        ],
+        "x": 145,
+        "y": 1100,
+        "wires": [
+            [
+                "c0c254ecdf4a12f7"
+            ]
+        ]
+    },
+    {
+        "id": "c0c254ecdf4a12f7",
+        "type": "function",
+        "z": "10a4e1188aad61a2",
+        "g": "6023ed32683fd2f4",
+        "name": "data",
+        "func": "// Get plant map\n\nmsg.plant = msg.payload;\n\n// Reset UI\nif (msg.enabled !== true || msg.plant === '') {\n    // page is disabled\n    msg.class = 'remove';\n    msg.enabled = false;\n    msg.payload = { };\n    msg.room = 'none';\n\n    return msg;\n}\n\nawait new Promise(resolve => setTimeout(resolve, 500));\n\nconst colors = { ...(global.get('describe.colors', 'memoryOnly') || { }) };\nconst elements = { ...(global.get('describe.elements', 'memoryOnly') || { }) };\nconst rooms = { ...(global.get('room', 'memoryOnly') || { }) };\nconst entity = { ...(global.get('entity', 'memoryOnly') || { }) };\n\nmsg.room = 'home';\nmsg.class = '';\nmsg.enabled = true;\nmsg.payload = { };\n\nlet options = {\n//    'motion': '',\n    'temperature': '°C',\n    'humidity': '%',\n//    'door': '',\n//    'window': '',\n//    'light': ''\n};\n\nlet entities = {};\nlet e_num = 0;\n\n// Get entities interesting data\nfor (const e in entity) {\n    if (entity[e]['hidden'] !== 0 || \n        entity[e]['room'] === '' || \n        entity[e]['value'] === ''\n    ) {\n\n        continue;\n    }\n\n    if (typeof entities[entity[e]['room']] !== 'object') {\n        entities[entity[e]['room']] = { };\n    }\n\n    // Motion\n    if (entity[e]['type'] !== 'command' && typeof entities[entity[e]['room']]['motion'] !== 'number') {\n        entities[entity[e]['room']]['motion'] = 0;\n    }\n    if (entity[e]['element'] === 'motion' && entity[e]['value'] > 0) {\n        entities[entity[e]['room']]['motion'] += 1;\n    }\n\n    // Door\n    if (entity[e]['type'] !== 'command' && typeof entities[entity[e]['room']]['door'] !== 'number') {\n        entities[entity[e]['room']]['door'] = 0;\n    }\n    if (['door', 'slider'].includes(entity[e]['element']) && !entity[e]['value']) {\n        entities[entity[e]['room']]['door'] += 1;\n    }\n\n    // Window\n    if (entity[e]['type'] !== 'command' && typeof entities[entity[e]['room']]['window'] !== 'number') {\n        entities[entity[e]['room']]['window'] = 0;\n    }\n    if (entity[e]['element'] === 'window' && !entity[e]['value']) {\n        entities[entity[e]['room']]['window'] += 1;\n    }\n\n    // Light\n    if (typeof entities[entity[e]['room']]['light'] !== 'number') {\n        entities[entity[e]['room']]['light'] = 0;\n    }\n    if (entity[e]['element'] === 'light' && entity[e]['value'] > 0) {\n        entities[entity[e]['room']]['light'] += 1;\n    }\n\n    // Temperature\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'temperature') {\n        if (typeof entities[entity[e]['room']]['temperature'] === 'undefined') {\n            entities[entity[e]['room']]['temperature'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['temperature'] = (parseInt(entities[entity[e]['room']]['temperature'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n\n    // Humidity\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'humidity') {\n        if (typeof entities[entity[e]['room']]['humidity'] === 'undefined') {\n            entities[entity[e]['room']]['humidity'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['humidity'] = (parseInt(entities[entity[e]['room']]['humidity'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n}\n\n\n// Group by room\nfor (const r in rooms) {\n    if ([ 'system', 'home' ].includes(r)\n    || typeof rooms[r] !== 'object' \n    || (rooms[r]['mapw'] || 0) < 5 \n    || (rooms[r]['maph'] || 0) < 5\n    ) {\n\n        continue;\n    }\n\n    let t = 0;\n    let text = [];\n    \n    for (const o in options) {\n        if (typeof entities[r] !== 'object') {\n\n            continue;\n        }\n\n        if (typeof entities[r][o] !== 'undefined' && entities[r][o] > 0) {\n            text[t++] = entities[r][o] + options[o]\n        }\n    };\n\n    msg.payload[r] = {\n        'id': r,\n        'title': (rooms[r]['short'] || '') === '' ? rooms[r]['name'] : rooms[r]['short'],\n        'text': text.join('  '),\n        'x': Number(rooms[r]['mapx']),\n        'y': Number(rooms[r]['mapy']),\n        'w': Number(rooms[r]['mapw']),\n        'h': Number(rooms[r]['maph']),\n        'c': 'rgba(var(--v-theme-group-background), 0.2)',\n        'light': (entities[r]['light'] || 0) > 0 ? 1 : 0,\n        'motion': (entities[r]['motion'] || 0) > 0 ? 1 : 0,\n        'aperture': (entities[r]['door'] || 0) > 0 || (entities[r]['window'] || 0) > 0 ? 1 : 0\n    };\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 1100,
+        "wires": [
+            [
+                "5d500b126b29afba",
+                "c0ce37e4f3397459",
+                "95468e9c5d429aac"
+            ]
+        ]
+    },
+    {
+        "id": "95468e9c5d429aac",
+        "type": "ui-template",
+        "z": "10a4e1188aad61a2",
+        "g": "6023ed32683fd2f4",
+        "group": "",
+        "page": "ba855b55e831d2b6",
+        "ui": "",
+        "name": "home - room - map",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#nrdb-ui-group-b557e6dffa9d2e7c div\">\n    <div id=\"dknr-map-group\">\n        <svg viewBox=\"0 0 800 1138\" width=\"100%\" height=\"100%\" fill=\"currentColor\">\n            <image x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" />\n        </svg>\n    </div>\n    </Teleport>\n</template>\n\n<script>\n    export default {\n        data() {\n            return {\n                mounted: false\n            }\n        },\n        methods: {\n        },\n        mounted() {\n            this.mounted = true;\n        },\n        watch: {\n            msg: function (msg) {\n                let svgns = 'http://www.w3.org/2000/svg';\n                let imgns = 'http://www.w3.org/1999/xlink';\n\n                let svg = document.body.querySelector(\"#dknr-map-group svg\");\n                let img = document.body.querySelector(\"#dknr-map-group svg image\");\n                img.setAttributeNS(imgns, 'xlink:href', '/' + msg.room + '/map.png');\n                \n                /* Clean up all zones on new message */\n                let childs = svg.querySelectorAll('g');\n                [].forEach.call(childs,c=>{\n                    c.parentNode.removeChild(c);\n                });\n\n                if (msg.class !== 'remove') {\n                    for (const l in msg.payload) {\n\n                        // Group for a room\n                        let g = document.createElementNS(svgns, 'g');\n\n                        // Room name (and light color)\n                        let t = document.createElementNS(svgns, 'text');\n                        t.setAttribute('x', msg.payload[l]['x'] + (msg.payload[l]['w'] / 2));\n                        t.setAttribute('y', msg.payload[l]['y'] + (msg.payload[l]['h'] / 2));\n                        t.setAttribute('text-anchor', 'middle');\n                        t.setAttribute('class', 'clickable-title' + (msg.payload[l]['light'] ? ' lighton': ' lightoff') + (msg.payload[l]['motion'] ? ' motionon': ' motionoff'));\n                        t.textContent = msg.payload[l].title;\n                        g.append(t);\n                        \n                        // Addtional text\n                        let d = document.createElementNS(svgns, 'text');\n                        d.setAttribute('x', msg.payload[l]['x'] + (msg.payload[l]['w'] / 2));\n                        d.setAttribute('y', msg.payload[l]['y'] + 12 + (msg.payload[l]['h'] / 2));\n                        d.setAttribute('text-anchor', 'middle');\n                        d.setAttribute('class', 'clickable-text');\n                        d.append(msg.payload[l]['text']);\n                        g.append(d);\n\n                        // Hover zone\n                        let r = document.createElementNS(svgns, 'rect');\n                        r.setAttribute('x', msg.payload[l]['x']);\n                        r.setAttribute('y', msg.payload[l]['y']);\n                        r.setAttribute('width', msg.payload[l]['w'] +'px');\n                        r.setAttribute('height', msg.payload[l]['h'] + 'px');\n                        r.setAttribute('fill', msg.payload[l]['c']);\n                        r.setAttribute('rx', '5');\n                        r.setAttribute('class', 'clickable-zone');\n                        r.setAttribute('id', l);\n                        \n                        if (msg.payload[l]['aperture']) {\n                            r.setAttribute('stroke', 'red');\n                            r.setAttribute('stroke-width', '3px');\n                            r.setAttribute('stroke-opacity', '0.3');\n                            r.setAttribute('stroke-dasharray', '10');\n                        }\n\n                        g.append(r);\n\n                        g.addEventListener('click', (evt) => {\n                            this.send({ payload: { room: l, map: msg.room } });\n                        });\n\n                        svg.appendChild(g);\n                    }\n                }\n            }\n        }\n    }\n</script>\n\n<style scoped>\n    #dknr-map-group {\n        padding: 2px;\n    }\n    #dknr-map-group svg {\n        color: var(--nrdb-text-color);\n    }\n    .clickable-zone {\n        cursor: pointer;\n        transition: fill 0.75s ease;\n    }\n    .clickable-zone:hover {\n        fill: rgba(255, 255, 255, 0.2);\n    }\n    .clickable-title {\n        font-size: 1.4em;\n    }\n    .lighton {\n        filter: drop-shadow(0 0 1px black) drop-shadow(0 0 10px yellow) drop-shadow(0 0 15px yellow);\n    }\n    .lightoff {\n        //filter: drop-shadow(0 0 1px white);\n    }\n    .clickable-text {\n        color: rgb(var(--v-theme-primary));\n        font-size: 0.6em;\n    }\n    .motionon {\n        color: red;\n    }\n    .motionoff {\n        color: rgb(var(--v-theme-primary));\n        //color: rgb(var(--v-theme-group-background));\n    }\n</style>",
+        "storeOutMessages": true,
+        "passthru": false,
+        "resendOnRefresh": true,
+        "templateScope": "widget:page",
+        "className": "",
+        "x": 630,
+        "y": 1100,
+        "wires": [
+            [
+                "55152003bbd25c3a"
+            ]
+        ]
+    },
+    {
+        "id": "55152003bbd25c3a",
+        "type": "function",
+        "z": "10a4e1188aad61a2",
+        "g": "6023ed32683fd2f4",
+        "name": "data",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nconst user = {...(global.get('user', 'memoryOnly') || {})};\nif (typeof user[msg.hmi.id] === 'object') {\n    user[msg.hmi.id]['room'] = msg.payload.room\n    global.set('user', {...user}, 'memoryOnly');\n}\n\nconst page = global.get('describe.pages.room.name', 'memoryOnly') || '';\n\nmsg.payload = {\n    page: page,\n    query: {\n        room: msg.payload.room\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 1100,
+        "wires": [
+            [
+                "c740b6a6eb799115"
+            ]
+        ]
+    },
+    {
+        "id": "c740b6a6eb799115",
+        "type": "link out",
+        "z": "10a4e1188aad61a2",
+        "g": "6023ed32683fd2f4",
+        "name": "home - room",
+        "mode": "link",
+        "links": [
+            "289e0a6cd1209c38"
+        ],
+        "x": 955,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "c0ce37e4f3397459",
+        "type": "trigger",
+        "z": "10a4e1188aad61a2",
+        "g": "6023ed32683fd2f4",
+        "name": "5s",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "5",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "topic",
+        "topic": "hmi.id",
+        "outputs": 1,
+        "x": 430,
+        "y": 1160,
+        "wires": [
+            [
+                "17e1f1fc4b08ab48",
+                "95468e9c5d429aac"
+            ]
+        ]
+    },
+    {
+        "id": "17e1f1fc4b08ab48",
+        "type": "function",
+        "z": "10a4e1188aad61a2",
+        "g": "6023ed32683fd2f4",
+        "name": "data",
+        "func": "if ((msg.hmi.id || '') !== '' && typeof global.get('user[\"' + msg.hmi.id + '\"]', 'memoryOnly') === 'object') {\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 1160,
+        "wires": [
+            [
+                "c0c254ecdf4a12f7"
+            ]
+        ]
+    },
+    {
+        "id": "1f04f039f3b6b715",
+        "type": "ui-text",
+        "z": "10a4e1188aad61a2",
+        "d": true,
+        "g": "6023ed32683fd2f4",
+        "group": "b557e6dffa9d2e7c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "home - map - title",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "ui-title",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 630,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "0bc70d85144d3fd9",
+        "type": "function",
+        "z": "10a4e1188aad61a2",
+        "g": "45895e821b5414ec",
+        "name": "data",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif ((global.get('map.home', 'memoryOnly') || '') !== '') {\n    msg.payload = {\n        groups: {\n            show: ['home - map - group'],\n            hide: ['home - room - group']\n        }\n    }\n\n    return [ msg, msg, null ];\n}\nelse {\n    msg.payload = {\n        groups: {\n            show: ['home - room - group'],\n            hide: ['home - map - group']\n        }\n    }\n\n    return [ msg, null, msg ];\n}",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 620,
+        "wires": [
+            [
+                "ad006895f2f05500"
+            ],
+            [
+                "2c867cda0a9e301a"
+            ],
+            [
+                "57e31677497bf898"
+            ]
+        ]
+    },
+    {
+        "id": "415aa9f902c85e54",
+        "type": "link in",
+        "z": "10a4e1188aad61a2",
+        "g": "45895e821b5414ec",
+        "name": "home - group",
+        "links": [
+            "054bd47295999ad7"
+        ],
+        "x": 145,
+        "y": 620,
+        "wires": [
+            [
+                "0bc70d85144d3fd9"
+            ]
+        ]
+    },
+    {
+        "id": "ad006895f2f05500",
+        "type": "link out",
+        "z": "10a4e1188aad61a2",
+        "g": "45895e821b5414ec",
+        "name": "home - group - control",
+        "mode": "link",
+        "links": [
+            "289e0a6cd1209c38"
+        ],
+        "x": 395,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "2c867cda0a9e301a",
+        "type": "link out",
+        "z": "10a4e1188aad61a2",
+        "g": "45895e821b5414ec",
+        "name": "home - group - map",
+        "mode": "link",
+        "links": [
+            "8f8ad1a68a13cf0c"
+        ],
+        "x": 395,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "57e31677497bf898",
+        "type": "link out",
+        "z": "10a4e1188aad61a2",
+        "g": "45895e821b5414ec",
+        "name": "home - group - room",
+        "mode": "link",
+        "links": [
+            "dcbdec0233106eb8"
+        ],
+        "x": 395,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "5d500b126b29afba",
+        "type": "function",
+        "z": "10a4e1188aad61a2",
+        "g": "6023ed32683fd2f4",
+        "name": "data",
+        "func": "msg.payload = msg.dictionary.home.map_title || 'Carte';\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 1040,
+        "wires": [
+            [
+                "1f04f039f3b6b715"
+            ]
+        ]
+    },
+    {
+        "id": "c178f334d7d41aae",
+        "type": "function",
+        "z": "10a4e1188aad61a2",
+        "g": "0954ea9c8e3ae379",
+        "name": "data",
+        "func": "if ((msg.hmi.id || '') !== '' && typeof global.get('user[\"' + msg.hmi.id + '\"]', 'memoryOnly') === 'object') {\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 920,
+        "wires": [
+            [
+                "b871e3d16b300b3d"
+            ]
         ]
     },
     {
@@ -16903,7 +17398,7 @@
         "z": "56c0b44ca387382c",
         "g": "82df6aae63bd1422",
         "name": "show dialog",
-        "func": "// Hide scene_trigger_add UI dialog group\nmsg.payload = {\n    groups: {\n        show: ['scene - trigger - add - dialog']\n    }\n}\n\nreturn msg;",
+        "func": "// Hide scene_trigger_add UI dialog group\nmsg.payload = {\n    groups: {\n        show: ['scene - trigger - dialog']\n    }\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -16924,7 +17419,7 @@
         "z": "56c0b44ca387382c",
         "g": "82df6aae63bd1422",
         "name": "hide dialog",
-        "func": "// Hide scene_trigger_add UI dialog group\nmsg.payload = {\n    groups: {\n        hide: ['scene - trigger - add - dialog']\n    }\n}\n\nreturn msg;",
+        "func": "// Hide scene_trigger_add UI dialog group\nmsg.payload = {\n    groups: {\n        hide: ['scene - trigger - dialog']\n    }\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -19737,7 +20232,8 @@
             "ad848617eded124c",
             "c6104f486096a92f",
             "52a5b6f988f1d10a",
-            "3790dfc240bc5f6d"
+            "3790dfc240bc5f6d",
+            "f0fac60fcc4894dd"
         ],
         "x": 395,
         "y": 140,
@@ -19754,10 +20250,11 @@
             "b3e8adf92527c468"
         ],
         "x": 145,
-        "y": 640,
+        "y": 320,
         "wires": [
             [
-                "e56daf17aa5fb143"
+                "e56daf17aa5fb143",
+                "7385c91ca49ccb1a"
             ]
         ]
     },
@@ -19783,7 +20280,7 @@
         "value": "payload",
         "valueType": "msg",
         "x": 470,
-        "y": 580,
+        "y": 260,
         "wires": []
     },
     {
@@ -19791,20 +20288,13 @@
         "type": "ui-form",
         "z": "3d7897ba0ee14173",
         "g": "3a6d56b6dcd8540a",
-        "name": "entity - room - add - form",
+        "name": "entity - room - form",
         "group": "fa076f843950d108",
         "label": "",
         "order": 3,
         "width": "0",
         "height": "0",
         "options": [
-            {
-                "label": "id",
-                "key": "id",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
             {
                 "label": "name",
                 "key": "name",
@@ -19813,25 +20303,64 @@
                 "rows": null
             },
             {
-                "label": "outdoor",
-                "key": "outdoor",
+                "label": "short",
+                "key": "short",
                 "type": "text",
-                "required": true,
+                "required": false,
                 "rows": null
             },
             {
-                "label": "thermostat",
-                "key": "thermostat",
-                "type": "dropdown",
+                "label": "mapx",
+                "key": "mapx",
+                "type": "number",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "mapy",
+                "key": "mapy",
+                "type": "number",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "mapw",
+                "key": "mapw",
+                "type": "number",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "maph",
+                "key": "maph",
+                "type": "number",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "outdoor",
+                "key": "outdoor",
+                "type": "text",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "delete",
+                "key": "delete",
+                "type": "checkbox",
                 "required": false,
                 "rows": null
             }
         ],
         "formValue": {
-            "id": "",
             "name": "",
+            "short": "",
+            "mapx": "",
+            "mapy": "",
+            "mapw": "",
+            "maph": "",
             "outdoor": "",
-            "thermostat": ""
+            "delete": false
         },
         "payload": "",
         "submit": "►",
@@ -19843,8 +20372,8 @@
         "className": "",
         "passthru": false,
         "dropdownOptions": [],
-        "x": 490,
-        "y": 700,
+        "x": 870,
+        "y": 320,
         "wires": [
             [
                 "1f6ea442bbd4d849"
@@ -19857,15 +20386,15 @@
         "z": "3d7897ba0ee14173",
         "g": "3a6d56b6dcd8540a",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (msg.payload.id !== '' && msg.payload.name !== '') {\n    const template = { ...(global.get('describe.template.room', 'memoryOnly') || {}) };\n    const room = global.get('room', 'memoryOnly') || {};\n    room[msg.payload.id] = { ...template, ...{\n        'id': msg.payload.id,\n        'name': msg.payload.name,\n        'outdoor': msg.payload.outdoor ? 1 : 0,\n        'thermostat': msg.payload.thermostat\n    } }\n    global.set('room', room, 'memoryOnly');\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.notice.save_success;\n\n    return msg;\n}\n\nreturn;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\n\nconst room_id = flow.get('room[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '';\n\nif (room_id === '') {\n\n    return;\n}\n\nif (msg.payload.delete) {\n\n}\nelse {\n    const template = { ...(global.get('describe.template.room', 'memoryOnly') || {}) };\n    const room = global.get('room', 'memoryOnly') || {};\n    room[room_id] = { ...template, ...{\n        'id': room_id,\n        'name': msg.payload.name === '' ? room_id : msg.payload.name,\n        'short': msg.payload.short,\n        'outdoor': msg.payload.outdoor ? 1 : 0,\n        'mapx': msg.payload.mapx || 0,\n        'mapy': msg.payload.mapy || 0,\n        'mapw': msg.payload.mapw || 50,\n        'maph': msg.payload.maph || 50\n    } }\n    global.set('room', room, 'memoryOnly');\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.notice.save_success;\n\n    return msg;\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 710,
-        "y": 700,
+        "x": 1070,
+        "y": 320,
         "wires": [
             [
                 "ad48804fec92e759"
@@ -19890,8 +20419,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 870,
-        "y": 700,
+        "x": 1230,
+        "y": 320,
         "wires": [
             [
                 "9e0b692686687926"
@@ -19910,58 +20439,8 @@
             "f4a2353e5f92576c",
             "3790dfc240bc5f6d"
         ],
-        "x": 995,
-        "y": 700,
-        "wires": []
-    },
-    {
-        "id": "27c3f33db4e79a46",
-        "type": "ui-text",
-        "z": "3d7897ba0ee14173",
-        "g": "3a6d56b6dcd8540a",
-        "group": "fa076f843950d108",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "entity - room - add - title",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "ui-title",
-        "value": " ",
-        "valueType": "str",
-        "x": 490,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "1e5dd3712a1d6e5d",
-        "type": "ui-text",
-        "z": "3d7897ba0ee14173",
-        "g": "3a6d56b6dcd8540a",
-        "group": "fa076f843950d108",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "entity - room - del - title",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "ui-title",
-        "value": " ",
-        "valueType": "str",
-        "x": 480,
-        "y": 760,
+        "x": 1355,
+        "y": 320,
         "wires": []
     },
     {
@@ -19970,98 +20449,21 @@
         "z": "3d7897ba0ee14173",
         "g": "3a6d56b6dcd8540a",
         "name": "data",
-        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (!msg.enabled) {\n    node.send([msg, msg, msg, msg, msg]);\n\n    return;\n}\n\n// entity - room - title\nmsg.payload = msg.dictionary.entity.room_title || 'Rooms';\n\nnode.send([msg, null, null, null, null]);\n\n// entity - room - add - title\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.group_entity.room_add\n};\nnode.send([null, msg, null, null, null]);\n\n// entity - room - add - form\nlet iAdd = 0;\nlet dropdownOptionsAdd = [];\ndropdownOptionsAdd[iAdd++] = {\n    'label': '',\n    'value': '',\n    'dropdown': 'thermostat'\n};\n\nlet parents = global.get('parent', 'memoryOnly') || {};\nlet entities = global.get('entity', 'memoryOnly') || {};\n\nfor (const uid in entities) {\n    if (entities[uid]['hidden'] !== 0\n     || entities[uid]['element'] !== 'temperature'\n     || entities[uid]['type'] !== 'command'\n    ) {\n\n        continue;\n    }\n\n    let name = entities[uid]['name'];\n    if (name === '') {\n        name = typeof parents[entities[uid]['parent']] === 'object' ? parents[entities[uid]['parent']]['name'] : '';\n        if (name === '') {\n            name = entities[uid]['parent'];\n        }\n    }\n\n    let room = entities[uid]['room'];\n    let room_name = room;\n    if (room !== '') {\n        room_name = global.get('room[\"' + room + '\"][\"name\"]', 'memoryOnly') || room;\n    }\n\n    dropdownOptionsAdd[iAdd++] = {\n        'label': room_name + ' / ' + name,\n        'value': uid,\n        'dropdown': 'thermostat'\n    }\n}\n\ndropdownOptionsAdd.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.payload = {};\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.room.room_id || 'Ident',\n            \"key\": \"id\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.room.room_name || 'Name',\n            \"key\": \"name\",\n            \"required\": false\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.room.room_thermostat || 'Thermostat pilot',\n            \"key\": \"thermostat\",\n            \"required\": false\n        },\n        {\n            \"type\": \"checkbox\",\n            \"label\": msg.dictionary.room.room_outdoor || 'Outdoor',\n            \"key\": \"outdoor\",\n            \"required\": false\n        }\n    ],\n    'dropdownOptions': dropdownOptionsAdd\n};\nnode.send([null, null, msg, null, null]);\n\n// entity - room - del - title\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.group_entity.room_del\n};\nnode.send([null, null, null, msg, null]);\n\n// entity - room - del - form\nmsg.payload = '';\nlet rooms = global.get('room', 'memoryOnly') || {};\nlet i = 0;\n\nlet dropdownOptions = [];\nfor (const room in rooms) {\n    dropdownOptions[i++] = {\n        'label': rooms[room]['name'] + ' (' + rooms[room]['id'] + ')',\n        'value': room,\n        'dropdown':'id'\n    };\n}\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.group_entity.room_name,\n            \"key\": \"id\",\n            \"required\": false\n        }\n    ],\n    'dropdownOptions': dropdownOptions\n}\n\nnode.send([null, null, null, null, msg]);\n\nreturn;",
-        "outputs": 5,
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (!msg.enabled) {\n    msg.class = 'remove';\n    msg.enabled = false;\n    msg.ui_update = {};\n\n    return [msg, msg];\n}\n\n// entity - room - title\nmsg.payload = msg.dictionary.entity.room_title || 'Rooms';\n\nnode.send([ msg, null ]);\n\n// entity - room - room\nmsg.payload = flow.get('room[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '';\nmsg.ui_update = {\n    'label': msg.dictionary.entity.room_id || 'Room ID'\n};\n\nreturn [null, msg];",
+        "outputs": 2,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 640,
+        "y": 320,
         "wires": [
             [
                 "d3b7417ee68351e1"
             ],
             [
-                "27c3f33db4e79a46"
-            ],
-            [
-                "009f5658297ac269"
-            ],
-            [
-                "1e5dd3712a1d6e5d"
-            ],
-            [
-                "d6082b7d11736655"
-            ]
-        ]
-    },
-    {
-        "id": "d6082b7d11736655",
-        "type": "ui-form",
-        "z": "3d7897ba0ee14173",
-        "g": "3a6d56b6dcd8540a",
-        "name": "entity - room - del - form",
-        "group": "fa076f843950d108",
-        "label": "",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "options": [
-            {
-                "label": "id",
-                "key": "id",
-                "type": "dropdown",
-                "required": true,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "id": ""
-        },
-        "payload": "",
-        "submit": "►",
-        "cancel": "",
-        "resetOnSubmit": true,
-        "topic": "topic",
-        "topicType": "msg",
-        "splitLayout": "",
-        "className": "",
-        "passthru": false,
-        "dropdownOptions": [
-            {
-                "dropdown": "id",
-                "value": "",
-                "label": ""
-            }
-        ],
-        "x": 490,
-        "y": 820,
-        "wires": [
-            [
-                "a5b60bb102d09ad6"
-            ]
-        ]
-    },
-    {
-        "id": "a5b60bb102d09ad6",
-        "type": "function",
-        "z": "3d7897ba0ee14173",
-        "g": "3a6d56b6dcd8540a",
-        "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (msg.payload.id !== '' && msg.payload.id !== 'system') {\n    const room = { ...(global.get('room', 'memoryOnly') || {}) };\n    delete room[msg.payload.id];\n    global.set('room', room, 'memoryOnly');\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.notice.save_success;\n\n    return msg;\n}\n\nreturn;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 710,
-        "y": 820,
-        "wires": [
-            [
-                "ad48804fec92e759"
+                "cb2cfb96f7f9464e"
             ]
         ]
     },
@@ -20076,7 +20478,7 @@
             "43b439d13979544c"
         ],
         "x": 145,
-        "y": 1000,
+        "y": 1220,
         "wires": [
             [
                 "9912ca0fa2d1a8c4"
@@ -20105,7 +20507,7 @@
         "value": "payload",
         "valueType": "msg",
         "x": 460,
-        "y": 940,
+        "y": 1160,
         "wires": []
     },
     {
@@ -20122,7 +20524,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 1000,
+        "y": 1220,
         "wires": [
             [
                 "da0722f98764fac5"
@@ -20226,7 +20628,7 @@
         "action": "replace",
         "className": "",
         "x": 470,
-        "y": 1000,
+        "y": 1220,
         "wires": [
             [
                 "083f2a1d4069ab69"
@@ -20247,7 +20649,7 @@
         "finalize": "",
         "libs": [],
         "x": 650,
-        "y": 1000,
+        "y": 1220,
         "wires": [
             [
                 "8efcf9aa67ba9375"
@@ -20272,7 +20674,7 @@
             "f4a2353e5f92576c"
         ],
         "x": 1575,
-        "y": 1000,
+        "y": 1220,
         "wires": []
     },
     {
@@ -20294,7 +20696,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1410,
-        "y": 1000,
+        "y": 1220,
         "wires": [
             [
                 "43b439d13979544c"
@@ -20381,7 +20783,7 @@
             }
         ],
         "x": 1030,
-        "y": 1240,
+        "y": 1460,
         "wires": [
             [
                 "9634bf7cac24c86f"
@@ -20394,7 +20796,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "show dialog",
-        "func": "msg.payload = {\n    groups: {\n        show: ['entity - entity - edit - dialog']\n    }\n}\nreturn msg;",
+        "func": "msg.payload = {\n    groups: {\n        show: ['entity - entity - dialog']\n    }\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -20402,7 +20804,7 @@
         "finalize": "",
         "libs": [],
         "x": 1430,
-        "y": 1120,
+        "y": 1340,
         "wires": [
             [
                 "ffe4299b2fae4efd"
@@ -20415,7 +20817,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "hide dialog",
-        "func": "msg.payload = {\n    groups: {\n        hide: ['entity - entity - edit - dialog']\n    }\n}\nreturn msg;",
+        "func": "msg.payload = {\n    groups: {\n        hide: ['entity - entity - dialog']\n    }\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -20423,7 +20825,7 @@
         "finalize": "",
         "libs": [],
         "x": 1430,
-        "y": 1240,
+        "y": 1460,
         "wires": [
             [
                 "ffe4299b2fae4efd"
@@ -20441,7 +20843,7 @@
             "289e0a6cd1209c38"
         ],
         "x": 1575,
-        "y": 1120,
+        "y": 1340,
         "wires": []
     },
     {
@@ -20458,7 +20860,7 @@
         "finalize": "",
         "libs": [],
         "x": 810,
-        "y": 1240,
+        "y": 1460,
         "wires": [
             [
                 "4a65b8428bc02868"
@@ -20478,7 +20880,7 @@
         "to": "",
         "reg": false,
         "x": 810,
-        "y": 1120,
+        "y": 1340,
         "wires": [
             [
                 "496a21836d20115a",
@@ -20505,7 +20907,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 810,
-        "y": 1180,
+        "y": 1400,
         "wires": [
             [
                 "e4e6368d57415f5c",
@@ -20528,7 +20930,7 @@
         "finalize": "",
         "libs": [],
         "x": 1250,
-        "y": 1240,
+        "y": 1460,
         "wires": [
             [
                 "4637984430f9f9f9",
@@ -20552,7 +20954,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1450,
-        "y": 1300,
+        "y": 1520,
         "wires": []
     },
     {
@@ -20568,7 +20970,7 @@
         "to": "",
         "reg": false,
         "x": 810,
-        "y": 1360,
+        "y": 1580,
         "wires": [
             [
                 "d2ba4befd6bdc86e",
@@ -20595,7 +20997,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 810,
-        "y": 1420,
+        "y": 1640,
         "wires": [
             [
                 "476c3436a383ed1e",
@@ -20618,7 +21020,7 @@
         "finalize": "",
         "libs": [],
         "x": 810,
-        "y": 1480,
+        "y": 1700,
         "wires": [
             [
                 "950c792d20eafdc3"
@@ -20647,7 +21049,7 @@
         "value": "dictionary.group_entity.entity_edit_title",
         "valueType": "msg",
         "x": 1030,
-        "y": 1180,
+        "y": 1400,
         "wires": []
     },
     {
@@ -20672,7 +21074,7 @@
         "value": "dictionary.group_entity.device_edit_title",
         "valueType": "msg",
         "x": 1030,
-        "y": 1540,
+        "y": 1760,
         "wires": []
     },
     {
@@ -20681,7 +21083,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "show dialog",
-        "func": "msg.payload = {\n    groups: {\n        show: ['entity - parent - edit - dialog']\n    }\n}\nreturn msg;",
+        "func": "msg.payload = {\n    groups: {\n        show: ['entity - parent - dialog']\n    }\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -20689,7 +21091,7 @@
         "finalize": "",
         "libs": [],
         "x": 1430,
-        "y": 1360,
+        "y": 1580,
         "wires": [
             [
                 "4cb0c8835c747153"
@@ -20702,7 +21104,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "hide dialog",
-        "func": "msg.payload = {\n    groups: {\n        hide: ['entity - parent - edit - dialog']\n    }\n}\nreturn msg;",
+        "func": "msg.payload = {\n    groups: {\n        hide: ['entity - parent - dialog']\n    }\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -20710,7 +21112,7 @@
         "finalize": "",
         "libs": [],
         "x": 1430,
-        "y": 1480,
+        "y": 1700,
         "wires": [
             [
                 "4cb0c8835c747153"
@@ -20728,7 +21130,7 @@
             "289e0a6cd1209c38"
         ],
         "x": 1575,
-        "y": 1360,
+        "y": 1580,
         "wires": []
     },
     {
@@ -20765,7 +21167,7 @@
         "passthru": false,
         "dropdownOptions": [],
         "x": 1030,
-        "y": 1480,
+        "y": 1700,
         "wires": [
             [
                 "02da074ecfba7d08"
@@ -20786,7 +21188,7 @@
         "finalize": "",
         "libs": [],
         "x": 1250,
-        "y": 1480,
+        "y": 1700,
         "wires": [
             [
                 "4257decc97d57217",
@@ -20816,7 +21218,7 @@
         "value": "payload.parent",
         "valueType": "msg",
         "x": 1040,
-        "y": 1600,
+        "y": 1820,
         "wires": []
     },
     {
@@ -20859,7 +21261,7 @@
         "action": "replace",
         "className": "",
         "x": 1030,
-        "y": 1300,
+        "y": 1520,
         "wires": [
             []
         ]
@@ -20878,7 +21280,7 @@
         "finalize": "",
         "libs": [],
         "x": 810,
-        "y": 1300,
+        "y": 1520,
         "wires": [
             [
                 "fbaa5b8d78bc8124"
@@ -20896,7 +21298,7 @@
             "b6ec571b76acac85"
         ],
         "x": 145,
-        "y": 1960,
+        "y": 980,
         "wires": [
             [
                 "98d49e7a6df7f643",
@@ -20918,7 +21320,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 1960,
+        "y": 980,
         "wires": [
             [
                 "f6a02e3ade7385ca"
@@ -20958,7 +21360,7 @@
         "typeIsComboBox": false,
         "msgTrigger": "onChange",
         "x": 480,
-        "y": 1960,
+        "y": 980,
         "wires": [
             [
                 "51d44328053fd519"
@@ -20979,7 +21381,7 @@
         "finalize": "",
         "libs": [],
         "x": 690,
-        "y": 1960,
+        "y": 980,
         "wires": [
             [
                 "980934e6ec91d5cb"
@@ -21008,7 +21410,7 @@
         "value": "payload",
         "valueType": "msg",
         "x": 480,
-        "y": 1900,
+        "y": 920,
         "wires": []
     },
     {
@@ -21077,7 +21479,7 @@
         "passthru": false,
         "dropdownOptions": [],
         "x": 900,
-        "y": 1960,
+        "y": 980,
         "wires": [
             [
                 "e2c20240c4bd46a7"
@@ -21098,7 +21500,7 @@
         "finalize": "",
         "libs": [],
         "x": 1110,
-        "y": 1960,
+        "y": 980,
         "wires": [
             [
                 "b6ec571b76acac85"
@@ -21111,22 +21513,14 @@
         "z": "3d7897ba0ee14173",
         "g": "828e6c8b870dac58",
         "name": "-",
-        "rules": [
-            {
-                "t": "set",
-                "p": "ui_update",
-                "pt": "msg",
-                "to": "{\t    'label': '',\t    'options': []\t}",
-                "tot": "jsonata"
-            }
-        ],
+        "rules": [],
         "action": "",
         "property": "",
         "from": "",
         "to": "",
         "reg": false,
         "x": 690,
-        "y": 2020,
+        "y": 1040,
         "wires": [
             [
                 "980934e6ec91d5cb"
@@ -21145,7 +21539,7 @@
             "f4a2353e5f92576c"
         ],
         "x": 1235,
-        "y": 1960,
+        "y": 980,
         "wires": []
     },
     {
@@ -21181,7 +21575,7 @@
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
         "x": 470,
-        "y": 1060,
+        "y": 1280,
         "wires": [
             [
                 "07f13b83c52dee2f"
@@ -21221,7 +21615,7 @@
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
         "x": 470,
-        "y": 1120,
+        "y": 1340,
         "wires": [
             [
                 "07f13b83c52dee2f"
@@ -21242,7 +21636,7 @@
         "finalize": "",
         "libs": [],
         "x": 1250,
-        "y": 1060,
+        "y": 1280,
         "wires": [
             [
                 "8efcf9aa67ba9375"
@@ -21261,7 +21655,7 @@
             "20c33d6d50aa3ee3"
         ],
         "x": 145,
-        "y": 2200,
+        "y": 800,
         "wires": [
             [
                 "96cc3da1f3e135dd"
@@ -21282,7 +21676,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 2200,
+        "y": 800,
         "wires": [
             [
                 "453a5521de9c43f0"
@@ -21374,7 +21768,7 @@
         "passthru": false,
         "dropdownOptions": [],
         "x": 480,
-        "y": 2200,
+        "y": 800,
         "wires": [
             [
                 "9d9be3102bf89bf0"
@@ -21403,7 +21797,7 @@
         "value": "payload",
         "valueType": "msg",
         "x": 470,
-        "y": 2140,
+        "y": 740,
         "wires": []
     },
     {
@@ -21420,7 +21814,7 @@
         "finalize": "",
         "libs": [],
         "x": 690,
-        "y": 2200,
+        "y": 800,
         "wires": [
             [
                 "20c33d6d50aa3ee3"
@@ -21439,7 +21833,7 @@
             "3790dfc240bc5f6d"
         ],
         "x": 815,
-        "y": 2200,
+        "y": 800,
         "wires": []
     },
     {
@@ -21469,7 +21863,7 @@
         "z": "3d7897ba0ee14173",
         "g": "828e6c8b870dac58",
         "name": "data",
-        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (msg.enabled) {\n\n    return;\n}\n\nreturn msg;",
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nmsg.class = 'remove';\nmsg.enabled = false;\nmsg.ui_update = {};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -21477,11 +21871,424 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 2020,
+        "y": 1040,
         "wires": [
             [
                 "610a95ea360fc404"
             ]
+        ]
+    },
+    {
+        "id": "f0fac60fcc4894dd",
+        "type": "link in",
+        "z": "3d7897ba0ee14173",
+        "g": "b9ef6ee2712a8f7f",
+        "name": "entity - map",
+        "links": [
+            "3dbec754b3f07280",
+            "b3e8adf92527c468"
+        ],
+        "x": 145,
+        "y": 560,
+        "wires": [
+            [
+                "b625a7700f9ad71e",
+                "363d7280dcf81d46"
+            ]
+        ]
+    },
+    {
+        "id": "b625a7700f9ad71e",
+        "type": "function",
+        "z": "3d7897ba0ee14173",
+        "g": "b9ef6ee2712a8f7f",
+        "name": "data",
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (!msg.enabled) {\n    delete msg.ui_update;\n    msg.class = 'remove';\n    msg.enabled = false;\n    msg.payload = '';\n\n    return [ msg, msg ];\n}\n\nmsg.payload = msg.dictionary.entity.map_title || 'Map';\n\nnode.send([msg, null]);\n\n// room - camera - form\nflow.set('room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n\nlet rooms = global.get('room', 'memoryOnly') || {};\nlet i = 0;\nlet dropdownOptions = [];\n\ndropdownOptions[i++] = {\n    'label': '',\n    'value': ''\n};\n\nfor (const room in rooms) {\n    dropdownOptions[i++] = {\n        'label': rooms[room]['name'],\n        'value': room\n    };\n}\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.entity.room_select || 'Select a room',\n    'options': dropdownOptions\n}\n\nreturn [ null, msg ];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 560,
+        "wires": [
+            [
+                "7d1b090f6789c960"
+            ],
+            [
+                "57dcb40556d75c44"
+            ]
+        ]
+    },
+    {
+        "id": "7d1b090f6789c960",
+        "type": "ui-text",
+        "z": "3d7897ba0ee14173",
+        "g": "b9ef6ee2712a8f7f",
+        "group": "8e73834b7f2acca7",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "entity - map - title",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "ui-title",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 470,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "89f0f35d8e2aca9c",
+        "type": "ui-file-input",
+        "z": "3d7897ba0ee14173",
+        "g": "b9ef6ee2712a8f7f",
+        "group": "8e73834b7f2acca7",
+        "name": "entity - map - upload",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "topic": "topic",
+        "topicType": "msg",
+        "label": "",
+        "icon": "",
+        "allowMultiple": false,
+        "accept": "",
+        "className": "",
+        "x": 880,
+        "y": 560,
+        "wires": [
+            [
+                "1bc680d065f7ca6a"
+            ]
+        ]
+    },
+    {
+        "id": "57dcb40556d75c44",
+        "type": "ui-dropdown",
+        "z": "3d7897ba0ee14173",
+        "g": "b9ef6ee2712a8f7f",
+        "group": "8e73834b7f2acca7",
+        "name": "entity - map - room",
+        "label": "",
+        "tooltip": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "room",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": true,
+        "msgTrigger": "onChange",
+        "x": 470,
+        "y": 560,
+        "wires": [
+            [
+                "114012f716c70f1c"
+            ]
+        ]
+    },
+    {
+        "id": "114012f716c70f1c",
+        "type": "function",
+        "z": "3d7897ba0ee14173",
+        "g": "b9ef6ee2712a8f7f",
+        "name": "data",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (msg.payload === '') {\n    msg.class = 'remove';\n    msg.enabled = false;\n    msg.ui_update = { };\n\n    return msg;\n}\n\n// room has entities\nlet room = msg.payload;\nflow.set('room[\"' + msg.hmi.id + '\"]', room, 'memoryOnly');\n\nmsg.class = '';\nmsg.enabled = true;\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.entity_updload || 'Upload a map'\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 560,
+        "wires": [
+            [
+                "89f0f35d8e2aca9c"
+            ]
+        ]
+    },
+    {
+        "id": "363d7280dcf81d46",
+        "type": "function",
+        "z": "3d7897ba0ee14173",
+        "g": "b9ef6ee2712a8f7f",
+        "name": "data",
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nmsg.class = 'remove';\nmsg.enabled = false;\nmsg.ui_update = {};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 620,
+        "wires": [
+            [
+                "47ca56a2035f2f16"
+            ]
+        ]
+    },
+    {
+        "id": "47ca56a2035f2f16",
+        "type": "change",
+        "z": "3d7897ba0ee14173",
+        "g": "b9ef6ee2712a8f7f",
+        "name": "-",
+        "rules": [],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 670,
+        "y": 620,
+        "wires": [
+            [
+                "89f0f35d8e2aca9c"
+            ]
+        ]
+    },
+    {
+        "id": "64449417b141ec78",
+        "type": "function",
+        "z": "3d7897ba0ee14173",
+        "g": "b9ef6ee2712a8f7f",
+        "name": "data",
+        "func": "let room = flow.get('room[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '';\n\nif (room === '') {\n\n    return;\n}\n\nglobal.set('map[\"' + room + '\"]', msg.payload, 'memoryOnly');\n\nmsg.payload = '';\nmsg.enabled = true;\nmsg.payload = msg.dictionary.notice.save_success;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1430,
+        "y": 560,
+        "wires": [
+            [
+                "3dbec754b3f07280"
+            ]
+        ]
+    },
+    {
+        "id": "3dbec754b3f07280",
+        "type": "link out",
+        "z": "3d7897ba0ee14173",
+        "g": "b9ef6ee2712a8f7f",
+        "name": "entity - map",
+        "mode": "link",
+        "links": [
+            "f0fac60fcc4894dd",
+            "f4a2353e5f92576c"
+        ],
+        "x": 1555,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "cb2cfb96f7f9464e",
+        "type": "ui-text-input",
+        "z": "3d7897ba0ee14173",
+        "g": "3a6d56b6dcd8540a",
+        "group": "fa076f843950d108",
+        "name": "entity - room - room",
+        "label": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "topic": "topic",
+        "topicType": "msg",
+        "mode": "text",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": true,
+        "sendOnDelay": false,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 470,
+        "y": 320,
+        "wires": [
+            [
+                "58d8fb7ff7861d4c"
+            ]
+        ]
+    },
+    {
+        "id": "58d8fb7ff7861d4c",
+        "type": "function",
+        "z": "3d7897ba0ee14173",
+        "g": "3a6d56b6dcd8540a",
+        "name": "data",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (msg.payload === '') {\n\n    return;\n}\n\nflow.set('room[\"' + msg.hmi.id + '\"]', msg.payload, 'memoryOnly');\n\nconst room = { ...(global.get('room[\"' + msg.payload + '\"]', 'memoryOnly') || {}) };\n\nmsg.class = '';\nmsg.enabled = true;\nmsg.payload = { ...(global.get('describe.template.room', 'memoryOnly') || {}) };\n\nif (typeof room.id === 'string') {\n    msg.payload = { ...msg.payload, ...room };\n}\n\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.room.room_name || 'Name',\n            \"key\": \"name\",\n            \"required\": false\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.room.room_short || 'Short name',\n            \"key\": \"short\",\n            \"required\": false\n        },\n        {\n            \"type\": \"checkbox\",\n            \"label\": msg.dictionary.room.room_outdoor || 'Outdoor',\n            \"key\": \"outdoor\",\n            \"required\": false\n        },\n        {\n            \"type\": \"number\",\n            \"label\": msg.dictionary.room.room_mapx || 'Map x',\n            \"key\": \"mapx\",\n            \"required\": false\n        },\n        {\n            \"type\": \"number\",\n            \"label\": msg.dictionary.room.room_mapy || 'Map y',\n            \"key\": \"mapy\",\n            \"required\": false\n        },\n        {\n            \"type\": \"number\",\n            \"label\": msg.dictionary.room.room_mapw || 'Map w',\n            \"key\": \"mapw\",\n            \"required\": false\n        },\n        {\n            \"type\": \"number\",\n            \"label\": msg.dictionary.room.room_maph || 'Map h',\n            \"key\": \"maph\",\n            \"required\": false\n        },\n        {\n            \"type\": \"checkbox\",\n            \"label\": msg.dictionary.room.room_delete || 'Delete',\n            \"key\": \"delete\",\n            \"required\": false\n        }\n    ]\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 320,
+        "wires": [
+            [
+                "009f5658297ac269"
+            ]
+        ]
+    },
+    {
+        "id": "7385c91ca49ccb1a",
+        "type": "function",
+        "z": "3d7897ba0ee14173",
+        "g": "3a6d56b6dcd8540a",
+        "name": "data",
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nmsg.class = 'remove';\nmsg.enabled = false;\nmsg.ui_update = {};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 380,
+        "wires": [
+            [
+                "03c0ca28883d9235"
+            ]
+        ]
+    },
+    {
+        "id": "03c0ca28883d9235",
+        "type": "change",
+        "z": "3d7897ba0ee14173",
+        "g": "3a6d56b6dcd8540a",
+        "name": "-",
+        "rules": [],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 670,
+        "y": 380,
+        "wires": [
+            [
+                "009f5658297ac269"
+            ]
+        ]
+    },
+    {
+        "id": "9c99971ef2371043",
+        "type": "base64",
+        "z": "3d7897ba0ee14173",
+        "g": "b9ef6ee2712a8f7f",
+        "name": "",
+        "action": "",
+        "property": "payload",
+        "x": 1260,
+        "y": 560,
+        "wires": [
+            [
+                "64449417b141ec78"
+            ]
+        ]
+    },
+    {
+        "id": "1bc680d065f7ca6a",
+        "type": "function",
+        "z": "3d7897ba0ee14173",
+        "g": "b9ef6ee2712a8f7f",
+        "name": "data",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (msg.payload === '') {\n\n    return;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 560,
+        "wires": [
+            [
+                "9c99971ef2371043"
+            ]
+        ]
+    },
+    {
+        "id": "5c519273950c50fd",
+        "type": "inject",
+        "z": "3d7897ba0ee14173",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 610,
+        "y": 140,
+        "wires": [
+            [
+                "3f477402a61c204c"
+            ]
+        ]
+    },
+    {
+        "id": "3f477402a61c204c",
+        "type": "change",
+        "z": "3d7897ba0ee14173",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "#:(memoryOnly)::room.undefined",
+                "pt": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 160,
+        "wires": [
+            []
         ]
     },
     {
