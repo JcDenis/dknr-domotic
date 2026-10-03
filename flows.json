@@ -410,17 +410,17 @@
             "4cb0c8835c747153",
             "950c792d20eafdc3",
             "02da074ecfba7d08",
-            "d40b377694438865",
             "fbaa5b8d78bc8124",
             "28f40e8f269f3e61",
             "0063f47e47f8ba8a",
             "12c201a63044dcfe",
-            "07f13b83c52dee2f"
+            "07f13b83c52dee2f",
+            "a8629436c0a093ea"
         ],
         "x": 104,
         "y": 1119,
-        "w": 1512,
-        "h": 742
+        "w": 1492,
+        "h": 682
     },
     {
         "id": "1465a47c930ed8e1",
@@ -746,12 +746,16 @@
             "026fa6a62abe2a3e",
             "5378ac71ccb6301d",
             "590abae543742c27",
-            "1c0bf08f3f416b9a"
+            "1c0bf08f3f416b9a",
+            "c2251417360c3621",
+            "4b41a773941f34d7",
+            "b94f26f1717e9f46",
+            "87d018f5f98a790b"
         ],
         "x": 94,
         "y": 339,
         "w": 1102,
-        "h": 2962
+        "h": 3082
     },
     {
         "id": "0a9a5f5f4e641599",
@@ -8146,7 +8150,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - rsp",
-        "func": "msg.summary.rsp = msg.target.element + ' : ' + msg.trigger.uid + ' => ' + msg.target.uid + ' = ' + msg.target.value;\nnode.status({fill: msg.rsp ? 'green' : 'red', 'text': msg.target.element + ' : ' + msg.trigger.uid + ' => ' + msg.target.uid + ' = ' + msg.target.value });\n\nif (msg.rsp) {\n    flow.set('routine[\"' + msg.topic + '\"]', Date.now(), 'memoryOnly');\n\n    return msg;\n}\n\nif (typeof flow.get('scene', 'memoryOnly') !== 'object') {\n    flow.set('scene', { }, 'memoryOnly');\n}\n\nflow.set('scene[\"' + msg.topic + '\"]', msg.summary, 'memoryOnly');\n\nreturn;",
+        "func": "msg.summary.rsp = msg.target.element + ' : ' + msg.trigger.uid + ' => ' + msg.target.uid + ' = ' + msg.target.value;\nnode.status({fill: msg.rsp ? 'green' : 'red', 'text': msg.target.element + ' : ' + msg.trigger.uid + ' => ' + msg.target.uid + ' = ' + msg.target.value });\n\nif (msg.rsp) {\n    flow.set('routine[\"' + msg.topic + '\"]', Date.now(), 'memoryOnly');\n\n    return msg;\n}\n\nif (typeof flow.get('scene', 'memoryOnly') !== 'object') {\n    flow.set('scene', { }, 'memoryOnly');\n}\n\nmsg.summary.ts = Date.now();\n\nflow.set('scene[\"' + msg.topic + '\"]', msg.summary, 'memoryOnly');\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -9181,7 +9185,7 @@
         "z": "4bc72a1112cb448c",
         "name": "common - scene - summary",
         "links": [],
-        "x": 295,
+        "x": 285,
         "y": 7120,
         "wires": [
             [
@@ -9194,7 +9198,7 @@
         "type": "function",
         "z": "4bc72a1112cb448c",
         "name": "data",
-        "func": "const summary = { ...(flow.get('scene', 'memory') || { }) };\n\nsummary[msg.payload] = typeof summary[msg.payload] === 'object' ? summary[msg.payload] : { };\n\nreturn msg;",
+        "func": "const summary = { ...(flow.get('scene', 'memoryOnly') || { }) };\n\nmsg.payload = typeof summary[msg.payload] === 'object' ? summary[msg.payload] : { };\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -14864,7 +14868,8 @@
                 "7143b3f6e520b7b7",
                 "9f4c3a561c4b24fd",
                 "5378ac71ccb6301d",
-                "1c0bf08f3f416b9a"
+                "1c0bf08f3f416b9a",
+                "c2251417360c3621"
             ]
         ]
     },
@@ -20448,6 +20453,124 @@
         ]
     },
     {
+        "id": "c2251417360c3621",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "g": "82df6aae63bd1422",
+        "name": "data",
+        "func": "if (!msg.enabled) {\n    msg.payload = [];\n\n    return [ msg, null ];\n}\n\nmsg.payload = msg.target.uid;\n\n\n// Get scene summary\nmsg = await node.linkcall('common - scene - summary', msg);\n\nlet i = 0;\nlet opts = [ ];\n\nfor (const k in msg.payload) {\n    if (k === 'ts') {\n        msg.payload[k] = (new Date(msg.payload[k])).toLocaleString('fr');\n    }\n    opts[i++] = {\n        'key': k,\n        'value': msg.payload[k]\n    }\n}\n\nmsg.payload = opts;\n\nreturn [ null, msg];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 3320,
+        "wires": [
+            [
+                "87d018f5f98a790b"
+            ],
+            [
+                "4b41a773941f34d7"
+            ]
+        ]
+    },
+    {
+        "id": "4b41a773941f34d7",
+        "type": "trigger",
+        "z": "56c0b44ca387382c",
+        "g": "82df6aae63bd1422",
+        "name": "5s",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "5",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "topic",
+        "topic": "hmi.id",
+        "outputs": 1,
+        "x": 490,
+        "y": 3380,
+        "wires": [
+            [
+                "b94f26f1717e9f46",
+                "87d018f5f98a790b",
+                "5ddc799ff5f86b45"
+            ]
+        ]
+    },
+    {
+        "id": "b94f26f1717e9f46",
+        "type": "function",
+        "z": "56c0b44ca387382c",
+        "g": "82df6aae63bd1422",
+        "name": "data",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 3380,
+        "wires": [
+            [
+                "c2251417360c3621"
+            ]
+        ]
+    },
+    {
+        "id": "87d018f5f98a790b",
+        "type": "ui-table",
+        "z": "56c0b44ca387382c",
+        "g": "82df6aae63bd1422",
+        "group": "3a30762508b6edae",
+        "name": "scene - target - table",
+        "label": "",
+        "order": 51,
+        "width": 0,
+        "height": 0,
+        "maxrows": 0,
+        "passthru": false,
+        "autocols": true,
+        "showSearch": false,
+        "deselect": true,
+        "selectionType": "none",
+        "columns": [],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "",
+        "x": 700,
+        "y": 3320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5ddc799ff5f86b45",
+        "type": "debug",
+        "z": "56c0b44ca387382c",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 3460,
+        "wires": []
+    },
+    {
         "id": "ab17703b4908cbf8",
         "type": "link in",
         "z": "3d7897ba0ee14173",
@@ -20917,7 +21040,7 @@
             "c6104f486096a92f",
             "f4a2353e5f92576c"
         ],
-        "x": 1575,
+        "x": 1555,
         "y": 1220,
         "wires": []
     },
@@ -20939,7 +21062,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1410,
+        "x": 1390,
         "y": 1220,
         "wires": [
             [
@@ -20952,7 +21075,7 @@
         "type": "ui-form",
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
-        "name": "entity - entity - edit - form",
+        "name": "entity - entity - form",
         "group": "ab792e98013972e4",
         "label": "",
         "order": 3,
@@ -21026,7 +21149,7 @@
                 "label": ""
             }
         ],
-        "x": 1030,
+        "x": 1010,
         "y": 1460,
         "wires": [
             [
@@ -21047,7 +21170,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1430,
+        "x": 1410,
         "y": 1340,
         "wires": [
             [
@@ -21068,7 +21191,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1430,
+        "x": 1410,
         "y": 1460,
         "wires": [
             [
@@ -21086,7 +21209,7 @@
         "links": [
             "289e0a6cd1209c38"
         ],
-        "x": 1575,
+        "x": 1555,
         "y": 1340,
         "wires": []
     },
@@ -21173,7 +21296,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1250,
+        "x": 1230,
         "y": 1460,
         "wires": [
             [
@@ -21197,7 +21320,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1450,
+        "x": 1430,
         "y": 1520,
         "wires": []
     },
@@ -21246,7 +21369,7 @@
             [
                 "476c3436a383ed1e",
                 "b727118b88340ecf",
-                "d40b377694438865"
+                "5658964f16a57276"
             ]
         ]
     },
@@ -21280,7 +21403,7 @@
         "order": 1,
         "width": 0,
         "height": 0,
-        "name": "entity - entity - edit - title",
+        "name": "entity - entity - title",
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "row-left",
@@ -21292,7 +21415,7 @@
         "className": "ui-title",
         "value": "dictionary.group_entity.entity_edit_title",
         "valueType": "msg",
-        "x": 1030,
+        "x": 1010,
         "y": 1400,
         "wires": []
     },
@@ -21305,7 +21428,7 @@
         "order": 1,
         "width": 0,
         "height": 0,
-        "name": "entity - parent - edit - title",
+        "name": "entity - parent - title",
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "row-left",
@@ -21317,8 +21440,8 @@
         "className": "ui-title",
         "value": "dictionary.group_entity.device_edit_title",
         "valueType": "msg",
-        "x": 1030,
-        "y": 1760,
+        "x": 1010,
+        "y": 1640,
         "wires": []
     },
     {
@@ -21334,7 +21457,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1430,
+        "x": 1410,
         "y": 1580,
         "wires": [
             [
@@ -21355,7 +21478,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1430,
+        "x": 1410,
         "y": 1700,
         "wires": [
             [
@@ -21373,7 +21496,7 @@
         "links": [
             "289e0a6cd1209c38"
         ],
-        "x": 1575,
+        "x": 1555,
         "y": 1580,
         "wires": []
     },
@@ -21382,7 +21505,7 @@
         "type": "ui-form",
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
-        "name": "entity - parent - edit - form",
+        "name": "entity - parent - form",
         "group": "371d8326aa7242fd",
         "label": "",
         "order": 3,
@@ -21410,7 +21533,7 @@
         "className": "",
         "passthru": false,
         "dropdownOptions": [],
-        "x": 1030,
+        "x": 1020,
         "y": 1700,
         "wires": [
             [
@@ -21431,7 +21554,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1250,
+        "x": 1230,
         "y": 1700,
         "wires": [
             [
@@ -21441,37 +21564,12 @@
         ]
     },
     {
-        "id": "d40b377694438865",
-        "type": "ui-text",
-        "z": "3d7897ba0ee14173",
-        "g": "5cf193e5430d3bde",
-        "group": "371d8326aa7242fd",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "entity - parent - edit - parent",
-        "label": "ID",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "",
-        "value": "payload.parent",
-        "valueType": "msg",
-        "x": 1040,
-        "y": 1820,
-        "wires": []
-    },
-    {
         "id": "fbaa5b8d78bc8124",
         "type": "ui-table",
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "group": "ab792e98013972e4",
-        "name": "entity - entity - edit - table",
+        "name": "entity - entity - table",
         "label": "",
         "order": 2,
         "width": 0,
@@ -21504,7 +21602,7 @@
         "mobileBreakpointType": "defaults",
         "action": "replace",
         "className": "",
-        "x": 1030,
+        "x": 1010,
         "y": 1520,
         "wires": [
             []
@@ -21516,7 +21614,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "data",
-        "func": "let res = [\n    {\n        'id': msg.dictionary.entity.entitylist_source || 'Source',\n        'value': msg.payload.source\n    },\n    {\n        'id': msg.dictionary.entity.entitylist_uid || 'UID',\n        'value': msg.payload.uid\n    },\n    {\n        'id': msg.dictionary.entity.entitylist_parent || 'Parent',\n        'value': msg.payload.parent\n    },\n    {\n        'id': msg.dictionary.entity.entitylist_id || 'ID',\n        'value': msg.payload.id\n    },\n    {\n        'id': msg.dictionary.entity.entitylist_value || 'value',\n        'value': msg.payload.value\n    },\n    {\n        'id': msg.dictionary.entity.entitylist_seen || 'Last seen',\n        'value': new Date(msg.payload.seen).toLocaleString(msg.dictionary.common.locales)\n    }\n];\n\nmsg.payload = res;\n\nreturn msg;",
+        "func": "const entity = { ...(global.get('entity', 'memoryOnly') || { }) };\nlet childs = 0;\nfor (const k in entity) {\n    if (entity[k]['parent'] === msg.payload.parent) {\n        childs++;\n    }\n}\n\nlet res = [\n    {\n        'id': msg.dictionary.entity.entitylist_source || 'Source',\n        'value': msg.payload.source\n    },\n    {\n        'id': msg.dictionary.entity.entitylist_uid || 'UID',\n        'value': msg.payload.uid\n    },\n    {\n        'id': msg.dictionary.entity.entitylist_parent || 'Parent',\n        'value': msg.payload.parent\n    },\n    {\n        'id': msg.dictionary.entity.entitylist_id || 'ID',\n        'value': msg.payload.id\n    },\n    {\n        'id': msg.dictionary.entity.entitylist_value || 'Value',\n        'value': msg.payload.value\n    },\n    {\n        'id': msg.dictionary.entity.entitylist_sister || 'Sisters',\n        'value': childs\n    },\n    {\n        'id': msg.dictionary.entity.entitylist_seen || 'Last seen',\n        'value': new Date(msg.payload.seen).toLocaleString(msg.dictionary.common.locales)\n    }\n];\n\nmsg.payload = res;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -21879,7 +21977,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1250,
+        "x": 1230,
         "y": 1280,
         "wires": [
             [
@@ -22542,6 +22640,137 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "5658964f16a57276",
+        "type": "function",
+        "z": "3d7897ba0ee14173",
+        "name": "data",
+        "func": "const entity = { ...(global.get('entity', 'memoryOnly') || { }) };\nlet childs = 0;\nfor (const k in entity) {\n    if (entity[k]['parent'] === msg.payload.parent) {\n        childs++;\n    }\n}\n\nmsg.payload = [\n    {\n        'id': msg.dictionary.entity.parent_id || 'ID',\n        'value': msg.payload.parent\n    },\n    {\n        'id': msg.dictionary.entity.parent_children || 'Children',\n        'value': childs\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 813,
+        "y": 1756,
+        "wires": [
+            [
+                "a8629436c0a093ea"
+            ]
+        ]
+    },
+    {
+        "id": "a8629436c0a093ea",
+        "type": "ui-table",
+        "z": "3d7897ba0ee14173",
+        "g": "5cf193e5430d3bde",
+        "group": "371d8326aa7242fd",
+        "name": "entity - parent - table",
+        "label": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "maxrows": 0,
+        "passthru": false,
+        "autocols": false,
+        "showSearch": false,
+        "deselect": true,
+        "selectionType": "click",
+        "columns": [
+            {
+                "title": "",
+                "key": "id",
+                "keyType": "key",
+                "type": "text",
+                "width": "50%",
+                "align": "end"
+            },
+            {
+                "title": "",
+                "key": "value",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            }
+        ],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "",
+        "x": 1020,
+        "y": 1760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bdf9cdb1a22a974c",
+        "type": "inject",
+        "z": "3d7897ba0ee14173",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 730,
+        "y": 2060,
+        "wires": [
+            [
+                "91ebfaa8fcc7e88a"
+            ]
+        ]
+    },
+    {
+        "id": "91ebfaa8fcc7e88a",
+        "type": "function",
+        "z": "3d7897ba0ee14173",
+        "name": "function 1",
+        "func": "const entity = { ...(global.get('entity', 'memoryOnly') || { }) };\nlet childs = {};\nfor (const k in entity) {\n    if (entity[k]['id'] === 'batteryLevel' && entity[k]['source'] === 'rfxcom' && entity[k]['hidden'] === 1) {\n        delete entity[k];\n    }\n}\nglobal.set('entity', entity, 'memoryOnly');\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 2060,
+        "wires": [
+            [
+                "2922d9a1fd8be9d2"
+            ]
+        ]
+    },
+    {
+        "id": "2922d9a1fd8be9d2",
+        "type": "debug",
+        "z": "3d7897ba0ee14173",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 2060,
+        "wires": []
     },
     {
         "id": "7374df2eb856c2bc",
