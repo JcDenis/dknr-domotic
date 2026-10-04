@@ -346,34 +346,6 @@
         "h": 82
     },
     {
-        "id": "3a6d56b6dcd8540a",
-        "type": "group",
-        "z": "3d7897ba0ee14173",
-        "name": "entity - room",
-        "style": {
-            "fill": "#6f2fa0",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "ad848617eded124c",
-            "d3b7417ee68351e1",
-            "009f5658297ac269",
-            "1f6ea442bbd4d849",
-            "ad48804fec92e759",
-            "9e0b692686687926",
-            "e56daf17aa5fb143",
-            "cb2cfb96f7f9464e",
-            "58d8fb7ff7861d4c",
-            "7385c91ca49ccb1a",
-            "03c0ca28883d9235"
-        ],
-        "x": 104,
-        "y": 219,
-        "w": 1292,
-        "h": 202
-    },
-    {
         "id": "5cf193e5430d3bde",
         "type": "group",
         "z": "3d7897ba0ee14173",
@@ -1031,29 +1003,6 @@
         "h": 142
     },
     {
-        "id": "2858d8e23dbbc969",
-        "type": "group",
-        "z": "3d7897ba0ee14173",
-        "name": "entity - energy",
-        "style": {
-            "fill": "#6f2fa0",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "3790dfc240bc5f6d",
-            "96cc3da1f3e135dd",
-            "088f2fca643818c2",
-            "453a5521de9c43f0",
-            "9d9be3102bf89bf0",
-            "20c33d6d50aa3ee3"
-        ],
-        "x": 104,
-        "y": 459,
-        "w": 752,
-        "h": 142
-    },
-    {
         "id": "8aae9bef01ec071c",
         "type": "group",
         "z": "4bc72a1112cb448c",
@@ -1329,8 +1278,8 @@
             "b8c88207e8262c51"
         ],
         "x": 104,
-        "y": 2259,
-        "w": 732,
+        "y": 2439,
+        "w": 752,
         "h": 142
     },
     {
@@ -1360,7 +1309,7 @@
             "8717b4e7330c57a6"
         ],
         "x": 104,
-        "y": 2619,
+        "y": 2799,
         "w": 1282,
         "h": 322
     },
@@ -1385,8 +1334,54 @@
             "9a2352af866c7f9e"
         ],
         "x": 104,
-        "y": 2439,
+        "y": 2619,
         "w": 1092,
+        "h": 142
+    },
+    {
+        "id": "3d790afdf73b834b",
+        "type": "group",
+        "z": "560376d6bba621ec",
+        "name": "room - room",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "0cad075d3fac8e76",
+            "d71fdd320cca635a",
+            "fb3a827dbeb230ad",
+            "f11f9039c8c6c7be",
+            "f76fa0516e4b40c0",
+            "66a51cbefda7a4af"
+        ],
+        "x": 104,
+        "y": 3159,
+        "w": 732,
+        "h": 142
+    },
+    {
+        "id": "2858d8e23dbbc969",
+        "type": "group",
+        "z": "77269fd32cdb1638",
+        "name": "energy - entity",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "3790dfc240bc5f6d",
+            "96cc3da1f3e135dd",
+            "088f2fca643818c2",
+            "453a5521de9c43f0",
+            "9d9be3102bf89bf0",
+            "20c33d6d50aa3ee3"
+        ],
+        "x": 104,
+        "y": 879,
+        "w": 752,
         "h": 142
     },
     {
@@ -2106,6 +2101,29 @@
         "h": 202
     },
     {
+        "id": "dd40d799b46205b6",
+        "type": "group",
+        "z": "560376d6bba621ec",
+        "name": "room - workday",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "acc0cadc8744ee57",
+            "ed449931f3c064b6",
+            "655cf8de8f94649b",
+            "454bf49e308c740b",
+            "770b9e63ae5d5e60",
+            "75993401ba2f71d2"
+        ],
+        "x": 104,
+        "y": 2259,
+        "w": 752,
+        "h": 142
+    },
+    {
         "id": "df7710b4b2c4e55b",
         "type": "ui-base",
         "name": "Tableau de bord",
@@ -2758,8 +2776,8 @@
         ],
         "order": 6,
         "className": "",
-        "visible": "true",
-        "disabled": "false"
+        "visible": true,
+        "disabled": false
     },
     {
         "id": "73c6d9f7f62493d8",
@@ -2776,27 +2794,13 @@
         "groupType": "default"
     },
     {
-        "id": "fa076f843950d108",
-        "type": "ui-group",
-        "name": "entity - room - group",
-        "page": "2b12391aa314ef62",
-        "width": "6",
-        "height": 1,
-        "order": 1,
-        "showTitle": false,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
-    },
-    {
         "id": "79512e64340aeb66",
         "type": "ui-group",
         "name": "entity - list - group",
         "page": "2b12391aa314ef62",
         "width": 6,
         "height": 1,
-        "order": 3,
+        "order": 1,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -2810,7 +2814,7 @@
         "page": "2b12391aa314ef62",
         "width": "6",
         "height": 1,
-        "order": 4,
+        "order": 2,
         "showTitle": false,
         "className": "",
         "visible": "false",
@@ -2824,7 +2828,7 @@
         "page": "2b12391aa314ef62",
         "width": 6,
         "height": 1,
-        "order": 5,
+        "order": 3,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -2885,20 +2889,6 @@
         "groupType": "default"
     },
     {
-        "id": "a6601e1fe5c357e9",
-        "type": "ui-group",
-        "name": "entity - energy - group",
-        "page": "2b12391aa314ef62",
-        "width": 6,
-        "height": 1,
-        "order": 2,
-        "showTitle": false,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
-    },
-    {
         "id": "34a13cfdebc90220",
         "type": "ui-page",
         "name": "energy",
@@ -2937,7 +2927,7 @@
     {
         "id": "f871c246adaba03b",
         "type": "ui-group",
-        "name": "energy - main - group",
+        "name": "energy - chart - group",
         "page": "34a13cfdebc90220",
         "width": 6,
         "height": "4",
@@ -3103,7 +3093,7 @@
         "page": "be3da16eb83104f6",
         "width": 6,
         "height": 1,
-        "order": 5,
+        "order": 6,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -3117,7 +3107,7 @@
         "page": "be3da16eb83104f6",
         "width": 6,
         "height": 1,
-        "order": 4,
+        "order": 5,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -3131,7 +3121,49 @@
         "page": "be3da16eb83104f6",
         "width": 6,
         "height": 1,
-        "order": 6,
+        "order": 7,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "bfdc1fa2c7d8bc07",
+        "type": "ui-group",
+        "name": "room - room - group",
+        "page": "be3da16eb83104f6",
+        "width": 6,
+        "height": 1,
+        "order": 8,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "a6601e1fe5c357e9",
+        "type": "ui-group",
+        "name": "energy - entity - group",
+        "page": "34a13cfdebc90220",
+        "width": 6,
+        "height": 1,
+        "order": 3,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "9a4e69a0f4a18cc7",
+        "type": "ui-group",
+        "name": "room - workday - group",
+        "page": "be3da16eb83104f6",
+        "width": 6,
+        "height": 1,
+        "order": 4,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -3217,7 +3249,6 @@
         "links": [
             "0cf63361a578f787",
             "92c098c716e46e3b",
-            "9e0b692686687926",
             "43b439d13979544c",
             "6336047780e57ccc",
             "6de461e4d754d7f9",
@@ -3230,7 +3261,9 @@
             "26d8d3d7bc111e9a",
             "b8c88207e8262c51",
             "ad9cf67b7b8161b0",
-            "9a2352af866c7f9e"
+            "9a2352af866c7f9e",
+            "66a51cbefda7a4af",
+            "ed449931f3c064b6"
         ],
         "x": 145,
         "y": 980,
@@ -3511,7 +3544,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 530,
+        "x": 570,
         "y": 380,
         "wires": [
             [
@@ -3558,7 +3591,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 370,
+        "x": 410,
         "y": 380,
         "wires": [
             [
@@ -7042,7 +7075,7 @@
         "z": "4bc72a1112cb448c",
         "g": "aa28e51660bead4f",
         "name": "parse",
-        "func": "\n// Get dknr data\nmsg = await node.linkcall('common - dknr - data', msg);\n\nlet enums = { ...(msg.dknr_enum || {})  };\nlet entities = { ...(msg.dknr_entity || {}) };\ndelete msg.dknr_enum;\ndelete msg.dknr_entity;\n\nconst template = { ...(global.get('template', 'memoryOnly') || {}) };\nconst room = { ...(global.get('room', 'memoryOnly') || {}) };\nconst parent = { ...(global.get('parent', 'memoryOnly') || {}) };\nconst existing = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Force room creation\nif (typeof room['home'] !== 'string') {\n    room['home'] = { ...template.room, ...{ 'id': 'home', 'name': '► Home' } };\n}\nif (typeof room['system'] !== 'string') {\n    room['system'] = { ...template.room, ...{ 'id': 'system', 'name': '► System' } };\n}\nglobal.set('room', room, 'memoryOnly');\n\n// Force parent creation\nif (typeof parent['dknr_sensor'] !== 'object') {\n    parent['dknr_sensor'] = { ...template.parent, ...{ 'id': 'dknr_sensor', 'name': 'Configuration' } };\n}\nif (typeof parent['dknr_command'] !== 'object') {\n    parent['dknr_command'] = { ...template.parent, ...{ 'id': 'dknr_command', 'name': 'Domotic' } };\n}\nglobal.set('parent', parent, 'memoryOnly');\n\nconst s = 'dknr';\n\nfor (const t in entities) {\n    for (const k in entities[t]) {\n        // Do not overwrite existing value\n        let uid = [s, t, k].join('_');\n\n        let entity = {\n            'id': k,\n            'source': s,\n            'value': typeof existing[uid] === 'object' ? existing[uid]['value'] : entities[t][k][0],\n            'parent': t,\n            'type': t,\n            'unit': entities[t][k][1],\n            'element': entities[t][k][2],\n            'name': entities[t][k][3],\n            'room': t === 'sensor' ? 'home' : 'system',\n            'seen': Date.now(),\n            'hidden': 0\n        };\n\n        msg.payload = entity;\n        node.send([msg]);\n    }\n}\n\nreturn;",
+        "func": "\n// Get dknr data\nmsg = await node.linkcall('common - dknr - data', msg);\n\nlet enums = { ...(msg.dknr_enum || {})  };\nlet entities = { ...(msg.dknr_entity || {}) };\ndelete msg.dknr_enum;\ndelete msg.dknr_entity;\n\nconst template = { ...(global.get('template', 'memoryOnly') || {}) };\nconst room = { ...(global.get('rooms.base', 'memoryOnly') || {}) };\nconst parent = { ...(global.get('parent', 'memoryOnly') || {}) };\nconst existing = { ...(global.get('entity', 'memoryOnly') || {}) };\n\n// Force room creation\nif (typeof room['home'] !== 'string') {\n    room['home'] = { ...template.room, ...{ 'id': 'home', 'name': '► Home' } };\n}\nif (typeof room['system'] !== 'string') {\n    room['system'] = { ...template.room, ...{ 'id': 'system', 'name': '► System' } };\n}\nglobal.set('rooms.base', room, 'memoryOnly');\n\n// Force parent creation\nif (typeof parent['dknr_sensor'] !== 'object') {\n    parent['dknr_sensor'] = { ...template.parent, ...{ 'id': 'dknr_sensor', 'name': 'Configuration' } };\n}\nif (typeof parent['dknr_command'] !== 'object') {\n    parent['dknr_command'] = { ...template.parent, ...{ 'id': 'dknr_command', 'name': 'Domotic' } };\n}\nglobal.set('parent', parent, 'memoryOnly');\n\nconst s = 'dknr';\n\nfor (const t in entities) {\n    for (const k in entities[t]) {\n        // Do not overwrite existing value\n        let uid = [s, t, k].join('_');\n\n        let entity = {\n            'id': k,\n            'source': s,\n            'value': typeof existing[uid] === 'object' ? existing[uid]['value'] : entities[t][k][0],\n            'parent': t,\n            'type': t,\n            'unit': entities[t][k][1],\n            'element': entities[t][k][2],\n            'name': entities[t][k][3],\n            'room': t === 'sensor' ? 'home' : 'system',\n            'seen': Date.now(),\n            'hidden': 0\n        };\n\n        msg.payload = entity;\n        node.send([msg]);\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7142,7 +7175,7 @@
         "drop": true,
         "allowrate": false,
         "outputs": 1,
-        "x": 370,
+        "x": 410,
         "y": 500,
         "wires": [
             [
@@ -7189,7 +7222,7 @@
         "z": "4bc72a1112cb448c",
         "g": "f822aa69af66c546",
         "name": "data",
-        "func": "const rnd = global.get('random', 'memoryOnly') || '--';\nif (typeof rnd !== 'number' || \n    typeof msg.payload.rnd !== 'string' || \n    rnd !== Number(msg.payload.rnd)\n) {\n\n    node.send([null, msg]);\n}\n\nmsg.payload = JSON.stringify({\n    'auth': {...global.get('auth', 'memoryOnly') || {}},\n    'block': {...global.get('block', 'memoryOnly') || {}},\n    'calendar': { ...global.get('calendar', 'memoryOnly') || {} },\n    'energy': { ...global.get('energy', 'memoryOnly') || {} },\n    'entity': { ...global.get('entity', 'memoryOnly') || {} },\n    'mqtt': {...global.get('mqtt', 'memoryOnly') || {}},\n    'room': {...global.get('room', 'memoryOnly') || {}},\n    'rooms': { ...global.get('rooms', 'memoryOnly') || {} },\n    'parent': {...global.get('parent', 'memoryOnly') || {}},\n    'scene': {...global.get('scene', 'memoryOnly') || {}}\n}, null, 4);\n\nmsg.headers = {\n    'Content-Type':'application/json',\n    'Content-Disposition':'attachment; filename=\"backup.json\"',\n    'Content-Length': msg.payload.length,\n    'Connection':'close'\t\n};\n\nnode.send([msg, null]);\n\nreturn;",
+        "func": "const rnd = global.get('random', 'memoryOnly') || '--';\nif (typeof rnd !== 'number' || \n    typeof msg.payload.rnd !== 'string' || \n    rnd !== Number(msg.payload.rnd)\n) {\n\n    node.send([null, msg]);\n}\n\nmsg.payload = JSON.stringify({\n    'auth': {...global.get('auth', 'memoryOnly') || {}},\n    'block': {...global.get('block', 'memoryOnly') || {}},\n    'calendar': { ...global.get('calendar', 'memoryOnly') || {} },\n    'energy': { ...global.get('energy', 'memoryOnly') || {} },\n    'entity': { ...global.get('entity', 'memoryOnly') || {} },\n    'mqtt': {...global.get('mqtt', 'memoryOnly') || {}},\n    'rooms': { ...global.get('rooms', 'memoryOnly') || {} },\n    'parent': {...global.get('parent', 'memoryOnly') || {}},\n    'scene': {...global.get('scene', 'memoryOnly') || {}}\n}, null, 4);\n\nmsg.headers = {\n    'Content-Type':'application/json',\n    'Content-Disposition':'attachment; filename=\"backup.json\"',\n    'Content-Length': msg.payload.length,\n    'Connection':'close'\t\n};\n\nnode.send([msg, null]);\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -9097,7 +9130,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - thermostat",
-        "func": "/*\ntemperature :\nDo all the job for thermostat.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (msg.target.element !== 'temperature') {\n    msg.summary.temperature = 'bypass';\n    node.status({\n        'fill': 'yellow',\n        'text': 'bypass'\n    });\n\n    return msg;\n}\n\n// Get usefull data\nconst entities = { ...(global.get('entity', 'memoryOnly') || { }) };\nconst now = Date.now();\nconst current = {\n    'indoor': 0,\n    'outdoor': 0,\n    'aperture': 0,\n    'mode': 'off',\n    'setpoint': 7,\n    'calculation': -10000 // positive result to pilot\n};\n\n\n//\n// Compute triggers\n//\n\nlet temperature_outdoor_count = 0;\nlet temperature_indoor_count = 0;\n\nfor (const t in msg.scene.trigger) {\n    // Trigger is already in used\n    if (typeof entities[t] !== 'object' || entities[t]['hidden'] !== 0) {\n\n        continue;\n    }\n\n    // Get temperatures\n    if ([ 'temperature' ].includes(entities[t]['element']) && entities[t]['type'] === 'sensor') {\n        // 0 is considered as wrong value.\n        if (entities[t]['value'] === 0) {\n\n            continue;\n        }\n\n        // Outdoor temperature\n        if (global.get('room[\"' + entities[t]['room'] + '\"][\"outdoor\"]') === 1) {\n            temperature_outdoor_count++;\n            current.outdoor = parseInt(current.outdoor + entities[t]['value'] * 10);\n        }\n        // Indoor temperature\n        else {\n            temperature_indoor_count++;\n            current.indoor = parseInt(current.indoor + entities[t]['value'] * 10);\n        }\n    }\n\n    // Get apertures states\n    if ([ 'door', 'window', 'slider' ].includes(entities[t]['element'])) {\n        if (entities[t]['value'] === 0) { // 0 = opened\n            current.aperture = 1; // 1 = opened\n        }\n    }\n}\n\n// Temperature is required\nif (temperature_indoor_count === 0 || temperature_outdoor_count === 0) {\n    msg.rsp = false;\n    msg.summary.thermostat = 'thermostat has no temperature sensors';\n    node.status({\n        'fill': 'red',\n        'text': msg.summary.thermostat\n    });\n\n    return msg;\n}\n\n// Compute temperatures\ncurrent.indoor = Math.round(current.indoor / temperature_indoor_count) / 10;\ncurrent.outdoor = Math.round(current.outdoor / temperature_outdoor_count) / 10;\n\n// Get thermostat mode\ncurrent.mode = global.get('entity[\"dknr_sensor_temperature\"][\"value\"]', 'memoryOnly') || 'off';\n\n\n//\n// Compute data\n//\n\n// Get requested temperature\nswitch (current.mode) {\n    case 'off':\n/*        msg.rsp = false;\n        msg.summary.thermostat = 'thermostat mode is off';\n        node.status({\n            'fill': 'red',\n            'text': msg.summary.thermostat\n        });\n\n        return msg;\n*/\n        break;\n    case 'heating':\n        current.setpoint = msg.scene.temperature_setpoint_eco;\n        //thermostat.temperature_setpoint = msg.scene.temperature_setpoint_confort;\n        break;\n    case 'cooling':\n        current.setpoint = msg.scene.temperature_setpoint_cold;\n        break;\n    case 'thawing':\n        current.setpoint = 7;\n        break;\n    default:\n        msg.rsp = false;\n        msg.summary.thermostat = 'thermostat has no temperautre setpoint';\n        node.status({\n            'fill': 'red',\n            'text': msg.summary.thermostat\n        });\n\n        return msg;\n}\n\n// Compute cold request\nif (current.mode === 'cooling') {\n    // Cold temperature is set to 18° means cooling is disabled\n    if (current.setpoint > 18) {\n        current.calculation = ((current.indoor - current.setpoint) * msg.scene.temperature_coefficient_indoor) + ((current.outdoor - current.indoor) * msg.scene.temperature_coefficient_outdoor);\n    }\n}\n// Compute heat request\nelse {\n    current.calculation = ((current.setpoint - current.indoor) * msg.scene.temperature_coefficient_indoor) + ((current.indoor - current.outdoor) * msg.scene.temperature_coefficient_outdoor);\n}\n\n// Final compute heat/cold request\nlet calculb = (current.calculation / 100 * msg.scene.temperature_duration_cycle);\nlet calculc = (msg.scene.temperature_duration_cycle * msg.scene.temperature_duration_preheat / 100);\ncurrent.calculation = Number(calculb.toFixed(1)) - Number(calculc.toFixed(1));\n\n// Aperture state changes, set a timer\nif (current.aperture !== msg.scene.temperature_aperture_opened) {\n    msg.scene.temperature_aperture_opened = current.aperture;\n    msg.scene.temperature_aperture_timer = now;\n}\n\n// Aperture timer is perempted, update it and go on\nif (msg.scene.temperature_aperture_timer > 0 && (msg.scene.temperature_aperture_timer + msg.scene.temperature_duration_aperture * 60000) < now) {\n    msg.scene.temperature_aperture_timer = 0;\n}\n\n// State\nif (current.mode === 'off') {\n    msg.scene.temperature_pilot_state = 'stopped';\n}\nelse if (msg.scene.temperature_aperture_timer > 0) {\n    msg.scene.temperature_pilot_state = 'suspended';\n}\nelse if (msg.scene.temperature_aperture_opened === 1) {\n    msg.scene.temperature_pilot_state = 'stopped';\n}\nelse if (current.mode === 'cooling' && msg.scene.temperature_energy_free === 1) {\n    // Find solar power entity\n    const solar_entity = global.get('energy[\"solar_power\"]', 'memoryOnly') || '';\n    if (solar_entity !== ''\n        && typeof entities[solar_entity] === 'object'\n        && entities[solar_entity]['hidden'] === 0\n    ) {\n        // If not enought solar power, stop\n        if (entities[solar_entity]['value'] < msg.scene.temperature_power_consumption) {\n            msg.scene.temperature_pilot_state = 'stopped';\n        }\n    }\n}\nelse if (current.calculation > 0) {\n    msg.scene.temperature_pilot_state = 'powered';\n}\nelse if ((now - msg.scene.temperature_duration_cycle * 60000) > msg.scene.temperature_pilot_last) {\n    msg.scene.temperature_pilot_state = 'reached';\n}\nelse {\n    // unchanged\n}\n\n// Pilot final order\nif ([ 'powered' ] .includes(msg.scene.temperature_pilot_state)) {\n    // Start heating, update timer\n    if (msg.target.value === msg.scene.off) {\n        msg.scene.temperature_pilot_last = now;\n    }\n    msg.payload = true;\n}\nelse if ([ 'reached', 'stopped' ].includes(msg.scene.temperature_pilot_state)) {\n    // Stop heating, update timer\n    if (msg.target.value === msg.scene.on) {\n        msg.scene.temperature_pilot_last = now;\n    }\n    msg.payload = false;\n}\nelse {\n    // Keep unchanged\n    msg.payload = msg.target.value === msg.scene.on ? true : false;\n}\n\nmsg.summary.thermostat = 'thermostat is ' + msg.scene.temperature_pilot_state;\nnode.status({\n    'fill': msg.scene.temperature_pilot_state === 'powered' ? 'green' : 'blue',\n    'text': msg.summary.thermostat\n});\n\n// Update scene\nconst scene = { ...(global.get('scene', 'memoryOnly') || {}) };\nscene[msg.target.uid] = msg.scene;\nglobal.set('scene', scene, 'memoryOnly');\n\n// debug\nmsg.thermostat = current;\nlet t = 0;\nlet thdata = [ ];\nfor (const k in current) {\n    thdata[t++] = k + ': ' + current[k];\n}\nmsg.summary.thdata = thdata.join(', ');\n\nreturn msg;",
+        "func": "/*\ntemperature :\nDo all the job for thermostat.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n\n    return msg;\n}\n\n// Exceptions\nif (msg.target.element !== 'temperature') {\n    msg.summary.temperature = 'bypass';\n    node.status({\n        'fill': 'yellow',\n        'text': 'bypass'\n    });\n\n    return msg;\n}\n\n// Get usefull data\nconst entities = { ...(global.get('entity', 'memoryOnly') || { }) };\nconst now = Date.now();\nconst current = {\n    'indoor': 0,\n    'outdoor': 0,\n    'aperture': 0,\n    'mode': 'off',\n    'setpoint': 7,\n    'calculation': -10000 // positive result to pilot\n};\n\n\n//\n// Compute triggers\n//\n\nlet temperature_outdoor_count = 0;\nlet temperature_indoor_count = 0;\n\nfor (const t in msg.scene.trigger) {\n    // Trigger is already in used\n    if (typeof entities[t] !== 'object' || entities[t]['hidden'] !== 0) {\n\n        continue;\n    }\n\n    // Get temperatures\n    if ([ 'temperature' ].includes(entities[t]['element']) && entities[t]['type'] === 'sensor') {\n        // 0 is considered as wrong value.\n        if (entities[t]['value'] === 0) {\n\n            continue;\n        }\n\n        // Outdoor temperature\n        if (global.get('rooms[\"base\"][\"' + entities[t]['room'] + '\"][\"outdoor\"]') === 1) {\n            temperature_outdoor_count++;\n            current.outdoor = parseInt(current.outdoor + entities[t]['value'] * 10);\n        }\n        // Indoor temperature\n        else {\n            temperature_indoor_count++;\n            current.indoor = parseInt(current.indoor + entities[t]['value'] * 10);\n        }\n    }\n\n    // Get apertures states\n    if ([ 'door', 'window', 'slider' ].includes(entities[t]['element'])) {\n        if (entities[t]['value'] === 0) { // 0 = opened\n            current.aperture = 1; // 1 = opened\n        }\n    }\n}\n\n// Temperature is required\nif (temperature_indoor_count === 0 || temperature_outdoor_count === 0) {\n    msg.rsp = false;\n    msg.summary.thermostat = 'thermostat has no temperature sensors';\n    node.status({\n        'fill': 'red',\n        'text': msg.summary.thermostat\n    });\n\n    return msg;\n}\n\n// Compute temperatures\ncurrent.indoor = Math.round(current.indoor / temperature_indoor_count) / 10;\ncurrent.outdoor = Math.round(current.outdoor / temperature_outdoor_count) / 10;\n\n// Get thermostat mode\ncurrent.mode = global.get('entity[\"dknr_sensor_temperature\"][\"value\"]', 'memoryOnly') || 'off';\n\n\n//\n// Compute data\n//\n\n// Get requested temperature\nswitch (current.mode) {\n    case 'off':\n/*        msg.rsp = false;\n        msg.summary.thermostat = 'thermostat mode is off';\n        node.status({\n            'fill': 'red',\n            'text': msg.summary.thermostat\n        });\n\n        return msg;\n*/\n        break;\n    case 'heating':\n        current.setpoint = msg.scene.temperature_setpoint_eco;\n        //thermostat.temperature_setpoint = msg.scene.temperature_setpoint_confort;\n        break;\n    case 'cooling':\n        current.setpoint = msg.scene.temperature_setpoint_cold;\n        break;\n    case 'thawing':\n        current.setpoint = 7;\n        break;\n    default:\n        msg.rsp = false;\n        msg.summary.thermostat = 'thermostat has no temperautre setpoint';\n        node.status({\n            'fill': 'red',\n            'text': msg.summary.thermostat\n        });\n\n        return msg;\n}\n\n// Compute cold request\nif (current.mode === 'cooling') {\n    // Cold temperature is set to 18° means cooling is disabled\n    if (current.setpoint > 18) {\n        current.calculation = ((current.indoor - current.setpoint) * msg.scene.temperature_coefficient_indoor) + ((current.outdoor - current.indoor) * msg.scene.temperature_coefficient_outdoor);\n    }\n}\n// Compute heat request\nelse {\n    current.calculation = ((current.setpoint - current.indoor) * msg.scene.temperature_coefficient_indoor) + ((current.indoor - current.outdoor) * msg.scene.temperature_coefficient_outdoor);\n}\n\n// Final compute heat/cold request\nlet calculb = (current.calculation / 100 * msg.scene.temperature_duration_cycle);\nlet calculc = (msg.scene.temperature_duration_cycle * msg.scene.temperature_duration_preheat / 100);\ncurrent.calculation = Number(calculb.toFixed(1)) - Number(calculc.toFixed(1));\n\n// Aperture state changes, set a timer\nif (current.aperture !== msg.scene.temperature_aperture_opened) {\n    msg.scene.temperature_aperture_opened = current.aperture;\n    msg.scene.temperature_aperture_timer = now;\n}\n\n// Aperture timer is perempted, update it and go on\nif (msg.scene.temperature_aperture_timer > 0 && (msg.scene.temperature_aperture_timer + msg.scene.temperature_duration_aperture * 60000) < now) {\n    msg.scene.temperature_aperture_timer = 0;\n}\n\n// State\nif (current.mode === 'off') {\n    msg.scene.temperature_pilot_state = 'stopped';\n}\nelse if (msg.scene.temperature_aperture_timer > 0) {\n    msg.scene.temperature_pilot_state = 'suspended';\n}\nelse if (msg.scene.temperature_aperture_opened === 1) {\n    msg.scene.temperature_pilot_state = 'stopped';\n}\nelse if (current.mode === 'cooling' && msg.scene.temperature_energy_free === 1) {\n    // Find solar power entity\n    const solar_entity = global.get('energy[\"solar_power\"]', 'memoryOnly') || '';\n    if (solar_entity !== ''\n        && typeof entities[solar_entity] === 'object'\n        && entities[solar_entity]['hidden'] === 0\n    ) {\n        // If not enought solar power, stop\n        if (entities[solar_entity]['value'] < msg.scene.temperature_power_consumption) {\n            msg.scene.temperature_pilot_state = 'stopped';\n        }\n    }\n}\nelse if (current.calculation > 0) {\n    msg.scene.temperature_pilot_state = 'powered';\n}\nelse if ((now - msg.scene.temperature_duration_cycle * 60000) > msg.scene.temperature_pilot_last) {\n    msg.scene.temperature_pilot_state = 'reached';\n}\nelse {\n    // unchanged\n}\n\n// Pilot final order\nif ([ 'powered' ] .includes(msg.scene.temperature_pilot_state)) {\n    // Start heating, update timer\n    if (msg.target.value === msg.scene.off) {\n        msg.scene.temperature_pilot_last = now;\n    }\n    msg.payload = true;\n}\nelse if ([ 'reached', 'stopped' ].includes(msg.scene.temperature_pilot_state)) {\n    // Stop heating, update timer\n    if (msg.target.value === msg.scene.on) {\n        msg.scene.temperature_pilot_last = now;\n    }\n    msg.payload = false;\n}\nelse {\n    // Keep unchanged\n    msg.payload = msg.target.value === msg.scene.on ? true : false;\n}\n\nmsg.summary.thermostat = 'thermostat is ' + msg.scene.temperature_pilot_state;\nnode.status({\n    'fill': msg.scene.temperature_pilot_state === 'powered' ? 'green' : 'blue',\n    'text': msg.summary.thermostat\n});\n\n// Update scene\nconst scene = { ...(global.get('scene', 'memoryOnly') || {}) };\nscene[msg.target.uid] = msg.scene;\nglobal.set('scene', scene, 'memoryOnly');\n\n// debug\nmsg.thermostat = current;\nlet t = 0;\nlet thdata = [ ];\nfor (const k in current) {\n    thdata[t++] = k + ': ' + current[k];\n}\nmsg.summary.thdata = thdata.join(', ');\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -9191,7 +9224,7 @@
                 "ad00c0bf6ff55efe"
             ],
             [
-                "ddc9374374b8e9ce"
+                "3ed31290426faddb"
             ]
         ]
     },
@@ -9334,7 +9367,7 @@
         "z": "10a4e1188aad61a2",
         "g": "0954ea9c8e3ae379",
         "name": "data",
-        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (msg.hmi.id === '' || typeof global.get('user[\"' + msg.hmi.id + '\"]', 'memoryOnly') !== 'object') {\n    msg.enabled = false;\n}\n\nif (!msg.enabled) {\n    msg.reset = true;\n    msg.payload = '';\n\n    return msg;\n}\n\nmsg.payload = [ ];\nmsg.topic = msg.hmi.id;\n\nlet colors = global.get('describe.colors', 'memoryOnly') || {};\nlet elements = {...global.get('describe.elements', 'memoryOnly') || {}};\nelements.seen = ['lan-connect', 'lan-disconnect'];\nelements.battery = [elements.battery[1], elements.battery[0]];\nlet options = {\n    'motion': '',\n    'temperature': '°C',\n    'humidity': '%',\n    'illuminance': ' lx',\n    'door': '',\n    'window': '',\n    'light': '',\n    'battery': '',\n    'seen': ''\n};\n\nlet entity = global.get('entity', 'memoryOnly') || {};\nlet entities = {};\nlet e_num = 0;\n\nfor (const e in entity) {\n    if (entity[e]['hidden'] !== 0 || \n        entity[e]['room'] === '' || \n        entity[e]['value'] === ''\n    ) {\n\n        continue;\n    }\n\n    if (typeof entities[entity[e]['room']] !== 'object') {\n        entities[entity[e]['room']] = { };\n    }\n\n    // Seen\n    if (typeof entities[entity[e]['room']]['seen'] !== 'number') {\n        entities[entity[e]['room']]['seen'] = 0;\n    }\n    if ((entity[e]['seen'] + 86400000) < Date.now()) { // 24h\n        entities[entity[e]['room']]['seen']++;\n    }\n\n    // Battery\n    if (typeof entities[entity[e]['room']]['battery'] !== 'number') {\n        entities[entity[e]['room']]['battery'] = 0;\n    }\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'battery' && entity[e]['value'] < 15) {\n        entities[entity[e]['room']]['battery'] += 1;\n    }\n\n    // Motion\n    if (entity[e]['type'] !== 'command' && typeof entities[entity[e]['room']]['motion'] !== 'number') {\n        entities[entity[e]['room']]['motion'] = 0;\n    }\n    if (entity[e]['element'] === 'motion' && entity[e]['value'] > 0) {\n        entities[entity[e]['room']]['motion'] += 1;\n    }\n\n    // Door\n    if (entity[e]['type'] !== 'command' && typeof entities[entity[e]['room']]['door'] !== 'number') {\n        entities[entity[e]['room']]['door'] = 0;\n    }\n    if (['door', 'slider'].includes(entity[e]['element']) && !entity[e]['value']) {\n        entities[entity[e]['room']]['door'] += 1;\n    }\n\n    // Window\n    if (entity[e]['type'] !== 'command' && typeof entities[entity[e]['room']]['window'] !== 'number') {\n        entities[entity[e]['room']]['window'] = 0;\n    }\n    if (entity[e]['element'] === 'window' && !entity[e]['value']) {\n        entities[entity[e]['room']]['window'] += 1;\n    }\n\n    // Light\n    if (typeof entities[entity[e]['room']]['light'] !== 'number') {\n        entities[entity[e]['room']]['light'] = 0;\n    }\n    if (entity[e]['element'] === 'light' && entity[e]['value'] > 0) {\n        entities[entity[e]['room']]['light'] += 1;\n    }\n\n    // Temperature\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'temperature') {\n        if (typeof entities[entity[e]['room']]['temperature'] === 'undefined') {\n            entities[entity[e]['room']]['temperature'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['temperature'] = (parseInt(entities[entity[e]['room']]['temperature'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n\n    // Humidity\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'humidity') {\n        if (typeof entities[entity[e]['room']]['humidity'] === 'undefined') {\n            entities[entity[e]['room']]['humidity'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['humidity'] = (parseInt(entities[entity[e]['room']]['humidity'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n\n    // Illuminance\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'illuminance') {\n        if (typeof entities[entity[e]['room']]['illuminance'] === 'undefined') {\n            entities[entity[e]['room']]['illuminance'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['illuminance'] = (parseInt(entities[entity[e]['room']]['illuminance'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n}\n\nconst room = { ...(global.get('room', 'memoryOnly') || {}) };\nlet r_num = 0;\n\nlet dropdownOptions = [];\nfor (const r in room) {\n    if (['system', 'home'].includes(r)) {\n\n        continue;\n    }\n\n    dropdownOptions[r_num] = {\n        'room': r,\n        'room_name': room[r]['name']\n    };\n\n    for (const o in options) {\n        if (typeof entities[r] !== 'object') {\n\n            continue;\n        }\n        let option_icon = elements[o][0];\n        let option_color = colors.empty;\n        let option_text = '';\n        if (typeof entities[r][o] !== 'undefined') {\n            option_icon = entities[r][o] > 0 ? elements[o][1] : elements[o][0];\n            option_color = entities[r][o] > 0 ? colors.theme : colors.empty;\n            option_text = entities[r][o] > 0 ? entities[r][o] + options[o] : '';\n        }\n\n        dropdownOptions[r_num][o] = \n            '<span style=\"white-space: nowrap;\">' + \n            option_text + \n            '<i class=\"icon-in-row mdi mdi-' + option_icon + '\" style=\"color:' + option_color + '\" title=\"' + o + '\"></i>' + \n            '</span>';\n    };\n\n    r_num++;\n}\n\nif (r_num > 0) {\n    dropdownOptions.sort((a, b) => a.room_name.localeCompare(b.room_name));\n\n    msg.payload = dropdownOptions;\n    msg.ui_update = {\n        'label': '',\n    }\n\n    return msg;\n}",
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (msg.hmi.id === '' || typeof global.get('user[\"' + msg.hmi.id + '\"]', 'memoryOnly') !== 'object') {\n    msg.enabled = false;\n}\n\nif (!msg.enabled) {\n    msg.reset = true;\n    msg.payload = '';\n\n    return msg;\n}\n\nmsg.payload = [ ];\nmsg.topic = msg.hmi.id;\n\nlet colors = global.get('describe.colors', 'memoryOnly') || {};\nlet elements = {...global.get('describe.elements', 'memoryOnly') || {}};\nelements.seen = ['lan-connect', 'lan-disconnect'];\nelements.battery = [elements.battery[1], elements.battery[0]];\nlet options = {\n    'motion': '',\n    'temperature': '°C',\n    'humidity': '%',\n    'illuminance': ' lx',\n    'door': '',\n    'window': '',\n    'light': '',\n    'battery': '',\n    'seen': ''\n};\n\nlet entity = global.get('entity', 'memoryOnly') || {};\nlet entities = {};\nlet e_num = 0;\n\nfor (const e in entity) {\n    if (entity[e]['hidden'] !== 0 || \n        entity[e]['room'] === '' || \n        entity[e]['value'] === ''\n    ) {\n\n        continue;\n    }\n\n    if (typeof entities[entity[e]['room']] !== 'object') {\n        entities[entity[e]['room']] = { };\n    }\n\n    // Seen\n    if (typeof entities[entity[e]['room']]['seen'] !== 'number') {\n        entities[entity[e]['room']]['seen'] = 0;\n    }\n    if ((entity[e]['seen'] + 86400000) < Date.now()) { // 24h\n        entities[entity[e]['room']]['seen']++;\n    }\n\n    // Battery\n    if (typeof entities[entity[e]['room']]['battery'] !== 'number') {\n        entities[entity[e]['room']]['battery'] = 0;\n    }\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'battery' && entity[e]['value'] < 15) {\n        entities[entity[e]['room']]['battery'] += 1;\n    }\n\n    // Motion\n    if (entity[e]['type'] !== 'command' && typeof entities[entity[e]['room']]['motion'] !== 'number') {\n        entities[entity[e]['room']]['motion'] = 0;\n    }\n    if (entity[e]['element'] === 'motion' && entity[e]['value'] > 0) {\n        entities[entity[e]['room']]['motion'] += 1;\n    }\n\n    // Door\n    if (entity[e]['type'] !== 'command' && typeof entities[entity[e]['room']]['door'] !== 'number') {\n        entities[entity[e]['room']]['door'] = 0;\n    }\n    if (['door', 'slider'].includes(entity[e]['element']) && !entity[e]['value']) {\n        entities[entity[e]['room']]['door'] += 1;\n    }\n\n    // Window\n    if (entity[e]['type'] !== 'command' && typeof entities[entity[e]['room']]['window'] !== 'number') {\n        entities[entity[e]['room']]['window'] = 0;\n    }\n    if (entity[e]['element'] === 'window' && !entity[e]['value']) {\n        entities[entity[e]['room']]['window'] += 1;\n    }\n\n    // Light\n    if (typeof entities[entity[e]['room']]['light'] !== 'number') {\n        entities[entity[e]['room']]['light'] = 0;\n    }\n    if (entity[e]['element'] === 'light' && entity[e]['value'] > 0) {\n        entities[entity[e]['room']]['light'] += 1;\n    }\n\n    // Temperature\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'temperature') {\n        if (typeof entities[entity[e]['room']]['temperature'] === 'undefined') {\n            entities[entity[e]['room']]['temperature'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['temperature'] = (parseInt(entities[entity[e]['room']]['temperature'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n\n    // Humidity\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'humidity') {\n        if (typeof entities[entity[e]['room']]['humidity'] === 'undefined') {\n            entities[entity[e]['room']]['humidity'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['humidity'] = (parseInt(entities[entity[e]['room']]['humidity'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n\n    // Illuminance\n    if (entity[e]['type'] !== 'command' && entity[e]['element'] === 'illuminance') {\n        if (typeof entities[entity[e]['room']]['illuminance'] === 'undefined') {\n            entities[entity[e]['room']]['illuminance'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['illuminance'] = (parseInt(entities[entity[e]['room']]['illuminance'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n}\n\nconst room = { ...(global.get('rooms.base', 'memoryOnly') || {}) };\nlet r_num = 0;\n\nlet dropdownOptions = [];\nfor (const r in room) {\n    if (['system', 'home'].includes(r)) {\n\n        continue;\n    }\n\n    dropdownOptions[r_num] = {\n        'room': r,\n        'room_name': room[r]['name']\n    };\n\n    for (const o in options) {\n        if (typeof entities[r] !== 'object') {\n\n            continue;\n        }\n        let option_icon = elements[o][0];\n        let option_color = colors.empty;\n        let option_text = '';\n        if (typeof entities[r][o] !== 'undefined') {\n            option_icon = entities[r][o] > 0 ? elements[o][1] : elements[o][0];\n            option_color = entities[r][o] > 0 ? colors.theme : colors.empty;\n            option_text = entities[r][o] > 0 ? entities[r][o] + options[o] : '';\n        }\n\n        dropdownOptions[r_num][o] = \n            '<span style=\"white-space: nowrap;\">' + \n            option_text + \n            '<i class=\"icon-in-row mdi mdi-' + option_icon + '\" style=\"color:' + option_color + '\" title=\"' + o + '\"></i>' + \n            '</span>';\n    };\n\n    r_num++;\n}\n\nif (r_num > 0) {\n    dropdownOptions.sort((a, b) => a.room_name.localeCompare(b.room_name));\n\n    msg.payload = dropdownOptions;\n    msg.ui_update = {\n        'label': '',\n    }\n\n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -9888,7 +9921,7 @@
         "type": "link in",
         "z": "10a4e1188aad61a2",
         "g": "6023ed32683fd2f4",
-        "name": "link in 3",
+        "name": "home - map",
         "links": [
             "2c867cda0a9e301a"
         ],
@@ -9976,7 +10009,7 @@
         "type": "link out",
         "z": "10a4e1188aad61a2",
         "g": "6023ed32683fd2f4",
-        "name": "home - room",
+        "name": "home - map",
         "mode": "link",
         "links": [
             "289e0a6cd1209c38"
@@ -10697,7 +10730,7 @@
         "type": "link in",
         "z": "77269fd32cdb1638",
         "g": "b828708d51f09ccc",
-        "name": "link in 1",
+        "name": "energy - chart",
         "links": [
             "66048b5b43cc0248"
         ],
@@ -10720,7 +10753,8 @@
         "mode": "link",
         "links": [
             "5397038e1b8466e2",
-            "9551b24f428cde28"
+            "9551b24f428cde28",
+            "3790dfc240bc5f6d"
         ],
         "x": 395,
         "y": 140,
@@ -10731,7 +10765,7 @@
         "type": "link in",
         "z": "77269fd32cdb1638",
         "g": "3b7269d3cbadfee6",
-        "name": "link in 2",
+        "name": "energy - page",
         "links": [
             "911bbe32f79bec46"
         ],
@@ -11040,6 +11074,206 @@
                 "51c516a5a8ed0da1"
             ]
         ]
+    },
+    {
+        "id": "3790dfc240bc5f6d",
+        "type": "link in",
+        "z": "77269fd32cdb1638",
+        "g": "2858d8e23dbbc969",
+        "name": "energy - entity",
+        "links": [
+            "20c33d6d50aa3ee3",
+            "66048b5b43cc0248"
+        ],
+        "x": 145,
+        "y": 980,
+        "wires": [
+            [
+                "96cc3da1f3e135dd"
+            ]
+        ]
+    },
+    {
+        "id": "96cc3da1f3e135dd",
+        "type": "function",
+        "z": "77269fd32cdb1638",
+        "g": "2858d8e23dbbc969",
+        "name": "data",
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (!msg.enabled) {\n    node.send([msg, msg]);\n\n    return;\n}\n\nconst units = ['mW', 'W', 'kW'];\nconst entity = { ...(global.get('entity', 'memoryOnly') || { }) };\nconst parent = { ...(global.get('parent', 'memoryOnly') || { }) };\nconst room = { ...(global.get('rooms.base', 'memoryOnly') || { }) };\n\nlet d = 0;\nlet dropdownOptions = [];\nfor (const e in entity) {\n    if (entity[e]['hidden'] === 0 && units.includes(entity[e]['unit'])) {\n        let entity_name = entity[e]['name'];\n        if (entity_name === '') {\n            entity_name = parent[entity[e]['parent']]['name'] || e;\n        }\n        let room_name = room[entity[e]['room']]['name'] || entity[e]['room'];\n        let element_name = msg.dictionary.option_element[entity[e]['element']] || entity[e]['element']\n\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'grid_power'\n        };\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'solar_power'\n        };\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'battery_power'\n        };\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'waterboiler_power'\n        };\n    }\n\n    if (entity[e]['hidden'] === 0 && entity[e]['element'] === 'battery') {\n        let entity_name = entity[e]['name'];\n        if (entity_name === '') {\n            entity_name = parent[entity[e]['parent']]['name'] || e;\n        }\n        let room_name = room[entity[e]['room']]['name'] || entity[e]['room'];\n        let element_name = msg.dictionary.option_element[entity[e]['element']] || entity[e]['element']\n\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'battery_level'\n        };\n    }\n\n    if (entity[e]['hidden'] === 0 && entity[e]['element'] === 'tariff') {\n        let entity_name = entity[e]['name'];\n        if (entity_name === '') {\n            entity_name = parent[entity[e]['parent']]['name'] || e;\n        }\n        let room_name = room[entity[e]['room']]['name'] || entity[e]['room'];\n        let element_name = msg.dictionary.option_element[entity[e]['element']] || entity[e]['element']\n\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'preferred_tariff'\n        };\n    }\n\n    if (entity[e]['hidden'] === 0 && entity[e]['element'] === 'energy') {\n        let entity_name = entity[e]['name'];\n        if (entity_name === '') {\n            entity_name = parent[entity[e]['parent']]['name'] || e;\n        }\n        let room_name = room[entity[e]['room']]['name'] || entity[e]['room'];\n        let element_name = msg.dictionary.option_element[entity[e]['element']] || entity[e]['element']\n\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'favorable_energy_meter'\n        };\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'unfavorable_energy_meter'\n        };\n    }\n}\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\n// entity - energy - title\nmsg.payload = msg.dictionary.energy.entity_title || 'Energy';\n\nnode.send([msg, null]);\n\n// entity - energy - form\nmsg.payload = {};\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.energy.grid_power || 'Grid power',\n            \"key\": \"grid_power\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.energy.solar_power || 'Solar power',\n            \"key\": \"solar_power\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.energy.battery_power || 'Battery power',\n            \"key\": \"battery_power\",\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.energy.battery_level || 'Battery level',\n            \"key\": \"battery_level\",\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.energy.preferred_tariff || 'Preferred tariff in progress',\n            \"key\": \"preferred_tariff\",\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.energy.favorable_energy_meter || 'Favorable energy meter',\n            \"key\": \"favorable_energy_meter\",\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.energy.unfavorable_energy_meter || 'Unfavorable energy meter',\n            \"key\": \"unfavorable_energy_meter\",\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.energy.waterboiler_power || 'Waterboiler power',\n            \"key\": \"waterboiler_power\",\n        }\n    ],\n    'dropdownOptions': dropdownOptions\n};\n\nmsg.payload = { ...(global.get('energy', 'memoryOnly') || { }) };\n\nnode.send([null, msg]);\n\nreturn;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 980,
+        "wires": [
+            [
+                "453a5521de9c43f0"
+            ],
+            [
+                "088f2fca643818c2"
+            ]
+        ]
+    },
+    {
+        "id": "088f2fca643818c2",
+        "type": "ui-form",
+        "z": "77269fd32cdb1638",
+        "g": "2858d8e23dbbc969",
+        "name": "energy - entity - form",
+        "group": "a6601e1fe5c357e9",
+        "label": "",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "options": [
+            {
+                "label": "solar",
+                "key": "solar_power",
+                "type": "dropdown",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "grid",
+                "key": "grid_power",
+                "type": "dropdown",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "battery",
+                "key": "battery_power",
+                "type": "dropdown",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "level",
+                "key": "battery_level",
+                "type": "dropdown",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "preferred",
+                "key": "preferred_tariff",
+                "type": "dropdown",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "favorable",
+                "key": "favorable_energy_meter",
+                "type": "dropdown",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "unfavorable",
+                "key": "unfavorable_energy_meter",
+                "type": "dropdown",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "waterboiler",
+                "key": "waterboiler",
+                "type": "dropdown",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "solar_power": "",
+            "grid_power": "",
+            "battery_power": "",
+            "battery_level": "",
+            "preferred_tariff": "",
+            "favorable_energy_meter": "",
+            "unfavorable_energy_meter": "",
+            "waterboiler": ""
+        },
+        "payload": "",
+        "submit": "►",
+        "cancel": "",
+        "resetOnSubmit": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "passthru": false,
+        "dropdownOptions": [],
+        "x": 480,
+        "y": 980,
+        "wires": [
+            [
+                "9d9be3102bf89bf0"
+            ]
+        ]
+    },
+    {
+        "id": "453a5521de9c43f0",
+        "type": "ui-text",
+        "z": "77269fd32cdb1638",
+        "g": "2858d8e23dbbc969",
+        "group": "a6601e1fe5c357e9",
+        "order": 1,
+        "width": "6",
+        "height": "1",
+        "name": "energy - entity - title",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "ui-title",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 470,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "9d9be3102bf89bf0",
+        "type": "function",
+        "z": "77269fd32cdb1638",
+        "g": "2858d8e23dbbc969",
+        "name": "data",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nglobal.set('energy', msg.payload, 'memoryOnly');\n\nmsg.payload = '';\nmsg.enabled = true;\nmsg.payload = msg.dictionary.notice.save_success;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 980,
+        "wires": [
+            [
+                "20c33d6d50aa3ee3"
+            ]
+        ]
+    },
+    {
+        "id": "20c33d6d50aa3ee3",
+        "type": "link out",
+        "z": "77269fd32cdb1638",
+        "g": "2858d8e23dbbc969",
+        "name": "energy - entity",
+        "mode": "link",
+        "links": [
+            "3790dfc240bc5f6d",
+            "f4a2353e5f92576c"
+        ],
+        "x": 815,
+        "y": 980,
+        "wires": []
     },
     {
         "id": "bf16c43041851145",
@@ -11635,7 +11869,9 @@
             "217d334d78a1a033",
             "e1b27683f79ca387",
             "3df93568b57aa454",
-            "9d42e839897f5191"
+            "9d42e839897f5191",
+            "0cad075d3fac8e76",
+            "acc0cadc8744ee57"
         ],
         "x": 395,
         "y": 140,
@@ -11665,7 +11901,7 @@
         "z": "560376d6bba621ec",
         "g": "1465a47c930ed8e1",
         "name": "data",
-        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (!msg.enabled) {\n\n    return msg;\n}\n\nmsg.payload = '';\nflow.set('room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n\n// From home page\nconst redirection = global.get('user[\"' + msg.hmi.id + '\"][\"room\"]', 'memoryOnly') || '';\nif (redirection !== '') {\n    msg.payload = redirection;\n}\n\nconst rooms = { ...(global.get('room', 'memoryOnly') || {}) };\nlet i = 0;\nlet dropdownOptions = [];\n\nfor (const room in rooms) {\n    dropdownOptions[i++] = {\n        'label': rooms[room]['name'],\n        'value': room\n    };\n}\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.ui_update = {\n    'label': msg.dictionary.room.room_select || 'Select a room',\n    'options': dropdownOptions\n}\n\n\nreturn msg;",
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (!msg.enabled) {\n\n    return msg;\n}\n\nmsg.payload = '';\nflow.set('room[\"' + msg.hmi.id + '\"]', undefined, 'memoryOnly');\n\n// From home page\nconst redirection = global.get('user[\"' + msg.hmi.id + '\"][\"room\"]', 'memoryOnly') || '';\nif (redirection !== '') {\n    msg.payload = redirection;\n}\n\nconst rooms = { ...(global.get('rooms.base', 'memoryOnly') || {}) };\nlet i = 0;\nlet dropdownOptions = [];\n\nfor (const room in rooms) {\n    dropdownOptions[i++] = {\n        'label': rooms[room]['name'],\n        'value': room\n    };\n}\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.ui_update = {\n    'label': msg.dictionary.room.room_select || 'Select a room',\n    'options': dropdownOptions\n}\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -11752,7 +11988,9 @@
             "217d334d78a1a033",
             "e1b27683f79ca387",
             "3df93568b57aa454",
-            "9d42e839897f5191"
+            "9d42e839897f5191",
+            "0cad075d3fac8e76",
+            "acc0cadc8744ee57"
         ],
         "x": 1435,
         "y": 260,
@@ -12521,7 +12759,7 @@
         "z": "560376d6bba621ec",
         "g": "a2828ff4910e05b9",
         "name": "title",
-        "func": "msg.ui_update = {\n    'label': ''\n}\n\n// title\nlet entity_name = global.get('entity[\"' + msg.payload.uid + '\"][\"name\"]', 'memoryOnly') || '';\nif (entity_name === '' || entity_name === msg.payload.id) {\n    entity_name = global.get('parent[\"' + msg.payload.parent + '\"][\"name\"]', 'memoryOnly') || '';\n    if (entity_name === '') {\n        entity_name = msg.payload.parent;\n    }\n}\nlet room_name = global.get('room[\"' + msg.payload.room + '\"][\"name\"]', 'memoryOnly') || msg.payload.room;\n\nmsg.payload = entity_name + ' - ' + room_name;\n\nreturn msg;",
+        "func": "msg.ui_update = {\n    'label': ''\n}\n\n// title\nlet entity_name = global.get('entity[\"' + msg.payload.uid + '\"][\"name\"]', 'memoryOnly') || '';\nif (entity_name === '' || entity_name === msg.payload.id) {\n    entity_name = global.get('parent[\"' + msg.payload.parent + '\"][\"name\"]', 'memoryOnly') || '';\n    if (entity_name === '') {\n        entity_name = msg.payload.parent;\n    }\n}\nlet room_name = global.get('rooms.base[\"' + msg.payload.room + '\"][\"name\"]', 'memoryOnly') || msg.payload.room;\n\nmsg.payload = entity_name + ' - ' + room_name;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -13382,7 +13620,7 @@
             "ad9cf67b7b8161b0"
         ],
         "x": 145,
-        "y": 2720,
+        "y": 2900,
         "wires": [
             [
                 "9ac9f8f234c6e57e",
@@ -13409,7 +13647,7 @@
         "senderr": false,
         "headers": [],
         "x": 480,
-        "y": 2840,
+        "y": 3020,
         "wires": [
             [
                 "f856b26a9b16262e"
@@ -13425,7 +13663,7 @@
         "action": "str",
         "property": "payload",
         "x": 860,
-        "y": 2840,
+        "y": 3020,
         "wires": [
             [
                 "e425f8974c0ebac6"
@@ -13452,7 +13690,7 @@
         "templateScope": "local",
         "className": "",
         "x": 1250,
-        "y": 2900,
+        "y": 3080,
         "wires": [
             []
         ]
@@ -13471,7 +13709,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 2840,
+        "y": 3020,
         "wires": [
             [
                 "3cde6808bdb9713a",
@@ -13498,7 +13736,7 @@
         "repair": false,
         "outputs": 1,
         "x": 690,
-        "y": 2840,
+        "y": 3020,
         "wires": [
             [
                 "16094297767ce839"
@@ -13524,7 +13762,7 @@
         "topic": "room",
         "outputs": 1,
         "x": 430,
-        "y": 2780,
+        "y": 2960,
         "wires": [
             [
                 "9ac9f8f234c6e57e"
@@ -13545,7 +13783,7 @@
         "finalize": "",
         "libs": [],
         "x": 1030,
-        "y": 2840,
+        "y": 3020,
         "wires": [
             [
                 "f9d7343943db5931"
@@ -14141,7 +14379,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 2900,
+        "y": 3080,
         "wires": [
             [
                 "f9d7343943db5931"
@@ -14649,7 +14887,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 2360,
+        "y": 2540,
         "wires": [
             [
                 "7bcdebf8b6331102"
@@ -14672,8 +14910,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
-        "y": 2360,
+        "x": 690,
+        "y": 2540,
         "wires": [
             [
                 "b8c88207e8262c51"
@@ -14692,7 +14930,7 @@
             "b8c88207e8262c51"
         ],
         "x": 145,
-        "y": 2360,
+        "y": 2540,
         "wires": [
             [
                 "101caaadc41bda09"
@@ -14721,7 +14959,7 @@
         "value": "payload",
         "valueType": "msg",
         "x": 480,
-        "y": 2300,
+        "y": 2480,
         "wires": []
     },
     {
@@ -14790,7 +15028,7 @@
         "passthru": false,
         "dropdownOptions": [],
         "x": 480,
-        "y": 2360,
+        "y": 2540,
         "wires": [
             [
                 "3b4c01c93e847712"
@@ -14808,8 +15046,8 @@
             "3df93568b57aa454",
             "f4a2353e5f92576c"
         ],
-        "x": 795,
-        "y": 2360,
+        "x": 815,
+        "y": 2540,
         "wires": []
     },
     {
@@ -14826,7 +15064,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 2720,
+        "y": 2900,
         "wires": [
             [
                 "fb2e77e69dcd1a21"
@@ -14858,7 +15096,7 @@
         "value": "payload",
         "valueType": "msg",
         "x": 480,
-        "y": 2660,
+        "y": 2840,
         "wires": []
     },
     {
@@ -14927,7 +15165,7 @@
         "passthru": false,
         "dropdownOptions": [],
         "x": 480,
-        "y": 2720,
+        "y": 2900,
         "wires": [
             [
                 "bb9a57793d0eb21a"
@@ -14948,7 +15186,7 @@
         "finalize": "",
         "libs": [],
         "x": 690,
-        "y": 2720,
+        "y": 2900,
         "wires": [
             [
                 "ad9cf67b7b8161b0"
@@ -14967,7 +15205,7 @@
             "fb7da4dbb76c9223"
         ],
         "x": 815,
-        "y": 2720,
+        "y": 2900,
         "wires": []
     },
     {
@@ -14982,7 +15220,7 @@
             "b6b16c9ce4cb114d"
         ],
         "x": 145,
-        "y": 2540,
+        "y": 2720,
         "wires": [
             [
                 "a37239bb28062348"
@@ -15003,7 +15241,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 2540,
+        "y": 2720,
         "wires": [
             [
                 "28289ac5f3d54e0c"
@@ -15035,7 +15273,7 @@
         "value": "payload",
         "valueType": "msg",
         "x": 470,
-        "y": 2480,
+        "y": 2660,
         "wires": []
     },
     {
@@ -15056,7 +15294,7 @@
         "accept": "png",
         "className": "",
         "x": 480,
-        "y": 2540,
+        "y": 2720,
         "wires": [
             [
                 "a3da07702804513a"
@@ -15077,7 +15315,7 @@
         "finalize": "",
         "libs": [],
         "x": 690,
-        "y": 2540,
+        "y": 2720,
         "wires": [
             [
                 "633180fd17f54333"
@@ -15093,7 +15331,7 @@
         "action": "",
         "property": "payload",
         "x": 860,
-        "y": 2540,
+        "y": 2720,
         "wires": [
             [
                 "e68ef4578108b664"
@@ -15114,7 +15352,7 @@
         "finalize": "",
         "libs": [],
         "x": 1030,
-        "y": 2540,
+        "y": 2720,
         "wires": [
             [
                 "9a2352af866c7f9e"
@@ -15133,8 +15371,354 @@
             "9d42e839897f5191"
         ],
         "x": 1155,
-        "y": 2540,
+        "y": 2720,
         "wires": []
+    },
+    {
+        "id": "0cad075d3fac8e76",
+        "type": "link in",
+        "z": "560376d6bba621ec",
+        "g": "3d790afdf73b834b",
+        "name": "room - room",
+        "links": [
+            "66a51cbefda7a4af",
+            "5241685ca99b7bc4",
+            "b6b16c9ce4cb114d"
+        ],
+        "x": 145,
+        "y": 3260,
+        "wires": [
+            [
+                "d71fdd320cca635a"
+            ]
+        ]
+    },
+    {
+        "id": "d71fdd320cca635a",
+        "type": "function",
+        "z": "560376d6bba621ec",
+        "g": "3d790afdf73b834b",
+        "name": "data",
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nmsg.payload = '';\n\nif (!msg.enabled) {\n\n    return [msg, msg];\n}\n\nlet room = flow.get('room[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '';\nif (room === '') {\n\n    return;\n}\n\n// title\nmsg.payload = msg.dictionary.room.room_title || 'Room';\nmsg.ui_update = {\n    'label': ''\n}\n\nnode.send([msg, null]);\n\n// table\nconst base = { ...(global.get('rooms.base[\"' + room + '\"]', 'memoryOnly') || {}) };\nmsg.payload = {\n    'name': '',\n    'outdoor': 0\n};\nmsg.payload = Object.assign(msg.payload, base); // protect\n\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.room.roomname || 'Name',\n            \"key\": \"name\",\n            \"required\": false\n        },\n        {\n            \"type\": \"checkbox\",\n            \"label\": msg.dictionary.room.locationx || 'Outdoor',\n            \"key\": \"outdoor\",\n            \"required\": false\n        }\n    ]\n}\n\nreturn [null, msg];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 3260,
+        "wires": [
+            [
+                "fb3a827dbeb230ad"
+            ],
+            [
+                "f11f9039c8c6c7be"
+            ]
+        ]
+    },
+    {
+        "id": "fb3a827dbeb230ad",
+        "type": "ui-text",
+        "z": "560376d6bba621ec",
+        "g": "3d790afdf73b834b",
+        "group": "bfdc1fa2c7d8bc07",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "room - room - title",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "ui-title",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 470,
+        "y": 3200,
+        "wires": []
+    },
+    {
+        "id": "f11f9039c8c6c7be",
+        "type": "ui-form",
+        "z": "560376d6bba621ec",
+        "g": "3d790afdf73b834b",
+        "name": "room - room - form",
+        "group": "bfdc1fa2c7d8bc07",
+        "label": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "name",
+                "key": "name",
+                "type": "text",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "outdoor",
+                "key": "outdoor",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "name": "",
+            "outdoor": false
+        },
+        "payload": "",
+        "submit": "►",
+        "cancel": "",
+        "resetOnSubmit": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "passthru": false,
+        "dropdownOptions": [],
+        "x": 470,
+        "y": 3260,
+        "wires": [
+            [
+                "f76fa0516e4b40c0"
+            ]
+        ]
+    },
+    {
+        "id": "f76fa0516e4b40c0",
+        "type": "function",
+        "z": "560376d6bba621ec",
+        "g": "3d790afdf73b834b",
+        "name": "data",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nlet room = flow.get('room[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '';\nif (room === '' || msg.payload.name === '') {\n\n    return;\n}\n\nconst base = { ...(global.get('rooms.base', 'memoryOnly') || { }) };\nif (typeof base[room] !== 'object') {\n    base[room] = { };\n}\n\nbase[room] = msg.payload;\nbase[room]['id'] = room;\nglobal.set('rooms.base', base, 'memoryOnly');\n\nawait new Promise(resolve => setTimeout(resolve, 50));\n\n// notice\nmsg.enabled = true;\nmsg.payload = msg.dictionary.notice.save_success;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 3260,
+        "wires": [
+            [
+                "66a51cbefda7a4af"
+            ]
+        ]
+    },
+    {
+        "id": "66a51cbefda7a4af",
+        "type": "link out",
+        "z": "560376d6bba621ec",
+        "g": "3d790afdf73b834b",
+        "name": "room - room",
+        "mode": "link",
+        "links": [
+            "f4a2353e5f92576c",
+            "0cad075d3fac8e76"
+        ],
+        "x": 795,
+        "y": 3260,
+        "wires": []
+    },
+    {
+        "id": "acc0cadc8744ee57",
+        "type": "link in",
+        "z": "560376d6bba621ec",
+        "g": "dd40d799b46205b6",
+        "name": "room - workday",
+        "links": [
+            "5241685ca99b7bc4",
+            "b6b16c9ce4cb114d",
+            "ed449931f3c064b6"
+        ],
+        "x": 145,
+        "y": 2360,
+        "wires": [
+            [
+                "655cf8de8f94649b"
+            ]
+        ]
+    },
+    {
+        "id": "ed449931f3c064b6",
+        "type": "link out",
+        "z": "560376d6bba621ec",
+        "g": "dd40d799b46205b6",
+        "name": "room - workday",
+        "mode": "link",
+        "links": [
+            "f4a2353e5f92576c",
+            "acc0cadc8744ee57"
+        ],
+        "x": 815,
+        "y": 2360,
+        "wires": []
+    },
+    {
+        "id": "655cf8de8f94649b",
+        "type": "function",
+        "z": "560376d6bba621ec",
+        "g": "dd40d799b46205b6",
+        "name": "data",
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nmsg.payload = '';\n\nif (!msg.enabled) {\n\n    return [msg, msg];\n}\n\nlet room = flow.get('room[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '';\nif (room === '') {\n\n    return;\n}\n\n// title\nmsg.payload = msg.dictionary.room.workday_title || 'Workday';\nmsg.ui_update = {\n    'label': ''\n}\n\nnode.send([msg, null]);\n\n// table\nconst workday = { ...(global.get('rooms.workday[\"' + room + '\"]', 'memoryOnly') || {}) };\nmsg.payload = {\n    'd0': 0,\n    'd1': 0,\n    'd2': 0,\n    'd3': 0,\n    'd4': 0,\n    'd5': 0,\n    'd6': 0,\n};\nmsg.payload = Object.assign(msg.payload, workday); // protect\n\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"checkbox\",\n            \"label\": msg.dictionary.room.workday0 || 'Sunday',\n            \"key\": \"d0\",\n            \"required\": false\n        },\n        {\n            \"type\": \"checkbox\",\n            \"label\": msg.dictionary.room.workday1 || 'Monday',\n            \"key\": \"d1\",\n            \"required\": false\n        },\n        {\n            \"type\": \"checkbox\",\n            \"label\": msg.dictionary.room.workday2 || 'Tuesday',\n            \"key\": \"d2\",\n            \"required\": false\n        },\n        {\n            \"type\": \"checkbox\",\n            \"label\": msg.dictionary.room.workday3 || 'Wednesday',\n            \"key\": \"d3\",\n            \"required\": false\n        },\n        {\n            \"type\": \"checkbox\",\n            \"label\": msg.dictionary.room.workday4 || 'Thursday',\n            \"key\": \"d4\",\n            \"required\": false\n        },\n        {\n            \"type\": \"checkbox\",\n            \"label\": msg.dictionary.room.workday5 || 'Friday',\n            \"key\": \"d5\",\n            \"required\": false\n        },\n        {\n            \"type\": \"checkbox\",\n            \"label\": msg.dictionary.room.workday6 || 'Saturday',\n            \"key\": \"d6\",\n            \"required\": false\n        }\n    ]\n}\n\nreturn [null, msg];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 2360,
+        "wires": [
+            [
+                "454bf49e308c740b"
+            ],
+            [
+                "770b9e63ae5d5e60"
+            ]
+        ]
+    },
+    {
+        "id": "454bf49e308c740b",
+        "type": "ui-text",
+        "z": "560376d6bba621ec",
+        "g": "dd40d799b46205b6",
+        "group": "9a4e69a0f4a18cc7",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "room - workday - title",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "ui-title",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 480,
+        "y": 2300,
+        "wires": []
+    },
+    {
+        "id": "770b9e63ae5d5e60",
+        "type": "ui-form",
+        "z": "560376d6bba621ec",
+        "g": "dd40d799b46205b6",
+        "name": "room - workday - form",
+        "group": "9a4e69a0f4a18cc7",
+        "label": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "d0",
+                "key": "d0",
+                "type": "checkbox",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "d1",
+                "key": "d1",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "d2",
+                "key": "d2",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "d3",
+                "key": "d3",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "d4",
+                "key": "d4",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "d5",
+                "key": "d5",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "d6",
+                "key": "d6",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "d0": false,
+            "d1": false,
+            "d2": false,
+            "d3": false,
+            "d4": false,
+            "d5": false,
+            "d6": false
+        },
+        "payload": "",
+        "submit": "►",
+        "cancel": "",
+        "resetOnSubmit": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": false,
+        "className": "",
+        "passthru": false,
+        "dropdownOptions": [],
+        "x": 480,
+        "y": 2360,
+        "wires": [
+            [
+                "75993401ba2f71d2"
+            ]
+        ]
+    },
+    {
+        "id": "75993401ba2f71d2",
+        "type": "function",
+        "z": "560376d6bba621ec",
+        "g": "dd40d799b46205b6",
+        "name": "data",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nlet room = flow.get('room[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '';\nif (room === '') {\n\n    return;\n}\n\nconst workday = { ...(global.get('rooms.workday', 'memoryOnly') || { }) };\nif (typeof workday[room] !== 'object') {\n    workday[room] = { };\n}\n\nworkday[room] = msg.payload;\nglobal.set('rooms.workday', workday, 'memoryOnly');\n\nawait new Promise(resolve => setTimeout(resolve, 50));\n\n// notice\nmsg.enabled = true;\nmsg.payload = msg.dictionary.notice.save_success;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 2360,
+        "wires": [
+            [
+                "ed449931f3c064b6"
+            ]
+        ]
     },
     {
         "id": "7179cc22cb3792c0",
@@ -15199,7 +15783,7 @@
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "name": "data",
-        "func": "node.status({ 'text': '' });\n\n// Hide page elements\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\n// Prepare form options\nconst room = { ...(global.get('room', 'memoryOnly') || {}) };\nlet i = 0;\nlet dropdownOptions = [];\ndropdownOptions[i++] = {\n    'label': '',\n    'value': ''\n};\n\nfor (const r in room) {\n    dropdownOptions[i++] = {\n        'label': room[r]['name'],\n        'value': r\n    };\n}\nnode.status({ 'fill': 'green', 'text': i });\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.ui_update = {\n    'label': msg.dictionary.scene.triggeradd_room || 'Select trigger room',\n    'options': dropdownOptions\n}\n\nnode.send([msg, null]);\n\nawait new Promise(resolve => setTimeout(resolve, 10));\n\n// Remove next form elements\nmsg.payload = '';\nmsg.class = 'remove';\nmsg.enabled = false;\n\nnode.send([null, msg])\n\nreturn;",
+        "func": "node.status({ 'text': '' });\n\n// Hide page elements\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\n// Prepare form options\nconst room = { ...(global.get('rooms.base', 'memoryOnly') || {}) };\nlet i = 0;\nlet dropdownOptions = [];\ndropdownOptions[i++] = {\n    'label': '',\n    'value': ''\n};\n\nfor (const r in room) {\n    dropdownOptions[i++] = {\n        'label': room[r]['name'],\n        'value': r\n    };\n}\nnode.status({ 'fill': 'green', 'text': i });\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.ui_update = {\n    'label': msg.dictionary.scene.triggeradd_room || 'Select trigger room',\n    'options': dropdownOptions\n}\n\nnode.send([msg, null]);\n\nawait new Promise(resolve => setTimeout(resolve, 10));\n\n// Remove next form elements\nmsg.payload = '';\nmsg.class = 'remove';\nmsg.enabled = false;\n\nnode.send([null, msg])\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -15562,7 +16146,7 @@
         "z": "56c0b44ca387382c",
         "g": "82df6aae63bd1422",
         "name": "data",
-        "func": "node.status({ 'text': '' });\n\n// Hide page elements\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\nconst scenes = Object.keys({ ...(global.get('describe.scenes', 'memoryOnly') || {}) });\n\n// Get form\nconst form = { ...(global.get('form', 'memoryOnly') || {}) };\nif (typeof form[msg.hmi.id]['scene']['sceneadd'] !== 'object') {\n\n    return;\n}\n\n// Get entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\nconst parent = { ...(global.get('parent', 'memoryOnly') || {}) };\nconst room = { ...(global.get('room', 'memoryOnly') || {}) };\n\nlet i = 0;\nlet dropdownOptions = [];\ndropdownOptions[i++] = {\n    'label': '',\n    'value': ''\n};\n\nfor (const e in entity) {\n    if (entity[e]['type'] === 'command' &&\n        entity[e]['hidden'] === 0 &&\n        entity[e]['room'] !== 'system' && \n        scenes.includes(entity[e]['element'])\n    ) {\n        const eroom = typeof room[entity[e]['room']] === 'object' ? room[entity[e]['room']]['name'] : entity[e]['room'];\n        const eelement = msg.dictionary.option_element[entity[e]['element']] || entity[e]['element'];\n        let eparent = typeof parent[entity[e]['parent']] === 'object' ? parent[entity[e]['parent']]['name'] : '';\n        if (eparent === '') {\n            eparent = entity[e]['parent'];\n        }\n        const ename = entity[e]['name'] !== '' ?  entity[e]['name'] : eparent;\n        dropdownOptions[i++] = {\n            'label': eroom + ' / ' + ename + ' / ' + eelement,\n            'value': entity[e]['uid']\n        };\n    }\n}\nnode.status({ 'fill': 'green', 'text': i });\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.payload = form[msg.hmi.id]['scene']['sceneadd']['target'];\nmsg.ui_update = {\n    'label': msg.dictionary.scene.sceneadd_entity || 'Select target entity of the scene',\n    'options': dropdownOptions\n}\n\nnode.send([msg, null]);\n\n// Hide next form elements\nmsg.class = 'remove';\nmsg.enabled = false;\nmsg.payload = '';\n\nnode.send([null, msg])\n\nreturn;",
+        "func": "node.status({ 'text': '' });\n\n// Hide page elements\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\nconst scenes = Object.keys({ ...(global.get('describe.scenes', 'memoryOnly') || {}) });\n\n// Get form\nconst form = { ...(global.get('form', 'memoryOnly') || {}) };\nif (typeof form[msg.hmi.id]['scene']['sceneadd'] !== 'object') {\n\n    return;\n}\n\n// Get entities\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\nconst parent = { ...(global.get('parent', 'memoryOnly') || {}) };\nconst room = { ...(global.get('rooms.base', 'memoryOnly') || {}) };\n\nlet i = 0;\nlet dropdownOptions = [];\ndropdownOptions[i++] = {\n    'label': '',\n    'value': ''\n};\n\nfor (const e in entity) {\n    if (entity[e]['type'] === 'command' &&\n        entity[e]['hidden'] === 0 &&\n        entity[e]['room'] !== 'system' && \n        scenes.includes(entity[e]['element'])\n    ) {\n        const eroom = typeof room[entity[e]['room']] === 'object' ? room[entity[e]['room']]['name'] : entity[e]['room'];\n        const eelement = msg.dictionary.option_element[entity[e]['element']] || entity[e]['element'];\n        let eparent = typeof parent[entity[e]['parent']] === 'object' ? parent[entity[e]['parent']]['name'] : '';\n        if (eparent === '') {\n            eparent = entity[e]['parent'];\n        }\n        const ename = entity[e]['name'] !== '' ?  entity[e]['name'] : eparent;\n        dropdownOptions[i++] = {\n            'label': eroom + ' / ' + ename + ' / ' + eelement,\n            'value': entity[e]['uid']\n        };\n    }\n}\nnode.status({ 'fill': 'green', 'text': i });\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\nmsg.payload = form[msg.hmi.id]['scene']['sceneadd']['target'];\nmsg.ui_update = {\n    'label': msg.dictionary.scene.sceneadd_entity || 'Select target entity of the scene',\n    'options': dropdownOptions\n}\n\nnode.send([msg, null]);\n\n// Hide next form elements\nmsg.class = 'remove';\nmsg.enabled = false;\nmsg.payload = '';\n\nnode.send([null, msg])\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -17822,7 +18406,7 @@
         "z": "56c0b44ca387382c",
         "g": "690005b9a6f433cf",
         "name": "data",
-        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nawait new Promise(resolve => setTimeout(resolve, 10));\nnode.status({ 'text': '' });\n\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\n// Check action\nif (global.get('form[\"' + msg.hmi.id + '\"][\"scene\"][\"action\"]', 'memoryOnly') !== 'scenelist') {\n\n    return;\n}\n\nnode.status({ fill: 'green' });\n\nlet colors = { ...(global.get('describe.colors', 'memoryOnly') || {}) };\nlet scene = { ...(global.get('scene', 'memoryOnly') || {}) };\nlet rooms = { ...(global.get('room', 'memoryOnly') || {}) };\nlet parent = { ...(global.get('parent', 'memoryOnly') || {}) };\nlet options = { ...(global.get('describe.routines', 'memoryOnly') || {}) };\nlet scene_icon = ['pause', 'play'];\n\nlet i = 0;\nlet dropdownOptions = [];\n\nfor (const e in scene) {\n    let entity = global.get('entity[\"' + e + '\"]', 'memoryOnly');\n    if (typeof entity === 'object') {\n        let enabled = Boolean(scene[e]['enabled']);\n        let color = enabled ? colors.theme : colors.empty;\n        let icon = enabled ? scene_icon[1] : scene_icon[0];\n        let ticon = global.get('describe[\"elements\"][\"' + entity['element'] + '\"]', 'memoryOnly') || ['help', 'help', 'Unknown'];\n        let room = typeof rooms[entity['room']] === 'object' ? rooms[entity['room']]['name'] : entity['room'];\n        let name = entity['name'];\n        if (name === '' || name === entity['id']) {\n            name = typeof parent[entity['parent']] === 'object' ? parent[entity['parent']]['name'] : '';\n            if (name === '') {\n                name = entity['parent'];\n            }\n        }\n\n        let option = '';\n        for (const o in options) {\n            if (scene[e][o] > 0) {\n                let option_icon = options[o][1];\n                let option_color = colors.none;\n                let option_name = msg.dictionary.option_scene[o] || o;\n                option += '<i class=\"icon-in-row mdi mdi-' + option_icon + '\" style=\"color:' + option_color + '\" title=\"' + option_name + '\"></i>';\n            }\n        }\n\n        dropdownOptions[i++] = {\n            'scene_icon': '<i class=\"icon-in-row mdi mdi-' + icon + '\" style=\"color:' + color + '\" title=\"' + scene[e]['mode'] + '\"></i>',\n            'target': e,\n            'target_icon': '<i class=\"icon-in-row mdi mdi-' + ticon[1] + '\" title=\"' + ticon[2] + '\"></i>',\n            'name': room + ' / ' + name,\n            'option': '<span style=\"white-space: nowrap;\">' + option + '</span>',\n            'enabled': enabled,\n            'disable': enabled ? msg.dictionary.scene.scenelist_disbale || 'Disable' : msg.dictionary.scene.scenelist_enable || 'Enable',\n            'delete': msg.dictionary.scene.scenelist_delete || 'Delete'\n        };\n    }\n}\nnode.status({text: i});\n\ndropdownOptions.sort((a, b) => a.name.localeCompare(b.name));\n\nmsg.payload = dropdownOptions;\nmsg.ui_update = {\n    'label': ''\n}\n\nawait new Promise(resolve => setTimeout(resolve, 250));\nreturn msg;",
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nawait new Promise(resolve => setTimeout(resolve, 10));\nnode.status({ 'text': '' });\n\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\n// Check action\nif (global.get('form[\"' + msg.hmi.id + '\"][\"scene\"][\"action\"]', 'memoryOnly') !== 'scenelist') {\n\n    return;\n}\n\nnode.status({ fill: 'green' });\n\nlet colors = { ...(global.get('describe.colors', 'memoryOnly') || {}) };\nlet scene = { ...(global.get('scene', 'memoryOnly') || {}) };\nlet rooms = { ...(global.get('rooms.base', 'memoryOnly') || {}) };\nlet parent = { ...(global.get('parent', 'memoryOnly') || {}) };\nlet options = { ...(global.get('describe.routines', 'memoryOnly') || {}) };\nlet scene_icon = ['pause', 'play'];\n\nlet i = 0;\nlet dropdownOptions = [];\n\nfor (const e in scene) {\n    let entity = global.get('entity[\"' + e + '\"]', 'memoryOnly');\n    if (typeof entity === 'object') {\n        let enabled = Boolean(scene[e]['enabled']);\n        let color = enabled ? colors.theme : colors.empty;\n        let icon = enabled ? scene_icon[1] : scene_icon[0];\n        let ticon = global.get('describe[\"elements\"][\"' + entity['element'] + '\"]', 'memoryOnly') || ['help', 'help', 'Unknown'];\n        let room = typeof rooms[entity['room']] === 'object' ? rooms[entity['room']]['name'] : entity['room'];\n        let name = entity['name'];\n        if (name === '' || name === entity['id']) {\n            name = typeof parent[entity['parent']] === 'object' ? parent[entity['parent']]['name'] : '';\n            if (name === '') {\n                name = entity['parent'];\n            }\n        }\n\n        let option = '';\n        for (const o in options) {\n            if (scene[e][o] > 0) {\n                let option_icon = options[o][1];\n                let option_color = colors.none;\n                let option_name = msg.dictionary.option_scene[o] || o;\n                option += '<i class=\"icon-in-row mdi mdi-' + option_icon + '\" style=\"color:' + option_color + '\" title=\"' + option_name + '\"></i>';\n            }\n        }\n\n        dropdownOptions[i++] = {\n            'scene_icon': '<i class=\"icon-in-row mdi mdi-' + icon + '\" style=\"color:' + color + '\" title=\"' + scene[e]['mode'] + '\"></i>',\n            'target': e,\n            'target_icon': '<i class=\"icon-in-row mdi mdi-' + ticon[1] + '\" title=\"' + ticon[2] + '\"></i>',\n            'name': room + ' / ' + name,\n            'option': '<span style=\"white-space: nowrap;\">' + option + '</span>',\n            'enabled': enabled,\n            'disable': enabled ? msg.dictionary.scene.scenelist_disbale || 'Disable' : msg.dictionary.scene.scenelist_enable || 'Enable',\n            'delete': msg.dictionary.scene.scenelist_delete || 'Delete'\n        };\n    }\n}\nnode.status({text: i});\n\ndropdownOptions.sort((a, b) => a.name.localeCompare(b.name));\n\nmsg.payload = dropdownOptions;\nmsg.ui_update = {\n    'label': ''\n}\n\nawait new Promise(resolve => setTimeout(resolve, 250));\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -17978,7 +18562,7 @@
         "z": "56c0b44ca387382c",
         "g": "5d38062b01fae17a",
         "name": "data",
-        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nawait new Promise(resolve => setTimeout(resolve, 10));\nnode.status({ 'text': '' });\n\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\n// Check action\nif (global.get('form[\"' + msg.hmi.id + '\"][\"scene\"][\"action\"]', 'memoryOnly') !== 'triggerlist') {\n\n    return;\n}\n\nnode.status({ fill: 'green' });\n\nconst scene = { ...(global.get('scene', 'memoryOnly') || {}) };\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\nconst room = { ...(global.get('room', 'memoryOnly') || {}) };\nconst parent = { ...(global.get('parent', 'memoryOnly') || {}) };\nconst colors = { ...(global.get('describe.colors', 'memoryOnly') || {}) };\nconst scene_icon = ['pause', 'play'];\n\nlet i = 0;\nlet dropdownOptions = [];\n\n\nfor (const e in scene) {\n\n    if (typeof scene[e]['trigger'] !== 'object' ||\n        typeof entity[e] !== 'object'\n    ) {\n\n        continue;\n    }\n    \n    let enabled = Boolean(scene[e]['enabled']);\n    let color = enabled ? colors.theme : colors.empty;\n    let icon = enabled ? scene_icon[1] : scene_icon[0];\n\n    let eicon = global.get('describe[\"elements\"][\"' + entity[e]['element'] + '\"]', 'memoryOnly') || ['help', 'help'];\n    let eroom = typeof room[entity[e]['room']] === 'object' ? room[entity[e]['room']]['name'] : entity[e]['room'];\n    let ename = entity[e]['name'];\n    if (ename === '' || ename === entity[e]['id']) {\n        ename = typeof parent[entity[e]['parent']] === 'object' ? parent[entity[e]['parent']]['name'] : '';\n        if (ename === '') {\n            ename = entity[e]['parent'];\n        }\n    }\n\n    for (const t in scene[e]['trigger']) {\n\n        if (typeof entity[t] !== 'object') {\n\n            continue;\n        }\n\n        let ticon = global.get('describe[\"elements\"][\"' + entity[t]['element'] + '\"]', 'memoryOnly') || ['help', 'help'];\n\n        let troom = typeof room[entity[t]['room']] === 'object' ? room[entity[t]['room']]['name'] : entity[t]['room'];\n        let tname = entity[t]['name'];\n        if (tname === '' || tname === entity[t]['id']) {\n            tname = typeof parent[entity[t]['parent']] === 'object' ? parent[entity[t]['parent']]['name'] : '';\n            if (tname === '') {\n                tname = entity[t]['parent'];\n            }\n        }\n\n        dropdownOptions[i++] = {\n            'scene_icon': '<i class=\"icon-in-row mdi mdi-' + icon + '\" style=\"color:' + color + '\" title=\"' + icon + '\"></i>',\n            'trigger_icon': '<i class=\"icon-in-row mdi mdi-' + ticon[1] + '\" title=\"' + entity[t]['element'] + '\"></i>',\n            'trigger': t,\n            'trigger_name': troom + ' / ' + tname,\n            'target_icon': '<i class=\"icon-in-row mdi mdi-' + eicon[1] + '\" title=\"' + entity[e]['element'] + '\"></i>',\n            'target': e,\n            'target_name': eroom + ' / ' + ename,\n            'inputhigh': scene[e]['trigger'][t]['inputhigh'],\n            'inputlow': scene[e]['trigger'][t]['inputlow'],\n            'outputhigh': /*msg.dictionary.option_trigger[scene[e]['trigger'][t]['outputhigh']] || */scene[e]['trigger'][t]['outputhigh'],\n            'outputlow': /*msg.dictionary.option_trigger[scene[e]['trigger'][t]['outputlow']] || */scene[e]['trigger'][t]['outputlow'],\n            'delete': msg.dictionary.scene.triggerlist_delete || 'Delete'\n        };\n    }\n}\n\nnode.status({ text: i });\n\ndropdownOptions.sort((a, b) => a.trigger.localeCompare(b.trigger));\n\nmsg.payload = dropdownOptions;\nmsg.ui_update = {\n    'label': ''\n}\n\nawait new Promise(resolve => setTimeout(resolve, 250));\nreturn msg;",
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nawait new Promise(resolve => setTimeout(resolve, 10));\nnode.status({ 'text': '' });\n\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\n// Check action\nif (global.get('form[\"' + msg.hmi.id + '\"][\"scene\"][\"action\"]', 'memoryOnly') !== 'triggerlist') {\n\n    return;\n}\n\nnode.status({ fill: 'green' });\n\nconst scene = { ...(global.get('scene', 'memoryOnly') || {}) };\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\nconst room = { ...(global.get('room.base', 'memoryOnly') || {}) };\nconst parent = { ...(global.get('parent', 'memoryOnly') || {}) };\nconst colors = { ...(global.get('describe.colors', 'memoryOnly') || {}) };\nconst scene_icon = ['pause', 'play'];\n\nlet i = 0;\nlet dropdownOptions = [];\n\n\nfor (const e in scene) {\n\n    if (typeof scene[e]['trigger'] !== 'object' ||\n        typeof entity[e] !== 'object'\n    ) {\n\n        continue;\n    }\n    \n    let enabled = Boolean(scene[e]['enabled']);\n    let color = enabled ? colors.theme : colors.empty;\n    let icon = enabled ? scene_icon[1] : scene_icon[0];\n\n    let eicon = global.get('describe[\"elements\"][\"' + entity[e]['element'] + '\"]', 'memoryOnly') || ['help', 'help'];\n    let eroom = typeof room[entity[e]['room']] === 'object' ? room[entity[e]['room']]['name'] : entity[e]['room'];\n    let ename = entity[e]['name'];\n    if (ename === '' || ename === entity[e]['id']) {\n        ename = typeof parent[entity[e]['parent']] === 'object' ? parent[entity[e]['parent']]['name'] : '';\n        if (ename === '') {\n            ename = entity[e]['parent'];\n        }\n    }\n\n    for (const t in scene[e]['trigger']) {\n\n        if (typeof entity[t] !== 'object') {\n\n            continue;\n        }\n\n        let ticon = global.get('describe[\"elements\"][\"' + entity[t]['element'] + '\"]', 'memoryOnly') || ['help', 'help'];\n\n        let troom = typeof room[entity[t]['room']] === 'object' ? room[entity[t]['room']]['name'] : entity[t]['room'];\n        let tname = entity[t]['name'];\n        if (tname === '' || tname === entity[t]['id']) {\n            tname = typeof parent[entity[t]['parent']] === 'object' ? parent[entity[t]['parent']]['name'] : '';\n            if (tname === '') {\n                tname = entity[t]['parent'];\n            }\n        }\n\n        dropdownOptions[i++] = {\n            'scene_icon': '<i class=\"icon-in-row mdi mdi-' + icon + '\" style=\"color:' + color + '\" title=\"' + icon + '\"></i>',\n            'trigger_icon': '<i class=\"icon-in-row mdi mdi-' + ticon[1] + '\" title=\"' + entity[t]['element'] + '\"></i>',\n            'trigger': t,\n            'trigger_name': troom + ' / ' + tname,\n            'target_icon': '<i class=\"icon-in-row mdi mdi-' + eicon[1] + '\" title=\"' + entity[e]['element'] + '\"></i>',\n            'target': e,\n            'target_name': eroom + ' / ' + ename,\n            'inputhigh': scene[e]['trigger'][t]['inputhigh'],\n            'inputlow': scene[e]['trigger'][t]['inputlow'],\n            'outputhigh': /*msg.dictionary.option_trigger[scene[e]['trigger'][t]['outputhigh']] || */scene[e]['trigger'][t]['outputhigh'],\n            'outputlow': /*msg.dictionary.option_trigger[scene[e]['trigger'][t]['outputlow']] || */scene[e]['trigger'][t]['outputlow'],\n            'delete': msg.dictionary.scene.triggerlist_delete || 'Delete'\n        };\n    }\n}\n\nnode.status({ text: i });\n\ndropdownOptions.sort((a, b) => a.trigger.localeCompare(b.trigger));\n\nmsg.payload = dropdownOptions;\nmsg.ui_update = {\n    'label': ''\n}\n\nawait new Promise(resolve => setTimeout(resolve, 250));\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -18166,7 +18750,7 @@
         "z": "56c0b44ca387382c",
         "g": "5ee9c437401835c9",
         "name": "data",
-        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nawait new Promise(resolve => setTimeout(resolve, 10));\nnode.status({ 'text': '' });\n\nif (!msg.enabled) {\n    msg.reset = true;\n    node.send([msg, msg]);\n    return;\n}\n\n// Check action\nif (global.get('form[\"' + msg.hmi.id + '\"][\"scene\"][\"action\"]', 'memoryOnly') !== 'timerlist') {\n\n    return;\n}\n\nnode.status({ fill: 'green' });\n\nconst scene = { ...(global.get('scene', 'memoryOnly') || {}) };\nconst rooms = { ...(global.get('room', 'memoryOnly') || {}) };\nconst parent = { ...(global.get('parent', 'memoryOnly') || {}) };\nconst colors = { ...(global.get('describe.colors', 'memoryOnly') || {}) };\nconst scene_icon = ['pause', 'play'];\n    \n\nlet i = 0;\nlet dropdownOptions = [];\n\nfor (const e in scene) {\n    if (typeof scene[e]['timer'] !== 'number' || scene[e]['timer'] === 0) {\n\n        continue;\n    }\n\n    const entity = {...(global.get('entity[\"' + e + '\"]', 'memoryOnly') || {})};\n    if (typeof entity.uid !== 'string') {\n\n        continue;\n    }\n    \n    let enabled = Boolean(scene[e]['enabled']);\n    let color = enabled ? colors.theme : colors.empty;\n    let icon = enabled ? scene_icon[1] : scene_icon[0];\n\n    let ticon = global.get('describe[\"elements\"][\"' + entity['element'] + '\"]', 'memoryOnly') || ['help', 'help'];\n    let room = typeof rooms[entity['room']] === 'object' ? rooms[entity['room']]['name'] : entity['room'];\n    let name = entity['name'];\n    if (name === '' || name === entity['id']) {\n        name = typeof parent[entity['parent']] === 'object' ? parent[entity['parent']]['name'] : '';\n        if (name === '') {\n            name = entity['parent'];\n        }\n    }\n\n    let time = scene[e]['timer'] + (scene[e]['duration'] * 60 * 1000);\n    time = (new Date(time)).toLocaleString(msg.dictionary.common.locales)\n    \n    dropdownOptions[i++] = {\n        'scene_icon': '<i class=\"icon-in-row mdi mdi-' + icon + '\" style=\"color:' + color + '\" title=\"' + icon + '\"></i>',\n        'target': e,\n        'target_icon': '<i class=\"icon-in-row mdi mdi-' + ticon[1] + '\"  title=\"' + entity['element'] + '\"></i>',\n        'target_name': room + ' / ' + name,\n        'time': time,\n        'duration': scene[e]['duration'] + 'm',\n        'delete': msg.dictionary.scene.timerlist_delete || 'Delete'\n    };\n}\n\nnode.status({ text: i });\n\ndropdownOptions.sort((a, b) => a.target_name.localeCompare(b.target_name));\n\nmsg.payload = dropdownOptions;\nmsg.ui_update = {\n    'label': ''\n}\n\nawait new Promise(resolve => setTimeout(resolve, 250));\nreturn msg;",
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nawait new Promise(resolve => setTimeout(resolve, 10));\nnode.status({ 'text': '' });\n\nif (!msg.enabled) {\n    msg.reset = true;\n    node.send([msg, msg]);\n    return;\n}\n\n// Check action\nif (global.get('form[\"' + msg.hmi.id + '\"][\"scene\"][\"action\"]', 'memoryOnly') !== 'timerlist') {\n\n    return;\n}\n\nnode.status({ fill: 'green' });\n\nconst scene = { ...(global.get('scene', 'memoryOnly') || {}) };\nconst rooms = { ...(global.get('rooms.base', 'memoryOnly') || {}) };\nconst parent = { ...(global.get('parent', 'memoryOnly') || {}) };\nconst colors = { ...(global.get('describe.colors', 'memoryOnly') || {}) };\nconst scene_icon = ['pause', 'play'];\n    \n\nlet i = 0;\nlet dropdownOptions = [];\n\nfor (const e in scene) {\n    if (typeof scene[e]['timer'] !== 'number' || scene[e]['timer'] === 0) {\n\n        continue;\n    }\n\n    const entity = {...(global.get('entity[\"' + e + '\"]', 'memoryOnly') || {})};\n    if (typeof entity.uid !== 'string') {\n\n        continue;\n    }\n    \n    let enabled = Boolean(scene[e]['enabled']);\n    let color = enabled ? colors.theme : colors.empty;\n    let icon = enabled ? scene_icon[1] : scene_icon[0];\n\n    let ticon = global.get('describe[\"elements\"][\"' + entity['element'] + '\"]', 'memoryOnly') || ['help', 'help'];\n    let room = typeof rooms[entity['room']] === 'object' ? rooms[entity['room']]['name'] : entity['room'];\n    let name = entity['name'];\n    if (name === '' || name === entity['id']) {\n        name = typeof parent[entity['parent']] === 'object' ? parent[entity['parent']]['name'] : '';\n        if (name === '') {\n            name = entity['parent'];\n        }\n    }\n\n    let time = scene[e]['timer'] + (scene[e]['duration'] * 60 * 1000);\n    time = (new Date(time)).toLocaleString(msg.dictionary.common.locales)\n    \n    dropdownOptions[i++] = {\n        'scene_icon': '<i class=\"icon-in-row mdi mdi-' + icon + '\" style=\"color:' + color + '\" title=\"' + icon + '\"></i>',\n        'target': e,\n        'target_icon': '<i class=\"icon-in-row mdi mdi-' + ticon[1] + '\"  title=\"' + entity['element'] + '\"></i>',\n        'target_name': room + ' / ' + name,\n        'time': time,\n        'duration': scene[e]['duration'] + 'm',\n        'delete': msg.dictionary.scene.timerlist_delete || 'Delete'\n    };\n}\n\nnode.status({ text: i });\n\ndropdownOptions.sort((a, b) => a.target_name.localeCompare(b.target_name));\n\nmsg.payload = dropdownOptions;\nmsg.ui_update = {\n    'label': ''\n}\n\nawait new Promise(resolve => setTimeout(resolve, 250));\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -18305,7 +18889,7 @@
         "z": "56c0b44ca387382c",
         "g": "82df6aae63bd1422",
         "name": "data",
-        "func": "await new Promise(resolve => setTimeout(resolve, 10));\nnode.status({ text: '' });\nif (!msg.enabled) {\n    msg.payload = [];\n\n    return msg;\n}\n\nif (typeof msg.scene.trigger !== 'object') {\n\n    return;\n}\n\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\nconst parent = { ...(global.get('parent', 'memoryOnly') || {}) };\nconst room = { ...(global.get('room', 'memoryOnly') || {}) };\nconst color = { ...(global.get('describe.colors', 'memoryOnly') || {}) };\n\nlet i = 0;\nlet dropdownOptions = [];\n\nfor (const t in msg.scene.trigger) {\n    if (typeof entity[t] !== 'object') {\n        continue;\n    }\n\n    let troom = typeof room[entity[t]['room']] === 'object' ? room[entity[t]['room']]['name'] : entity[t]['room'];\n    let tname = entity[t]['name'];\n    if (tname === '' || tname === entity[t]['id']) {\n        tname = typeof parent[entity[t]['parent']] === 'object' ? parent[entity[t]['parent']]['name'] : '';\n        if (tname === '') {\n            tname = entity[t]['parent'];\n        }\n    }\n    let ticon = global.get('describe[\"elements\"][\"' + entity[t]['element'] + '\"]', 'memoryOnly') || ['help', 'help'];\n    let toffline = (entity[t]['seen'] + (24 * 60 * 60 * 1000)) < Date.now() ? true : false;\n    let tcolor = toffline ? color.off : color.theme;\n    let ttitle = entity[t]['element'] + ' : ' + entity[t]['value'].toString() + (toffline ? ' ' + (msg.dictionary.scene.triggerlist_offline || ' / offline') : '');\n\n    let outputhigh = msg.dictionary.option_trigger[msg.scene.trigger[t]['outputhigh']] || '';\n    let outputlow = msg.dictionary.option_trigger[msg.scene.trigger[t]['outputlow']] || '';\n\n    dropdownOptions[i++] = {\n        'target': msg.scene.target,\n        'trigger_icon': '<i class=\"icon-in-row mdi mdi-' + ticon[1] + '\" title=\"' + ttitle + '\" style=\"color: ' + tcolor + '\"></i>',\n        'trigger': t,\n        'trigger_name': troom + ' / ' + tname,\n        'inputhigh': msg.scene.trigger[t]['inputhigh'],\n        'inputlow': msg.scene.trigger[t]['inputlow'],\n        'outputhigh': outputhigh,\n        'outputlow': outputlow,\n\n        'delete': msg.dictionary.scene.triggerlist_delete || 'Delete',\n        'loop': msg.scene\n    };\n}\n            \nnode.status({ text: i });\n\ndropdownOptions.sort((a, b) => a.trigger.localeCompare(b.trigger));\n\nmsg.payload = dropdownOptions;\nmsg.ui_update = {\n    'label': ''\n}\n\nawait new Promise(resolve => setTimeout(resolve, 250));\nreturn msg;",
+        "func": "await new Promise(resolve => setTimeout(resolve, 10));\nnode.status({ text: '' });\nif (!msg.enabled) {\n    msg.payload = [];\n\n    return msg;\n}\n\nif (typeof msg.scene.trigger !== 'object') {\n\n    return;\n}\n\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\nconst parent = { ...(global.get('parent', 'memoryOnly') || {}) };\nconst room = { ...(global.get('rooms.base', 'memoryOnly') || {}) };\nconst color = { ...(global.get('describe.colors', 'memoryOnly') || {}) };\n\nlet i = 0;\nlet dropdownOptions = [];\n\nfor (const t in msg.scene.trigger) {\n    if (typeof entity[t] !== 'object') {\n        continue;\n    }\n\n    let troom = typeof room[entity[t]['room']] === 'object' ? room[entity[t]['room']]['name'] : entity[t]['room'];\n    let tname = entity[t]['name'];\n    if (tname === '' || tname === entity[t]['id']) {\n        tname = typeof parent[entity[t]['parent']] === 'object' ? parent[entity[t]['parent']]['name'] : '';\n        if (tname === '') {\n            tname = entity[t]['parent'];\n        }\n    }\n    let ticon = global.get('describe[\"elements\"][\"' + entity[t]['element'] + '\"]', 'memoryOnly') || ['help', 'help'];\n    let toffline = (entity[t]['seen'] + (24 * 60 * 60 * 1000)) < Date.now() ? true : false;\n    let tcolor = toffline ? color.off : color.theme;\n    let ttitle = entity[t]['element'] + ' : ' + entity[t]['value'].toString() + (toffline ? ' ' + (msg.dictionary.scene.triggerlist_offline || ' / offline') : '');\n\n    let outputhigh = msg.dictionary.option_trigger[msg.scene.trigger[t]['outputhigh']] || '';\n    let outputlow = msg.dictionary.option_trigger[msg.scene.trigger[t]['outputlow']] || '';\n\n    dropdownOptions[i++] = {\n        'target': msg.scene.target,\n        'trigger_icon': '<i class=\"icon-in-row mdi mdi-' + ticon[1] + '\" title=\"' + ttitle + '\" style=\"color: ' + tcolor + '\"></i>',\n        'trigger': t,\n        'trigger_name': troom + ' / ' + tname,\n        'inputhigh': msg.scene.trigger[t]['inputhigh'],\n        'inputlow': msg.scene.trigger[t]['inputlow'],\n        'outputhigh': outputhigh,\n        'outputlow': outputlow,\n\n        'delete': msg.dictionary.scene.triggerlist_delete || 'Delete',\n        'loop': msg.scene\n    };\n}\n            \nnode.status({ text: i });\n\ndropdownOptions.sort((a, b) => a.trigger.localeCompare(b.trigger));\n\nmsg.payload = dropdownOptions;\nmsg.ui_update = {\n    'label': ''\n}\n\nawait new Promise(resolve => setTimeout(resolve, 250));\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -18634,7 +19218,7 @@
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "name": "data",
-        "func": "node.status({ 'text': '' });\n\nmsg.class = 'remove';\nmsg.enabled = false;\nmsg.payload = '';\nmsg.ui_update = {\n    'label': ''\n}\n\nnode.send([msg, msg]);\n\nif (msg.hmi.id === '') {\n\n    return;\n}\n\nmsg.class = '';\nmsg.enabled = true;\nmsg.payload = '';\n\nconst uid = global.get('form[\"' + msg.hmi.id + '\"][\"scene\"][\"triggeradd\"][\"trigger\"]', 'memoryOnly') || '';\nif (uid === '') {\n    msg.ui_update = {\n        'label': msg.dictionary.scene.triggeradd_add || 'Add trigger'\n    }\n\n    node.send([msg, null]);\n\n    node.status({ 'fill': 'yellow' });\n\n    return;\n}\n\nmsg.payload = msg.dictionary.scene.triggeradd_edit || 'Edit trigger';\nmsg.ui_update = {\n    'label': ''\n}\n\nnode.send([msg, null]);\n\nconst entity = { ...(global.get('entity[\"' + uid + '\"]', 'memoryOnly') || {}) };\nif (typeof entity.uid !== 'string') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\n\nconst room = { ...(global.get('room', 'memoryOnly') || {}) };\nconst parent = { ...(global.get('parent', 'memoryOnly') || {}) };\nlet ticon = global.get('describe[\"elements\"][\"' + entity['element'] + '\"]', 'memoryOnly') || ['help', 'help'];\nlet troom = typeof room[entity['room']] === 'object' ? room[entity['room']]['name'] : entity['room'];\nlet tname = entity['name'];\nif (tname === '' || tname === entity['id']) {\n    tname = typeof parent[entity['parent']] === 'object' ? parent[entity['parent']]['name'] : '';\n    if (tname === '') {\n        tname = entity['parent']['name'];\n    }\n}\n\nmsg.payload = troom + ' / ' + tname + ' (' + entity['uid'] + ' = ' + entity['value'].toString() + ')';\nmsg.ui_update = {\n    'icon': ticon,\n    'label': ''\n}\n\nnode.send([null, msg]);\n\nnode.status({ 'fill': 'green' });\n\nreturn;",
+        "func": "node.status({ 'text': '' });\n\nmsg.class = 'remove';\nmsg.enabled = false;\nmsg.payload = '';\nmsg.ui_update = {\n    'label': ''\n}\n\nnode.send([msg, msg]);\n\nif (msg.hmi.id === '') {\n\n    return;\n}\n\nmsg.class = '';\nmsg.enabled = true;\nmsg.payload = '';\n\nconst uid = global.get('form[\"' + msg.hmi.id + '\"][\"scene\"][\"triggeradd\"][\"trigger\"]', 'memoryOnly') || '';\nif (uid === '') {\n    msg.ui_update = {\n        'label': msg.dictionary.scene.triggeradd_add || 'Add trigger'\n    }\n\n    node.send([msg, null]);\n\n    node.status({ 'fill': 'yellow' });\n\n    return;\n}\n\nmsg.payload = msg.dictionary.scene.triggeradd_edit || 'Edit trigger';\nmsg.ui_update = {\n    'label': ''\n}\n\nnode.send([msg, null]);\n\nconst entity = { ...(global.get('entity[\"' + uid + '\"]', 'memoryOnly') || {}) };\nif (typeof entity.uid !== 'string') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\n\nconst room = { ...(global.get('rooms.base', 'memoryOnly') || {}) };\nconst parent = { ...(global.get('parent', 'memoryOnly') || {}) };\nlet ticon = global.get('describe[\"elements\"][\"' + entity['element'] + '\"]', 'memoryOnly') || ['help', 'help'];\nlet troom = typeof room[entity['room']] === 'object' ? room[entity['room']]['name'] : entity['room'];\nlet tname = entity['name'];\nif (tname === '' || tname === entity['id']) {\n    tname = typeof parent[entity['parent']] === 'object' ? parent[entity['parent']]['name'] : '';\n    if (tname === '') {\n        tname = entity['parent']['name'];\n    }\n}\n\nmsg.payload = troom + ' / ' + tname + ' (' + entity['uid'] + ' = ' + entity['value'].toString() + ')';\nmsg.ui_update = {\n    'icon': ticon,\n    'label': ''\n}\n\nnode.send([null, msg]);\n\nnode.status({ 'fill': 'green' });\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -18787,7 +19371,7 @@
         "z": "56c0b44ca387382c",
         "g": "c378c7e8b391f73b",
         "name": "data",
-        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nawait new Promise(resolve => setTimeout(resolve, 10));\nnode.status({ 'text': '' });\n\nmsg.topic = msg.hmi.id;\n\nif (!msg.enabled) {\n    msg.reset = true;\n    msg.class = 'remove';\n\n    node.send([msg]);\n    return;\n}\ndelete msg.reset;\n\n// Check action\nif (global.get('form[\"' + msg.hmi.id + '\"][\"scene\"][\"action\"]', 'memoryOnly') !== 'eventlist') {\n\n    return;\n}\n\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\nconst parent = { ...(global.get('parent', 'memoryOnly') || {}) };\nconst room = { ...(global.get('room', 'memoryOnly') || {}) };\nconst color = { ...(global.get('describe.colors', 'memoryOnly') || {}) };\nlet i = 0;\nlet dropdownOptions = [];\n\nconst event = [ ...(flow.get('event', 'memoryOnly') || []) ]\nfor (let k = 0; k < event.length; k++) {\n\n    let time = (new Date(event[k]['ts'])).toLocaleTimeString(msg.dictionary.common.locales)\n\n    let t = entity[event[k]['trigger']] || {};\n    let texists = typeof t.room !== 'undefined';\n    let ticon = texists ? (global.get('describe[\"elements\"][\"' + t.element + '\"]', 'memoryOnly') || ['help', 'help']) : ['clock-outline', 'clock-outline'];\n    let troom = texists ? (typeof room[t.room] === 'object' ? room[t.room]['name'] : t.room) : 'cron';\n    let tname = texists ? (t.name !== '' ? t.name : t.id) : event[k]['trigger'];\n    if (tname === '' || tname === t.id) {\n        tname = typeof parent[t.parent] === 'object' ? parent[t.parent]['name'] : '';\n        if (tname === '') {\n            tname = t.parent;\n        }\n    }\n\n    let e = entity[event[k]['target']] || {};\n    let eicon = global.get('describe[\"elements\"][\"' + e.element + '\"]', 'memoryOnly') || ['help', 'help'];\n    let eroom = typeof room[e.room] === 'object' ? room[e.room]['name'] : e.room;\n    let ename = e.name;\n    if (ename === '' || ename === e.id) {\n        ename = typeof parent[e.parent] === 'object' ? parent[e.parent]['name'] : '';\n        if (ename === '') {\n            ename = e.parent;\n        }\n    }\n\n    let vicon = !!event[k]['value'] ? 'play' : 'stop';\n    let vname = event[k]['value'].toString();\n    let vcolor = !!event[k]['value'] ? color.theme : color.empty;\n\n    dropdownOptions[i++] = {\n        'ts': event[k]['ts'],\n        'time': time,\n\n        'scene_icon': '<i class=\"icon-in-row mdi mdi-' + vicon + '\" title=\"' + vname + '\" style=\"color: ' + vcolor + '\"></i>',\n\n        'trigger': t.uid,\n        'trigger_icon': '<i class=\"icon-in-row mdi mdi-' + ticon[1] + '\" title=\"' + t.element + '\"></i>',\n        'trigger_name': troom + ' / ' + tname,\n\n        'target_icon': '<i class=\"icon-in-row mdi mdi-' + eicon[1] + '\" title=\"' + e.element + '\"></i>',\n        'target': e.uid,\n        'target_name': eroom + ' / ' + ename\n    };\n}\n\nnode.status({ text: i });\n\ndropdownOptions.sort((a, b) => b.ts - a.ts);\n\nmsg.payload = dropdownOptions;\nmsg.ui_update = {\n    'label': ''\n}\n\nawait new Promise(resolve => setTimeout(resolve, 250));\nreturn msg;",
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nawait new Promise(resolve => setTimeout(resolve, 10));\nnode.status({ 'text': '' });\n\nmsg.topic = msg.hmi.id;\n\nif (!msg.enabled) {\n    msg.reset = true;\n    msg.class = 'remove';\n\n    node.send([msg]);\n    return;\n}\ndelete msg.reset;\n\n// Check action\nif (global.get('form[\"' + msg.hmi.id + '\"][\"scene\"][\"action\"]', 'memoryOnly') !== 'eventlist') {\n\n    return;\n}\n\nconst entity = { ...(global.get('entity', 'memoryOnly') || {}) };\nconst parent = { ...(global.get('parent', 'memoryOnly') || {}) };\nconst room = { ...(global.get('rooms.base', 'memoryOnly') || {}) };\nconst color = { ...(global.get('describe.colors', 'memoryOnly') || {}) };\nlet i = 0;\nlet dropdownOptions = [];\n\nconst event = [ ...(flow.get('event', 'memoryOnly') || []) ]\nfor (let k = 0; k < event.length; k++) {\n\n    let time = (new Date(event[k]['ts'])).toLocaleTimeString(msg.dictionary.common.locales)\n\n    let t = entity[event[k]['trigger']] || {};\n    let texists = typeof t.room !== 'undefined';\n    let ticon = texists ? (global.get('describe[\"elements\"][\"' + t.element + '\"]', 'memoryOnly') || ['help', 'help']) : ['clock-outline', 'clock-outline'];\n    let troom = texists ? (typeof room[t.room] === 'object' ? room[t.room]['name'] : t.room) : 'cron';\n    let tname = texists ? (t.name !== '' ? t.name : t.id) : event[k]['trigger'];\n    if (tname === '' || tname === t.id) {\n        tname = typeof parent[t.parent] === 'object' ? parent[t.parent]['name'] : '';\n        if (tname === '') {\n            tname = t.parent;\n        }\n    }\n\n    let e = entity[event[k]['target']] || {};\n    let eicon = global.get('describe[\"elements\"][\"' + e.element + '\"]', 'memoryOnly') || ['help', 'help'];\n    let eroom = typeof room[e.room] === 'object' ? room[e.room]['name'] : e.room;\n    let ename = e.name;\n    if (ename === '' || ename === e.id) {\n        ename = typeof parent[e.parent] === 'object' ? parent[e.parent]['name'] : '';\n        if (ename === '') {\n            ename = e.parent;\n        }\n    }\n\n    let vicon = !!event[k]['value'] ? 'play' : 'stop';\n    let vname = event[k]['value'].toString();\n    let vcolor = !!event[k]['value'] ? color.theme : color.empty;\n\n    dropdownOptions[i++] = {\n        'ts': event[k]['ts'],\n        'time': time,\n\n        'scene_icon': '<i class=\"icon-in-row mdi mdi-' + vicon + '\" title=\"' + vname + '\" style=\"color: ' + vcolor + '\"></i>',\n\n        'trigger': t.uid,\n        'trigger_icon': '<i class=\"icon-in-row mdi mdi-' + ticon[1] + '\" title=\"' + t.element + '\"></i>',\n        'trigger_name': troom + ' / ' + tname,\n\n        'target_icon': '<i class=\"icon-in-row mdi mdi-' + eicon[1] + '\" title=\"' + e.element + '\"></i>',\n        'target': e.uid,\n        'target_name': eroom + ' / ' + ename\n    };\n}\n\nnode.status({ text: i });\n\ndropdownOptions.sort((a, b) => b.ts - a.ts);\n\nmsg.payload = dropdownOptions;\nmsg.ui_update = {\n    'label': ''\n}\n\nawait new Promise(resolve => setTimeout(resolve, 250));\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -21435,201 +22019,11 @@
         "name": "entity - page",
         "mode": "link",
         "links": [
-            "ad848617eded124c",
-            "c6104f486096a92f",
-            "3790dfc240bc5f6d"
+            "c6104f486096a92f"
         ],
         "x": 395,
         "y": 140,
         "wires": []
-    },
-    {
-        "id": "ad848617eded124c",
-        "type": "link in",
-        "z": "3d7897ba0ee14173",
-        "g": "3a6d56b6dcd8540a",
-        "name": "entity - room",
-        "links": [
-            "9e0b692686687926",
-            "b3e8adf92527c468"
-        ],
-        "x": 145,
-        "y": 320,
-        "wires": [
-            [
-                "e56daf17aa5fb143",
-                "7385c91ca49ccb1a"
-            ]
-        ]
-    },
-    {
-        "id": "d3b7417ee68351e1",
-        "type": "ui-text",
-        "z": "3d7897ba0ee14173",
-        "g": "3a6d56b6dcd8540a",
-        "group": "fa076f843950d108",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "entity - room - title",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "ui-title",
-        "value": "payload",
-        "valueType": "msg",
-        "x": 470,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "009f5658297ac269",
-        "type": "ui-form",
-        "z": "3d7897ba0ee14173",
-        "g": "3a6d56b6dcd8540a",
-        "name": "entity - room - form",
-        "group": "fa076f843950d108",
-        "label": "",
-        "order": 3,
-        "width": "0",
-        "height": "0",
-        "options": [
-            {
-                "label": "name",
-                "key": "name",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "outdoor",
-                "key": "outdoor",
-                "type": "text",
-                "required": false,
-                "rows": null
-            },
-            {
-                "label": "delete",
-                "key": "delete",
-                "type": "checkbox",
-                "required": false,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "name": "",
-            "outdoor": "",
-            "delete": false
-        },
-        "payload": "",
-        "submit": "►",
-        "cancel": "",
-        "resetOnSubmit": true,
-        "topic": "topic",
-        "topicType": "msg",
-        "splitLayout": "",
-        "className": "",
-        "passthru": false,
-        "dropdownOptions": [],
-        "x": 870,
-        "y": 320,
-        "wires": [
-            [
-                "1f6ea442bbd4d849"
-            ]
-        ]
-    },
-    {
-        "id": "1f6ea442bbd4d849",
-        "type": "function",
-        "z": "3d7897ba0ee14173",
-        "g": "3a6d56b6dcd8540a",
-        "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\n\nconst room_id = flow.get('room[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '';\n\nif (room_id === '') {\n\n    return;\n}\n\nif (msg.payload.delete) {\n\n}\nelse {\n    const template = { ...(global.get('describe.template.room', 'memoryOnly') || {}) };\n    const room = global.get('room', 'memoryOnly') || {};\n    room[room_id] = { ...template, ...{\n        'id': room_id,\n        'name': msg.payload.name === '' ? room_id : msg.payload.name,\n        'outdoor': msg.payload.outdoor ? 1 : 0,\n    } }\n    global.set('room', room, 'memoryOnly');\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.notice.save_success;\n\n    return msg;\n}\n\nreturn;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1070,
-        "y": 320,
-        "wires": [
-            [
-                "ad48804fec92e759"
-            ]
-        ]
-    },
-    {
-        "id": "ad48804fec92e759",
-        "type": "delay",
-        "z": "3d7897ba0ee14173",
-        "g": "3a6d56b6dcd8540a",
-        "name": "50ms",
-        "pauseType": "delay",
-        "timeout": "50",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 1230,
-        "y": 320,
-        "wires": [
-            [
-                "9e0b692686687926"
-            ]
-        ]
-    },
-    {
-        "id": "9e0b692686687926",
-        "type": "link out",
-        "z": "3d7897ba0ee14173",
-        "g": "3a6d56b6dcd8540a",
-        "name": "entity - room",
-        "mode": "link",
-        "links": [
-            "ad848617eded124c",
-            "f4a2353e5f92576c",
-            "3790dfc240bc5f6d"
-        ],
-        "x": 1355,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "e56daf17aa5fb143",
-        "type": "function",
-        "z": "3d7897ba0ee14173",
-        "g": "3a6d56b6dcd8540a",
-        "name": "data",
-        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (!msg.enabled) {\n    msg.class = 'remove';\n    msg.enabled = false;\n    msg.ui_update = {};\n\n    return [msg, msg];\n}\n\n// entity - room - title\nmsg.payload = msg.dictionary.entity.room_title || 'Rooms';\n\nnode.send([ msg, null ]);\n\n// entity - room - room\nmsg.payload = flow.get('room[\"' + msg.hmi.id + '\"]', 'memoryOnly') || '';\nmsg.ui_update = {\n    'label': msg.dictionary.entity.room_id || 'Room ID'\n};\n\nreturn [null, msg];",
-        "outputs": 2,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 270,
-        "y": 320,
-        "wires": [
-            [
-                "d3b7417ee68351e1"
-            ],
-            [
-                "cb2cfb96f7f9464e"
-            ]
-        ]
     },
     {
         "id": "c6104f486096a92f",
@@ -21680,7 +22074,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "data",
-        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\n// Clear selection\nif (typeof msg.hmi === 'object' && msg.hmi.id !== '') {\n    flow.set('multiselect[\"' + msg.hmi.id + '\"]', [], 'memoryOnly');\n}\n\nif (!msg.enabled) {\n\n    node.send([msg, msg, msg, msg]);\n    return;\n}\n\nmsg.payload = msg.dictionary.entity.list_title || 'Entities';\n    \nnode.send([msg, null, null, null, null]);\n\nmsg.payload = [];\nmsg.ui_update = {\n    'label': ''\n};\n\nlet colors = global.get('describe.colors', 'memoryOnly') || {};\nlet sources = global.get('describe.sources', 'memoryOnly') || {};\nlet parents = global.get('parent', 'memoryOnly') || {};\nlet entities = global.get('entity', 'memoryOnly') || {};\n\nlet i = 0;\nfor (const uid in entities) {\n    let name = entities[uid]['name'] !== '' ? entities[uid]['name'] : entities[uid]['id'] + ' *';\n\n    let parent_name = typeof parents[entities[uid]['parent']] === 'object' ? parents[entities[uid]['parent']]['name'] : '';\n    if (parent_name === '') {\n        parent_name = entities[uid]['parent'];\n    }\n\n    let room = entities[uid]['room'];\n    let room_name = room;\n    if (room !== '') {\n        room_name = global.get('room[\"' + room + '\"][\"name\"]', 'memoryOnly') || room;\n    }\n\n    let color = colors.on;\n    let dead = (entities[uid]['seen'] + 86400000) < Date.now() ? true : false; //24h\n    if (entities[uid]['hidden'] > 0) {\n        color = dead ? colors.median : colors.empty;\n    } else {\n        color = dead ? colors.off : colors.on;\n    }\n    let source = sources[entities[uid]['source']] || ['help', entities[uid]['source']];\n\n    msg.payload[i] = {...entities[uid]};\n    msg.payload[i]['uid'] = uid;\n    msg.payload[i]['name'] = name;\n    msg.payload[i]['room_name'] = room_name;\n    msg.payload[i]['parent_name'] = parent_name;\n    msg.payload[i]['source_icon'] = '<i class=\"icon-in-row mdi mdi-' + source[0] + '\" style=\"color:' + colors.empty + '\" title=\"' + source[1] + '\"></i>';\n    msg.payload[i]['delete'] = msg.dictionary.group_entity.list_delete;\n    msg.payload[i]['hidden_color'] = color;\n\n    i++;\n}\n\n//msg.payload.sort((a, b) => a.id.localeCompare(b.id));\n//msg.payload.sort((a, b) => a.parent.localeCompare(b.parent));\nnode.send([null, msg, null, null]);\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.entity.entitylsit_forgetentity || 'Forget entities'\n}\nnode.send([null, null, msg, null]);\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.entity.entitylist_blockentity || 'Block entities'\n}\nnode.send([null, null, null, msg]);\n\nreturn;",
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\n// Clear selection\nif (typeof msg.hmi === 'object' && msg.hmi.id !== '') {\n    flow.set('multiselect[\"' + msg.hmi.id + '\"]', [], 'memoryOnly');\n}\n\nif (!msg.enabled) {\n\n    node.send([msg, msg, msg, msg]);\n    return;\n}\n\nmsg.payload = msg.dictionary.entity.list_title || 'Entities';\n    \nnode.send([msg, null, null, null, null]);\n\nmsg.payload = [];\nmsg.ui_update = {\n    'label': ''\n};\n\nlet colors = global.get('describe.colors', 'memoryOnly') || {};\nlet sources = global.get('describe.sources', 'memoryOnly') || {};\nlet parents = global.get('parent', 'memoryOnly') || {};\nlet entities = global.get('entity', 'memoryOnly') || {};\n\nlet i = 0;\nfor (const uid in entities) {\n    let name = entities[uid]['name'] !== '' ? entities[uid]['name'] : entities[uid]['id'] + ' *';\n\n    let parent_name = typeof parents[entities[uid]['parent']] === 'object' ? parents[entities[uid]['parent']]['name'] : '';\n    if (parent_name === '') {\n        parent_name = entities[uid]['parent'];\n    }\n\n    let room = entities[uid]['room'];\n    let room_name = room;\n    if (room !== '') {\n        room_name = global.get('rooms[\"base\"][\"' + room + '\"][\"name\"]', 'memoryOnly') || room;\n    }\n\n    let color = colors.on;\n    let dead = (entities[uid]['seen'] + 86400000) < Date.now() ? true : false; //24h\n    if (entities[uid]['hidden'] > 0) {\n        color = dead ? colors.median : colors.empty;\n    } else {\n        color = dead ? colors.off : colors.on;\n    }\n    let source = sources[entities[uid]['source']] || ['help', entities[uid]['source']];\n\n    msg.payload[i] = {...entities[uid]};\n    msg.payload[i]['uid'] = uid;\n    msg.payload[i]['name'] = name;\n    msg.payload[i]['room_name'] = room_name;\n    msg.payload[i]['parent_name'] = parent_name;\n    msg.payload[i]['source_icon'] = '<i class=\"icon-in-row mdi mdi-' + source[0] + '\" style=\"color:' + colors.empty + '\" title=\"' + source[1] + '\"></i>';\n    msg.payload[i]['delete'] = msg.dictionary.group_entity.list_delete;\n    msg.payload[i]['hidden_color'] = color;\n\n    i++;\n}\n\n//msg.payload.sort((a, b) => a.id.localeCompare(b.id));\n//msg.payload.sort((a, b) => a.parent.localeCompare(b.parent));\nnode.send([null, msg, null, null]);\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.entity.entitylsit_forgetentity || 'Forget entities'\n}\nnode.send([null, null, msg, null]);\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.entity.entitylist_blockentity || 'Block entities'\n}\nnode.send([null, null, null, msg]);\n\nreturn;",
         "outputs": 4,
         "timeout": 0,
         "noerr": 0,
@@ -22016,7 +22410,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "data",
-        "func": "let entity = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\n\nlet d = 0;\nlet dropdownOptions = [];\n\n// Name\n//msg.payload.name = global.get('entity[\"' + msg.payload.uid + '\"][\"name\"]', 'memoryOnly') || '';\n\n// Room\nconst rooms = { ...(global.get('room', 'memoryOnly') || {}) };\nfor (const room in rooms) {\n    dropdownOptions[d++] = {\n        'label': rooms[room]['name'] + ' (' + rooms[room]['id'] + ')',\n        'value': room,\n        'dropdown': 'room'\n    };\n}\n\n// Element\nfor (const element in msg.dictionary.option_element) {\n    dropdownOptions[d++] = {\n        'label': msg.dictionary.option_element[element] + ' (' + element + ')',\n        'value': element,\n        'dropdown': 'element'\n    };\n}\n\n// Type\nfor (const type in msg.dictionary.option_type) {\n    dropdownOptions[d++] = {\n        'label': msg.dictionary.option_type[type] + ' (' + type + ')',\n        'value': type,\n        'dropdown': 'type'\n    };\n}\n\n// Unit\nfor (const unit in msg.dictionary.option_unit) {\n    dropdownOptions[d++] = {\n        'label': msg.dictionary.option_unit[unit] + ' (' + unit + ')',\n        'value': unit,\n        'dropdown': 'unit'\n    };\n}\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\n// Action\nlet todo = {\n    'show': msg.dictionary.entity.entityedit_show || 'Show',\n    'hide': msg.dictionary.entity.entityedit_hide || 'Hide',\n    'forgetentity': msg.dictionary.entity.entityedit_forgetentity || 'Forget entity',\n    'forgetparent': msg.dictionary.entity.entityedit_forgetparent || 'Forget parent',\n    'blockentity': msg.dictionary.entity.entityedit_blockentity || 'Block entity'\n};\n\nmsg.payload.todo = msg.payload.hidden === 1 ? 'hide' : 'show';\nfor (const t in todo) {\n    dropdownOptions[d++] = {\n        'label': todo[t],\n        'value': t,\n        'dropdown': 'todo'\n    };\n}\n\nmsg.topic = msg.payload.uid;\n//node-red 5.04 bug with dropdown msg.topic\nflow.set('entity[\"' + msg.hmi.id + '\"]', msg.payload.uid, 'memoryOnly');\n\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.option_column.name || 'Name',\n            \"key\": \"name\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.option_column.room || 'Room',\n            \"key\": \"room\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.option_column.element || 'Element',\n            \"key\": \"element\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.option_column.type || 'Type',\n            \"key\": \"type\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.option_column.unit || 'Unit',\n            \"key\": \"unit\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.option_column.action || 'Action',\n            \"key\": \"todo\"\n        }\n    ],\n    'dropdownOptions': dropdownOptions\n};\n\nreturn msg;",
+        "func": "let entity = global.get('entity[\"' + msg.payload.uid + '\"]', 'memoryOnly') || {};\n\nlet d = 0;\nlet dropdownOptions = [];\n\n// Name\n//msg.payload.name = global.get('entity[\"' + msg.payload.uid + '\"][\"name\"]', 'memoryOnly') || '';\n\n// Room\nconst rooms = { ...(global.get('rooms.base', 'memoryOnly') || {}) };\nfor (const room in rooms) {\n    dropdownOptions[d++] = {\n        'label': rooms[room]['name'] + ' (' + rooms[room]['id'] + ')',\n        'value': room,\n        'dropdown': 'room'\n    };\n}\n\n// Element\nfor (const element in msg.dictionary.option_element) {\n    dropdownOptions[d++] = {\n        'label': msg.dictionary.option_element[element] + ' (' + element + ')',\n        'value': element,\n        'dropdown': 'element'\n    };\n}\n\n// Type\nfor (const type in msg.dictionary.option_type) {\n    dropdownOptions[d++] = {\n        'label': msg.dictionary.option_type[type] + ' (' + type + ')',\n        'value': type,\n        'dropdown': 'type'\n    };\n}\n\n// Unit\nfor (const unit in msg.dictionary.option_unit) {\n    dropdownOptions[d++] = {\n        'label': msg.dictionary.option_unit[unit] + ' (' + unit + ')',\n        'value': unit,\n        'dropdown': 'unit'\n    };\n}\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\n// Action\nlet todo = {\n    'show': msg.dictionary.entity.entityedit_show || 'Show',\n    'hide': msg.dictionary.entity.entityedit_hide || 'Hide',\n    'forgetentity': msg.dictionary.entity.entityedit_forgetentity || 'Forget entity',\n    'forgetparent': msg.dictionary.entity.entityedit_forgetparent || 'Forget parent',\n    'blockentity': msg.dictionary.entity.entityedit_blockentity || 'Block entity'\n};\n\nmsg.payload.todo = msg.payload.hidden === 1 ? 'hide' : 'show';\nfor (const t in todo) {\n    dropdownOptions[d++] = {\n        'label': todo[t],\n        'value': t,\n        'dropdown': 'todo'\n    };\n}\n\nmsg.topic = msg.payload.uid;\n//node-red 5.04 bug with dropdown msg.topic\nflow.set('entity[\"' + msg.hmi.id + '\"]', msg.payload.uid, 'memoryOnly');\n\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.option_column.name || 'Name',\n            \"key\": \"name\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.option_column.room || 'Room',\n            \"key\": \"room\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.option_column.element || 'Element',\n            \"key\": \"element\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.option_column.type || 'Type',\n            \"key\": \"type\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.option_column.unit || 'Unit',\n            \"key\": \"unit\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.option_column.action || 'Action',\n            \"key\": \"todo\"\n        }\n    ],\n    'dropdownOptions': dropdownOptions\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -22528,207 +22922,6 @@
         ]
     },
     {
-        "id": "3790dfc240bc5f6d",
-        "type": "link in",
-        "z": "3d7897ba0ee14173",
-        "g": "2858d8e23dbbc969",
-        "name": "entity - energy",
-        "links": [
-            "9e0b692686687926",
-            "b3e8adf92527c468",
-            "20c33d6d50aa3ee3"
-        ],
-        "x": 145,
-        "y": 560,
-        "wires": [
-            [
-                "96cc3da1f3e135dd"
-            ]
-        ]
-    },
-    {
-        "id": "96cc3da1f3e135dd",
-        "type": "function",
-        "z": "3d7897ba0ee14173",
-        "g": "2858d8e23dbbc969",
-        "name": "data",
-        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (!msg.enabled) {\n    node.send([msg, msg]);\n\n    return;\n}\n\nconst units = ['mW', 'W', 'kW'];\nconst entity = { ...(global.get('entity', 'memoryOnly') || { }) };\nconst parent = { ...(global.get('parent', 'memoryOnly') || { }) };\nconst room = { ...(global.get('room', 'memoryOnly') || { }) };\n\nlet d = 0;\nlet dropdownOptions = [];\nfor (const e in entity) {\n    if (entity[e]['hidden'] === 0 && units.includes(entity[e]['unit'])) {\n        let entity_name = entity[e]['name'];\n        if (entity_name === '') {\n            entity_name = parent[entity[e]['parent']]['name'] || e;\n        }\n        let room_name = room[entity[e]['room']]['name'] || entity[e]['room'];\n        let element_name = msg.dictionary.option_element[entity[e]['element']] || entity[e]['element']\n\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'grid_power'\n        };\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'solar_power'\n        };\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'battery_power'\n        };\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'waterboiler_power'\n        };\n    }\n\n    if (entity[e]['hidden'] === 0 && entity[e]['element'] === 'battery') {\n        let entity_name = entity[e]['name'];\n        if (entity_name === '') {\n            entity_name = parent[entity[e]['parent']]['name'] || e;\n        }\n        let room_name = room[entity[e]['room']]['name'] || entity[e]['room'];\n        let element_name = msg.dictionary.option_element[entity[e]['element']] || entity[e]['element']\n\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'battery_level'\n        };\n    }\n\n    if (entity[e]['hidden'] === 0 && entity[e]['element'] === 'tariff') {\n        let entity_name = entity[e]['name'];\n        if (entity_name === '') {\n            entity_name = parent[entity[e]['parent']]['name'] || e;\n        }\n        let room_name = room[entity[e]['room']]['name'] || entity[e]['room'];\n        let element_name = msg.dictionary.option_element[entity[e]['element']] || entity[e]['element']\n\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'preferred_tariff'\n        };\n    }\n\n    if (entity[e]['hidden'] === 0 && entity[e]['element'] === 'energy') {\n        let entity_name = entity[e]['name'];\n        if (entity_name === '') {\n            entity_name = parent[entity[e]['parent']]['name'] || e;\n        }\n        let room_name = room[entity[e]['room']]['name'] || entity[e]['room'];\n        let element_name = msg.dictionary.option_element[entity[e]['element']] || entity[e]['element']\n\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'favorable_energy_meter'\n        };\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'unfavorable_energy_meter'\n        };\n    }\n}\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\n// entity - energy - title\nmsg.payload = msg.dictionary.entity.enegry_title || 'Energy';\n\nnode.send([msg, null]);\n\n// entity - energy - form\nmsg.payload = {};\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.room.energy_grid_power || 'Grid power',\n            \"key\": \"grid_power\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.room.energy_solar_power || 'Solar power',\n            \"key\": \"solar_power\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.room.energy_battery_power || 'Battery power',\n            \"key\": \"battery_power\",\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.room.energy_battery_level || 'Battery level',\n            \"key\": \"battery_level\",\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.room.energy_preferred_tariff || 'Preferred tariff in progress',\n            \"key\": \"preferred_tariff\",\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.room.energy_favorable_energy_meter || 'Favorable energy meter',\n            \"key\": \"favorable_energy_meter\",\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.room.energy_unfavorable_energy_meter || 'Unfavorable energy meter',\n            \"key\": \"unfavorable_energy_meter\",\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.room.energy_waterboiler_power || 'Waterboiler power',\n            \"key\": \"waterboiler_power\",\n        }\n    ],\n    'dropdownOptions': dropdownOptions\n};\n\nmsg.payload = { ...(global.get('energy', 'memoryOnly') || { }) };\n\nnode.send([null, msg]);\n\nreturn;",
-        "outputs": 2,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 270,
-        "y": 560,
-        "wires": [
-            [
-                "453a5521de9c43f0"
-            ],
-            [
-                "088f2fca643818c2"
-            ]
-        ]
-    },
-    {
-        "id": "088f2fca643818c2",
-        "type": "ui-form",
-        "z": "3d7897ba0ee14173",
-        "g": "2858d8e23dbbc969",
-        "name": "entity - energy - form",
-        "group": "a6601e1fe5c357e9",
-        "label": "",
-        "order": 2,
-        "width": "0",
-        "height": "0",
-        "options": [
-            {
-                "label": "solar",
-                "key": "solar_power",
-                "type": "dropdown",
-                "required": false,
-                "rows": null
-            },
-            {
-                "label": "grid",
-                "key": "grid_power",
-                "type": "dropdown",
-                "required": false,
-                "rows": null
-            },
-            {
-                "label": "battery",
-                "key": "battery_power",
-                "type": "dropdown",
-                "required": false,
-                "rows": null
-            },
-            {
-                "label": "level",
-                "key": "battery_level",
-                "type": "dropdown",
-                "required": false,
-                "rows": null
-            },
-            {
-                "label": "preferred",
-                "key": "preferred_tariff",
-                "type": "dropdown",
-                "required": false,
-                "rows": null
-            },
-            {
-                "label": "favorable",
-                "key": "favorable_energy_meter",
-                "type": "dropdown",
-                "required": false,
-                "rows": null
-            },
-            {
-                "label": "unfavorable",
-                "key": "unfavorable_energy_meter",
-                "type": "dropdown",
-                "required": false,
-                "rows": null
-            },
-            {
-                "label": "waterboiler",
-                "key": "waterboiler",
-                "type": "dropdown",
-                "required": false,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "solar_power": "",
-            "grid_power": "",
-            "battery_power": "",
-            "battery_level": "",
-            "preferred_tariff": "",
-            "favorable_energy_meter": "",
-            "unfavorable_energy_meter": "",
-            "waterboiler": ""
-        },
-        "payload": "",
-        "submit": "►",
-        "cancel": "",
-        "resetOnSubmit": true,
-        "topic": "topic",
-        "topicType": "msg",
-        "splitLayout": "",
-        "className": "",
-        "passthru": false,
-        "dropdownOptions": [],
-        "x": 480,
-        "y": 560,
-        "wires": [
-            [
-                "9d9be3102bf89bf0"
-            ]
-        ]
-    },
-    {
-        "id": "453a5521de9c43f0",
-        "type": "ui-text",
-        "z": "3d7897ba0ee14173",
-        "g": "2858d8e23dbbc969",
-        "group": "a6601e1fe5c357e9",
-        "order": 1,
-        "width": "6",
-        "height": "1",
-        "name": "entity - energy - title",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "ui-title",
-        "value": "payload",
-        "valueType": "msg",
-        "x": 470,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "9d9be3102bf89bf0",
-        "type": "function",
-        "z": "3d7897ba0ee14173",
-        "g": "2858d8e23dbbc969",
-        "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nglobal.set('energy', msg.payload, 'memoryOnly');\n\nmsg.payload = '';\nmsg.enabled = true;\nmsg.payload = msg.dictionary.notice.save_success;\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 690,
-        "y": 560,
-        "wires": [
-            [
-                "20c33d6d50aa3ee3"
-            ]
-        ]
-    },
-    {
-        "id": "20c33d6d50aa3ee3",
-        "type": "link out",
-        "z": "3d7897ba0ee14173",
-        "g": "2858d8e23dbbc969",
-        "name": "entity - energy",
-        "mode": "link",
-        "links": [
-            "f4a2353e5f92576c",
-            "3790dfc240bc5f6d"
-        ],
-        "x": 815,
-        "y": 560,
-        "wires": []
-    },
-    {
         "id": "f3597c2d6aae540d",
         "type": "function",
         "z": "3d7897ba0ee14173",
@@ -22746,102 +22939,6 @@
         "wires": [
             [
                 "b3e8adf92527c468"
-            ]
-        ]
-    },
-    {
-        "id": "cb2cfb96f7f9464e",
-        "type": "ui-text-input",
-        "z": "3d7897ba0ee14173",
-        "g": "3a6d56b6dcd8540a",
-        "group": "fa076f843950d108",
-        "name": "entity - room - room",
-        "label": "",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "topic": "topic",
-        "topicType": "msg",
-        "mode": "text",
-        "tooltip": "",
-        "delay": 300,
-        "passthru": true,
-        "sendOnDelay": false,
-        "sendOnBlur": true,
-        "sendOnEnter": true,
-        "className": "",
-        "clearable": false,
-        "sendOnClear": false,
-        "icon": "",
-        "iconPosition": "left",
-        "iconInnerPosition": "inside",
-        "x": 470,
-        "y": 320,
-        "wires": [
-            [
-                "58d8fb7ff7861d4c"
-            ]
-        ]
-    },
-    {
-        "id": "58d8fb7ff7861d4c",
-        "type": "function",
-        "z": "3d7897ba0ee14173",
-        "g": "3a6d56b6dcd8540a",
-        "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (msg.payload === '') {\n    msg.class = 'remove';\n    msg.enabled = false;\n\n    return msg;\n}\n\nflow.set('room[\"' + msg.hmi.id + '\"]', msg.payload, 'memoryOnly');\n\nconst room = { ...(global.get('room[\"' + msg.payload + '\"]', 'memoryOnly') || {}) };\n\nmsg.class = '';\nmsg.enabled = true;\nmsg.payload = { ...(global.get('describe.template.room', 'memoryOnly') || {}) };\n\nif (typeof room.id === 'string') {\n    msg.payload = { ...msg.payload, ...room };\n}\n\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.room.room_name || 'Name',\n            \"key\": \"name\",\n            \"required\": false\n        },\n        {\n            \"type\": \"checkbox\",\n            \"label\": msg.dictionary.room.room_outdoor || 'Outdoor',\n            \"key\": \"outdoor\",\n            \"required\": false\n        },\n        {\n            \"type\": \"checkbox\",\n            \"label\": msg.dictionary.room.room_delete || 'Delete',\n            \"key\": \"delete\",\n            \"required\": false\n        }\n    ]\n};\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 670,
-        "y": 320,
-        "wires": [
-            [
-                "009f5658297ac269"
-            ]
-        ]
-    },
-    {
-        "id": "7385c91ca49ccb1a",
-        "type": "function",
-        "z": "3d7897ba0ee14173",
-        "g": "3a6d56b6dcd8540a",
-        "name": "data",
-        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nmsg.class = 'remove';\nmsg.enabled = false;\nmsg.ui_update = {};\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 270,
-        "y": 380,
-        "wires": [
-            [
-                "03c0ca28883d9235"
-            ]
-        ]
-    },
-    {
-        "id": "03c0ca28883d9235",
-        "type": "change",
-        "z": "3d7897ba0ee14173",
-        "g": "3a6d56b6dcd8540a",
-        "name": "-",
-        "rules": [],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 670,
-        "y": 380,
-        "wires": [
-            [
-                "009f5658297ac269"
             ]
         ]
     },
@@ -23419,7 +23516,7 @@
         "z": "d90937c9d5b88b24",
         "g": "5175d903a670b8a9",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (msg.hmi.level !== 'admin' || msg.payload === '') {\n\n    return;\n}\n\nlet backup = {};\ntry {\n    backup = JSON.parse(msg.payload);\n\n} catch (error) {\n\n    return;\n}\n\nif (typeof backup['auth'] === 'object') {\n    let auth = global.get('auth', 'memoryOnly') || {};\n    for (const k in backup['auth']) {\n        if (typeof auth[k] !== 'object') {\n            auth[k] = backup['auth'][k];\n        }\n    }\n    global.set('auth', auth, 'memoryOnly');\n}\n\nif (typeof backup['block'] === 'object') {\n    let block = global.get('block', 'memoryOnly') || {};\n    for (const k in backup['block']) {\n        if (typeof block[k] !== 'object') {\n            block[k] = true;\n        }\n    }\n    global.set('block', block, 'memoryOnly');\n}\n\nif (typeof backup['calendar'] === 'object') {\n    let calendar = global.get('calendar', 'memoryOnly') || {};\n    for (const k in backup['calendar']) {\n        if (typeof calendar[k] !== 'object') {\n            calendar[k] = backup['calendar'][k];\n        }\n    }\n    global.set('calendar', calendar, 'memoryOnly');\n}\n\nif (typeof backup['energy'] === 'object') {\n    let energy = global.get('energy', 'memoryOnly') || {};\n    for (const k in backup['energy']) {\n        if (typeof energy[k] !== 'object') {\n            energy[k] = backup['energy'][k];\n        }\n    }\n    global.set('energy', energy, 'memoryOnly');\n}\n\nif (typeof backup['entity'] === 'object') {\n    let entity = global.get('entity', 'memoryOnly') || {};\n    for (const k in backup['entity']) {\n        if (typeof entity[k] !== 'object') {\n            entity[k] = backup['entity'][k];\n        }\n    }\n    global.set('entity', entity, 'memoryOnly');\n}\n\nif (typeof backup['mqtt'] === 'object') {\n    let mqtt = global.get('mqtt', 'memoryOnly') || {};\n    for (const k in backup['mqtt']) {\n        if (typeof mqtt[k] !== 'undefined') {\n            mqtt[k] = backup['mqtt'][k];\n        }\n    }\n    global.set('mqtt', backup['mqtt'], 'memoryOnly');\n}\n\nif (typeof backup['name'] === 'object') {\n    let name = global.get('name', 'memoryOnly') || {};\n    for (const k in name) {\n        if (typeof backup['name'][k] === 'object') {\n            for (const l in backup['name'][k]) {\n                if (typeof name[k][l] !== 'string') {\n                    name[k][l] = backup['name'][k][l];\n                }\n            }\n        }\n    }\n    global.set('name', name, 'memoryOnly');\n}\n\nif (typeof backup['parent'] === 'object') {\n    let parent = global.get('parent', 'memoryOnly') || {};\n    for (const k in backup['parent']) {\n        if (typeof parent[k] !== 'object') {\n            parent[k] = backup['parent'][k];\n        }\n    }\n    global.set('parent', parent, 'memoryOnly');\n}\n\nif (typeof backup['room'] === 'object') {\n    let room = global.get('room', 'memoryOnly') || {};\n    for (const k in backup['room']) {\n        if (typeof room[k] !== 'object') {\n            room[k] = backup['room'][k];\n        }\n    }\n    global.set('room', room, 'memoryOnly');\n}\n\nif (typeof backup['rooms'] === 'object') {\n    let rooms = global.get('rooms', 'memoryOnly') || {};\n    for (const k in backup['rooms']) {\n        if (typeof rooms[k] !== 'object') {\n            rooms[k] = backup['rooms'][k];\n        }\n        else {\n            for (const l in backup['rooms'][k]) {\n                if (typeof rooms[k][l] !== 'object') {\n                    rooms[k][l] = backup['rooms'][k][l];\n                }\n            }\n        }\n    }\n    global.set('rooms', rooms, 'memoryOnly');\n}\n\nif (typeof backup['scene'] === 'object') {\n    let scene = global.get('scene', 'memoryOnly') || {};\n    for (const k in backup['scene']) {\n        if (typeof scene[k] !== 'object') {\n            scene[k] = {};\n        }\n\n        for (const l in backup['scene'][k]) {\n            if (typeof scene[k][l] !== 'object') {\n                scene[k][l] = {};\n            }\n\n            scene[k][l] = backup['scene'][k][l];\n        }\n    }\n    global.set('scene', scene, 'memoryOnly');\n}\n\nmsg.payload = msg.dictionary.config.import_success || 'Updoaded successfully';\n\nreturn msg;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (msg.hmi.level !== 'admin' || msg.payload === '') {\n\n    return;\n}\n\nlet backup = {};\ntry {\n    backup = JSON.parse(msg.payload);\n\n} catch (error) {\n\n    return;\n}\n\nif (typeof backup['auth'] === 'object') {\n    let auth = global.get('auth', 'memoryOnly') || {};\n    for (const k in backup['auth']) {\n        if (typeof auth[k] !== 'object') {\n            auth[k] = backup['auth'][k];\n        }\n    }\n    global.set('auth', auth, 'memoryOnly');\n}\n\nif (typeof backup['block'] === 'object') {\n    let block = global.get('block', 'memoryOnly') || {};\n    for (const k in backup['block']) {\n        if (typeof block[k] !== 'object') {\n            block[k] = true;\n        }\n    }\n    global.set('block', block, 'memoryOnly');\n}\n\nif (typeof backup['calendar'] === 'object') {\n    let calendar = global.get('calendar', 'memoryOnly') || {};\n    for (const k in backup['calendar']) {\n        if (typeof calendar[k] !== 'object') {\n            calendar[k] = backup['calendar'][k];\n        }\n    }\n    global.set('calendar', calendar, 'memoryOnly');\n}\n\nif (typeof backup['energy'] === 'object') {\n    let energy = global.get('energy', 'memoryOnly') || {};\n    for (const k in backup['energy']) {\n        if (typeof energy[k] !== 'object') {\n            energy[k] = backup['energy'][k];\n        }\n    }\n    global.set('energy', energy, 'memoryOnly');\n}\n\nif (typeof backup['entity'] === 'object') {\n    let entity = global.get('entity', 'memoryOnly') || {};\n    for (const k in backup['entity']) {\n        if (typeof entity[k] !== 'object') {\n            entity[k] = backup['entity'][k];\n        }\n    }\n    global.set('entity', entity, 'memoryOnly');\n}\n\nif (typeof backup['mqtt'] === 'object') {\n    let mqtt = global.get('mqtt', 'memoryOnly') || {};\n    for (const k in backup['mqtt']) {\n        if (typeof mqtt[k] !== 'undefined') {\n            mqtt[k] = backup['mqtt'][k];\n        }\n    }\n    global.set('mqtt', backup['mqtt'], 'memoryOnly');\n}\n\nif (typeof backup['name'] === 'object') {\n    let name = global.get('name', 'memoryOnly') || {};\n    for (const k in name) {\n        if (typeof backup['name'][k] === 'object') {\n            for (const l in backup['name'][k]) {\n                if (typeof name[k][l] !== 'string') {\n                    name[k][l] = backup['name'][k][l];\n                }\n            }\n        }\n    }\n    global.set('name', name, 'memoryOnly');\n}\n\nif (typeof backup['parent'] === 'object') {\n    let parent = global.get('parent', 'memoryOnly') || {};\n    for (const k in backup['parent']) {\n        if (typeof parent[k] !== 'object') {\n            parent[k] = backup['parent'][k];\n        }\n    }\n    global.set('parent', parent, 'memoryOnly');\n}\n\nif (typeof backup['rooms'] === 'object') {\n    let rooms = global.get('rooms', 'memoryOnly') || {};\n    for (const k in backup['rooms']) {\n        if (typeof rooms[k] !== 'object') {\n            rooms[k] = backup['rooms'][k];\n        }\n        else {\n            for (const l in backup['rooms'][k]) {\n                if (typeof rooms[k][l] !== 'object') {\n                    rooms[k][l] = backup['rooms'][k][l];\n                }\n            }\n        }\n    }\n    global.set('rooms', rooms, 'memoryOnly');\n}\n\nif (typeof backup['scene'] === 'object') {\n    let scene = global.get('scene', 'memoryOnly') || {};\n    for (const k in backup['scene']) {\n        if (typeof scene[k] !== 'object') {\n            scene[k] = {};\n        }\n\n        for (const l in backup['scene'][k]) {\n            if (typeof scene[k][l] !== 'object') {\n                scene[k][l] = {};\n            }\n\n            scene[k][l] = backup['scene'][k][l];\n        }\n    }\n    global.set('scene', scene, 'memoryOnly');\n}\n\nmsg.payload = msg.dictionary.config.import_success || 'Updoaded successfully';\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
