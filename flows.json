@@ -99,9 +99,9 @@
             "fc6029b7d49d1e93"
         ],
         "x": 78,
-        "y": 1693,
-        "w": 1934,
-        "h": 734
+        "y": 1753,
+        "w": 1574,
+        "h": 674
     },
     {
         "id": "90f47fc795048184",
@@ -302,7 +302,7 @@
         ],
         "x": 78,
         "y": 913,
-        "w": 1284,
+        "w": 1224,
         "h": 734
     },
     {
@@ -532,7 +532,7 @@
         ],
         "x": 68,
         "y": 13,
-        "w": 2664,
+        "w": 2644,
         "h": 854
     },
     {
@@ -1549,7 +1549,7 @@
         ],
         "x": 94,
         "y": 39,
-        "w": 2612,
+        "w": 2592,
         "h": 202
     },
     {
@@ -1829,7 +1829,7 @@
         ],
         "x": 104,
         "y": 1059,
-        "w": 1232,
+        "w": 1172,
         "h": 209.5
     },
     {
@@ -1899,7 +1899,7 @@
         ],
         "x": 104,
         "y": 2259,
-        "w": 902,
+        "w": 862,
         "h": 142
     },
     {
@@ -1920,7 +1920,7 @@
         ],
         "x": 104,
         "y": 2139,
-        "w": 622,
+        "w": 522,
         "h": 82
     },
     {
@@ -1965,23 +1965,20 @@
             "0b2cf7bf91ae4d19",
             "74dfe619e629d696",
             "3b80cd5cae7c3642",
-            "8e12e262806af7b7",
             "aae1f5d9a3931146",
-            "cca39ee5b2794b76",
             "fa7160372fcfe3b2",
-            "c207171ed4430df8",
             "44a9a10bea4cbb76",
             "6e04acdf428261ac",
             "7f71d2575c92f1e5",
-            "45fec39ce210f1d4",
-            "62fd5d97d37862c8",
             "4cc3ed0d3ee8fb8d",
-            "1e31ae9f27a06bd8"
+            "1e31ae9f27a06bd8",
+            "087f45fe1d6caa26",
+            "fc33f8739dc5de25"
         ],
         "x": 104,
-        "y": 1719,
-        "w": 1882,
-        "h": 202
+        "y": 1779,
+        "w": 1522,
+        "h": 142
     },
     {
         "id": "c2f0711b621df28f",
@@ -3384,7 +3381,7 @@
             "9809530d07fc6ddc",
             "bf16c43041851145"
         ],
-        "x": 2515,
+        "x": 2495,
         "y": 80,
         "wires": []
     },
@@ -3440,7 +3437,7 @@
             "f4ff4572e061287d",
             "bf16c43041851145"
         ],
-        "x": 1295,
+        "x": 1235,
         "y": 1160,
         "wires": []
     },
@@ -3535,7 +3532,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 2050,
+        "x": 2030,
         "y": 80,
         "wires": [
             [
@@ -3552,7 +3549,7 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 2230,
+        "x": 2210,
         "y": 80,
         "wires": [
             [
@@ -3565,15 +3562,15 @@
         "type": "function",
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
-        "name": "app",
-        "func": "delete msg.filename;\n\nconst describe = { ...(global.get('describe') || {}) };\n\nif (typeof msg.payload === 'object') {\n    describe.app = {\n        'project': msg.payload.name,\n        'title': msg.payload.description.slice(5),\n        'version' : msg.payload.version,\n        'git': msg.payload.name\n    };\n    global.set('describe', describe);\n}\n\n// Set a default empty hmi user\nmsg.hmi = describe.template.hmi;\n\nmsg.payload = '';\n\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nreturn msg;",
+        "name": "data",
+        "func": "delete msg.filename;\n\n// Get memories\nlet describe = global.get('describe'); // autoupdate\n\nif (typeof msg.payload === 'object') {\n    describe.app = {\n        'project': msg.payload.name,\n        'title': msg.payload.description.slice(5),\n        'version' : msg.payload.version,\n        'git': msg.payload.name\n    };\n}\n\n// Set a default empty hmi user\nmsg.hmi = describe.template.hmi;\n\nmsg.payload = '';\n\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2390,
+        "x": 2370,
         "y": 80,
         "wires": [
             [
@@ -3681,7 +3678,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "describe",
-        "func": "const describe = global.get('describe') || {};\n\nif (typeof describe.pages !== 'object') {\n    describe.pages = {};\n}\n\n// Set default app values\ndescribe.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\ndescribe.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['energy'] = {\n    'id': '34a13cfdebc90220',\n    'name': 'energy',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['calendar'] = {\n    'id': '05291fac72588064',\n    'name': 'calendar',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['scene'] = {\n    'id': '1e9f5bde9636a371',\n    'name': 'scene',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['entity'] = {\n    'id': '2b12391aa314ef62',\n    'name': 'entity',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': false,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// Sources\ndescribe.sources['dknr'] = ['eye', 'Domotic'];\n\n// Binary element with revert value\ndescribe.reverts = ['aperture', 'door', 'window', 'lock'];\n\n// Non numeric units\ndescribe.texts = ['', 'chex', 'enum', 'text', 'time'];\n\n// Elements icons\ndescribe.elements = {\n    'switch': ['toggle-switch-off-outline', 'toggle-switch-outline', 'Switch'],\n    'plug': ['power-plug-off', 'power-plug', 'Plug'],\n    'power': ['flash-outline', 'flash', 'Power'],\n    'current': ['current-ac', 'current-ac', 'Current'],\n    'frequency': ['sine-wave', 'sine-wave', 'Frequency'],\n    'voltage': ['current-dc', 'current-dc', 'Frequency'],\n    'energy': ['meter-electric-outline', 'meter-electric', 'Energy'],\n    'light': ['lightbulb-off', 'lightbulb', 'Light'],\n    'remote': ['remote-off', 'remote', 'Remote'],\n    'door': ['door-closed', 'door-open', 'Door'], // 0=open\n    'window': ['window-closed-variant', 'window-open-variant', 'Window'], //0=open\n    'lock': ['lock-off', 'lock', 'Lock'], //0=open\n    //'shield': ['shield-lock-outline', 'shield-lock'],\n    //'aperture': ['electric-switch-closed', 'electric-switch'], // 0=open\n    'shutter': ['window-shutter', 'window-shutter-open', 'Shutter'],\n    'slider': ['door-sliding', 'door-sliding-open', 'Slider'],\n    //'heater': ['radiator-off', 'radiator'], => temperature\n    //'cooler': ['radiator-off', 'radiator'], => temperature\n    //'airconditioner': ['radiator-off', 'radiator'], => temparature\n    'waterboiler': ['water-boiler-off', 'water-boiler', 'Waterboiler'],\n    'alert': ['bell-off', 'bell', 'Alert'],\n    'sound': ['volume-off', 'volume-high', 'Sound'],\n    'motion': ['motion-sensor-off', 'motion-sensor', 'Motion'],\n    //'presence': ['location-exit', 'location-enter'], => motion\n    'temperature': ['thermometer-off', 'thermometer', 'Temperature'],\n    'humidity': ['water-percent-alert', 'water-percent', 'Humidity'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless', 'Illuminance'],\n    'pressure': ['gauge', 'gauge', 'Pressure'],\n    //'wind': ['weather-windy', 'weather-dust'],\n    //'airflow': ['fan-off', 'fan'], => humidity\n    'fan': ['fan-off', 'fan', 'Fan'],\n    'direction': ['swap-horizontal', 'swap-horizontal-bold', 'Direction'],\n    'time': ['clock-outline', 'clock', 'Time'],\n    'battery': ['battery-low', 'battery', 'Battery'],\n    //'climate': ['home-thermometer-outline', 'home-thermometer'],\n    'mode': ['home-switch-outline', 'home-switch', 'Mode'],\n    'text': ['clipboard-text-off', 'clipboard-text', 'Text'],\n    'location': ['map-marker-off-outline', 'map-marker', 'Location'],\n    //'camera': ['camera-off', 'camera'],\n    'color': ['palette', 'palette', 'Color'],\n    'tariff': ['currency-eur-off', 'currency-eur', 'Tariff']\n};\n\ndescribe.units = {\n    '': 'None',\n    '°C': 'Degree celsuis',\n    '°F': 'Degree fahrenheit',\n    'mA': 'Milliampere',\n    'A': 'Ampere',\n    'Hz': 'Hertz',\n    'mW': 'Milliwatt',\n    'W': 'Watt',\n    'kW': 'Kilowatt',\n    'MW': 'Megawatt',\n    'mWh': 'Milliwatt/hour',\n    'Wh': 'Watt/Hour',\n    'mVA': 'Millivoltampere',\n    'VA': 'Voltampere',\n    'mV': 'Millivolt',\n    'V': 'Volt',\n    'lx': 'Lux',\n    'ppm': 'Parts per million',\n    '%': 'Percent (0-100)',\n    'b': 'Binary (0-1)',\n    'rb': 'Revert binary',\n    '8b': '8-bit (0-255)',\n    'n': 'Number',\n    's': 'Second',\n    'ms': 'Millisecond',\n    'time': 'Time',\n    'enum': 'Enumerator',\n    'text': 'Text',\n    'chex': 'Hexadécimal color'\n};\n\n// Value color\ndescribe.colors = {\n    'on': '#008000',\n    'off': '#FF0000',\n    'median': '#F08000',\n    'none': '#808000',\n    'theme': '#0094CE',\n    'empty': '#CCCCCC'\n};\n\n// Calendar event type\ndescribe.calendar = {\n    'birthday': [ 'cake-variant-outline', 'cake-variant' ],\n    'rendezvous': [ 'alarm-off', 'alarm' ],\n    'trashbin': [ 'trash-can-outline', 'trash-can' ],\n    'recyclebin': [ 'recycle-vairant', 'recycle' ]\n};\n\n// Scene elements fields\ndescribe.scenes = {\n    'humidity': [\n        'enabled',\n        'on',\n        'off',\n        'duration',\n        'humidity'\n    ],\n    'light': [\n        'enabled',\n        'on',\n        'off',\n        'high',\n        'low',\n        'motion',\n        'retention',\n        'duration',\n        'diurnal',\n        'nocturnal',\n        'nightlight',\n        'illuminance',\n        'darkness'\n    ],\n    'shutter': [\n        'enabled',\n        'on',\n        'off',\n        'aperture',\n        'diurnal',\n        'nocturnal',\n        'illuminance',\n        'darkness',\n        'openwork',\n        'daily'\n    ],\n    'waterboiler': [\n        'enabled',\n        'on',\n        'off',\n        'duration',\n        'power',\n        'tariff',\n        'daily'\n    ],\n    'temperature': [\n        'enabled',\n        'on',\n        'off',\n        'temperature_setpoint_eco',\n        'temperature_setpoint_confort',\n        'temperature_setpoint_cold',\n        'temperature_coefficient_indoor',\n        'temperature_coefficient_outdoor',\n        'temperature_duration_aperture',\n        'temperature_duration_preheat',\n        'temperature_duration_cycle',\n        'temperature_duration_offloading',\n        'temperature_power_consumption',\n        'temperature_energy_free'\n    ]\n};\n\n// Scene routines fields\ndescribe.routines = {\n    'motion': ['motion-sensor-off', 'motion-sensor'],\n    'aperture': ['door-closed', 'door-open'],\n    'nocturnal': ['shield-moon-outline', 'shield-moon'],\n    'diurnal': ['shield-sun-outline', 'shield-sun'],\n    'nightlight': ['lightbulb-night-outline', 'lightbulb-night'],\n    'retention': ['timeline-clock-outline', 'timeline-clock'],\n    'daily': ['calendar-remove', 'calendar-check'],\n    'openwork': ['storefront-remove-outline', 'storefront-check'],\n    'duration': ['timer-remove-outline', 'timer-check'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless'],\n    'darkness': ['brightness-5', 'brightness-4'],\n    'humidity': ['water-percent-alert', 'water-percent'],\n    'temperature_energy_free': ['lightning-bolt-outline', 'lightning-bolt']\n};\n\n// Templates\ndescribe.template = {\n    'hmi': {\n        'id': '',\n        'login': '',\n        'level': 'visitor',\n        'lang': 'en',\n        'name': 'auth', // ui page\n        'room': '',\n        'time': 0\n    },\n    'room': {\n        'id': '',\n        'name': '',\n        'outdoor': 0\n    },\n    'parent': {\n        'id': '',\n        'name': '',\n        'seen': 0\n    },\n    'entity': {\n        'uid': '',\n        'source': '',\n        'id': '',\n        'name': '',\n        'parent': '',\n        'value': '',\n        'type': '',\n        'room': '',\n        'element': '',\n        'unit': '',\n        'seen': 0,\n        'hidden': 0\n    },\n    'scene': {\n        'target': '',\n        'enabled': 0,\n        'on': 1,\n        'off': 0,\n        'motion': 0,\n        'aperture': 0,\n        'nocturnal': 0,\n        'diurnal': 0,\n        'nightlight': 0,\n        'retention': 0,\n        'duration': 60, //minutes\n        'high': '70',\n        'low': '30',\n        'illuminance': 0, //2000\n        'darkness': 0, //200\n        'humidity': 0,\n        'daily': 0,\n        'openwork': 0,\n        'tariff': 0, // limit to a given tariff (see dknr_config_fulltariff)\n        'power': 0, // to check if target is really off\n        'timer': 0, // for duration routine\n        'today': 0, // for daily routine, 1=executed today else 0\n\n        'temperature_setpoint_eco': 19,\n        'temperature_setpoint_confort': 21,\n        'temperature_setpoint_cold': 18,\n        'temperature_coefficient_indoor': 100,\n        'temperature_coefficient_outdoor': 10,\n        'temperature_duration_aperture': 5,\n        'temperature_duration_preheat': 10,\n        'temperature_duration_cycle': 60,\n        'temperature_duration_offloading': 60,\n        'temperature_power_consumption': 1000,\n        'temperature_energy_free': 0,\n\n        'temperature_aperture_opened': 0,\n        'temperature_aperture_timer': 0,\n        'temperature_pilot_state': 'stopped',\n        'temperature_pilot_last': 0\n    },\n    'trigger': {\n        'inputhigh': 1, // Minimal input level for high level\n        'inputlow': 0, // Maximal input level for low high level\n        'outputhigh': 'high', // Output level on high input level. [none,high,low,toggle]\n        'outputlow': 'low' // output level for low input level [none, high, low, toggle]\n    },\n    'routine': {\n        'topic': '',\n        'payload': false,\n        'replay': false,\n        'rsp': true,\n        'iam': false,\n        'scene': {},\n        'param': {},\n        'trigger': {},\n        'target': {},\n        'routines': []\n    }\n};\n\n// Save config\nglobal.set('describe', describe);\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/.config.projects.json'\n};",
+        "func": "\n// Get moemories\nlet describe = global.get('describe'); // autoupdate\n\nif (typeof describe.pages !== 'object') {\n    describe.pages = {};\n}\n\n// Set default app values\ndescribe.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\ndescribe.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['energy'] = {\n    'id': '34a13cfdebc90220',\n    'name': 'energy',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['calendar'] = {\n    'id': '05291fac72588064',\n    'name': 'calendar',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['scene'] = {\n    'id': '1e9f5bde9636a371',\n    'name': 'scene',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['entity'] = {\n    'id': '2b12391aa314ef62',\n    'name': 'entity',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': false,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// Sources\ndescribe.sources['dknr'] = ['eye', 'Domotic'];\n\n// Binary element with revert value\ndescribe.reverts = ['aperture', 'door', 'window', 'lock'];\n\n// Non numeric units\ndescribe.texts = ['', 'chex', 'enum', 'text', 'time'];\n\n// Elements icons\ndescribe.elements = {\n    'switch': ['toggle-switch-off-outline', 'toggle-switch-outline', 'Switch'],\n    'plug': ['power-plug-off', 'power-plug', 'Plug'],\n    'power': ['flash-outline', 'flash', 'Power'],\n    'current': ['current-ac', 'current-ac', 'Current'],\n    'frequency': ['sine-wave', 'sine-wave', 'Frequency'],\n    'voltage': ['current-dc', 'current-dc', 'Frequency'],\n    'energy': ['meter-electric-outline', 'meter-electric', 'Energy'],\n    'light': ['lightbulb-off', 'lightbulb', 'Light'],\n    'remote': ['remote-off', 'remote', 'Remote'],\n    'door': ['door-closed', 'door-open', 'Door'], // 0=open\n    'window': ['window-closed-variant', 'window-open-variant', 'Window'], //0=open\n    'lock': ['lock-off', 'lock', 'Lock'], //0=open\n    //'shield': ['shield-lock-outline', 'shield-lock'],\n    //'aperture': ['electric-switch-closed', 'electric-switch'], // 0=open\n    'shutter': ['window-shutter', 'window-shutter-open', 'Shutter'],\n    'slider': ['door-sliding', 'door-sliding-open', 'Slider'],\n    //'heater': ['radiator-off', 'radiator'], => temperature\n    //'cooler': ['radiator-off', 'radiator'], => temperature\n    //'airconditioner': ['radiator-off', 'radiator'], => temparature\n    'waterboiler': ['water-boiler-off', 'water-boiler', 'Waterboiler'],\n    'alert': ['bell-off', 'bell', 'Alert'],\n    'sound': ['volume-off', 'volume-high', 'Sound'],\n    'motion': ['motion-sensor-off', 'motion-sensor', 'Motion'],\n    //'presence': ['location-exit', 'location-enter'], => motion\n    'temperature': ['thermometer-off', 'thermometer', 'Temperature'],\n    'humidity': ['water-percent-alert', 'water-percent', 'Humidity'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless', 'Illuminance'],\n    'pressure': ['gauge', 'gauge', 'Pressure'],\n    //'wind': ['weather-windy', 'weather-dust'],\n    //'airflow': ['fan-off', 'fan'], => humidity\n    'fan': ['fan-off', 'fan', 'Fan'],\n    'direction': ['swap-horizontal', 'swap-horizontal-bold', 'Direction'],\n    'time': ['clock-outline', 'clock', 'Time'],\n    'battery': ['battery-low', 'battery', 'Battery'],\n    //'climate': ['home-thermometer-outline', 'home-thermometer'],\n    'mode': ['home-switch-outline', 'home-switch', 'Mode'],\n    'text': ['clipboard-text-off', 'clipboard-text', 'Text'],\n    'location': ['map-marker-off-outline', 'map-marker', 'Location'],\n    //'camera': ['camera-off', 'camera'],\n    'color': ['palette', 'palette', 'Color'],\n    'tariff': ['currency-eur-off', 'currency-eur', 'Tariff']\n};\n\ndescribe.units = {\n    '': 'None',\n    '°C': 'Degree celsuis',\n    '°F': 'Degree fahrenheit',\n    'mA': 'Milliampere',\n    'A': 'Ampere',\n    'Hz': 'Hertz',\n    'mW': 'Milliwatt',\n    'W': 'Watt',\n    'kW': 'Kilowatt',\n    'MW': 'Megawatt',\n    'mWh': 'Milliwatt/hour',\n    'Wh': 'Watt/Hour',\n    'mVA': 'Millivoltampere',\n    'VA': 'Voltampere',\n    'mV': 'Millivolt',\n    'V': 'Volt',\n    'lx': 'Lux',\n    'ppm': 'Parts per million',\n    '%': 'Percent (0-100)',\n    'b': 'Binary (0-1)',\n    'rb': 'Revert binary',\n    '8b': '8-bit (0-255)',\n    'n': 'Number',\n    's': 'Second',\n    'ms': 'Millisecond',\n    'time': 'Time',\n    'enum': 'Enumerator',\n    'text': 'Text',\n    'chex': 'Hexadécimal color'\n};\n\n// Value color\ndescribe.colors = {\n    'on': '#008000',\n    'off': '#FF0000',\n    'median': '#F08000',\n    'none': '#808000',\n    'theme': '#0094CE',\n    'empty': '#CCCCCC'\n};\n\n// Calendar event type\ndescribe.calendar = {\n    'birthday': [ 'cake-variant-outline', 'cake-variant' ],\n    'rendezvous': [ 'alarm-off', 'alarm' ],\n    'trashbin': [ 'trash-can-outline', 'trash-can' ],\n    'recyclebin': [ 'recycle-vairant', 'recycle' ]\n};\n\n// Scene elements fields\ndescribe.scenes = {\n    'humidity': [\n        'enabled',\n        'on',\n        'off',\n        'duration',\n        'humidity'\n    ],\n    'light': [\n        'enabled',\n        'on',\n        'off',\n        'high',\n        'low',\n        'motion',\n        'retention',\n        'duration',\n        'diurnal',\n        'nocturnal',\n        'nightlight',\n        'illuminance',\n        'darkness'\n    ],\n    'shutter': [\n        'enabled',\n        'on',\n        'off',\n        'aperture',\n        'diurnal',\n        'nocturnal',\n        'illuminance',\n        'darkness',\n        'openwork',\n        'daily'\n    ],\n    'waterboiler': [\n        'enabled',\n        'on',\n        'off',\n        'duration',\n        'power',\n        'tariff',\n        'daily'\n    ],\n    'temperature': [\n        'enabled',\n        'on',\n        'off',\n        'temperature_setpoint_eco',\n        'temperature_setpoint_confort',\n        'temperature_setpoint_cold',\n        'temperature_coefficient_indoor',\n        'temperature_coefficient_outdoor',\n        'temperature_duration_aperture',\n        'temperature_duration_preheat',\n        'temperature_duration_cycle',\n        'temperature_duration_offloading',\n        'temperature_power_consumption',\n        'temperature_energy_free'\n    ]\n};\n\n// Scene routines fields\ndescribe.routines = {\n    'motion': ['motion-sensor-off', 'motion-sensor'],\n    'aperture': ['door-closed', 'door-open'],\n    'nocturnal': ['shield-moon-outline', 'shield-moon'],\n    'diurnal': ['shield-sun-outline', 'shield-sun'],\n    'nightlight': ['lightbulb-night-outline', 'lightbulb-night'],\n    'retention': ['timeline-clock-outline', 'timeline-clock'],\n    'daily': ['calendar-remove', 'calendar-check'],\n    'openwork': ['storefront-remove-outline', 'storefront-check'],\n    'duration': ['timer-remove-outline', 'timer-check'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless'],\n    'darkness': ['brightness-5', 'brightness-4'],\n    'humidity': ['water-percent-alert', 'water-percent'],\n    'temperature_energy_free': ['lightning-bolt-outline', 'lightning-bolt']\n};\n\n// Templates\ndescribe.template = {\n    'hmi': {\n        'id': '',\n        'login': '',\n        'level': 'visitor',\n        'lang': 'en',\n        'name': 'auth', // ui page\n        'room': '',\n        'time': 0\n    },\n    'room': {\n        'id': '',\n        'name': '',\n        'outdoor': 0\n    },\n    'parent': {\n        'id': '',\n        'name': '',\n        'seen': 0\n    },\n    'entity': {\n        'uid': '',\n        'source': '',\n        'id': '',\n        'name': '',\n        'parent': '',\n        'value': '',\n        'type': '',\n        'room': '',\n        'element': '',\n        'unit': '',\n        'seen': 0,\n        'hidden': 0\n    },\n    'scene': {\n        'target': '',\n        'enabled': 0,\n        'on': 1,\n        'off': 0,\n        'motion': 0,\n        'aperture': 0,\n        'nocturnal': 0,\n        'diurnal': 0,\n        'nightlight': 0,\n        'retention': 0,\n        'duration': 60, //minutes\n        'high': '70',\n        'low': '30',\n        'illuminance': 0, //2000\n        'darkness': 0, //200\n        'humidity': 0,\n        'daily': 0,\n        'openwork': 0,\n        'tariff': 0, // limit to a given tariff (see dknr_config_fulltariff)\n        'power': 0, // to check if target is really off\n        'timer': 0, // for duration routine\n        'today': 0, // for daily routine, 1=executed today else 0\n\n        'temperature_setpoint_eco': 19,\n        'temperature_setpoint_confort': 21,\n        'temperature_setpoint_cold': 18,\n        'temperature_coefficient_indoor': 100,\n        'temperature_coefficient_outdoor': 10,\n        'temperature_duration_aperture': 5,\n        'temperature_duration_preheat': 10,\n        'temperature_duration_cycle': 60,\n        'temperature_duration_offloading': 60,\n        'temperature_power_consumption': 1000,\n        'temperature_energy_free': 0,\n\n        'temperature_aperture_opened': 0,\n        'temperature_aperture_timer': 0,\n        'temperature_pilot_state': 'stopped',\n        'temperature_pilot_last': 0\n    },\n    'trigger': {\n        'inputhigh': 1, // Minimal input level for high level\n        'inputlow': 0, // Maximal input level for low high level\n        'outputhigh': 'high', // Output level on high input level. [none,high,low,toggle]\n        'outputlow': 'low' // output level for low input level [none, high, low, toggle]\n    },\n    'routine': {\n        'topic': '',\n        'payload': false,\n        'replay': false,\n        'rsp': true,\n        'iam': false,\n        'scene': {},\n        'param': {},\n        'trigger': {},\n        'target': {},\n        'routines': []\n    }\n};\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/.config.projects.json'\n};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3847,7 +3844,7 @@
         "name": "common - user - check",
         "mode": "return",
         "links": [],
-        "x": 775,
+        "x": 735,
         "y": 2300,
         "wires": []
     },
@@ -3865,7 +3862,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 860,
+        "x": 820,
         "y": 2360,
         "wires": []
     },
@@ -3874,8 +3871,8 @@
         "type": "function",
         "z": "4bc72a1112cb448c",
         "g": "bd007f48192aa2f3",
-        "name": "hash",
-        "func": "if (typeof msg.login === 'string' && msg.login !== \"\" && \n    typeof msg.pass === 'string' && msg.pass !== \"\"\n) {\n    msg.login = msg.login.toLowerCase();\n    const hash = global.get('auth[\"' + msg.login + '\"][\"pass\"]');\n    if (typeof hash === 'string') {\n        msg.hash = hash;\n\n        node.send([msg, null]);\n        return;\n    }\n}\n\nnode.send([null, msg]);\nreturn;",
+        "name": "data",
+        "func": "if (typeof msg.login === 'string' && msg.login !== \"\" && \n    typeof msg.pass === 'string' && msg.pass !== \"\"\n) {\n    msg.login = msg.login.toLowerCase();\n    const hash = global.get('auth[\"' + msg.login + '\"][\"pass\"]');\n    if (typeof hash === 'string') {\n        msg.hash = hash;\n\n        node.send([msg, null]);\n\n        return;\n    }\n}\n\nnode.send([null, msg]);\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -3898,15 +3895,15 @@
         "type": "function",
         "z": "4bc72a1112cb448c",
         "g": "bd007f48192aa2f3",
-        "name": "set user",
-        "func": "const user = {...(global.get('user') || {})};\nuser[msg._client.socketId] = {\n    'login': msg.login,\n    'level': global.get('auth[\"' + msg.login + '\"][\"level\"]') || '',\n    'lang': global.get('auth[\"' + msg.login + '\"][\"lang\"]' ) || '',\n    'time': Date.now()\n};\nglobal.set('user', {...user});\n\ndelete msg.login;\ndelete msg.pass;\ndelete msg.match;\ndelete msg.hash;\n\nmsg.payload = true;\n\nreturn msg;",
+        "name": "data",
+        "func": "\n// Get memories\nlet user = global.get('user'); // autoupdate\n\nuser[msg._client.socketId] = {\n    'login': msg.login,\n    'level': global.get('auth[\"' + msg.login + '\"][\"level\"]') || '',\n    'lang': global.get('auth[\"' + msg.login + '\"][\"lang\"]' ) || '',\n    'time': Date.now()\n};\n\ndelete msg.login;\ndelete msg.pass;\ndelete msg.match;\ndelete msg.hash;\n\nmsg.payload = true;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 620,
+        "x": 610,
         "y": 2300,
         "wires": [
             [
@@ -3919,15 +3916,15 @@
         "type": "function",
         "z": "4bc72a1112cb448c",
         "g": "bd007f48192aa2f3",
-        "name": "unset user",
-        "func": "const user = {...(global.get('user') || {})};\ndelete user[msg._client.socketId];\nglobal.set('user', {...user});\n\ndelete msg.login;\ndelete msg.pass;\ndelete msg.match;\ndelete msg.hash;\n\nmsg.payload = false;\n\nreturn msg;",
+        "name": "date",
+        "func": "\n// Get memories\nlet user = global.get('user'); // autoupdate\n\ndelete user[msg._client.socketId];\n\ndelete msg.login;\ndelete msg.pass;\ndelete msg.match;\ndelete msg.hash;\n\nmsg.payload = false;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 630,
+        "x": 610,
         "y": 2360,
         "wires": [
             [
@@ -3967,7 +3964,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 580,
+        "x": 480,
         "y": 2180,
         "wires": []
     },
@@ -3976,15 +3973,15 @@
         "type": "function",
         "z": "4bc72a1112cb448c",
         "g": "ec05c59aee9e7dba",
-        "name": "common - user - clean",
-        "func": "/* Limit to 6 hours */\nconst limit = Date.now() - ( 6 * 60 * 60 * 1000);\nmsg.topic = limit;\n\nconst user = { ...(global.get('user') || {}) };\nconst form = { ...(global.get('form') || {}) };\nfor (const u in user) {\n    if (typeof global.get('auth[\"' + user[u][\"login\"] + '\"][\"level\"]') !== 'string' \n    || user[u][\"time\"] < limit \n    || (typeof msg.login === 'string' && msg.login === user[u][\"login\"])\n    ) {\n        delete user[u];\n        delete form[u];\n\n        msg.payload = u;\n        node.send(msg);\n    }\n}\n\nglobal.set('user', {...user});\nglobal.set('form', form);\n\nmsg.payload = 'cleaned';\n\nreturn msg;",
+        "name": "data",
+        "func": "\n// Get memories\nlet user = global.get('user'); // autoupdate\nlet form = global.get('form'); // autoupdate\n\n/* Limit to 6 hours */\nconst limit = Date.now() - ( 6 * 60 * 60 * 1000);\nmsg.topic = limit;\n\nfor (const u in user) {\n    if (typeof global.get('auth[\"' + user[u][\"login\"] + '\"][\"level\"]') !== 'string' \n    || user[u][\"time\"] < limit \n    || (typeof msg.login === 'string' && msg.login === user[u][\"login\"])\n    ) {\n        delete user[u];\n        delete form[u];\n\n        msg.payload = u;\n        node.send(msg);\n    }\n}\n\nmsg.payload = 'cleaned';\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 320,
+        "x": 270,
         "y": 2180,
         "wires": [
             [
@@ -4216,11 +4213,11 @@
             "63e58cf7f88ce5af"
         ],
         "uncaught": false,
-        "x": 460,
+        "x": 780,
         "y": 1880,
         "wires": [
             [
-                "cca39ee5b2794b76"
+                "087f45fe1d6caa26"
             ]
         ]
     },
@@ -4242,36 +4239,6 @@
         ]
     },
     {
-        "id": "8e12e262806af7b7",
-        "type": "switch",
-        "z": "4bc72a1112cb448c",
-        "g": "fc6029b7d49d1e93",
-        "name": "has admin",
-        "property": "has_admin",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 1130,
-        "y": 1820,
-        "wires": [
-            [
-                "62fd5d97d37862c8"
-            ],
-            [
-                "cca39ee5b2794b76"
-            ]
-        ]
-    },
-    {
         "id": "aae1f5d9a3931146",
         "type": "debug",
         "z": "4bc72a1112cb448c",
@@ -4285,37 +4252,9 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1840,
-        "y": 1820,
-        "wires": []
-    },
-    {
-        "id": "cca39ee5b2794b76",
-        "type": "change",
-        "z": "4bc72a1112cb448c",
-        "g": "fc6029b7d49d1e93",
-        "name": "reset",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\t    'admin': {\t        'pass': 'admin',\t        'level': 'admin',\t        'lang': 'fr',\t        'telegram': ''\t    }\t}",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1310,
+        "x": 1480,
         "y": 1880,
-        "wires": [
-            [
-                "fa7160372fcfe3b2"
-            ]
-        ]
+        "wires": []
     },
     {
         "id": "fa7160372fcfe3b2",
@@ -4331,52 +4270,11 @@
         "match": "match",
         "outputs": 1,
         "rounds": 10,
-        "x": 1470,
-        "y": 1880,
+        "x": 1110,
+        "y": 1820,
         "wires": [
             [
-                "c207171ed4430df8"
-            ]
-        ]
-    },
-    {
-        "id": "c207171ed4430df8",
-        "type": "change",
-        "z": "4bc72a1112cb448c",
-        "g": "fc6029b7d49d1e93",
-        "name": "global",
-        "rules": [
-            {
-                "t": "set",
-                "p": "auth",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            },
-            {
-                "t": "delete",
-                "p": "has_admin",
-                "pt": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1630,
-        "y": 1880,
-        "wires": [
-            [
-                "44a9a10bea4cbb76",
-                "aae1f5d9a3931146"
+                "fc33f8739dc5de25"
             ]
         ]
     },
@@ -4390,8 +4288,8 @@
         "links": [
             "b75938c74c41ca5e"
         ],
-        "x": 1755,
-        "y": 1880,
+        "x": 1395,
+        "y": 1820,
         "wires": []
     },
     {
@@ -4416,11 +4314,11 @@
         "topic": "",
         "payload": "",
         "payloadType": "str",
-        "x": 1140,
-        "y": 1760,
+        "x": 1120,
+        "y": 1880,
         "wires": [
             [
-                "cca39ee5b2794b76"
+                "087f45fe1d6caa26"
             ]
         ]
     },
@@ -4431,69 +4329,17 @@
         "g": "fc6029b7d49d1e93",
         "name": "reset users, set main user as admin/admin",
         "info": "",
-        "x": 1420,
-        "y": 1760,
+        "x": 380,
+        "y": 1880,
         "wires": []
-    },
-    {
-        "id": "45fec39ce210f1d4",
-        "type": "delay",
-        "z": "4bc72a1112cb448c",
-        "g": "fc6029b7d49d1e93",
-        "name": "10ms",
-        "pauseType": "delay",
-        "timeout": "10",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 950,
-        "y": 1820,
-        "wires": [
-            [
-                "8e12e262806af7b7"
-            ]
-        ]
-    },
-    {
-        "id": "62fd5d97d37862c8",
-        "type": "change",
-        "z": "4bc72a1112cb448c",
-        "g": "fc6029b7d49d1e93",
-        "name": "clean",
-        "rules": [
-            {
-                "t": "delete",
-                "p": "has_admin",
-                "pt": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1310,
-        "y": 1820,
-        "wires": [
-            [
-                "aae1f5d9a3931146"
-            ]
-        ]
     },
     {
         "id": "4cc3ed0d3ee8fb8d",
         "type": "function",
         "z": "4bc72a1112cb448c",
         "g": "fc6029b7d49d1e93",
-        "name": "users",
-        "func": "flow.set('has_admin', false);\n\nif (typeof msg.payload === 'object') {\n    for (const login in msg.payload) {\n        if (typeof msg.payload[login][\"pass\"] === 'string'\n            && typeof msg.payload[login][\"pass\"] === 'string'\n            && typeof msg.payload[login][\"level\"] === 'string'\n        ) {\n            if (typeof msg.payload[login][\"lang\"] !== 'string') {\n                msg.payload[login][\"lang\"] = 'fr';\n            }\n            if (typeof msg.payload[login][\"telegram\"] !== 'string') {\n                msg.payload[login][\"telegram\"] = '';\n            }\n\n            if (msg.payload[login][\"level\"] === 'admin') {\n                flow.set('has_admin', true);\n            }\n\n            global.set('auth[\"' + login + '\"]',{\n                'pass': msg.payload[login][\"pass\"],\n                'level': msg.payload[login][\"level\"],\n                'lang': msg.payload[login][\"lang\"],\n                'telegram': msg.payload[login][\"telegram\"]\n            });\n        }\n    }\n}\n\nreturn msg;",
+        "name": "data",
+        "func": "let has_admin = false;\n\nif (typeof msg.payload === 'object') {\n    for (const login in msg.payload) {\n        if (typeof msg.payload[login][\"pass\"] === 'string'\n            && typeof msg.payload[login][\"pass\"] === 'string'\n            && typeof msg.payload[login][\"level\"] === 'string'\n        ) {\n            if (typeof msg.payload[login][\"lang\"] !== 'string') {\n                msg.payload[login][\"lang\"] = 'fr';\n            }\n            if (typeof msg.payload[login][\"telegram\"] !== 'string') {\n                msg.payload[login][\"telegram\"] = '';\n            }\n\n            if (msg.payload[login][\"level\"] === 'admin') {\n                has_admin =  true;\n            }\n\n            global.set('auth[\"' + login + '\"]',{\n                'pass': msg.payload[login][\"pass\"],\n                'level': msg.payload[login][\"level\"],\n                'lang': msg.payload[login][\"lang\"],\n                'telegram': msg.payload[login][\"telegram\"]\n            });\n        }\n    }\n}\n\nawait new Promise(resolve => setTimeout(resolve, 20));\n\nif (!has_admin) {\n\n    return msg;\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4504,7 +4350,7 @@
         "y": 1820,
         "wires": [
             [
-                "45fec39ce210f1d4"
+                "087f45fe1d6caa26"
             ]
         ]
     },
@@ -4539,8 +4385,8 @@
         "type": "function",
         "z": "4bc72a1112cb448c",
         "g": "614d71e9e019ca82",
-        "name": "action",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (!['connect', 'lost', 'change'].includes(msg.payload)) {\n\n    return;\n}\n\nif (msg.payload === 'lost') {\n    const user = {...(global.get('user') || {})};\n    const form = {...(global.get('form') || {})};\n\n    delete user[msg.hmi.id];\n    delete form[msg.hmi.id];\n\n    global.set('user', user);\n    global.set('form', form);\n\n    return;\n}\n\nconst pages = {...(global.get('describe.pages') || {})};\n\n// On connect, go to auth page\nif (msg.payload === 'connect') {\n    msg.payload = pages.auth.name;\n\n    /* Bypass auth */\n    //*\n    if (global.get('entity[\"dknr_command_auth\"][\"value\"]') === 1) {\n        msg.payload = pages.home.name;\n    }\n    //*/\n\n    node.send([null, null, msg]);\n    return;\n}\n\n// Prepare ui\nmsg.titles = {};\nmsg.menus = {};\nmsg.payload = {\n    'pages': {\n        'show': [],\n        'hide': []\n    }\n};\n\n// check user page right\nlet allowed = false;\nlet s = 0;\nlet h = 0;\nfor (const page in pages) {\n    if (typeof pages[page]['level'][msg.hmi.level] === 'boolean') {\n        if (pages[page]['level'][msg.hmi.level] === true) {\n            msg.menus[page] = true;\n            msg.payload.pages.show[s++] = pages[page]['name'];\n        } else {\n            msg.menus[page] = false;\n            msg.payload.pages.hide[h++] = pages[page]['name'];\n        }\n    } else {\n        if (pages.auth.name === pages[page]['name']) {\n            msg.menus[page] = true;\n            msg.payload.pages.show[s++] = pages[page]['name'];\n        } else {\n            msg.menus[page] = false;\n            msg.payload.pages.hide[h++] = pages[page]['name'];\n        }\n    }\n    msg.titles[page] = msg.dictionary.option_page[page];\n\n    if (pages[page]['name'] === msg.hmi.name) {\n        msg.page_title = msg.dictionary.option_page[page];\n        msg.page_lang = msg.hmi.lang;\n    }\n\n    if (pages[page]['name'] === msg.hmi.name && pages[page]['level'][msg.hmi.level] === true) {\n        allowed = true;\n    }\n}\n\nif (allowed === false) {\n    msg.payload = pages.auth.name;\n\n    node.send([null, null, msg]);\n    return;\n}\n\n// Clear UI form\nglobal.set('form[\"' + msg.hmi.id + '\"][\"ts\"]', Date.now());\n\n// page process\nlet newMsg = {\n    'topic': '',\n    'payload': msg.hmi.name,\n    'hmi': msg.hmi,\n    'dictionary': { ...msg.dictionary },\n    '_client': msg._client,\n    //'enabled': true,\n    //'class': ''\n};\n\n// ui menu\nmsg.version = global.get('describe.app.version') || '0.0.0';\nmsg.title = msg.page_title + ' - ' + global.get('describe.app.title');\nmsg.full = global.get('describe.app.project') + ' v' + msg.version;\n\ndelete msg.dictionary;\n\nnode.send([msg, newMsg, null]);\nreturn;",
+        "name": "data",
+        "func": "\n// Get memories\nlet user = global.get('user'); // autoupdate\nlet form = global.get('form'); // autoupdate\nlet pages = global.get('describe.pages') || {}; // read\n\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (!['connect', 'lost', 'change'].includes(msg.payload)) {\n\n    return;\n}\n\nif (msg.payload === 'lost') {\n\n    delete user[msg.hmi.id];\n    delete form[msg.hmi.id];\n\n    return;\n}\n\n\n// On connect, go to auth page\nif (msg.payload === 'connect') {\n    msg.payload = pages.auth.name;\n\n    /* Bypass auth */\n    //*\n    if (global.get('entity[\"dknr_command_auth\"][\"value\"]') === 1) {\n        msg.payload = pages.home.name;\n    }\n    //*/\n\n    node.send([null, null, msg]);\n    return;\n}\n\n// Prepare ui\nmsg.titles = {};\nmsg.menus = {};\nmsg.payload = {\n    'pages': {\n        'show': [],\n        'hide': []\n    }\n};\n\n// check user page right\nlet allowed = false;\nlet s = 0;\nlet h = 0;\nfor (const page in pages) {\n    if (typeof pages[page]['level'][msg.hmi.level] === 'boolean') {\n        if (pages[page]['level'][msg.hmi.level] === true) {\n            msg.menus[page] = true;\n            msg.payload.pages.show[s++] = pages[page]['name'];\n        } else {\n            msg.menus[page] = false;\n            msg.payload.pages.hide[h++] = pages[page]['name'];\n        }\n    } else {\n        if (pages.auth.name === pages[page]['name']) {\n            msg.menus[page] = true;\n            msg.payload.pages.show[s++] = pages[page]['name'];\n        } else {\n            msg.menus[page] = false;\n            msg.payload.pages.hide[h++] = pages[page]['name'];\n        }\n    }\n    msg.titles[page] = msg.dictionary.option_page[page];\n\n    if (pages[page]['name'] === msg.hmi.name) {\n        msg.page_title = msg.dictionary.option_page[page];\n        msg.page_lang = msg.hmi.lang;\n    }\n\n    if (pages[page]['name'] === msg.hmi.name && pages[page]['level'][msg.hmi.level] === true) {\n        allowed = true;\n    }\n}\n\nif (allowed === false) {\n    msg.payload = pages.auth.name;\n\n    node.send([null, null, msg]);\n    return;\n}\n\n// Clear UI form\nif (msg.hmi.id !== '') {\n    form[msg.hmi.id]['ts'] = Date.now();\n}\n\n// page process\nlet newMsg = {\n    'topic': '',\n    'payload': msg.hmi.name,\n    'hmi': msg.hmi,\n    'dictionary': { ...msg.dictionary },\n    '_client': msg._client,\n    //'enabled': true,\n    //'class': ''\n};\n\n// ui menu\nmsg.version = global.get('describe.app.version') || '0.0.0';\nmsg.title = msg.page_title + ' - ' + global.get('describe.app.title');\nmsg.full = global.get('describe.app.project') + ' v' + msg.version;\n\ndelete msg.dictionary;\n\nnode.send([msg, newMsg, null]);\nreturn;",
         "outputs": 3,
         "timeout": 0,
         "noerr": 0,
@@ -4567,15 +4413,15 @@
         "type": "function",
         "z": "4bc72a1112cb448c",
         "g": "614d71e9e019ca82",
-        "name": "tab & browser",
-        "func": "if (msg.payload !== '' && typeof global.get('describe.pages[\"' + msg.payload + '\"][\"name\"]') === 'string') {\n    msg.name = global.get('describe.pages[\"' + msg.payload + '\"][\"name\"]');\n    msg.payload = msg.name;\n    \n    // Get ui data\n    msg = await node.linkcall('common - ui - hmi', msg);\n\n    return msg;\n} else {\n    let default_browser = {\n        'lang': msg.payload,\n        'time': Date.now()\n    }\n    global.set('browser[\"' + msg._client.socketId + '\"]', default_browser);\n\n    let time = Date.now() - 60000;\n    let browsers = global.get('browser') || {};\n    for (const browser in browsers) {\n        if (browsers[browser]['time'] < time) {\n            global.set('browser[\"' + browser + '\"]', undefined);\n        }\n    }\n\n    return;\n}",
+        "name": "data",
+        "func": "\n// Get memories\nlet browser = global.get('browser'); // autoupdate\n\nif (msg.payload !== '' && typeof global.get('describe.pages[\"' + msg.payload + '\"][\"name\"]') === 'string') {\n    msg.name = global.get('describe.pages[\"' + msg.payload + '\"][\"name\"]');\n    msg.payload = msg.name;\n    \n    // Get ui data\n    msg = await node.linkcall('common - ui - hmi', msg);\n\n    return msg;\n} else {\n    let default_browser = {\n        'lang': msg.payload,\n        'time': Date.now()\n    }\n    browser[msg._client.socketId] = default_browser;\n\n    let time = Date.now() - 60000;\n    for (const b in browser) {\n        if (browser[b]['time'] < time) {\n            delete browser[b];\n        }\n    }\n\n    return;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1140,
+        "x": 1110,
         "y": 1100,
         "wires": [
             [
@@ -4589,7 +4435,7 @@
         "z": "4bc72a1112cb448c",
         "g": "5621e43ca08d7164",
         "name": "tab",
-        "func": "const check = msg.check || '-';\n\nif (msg.hmi.level !== ''\n    && msg.hmi.name === global.get('describe.pages[\"' + check + '\"][\"name\"]')\n    && global.get('describe.pages[\"' + check + '\"][\"level\"][\"' + msg.hmi.level + '\"]') === true\n) {\n    msg.class = '';\n    msg.enabled = true;\n    msg.dictionary.common.page = msg.dictionary.option_page[check] || check;\n\n    global.set('form[\"' + msg.hmi.id + '\"][\"' + check + '\"]', { });\n\n    await new Promise(resolve => setTimeout(resolve, 50)); // wait 50ms\n} else {\n    msg.topic = '';\n    msg.payload = '';\n    msg.class = 'remove';\n    msg.enabled = false;\n    msg.title = '-';\n}\n\ndelete msg.check;\n\nreturn msg;",
+        "func": "\n// Get memories\nlet form = global.get('form'); // autoupdate\n\nconst check = msg.check || '-';\n\nif (msg.hmi.level !== ''\n    && msg.hmi.name === global.get('describe.pages[\"' + check + '\"][\"name\"]')\n    && global.get('describe.pages[\"' + check + '\"][\"level\"][\"' + msg.hmi.level + '\"]') === true\n) {\n    msg.class = '';\n    msg.enabled = true;\n    msg.dictionary.common.page = msg.dictionary.option_page[check] || check;\n\n    form[msg.hmi.id][check] = { };\n\n    await new Promise(resolve => setTimeout(resolve, 50));\n} else {\n    msg.topic = '';\n    msg.payload = '';\n    msg.class = 'remove';\n    msg.enabled = false;\n    msg.title = '-';\n}\n\ndelete msg.check;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4641,7 +4487,7 @@
         "links": [
             "289e0a6cd1209c38"
         ],
-        "x": 1295,
+        "x": 1235,
         "y": 1100,
         "wires": []
     },
@@ -4655,7 +4501,7 @@
         "links": [
             "289e0a6cd1209c38"
         ],
-        "x": 1295,
+        "x": 1235,
         "y": 1220,
         "wires": []
     },
@@ -4782,8 +4628,8 @@
         "type": "function",
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
-        "name": "check",
-        "func": "// wait data was saved\nawait new Promise(resolve => setTimeout(resolve, 10));\n\n// Check payload\nif (typeof msg.payload !== 'object') {\n    msg.payload = {};\n}\nif (typeof msg.payload.pages !== 'object') {\n    msg.payload.pages = {};\n}\nif (typeof msg.payload.sources !== 'object') {\n    msg.payload.sources = {};\n}\nif (typeof msg.payload.enum !== 'object') {\n    msg.payload.enum = {};\n}\nif (typeof msg.payload.dictionary !== 'object') {\n    msg.payload.dictionary = {};\n}\n\n// Update describe\nconst describe = global.get('describe') || {};\nfor (const p in msg.payload.pages) {\n    describe.pages[p] = msg.payload.pages[p];\n}\nfor (const s in msg.payload.sources) {\n    describe.sources[s] = msg.payload.sources[s];\n}\nfor (const e in msg.payload.enum) {\n    describe.enum[e] = msg.payload.enum[e];\n}\n\nglobal.set('describe', describe);\n\n// Update dictionary\nconst dictionary = global.get('dictionary') || {};\nfor (const lang in msg.payload.dictionary) {\n    if (typeof dictionary[lang] !== 'object') {\n        dictionary[lang] = {};\n    }\n    if (typeof msg.payload.dictionary[lang] === 'object') {\n        for (const group in msg.payload.dictionary[lang]) {\n            if (typeof dictionary[lang][group] !== 'object') {\n                dictionary[lang][group] = {};\n            }\n            if (typeof msg.payload.dictionary[lang][group] === 'object') {\n                for (const sentence in msg.payload.dictionary[lang][group]) {\n                    // custom sentence overwrite existing ones\n                    dictionary[lang][group][sentence] = msg.payload.dictionary[lang][group][sentence];\n                }\n            }\n        }\n    }\n}\n\nglobal.set('dictionary', dictionary);\n\nreturn msg;",
+        "name": "data",
+        "func": "// wait data was saved\nawait new Promise(resolve => setTimeout(resolve, 10));\n\n// Get memories\nlet describe = global.get('describe'); // autoupdate\nlet dictionary = global.get('dictionary'); // autoupdate\n\n// Check payload\nif (typeof msg.payload !== 'object') {\n    msg.payload = {};\n}\nif (typeof msg.payload.pages !== 'object') {\n    msg.payload.pages = {};\n}\nif (typeof msg.payload.sources !== 'object') {\n    msg.payload.sources = {};\n}\nif (typeof msg.payload.enum !== 'object') {\n    msg.payload.enum = {};\n}\nif (typeof msg.payload.dictionary !== 'object') {\n    msg.payload.dictionary = {};\n}\n\n// Update describe\nif (typeof describe.pages !== 'object') {\n    describe.pages = { };\n}\nfor (const p in msg.payload.pages) {\n    describe.pages[p] = msg.payload.pages[p];\n}\nif (typeof describe.pages !== 'object') {\n    describe.sources = { };\n}\nfor (const s in msg.payload.sources) {\n    describe.sources[s] = msg.payload.sources[s];\n}\nif (typeof describe.pages !== 'object') {\n    describe.enum = { };\n}\nfor (const e in msg.payload.enum) {\n    describe.enum[e] = msg.payload.enum[e];\n}\n\n// Update dictionary\nfor (const lang in msg.payload.dictionary) {\n    if (typeof dictionary[lang] !== 'object') {\n        dictionary[lang] = {};\n    }\n    if (typeof msg.payload.dictionary[lang] === 'object') {\n        for (const group in msg.payload.dictionary[lang]) {\n            if (typeof dictionary[lang][group] !== 'object') {\n                dictionary[lang][group] = {};\n            }\n            if (typeof msg.payload.dictionary[lang][group] === 'object') {\n                for (const sentence in msg.payload.dictionary[lang][group]) {\n                    // custom sentence overwrite existing ones\n                    dictionary[lang][group][sentence] = msg.payload.dictionary[lang][group][sentence];\n                }\n            }\n        }\n    }\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4830,7 +4676,7 @@
         "z": "4bc72a1112cb448c",
         "g": "8cc9a474d6cd27ec",
         "name": "hmi",
-        "func": "// Get UI user structure\nif (typeof msg.hmi !== 'object') {\n    msg.hmi = {...(global.get('describe.template.hmi') || {})};\n}\n\n// Get UI page\nif (typeof msg.name === 'string') {\n    msg.hmi.name = msg.name;\n    delete msg.name;\n}\ndelete msg.tab; \n\n// Get UI user\nif (typeof msg._client === 'object' && typeof msg._client.socketId === 'string') {\n    // Get use lang\n    const browser_lang = global.get('browser[\"' + msg._client.socketId + '\"][\"lang\"]');\n    if (typeof browser_lang === 'string') {\n        msg.hmi.lang = browser_lang;\n    }\n    msg.hmi.id = msg._client.socketId;\n\n    const user = {...(global.get('user') || {})};\n\n    /* Bypass auth */\n    //*\n    if (global.get('entity[\"dknr_command_auth\"][\"value\"]') === 1 && \n        (typeof user[msg.hmi.id] !== 'object' || user[msg.hmi.id]['login'] === '')\n    ) {\n        const admin = {...(global.get('auth.admin') || {})};\n        user[msg.hmi.id] = admin;\n        user[msg.hmi.id]['login'] = 'admin';\n        delete user[msg.hmi.id]['pass'];\n        global.set('user', {...user});\n    }\n    //*/\n\n    if (typeof user[msg.hmi.id] === 'object') {\n        user[msg.hmi.id]['time'] = Date.now();\n        global.set('user', {...user});\n        msg.hmi = {...msg.hmi, ...user[msg.hmi.id]};\n    }\n}\n\n// Get lang dictionary\nmsg.dictionary = { ...(global.get('dictionary.en') || { }), ...(global.get('dictionary[\"' + msg.hmi.lang + '\"]') || { }) };\n\nreturn msg;\n",
+        "func": "\n// Get memories\nlet form = global.get('form'); // autoupdate\nlet user = global.get('user'); // autoupdate\nlet admin = global.get('auth.admin') || { }; // read\n\n// Get UI user structure\nif (typeof msg.hmi !== 'object') {\n    msg.hmi = {...(global.get('describe.template.hmi') || {})}; // clone\n}\n\n// Get UI page\nif (typeof msg.name === 'string') {\n    msg.hmi.name = msg.name;\n    delete msg.name;\n}\ndelete msg.tab; \n\n// Get UI user\nif (typeof msg._client === 'object' && typeof msg._client.socketId === 'string') {\n    // Get use lang\n    const browser_lang = global.get('browser[\"' + msg._client.socketId + '\"][\"lang\"]');\n    if (typeof browser_lang === 'string') {\n        msg.hmi.lang = browser_lang;\n    }\n    msg.hmi.id = msg._client.socketId;\n\n\n    /* Bypass auth */\n    //*\n    if (global.get('entity[\"dknr_command_auth\"][\"value\"]') === 1 && \n        (typeof user[msg.hmi.id] !== 'object' || user[msg.hmi.id]['login'] === '')\n    ) {\n        user[msg.hmi.id] = admin;\n        user[msg.hmi.id]['login'] = 'admin';\n\n        delete user[msg.hmi.id]['pass'];\n    }\n    //*/\n\n    if (typeof user[msg.hmi.id] === 'object') {\n        user[msg.hmi.id]['time'] = Date.now();\n\n        msg.hmi = {...msg.hmi, ...user[msg.hmi.id]};\n    }\n\n    if (typeof form[msg.hmi.id] !== 'object') {\n        form[msg.hmi.id] = { };\n    }\n}\n\n// Get lang dictionary\nmsg.dictionary = { ...(global.get('dictionary.en') || { }), ...(global.get('dictionary[\"' + msg.hmi.lang + '\"]') || { }) };\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4888,7 +4734,7 @@
         "type": "function",
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
-        "name": "filename",
+        "name": "data",
         "func": "// Prepare project query\nif (typeof msg.payload.activeProject === 'string') {\n    return {\n        'topic': '',\n        'payload': '',\n        'filename': '/data/projects/' + msg.payload.activeProject + '/package.json'\n    };\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
@@ -4896,7 +4742,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1860,
+        "x": 1850,
         "y": 80,
         "wires": [
             [
@@ -4933,7 +4779,7 @@
         "z": "4bc72a1112cb448c",
         "g": "9e3dbf7ae870765f",
         "name": "data",
-        "func": "msg.broker = {};\n\nlet mqtt = global.get('mqtt');\nif (typeof mqtt == 'object' && mqtt.enabled == true) {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.topic.length > 0\n    ) {\n        msg.broker = {\n            'broker': mqtt.host,\n            'port': mqtt.port,\n            'clientid': global.get('describe.app.project') || 'dknr',\n            'birth': {\n                'topic': mqtt.topic + '/kernel/state',\n                'payload': 'online',\n                'qos': 0,\n                'retain': false\n            },\n            'close': {\n                'topic': mqtt.topic + '/kernel/state',\n                'payload': 'offline',\n                'qos': 0,\n                'retain': false\n            },\n            'will': {\n                'topic': mqtt.topic + '/kernel/state',\n                'payload': 'will',\n                'qos': 0,\n                'retain': false\n            },\n            'force': true\n        };\n\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.topic + '/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false);\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
+        "func": "\n// Get memories\nlet mqtt = global.get('mqtt'); // autoupdate\n\nif (typeof mqtt.enabled == 'boolean' && mqtt.enabled == true) {\n    msg.broker = {};\n\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.topic.length > 0\n    ) {\n        msg.broker = {\n            'broker': mqtt.host,\n            'port': mqtt.port,\n            'clientid': global.get('describe.app.project') || 'dknr',\n            'birth': {\n                'topic': mqtt.topic + '/kernel/state',\n                'payload': 'online',\n                'qos': 0,\n                'retain': false\n            },\n            'close': {\n                'topic': mqtt.topic + '/kernel/state',\n                'payload': 'offline',\n                'qos': 0,\n                'retain': false\n            },\n            'will': {\n                'topic': mqtt.topic + '/kernel/state',\n                'payload': 'will',\n                'qos': 0,\n                'retain': false\n            },\n            'force': true\n        };\n\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.action = 'connect';\n        node.status({\n            fill: 'green',\n            shape: 'ring',\n            text: 'settings ok'\n        });\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.topic + '/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        mqtt.enabled = false;\n        node.status({\n            fill: 'red',\n            shape: 'ring',\n            text: 'settings ko'\n        });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4992,7 +4838,7 @@
         "z": "4bc72a1112cb448c",
         "g": "9e3dbf7ae870765f",
         "name": "data",
-        "func": "let mqtt = global.get('mqtt') || {};\nif (typeof mqtt.enabled === 'boolean' && \n    mqtt.enabled === true && \n    typeof msg.repeat === 'boolean' &&\n    msg.repeat === false &&\n    typeof msg.payload === 'object' &&\n    typeof msg.payload.hidden === 'number' &&\n    msg.payload.hidden === 0\n) {\n    let newMsg = {\n        'topic': mqtt.topic + '/' + msg.payload.uid,\n        'payload': msg.payload,\n    };\n\n    node.status({text: newMsg.topic});\n    return newMsg;\n}\n\nreturn;",
+        "func": "let mqtt = global.get('mqtt') || {};\nif (typeof mqtt.enabled === 'boolean' && \n    mqtt.enabled === true && \n    typeof msg.repeat === 'boolean' &&\n    msg.repeat === false &&\n    typeof msg.payload === 'object' &&\n    typeof msg.payload.hidden === 'number' &&\n    msg.payload.hidden === 0\n) {\n    let newMsg = {\n        'topic': mqtt.topic + '/' + msg.payload.uid,\n        'payload': msg.payload,\n    };\n\n    node.status({\n        text: newMsg.topic\n    });\n\n    return newMsg;\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5181,7 +5027,7 @@
         "z": "4bc72a1112cb448c",
         "g": "be2dde01217c4ebd",
         "name": "data",
-        "func": "// Stop loop from elsewhere. This lost all incoming data.\nlet stop = flow.get('stop') || false;\n\n// Check required fields\nif (stop === true ||\n    typeof msg.payload !== 'object' || \n    typeof msg.payload.source !== 'string' || \n    typeof msg.payload.parent !== 'string' || \n    typeof msg.payload.id !== 'string' || \n    typeof msg.payload.value === 'undefined'\n) {\n\n    return;\n}\n\n// Default keys\nlet template = global.get('describe.template.entity') || {};\n\n// Rebuilt some keys\nif (msg.payload.parent.slice(0, msg.payload.source.length) !== msg.payload.source) {\n    // dot not add source on loop\n    msg.payload.parent = msg.payload.source + '_' + msg.payload.parent;\n}\nmsg.payload.uid = msg.payload.parent + '_' + msg.payload.id;\n\n// Always convert boolean to int\nif (typeof msg.payload.value === 'boolean') {\n    msg.payload.value = msg.payload.value ? 1 : 0;\n}\n// Stop on boot\nif (flow.get('stop') === true \n || global.get('boot') === true\n) {\n\n    return;\n}\n\n// Get existing entity\nconst origin = global.get('entity[\"' + msg.payload.uid + '\"]') || {};\nconst protect = ['room', 'element', 'unit'];\n\n// For now, hide new entity\ntemplate['hidden'] = (typeof origin['hidden'] !== 'number') ? 1 : 0;\n\n// Set all entity fields\nlet entity = {...template, ...origin};\nconst old_value = entity['value'];\n\nfor (const k in msg.payload) {\n    // Clean up old record\n    if (typeof template[k] !== 'undefined') {\n        if (k === 'name' && typeof origin['name'] === 'string') {\n            // Do not overwrite existing empty name\n        }\n        // check protected fields\n        else if (protect.includes(k) && entity[k] !== '') {\n            // Do not override some properties\n        } else {\n            entity[k] = msg.payload[k];\n        }\n    }\n}\n\n// Cleanup value, convert to 0-1. (boolean is int, see above)\nif (['b', 'rb'].includes(entity['unit'])) {\n    // Higher than 0 is 1\n    entity['value'] = entity['value'] === 0 ? 0 : 1\n}\n\n// Check if value changes\nif (typeof msg.replay === 'boolean' && msg.replay === true) {\n    msg.repeat = false;\n}\nelse {\n    msg.repeat = entity['element'] !== 'remote' && old_value === entity['value'] ? true : false;\n}\ndelete msg.replay;\n\nif (msg.remove === true) {\n    // todo\n}\n\nglobal.set('entity[\"' + entity.uid + '\"]', entity);\nif (typeof global.get('parent[\"' + entity.parent + '\"]') === 'object') {\n    global.set('parent[\"' + entity.parent + '\"][\"seen\"]', Date.now());\n}\n\nnode.status({ fill: msg.repeat ? 'blue' : 'green', shape: \"ring\", text: entity.uid + ' : ' + entity.value});\n\n// To alert connector (ak zwave...) that this is an update, set loop to true\nif (typeof msg.loop !== 'boolean') {\n    msg.loop = false;\n}\nmsg.topic = '';\nmsg.payload = entity;\n\nreturn msg;",
+        "func": "// Stop loop from elsewhere. This lost all incoming data.\nlet stop = flow.get('stop') || false;\n\n// Check required fields\nif (stop === true ||\n    typeof msg.payload !== 'object' || \n    typeof msg.payload.source !== 'string' || \n    typeof msg.payload.parent !== 'string' || \n    typeof msg.payload.id !== 'string' || \n    typeof msg.payload.value === 'undefined'\n) {\n\n    return;\n}\n\n// Default keys\nlet template = global.get('describe.template.entity') || {};\n\n// Rebuilt some keys\nif (msg.payload.parent.slice(0, msg.payload.source.length) !== msg.payload.source) {\n    // dot not add source on loop\n    msg.payload.parent = msg.payload.source + '_' + msg.payload.parent;\n}\nmsg.payload.uid = msg.payload.parent + '_' + msg.payload.id;\n\n// Always convert boolean to int\nif (typeof msg.payload.value === 'boolean') {\n    msg.payload.value = msg.payload.value ? 1 : 0;\n}\n// Stop on boot\nif (flow.get('stop') === true \n || global.get('boot') === true\n) {\n\n    return;\n}\n\n// Get existing entity\nconst origin = global.get('entity[\"' + msg.payload.uid + '\"]') || {};\nconst protect = ['room', 'element', 'unit'];\n\n// For now, hide new entity\ntemplate['hidden'] = (typeof origin['hidden'] !== 'number') ? 1 : 0;\n\n// Set all entity fields\nlet entity = {...template, ...origin};\nconst old_value = entity['value'];\n\nfor (const k in msg.payload) {\n    // Clean up old record\n    if (typeof template[k] !== 'undefined') {\n        if (k === 'name' && typeof origin['name'] === 'string') {\n            // Do not overwrite existing empty name\n        }\n        // check protected fields\n        else if (protect.includes(k) && entity[k] !== '') {\n            // Do not override some properties\n        } else {\n            entity[k] = msg.payload[k];\n        }\n    }\n}\n\n// Cleanup value, convert to 0-1. (boolean is int, see above)\nif (['b', 'rb'].includes(entity['unit'])) {\n    // Higher than 0 is 1\n    entity['value'] = entity['value'] === 0 ? 0 : 1\n}\n\n// Check if value changes\nif (typeof msg.replay === 'boolean' && msg.replay === true) {\n    msg.repeat = false;\n}\nelse {\n    msg.repeat = entity['element'] !== 'remote' && old_value === entity['value'] ? true : false;\n}\ndelete msg.replay;\n\nif (msg.remove === true) {\n    // todo\n}\n\nglobal.set('entity[\"' + entity.uid + '\"]', entity);\nif (typeof global.get('parent[\"' + entity.parent + '\"]') === 'object') {\n    global.set('parent[\"' + entity.parent + '\"][\"seen\"]', Date.now());\n}\n\nnode.status({\n    'fill': msg.repeat ? 'blue' : 'green',\n    'shape': 'ring',\n    'text': entity.uid + ' : ' + entity.value\n});\n\n// To alert connector (ak zwave...) that this is an update, set loop to true\nif (typeof msg.loop !== 'boolean') {\n    msg.loop = false;\n}\nmsg.topic = '';\nmsg.payload = entity;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6693,7 +6539,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "data",
-        "func": "// Maintenance for memory var\n\nflow.set('stop', true);\nnode.status({ fill: 'red' });\n\nconst template = { ...(global.get('describe.template') || {}) };\n\n// Clean name\nlet new_p = {};\nconst p = global.get('parent') || {};\nconst l = global.get('entity') || {}\nfor (const k in l) {\n    if (l[k]['parent'] !== '' && typeof p[l[k]['parent']] === 'object') {\n        new_p[l[k]['parent']] = p[l[k]['parent']];\n    }\n}\n\nglobal.set('parent', new_p);\n\n// Clean entity\nconst template_entity = Object.keys(template.entity);\nlet entity = {...global.get('entity')};\nfor (const k in entity) {\n    for (const l in entity[k]) {\n        if (!template_entity.includes(l)) {\n            delete entity[k][l];\n        }\n    }\n}\nglobal.set('entity', entity);\n\n\n// Clean up scenes\nlet scene = { ...(global.get('scene') || {}) };\n\nfor (const e in scene) {\n    let clean = { };\n\n    const type = global.get('entity[\"' + e + '\"][\"element\"]') || '';\n    if (type === '') {\n\n        continue;\n    }\n    const fields = [ ...(global.get('describe[\"scenes\"][\"' + type + '\"]') || []) ];\n    if (fields.length === 0) {\n\n        continue;\n    }\n\n    for (const field in template.scene) {\n        if (fields.includes(field)) {\n            clean[field] = scene[e][field] || template['scene'][field];\n        }\n        else {\n            clean[field] = template['scene'][field];\n        }\n    }\n\n    clean['target'] = e;\n    clean['trigger'] = scene[e]['trigger'] || { };\n    clean['today'] = scene[e]['today'] || 0;\n    clean['timer'] = scene[e]['timer'] || 0;\n    \n    clean['temperature_aperture_opened'] = scene[e]['temperature_aperture_opened'] || 0;\n    clean['temperature_aperture_timer'] = scene[e]['temperature_aperture_timer'] || 0;\n    clean['temperature_pilot_state'] = scene[e]['temperature_pilot_state'] || 'stopped';\n    clean['temperature_pilot_last'] = scene[e]['temperature_pilot_last'] || 0;\n\n    scene[e] = clean;\n}\nglobal.set('scene', scene);\n\n// delete perempted calendar entries\nconst calendar = { ...(global.get('calendar') || { }) };\nconst now = new Date();\nfor (const id in calendar) {\n    if (calendar[id]['perempted'] === true) {\n        let dt  = new Date(calendar[id]['ts']);\n        if (dt < now) {\n            delete calendar[id];\n        }\n    }\n}\nglobal.set('calendar', calendar);\n\n\nnode.status({ fill: 'green' });\nflow.set('stop', false);\n\nreturn msg;",
+        "func": "// Maintenance for memory var\n\nflow.set('stop', true);\n\n// Get memories\nlet calendar = global.get('calendar');\nlet entity = global.get('entity'); // autoupdate\nlet parent = global.get('parent'); // replace\nlet scene = global.get('scene'); // autoupdate\nlet template = global.get('describe.template') || {}; // read\n\n// Clean name\nlet new_p = {};\nfor (const k in entity) {\n    if (entity[k]['parent'] !== '' && typeof parent[entity[k]['parent']] === 'object') {\n        new_p[entity[k]['parent']] = parent[entity[k]['parent']];\n    }\n}\nglobal.set('parent', new_p); // replace whole records\n\n// Clean entity\nconst template_entity = Object.keys(template.entity);\nfor (const k in entity) {\n    for (const l in entity[k]) {\n        if (!template_entity.includes(l)) {\n            delete entity[k][l];\n        }\n    }\n}\n\n// Clean up scenes\nfor (const e in scene) {\n    let clean = { };\n\n    const type = entity[e][\"element\"] || '';\n    if (type === '') {\n\n        continue;\n    }\n    const fields = global.get('describe[\"scenes\"][\"' + type + '\"]') || [];\n    if (fields.length === 0) {\n\n        continue;\n    }\n\n    for (const field in template.scene) {\n        if (fields.includes(field)) {\n            clean[field] = scene[e][field] || template['scene'][field];\n        }\n        else {\n            clean[field] = template['scene'][field];\n        }\n    }\n\n    clean['target'] = e;\n    clean['trigger'] = scene[e]['trigger'] || { };\n    clean['today'] = scene[e]['today'] || 0;\n    clean['timer'] = scene[e]['timer'] || 0;\n    \n    clean['temperature_aperture_opened'] = scene[e]['temperature_aperture_opened'] || 0;\n    clean['temperature_aperture_timer'] = scene[e]['temperature_aperture_timer'] || 0;\n    clean['temperature_pilot_state'] = scene[e]['temperature_pilot_state'] || 'stopped';\n    clean['temperature_pilot_last'] = scene[e]['temperature_pilot_last'] || 0;\n\n    scene[e] = clean;\n}\n\n// delete perempted calendar entries\nconst now = new Date();\nfor (const id in calendar) {\n    if (calendar[id]['perempted'] === true) {\n        let dt  = new Date(calendar[id]['ts']);\n        if (dt < now) {\n            delete calendar[id]; // autoupdate\n        }\n    }\n}\n\nflow.set('stop', false);\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7273,7 +7119,7 @@
         "z": "4bc72a1112cb448c",
         "g": "f822aa69af66c546",
         "name": "data",
-        "func": "const rnd = global.get('random') || '--';\nif (typeof rnd !== 'number' || \n    typeof msg.payload.rnd !== 'string' || \n    rnd !== Number(msg.payload.rnd)\n) {\n\n    node.send([null, msg]);\n}\n\nmsg.payload = JSON.stringify({\n    'auth': {...global.get('auth') || {}},\n    'block': {...global.get('block') || {}},\n    'calendar': { ...global.get('calendar') || {} },\n    'energy': { ...global.get('energy') || {} },\n    'entity': { ...global.get('entity') || {} },\n    'mqtt': {...global.get('mqtt') || {}},\n    'rooms': { ...global.get('rooms') || {} },\n    'parent': {...global.get('parent') || {}},\n    'scene': {...global.get('scene') || {}}\n}, null, 4);\n\nmsg.headers = {\n    'Content-Type':'application/json',\n    'Content-Disposition':'attachment; filename=\"backup.json\"',\n    'Content-Length': msg.payload.length,\n    'Connection':'close'\t\n};\n\nnode.send([msg, null]);\n\nreturn;",
+        "func": "const rnd = global.get('random') || '--';\nif (typeof rnd !== 'number' || \n    typeof msg.payload.rnd !== 'string' || \n    rnd !== Number(msg.payload.rnd)\n) {\n\n    node.send([null, msg]);\n}\n\nmsg.payload = JSON.stringify({\n    'auth': global.get('auth'),\n    'block': global.get('block'),\n    'calendar': global.get('calendar'),\n    'energy': global.get('energy'),\n    'entity': global.get('entity'),\n    'mqtt': global.get('mqtt'),\n    'rooms': global.get('rooms'),\n    'parent': global.get('parent'),\n    'scene': global.get('scene')\n}, null, 4);\n\nmsg.headers = {\n    'Content-Type':'application/json',\n    'Content-Disposition':'attachment; filename=\"backup.json\"',\n    'Content-Length': msg.payload.length,\n    'Connection':'close'\t\n};\n\nnode.send([msg, null]);\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -7710,7 +7556,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "dictionary",
-        "func": "const dictionary = global.get('dictionary') || {};\n\ndictionary.en = {\n    'common': {\n        'locales': 'en-GB'\n    },\n    'option_page': {\n        'home': 'Home',\n        'energy': 'Energy',\n        'calendar': 'Calendar',\n        'room': 'Rooms',\n        'tuning': 'Adjustments',\n        'scene': 'Scenes',\n        'entity': 'Entities',\n        'config': 'Configuration',\n        'auth': 'Authentication'\n    },\n    'option_level': {\n        'visitor': 'Visitor',\n        'child':  'Child',\n        'parent':'Parent',\n        'admin': 'Administrator'\n    },\n    'option_team': {\n        'm': 'Morning',\n        'a': 'Afternoon',\n        'n': 'Night',\n        'd': 'Day',\n        'w': 'Weekend',\n        's': 'Saturday'\n    },\n    'option_lang': {\n        'en': 'English',\n        'fr': 'French'\n    },\n    'option_type': {\n        'command': 'Command',\n        'sensor': 'Sensor'\n    },\n    'option_element': {\n        'aperture': 'Aperture',\n        'battery': 'Battery',\n        'climate': 'Climate',\n        'current': 'Current',\n        'frequency': 'Frequency',\n        'voltage': 'Voltage',\n        'energy': 'Energy',\n        'power': 'Power',\n        'pressure': 'Pressure',\n        'temperature': 'Temperature',\n        'humidity': 'Humidity',\n        'illuminance': 'Illuminance',\n        'light': 'Light',\n        'switch': 'Switch',\n        'plug': 'Plug',\n        'remote': 'Remote',\n        'door': 'Door',\n        'window': 'Window',\n        'shutter': 'Shutter',\n        'slider': 'Sliding door',\n        'heater': 'Heating',\n        'waterboiler': 'Waterboiler',\n        'motion': 'Motion',\n        'presence': 'Presence',\n        'lock': 'Lock',\n        'alert': 'Alert',\n        'sound': 'Volume',\n        'wind': 'Wind',\n        'fan': 'Fan',\n        'direction': 'Direction',\n        'time': 'Clock',\n        'mode': 'Mode',\n        'text': 'Text',\n        'location': 'Location',\n        'camera': 'Camera',\n        'shield': 'Shield',\n        'color': 'Color',\n        'tariff': 'Tariff'\n    },\n    'option_unit': {\n        '': 'None',\n        '°C': 'Degree celsuis',\n        '°F': 'Degree fahrenheit',\n        'mA': 'Milliampere',\n        'A': 'Ampere',\n        'Hz': 'Hertz',\n        'mW': 'Milliwatt',\n        'W': 'Watt',\n        'kW': 'Kilowatt',\n        'MW': 'Megawatt',\n        'mWh': 'Milliwatt/hour',\n        'Wh': 'Watt/Hour',\n        'mVA': 'Millivoltampere',\n        'VA': 'Voltampere',\n        'mV': 'Millivolt',\n        'V': 'Volt',\n        'lx': 'Lux',\n        'ppm': 'Parts per million',\n        '%': 'Percent (0-100)',\n        'b': 'Binary (0-1)',\n        'rb': 'Revert binary',\n        '8b': '8-bit (0-255)',\n        'n': 'Number',\n        's': 'Second',\n        'ms': 'Millisecond',\n        'time': 'Time',\n        'enum': 'Enumerator',\n        'text': 'Text',\n        'chex': 'Hexadécimal color'\n    },\n    'option_calendar': {\n        'birthday': 'Birthday',\n        'rendezvous': 'Rendez-vous',\n        'trashbin': 'Trash bin',\n        'recyclebin': 'Recycle bin'\n    },\n    'option_scene': {\n        'enabled': 'Enabled',\n        'mode': 'Scene',\n        'on': 'On level',\n        'off': 'Off level',\n        'high': 'High dimmer',\n        'low': 'Low dimmer',\n        'delay': 'Delay',\n        'step': 'Step',\n        'min': 'Miminum',\n        'max': 'Maximm',\n        'motion': 'Motion',\n        'retention': 'Retention',\n        'aperture': 'Aperture',\n        'nocturnal': 'Nocturnal',\n        'diurnal': 'Diurnal',\n        'nightlight': 'Nightlight',\n        'daily': 'Daily',\n        'openwork': 'Openwork',\n        'duration': 'Duration',\n        'illuminance': 'Illuminance',\n        'darkness': 'Darkness',\n        'humidity': 'Humidity',\n        'power': 'Power',\n        'tariff': 'tariff',\n\n        'target': 'Target',\n        'timer': 'Timer',\n        'today': 'Today',\n        'trigger': 'Triggers'\n    },\n    'option_trigger': {\n        'none': 'None',\n        'high': 'High output level',\n        'low': 'Low output level',\n        'toggle': 'Toggle output'\n    },\n    'option_column': {\n        'name': 'Name',\n        'room': 'Room',\n        'element': 'Element',\n        'type': 'Type',\n        'unit': 'Unit',\n        'action': 'Action'\n    },\n    'notice': {\n        'file_write_success': 'Saved file successfully',\n        'file_write_fail': 'Failed to save file',\n        'login_fail': 'Wrong username or password',\n        'save_success': 'Successfully saved'\n    },\n    'group_tuning': {\n        'mode_title': 'Mode',\n        'automate': 'Automate',\n        'auto': 'Automatic',\n        'manual': 'Manual'\n    },\n    'group_entity': {\n        'room_title': 'Rooms configuration',\n        'room_add': 'Add or edit a room',\n        'room_del': 'Delete a room',\n        'room_id': 'Ident',\n        'room_name': 'Name',\n\n        'camera_title': 'Camera configuraion',\n        'camera_ip': 'IP',\n        'camera_user': 'Login',\n        'camera_pass': 'Password',\n        'camera_token': 'Token',\n        'camera_type': 'Type',\n\n        'entity_title': 'List of received entities',\n        'entity_edit_title': 'Configure entity',\n        'entity_edit_name': 'Name',\n        'entity_edit_room': 'Room',\n        'entity_edit_type': 'Type',\n        'entity_edit_element': 'Element',\n        'entity_edit_action': 'Action',\n        'entity_show': 'Show',\n        'entity_hide': 'Hide',\n        'entity_delete': 'Delete',\n\n        'device_edit_title': 'Configure device',\n        'device_edit_name': 'Device name'\n    }\n}\n\n// Add pages dictionary group if nto present\nconst pages = { ...(global.get('describe.pages') || { }) };\nfor (const p in pages) {\n    if (typeof dictionary['en'][p] !== 'object') {\n        dictionary['en'][p] = { };\n    }\n}\n\n// Fill dictionaries with \"en\" sentences\nfor (const lang in dictionary) {\n    if (lang !== 'en') {\n        dictionary[lang] = {...dictionary['en'], ...dictionary[lang] };\n    }\n}\n\nglobal.set('dictionary', dictionary);\n\nreturn msg;",
+        "func": "\n// Get memories\nlet pages = global.get('describe.pages'); // read\nlet dictionary = global.get('dictionary'); // autoupdate\n\ndictionary.en = {\n    'common': {\n        'locales': 'en-GB'\n    },\n    'option_page': {\n        'home': 'Home',\n        'energy': 'Energy',\n        'calendar': 'Calendar',\n        'room': 'Rooms',\n        'tuning': 'Adjustments',\n        'scene': 'Scenes',\n        'entity': 'Entities',\n        'config': 'Configuration',\n        'auth': 'Authentication'\n    },\n    'option_level': {\n        'visitor': 'Visitor',\n        'child':  'Child',\n        'parent':'Parent',\n        'admin': 'Administrator'\n    },\n    'option_team': {\n        'm': 'Morning',\n        'a': 'Afternoon',\n        'n': 'Night',\n        'd': 'Day',\n        'w': 'Weekend',\n        's': 'Saturday'\n    },\n    'option_lang': {\n        'en': 'English',\n        'fr': 'French'\n    },\n    'option_type': {\n        'command': 'Command',\n        'sensor': 'Sensor'\n    },\n    'option_element': {\n        'aperture': 'Aperture',\n        'battery': 'Battery',\n        'climate': 'Climate',\n        'current': 'Current',\n        'frequency': 'Frequency',\n        'voltage': 'Voltage',\n        'energy': 'Energy',\n        'power': 'Power',\n        'pressure': 'Pressure',\n        'temperature': 'Temperature',\n        'humidity': 'Humidity',\n        'illuminance': 'Illuminance',\n        'light': 'Light',\n        'switch': 'Switch',\n        'plug': 'Plug',\n        'remote': 'Remote',\n        'door': 'Door',\n        'window': 'Window',\n        'shutter': 'Shutter',\n        'slider': 'Sliding door',\n        'heater': 'Heating',\n        'waterboiler': 'Waterboiler',\n        'motion': 'Motion',\n        'presence': 'Presence',\n        'lock': 'Lock',\n        'alert': 'Alert',\n        'sound': 'Volume',\n        'wind': 'Wind',\n        'fan': 'Fan',\n        'direction': 'Direction',\n        'time': 'Clock',\n        'mode': 'Mode',\n        'text': 'Text',\n        'location': 'Location',\n        'camera': 'Camera',\n        'shield': 'Shield',\n        'color': 'Color',\n        'tariff': 'Tariff'\n    },\n    'option_unit': {\n        '': 'None',\n        '°C': 'Degree celsuis',\n        '°F': 'Degree fahrenheit',\n        'mA': 'Milliampere',\n        'A': 'Ampere',\n        'Hz': 'Hertz',\n        'mW': 'Milliwatt',\n        'W': 'Watt',\n        'kW': 'Kilowatt',\n        'MW': 'Megawatt',\n        'mWh': 'Milliwatt/hour',\n        'Wh': 'Watt/Hour',\n        'mVA': 'Millivoltampere',\n        'VA': 'Voltampere',\n        'mV': 'Millivolt',\n        'V': 'Volt',\n        'lx': 'Lux',\n        'ppm': 'Parts per million',\n        '%': 'Percent (0-100)',\n        'b': 'Binary (0-1)',\n        'rb': 'Revert binary',\n        '8b': '8-bit (0-255)',\n        'n': 'Number',\n        's': 'Second',\n        'ms': 'Millisecond',\n        'time': 'Time',\n        'enum': 'Enumerator',\n        'text': 'Text',\n        'chex': 'Hexadécimal color'\n    },\n    'option_calendar': {\n        'birthday': 'Birthday',\n        'rendezvous': 'Rendez-vous',\n        'trashbin': 'Trash bin',\n        'recyclebin': 'Recycle bin'\n    },\n    'option_scene': {\n        'enabled': 'Enabled',\n        'mode': 'Scene',\n        'on': 'On level',\n        'off': 'Off level',\n        'high': 'High dimmer',\n        'low': 'Low dimmer',\n        'delay': 'Delay',\n        'step': 'Step',\n        'min': 'Miminum',\n        'max': 'Maximm',\n        'motion': 'Motion',\n        'retention': 'Retention',\n        'aperture': 'Aperture',\n        'nocturnal': 'Nocturnal',\n        'diurnal': 'Diurnal',\n        'nightlight': 'Nightlight',\n        'daily': 'Daily',\n        'openwork': 'Openwork',\n        'duration': 'Duration',\n        'illuminance': 'Illuminance',\n        'darkness': 'Darkness',\n        'humidity': 'Humidity',\n        'power': 'Power',\n        'tariff': 'tariff',\n\n        'target': 'Target',\n        'timer': 'Timer',\n        'today': 'Today',\n        'trigger': 'Triggers'\n    },\n    'option_trigger': {\n        'none': 'None',\n        'high': 'High output level',\n        'low': 'Low output level',\n        'toggle': 'Toggle output'\n    },\n    'option_column': {\n        'name': 'Name',\n        'room': 'Room',\n        'element': 'Element',\n        'type': 'Type',\n        'unit': 'Unit',\n        'action': 'Action'\n    },\n    'notice': {\n        'file_write_success': 'Saved file successfully',\n        'file_write_fail': 'Failed to save file',\n        'login_fail': 'Wrong username or password',\n        'save_success': 'Successfully saved'\n    },\n    'group_tuning': {\n        'mode_title': 'Mode',\n        'automate': 'Automate',\n        'auto': 'Automatic',\n        'manual': 'Manual'\n    },\n    'group_entity': {\n        'room_title': 'Rooms configuration',\n        'room_add': 'Add or edit a room',\n        'room_del': 'Delete a room',\n        'room_id': 'Ident',\n        'room_name': 'Name',\n\n        'camera_title': 'Camera configuraion',\n        'camera_ip': 'IP',\n        'camera_user': 'Login',\n        'camera_pass': 'Password',\n        'camera_token': 'Token',\n        'camera_type': 'Type',\n\n        'entity_title': 'List of received entities',\n        'entity_edit_title': 'Configure entity',\n        'entity_edit_name': 'Name',\n        'entity_edit_room': 'Room',\n        'entity_edit_type': 'Type',\n        'entity_edit_element': 'Element',\n        'entity_edit_action': 'Action',\n        'entity_show': 'Show',\n        'entity_hide': 'Hide',\n        'entity_delete': 'Delete',\n\n        'device_edit_title': 'Configure device',\n        'device_edit_name': 'Device name'\n    }\n}\n\n// Add pages dictionary group if nto present\nfor (const p in pages) {\n    if (typeof dictionary['en'][p] !== 'object') {\n        dictionary['en'][p] = { };\n    }\n}\n\n// Fill dictionaries with \"en\" sentences\nfor (const lang in dictionary) {\n    if (lang !== 'en') {\n        dictionary[lang] = {...dictionary['en'], ...dictionary[lang] };\n    }\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -8669,7 +8515,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2580,
+        "x": 2560,
         "y": 140,
         "wires": []
     },
@@ -9514,6 +9360,49 @@
         "wires": [
             [
                 "479b5bc33ebd444c"
+            ]
+        ]
+    },
+    {
+        "id": "087f45fe1d6caa26",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "fc6029b7d49d1e93",
+        "name": "data",
+        "func": "\nmsg.payload = {\n    'admin': {\n        'pass': 'admin',\n        'level': 'admin',\n        'lang': 'fr',\n        'telegram': ''\n    }\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 1820,
+        "wires": [
+            [
+                "fa7160372fcfe3b2"
+            ]
+        ]
+    },
+    {
+        "id": "fc33f8739dc5de25",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "fc6029b7d49d1e93",
+        "name": "data",
+        "func": "global.set('auth', msg.payload);\n\nmsg.payload = '';\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 1820,
+        "wires": [
+            [
+                "44a9a10bea4cbb76",
+                "aae1f5d9a3931146"
             ]
         ]
     },
