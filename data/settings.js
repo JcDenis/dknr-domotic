@@ -17,7 +17,7 @@ module.exports = {
   runtimeState: { enabled: false, ui: false, },
   telemetry: { enabled: false },
   logging: { console: { level: "info", metrics: false, audit: false } },
-  contextStorage: { default: { module: "localfilesystem" }, memoryOnly: { module: "memory" }, },
+  contextStorage: { default: { module: "localfilesystem" }, memoryOnly: { module: "memory" }, file: { module: "localfilesystem" } },
   exportGlobalContextKeys: false,
   externalModules: { autoInstall: true, autoInstallRetry: 60 },
   editorTheme: {
