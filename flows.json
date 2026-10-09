@@ -529,7 +529,10 @@
             "bcc6f36c217d1643",
             "f822aa69af66c546",
             "9e3dbf7ae870765f",
-            "f362e0d82cb6210f"
+            "f362e0d82cb6210f",
+            "615cc57787b0caf1",
+            "2f03ff3dca29c9db",
+            "8d6cc53447838375"
         ],
         "x": 68,
         "y": 13,
@@ -1050,8 +1053,6 @@
             "d0e7cf5b630e14bb",
             "0c7695b73246298b",
             "c5405938a9a7095b",
-            "cbaa549673dce10c",
-            "8d039354be97a91f",
             "64bf4ecc57a1f540",
             "450ea29bbe944daa",
             "5397038e1b8466e2",
@@ -1065,7 +1066,7 @@
         ],
         "x": 104,
         "y": 219,
-        "w": 1622,
+        "w": 1302,
         "h": 382
     },
     {
@@ -2178,7 +2179,7 @@
         "type": "group",
         "z": "4bc72a1112cb448c",
         "g": "58c5eecd014eb5e1",
-        "name": "",
+        "name": "common - ui - wait",
         "style": {
             "stroke": "#ff0000",
             "fill": "#ff0000",
@@ -3241,6 +3242,19 @@
         "visible": "true",
         "disabled": "false",
         "groupType": "default"
+    },
+    {
+        "id": "c4edc3029e729d7f",
+        "type": "matter-dynamic-bridge",
+        "name": "Matter Bridge",
+        "vendorId": "65521",
+        "productId": "32768",
+        "vendorName": "dknr-domotic",
+        "productName": "DKNR Matter Bridge",
+        "networkInterface": "",
+        "storageLocation": "",
+        "port": "5540",
+        "logLevel": "INFO"
     },
     {
         "id": "025edbd02daf82d0",
@@ -9508,6 +9522,60 @@
         "wires": []
     },
     {
+        "id": "615cc57787b0caf1",
+        "type": "matter-device",
+        "z": "4bc72a1112cb448c",
+        "g": "fa2576d920009359",
+        "name": "dknrcontact",
+        "bridge": "c4edc3029e729d7f",
+        "autoConfirm": false,
+        "deviceConfig": "{\n  \"deviceType\": \"ContactSensorDevice\",\n  \"additionalBehaviors\": [\"PowerSourceServer\"],\n  \"behaviorFeatures\": {\n    \"PowerSource\": [\"Battery\", \"Replaceable\"]\n  },\n  \"initialState\": {\n    \"booleanState\": {\n      \"stateValue\": false\n    },\n    \"powerSource\": {\n      \"status\": 1,\n      \"order\": 1,\n      \"description\": \"CR2032 Battery\",\n      \"batChargeLevel\": 0,\n      \"batPercentRemaining\": 190,\n      \"batReplaceability\": 1,\n      \"batReplacementNeeded\": false\n    }\n  }\n}",
+        "x": 1150,
+        "y": 520,
+        "wires": [
+            [
+                "8d6cc53447838375"
+            ],
+            [
+                "2f03ff3dca29c9db"
+            ]
+        ]
+    },
+    {
+        "id": "2f03ff3dca29c9db",
+        "type": "debug",
+        "z": "4bc72a1112cb448c",
+        "g": "fa2576d920009359",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "8d6cc53447838375",
+        "type": "debug",
+        "z": "4bc72a1112cb448c",
+        "g": "fa2576d920009359",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 460,
+        "wires": []
+    },
+    {
         "id": "d7bc8fc74bfc07cb",
         "type": "link in",
         "z": "10a4e1188aad61a2",
@@ -10779,8 +10847,8 @@
             "#e5e5e5"
         ],
         "gridColorDefault": true,
-        "width": "0",
-        "height": "0",
+        "width": "6",
+        "height": "5",
         "className": "",
         "interpolation": "smooth",
         "x": 960,
@@ -10929,7 +10997,7 @@
         "z": "77269fd32cdb1638",
         "g": "b828708d51f09ccc",
         "name": "data",
-        "func": "if (msg.payload.length < 1) {\n\n    return;\n}\n\nmsg.payload.reverse\n\nconst start = msg.data.length;\nlet i = start;\nfor (const r in msg.payload) {\n    msg.data[i++] = {\n        'field': 'Favorable',\n        'date': msg.payload[r]['_time'],\n        'value': msg.payload[r]['_value']\n    };\n}\n\nfor (let j = start; j < i - 1; j++) {\n    if (typeof msg.data[j + 1] === 'object') {\n        msg.data[j]['value'] = msg.data[j + 1]['value'] - msg.data[j]['value'];\n    }\n    else {\n        msg.data[j]['value'] = 0;\n    }\n}\n\nmsg.data.shift();\nmsg.data.pop();\n\nnode.status({ 'text': i - start });\n\nreturn msg;",
+        "func": "if (msg.payload.length < 1) {\n\n    return;\n}\n\nmsg.payload.reverse\n\nconst start = msg.data.length;\nlet i = start;\nfor (const r in msg.payload) {\n    msg.data[i++] = {\n        'field': 'Favorable',\n        'date': msg.payload[r]['_time'],\n        'value': msg.payload[r]['_value']\n    };\n}\n\nfor (let j = start; j < i - 1; j++) {\n    if (typeof msg.data[j + 1] === 'object') {\n        msg.data[j]['value'] = msg.data[j + 1]['value'] - msg.data[j]['value'];\n    }\n    else {\n        msg.data[j]['value'] = 0;\n    }\n}\n\nmsg.data.shift();\nmsg.data.pop();\n\nnode.status({ 'text': i - start });\n\nconst entity = global.get('entity');\nconst energy = global.get('energy');\n\nlet field = '';\nfor (const e in energy) {\n    if ([ 'unfavorable_energy_meter' ].includes(e) \n        && typeof entity[energy[e]] === 'object'\n        && entity[energy[e]]['hidden'] === 0\n    ) {\n        msg.unit = entity[energy[e]]['unit'];\n        msg.query =\n            'from(bucket: \"domotic\")' +\n            '|> range(start: ' + msg.start + ', stop: ' + msg.end + ')' +\n        '|> filter(fn: (r) => r[\"_measurement\"] == \"energy\")' +\n        '|> filter(fn: (r) => r[\"_field\"] == \"' + energy[e] + '\")' +\n        '|> sort(columns: [\"_time\"])' +\n        '|> aggregateWindow(every: 1d, fn: last, createEmpty: false)' +\n        '|> yield(name: \"last\")';\n\n        return msg;\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -10937,48 +11005,6 @@
         "finalize": "",
         "libs": [],
         "x": 750,
-        "y": 560,
-        "wires": [
-            [
-                "8d039354be97a91f"
-            ]
-        ]
-    },
-    {
-        "id": "cbaa549673dce10c",
-        "type": "function",
-        "z": "77269fd32cdb1638",
-        "g": "b828708d51f09ccc",
-        "name": "data",
-        "func": "\nlet sum = { };\nfor (let i = 0; i < msg.data.length; i++) {\n    if (typeof sum[msg.data[i]['date']] !== 'object') {\n        sum[msg.data[i]['date']] = {\n            'field': 'Total',\n            'date': msg.data[i]['date'],\n            'value': msg.data[i]['value']\n        };\n    }\n    else {\n        sum[msg.data[i]['date']]['value'] += msg.data[i]['value'];\n    }\n}\n\nmsg.data.push(...Object.values(sum));\n\nmsg.payload = msg.data;\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1390,
-        "y": 560,
-        "wires": [
-            [
-                "40cee7992ff2a035"
-            ]
-        ]
-    },
-    {
-        "id": "8d039354be97a91f",
-        "type": "function",
-        "z": "77269fd32cdb1638",
-        "g": "b828708d51f09ccc",
-        "name": "data",
-        "func": "\nconst entity = { ...(global.get('entity') || { }) };\nconst energy = { ...(global.get('energy') || { }) };\nlet field = '';\nfor (const e in energy) {\n    if ([ 'unfavorable_energy_meter' ].includes(e) \n        && typeof entity[energy[e]] === 'object'\n        && entity[energy[e]]['hidden'] === 0\n    ) {\n        msg.unit = entity[energy[e]]['unit'];\n        msg.query =\n            'from(bucket: \"domotic\")' +\n            '|> range(start: ' + msg.start + ', stop: ' + msg.end + ')' +\n        '|> filter(fn: (r) => r[\"_measurement\"] == \"energy\")' +\n        '|> filter(fn: (r) => r[\"_field\"] == \"' + energy[e] + '\")' +\n        '|> sort(columns: [\"_time\"])' +\n        '|> aggregateWindow(every: 1d, fn: last, createEmpty: false)' +\n        '|> yield(name: \"last\")';\n\n        return msg;\n    }\n}\n\nreturn;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 910,
         "y": 560,
         "wires": [
             [
@@ -10998,7 +11024,7 @@
         "precision": "",
         "retentionPolicy": "",
         "org": "dknr",
-        "x": 1070,
+        "x": 910,
         "y": 560,
         "wires": [
             [
@@ -11012,18 +11038,18 @@
         "z": "77269fd32cdb1638",
         "g": "b828708d51f09ccc",
         "name": "data",
-        "func": "if (msg.payload.length < 1) {\n\n    return;\n}\n\nmsg.payload.reverse\n\nconst start = msg.data.length;\nlet i = start;\nfor (const r in msg.payload) {\n    msg.data[i++] = {\n        'field': 'Unfavorable',\n        'date': msg.payload[r]['_time'],\n        'value': msg.payload[r]['_value']\n    };\n}\n\nfor (let j = start; j < i - 1; j++) {\n    if (typeof msg.data[j + 1] === 'object') {\n        msg.data[j]['value'] = msg.data[j + 1]['value'] - msg.data[j]['value'];\n    }\n    else {\n        msg.data[j]['value'] = 0;\n    }\n}\n\nmsg.data.pop();\n\nnode.status({ 'text': i - start });\n\nreturn msg;",
+        "func": "if (msg.payload.length < 1) {\n\n    return;\n}\n\nmsg.payload.reverse\n\nconst start = msg.data.length;\nlet i = start;\nfor (const r in msg.payload) {\n    msg.data[i++] = {\n        'field': 'Unfavorable',\n        'date': msg.payload[r]['_time'],\n        'value': msg.payload[r]['_value']\n    };\n}\n\nfor (let j = start; j < i - 1; j++) {\n    if (typeof msg.data[j + 1] === 'object') {\n        msg.data[j]['value'] = msg.data[j + 1]['value'] - msg.data[j]['value'];\n    }\n    else {\n        msg.data[j]['value'] = 0;\n    }\n}\n\nmsg.data.pop();\n\nnode.status({ 'text': i - start });\n\nlet sum = {};\nfor (let i = 0; i < msg.data.length; i++) {\n    if (typeof sum[msg.data[i]['date']] !== 'object') {\n        sum[msg.data[i]['date']] = {\n            'field': 'Total',\n            'date': msg.data[i]['date'],\n            'value': msg.data[i]['value']\n        };\n    }\n    else {\n        sum[msg.data[i]['date']]['value'] += msg.data[i]['value'];\n    }\n}\n\nmsg.data.push(...Object.values(sum));\n\nmsg.payload = msg.data;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1230,
+        "x": 1070,
         "y": 560,
         "wires": [
             [
-                "cbaa549673dce10c"
+                "40cee7992ff2a035"
             ]
         ]
     },
@@ -11229,11 +11255,11 @@
             "#e5e5e5"
         ],
         "gridColorDefault": true,
-        "width": "0",
-        "height": "0",
+        "width": "6",
+        "height": "5",
         "className": "",
         "interpolation": "smooth",
-        "x": 1600,
+        "x": 1280,
         "y": 560,
         "wires": [
             []
@@ -19768,7 +19794,7 @@
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "name": "data",
-        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nmsg.class = 'remove';\nmsg.enabled = false;\n\nnode.send([msg]);\n\nawait new Promise(resolve => setTimeout(resolve, 50));\n\nmsg.class = ''\nmsg.enabled = true;\n\nnode.send([msg]);\n\nreturn;",
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nmsg.class = 'remove';\nmsg.enabled = false;\n\nnode.send([msg]);\n\n// Check display\nmsg = await node.linkcall('common - ui - wait', msg);\n\nmsg.class = ''\nmsg.enabled = true;\n\nnode.send([msg]);\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -22377,7 +22403,7 @@
         "z": "56c0b44ca387382c",
         "g": "82df6aae63bd1422",
         "name": "data",
-        "func": "if (!msg.enabled) {\n    msg.payload = [];\n\n    return [ msg, null ];\n}\n\nmsg.payload = msg.target.uid;\n\n\n// Get scene summary\nmsg = await node.linkcall('common - scene - summary', msg);\n\nlet i = 0;\nlet opts = [ ];\n\nfor (const k in msg.payload) {\n    if (k === 'ts') {\n        msg.payload[k] = (new Date(msg.payload[k])).toLocaleString('fr');\n    }\n    opts[i++] = {\n        'key': k,\n        'value': msg.payload[k]\n    }\n}\n\nmsg.payload = opts;\n\nreturn [ null, msg];",
+        "func": "if (!msg.enabled) {\n    msg.payload = [];\n\n    return [ msg, null ];\n}\n\nmsg.payload = msg.target.uid;\n\n\n// Get scene summary\nmsg = await node.linkcall('common - scene - summary', msg);\n\nlet i = 0;\nlet opts = [ ];\n\nfor (const k in msg.payload) {\n    if (k === 'ts') {\n        msg.payload[k] = (new Date(msg.payload[k])).toLocaleString('fr-FR');\n    }\n    opts[i++] = {\n        'key': k,\n        'value': msg.payload[k]\n    }\n}\n\nmsg.payload = opts;\n\nreturn [ null, msg];",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
