@@ -386,7 +386,7 @@
             "5658964f16a57276"
         ],
         "x": 104,
-        "y": 639,
+        "y": 219,
         "w": 1492,
         "h": 622
     },
@@ -1277,29 +1277,6 @@
         "h": 202
     },
     {
-        "id": "2858d8e23dbbc969",
-        "type": "group",
-        "z": "77269fd32cdb1638",
-        "name": "energy - entity",
-        "style": {
-            "fill": "#6f2fa0",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "3790dfc240bc5f6d",
-            "96cc3da1f3e135dd",
-            "088f2fca643818c2",
-            "453a5521de9c43f0",
-            "9d9be3102bf89bf0",
-            "20c33d6d50aa3ee3"
-        ],
-        "x": 104,
-        "y": 999,
-        "w": 752,
-        "h": 142
-    },
-    {
         "id": "dd5c4087d05abb87",
         "type": "group",
         "z": "10a4e1188aad61a2",
@@ -2172,7 +2149,7 @@
         "x": 94,
         "y": 2199,
         "w": 1322,
-        "h": 922
+        "h": 862
     },
     {
         "id": "df7710b4b2c4e55b",
@@ -3201,16 +3178,17 @@
     {
         "id": "a6601e1fe5c357e9",
         "type": "ui-group",
-        "name": "energy - entity - group",
+        "name": "energy - entity - dialog",
         "page": "34a13cfdebc90220",
         "width": 6,
         "height": 1,
-        "order": 3,
+        "order": 4,
         "showTitle": false,
         "className": "",
         "visible": "true",
         "disabled": "false",
-        "groupType": "default"
+        "groupType": "dialog",
+        "tab": ""
     },
     {
         "id": "9a4e69a0f4a18cc7",
@@ -3250,6 +3228,21 @@
         "width": 6,
         "height": 1,
         "order": 10,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default",
+        "tab": ""
+    },
+    {
+        "id": "1d386a3f3c7c03b4",
+        "type": "ui-group",
+        "name": "energy - menu - group",
+        "page": "34a13cfdebc90220",
+        "width": 6,
+        "height": 1,
+        "order": 3,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -3693,7 +3686,7 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": ".app-bar-actions-title {\n    margin: auto;\n    text-shadow: rgb(var(--v-theme-background)) 2px 2px 1px;\n}\n\n.remove *,\n.v-card .remove,\n.v-card-text .remove,\n.v-card-item {\n    display: none !important;\n    visibility: hidden;\n    color: transparent !important;\n}\n\n.nrdb-ui-widget:not(.ui-center):hover {\n    margin-bottom: -1px;\n    border-bottom: 1px solid var(--nrdb-bg-color);\n}\n.ui-center {\n    margin: auto;\n}\n\n.center .nrdb-switch, \n.center .v-btn-group {\n    margin: auto;\n}\n\ntbody td[data-column-key=lbl] {\n    font-weight: bold !important;\n}\n\n.icon-in-row {\n    font-size: 1.8em;\n}\n\n.ui-weather {\n    font-family: Arial, Helvetica, sans-serif;\n}\n.ui-weather-day th {\n    display: none;\n    visibility: hidden;\n}\n.ui-weather-day td {\n    border-bottom-width: 0 !important;\n    border-left-width: 1px !important;\n}\n.ui-weather-day span.ui-weather {\n    font-size: 1.4em;\n}\n.ui-weather img {\n    width: 4em;\n    height: 4em;\n    background-color: rgb(var(--v-theme-primary));\n    border-radius: 4px;\n}\n\n.v-tab-item--selected {\n    color: rgb(var(--v-theme-primary)) !important;\n}\n\n.v-main {\n    padding-bottom: 2em;\n}\n.ui-title span {\n    font-size: 1.4rem !important;\n    font-weight: normal !important;\n    padding: 0;\n    margin-top: 0.5em;\n    color: rgb(var(--v-theme-primary)) !important;\n}\n\n.ui-camera {\n    text-align: center !important;\n    flex: 1 0;\n}\n.ui-camera img {\n    width: 90%;\n    border-radius: 4px;\n    box-shadow: 3px 2px 2px rgba(var(--v-theme-group-outline));\n    border: 1px solid rgba(var(--v-theme-group-outline));\n}\n\n.nrdb-ui-group {\n    border-radius: 4px;\n    box-shadow: 3px 2px 2px rgba(var(--v-theme-group-outline));\n}\n.v-application {\n    border-top: 1px solid rgba(var(--v-theme-group-outline));\n    margin-top: -1px;\n}\n\nbody {\n    background-color: rgb(var(--v-theme-background)) !important;\n}\n\n.dknr-map {\n    color: rgb(var(--v-theme-background));\n    fill: rgb(var(--v-theme-primary));\n}\n.dknr-bg {\n    fill: rgb(var(--v-theme-background));\n}\n.dknr-blue {\n    fill: rgb(var(--v-theme-primary));\n}\n.dknr-green {\n    fill: green;\n}\n.dknr-orange {\n    fill: orange;\n}\n.dknr-red {\n    fill: red;\n}\n.dknr-grey {\n    fill: grey;\n}\n.dknr-light > .dknr-zone {\n    fill: rgb(255, 225, 0, 0.1);\n    /* filter: drop-shadow(0 0 2px black) drop-shadow(0 0 10px yellow) drop-shadow(0 0 15px yellow); */\n}\n.dknr-motion > .dknr-title {\n    stroke: red;\n    stroke-opacity: 0.5;\n}\n.dknr-climate > .dknr-text {\n    fill: red;\n}\n.dknr-aperture > .dknr-zone {\n    stroke: red;\n    stroke-width: 2px;\n    stroke-opacity: 0.5;\n}\n",
+        "format": ".app-bar-actions-title {\n    margin: auto;\n    text-shadow: rgb(var(--v-theme-background)) 2px 2px 1px;\n}\n\n.remove *,\n.v-card .remove,\n.v-card-text .remove,\n.v-card-item {\n    display: none !important;\n    visibility: hidden;\n    color: transparent !important;\n}\n\n.nrdb-ui-widget:not(.ui-center):hover {\n    margin-bottom: -1px;\n    border-bottom: 1px solid var(--nrdb-bg-color);\n}\n.ui-center {\n    margin: auto;\n}\n\n.center .nrdb-switch, \n.center .v-btn-group {\n    margin: auto;\n}\n\ntbody td[data-column-key=lbl] {\n    font-weight: bold !important;\n}\n\n.icon-in-row {\n    font-size: 1.8em;\n}\n\n.ui-weather {\n    font-family: Arial, Helvetica, sans-serif;\n}\n.ui-weather-day th {\n    display: none;\n    visibility: hidden;\n}\n.ui-weather-day td {\n    border-bottom-width: 0 !important;\n    border-left-width: 1px !important;\n}\n.ui-weather-day span.ui-weather {\n    font-size: 1.4em;\n}\n.ui-weather img {\n    width: 4em;\n    height: 4em;\n    background-color: rgb(var(--v-theme-primary));\n    border-radius: 4px;\n}\n\n.v-tab-item--selected {\n    color: rgb(var(--v-theme-primary)) !important;\n}\n\n.v-main {\n    padding-bottom: 2em;\n}\n.ui-title span {\n    font-size: 1.4rem !important;\n    font-weight: normal !important;\n    padding: 0;\n    margin-top: 0.5em;\n    color: rgb(var(--v-theme-primary)) !important;\n}\n\n.ui-camera {\n    text-align: center !important;\n    flex: 1 0;\n}\n.ui-camera img {\n    width: 90%;\n    border-radius: 4px;\n    box-shadow: 3px 2px 2px rgba(var(--v-theme-group-outline));\n    border: 1px solid rgba(var(--v-theme-group-outline));\n}\n\n.nrdb-ui-group {\n    border-radius: 4px;\n    box-shadow: 3px 2px 2px rgba(var(--v-theme-group-outline));\n}\n.v-application {\n    border-top: 1px solid rgba(var(--v-theme-group-outline));\n    margin-top: -1px;\n}\n\nbody {\n    background-color: rgb(var(--v-theme-background)) !important;\n}\n\n.dknr-map {\n    color: rgb(var(--v-theme-background));\n    fill: rgb(var(--v-theme-primary));\n}\n.dknr-bg {\n    fill: rgb(var(--v-theme-background));\n}\n.dknr-blue {\n    fill: rgb(var(--v-theme-primary));\n}\n.dknr-green {\n    fill: green;\n}\n.dknr-orange {\n    fill: orange;\n}\n.dknr-red {\n    fill: red;\n}\n.dknr-grey {\n    fill: grey;\n}\n.dknr-light > .dknr-zone {\n    fill: rgb(255, 225, 0, 0.1);\n    /* filter: drop-shadow(0 0 2px black) drop-shadow(0 0 10px yellow) drop-shadow(0 0 15px yellow); */\n}\n.dknr-motion > .dknr-title {\n    stroke: red;\n    stroke-opacity: 0.5;\n}\n.dknr-climate > .dknr-text {\n    fill: red;\n}\n.dknr-aperture > .dknr-zone {\n    stroke: red;\n    stroke-width: 5px;\n    stroke-opacity: 0.25;\n}\n",
         "storeOutMessages": true,
         "passthru": false,
         "resendOnRefresh": true,
@@ -8065,7 +8058,7 @@
         "z": "4bc72a1112cb448c",
         "g": "6c942117c5c5ebe1",
         "name": "routine - duration",
-        "func": "/*\nduration:\nUpdate timer if routines response is true.\n*/\n\nnode.status({ });\n\nif (!msg.rsp) {\n    msg.summary.duration = 'skip by response';\n    node.status({ 'fill': 'yellow', 'text': msg.summary.duration });\n\n\n    return msg;\n}\n\n// Remove expired target timer\nif (msg.scene.timer > 0 && msg.target.value.toString() === msg.scene.off.toString()) {\n\n    const scene = { ...(global.get('scene') || {}) };\n    scene[msg.target.uid]['timer'] = 0;\n    global.set('scene', scene);\n\n    msg.summary.duration = 'remove expired timer';\n    node.status({ 'fill': 'blue', 'text': msg.summary.duration });\n\n    return msg;\n}\n\n// If duration is not set, do not take care of this routine\nif (!msg.routines.includes('duration')\n || msg.scene.duration === 0\n) {\n    msg.summary.duration = 'bypass by exclusion';\n    node.status({ 'fill': 'yellow', 'text': msg.summary.duration });\n\n    return msg;\n}\n\nconst scene = { ...(global.get('scene') || {}) };\nscene[msg.target.uid]['timer'] = msg.payload === false ? 0 : Date.now();\nglobal.set('scene', scene);\n\nmsg.summary.duration = 'timer is ' + (msg.payload ? 'on' : 'off');\nnode.status({ 'fill': 'green', 'text': msg.summary.duration });\n\nreturn msg;",
+        "func": "/*\nduration:\nUpdate timer if routines response is true.\n*/\n\nnode.status({ });\n\n// Get memories\nlet scene = global.get('scene'); // autoupdate\n\n// Remove expired target timer\nif (msg.scene.timer > 0 && msg.target.value.toString() === msg.scene.off.toString()) {\n\n    scene[msg.target.uid]['timer'] = 0;\n\n    msg.summary.duration = 'remove expired timer';\n    node.status({ 'fill': 'blue', 'text': msg.summary.duration });\n\n    return msg;\n}\n\nif (!msg.rsp) {\n    msg.summary.duration = 'skip by response';\n    node.status({ 'fill': 'yellow', 'text': msg.summary.duration });\n\n\n    return msg;\n}\n\n// If duration is not set, do not take care of this routine\nif (!msg.routines.includes('duration')\n || msg.scene.duration === 0\n) {\n    msg.summary.duration = 'bypass by exclusion';\n    node.status({ 'fill': 'yellow', 'text': msg.summary.duration });\n\n    return msg;\n}\n\nscene[msg.target.uid]['timer'] = msg.payload === false ? 0 : Date.now();\n\nmsg.summary.duration = 'timer is ' + (msg.payload ? 'on' : 'off');\nnode.status({ 'fill': 'green', 'text': msg.summary.duration });\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -11241,7 +11234,8 @@
         "g": "b828708d51f09ccc",
         "name": "energy - chart",
         "links": [
-            "66048b5b43cc0248"
+            "66048b5b43cc0248",
+            "20c33d6d50aa3ee3"
         ],
         "x": 145,
         "y": 260,
@@ -11264,7 +11258,8 @@
         "links": [
             "5397038e1b8466e2",
             "9551b24f428cde28",
-            "3790dfc240bc5f6d"
+            "3790dfc240bc5f6d",
+            "a9ccaa6f01788c83"
         ],
         "x": 395,
         "y": 140,
@@ -11481,7 +11476,8 @@
         "g": "9fa1ab99e50ebaa3",
         "name": "energy - map",
         "links": [
-            "66048b5b43cc0248"
+            "66048b5b43cc0248",
+            "20c33d6d50aa3ee3"
         ],
         "x": 145,
         "y": 860,
@@ -11587,28 +11583,9 @@
         ]
     },
     {
-        "id": "3790dfc240bc5f6d",
-        "type": "link in",
-        "z": "77269fd32cdb1638",
-        "g": "2858d8e23dbbc969",
-        "name": "energy - entity",
-        "links": [
-            "20c33d6d50aa3ee3",
-            "66048b5b43cc0248"
-        ],
-        "x": 145,
-        "y": 1100,
-        "wires": [
-            [
-                "96cc3da1f3e135dd"
-            ]
-        ]
-    },
-    {
         "id": "96cc3da1f3e135dd",
         "type": "function",
         "z": "77269fd32cdb1638",
-        "g": "2858d8e23dbbc969",
         "name": "data",
         "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (!msg.enabled) {\n    node.send([msg, msg]);\n\n    return;\n}\n\nconst units = ['mW', 'W', 'kW'];\nconst entity = { ...(global.get('entity') || { }) };\nconst parent = { ...(global.get('parent') || { }) };\nconst room = { ...(global.get('rooms.base') || { }) };\n\nlet d = 0;\nlet dropdownOptions = [];\nfor (const e in entity) {\n    if (entity[e]['hidden'] === 0 && units.includes(entity[e]['unit'])) {\n        let entity_name = entity[e]['name'];\n        if (entity_name === '') {\n            entity_name = parent[entity[e]['parent']]['name'] || e;\n        }\n        let room_name = room[entity[e]['room']]['name'] || entity[e]['room'];\n        let element_name = msg.dictionary.option_element[entity[e]['element']] || entity[e]['element']\n\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'grid_power'\n        };\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'solar_power'\n        };\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'battery_power'\n        };\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'waterboiler_power'\n        };\n    }\n\n    if (entity[e]['hidden'] === 0 && entity[e]['element'] === 'battery') {\n        let entity_name = entity[e]['name'];\n        if (entity_name === '') {\n            entity_name = parent[entity[e]['parent']]['name'] || e;\n        }\n        let room_name = room[entity[e]['room']]['name'] || entity[e]['room'];\n        let element_name = msg.dictionary.option_element[entity[e]['element']] || entity[e]['element']\n\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'battery_level'\n        };\n    }\n\n    if (entity[e]['hidden'] === 0 && entity[e]['element'] === 'tariff') {\n        let entity_name = entity[e]['name'];\n        if (entity_name === '') {\n            entity_name = parent[entity[e]['parent']]['name'] || e;\n        }\n        let room_name = room[entity[e]['room']]['name'] || entity[e]['room'];\n        let element_name = msg.dictionary.option_element[entity[e]['element']] || entity[e]['element']\n\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'preferred_tariff'\n        };\n    }\n\n    if (entity[e]['hidden'] === 0 && entity[e]['element'] === 'energy') {\n        let entity_name = entity[e]['name'];\n        if (entity_name === '') {\n            entity_name = parent[entity[e]['parent']]['name'] || e;\n        }\n        let room_name = room[entity[e]['room']]['name'] || entity[e]['room'];\n        let element_name = msg.dictionary.option_element[entity[e]['element']] || entity[e]['element']\n\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'favorable_energy_meter'\n        };\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'unfavorable_energy_meter'\n        };\n    }\n}\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\n// entity - energy - title\nmsg.payload = msg.dictionary.energy.entity_title || 'Energy';\n\nnode.send([msg, null]);\n\n// entity - energy - form\nmsg.payload = {};\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.energy.grid_power || 'Grid power',\n            \"key\": \"grid_power\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.energy.solar_power || 'Solar power',\n            \"key\": \"solar_power\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.energy.battery_power || 'Battery power',\n            \"key\": \"battery_power\",\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.energy.battery_level || 'Battery level',\n            \"key\": \"battery_level\",\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.energy.preferred_tariff || 'Preferred tariff in progress',\n            \"key\": \"preferred_tariff\",\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.energy.favorable_energy_meter || 'Favorable energy meter',\n            \"key\": \"favorable_energy_meter\",\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.energy.unfavorable_energy_meter || 'Unfavorable energy meter',\n            \"key\": \"unfavorable_energy_meter\",\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.energy.waterboiler_power || 'Waterboiler power',\n            \"key\": \"waterboiler_power\",\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.energy.openweathermap_key || 'OpenWeatherMap API key',\n            \"key\": \"openweathermap\",\n        }\n    ],\n    'dropdownOptions': dropdownOptions\n};\n\nmsg.payload = { ...(global.get('energy') || { }) };\n\nnode.send([null, msg]);\n\nreturn;",
         "outputs": 2,
@@ -11617,8 +11594,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 270,
-        "y": 1100,
+        "x": 390,
+        "y": 1340,
         "wires": [
             [
                 "453a5521de9c43f0"
@@ -11632,7 +11609,6 @@
         "id": "088f2fca643818c2",
         "type": "ui-form",
         "z": "77269fd32cdb1638",
-        "g": "2858d8e23dbbc969",
         "name": "energy - entity - form",
         "group": "a6601e1fe5c357e9",
         "label": "",
@@ -11725,8 +11701,8 @@
         "className": "",
         "passthru": false,
         "dropdownOptions": [],
-        "x": 480,
-        "y": 1100,
+        "x": 600,
+        "y": 1400,
         "wires": [
             [
                 "9d9be3102bf89bf0"
@@ -11737,7 +11713,6 @@
         "id": "453a5521de9c43f0",
         "type": "ui-text",
         "z": "77269fd32cdb1638",
-        "g": "2858d8e23dbbc969",
         "group": "a6601e1fe5c357e9",
         "order": 1,
         "width": "6",
@@ -11754,25 +11729,24 @@
         "className": "ui-title",
         "value": "payload",
         "valueType": "msg",
-        "x": 470,
-        "y": 1040,
+        "x": 590,
+        "y": 1340,
         "wires": []
     },
     {
         "id": "9d9be3102bf89bf0",
         "type": "function",
         "z": "77269fd32cdb1638",
-        "g": "2858d8e23dbbc969",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nglobal.set('energy', msg.payload);\n\nmsg.payload = '';\nmsg.enabled = true;\nmsg.payload = msg.dictionary.notice.save_success;\n\nreturn msg;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nglobal.set('energy', msg.payload);\n\nlet dialog = global.get('form[\"' + msg.hmi.id + '\"][\"dialog\"]') || '';\nif (dialog !== '') {\n    msg.hide = ['energy - entity - dialog'];\n    msg = await node.linkcall('common - ui - group', msg);\n}\n\nmsg.payload = '';\nmsg.enabled = true;\nmsg.payload = msg.dictionary.notice.save_success;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 690,
-        "y": 1100,
+        "x": 810,
+        "y": 1400,
         "wires": [
             [
                 "20c33d6d50aa3ee3"
@@ -11783,15 +11757,16 @@
         "id": "20c33d6d50aa3ee3",
         "type": "link out",
         "z": "77269fd32cdb1638",
-        "g": "2858d8e23dbbc969",
         "name": "energy - entity",
         "mode": "link",
         "links": [
             "3790dfc240bc5f6d",
-            "f4a2353e5f92576c"
+            "f4a2353e5f92576c",
+            "9551b24f428cde28",
+            "5397038e1b8466e2"
         ],
-        "x": 815,
-        "y": 1100,
+        "x": 935,
+        "y": 1400,
         "wires": []
     },
     {
@@ -11992,6 +11967,105 @@
         "wires": [
             [
                 "df87de4673cea93c"
+            ]
+        ]
+    },
+    {
+        "id": "e3bdb379a041899a",
+        "type": "function",
+        "z": "77269fd32cdb1638",
+        "name": "data",
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nmsg.payload = [];\n\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\nmsg.class = '';\nmsg.enabled = true;\nmsg.ui_update = {\n    'label': '',\n    'options': [{\n        'label': msg.dictionary.energy.energy_title || 'Energy',\n        'value': 'energy',\n        'icon': 'lightning-bolt'\n    }],\n    'class': ''\n};\nmsg.payload = '';\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 1280,
+        "wires": [
+            [
+                "a4fb8643d4ad9504"
+            ]
+        ]
+    },
+    {
+        "id": "4ca1ee7f1c4d23a4",
+        "type": "function",
+        "z": "77269fd32cdb1638",
+        "name": "data",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (msg.payload !== '') {\n    msg.show = ['energy - entity - dialog'];\n    msg = await node.linkcall('common - ui - group', msg);\n    msg = await node.linkcall('common - ui - latency', msg);\n\n    // Fix flowfuse dashboard msg.topic fail\n    global.set('form[\"' + msg.hmi.id + '\"][\"dialog\"]', msg.payload);\n\n    msg.enabled = true;\n    node.send([msg, null]);\n}\n\nmsg.enabled = true;\nmsg.payload = '';\n\nreturn [null, msg];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 1340,
+        "wires": [
+            [
+                "96cc3da1f3e135dd"
+            ],
+            [
+                "e3bdb379a041899a"
+            ]
+        ]
+    },
+    {
+        "id": "a4fb8643d4ad9504",
+        "type": "ui-button-group",
+        "z": "77269fd32cdb1638",
+        "name": "energy - menu - select",
+        "group": "1d386a3f3c7c03b4",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "label": "",
+        "className": "ui-center",
+        "rounded": true,
+        "useThemeColors": true,
+        "passthru": false,
+        "options": [
+            {
+                "label": "",
+                "icon": "",
+                "value": "option_0",
+                "valueType": "str",
+                "color": "#009933"
+            },
+            {
+                "label": "",
+                "icon": "",
+                "value": "option_1",
+                "valueType": "str",
+                "color": "#999999"
+            }
+        ],
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 600,
+        "y": 1280,
+        "wires": [
+            [
+                "4ca1ee7f1c4d23a4"
+            ]
+        ]
+    },
+    {
+        "id": "a9ccaa6f01788c83",
+        "type": "link in",
+        "z": "77269fd32cdb1638",
+        "name": "link in 1",
+        "links": [
+            "66048b5b43cc0248"
+        ],
+        "x": 265,
+        "y": 1280,
+        "wires": [
+            [
+                "e3bdb379a041899a"
             ]
         ]
     },
@@ -15095,7 +15169,7 @@
         "value": "payload",
         "valueType": "msg",
         "x": 530,
-        "y": 2720,
+        "y": 2660,
         "wires": []
     },
     {
@@ -15203,7 +15277,7 @@
         "passthru": false,
         "dropdownOptions": [],
         "x": 540,
-        "y": 2780,
+        "y": 2720,
         "wires": [
             [
                 "9d7619d0a036b267"
@@ -15224,7 +15298,7 @@
         "finalize": "",
         "libs": [],
         "x": 750,
-        "y": 2780,
+        "y": 2720,
         "wires": [
             [
                 "876d23fe9f84bee1"
@@ -15280,7 +15354,7 @@
         "finalize": "",
         "libs": [],
         "x": 330,
-        "y": 2840,
+        "y": 2780,
         "wires": [
             [
                 "7bcdebf8b6331102"
@@ -15304,7 +15378,7 @@
         "finalize": "",
         "libs": [],
         "x": 750,
-        "y": 2900,
+        "y": 2840,
         "wires": [
             [
                 "876d23fe9f84bee1"
@@ -15333,7 +15407,7 @@
         "value": "payload",
         "valueType": "msg",
         "x": 540,
-        "y": 2840,
+        "y": 2780,
         "wires": []
     },
     {
@@ -15402,7 +15476,7 @@
         "passthru": false,
         "dropdownOptions": [],
         "x": 540,
-        "y": 2900,
+        "y": 2840,
         "wires": [
             [
                 "3b4c01c93e847712"
@@ -15423,7 +15497,7 @@
         "finalize": "",
         "libs": [],
         "x": 330,
-        "y": 2480,
+        "y": 2420,
         "wires": [
             [
                 "fb2e77e69dcd1a21"
@@ -15455,7 +15529,7 @@
         "value": "payload",
         "valueType": "msg",
         "x": 540,
-        "y": 2480,
+        "y": 2420,
         "wires": []
     },
     {
@@ -15524,7 +15598,7 @@
         "passthru": false,
         "dropdownOptions": [],
         "x": 540,
-        "y": 2540,
+        "y": 2480,
         "wires": [
             [
                 "bb9a57793d0eb21a"
@@ -15545,7 +15619,7 @@
         "finalize": "",
         "libs": [],
         "x": 750,
-        "y": 2540,
+        "y": 2480,
         "wires": [
             [
                 "876d23fe9f84bee1"
@@ -15566,7 +15640,7 @@
             "217d334d78a1a033"
         ],
         "x": 1375,
-        "y": 2420,
+        "y": 2360,
         "wires": []
     },
     {
@@ -15583,7 +15657,7 @@
         "finalize": "",
         "libs": [],
         "x": 330,
-        "y": 2960,
+        "y": 2900,
         "wires": [
             [
                 "28289ac5f3d54e0c"
@@ -15618,7 +15692,7 @@
         "value": "payload",
         "valueType": "msg",
         "x": 530,
-        "y": 2960,
+        "y": 2900,
         "wires": []
     },
     {
@@ -15639,7 +15713,7 @@
         "accept": "png",
         "className": "",
         "x": 540,
-        "y": 3080,
+        "y": 3020,
         "wires": [
             [
                 "a3da07702804513a"
@@ -15660,7 +15734,7 @@
         "finalize": "",
         "libs": [],
         "x": 750,
-        "y": 3080,
+        "y": 3020,
         "wires": [
             [
                 "633180fd17f54333"
@@ -15676,7 +15750,7 @@
         "action": "",
         "property": "payload",
         "x": 920,
-        "y": 3080,
+        "y": 3020,
         "wires": [
             [
                 "e68ef4578108b664"
@@ -15697,7 +15771,7 @@
         "finalize": "",
         "libs": [],
         "x": 1090,
-        "y": 3080,
+        "y": 3020,
         "wires": [
             [
                 "876d23fe9f84bee1"
@@ -15718,7 +15792,7 @@
         "finalize": "",
         "libs": [],
         "x": 330,
-        "y": 2360,
+        "y": 2300,
         "wires": [
             [
                 "fb3a827dbeb230ad"
@@ -15750,7 +15824,7 @@
         "value": "payload",
         "valueType": "msg",
         "x": 530,
-        "y": 2360,
+        "y": 2300,
         "wires": []
     },
     {
@@ -15795,7 +15869,7 @@
         "passthru": false,
         "dropdownOptions": [],
         "x": 530,
-        "y": 2420,
+        "y": 2360,
         "wires": [
             [
                 "f76fa0516e4b40c0"
@@ -15816,7 +15890,7 @@
         "finalize": "",
         "libs": [],
         "x": 750,
-        "y": 2420,
+        "y": 2360,
         "wires": [
             [
                 "876d23fe9f84bee1"
@@ -15837,7 +15911,7 @@
         "finalize": "",
         "libs": [],
         "x": 330,
-        "y": 2600,
+        "y": 2540,
         "wires": [
             [
                 "454bf49e308c740b"
@@ -15869,7 +15943,7 @@
         "value": "payload",
         "valueType": "msg",
         "x": 540,
-        "y": 2600,
+        "y": 2540,
         "wires": []
     },
     {
@@ -15954,7 +16028,7 @@
         "passthru": false,
         "dropdownOptions": [],
         "x": 540,
-        "y": 2660,
+        "y": 2600,
         "wires": [
             [
                 "75993401ba2f71d2"
@@ -15975,7 +16049,7 @@
         "finalize": "",
         "libs": [],
         "x": 750,
-        "y": 2660,
+        "y": 2600,
         "wires": [
             [
                 "876d23fe9f84bee1"
@@ -16015,7 +16089,7 @@
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
         "x": 530,
-        "y": 3020,
+        "y": 2960,
         "wires": [
             [
                 "b2bd0ace3e3e19e1"
@@ -16036,7 +16110,7 @@
         "finalize": "",
         "libs": [],
         "x": 1090,
-        "y": 3020,
+        "y": 2960,
         "wires": [
             [
                 "876d23fe9f84bee1"
@@ -16215,7 +16289,7 @@
         "finalize": "",
         "libs": [],
         "x": 330,
-        "y": 2300,
+        "y": 2240,
         "wires": [
             [
                 "9a4998de3e78bb6f"
@@ -16256,7 +16330,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 540,
-        "y": 2300,
+        "y": 2240,
         "wires": [
             [
                 "18b45c5b546fa01c"
@@ -16306,7 +16380,7 @@
         "finalize": "",
         "libs": [],
         "x": 330,
-        "y": 2720,
+        "y": 2660,
         "wires": [
             [
                 "982c804ad36f35c8"
@@ -16330,7 +16404,7 @@
         "finalize": "",
         "libs": [],
         "x": 1250,
-        "y": 2420,
+        "y": 2360,
         "wires": [
             [
                 "ad9cf67b7b8161b0"
@@ -18449,7 +18523,7 @@
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nnode.status({ 'text': '' });\n\n// Get form\nconst form = { ...(global.get('form') || {}) };\nif (typeof form[msg.hmi.id]['scene']['triggeradd'] !== 'object') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\n\n// Get scenes\nconst scene = { ...(global.get('scene') || {}) };\n\n// Check form fields\nconst e = form[msg.hmi.id]['scene']['triggeradd']['target'] || '';\nconst t = form[msg.hmi.id]['scene']['triggeradd']['trigger'] || '';\nif (e === '' || t === '') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\n\n// Add scene trigger\nif (typeof scene[e]['trigger'] !== 'object') {\n    scene[e]['trigger'] = {};\n}\nscene[e]['trigger'][t] = form[msg.hmi.id]['scene']['triggeradd'];\n\ndelete scene[e]['trigger'][t]['trigger'];\ndelete scene[e]['trigger'][t]['target'];\n\n// Save scenes\nglobal.set('scene', scene);\n\n// Notice and refresh\nmsg.enabled = true;\nmsg.payload = msg.dictionary.scene.triggeradd_save_success || 'Successfully saved';\n\nnode.status({ 'fill': 'green', 'text': e + ' / ' + t });\n\nreturn msg;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nnode.status({ 'text': '' });\n\n// Get form\nconst form = { ...(global.get('form') || {}) };\nif (typeof form[msg.hmi.id]['scene']['triggeradd'] !== 'object') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\n\n// Get scenes\nconst scene = { ...(global.get('scene') || {}) };\n\n// Check form fields\nconst e = form[msg.hmi.id]['scene']['triggeradd']['target'] || '';\nconst t = form[msg.hmi.id]['scene']['triggeradd']['trigger'] || '';\nif (e === '' || t === '') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\n\n// Add scene trigger\nif (typeof scene[e]['trigger'] !== 'object') {\n    scene[e]['trigger'] = {};\n}\nscene[e]['trigger'][t] = form[msg.hmi.id]['scene']['triggeradd'];\n\ndelete scene[e]['trigger'][t]['trigger'];\ndelete scene[e]['trigger'][t]['target'];\n\n// Save scenes\nglobal.set('scene', scene);\n\n// Hide UI group\nmsg.hide = ['scene - trigger - dialog'];\nmsg = await node.linkcall('common - ui - group', msg);\n\n// Notice and refresh\nmsg.enabled = true;\nmsg.payload = msg.dictionary.scene.triggeradd_save_success || 'Successfully saved';\n\nnode.status({ 'fill': 'green', 'text': e + ' / ' + t });\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -18942,7 +19016,7 @@
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nnode.status({ 'text': '' });\n\n// Get form\nconst form = { ...(global.get('form') || {}) };\nif (typeof form[msg.hmi.id]['scene']['triggeradd'] !== 'object') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\n\n// Get scenes\nconst scene = { ...(global.get('scene') || {}) };\n\n// Check form fields\nconst e = form[msg.hmi.id]['scene']['triggeradd']['target'] || '';\nconst t = form[msg.hmi.id]['scene']['triggeradd']['trigger'] || '';\nif (e === '' || t === '') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\n\n// Delete scene trigger\ndelete scene[e]['trigger'][t];\n\n// Save scenes\nglobal.set('scene', scene);\n\n// Clear form\nform[msg.hmi.id]['scene']['triggeradd'] = {};\n\n// save form\nglobal.set('form', form);\n\n// Notice and refresh\nmsg.enabled = true;\nmsg.payload = msg.dictionary.scene.triggeradd_delete_success || 'Successfully deleted';\n\nnode.status({ 'fill': 'green', 'text': e + ' / ' + t });\n\nreturn msg;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nnode.status({ 'text': '' });\n\n// Get form\nconst form = { ...(global.get('form') || {}) };\nif (typeof form[msg.hmi.id]['scene']['triggeradd'] !== 'object') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\n\n// Get scenes\nconst scene = { ...(global.get('scene') || {}) };\n\n// Check form fields\nconst e = form[msg.hmi.id]['scene']['triggeradd']['target'] || '';\nconst t = form[msg.hmi.id]['scene']['triggeradd']['trigger'] || '';\nif (e === '' || t === '') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\n\n// Delete scene trigger\ndelete scene[e]['trigger'][t];\n\n// Save scenes\nglobal.set('scene', scene);\n\n// Clear form\nform[msg.hmi.id]['scene']['triggeradd'] = {};\n\n// save form\nglobal.set('form', form);\n\n// Hide UI group\nmsg.hide = ['scene - trigger - dialog'];\nmsg = await node.linkcall('common - ui - group', msg);\n\n// Notice and refresh\nmsg.enabled = true;\nmsg.payload = msg.dictionary.scene.triggeradd_delete_success || 'Successfully deleted';\n\nnode.status({ 'fill': 'green', 'text': e + ' / ' + t });\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -22593,7 +22667,7 @@
             "43b439d13979544c"
         ],
         "x": 145,
-        "y": 740,
+        "y": 320,
         "wires": [
             [
                 "9912ca0fa2d1a8c4"
@@ -22622,7 +22696,7 @@
         "value": "payload",
         "valueType": "msg",
         "x": 460,
-        "y": 680,
+        "y": 260,
         "wires": []
     },
     {
@@ -22639,7 +22713,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 740,
+        "y": 320,
         "wires": [
             [
                 "da0722f98764fac5"
@@ -22743,7 +22817,7 @@
         "action": "replace",
         "className": "",
         "x": 470,
-        "y": 740,
+        "y": 320,
         "wires": [
             [
                 "083f2a1d4069ab69"
@@ -22764,7 +22838,7 @@
         "finalize": "",
         "libs": [],
         "x": 650,
-        "y": 740,
+        "y": 320,
         "wires": [
             [
                 "8efcf9aa67ba9375"
@@ -22789,7 +22863,7 @@
             "f4a2353e5f92576c"
         ],
         "x": 1555,
-        "y": 740,
+        "y": 320,
         "wires": []
     },
     {
@@ -22811,7 +22885,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1390,
-        "y": 740,
+        "y": 320,
         "wires": [
             [
                 "43b439d13979544c"
@@ -22898,7 +22972,7 @@
             }
         ],
         "x": 1010,
-        "y": 860,
+        "y": 440,
         "wires": [
             [
                 "9634bf7cac24c86f"
@@ -22919,7 +22993,7 @@
         "finalize": "",
         "libs": [],
         "x": 810,
-        "y": 860,
+        "y": 440,
         "wires": [
             [
                 "4a65b8428bc02868"
@@ -22945,7 +23019,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 810,
-        "y": 800,
+        "y": 380,
         "wires": [
             [
                 "e4e6368d57415f5c",
@@ -22968,7 +23042,7 @@
         "finalize": "",
         "libs": [],
         "x": 1230,
-        "y": 860,
+        "y": 440,
         "wires": [
             [
                 "8efcf9aa67ba9375",
@@ -22991,7 +23065,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1430,
-        "y": 1040,
+        "y": 620,
         "wires": []
     },
     {
@@ -23013,7 +23087,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 810,
-        "y": 980,
+        "y": 560,
         "wires": [
             [
                 "476c3436a383ed1e",
@@ -23036,7 +23110,7 @@
         "finalize": "",
         "libs": [],
         "x": 810,
-        "y": 1040,
+        "y": 620,
         "wires": [
             [
                 "950c792d20eafdc3"
@@ -23065,7 +23139,7 @@
         "value": "dictionary.group_entity.entity_edit_title",
         "valueType": "msg",
         "x": 1010,
-        "y": 800,
+        "y": 380,
         "wires": []
     },
     {
@@ -23090,7 +23164,7 @@
         "value": "dictionary.group_entity.device_edit_title",
         "valueType": "msg",
         "x": 1010,
-        "y": 980,
+        "y": 560,
         "wires": []
     },
     {
@@ -23127,7 +23201,7 @@
         "passthru": false,
         "dropdownOptions": [],
         "x": 1020,
-        "y": 1040,
+        "y": 620,
         "wires": [
             [
                 "02da074ecfba7d08"
@@ -23148,7 +23222,7 @@
         "finalize": "",
         "libs": [],
         "x": 1230,
-        "y": 1040,
+        "y": 620,
         "wires": [
             [
                 "8efcf9aa67ba9375"
@@ -23195,7 +23269,7 @@
         "action": "replace",
         "className": "",
         "x": 1010,
-        "y": 920,
+        "y": 500,
         "wires": [
             []
         ]
@@ -23214,7 +23288,7 @@
         "finalize": "",
         "libs": [],
         "x": 810,
-        "y": 920,
+        "y": 500,
         "wires": [
             [
                 "fbaa5b8d78bc8124"
@@ -23254,7 +23328,7 @@
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
         "x": 470,
-        "y": 1160,
+        "y": 740,
         "wires": [
             [
                 "07f13b83c52dee2f"
@@ -23294,7 +23368,7 @@
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
         "x": 470,
-        "y": 1220,
+        "y": 800,
         "wires": [
             [
                 "07f13b83c52dee2f"
@@ -23315,7 +23389,7 @@
         "finalize": "",
         "libs": [],
         "x": 1230,
-        "y": 1160,
+        "y": 740,
         "wires": [
             [
                 "8efcf9aa67ba9375"
@@ -23357,7 +23431,7 @@
         "finalize": "",
         "libs": [],
         "x": 810,
-        "y": 1100,
+        "y": 680,
         "wires": [
             [
                 "a8629436c0a093ea"
@@ -23404,7 +23478,7 @@
         "action": "replace",
         "className": "",
         "x": 1020,
-        "y": 1100,
+        "y": 680,
         "wires": [
             []
         ]
