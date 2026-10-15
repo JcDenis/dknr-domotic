@@ -75,7 +75,7 @@
         "id": "ab13cf34b214d4b6",
         "type": "tab",
         "label": "test",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -240,27 +240,6 @@
         "h": 82
     },
     {
-        "id": "274931f4309b3257",
-        "type": "group",
-        "z": "ab13cf34b214d4b6",
-        "name": "test - menu",
-        "style": {
-            "stroke": "#6f2fa0",
-            "fill": "#6f2fa0",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "70fa44d509342200",
-            "43663518deccb7c6",
-            "1108c088331d2278"
-        ],
-        "x": 104,
-        "y": 339,
-        "w": 372,
-        "h": 82
-    },
-    {
         "id": "cd563b61d821c01e",
         "type": "group",
         "z": "ab13cf34b214d4b6",
@@ -305,7 +284,7 @@
         ],
         "x": 78,
         "y": 913,
-        "w": 1224,
+        "w": 1044,
         "h": 794
     },
     {
@@ -1685,21 +1664,14 @@
             "911bbe32f79bec46",
             "289e0a6cd1209c38",
             "6f2775829158f825",
-            "5c9bfdd80f490de0",
-            "ab044268dd81617b",
             "4841db186251fd55",
             "fd39d13ae9c195f3",
-            "8f1a54f299198096",
-            "b02e3c2d96304d41",
-            "afe884e8467661e5",
-            "b490f62e4ba2632e",
-            "9aa067029d4049a3",
-            "be56244e32363548"
+            "8f1a54f299198096"
         ],
         "x": 104,
         "y": 1059,
-        "w": 1172,
-        "h": 209.5
+        "w": 922,
+        "h": 149.5
     },
     {
         "id": "8cc9a474d6cd27ec",
@@ -2069,12 +2041,11 @@
             "bde52975d1355f82",
             "f706b2e1a7b4151a",
             "fa8104644047263a",
-            "cc19186db76a08ca",
-            "421cf02b20d1f367"
+            "cc19186db76a08ca"
         ],
         "x": 504,
         "y": 1539,
-        "w": 662,
+        "w": 502,
         "h": 142
     },
     {
@@ -3444,7 +3415,7 @@
         "ui": "df7710b4b2c4e55b",
         "events": "all",
         "x": 320,
-        "y": 1220,
+        "y": 1160,
         "wires": [
             [
                 "fd39d13ae9c195f3"
@@ -3469,7 +3440,7 @@
             "f4ff4572e061287d",
             "bf16c43041851145"
         ],
-        "x": 1235,
+        "x": 895,
         "y": 1160,
         "wires": []
     },
@@ -3489,7 +3460,7 @@
             "c740b6a6eb799115"
         ],
         "x": 145,
-        "y": 1220,
+        "y": 1160,
         "wires": [
             [
                 "bbb6fa5ec8070fb8"
@@ -3688,14 +3659,16 @@
         "head": "",
         "format": ".app-bar-actions-title {\n    margin: auto;\n    text-shadow: rgb(var(--v-theme-background)) 2px 2px 1px;\n}\n\n.remove *,\n.v-card .remove,\n.v-card-text .remove,\n.v-card-item {\n    display: none !important;\n    visibility: hidden;\n    color: transparent !important;\n}\n\n.nrdb-ui-widget:not(.ui-center):hover {\n    margin-bottom: -1px;\n    border-bottom: 1px solid var(--nrdb-bg-color);\n}\n.ui-center {\n    margin: auto;\n}\n\n.center .nrdb-switch, \n.center .v-btn-group {\n    margin: auto;\n}\n\ntbody td[data-column-key=lbl] {\n    font-weight: bold !important;\n}\n\n.icon-in-row {\n    font-size: 1.8em;\n}\n\n.ui-weather {\n    font-family: Arial, Helvetica, sans-serif;\n}\n.ui-weather-day th {\n    display: none;\n    visibility: hidden;\n}\n.ui-weather-day td {\n    border-bottom-width: 0 !important;\n    border-left-width: 1px !important;\n}\n.ui-weather-day span.ui-weather {\n    font-size: 1.4em;\n}\n.ui-weather img {\n    width: 4em;\n    height: 4em;\n    background-color: rgb(var(--v-theme-primary));\n    border-radius: 4px;\n}\n\n.v-tab-item--selected {\n    color: rgb(var(--v-theme-primary)) !important;\n}\n\n.v-main {\n    padding-bottom: 2em;\n}\n.ui-title span {\n    font-size: 1.4rem !important;\n    font-weight: normal !important;\n    padding: 0;\n    margin-top: 0.5em;\n    color: rgb(var(--v-theme-primary)) !important;\n}\n\n.ui-camera {\n    text-align: center !important;\n    flex: 1 0;\n}\n.ui-camera img {\n    width: 90%;\n    border-radius: 4px;\n    box-shadow: 3px 2px 2px rgba(var(--v-theme-group-outline));\n    border: 1px solid rgba(var(--v-theme-group-outline));\n}\n\n.nrdb-ui-group {\n    border-radius: 4px;\n    box-shadow: 3px 2px 2px rgba(var(--v-theme-group-outline));\n}\n.v-application {\n    border-top: 1px solid rgba(var(--v-theme-group-outline));\n    margin-top: -1px;\n}\n\nbody {\n    background-color: rgb(var(--v-theme-background)) !important;\n}\n\n.dknr-map {\n    color: rgb(var(--v-theme-background));\n    fill: rgb(var(--v-theme-primary));\n}\n.dknr-bg {\n    fill: rgb(var(--v-theme-background));\n}\n.dknr-blue {\n    fill: rgb(var(--v-theme-primary));\n}\n.dknr-green {\n    fill: green;\n}\n.dknr-orange {\n    fill: orange;\n}\n.dknr-red {\n    fill: red;\n}\n.dknr-grey {\n    fill: grey;\n}\n.dknr-light > .dknr-zone {\n    fill: rgb(255, 225, 0, 0.1);\n    /* filter: drop-shadow(0 0 2px black) drop-shadow(0 0 10px yellow) drop-shadow(0 0 15px yellow); */\n}\n.dknr-motion > .dknr-title {\n    stroke: red;\n    stroke-opacity: 0.5;\n}\n.dknr-climate > .dknr-text {\n    fill: red;\n}\n.dknr-aperture > .dknr-zone {\n    stroke: red;\n    stroke-width: 5px;\n    stroke-opacity: 0.25;\n}\n",
         "storeOutMessages": true,
-        "passthru": false,
+        "passthru": true,
         "resendOnRefresh": true,
         "templateScope": "site:style",
         "className": "",
-        "x": 310,
-        "y": 1100,
+        "x": 730,
+        "y": 1160,
         "wires": [
-            []
+            [
+                "911bbe32f79bec46"
+            ]
         ]
     },
     {
@@ -3704,7 +3677,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "describe",
-        "func": "\n// Get moemories\nlet describe = global.get('describe'); // autoupdate\n\nif (typeof describe.pages !== 'object') {\n    describe.pages = {};\n}\n\n// Set default app values\ndescribe.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\ndescribe.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['energy'] = {\n    'id': '34a13cfdebc90220',\n    'name': 'energy',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['calendar'] = {\n    'id': '05291fac72588064',\n    'name': 'calendar',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['scene'] = {\n    'id': '1e9f5bde9636a371',\n    'name': 'scene',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['entity'] = {\n    'id': '2b12391aa314ef62',\n    'name': 'entity',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'level': {\n        'admin': true,\n        'parent': false,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// Sources\ndescribe.sources['dknr'] = ['eye', 'Domotic'];\n\n// Binary element with revert value\ndescribe.reverts = ['aperture', 'door', 'window', 'lock'];\n\n// Non numeric units\ndescribe.texts = ['', 'chex', 'enum', 'text', 'time'];\n\n// Elements icons\ndescribe.elements = {\n    'switch': ['toggle-switch-off-outline', 'toggle-switch-outline', 'Switch'],\n    'plug': ['power-plug-off', 'power-plug', 'Plug'],\n    'power': ['flash-outline', 'flash', 'Power'],\n    'current': ['current-ac', 'current-ac', 'Current'],\n    'frequency': ['sine-wave', 'sine-wave', 'Frequency'],\n    'voltage': ['current-dc', 'current-dc', 'Frequency'],\n    'energy': ['meter-electric-outline', 'meter-electric', 'Energy'],\n    'light': ['lightbulb-off', 'lightbulb', 'Light'],\n    'remote': ['remote-off', 'remote', 'Remote'],\n    'door': ['door-closed', 'door-open', 'Door'], // 0=open\n    'window': ['window-closed-variant', 'window-open-variant', 'Window'], //0=open\n    'lock': ['lock-off', 'lock', 'Lock'], //0=open\n    //'shield': ['shield-lock-outline', 'shield-lock'],\n    //'aperture': ['electric-switch-closed', 'electric-switch'], // 0=open\n    'shutter': ['window-shutter', 'window-shutter-open', 'Shutter'],\n    'slider': ['door-sliding', 'door-sliding-open', 'Slider'],\n    //'heater': ['radiator-off', 'radiator'], => temperature\n    //'cooler': ['radiator-off', 'radiator'], => temperature\n    //'airconditioner': ['radiator-off', 'radiator'], => temparature\n    'waterboiler': ['water-boiler-off', 'water-boiler', 'Waterboiler'],\n    'alert': ['bell-off', 'bell', 'Alert'],\n    'sound': ['volume-off', 'volume-high', 'Sound'],\n    'motion': ['motion-sensor-off', 'motion-sensor', 'Motion'],\n    //'presence': ['location-exit', 'location-enter'], => motion\n    'temperature': ['thermometer-off', 'thermometer', 'Temperature'],\n    'humidity': ['water-percent-alert', 'water-percent', 'Humidity'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless', 'Illuminance'],\n    'pressure': ['gauge', 'gauge', 'Pressure'],\n    //'wind': ['weather-windy', 'weather-dust'],\n    //'airflow': ['fan-off', 'fan'], => humidity\n    'fan': ['fan-off', 'fan', 'Fan'],\n    'direction': ['swap-horizontal', 'swap-horizontal-bold', 'Direction'],\n    'time': ['clock-outline', 'clock', 'Time'],\n    'battery': ['battery-low', 'battery', 'Battery'],\n    //'climate': ['home-thermometer-outline', 'home-thermometer'],\n    'mode': ['home-switch-outline', 'home-switch', 'Mode'],\n    'text': ['clipboard-text-off', 'clipboard-text', 'Text'],\n    'location': ['map-marker-off-outline', 'map-marker', 'Location'],\n    //'camera': ['camera-off', 'camera'],\n    'color': ['palette', 'palette', 'Color'],\n    'tariff': ['currency-eur-off', 'currency-eur', 'Tariff']\n};\n\ndescribe.units = {\n    '': 'None',\n    '°C': 'Degree celsuis',\n    '°F': 'Degree fahrenheit',\n    'mA': 'Milliampere',\n    'A': 'Ampere',\n    'Hz': 'Hertz',\n    'mW': 'Milliwatt',\n    'W': 'Watt',\n    'kW': 'Kilowatt',\n    'MW': 'Megawatt',\n    'mWh': 'Milliwatt/hour',\n    'Wh': 'Watt/Hour',\n    'mVA': 'Millivoltampere',\n    'VA': 'Voltampere',\n    'mV': 'Millivolt',\n    'V': 'Volt',\n    'lx': 'Lux',\n    'ppm': 'Parts per million',\n    '%': 'Percent (0-100)',\n    'b': 'Binary (0-1)',\n    'rb': 'Revert binary',\n    '8b': '8-bit (0-255)',\n    'n': 'Number',\n    's': 'Second',\n    'ms': 'Millisecond',\n    'time': 'Time',\n    'enum': 'Enumerator',\n    'text': 'Text',\n    'chex': 'Hexadécimal color'\n};\n\n// Value color\ndescribe.colors = {\n    'on': '#008000',\n    'off': '#FF0000',\n    'median': '#F08000',\n    'none': '#808000',\n    'theme': '#0094CE',\n    'empty': '#CCCCCC'\n};\n\n// Calendar event type\ndescribe.calendar = {\n    'birthday': [ 'cake-variant-outline', 'cake-variant' ],\n    'rendezvous': [ 'alarm-off', 'alarm' ],\n    'trashbin': [ 'trash-can-outline', 'trash-can' ],\n    'recyclebin': [ 'recycle-vairant', 'recycle' ]\n};\n\n// Scene elements fields\ndescribe.scenes = {\n    'humidity': [\n        'enabled',\n        'on',\n        'off',\n        'duration',\n        'humidity'\n    ],\n    'light': [\n        'enabled',\n        'on',\n        'off',\n        'high',\n        'low',\n        'motion',\n        'retention',\n        'duration',\n        'diurnal',\n        'nocturnal',\n        'nightlight',\n        'illuminance',\n        'darkness'\n    ],\n    'shutter': [\n        'enabled',\n        'on',\n        'off',\n        'aperture',\n        'diurnal',\n        'nocturnal',\n        'illuminance',\n        'darkness',\n        'openwork',\n        'daily'\n    ],\n    'waterboiler': [\n        'enabled',\n        'on',\n        'off',\n        'duration',\n        'power',\n        'tariff',\n        'daily'\n    ],\n    'temperature': [\n        'enabled',\n        'on',\n        'off',\n        'temperature_setpoint_eco',\n        'temperature_setpoint_confort',\n        'temperature_setpoint_cold',\n        'temperature_coefficient_indoor',\n        'temperature_coefficient_outdoor',\n        'temperature_duration_aperture',\n        'temperature_duration_preheat',\n        'temperature_duration_cycle',\n        'temperature_duration_offloading',\n        'temperature_power_consumption',\n        'temperature_energy_free'\n    ]\n};\n\n// Scene routines fields\ndescribe.routines = {\n    'motion': ['motion-sensor-off', 'motion-sensor'],\n    'aperture': ['door-closed', 'door-open'],\n    'nocturnal': ['shield-moon-outline', 'shield-moon'],\n    'diurnal': ['shield-sun-outline', 'shield-sun'],\n    'nightlight': ['lightbulb-night-outline', 'lightbulb-night'],\n    'retention': ['timeline-clock-outline', 'timeline-clock'],\n    'daily': ['calendar-remove', 'calendar-check'],\n    'openwork': ['storefront-remove-outline', 'storefront-check'],\n    'duration': ['timer-remove-outline', 'timer-check'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless'],\n    'darkness': ['brightness-5', 'brightness-4'],\n    'humidity': ['water-percent-alert', 'water-percent'],\n    'temperature_energy_free': ['lightning-bolt-outline', 'lightning-bolt']\n};\n\n// Templates\ndescribe.template = {\n    'hmi': {\n        'id': '',\n        'login': '',\n        'level': 'visitor',\n        'lang': 'en',\n        'name': 'auth', // ui page\n        'room': '',\n        'time': 0\n    },\n    'room': {\n        'id': '',\n        'name': '',\n        'outdoor': 0\n    },\n    'parent': {\n        'id': '',\n        'name': '',\n        'seen': 0\n    },\n    'entity': {\n        'uid': '',\n        'source': '',\n        'id': '',\n        'name': '',\n        'parent': '',\n        'value': '',\n        'type': '',\n        'room': '',\n        'element': '',\n        'unit': '',\n        'seen': 0,\n        'hidden': 0\n    },\n    'scene': {\n        'target': '',\n        'enabled': 0,\n        'on': 1,\n        'off': 0,\n        'motion': 0,\n        'aperture': 0,\n        'nocturnal': 0,\n        'diurnal': 0,\n        'nightlight': 0,\n        'retention': 0,\n        'duration': 60, //minutes\n        'high': '70',\n        'low': '30',\n        'illuminance': 0, //2000\n        'darkness': 0, //200\n        'humidity': 0,\n        'daily': 0,\n        'openwork': 0,\n        'tariff': 0, // limit to a given tariff (see dknr_config_fulltariff)\n        'power': 0, // to check if target is really off\n        'timer': 0, // for duration routine\n        'today': 0, // for daily routine, 1=executed today else 0\n\n        'temperature_setpoint_eco': 19,\n        'temperature_setpoint_confort': 21,\n        'temperature_setpoint_cold': 18,\n        'temperature_coefficient_indoor': 100,\n        'temperature_coefficient_outdoor': 10,\n        'temperature_duration_aperture': 5,\n        'temperature_duration_preheat': 10,\n        'temperature_duration_cycle': 60,\n        'temperature_duration_offloading': 60,\n        'temperature_power_consumption': 1000,\n        'temperature_energy_free': 0,\n\n        'temperature_aperture_opened': 0,\n        'temperature_aperture_timer': 0,\n        'temperature_pilot_state': 'stopped',\n        'temperature_pilot_last': 0\n    },\n    'trigger': {\n        'inputhigh': 1, // Minimal input level for high level\n        'inputlow': 0, // Maximal input level for low high level\n        'outputhigh': 'high', // Output level on high input level. [none,high,low,toggle]\n        'outputlow': 'low' // output level for low input level [none, high, low, toggle]\n    },\n    'routine': {\n        'topic': '',\n        'payload': false,\n        'replay': false,\n        'rsp': true,\n        'iam': false,\n        'scene': {},\n        'param': {},\n        'trigger': {},\n        'target': {},\n        'routines': []\n    }\n};\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/.config.projects.json'\n};",
+        "func": "\n// Get moemories\nlet describe = global.get('describe'); // autoupdate\n\nif (typeof describe.pages !== 'object') {\n    describe.pages = {};\n}\n\n// Set default app values\ndescribe.app = {\n    'title': 'DKNR',\n    'version' : '0.0',\n    'git': ''\n}\n\n// Set common pages rights\ndescribe.pages['home'] = {\n    'id': 'ba855b55e831d2b6',\n    'name': 'home',\n    'icon': 'mdi-home',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['energy'] = {\n    'id': '34a13cfdebc90220',\n    'name': 'energy',\n    'icon': 'mdi-lightning-bolt',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['calendar'] = {\n    'id': '05291fac72588064',\n    'name': 'calendar',\n    'icon': 'mdi-calendar',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['room'] = {\n    'id': 'be3da16eb83104f6',\n    'name': 'room',\n    'icon': 'mdi-card-text',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': false\n    }\n};\ndescribe.pages['scene'] = {\n    'id': '1e9f5bde9636a371',\n    'name': 'scene',\n    'icon': 'mdi-auto-fix',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['entity'] = {\n    'id': '2b12391aa314ef62',\n    'name': 'entity',\n    'icon': 'mdi-wrench',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['config'] = {\n    'id': 'f081fa7a92c9aeb7',\n    'name': 'config',\n    'icon': 'mdi-cog',\n    'level': {\n        'admin': true,\n        'parent': false,\n        'child': false,\n        'visitor': false\n    }\n};\ndescribe.pages['auth'] = {\n    'id': '5e643d262f1ac894',\n    'name': 'auth',\n    'icon': 'mdi-login',\n    'level': {\n        'admin': true,\n        'parent': true,\n        'child': true,\n        'visitor': true\n    }\n};\n\n// Sources\ndescribe.sources['dknr'] = ['eye', 'Domotic'];\n\n// Binary element with revert value\ndescribe.reverts = ['aperture', 'door', 'window', 'lock'];\n\n// Non numeric units\ndescribe.texts = ['', 'chex', 'enum', 'text', 'time'];\n\n// Elements icons\ndescribe.elements = {\n    'switch': ['toggle-switch-off-outline', 'toggle-switch-outline', 'Switch'],\n    'plug': ['power-plug-off', 'power-plug', 'Plug'],\n    'power': ['flash-outline', 'flash', 'Power'],\n    'current': ['current-ac', 'current-ac', 'Current'],\n    'frequency': ['sine-wave', 'sine-wave', 'Frequency'],\n    'voltage': ['current-dc', 'current-dc', 'Frequency'],\n    'energy': ['meter-electric-outline', 'meter-electric', 'Energy'],\n    'light': ['lightbulb-off', 'lightbulb', 'Light'],\n    'remote': ['remote-off', 'remote', 'Remote'],\n    'door': ['door-closed', 'door-open', 'Door'], // 0=open\n    'window': ['window-closed-variant', 'window-open-variant', 'Window'], //0=open\n    'lock': ['lock-off', 'lock', 'Lock'], //0=open\n    //'shield': ['shield-lock-outline', 'shield-lock'],\n    //'aperture': ['electric-switch-closed', 'electric-switch'], // 0=open\n    'shutter': ['window-shutter', 'window-shutter-open', 'Shutter'],\n    'slider': ['door-sliding', 'door-sliding-open', 'Slider'],\n    //'heater': ['radiator-off', 'radiator'], => temperature\n    //'cooler': ['radiator-off', 'radiator'], => temperature\n    //'airconditioner': ['radiator-off', 'radiator'], => temparature\n    'waterboiler': ['water-boiler-off', 'water-boiler', 'Waterboiler'],\n    'alert': ['bell-off', 'bell', 'Alert'],\n    'sound': ['volume-off', 'volume-high', 'Sound'],\n    'motion': ['motion-sensor-off', 'motion-sensor', 'Motion'],\n    //'presence': ['location-exit', 'location-enter'], => motion\n    'temperature': ['thermometer-off', 'thermometer', 'Temperature'],\n    'humidity': ['water-percent-alert', 'water-percent', 'Humidity'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless', 'Illuminance'],\n    'pressure': ['gauge', 'gauge', 'Pressure'],\n    //'wind': ['weather-windy', 'weather-dust'],\n    //'airflow': ['fan-off', 'fan'], => humidity\n    'fan': ['fan-off', 'fan', 'Fan'],\n    'direction': ['swap-horizontal', 'swap-horizontal-bold', 'Direction'],\n    'time': ['clock-outline', 'clock', 'Time'],\n    'battery': ['battery-low', 'battery', 'Battery'],\n    //'climate': ['home-thermometer-outline', 'home-thermometer'],\n    'mode': ['home-switch-outline', 'home-switch', 'Mode'],\n    'text': ['clipboard-text-off', 'clipboard-text', 'Text'],\n    'location': ['map-marker-off-outline', 'map-marker', 'Location'],\n    //'camera': ['camera-off', 'camera'],\n    'color': ['palette', 'palette', 'Color'],\n    'tariff': ['currency-eur-off', 'currency-eur', 'Tariff']\n};\n\ndescribe.units = {\n    '': 'None',\n    '°C': 'Degree celsuis',\n    '°F': 'Degree fahrenheit',\n    'mA': 'Milliampere',\n    'A': 'Ampere',\n    'Hz': 'Hertz',\n    'mW': 'Milliwatt',\n    'W': 'Watt',\n    'kW': 'Kilowatt',\n    'MW': 'Megawatt',\n    'mWh': 'Milliwatt/hour',\n    'Wh': 'Watt/Hour',\n    'mVA': 'Millivoltampere',\n    'VA': 'Voltampere',\n    'mV': 'Millivolt',\n    'V': 'Volt',\n    'lx': 'Lux',\n    'ppm': 'Parts per million',\n    '%': 'Percent (0-100)',\n    'b': 'Binary (0-1)',\n    'rb': 'Revert binary',\n    '8b': '8-bit (0-255)',\n    'n': 'Number',\n    's': 'Second',\n    'ms': 'Millisecond',\n    'time': 'Time',\n    'enum': 'Enumerator',\n    'text': 'Text',\n    'chex': 'Hexadécimal color'\n};\n\n// Value color\ndescribe.colors = {\n    'on': '#008000',\n    'off': '#FF0000',\n    'median': '#F08000',\n    'none': '#808000',\n    'theme': '#0094CE',\n    'empty': '#CCCCCC'\n};\n\n// Calendar event type\ndescribe.calendar = {\n    'birthday': [ 'cake-variant-outline', 'cake-variant' ],\n    'rendezvous': [ 'alarm-off', 'alarm' ],\n    'trashbin': [ 'trash-can-outline', 'trash-can' ],\n    'recyclebin': [ 'recycle-vairant', 'recycle' ]\n};\n\n// Scene elements fields\ndescribe.scenes = {\n    'humidity': [\n        'enabled',\n        'on',\n        'off',\n        'duration',\n        'humidity'\n    ],\n    'light': [\n        'enabled',\n        'on',\n        'off',\n        'high',\n        'low',\n        'motion',\n        'retention',\n        'duration',\n        'diurnal',\n        'nocturnal',\n        'nightlight',\n        'illuminance',\n        'darkness'\n    ],\n    'shutter': [\n        'enabled',\n        'on',\n        'off',\n        'aperture',\n        'diurnal',\n        'nocturnal',\n        'illuminance',\n        'darkness',\n        'openwork',\n        'daily'\n    ],\n    'waterboiler': [\n        'enabled',\n        'on',\n        'off',\n        'duration',\n        'power',\n        'tariff',\n        'daily'\n    ],\n    'temperature': [\n        'enabled',\n        'on',\n        'off',\n        'temperature_setpoint_eco',\n        'temperature_setpoint_confort',\n        'temperature_setpoint_cold',\n        'temperature_coefficient_indoor',\n        'temperature_coefficient_outdoor',\n        'temperature_duration_aperture',\n        'temperature_duration_preheat',\n        'temperature_duration_cycle',\n        'temperature_duration_offloading',\n        'temperature_power_consumption',\n        'temperature_energy_free'\n    ]\n};\n\n// Scene routines fields\ndescribe.routines = {\n    'motion': ['motion-sensor-off', 'motion-sensor'],\n    'aperture': ['door-closed', 'door-open'],\n    'nocturnal': ['shield-moon-outline', 'shield-moon'],\n    'diurnal': ['shield-sun-outline', 'shield-sun'],\n    'nightlight': ['lightbulb-night-outline', 'lightbulb-night'],\n    'retention': ['timeline-clock-outline', 'timeline-clock'],\n    'daily': ['calendar-remove', 'calendar-check'],\n    'openwork': ['storefront-remove-outline', 'storefront-check'],\n    'duration': ['timer-remove-outline', 'timer-check'],\n    'illuminance': ['sun-wireless-outline', 'sun-wireless'],\n    'darkness': ['brightness-5', 'brightness-4'],\n    'humidity': ['water-percent-alert', 'water-percent'],\n    'temperature_energy_free': ['lightning-bolt-outline', 'lightning-bolt']\n};\n\n// Templates\ndescribe.template = {\n    'hmi': {\n        'id': '',\n        'login': '',\n        'level': 'visitor',\n        'lang': 'en',\n        'name': 'auth', // ui page\n        'room': '',\n        'time': 0\n    },\n    'room': {\n        'id': '',\n        'name': '',\n        'outdoor': 0\n    },\n    'parent': {\n        'id': '',\n        'name': '',\n        'seen': 0\n    },\n    'entity': {\n        'uid': '',\n        'source': '',\n        'id': '',\n        'name': '',\n        'parent': '',\n        'value': '',\n        'type': '',\n        'room': '',\n        'element': '',\n        'unit': '',\n        'seen': 0,\n        'hidden': 0\n    },\n    'scene': {\n        'target': '',\n        'enabled': 0,\n        'on': 1,\n        'off': 0,\n        'motion': 0,\n        'aperture': 0,\n        'nocturnal': 0,\n        'diurnal': 0,\n        'nightlight': 0,\n        'retention': 0,\n        'duration': 60, //minutes\n        'high': '70',\n        'low': '30',\n        'illuminance': 0, //2000\n        'darkness': 0, //200\n        'humidity': 0,\n        'daily': 0,\n        'openwork': 0,\n        'tariff': 0, // limit to a given tariff (see dknr_config_fulltariff)\n        'power': 0, // to check if target is really off\n        'timer': 0, // for duration routine\n        'today': 0, // for daily routine, 1=executed today else 0\n\n        'temperature_setpoint_eco': 19,\n        'temperature_setpoint_confort': 21,\n        'temperature_setpoint_cold': 18,\n        'temperature_coefficient_indoor': 100,\n        'temperature_coefficient_outdoor': 10,\n        'temperature_duration_aperture': 5,\n        'temperature_duration_preheat': 10,\n        'temperature_duration_cycle': 60,\n        'temperature_duration_offloading': 60,\n        'temperature_power_consumption': 1000,\n        'temperature_energy_free': 0,\n\n        'temperature_aperture_opened': 0,\n        'temperature_aperture_timer': 0,\n        'temperature_pilot_state': 'stopped',\n        'temperature_pilot_last': 0\n    },\n    'trigger': {\n        'inputhigh': 1, // Minimal input level for high level\n        'inputlow': 0, // Maximal input level for low high level\n        'outputhigh': 'high', // Output level on high input level. [none,high,low,toggle]\n        'outputlow': 'low' // output level for low input level [none, high, low, toggle]\n    },\n    'routine': {\n        'topic': '',\n        'payload': false,\n        'replay': false,\n        'rsp': true,\n        'iam': false,\n        'scene': {},\n        'param': {},\n        'trigger': {},\n        'target': {},\n        'routines': []\n    }\n};\n\n// Prepare project query\nreturn {\n    'topic': '',\n    'payload': '',\n    'filename': '/data/.config.projects.json'\n};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3716,37 +3689,6 @@
         "wires": [
             [
                 "67cca85c91edaff0"
-            ]
-        ]
-    },
-    {
-        "id": "5c9bfdd80f490de0",
-        "type": "link out",
-        "z": "4bc72a1112cb448c",
-        "g": "614d71e9e019ca82",
-        "name": "common - ui - custom",
-        "mode": "link",
-        "links": [
-            "70fa44d509342200"
-        ],
-        "x": 655,
-        "y": 1100,
-        "wires": []
-    },
-    {
-        "id": "ab044268dd81617b",
-        "type": "link in",
-        "z": "4bc72a1112cb448c",
-        "g": "614d71e9e019ca82",
-        "name": "common - ui - custom",
-        "links": [
-            "43663518deccb7c6"
-        ],
-        "x": 985,
-        "y": 1100,
-        "wires": [
-            [
-                "8f1a54f299198096"
             ]
         ]
     },
@@ -3781,14 +3723,14 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-actions\">\n        <v-btn :href=\"msg.git\"><img height=\"32px\" src=\"/icon.png\" :title=\"msg.full\"></img></v-btn>\n    </Teleport>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-title\">\n        <v-btn-group variant=\"outlined\" divided>\n            <v-btn v-if=\"oe_menus.home\" @click=\"oe_nav('home')\" :title=\"oe_titles.home\" icon=\"mdi-home\"></v-btn> \n            <v-btn v-if=\"oe_menus.energy\" @click=\"oe_nav('energy')\" :title=\"oe_titles.energy\" icon=\"mdi-lightning-bolt\"></v-btn>\n            <v-btn v-if=\"oe_menus.calendar\" @click=\"oe_nav('calendar')\" :title=\"oe_titles.calendar\" icon=\"mdi-calendar\"></v-btn>\n            <v-btn v-if=\"oe_menus.room\" @click=\"oe_nav('room')\" :title=\"oe_titles.room\" icon=\"mdi-card-text\"></v-btn>\n            <v-btn v-if=\"oe_menus.scene\" @click=\"oe_nav('scene')\" :title=\"oe_titles.scene\" icon=\"mdi-auto-fix\"></v-btn> \n            <v-btn v-if=\"oe_menus.entity\" @click=\"oe_nav('entity')\" :title=\"oe_titles.entity\" icon=\"mdi-wrench\"></v-btn> \n            <v-btn v-if=\"oe_menus.config\" @click=\"oe_nav('config')\" :title=\"oe_titles.config\" icon=\"mdi-cog\"></v-btn> \n            <v-btn v-if=\"oe_menus.auth\" @click=\"oe_nav('auth')\" :title=\"oe_titles.auth\" icon=\"mdi-login\"></v-btn> \n        </v-btn-group>\n        <v-btn-group variant=\"outlined\" divided id=\"app-bar-title-more\"></v-btn-group>\n        <span class=\"app-bar-actions-title\">{{ msg.page_title }}</span>\n    </Teleport>\n</template>\n\n<script>\n    export default {\n        data() {\n            return {\n                oe_menus: {  },\n                oe_titles: {  },\n                mounted: false\n            }\n        },\n        mounted() {\n            const blang = navigator.language || navigator.userLanguage;\n            this.send(blang);\n            this.mounted = true;\n        },\n        methods: {\n            oe_nav: function (page) {\n                this.send(page)\n            }\n        },\n        watch: {\n            msg: function (msg) {\n                document.documentElement.setAttribute(\"lang\", msg.page_lang);\n                document.documentElement.setAttribute(\"translate\", \"no\");\n                document.title = msg.title;\n                this.oe_menus = msg.menus;\n                this.oe_titles = msg.titles;\n            }\n        }\n    }\n\n</script>",
+        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-actions\">\n        <v-btn :href=\"msg.git\"><img height=\"32px\" src=\"/icon.png\" :title=\"msg.full\"></img></v-btn>\n    </Teleport>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-title\">\n        <v-btn-group variant=\"outlined\" divided>\n            <v-btn v-for=\"btn in oe_buttons\" :icon=\"btn.icon\" :title=\"btn.title\" @click=\"oe_nav(btn)\"></v-btn>\n        </v-btn-group>\n        <v-btn-group variant=\"outlined\" divided id=\"app-bar-title-more\"></v-btn-group>\n        <span class=\"app-bar-actions-title\">{{ msg.page_title }}</span>\n    </Teleport>\n</template>\n\n<script>\n    export default {\n        data() {\n            return {\n                oe_buttons: [],\n                mounted: false\n            }\n        },\n        mounted() {\n            const blang = navigator.language || navigator.userLanguage;\n            this.send(blang);\n            this.mounted = true;\n        },\n        methods: {\n            oe_nav: function (btn) {\n                this.send(btn.id)\n            }\n        },\n        watch: {\n            msg: function (msg) {\n                // Set page lang and title\n                document.documentElement.setAttribute(\"lang\", msg.page_lang);\n                document.documentElement.setAttribute(\"translate\", \"no\");\n                document.title = msg.title;\n\n                // Prevent refresh that kills user session\n                document.addEventListener('keydown', (e) => {\n                    e = e || window.event;\n                    if(e.keyCode == 116) { //} || (e.ctrlKey && e.keyCode == 82)){\n                        e.preventDefault();\n                    }\n                });\n\n                // Populate menu\n                if (msg && Array.isArray(msg.buttons)) {\n                    this.oe_buttons = msg.buttons\n                }\n            }\n        }\n    }\n</script>",
         "storeOutMessages": true,
         "passthru": false,
         "resendOnRefresh": true,
         "templateScope": "widget:ui",
         "className": "",
-        "x": 900,
-        "y": 1160,
+        "x": 740,
+        "y": 1100,
         "wires": [
             [
                 "8f1a54f299198096"
@@ -4270,7 +4212,7 @@
         "z": "4bc72a1112cb448c",
         "g": "fc6029b7d49d1e93",
         "name": "common - user - read",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4412,7 +4354,7 @@
         "z": "4bc72a1112cb448c",
         "g": "614d71e9e019ca82",
         "name": "data",
-        "func": "\n// Get memories\nlet user = global.get('user'); // autoupdate\nlet form = global.get('form'); // autoupdate\nlet pages = global.get('describe.pages') || {}; // read\n\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (!['connect', 'lost', 'change'].includes(msg.payload)) {\n\n    return;\n}\n\nif (msg.payload === 'lost') {\n\n    delete user[msg.hmi.id];\n    delete form[msg.hmi.id];\n\n    return;\n}\n\n\n// On connect, go to auth page\nif (msg.payload === 'connect') {\n    msg.payload = pages.auth.name;\n\n    /* Bypass auth */\n    //*\n    if (global.get('entity[\"dknr_command_auth\"][\"value\"]') === 1) {\n        msg.payload = pages.home.name;\n    }\n    //*/\n\n    node.send([null, null, msg]);\n    return;\n}\n\n// Prepare ui\nmsg.titles = {};\nmsg.menus = {};\nmsg.payload = {\n    'pages': {\n        'show': [],\n        'hide': []\n    }\n};\n\n// check user page right\nlet allowed = false;\nlet s = 0;\nlet h = 0;\nfor (const page in pages) {\n    if (typeof pages[page]['level'][msg.hmi.level] === 'boolean') {\n        if (pages[page]['level'][msg.hmi.level] === true) {\n            msg.menus[page] = true;\n            msg.payload.pages.show[s++] = pages[page]['name'];\n        } else {\n            msg.menus[page] = false;\n            msg.payload.pages.hide[h++] = pages[page]['name'];\n        }\n    } else {\n        if (pages.auth.name === pages[page]['name']) {\n            msg.menus[page] = true;\n            msg.payload.pages.show[s++] = pages[page]['name'];\n        } else {\n            msg.menus[page] = false;\n            msg.payload.pages.hide[h++] = pages[page]['name'];\n        }\n    }\n    msg.titles[page] = msg.dictionary.option_page[page];\n\n    if (pages[page]['name'] === msg.hmi.name) {\n        msg.page_title = msg.dictionary.option_page[page];\n        msg.page_lang = msg.hmi.lang;\n    }\n\n    if (pages[page]['name'] === msg.hmi.name && pages[page]['level'][msg.hmi.level] === true) {\n        allowed = true;\n    }\n}\n\nif (allowed === false) {\n    msg.payload = pages.auth.name;\n\n    node.send([null, null, msg]);\n    return;\n}\n\n// Clear UI form\nif (msg.hmi.id !== '') {\n    form[msg.hmi.id]['ts'] = Date.now();\n}\n\n// page process\nlet newMsg = {\n    'topic': '',\n    'payload': msg.hmi.name,\n    'hmi': msg.hmi,\n    'dictionary': { ...msg.dictionary },\n    '_client': msg._client,\n    //'enabled': true,\n    //'class': ''\n};\n\n// ui menu\nmsg.version = global.get('describe.app.version') || '0.0.0';\nmsg.title = msg.page_title + ' - ' + global.get('describe.app.title');\nmsg.full = global.get('describe.app.project') + ' v' + msg.version;\n\ndelete msg.dictionary;\n\nnode.send([msg, newMsg, null]);\nreturn;",
+        "func": "\n// Get memories\nlet user = global.get('user'); // autoupdate\nlet form = global.get('form'); // autoupdate\nlet pages = global.get('describe.pages') || {}; // read\n\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (!['connect', 'lost', 'change'].includes(msg.payload)) {\n\n    return;\n}\n\nif (msg.payload === 'lost') {\n\n    delete user[msg.hmi.id];\n    delete form[msg.hmi.id];\n\n    return;\n}\n\n\n// On connect, go to auth page\nif (msg.payload === 'connect') {\n    msg.payload = pages.auth.name;\n\n    /* Bypass auth */\n    //*\n    if (global.get('entity[\"dknr_command_auth\"][\"value\"]') === 1) {\n        msg.payload = pages.home.name;\n    }\n    //*/\n\n    node.send([null, null, msg]);\n    return;\n}\n\n// Prepare ui\nmsg.buttons = [];\nmsg.payload = {\n    'pages': {\n        'show': [],\n        'hide': []\n    }\n};\n\n// check user page right\nlet allowed = false;\nfor (const page in pages) {\n    let menu = false;\n    if (typeof pages[page]['level'][msg.hmi.level] === 'boolean') {\n        if (pages[page]['level'][msg.hmi.level] === true) {\n            menu = true;\n        }\n    } else {\n        if (pages.auth.name === pages[page]['name']) {\n            menu = true;\n        }\n    }\n\n    if (menu === true) {\n        msg.buttons.push({\n            'id': page,\n            'icon': pages[page]['icon'],\n            'title': pages[page]['name']\n        });\n        msg.payload.pages.show.push(pages[page]['name']);\n    }\n    else {\n        msg.payload.pages.hide.push(pages[page]['name']);\n    }\n\n    if (pages[page]['name'] === msg.hmi.name) {\n        msg.page_title = msg.dictionary.option_page[page];\n        msg.page_lang = msg.hmi.lang;\n    }\n\n    if (pages[page]['name'] === msg.hmi.name && pages[page]['level'][msg.hmi.level] === true) {\n        allowed = true;\n    }\n}\n\nif (allowed === false) {\n    msg.payload = pages.auth.name;\n\n    node.send([null, null, msg]);\n    return;\n}\n\n// Clear UI form\nif (msg.hmi.id !== '') {\n    form[msg.hmi.id]['ts'] = Date.now();\n}\n\n// page process\nlet newMsg = {\n    'topic': '',\n    'payload': msg.hmi.name,\n    'hmi': msg.hmi,\n    'dictionary': { ...msg.dictionary },\n    '_client': msg._client,\n    //'enabled': true,\n    //'class': ''\n};\n\n// ui menu\nmsg.version = global.get('describe.app.version') || '0.0.0';\nmsg.title = msg.page_title + ' - ' + global.get('describe.app.title');\nmsg.full = global.get('describe.app.project') + ' v' + msg.version;\n\ndelete msg.dictionary;\n\nnode.send([msg, newMsg, null]);\nreturn;",
         "outputs": 3,
         "timeout": 0,
         "noerr": 0,
@@ -4420,17 +4362,16 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 1220,
+        "y": 1160,
         "wires": [
             [
-                "be56244e32363548",
-                "5c9bfdd80f490de0"
+                "4841db186251fd55"
             ],
             [
-                "911bbe32f79bec46"
+                "6f2775829158f825"
             ],
             [
-                "afe884e8467661e5"
+                "bbb6fa5ec8070fb8"
             ]
         ]
     },
@@ -4447,11 +4388,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1110,
+        "x": 950,
         "y": 1100,
         "wires": [
             [
-                "b02e3c2d96304d41"
+                "bbb6fa5ec8070fb8"
             ]
         ]
     },
@@ -4502,103 +4443,6 @@
         "x": 395,
         "y": 1460,
         "wires": []
-    },
-    {
-        "id": "b02e3c2d96304d41",
-        "type": "link out",
-        "z": "4bc72a1112cb448c",
-        "g": "614d71e9e019ca82",
-        "name": "common - ui - loop",
-        "mode": "link",
-        "links": [
-            "289e0a6cd1209c38"
-        ],
-        "x": 1235,
-        "y": 1100,
-        "wires": []
-    },
-    {
-        "id": "afe884e8467661e5",
-        "type": "link out",
-        "z": "4bc72a1112cb448c",
-        "g": "614d71e9e019ca82",
-        "name": "common - ui - auth",
-        "mode": "link",
-        "links": [
-            "289e0a6cd1209c38"
-        ],
-        "x": 1235,
-        "y": 1220,
-        "wires": []
-    },
-    {
-        "id": "b490f62e4ba2632e",
-        "type": "ui-template",
-        "z": "4bc72a1112cb448c",
-        "g": "614d71e9e019ca82",
-        "group": "",
-        "page": "",
-        "ui": "df7710b4b2c4e55b",
-        "name": "common - ui - template",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "head": "",
-        "format": "<script>\ndocument.addEventListener('keydown', (e) => {\n    e = e || window.event;\n    if(e.keyCode == 116) { //} || (e.ctrlKey && e.keyCode == 82)){\n        e.preventDefault();\n    }\n});\n</script>\n",
-        "storeOutMessages": true,
-        "passthru": true,
-        "resendOnRefresh": true,
-        "templateScope": "widget:ui",
-        "className": "",
-        "x": 320,
-        "y": 1160,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "9aa067029d4049a3",
-        "type": "link in",
-        "z": "4bc72a1112cb448c",
-        "g": "614d71e9e019ca82",
-        "name": "common - ui - style",
-        "links": [
-            "92c098c716e46e3b"
-        ],
-        "x": 145,
-        "y": 1100,
-        "wires": [
-            [
-                "b490f62e4ba2632e",
-                "6f2775829158f825"
-            ]
-        ]
-    },
-    {
-        "id": "be56244e32363548",
-        "type": "delay",
-        "z": "4bc72a1112cb448c",
-        "g": "614d71e9e019ca82",
-        "name": "250ms",
-        "pauseType": "delay",
-        "timeout": "5",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 690,
-        "y": 1160,
-        "wires": [
-            [
-                "4841db186251fd55"
-            ]
-        ]
     },
     {
         "id": "26bca8d17b597ed1",
@@ -4702,7 +4546,7 @@
         "z": "4bc72a1112cb448c",
         "g": "8cc9a474d6cd27ec",
         "name": "hmi",
-        "func": "\n// Get memories\nlet form = global.get('form'); // autoupdate\nlet user = global.get('user'); // autoupdate\nlet admin = global.get('auth.admin') || { }; // read\n\n// Get UI user structure\nif (typeof msg.hmi !== 'object') {\n    msg.hmi = {...(global.get('describe.template.hmi') || {})}; // clone\n}\n\n// Get UI page\nif (typeof msg.name === 'string') {\n    msg.hmi.name = msg.name;\n    delete msg.name;\n}\ndelete msg.tab; \n\n// Get UI user\nif (typeof msg._client === 'object' && typeof msg._client.socketId === 'string') {\n    // Get use lang\n    const browser_lang = global.get('browser[\"' + msg._client.socketId + '\"][\"lang\"]');\n    if (typeof browser_lang === 'string') {\n        msg.hmi.lang = browser_lang;\n    }\n    msg.hmi.id = msg._client.socketId;\n\n\n    /* Bypass auth */\n    //*\n    if (global.get('entity[\"dknr_command_auth\"][\"value\"]') === 1 && \n        (typeof user[msg.hmi.id] !== 'object' || user[msg.hmi.id]['login'] === '')\n    ) {\n        user[msg.hmi.id] = admin;\n        user[msg.hmi.id]['login'] = 'admin';\n\n        delete user[msg.hmi.id]['pass'];\n    }\n    //*/\n\n    if (typeof user[msg.hmi.id] === 'object') {\n        user[msg.hmi.id]['time'] = Date.now();\n\n        msg.hmi = {...msg.hmi, ...user[msg.hmi.id]};\n    }\n\n    if (typeof form[msg.hmi.id] !== 'object') {\n        form[msg.hmi.id] = { };\n    }\n}\n\n// Get lang dictionary\nmsg.dictionary = { ...(global.get('dictionary.en') || { }), ...(global.get('dictionary[\"' + msg.hmi.lang + '\"]') || { }) };\n\nreturn msg;\n",
+        "func": "\n// Get memories\nlet form = global.get('form'); // autoupdate\nlet user = global.get('user'); // autoupdate\nlet admin = global.get('auth.admin') || { }; // read\n\n// Get UI user structure\nif (typeof msg.hmi !== 'object') {\n    msg.hmi = {...(global.get('describe.template.hmi') || {})}; // clone\n}\n\n// Get UI page\nif (typeof msg.name === 'string') {\n    msg.hmi.name = msg.name;\n    delete msg.name;\n}\ndelete msg.tab; \n\n// Get UI user\nif (typeof msg._client === 'object' && typeof msg._client.socketId === 'string') {\n    // Get use lang\n    const browser_lang = global.get('browser[\"' + msg._client.socketId + '\"][\"lang\"]');\n    if (typeof browser_lang === 'string') {\n        msg.hmi.lang = browser_lang;\n    }\n    msg.hmi.id = msg._client.socketId;\n\n\n    /* Bypass auth */\n    //*\n    if (global.get('entity[\"dknr_command_auth\"][\"value\"]') === 1 && \n        (typeof user[msg.hmi.id] !== 'object' || user[msg.hmi.id]['login'] === '')\n    ) {\n        user[msg.hmi.id] = { ...admin };\n        user[msg.hmi.id]['login'] = 'admin';\n\n        delete user[msg.hmi.id]['pass'];\n    }\n    //*/\n\n    if (typeof user[msg.hmi.id] === 'object') {\n        user[msg.hmi.id]['time'] = Date.now();\n\n        msg.hmi = {...msg.hmi, ...user[msg.hmi.id]};\n    }\n\n    if (typeof form[msg.hmi.id] !== 'object') {\n        form[msg.hmi.id] = { };\n    }\n}\n\n// Get lang dictionary\nmsg.dictionary = { ...(global.get('dictionary.en') || { }), ...(global.get('dictionary[\"' + msg.hmi.lang + '\"]') || { }) };\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -9666,17 +9510,6 @@
                 "439415c5119b5f70"
             ]
         ]
-    },
-    {
-        "id": "421cf02b20d1f367",
-        "type": "comment",
-        "z": "4bc72a1112cb448c",
-        "g": "58a56d94ba226005",
-        "name": "Fix UI latency",
-        "info": "",
-        "x": 1070,
-        "y": 1640,
-        "wires": []
     },
     {
         "id": "0f190ba62ab4093e",
@@ -24302,7 +24135,7 @@
         "color": "#717171",
         "wrapText": false,
         "className": "ui-title",
-        "value": "dictionary.common.page",
+        "value": "payload",
         "valueType": "msg",
         "x": 440,
         "y": 80,
@@ -24343,7 +24176,7 @@
         "z": "22abd94e2980c094",
         "g": "90f47fc795048184",
         "name": "data",
-        "func": "msg.class = '';\nmsg.enabled = true;\nmsg.payload= '';\n\nlet hideMsg = {...msg, ...{\n    'class': 'remove',\n    'enabled': false\n}};\n\n\n// Title and reset\nnode.send([ msg, hideMsg, hideMsg, hideMsg ]);\nawait new Promise(resolve => setTimeout(resolve, 100)); // wait 100ms\n\nif (msg.hmi.login !== '') {\n    // Disconnect button\n    msg.ui_update = {\n        'label': ''\n    };\n    node.send([ null, msg, null, null ]);\n    // User level\n    msg.ui_update = {\n        'label': msg.dictionary.auth.user || 'User: '\n    };\n    msg.payload = msg.dictionary.option_level[msg.hmi.level];\n    node.send([ null, null, msg, null ]);\n} else {\n    // Login form\n    msg.update = {\n        'label': '',\n        'options': [\n            {\n                'type': 'text',\n                'label': msg.dictionary.auth.login || 'Login',\n                'key': 'login',\n                'required': true\n            },\n            {\n                'type': 'password',\n                'label': msg.dictionary.auth.pass || 'Password',\n                'key': 'pass',\n                'required': true\n            }\t\n        ]\n    }\n    node.send([ null, null, null, msg ]);\n}\n\nreturn;",
+        "func": "msg.class = '';\nmsg.enabled = true;\nmsg.payload= '';\n\nlet hideMsg = {...msg, ...{\n    'class': 'remove',\n    'enabled': false\n}};\n\n\n// Title and reset\nmsg.payload = msg.dictionary.option_page.auth;\nnode.send([ msg, hideMsg, hideMsg, hideMsg ]);\nawait new Promise(resolve => setTimeout(resolve, 100)); // wait 100ms\n\nif (msg.hmi.login !== '') {\n    // Disconnect button\n    msg.ui_update = {\n        'label': ''\n    };\n    node.send([ null, msg, null, null ]);\n    // User level\n    msg.ui_update = {\n        'label': msg.dictionary.auth.user || 'User: '\n    };\n    msg.payload = msg.dictionary.option_level[msg.hmi.level];\n    node.send([ null, null, msg, null ]);\n} else {\n    // Login form\n    msg.update = {\n        'label': '',\n        'options': [\n            {\n                'type': 'text',\n                'label': msg.dictionary.auth.login || 'Login',\n                'key': 'login',\n                'required': true\n            },\n            {\n                'type': 'password',\n                'label': msg.dictionary.auth.pass || 'Password',\n                'key': 'pass',\n                'required': true\n            }\t\n        ]\n    }\n    node.send([ null, null, null, msg ]);\n}\n\nreturn;",
         "outputs": 4,
         "timeout": 0,
         "noerr": 0,
@@ -24464,64 +24297,6 @@
         "wires": []
     },
     {
-        "id": "70fa44d509342200",
-        "type": "link in",
-        "z": "ab13cf34b214d4b6",
-        "g": "274931f4309b3257",
-        "name": "test - menu",
-        "links": [
-            "5c9bfdd80f490de0"
-        ],
-        "x": 145,
-        "y": 380,
-        "wires": [
-            [
-                "1108c088331d2278"
-            ]
-        ]
-    },
-    {
-        "id": "43663518deccb7c6",
-        "type": "link out",
-        "z": "ab13cf34b214d4b6",
-        "g": "274931f4309b3257",
-        "name": "test - menu",
-        "mode": "link",
-        "links": [
-            "ab044268dd81617b"
-        ],
-        "x": 435,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "1108c088331d2278",
-        "type": "ui-template",
-        "z": "ab13cf34b214d4b6",
-        "g": "274931f4309b3257",
-        "group": "",
-        "page": "",
-        "ui": "df7710b4b2c4e55b",
-        "name": "test - menu",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "head": "",
-        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#app-bar-title-more\">\n        <v-btn v-if=\"oe_menus.test\" @click=\"oe_nav('test')\" :title=\"oe_titles.test\" icon=\"mdi-dev-to\"></v-btn> \n    </Teleport>\n</template>\n\n<script>\n    export default {\n        data() {\n            return {\n                oe_menus: {  },\n                oe_titles: {  },\n                mounted: false\n            }\n        },\n        mounted() {\n            \n        },\n        methods: {\n            oe_nav: function (page) {\n                this.send(page)\n            }\n        },\n        watch: {\n            msg: function (msg) {\n                this.mounted = true;\n                this.oe_menus = msg.menus;\n                this.oe_titles = msg.titles;\n            }\n        }\n    }\n\n</script>",
-        "storeOutMessages": true,
-        "passthru": false,
-        "resendOnRefresh": true,
-        "templateScope": "widget:ui",
-        "className": "",
-        "x": 290,
-        "y": 380,
-        "wires": [
-            [
-                "43663518deccb7c6"
-            ]
-        ]
-    },
-    {
         "id": "0fad0e21f00eaa17",
         "type": "link in",
         "z": "ab13cf34b214d4b6",
@@ -24558,7 +24333,7 @@
         "z": "ab13cf34b214d4b6",
         "g": "cd563b61d821c01e",
         "name": "test - init",
-        "func": "msg.payload.pages = {\n    'test': {\n        'id': 'a9acb2e8c23ee7ca',\n        'name': 'test',\n        'level': {\n            'admin': true,\n            'parent': true,\n            'child': false,\n            'visitor': false\n        }\n    }\n}\n\nmsg.payload.dictionary = {\n    'en': {\n        'option_page': {\n            'test': 'Test dev'\n        }\n    },\n    'fr': {\n        'option_page': {\n            'test': 'Essai de dev'\n        }\n    }\n}\n\nreturn msg;",
+        "func": "msg.payload.pages = {\n    'test': {\n        'id': 'a9acb2e8c23ee7ca',\n        'name': 'test',\n        'icon': 'mdi-dev-to',\n        'level': {\n            'admin': true,\n            'parent': true,\n            'child': false,\n            'visitor': false\n        }\n    }\n}\n\nmsg.payload.dictionary = {\n    'en': {\n        'option_page': {\n            'test': 'Test dev'\n        }\n    },\n    'fr': {\n        'option_page': {\n            'test': 'Essai de dev'\n        }\n    }\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
