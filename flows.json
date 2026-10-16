@@ -119,7 +119,6 @@
             "bb71762ba2269b75",
             "8aca2e86c077d885",
             "6ab34b3b3d64905e",
-            "0cf63361a578f787",
             "3361a6a4765bfb11",
             "775c8e4364eee51a",
             "f3b837acb99f6326",
@@ -344,7 +343,6 @@
             "bda49606849a8f05",
             "083f2a1d4069ab69",
             "43b439d13979544c",
-            "8efcf9aa67ba9375",
             "4a65b8428bc02868",
             "e4e6368d57415f5c",
             "5d27310454b9dc88",
@@ -362,11 +360,12 @@
             "12c201a63044dcfe",
             "07f13b83c52dee2f",
             "a8629436c0a093ea",
-            "5658964f16a57276"
+            "5658964f16a57276",
+            "35819cb805cdb20a"
         ],
         "x": 104,
         "y": 219,
-        "w": 1492,
+        "w": 1482,
         "h": 622
     },
     {
@@ -453,8 +452,7 @@
             "6e685e611486b24f",
             "b5e5ddf712b53493",
             "4c4719f273f0d173",
-            "9d282a6e42e3860a",
-            "6336047780e57ccc"
+            "9d282a6e42e3860a"
         ],
         "x": 104,
         "y": 399,
@@ -721,12 +719,11 @@
             "7f38981a1a7a894f",
             "329710fd6a91787d",
             "cfee6a014e3e823b",
-            "1238621625ac1387",
-            "7482fbd3b4a1a5ae"
+            "1238621625ac1387"
         ],
         "x": 104,
         "y": 3699,
-        "w": 772,
+        "w": 682,
         "h": 82
     },
     {
@@ -743,12 +740,11 @@
             "46bfd2b0460b2723",
             "1c0bfc84dadda4b4",
             "cce9cdcb1b1e7596",
-            "42617cb3dc0f463a",
-            "f32e8939b64dd232"
+            "42617cb3dc0f463a"
         ],
         "x": 104,
         "y": 3819,
-        "w": 772,
+        "w": 682,
         "h": 82
     },
     {
@@ -787,12 +783,11 @@
             "7a4670c83b542f34",
             "50bc4392adff795e",
             "61acc41e24cbdd6b",
-            "80e3952b8f56d1da",
             "e7c1edc4a7142043"
         ],
         "x": 104,
         "y": 3939,
-        "w": 912,
+        "w": 822,
         "h": 142
     },
     {
@@ -1097,7 +1092,6 @@
             "ba1539c07824ae7c",
             "5743e8bd13f0cf67",
             "2d9aef161a7ceb35",
-            "26d8d3d7bc111e9a",
             "ca73fe66b198a5b0",
             "9d77bd1f2df13ea4",
             "9427955ef0d7bf44",
@@ -1109,7 +1103,7 @@
         ],
         "x": 104,
         "y": 219,
-        "w": 1152,
+        "w": 1102,
         "h": 262
     },
     {
@@ -1636,17 +1630,19 @@
         "style": {
             "fill": "#6f2fa0",
             "fill-opacity": "0.05",
-            "label": true
+            "label": true,
+            "stroke": "#6f2fa0"
         },
         "nodes": [
-            "f4a2353e5f92576c",
-            "fecaee88b8c296ed",
-            "7f15feb966b47505"
+            "a32992138c9ff6f9",
+            "331bb9aa74c8b9c1",
+            "96b9be82a376b312",
+            "fecaee88b8c296ed"
         ],
-        "x": 104,
-        "y": 939,
+        "x": 504,
+        "y": 1119,
         "w": 502,
-        "h": 82
+        "h": 142
     },
     {
         "id": "614d71e9e019ca82",
@@ -1669,7 +1665,7 @@
             "8f1a54f299198096"
         ],
         "x": 104,
-        "y": 1059,
+        "y": 939,
         "w": 922,
         "h": 149.5
     },
@@ -1691,7 +1687,7 @@
             "d1b1e789f412bd08"
         ],
         "x": 104,
-        "y": 1299,
+        "y": 1119,
         "w": 332,
         "h": 82
     },
@@ -1713,7 +1709,7 @@
             "c026a3bb27b7e4d4"
         ],
         "x": 104,
-        "y": 1419,
+        "y": 1239,
         "w": 332,
         "h": 82
     },
@@ -1969,7 +1965,7 @@
             "aa5d2b32307ebf42"
         ],
         "x": 504,
-        "y": 1299,
+        "y": 1479,
         "w": 332,
         "h": 82
     },
@@ -2021,7 +2017,7 @@
             "11612fb8b286a9db"
         ],
         "x": 104,
-        "y": 1539,
+        "y": 1359,
         "w": 332,
         "h": 82
     },
@@ -2044,7 +2040,7 @@
             "cc19186db76a08ca"
         ],
         "x": 504,
-        "y": 1539,
+        "y": 1299,
         "w": 502,
         "h": 142
     },
@@ -2067,7 +2063,7 @@
             "439415c5119b5f70"
         ],
         "x": 504,
-        "y": 1419,
+        "y": 1599,
         "w": 592,
         "h": 82
     },
@@ -2121,6 +2117,32 @@
         "y": 2199,
         "w": 1322,
         "h": 862
+    },
+    {
+        "id": "d464589332746418",
+        "type": "group",
+        "z": "77269fd32cdb1638",
+        "name": "energy - menu",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "96cc3da1f3e135dd",
+            "088f2fca643818c2",
+            "453a5521de9c43f0",
+            "9d9be3102bf89bf0",
+            "20c33d6d50aa3ee3",
+            "e3bdb379a041899a",
+            "4ca1ee7f1c4d23a4",
+            "a4fb8643d4ad9504",
+            "a9ccaa6f01788c83"
+        ],
+        "x": 94,
+        "y": 999,
+        "w": 822,
+        "h": 202
     },
     {
         "id": "df7710b4b2c4e55b",
@@ -3292,39 +3314,6 @@
         ]
     },
     {
-        "id": "f4a2353e5f92576c",
-        "type": "link in",
-        "z": "4bc72a1112cb448c",
-        "g": "671369a42a9b2d5c",
-        "name": "common - ui - notice",
-        "links": [
-            "0cf63361a578f787",
-            "92c098c716e46e3b",
-            "43b439d13979544c",
-            "6336047780e57ccc",
-            "6de461e4d754d7f9",
-            "7482fbd3b4a1a5ae",
-            "f32e8939b64dd232",
-            "80e3952b8f56d1da",
-            "d269bc78686a5a01",
-            "02d1069a252bcc78",
-            "20c33d6d50aa3ee3",
-            "26d8d3d7bc111e9a",
-            "b8c88207e8262c51",
-            "ad9cf67b7b8161b0",
-            "9a2352af866c7f9e",
-            "66a51cbefda7a4af",
-            "ed449931f3c064b6"
-        ],
-        "x": 145,
-        "y": 980,
-        "wires": [
-            [
-                "7f15feb966b47505"
-            ]
-        ]
-    },
-    {
         "id": "123b4b73d0bba710",
         "type": "inject",
         "z": "4bc72a1112cb448c",
@@ -3363,26 +3352,24 @@
         "name": "common - boot",
         "mode": "link",
         "links": [
-            "3fa36de74a10eac1",
-            "f4a2353e5f92576c",
-            "3b80cd5cae7c3642",
-            "bf3da41c4b5bd219",
-            "7374df2eb856c2bc",
-            "4131c78a07d0bd44",
-            "d7bc8fc74bfc07cb",
+            "0d364f8869406041",
             "289e0a6cd1209c38",
-            "9aa067029d4049a3",
-            "e0e64bf3607382ef",
-            "7179cc22cb3792c0",
-            "ab17703b4908cbf8",
+            "2b0dce043fcbd8b3",
+            "3b80cd5cae7c3642",
+            "3fa36de74a10eac1",
+            "4131c78a07d0bd44",
             "4418090c31b190b3",
             "5bbb992212cbedd1",
             "68c4a05370085e3e",
-            "0d364f8869406041",
-            "ca0816fa69729bee",
-            "2b0dce043fcbd8b3",
+            "7179cc22cb3792c0",
+            "7374df2eb856c2bc",
             "9809530d07fc6ddc",
-            "bf16c43041851145"
+            "ab17703b4908cbf8",
+            "bf16c43041851145",
+            "bf3da41c4b5bd219",
+            "ca0816fa69729bee",
+            "d7bc8fc74bfc07cb",
+            "e0e64bf3607382ef"
         ],
         "x": 2495,
         "y": 80,
@@ -3415,7 +3402,7 @@
         "ui": "df7710b4b2c4e55b",
         "events": "all",
         "x": 320,
-        "y": 1160,
+        "y": 1040,
         "wires": [
             [
                 "fd39d13ae9c195f3"
@@ -3441,7 +3428,7 @@
             "bf16c43041851145"
         ],
         "x": 895,
-        "y": 1160,
+        "y": 1040,
         "wires": []
     },
     {
@@ -3460,7 +3447,7 @@
             "c740b6a6eb799115"
         ],
         "x": 145,
-        "y": 1160,
+        "y": 1040,
         "wires": [
             [
                 "bbb6fa5ec8070fb8"
@@ -3486,34 +3473,10 @@
         "raw": false,
         "className": "",
         "name": "common - ui - notice",
-        "x": 480,
-        "y": 980,
+        "x": 880,
+        "y": 1220,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "7f15feb966b47505",
-        "type": "switch",
-        "z": "4bc72a1112cb448c",
-        "g": "671369a42a9b2d5c",
-        "name": "empty",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "nempty"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 1,
-        "x": 270,
-        "y": 980,
-        "wires": [
-            [
-                "fecaee88b8c296ed"
-            ]
         ]
     },
     {
@@ -3560,7 +3523,7 @@
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
         "name": "data",
-        "func": "delete msg.filename;\n\n// Get memories\nlet describe = global.get('describe'); // autoupdate\n\nif (typeof msg.payload === 'object') {\n    describe.app = {\n        'project': msg.payload.name,\n        'title': msg.payload.description.slice(5),\n        'version' : msg.payload.version,\n        'git': msg.payload.name\n    };\n}\n\n// Set a default empty hmi user\nmsg.hmi = describe.template.hmi;\n\nmsg.payload = '';\n\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nreturn msg;",
+        "func": "delete msg.filename;\n\n// Get memories\nlet describe = global.get('describe'); // autoupdate\n\nif (typeof msg.payload === 'object') {\n    describe.app = {\n        'project': msg.payload.name,\n        'title': msg.payload.description.slice(5),\n        'version' : msg.payload.version,\n        'git': msg.payload.name\n    };\n}\n\n// Set a default empty hmi user\nmsg.hmi = describe.template.hmi;\n\nmsg.payload = '';\n\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\n// Notice\nmsg.notice = msg.dictionary.notice.boot_success || 'Successfully started';\nmsg = await node.linkcall('common - ui - notice', msg);\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3664,7 +3627,7 @@
         "templateScope": "site:style",
         "className": "",
         "x": 730,
-        "y": 1160,
+        "y": 1040,
         "wires": [
             [
                 "911bbe32f79bec46"
@@ -3730,7 +3693,7 @@
         "templateScope": "widget:ui",
         "className": "",
         "x": 740,
-        "y": 1100,
+        "y": 980,
         "wires": [
             [
                 "8f1a54f299198096"
@@ -3745,7 +3708,7 @@
         "name": "common - ui - hmi",
         "links": [],
         "x": 145,
-        "y": 1340,
+        "y": 1160,
         "wires": [
             [
                 "d1b1e789f412bd08"
@@ -3761,7 +3724,7 @@
         "mode": "return",
         "links": [],
         "x": 395,
-        "y": 1340,
+        "y": 1160,
         "wires": []
     },
     {
@@ -4354,7 +4317,7 @@
         "z": "4bc72a1112cb448c",
         "g": "614d71e9e019ca82",
         "name": "data",
-        "func": "\n// Get memories\nlet user = global.get('user'); // autoupdate\nlet form = global.get('form'); // autoupdate\nlet pages = global.get('describe.pages') || {}; // read\n\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (!['connect', 'lost', 'change'].includes(msg.payload)) {\n\n    return;\n}\n\nif (msg.payload === 'lost') {\n\n    delete user[msg.hmi.id];\n    delete form[msg.hmi.id];\n\n    return;\n}\n\n\n// On connect, go to auth page\nif (msg.payload === 'connect') {\n    msg.payload = pages.auth.name;\n\n    /* Bypass auth */\n    //*\n    if (global.get('entity[\"dknr_command_auth\"][\"value\"]') === 1) {\n        msg.payload = pages.home.name;\n    }\n    //*/\n\n    node.send([null, null, msg]);\n    return;\n}\n\n// Prepare ui\nmsg.buttons = [];\nmsg.payload = {\n    'pages': {\n        'show': [],\n        'hide': []\n    }\n};\n\n// check user page right\nlet allowed = false;\nfor (const page in pages) {\n    let menu = false;\n    if (typeof pages[page]['level'][msg.hmi.level] === 'boolean') {\n        if (pages[page]['level'][msg.hmi.level] === true) {\n            menu = true;\n        }\n    } else {\n        if (pages.auth.name === pages[page]['name']) {\n            menu = true;\n        }\n    }\n\n    if (menu === true) {\n        msg.buttons.push({\n            'id': page,\n            'icon': pages[page]['icon'],\n            'title': pages[page]['name']\n        });\n        msg.payload.pages.show.push(pages[page]['name']);\n    }\n    else {\n        msg.payload.pages.hide.push(pages[page]['name']);\n    }\n\n    if (pages[page]['name'] === msg.hmi.name) {\n        msg.page_title = msg.dictionary.option_page[page];\n        msg.page_lang = msg.hmi.lang;\n    }\n\n    if (pages[page]['name'] === msg.hmi.name && pages[page]['level'][msg.hmi.level] === true) {\n        allowed = true;\n    }\n}\n\nif (allowed === false) {\n    msg.payload = pages.auth.name;\n\n    node.send([null, null, msg]);\n    return;\n}\n\n// Clear UI form\nif (msg.hmi.id !== '') {\n    form[msg.hmi.id]['ts'] = Date.now();\n}\n\n// page process\nlet newMsg = {\n    'topic': '',\n    'payload': msg.hmi.name,\n    'hmi': msg.hmi,\n    'dictionary': { ...msg.dictionary },\n    '_client': msg._client,\n    //'enabled': true,\n    //'class': ''\n};\n\n// ui menu\nmsg.version = global.get('describe.app.version') || '0.0.0';\nmsg.title = msg.page_title + ' - ' + global.get('describe.app.title');\nmsg.full = global.get('describe.app.project') + ' v' + msg.version;\n\ndelete msg.dictionary;\n\nnode.send([msg, newMsg, null]);\nreturn;",
+        "func": "\n// Get memories\nlet user = global.get('user'); // autoupdate\nlet form = global.get('form'); // autoupdate\nlet pages = global.get('describe.pages') || {}; // read\n\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (!['connect', 'lost', 'change'].includes(msg.payload)) {\n\n    return;\n}\n\nif (msg.payload === 'lost') {\n\n    delete user[msg.hmi.id];\n    delete form[msg.hmi.id];\n\n    return;\n}\n\n// On connect, go to auth page\nif (msg.payload === 'connect') {\n    // Bypass auth\n    msg.payload = global.get('entity[\"dknr_command_auth\"][\"value\"]') === 1 ? pages.home.name : pages.auth.name;\n    msg.hmi.name = msg.payload;\n\n    node.send([null, null, msg]);\n}\n\n// Prepare ui\nmsg.buttons = [];\nmsg.payload = {\n    'pages': {\n        'show': [],\n        'hide': []\n    }\n};\n\n// check user page right\nlet allowed = false;\nfor (const page in pages) {\n    if (typeof pages[page]['level'][msg.hmi.level] === 'boolean' \n        && pages[page]['level'][msg.hmi.level] === true\n        || pages.auth.name === pages[page]['name']\n    ) {\n        msg.buttons.push({\n            'id': page,\n            'icon': pages[page]['icon'],\n            'title': pages[page]['name']\n        });\n        msg.payload.pages.show.push(pages[page]['name']);\n    }\n    else {\n        msg.payload.pages.hide.push(pages[page]['name']);\n    }\n\n    if (pages[page]['name'] === msg.hmi.name) {\n        msg.page_title = msg.dictionary.option_page[page];\n        msg.page_lang = msg.hmi.lang;\n    }\n\n    if (pages[page]['name'] === msg.hmi.name && pages[page]['level'][msg.hmi.level] === true) {\n        allowed = true;\n    }\n}\n\nif (allowed === false) {\n    msg.payload = pages.auth.name;\n\n    node.send([null, null, msg]);\n    //return;\n    msg.hmi.name = msg.payload;\n}\n\n// Clear UI form\nif (msg.hmi.id !== '') {\n    form[msg.hmi.id]['ts'] = Date.now();\n}\n\n// page process\nlet newMsg = {\n    'topic': '',\n    'payload': msg.hmi.name,\n    'hmi': msg.hmi,\n    'dictionary': { ...msg.dictionary },\n    '_client': msg._client,\n    //'enabled': true,\n    //'class': ''\n};\n\n// ui menu\nmsg.version = global.get('describe.app.version') || '0.0.0';\nmsg.title = msg.page_title + ' - ' + global.get('describe.app.title');\nmsg.full = global.get('describe.app.project') + ' v' + msg.version;\n\ndelete msg.dictionary;\n\n\nnode.send([null, newMsg, null]);\n\nmsg = await node.linkcall('common - ui - latency', msg);\n\nnode.send([msg, null, null]);\nreturn;",
         "outputs": 3,
         "timeout": 0,
         "noerr": 0,
@@ -4362,7 +4325,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 1160,
+        "y": 1040,
         "wires": [
             [
                 "4841db186251fd55"
@@ -4381,7 +4344,7 @@
         "z": "4bc72a1112cb448c",
         "g": "614d71e9e019ca82",
         "name": "data",
-        "func": "\n// Get memories\nlet browser = global.get('browser'); // autoupdate\n\nif (msg.payload !== '' && typeof global.get('describe.pages[\"' + msg.payload + '\"][\"name\"]') === 'string') {\n    msg.name = global.get('describe.pages[\"' + msg.payload + '\"][\"name\"]');\n    msg.payload = msg.name;\n    \n    // Get ui data\n    msg = await node.linkcall('common - ui - hmi', msg);\n\n    return msg;\n} else {\n    let default_browser = {\n        'lang': msg.payload,\n        'time': Date.now()\n    }\n    browser[msg._client.socketId] = default_browser;\n\n    let time = Date.now() - 60000;\n    for (const b in browser) {\n        if (browser[b]['time'] < time) {\n            delete browser[b];\n        }\n    }\n\n    return;\n}",
+        "func": "\n// Get memories\nlet browser = global.get('browser'); // autoupdate\n\nif (msg.payload !== '' && typeof global.get('describe.pages[\"' + msg.payload + '\"][\"name\"]') === 'string') {\n    msg.name = global.get('describe.pages[\"' + msg.payload + '\"][\"name\"]');\n    msg.payload = msg.name;\n\n    // Get ui data\n    msg = await node.linkcall('common - ui - hmi', msg);\n\n    return msg;\n} else {\n    let default_browser = {\n        'lang': msg.payload,\n        'time': Date.now()\n    }\n    browser[msg._client.socketId] = default_browser;\n\n    let time = Date.now() - 60000;\n    for (const b in browser) {\n        if (browser[b]['time'] < time) {\n            delete browser[b];\n        }\n    }\n\n    return;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4389,7 +4352,7 @@
         "finalize": "",
         "libs": [],
         "x": 950,
-        "y": 1100,
+        "y": 980,
         "wires": [
             [
                 "bbb6fa5ec8070fb8"
@@ -4410,7 +4373,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 1460,
+        "y": 1280,
         "wires": [
             [
                 "c026a3bb27b7e4d4"
@@ -4425,7 +4388,7 @@
         "name": "common - ui - tab",
         "links": [],
         "x": 145,
-        "y": 1460,
+        "y": 1280,
         "wires": [
             [
                 "8c540395a0e469f7"
@@ -4441,7 +4404,7 @@
         "mode": "return",
         "links": [],
         "x": 395,
-        "y": 1460,
+        "y": 1280,
         "wires": []
     },
     {
@@ -4554,7 +4517,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 1340,
+        "y": 1160,
         "wires": [
             [
                 "7214e26c1a5974bd"
@@ -6731,7 +6694,7 @@
         "name": "common - ui - enable",
         "links": [],
         "x": 545,
-        "y": 1340,
+        "y": 1520,
         "wires": [
             [
                 "aa5d2b32307ebf42"
@@ -6747,7 +6710,7 @@
         "mode": "return",
         "links": [],
         "x": 795,
-        "y": 1340,
+        "y": 1520,
         "wires": []
     },
     {
@@ -6764,7 +6727,7 @@
         "finalize": "",
         "libs": [],
         "x": 670,
-        "y": 1340,
+        "y": 1520,
         "wires": [
             [
                 "d3c7bc3af2075553"
@@ -9318,7 +9281,7 @@
         "name": "common - ui - wait",
         "links": [],
         "x": 145,
-        "y": 1580,
+        "y": 1400,
         "wires": [
             [
                 "36c06422c6eb2bf6"
@@ -9339,7 +9302,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 1580,
+        "y": 1400,
         "wires": [
             [
                 "11612fb8b286a9db"
@@ -9355,7 +9318,7 @@
         "mode": "return",
         "links": [],
         "x": 395,
-        "y": 1580,
+        "y": 1400,
         "wires": []
     },
     {
@@ -9367,7 +9330,7 @@
         "ui": "df7710b4b2c4e55b",
         "events": "all",
         "x": 880,
-        "y": 1640,
+        "y": 1400,
         "wires": [
             []
         ]
@@ -9380,7 +9343,7 @@
         "name": "common - ui - group",
         "links": [],
         "x": 545,
-        "y": 1580,
+        "y": 1340,
         "wires": [
             [
                 "cc19186db76a08ca"
@@ -9396,7 +9359,7 @@
         "mode": "return",
         "links": [],
         "x": 795,
-        "y": 1580,
+        "y": 1340,
         "wires": []
     },
     {
@@ -9413,7 +9376,7 @@
         "finalize": "",
         "libs": [],
         "x": 670,
-        "y": 1580,
+        "y": 1340,
         "wires": [
             [
                 "fa8104644047263a"
@@ -9483,7 +9446,7 @@
         "templateScope": "widget:ui",
         "className": "",
         "x": 720,
-        "y": 1460,
+        "y": 1640,
         "wires": [
             [
                 "0e7aa6dfb681676e"
@@ -9504,7 +9467,7 @@
         "finalize": "",
         "libs": [],
         "x": 930,
-        "y": 1460,
+        "y": 1640,
         "wires": [
             [
                 "439415c5119b5f70"
@@ -9519,7 +9482,7 @@
         "name": "common - ui - latency",
         "links": [],
         "x": 545,
-        "y": 1460,
+        "y": 1640,
         "wires": [
             [
                 "44dbc80e0d6cf494"
@@ -9535,7 +9498,58 @@
         "mode": "return",
         "links": [],
         "x": 1055,
-        "y": 1460,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "a32992138c9ff6f9",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "671369a42a9b2d5c",
+        "name": "common - ui - notice",
+        "links": [],
+        "x": 545,
+        "y": 1160,
+        "wires": [
+            [
+                "331bb9aa74c8b9c1"
+            ]
+        ]
+    },
+    {
+        "id": "331bb9aa74c8b9c1",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "671369a42a9b2d5c",
+        "name": "data",
+        "func": "if (typeof msg.notice === 'string' && msg.notice !== '') {\n    let data = msg.payload;\n    msg.payload = msg.notice;\n\n    node.send([null, msg]);\n\n    msg.payload = data;\n}\n\nreturn [msg, null];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 1160,
+        "wires": [
+            [
+                "96b9be82a376b312"
+            ],
+            [
+                "fecaee88b8c296ed"
+            ]
+        ]
+    },
+    {
+        "id": "96b9be82a376b312",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "671369a42a9b2d5c",
+        "name": "common - ui - notice",
+        "mode": "return",
+        "links": [],
+        "x": 795,
+        "y": 1160,
         "wires": []
     },
     {
@@ -10149,7 +10163,7 @@
         "z": "10a4e1188aad61a2",
         "g": "6023ed32683fd2f4",
         "name": "data",
-        "func": "// Get plant map\n\nmsg.plant = msg.payload;\n\n// Reset UI\nif (msg.enabled !== true || msg.plant === '') {\n    // page is disabled\n    msg.class = 'remove';\n    msg.enabled = false;\n    msg.payload = { };\n    msg.room = 'none';\n\n    return msg;\n}\n\nawait new Promise(resolve => setTimeout(resolve, 500));\n\nconst colors = { ...(global.get('describe.colors') || { }) };\nconst elements = { ...(global.get('describe.elements') || { }) };\nconst rooms = { ...(global.get('rooms.location') || { }) };\nconst entity = { ...(global.get('entity') || { }) };\n\nmsg.room = 'home';\nmsg.class = '';\nmsg.enabled = true;\nmsg.payload = { };\n\nlet options = {\n//    'motion': '',\n    'temperature': '°C',\n    'humidity': '%',\n//    'door': '',\n//    'window': '',\n//    'light': ''\n};\n\nlet entities = {};\nlet e_num = 0;\n\n// Get entities interesting data\nfor (const e in entity) {\n    if (entity[e]['hidden'] !== 0 || \n        entity[e]['room'] === '' || \n        entity[e]['value'] === ''\n    ) {\n\n        continue;\n    }\n\n    if (typeof entities[entity[e]['room']] !== 'object') {\n        entities[entity[e]['room']] = { };\n    }\n\n    // Motion\n    if (entity[e]['type'] === 'sensor' && typeof entities[entity[e]['room']]['motion'] !== 'number') {\n        entities[entity[e]['room']]['motion'] = 0;\n    }\n    if (entity[e]['element'] === 'motion' && entity[e]['value'] > 0) {\n        entities[entity[e]['room']]['motion'] += 1;\n    }\n\n    // Door\n    if (entity[e]['type'] === 'sensor' && typeof entities[entity[e]['room']]['door'] !== 'number') {\n        entities[entity[e]['room']]['door'] = 0;\n    }\n    if (['door', 'slider'].includes(entity[e]['element']) && !entity[e]['value']) {\n        entities[entity[e]['room']]['door'] += 1;\n    }\n\n    // Window\n    if (entity[e]['type'] === 'sensor' && typeof entities[entity[e]['room']]['window'] !== 'number') {\n        entities[entity[e]['room']]['window'] = 0;\n    }\n    if (entity[e]['element'] === 'window' && !entity[e]['value']) {\n        entities[entity[e]['room']]['window'] += 1;\n    }\n\n    // Light\n    if (typeof entities[entity[e]['room']]['light'] !== 'number') {\n        entities[entity[e]['room']]['light'] = 0;\n    }\n    if ([ 'light', 'spot' ].includes(entity[e]['element']) && entity[e]['value'] > 0) {\n        entities[entity[e]['room']]['light'] += 1;\n    }\n\n    // Climate\n    if (typeof entities[entity[e]['room']]['climate'] !== 'number') {\n        entities[entity[e]['room']]['climate'] = 0;\n    }\n    if (entity[e]['type'] === 'command' && entity[e]['element'] === 'temperature' && entity[e]['value'] > 0 && entity[e]['value'] < 2) { // skip consigne\n        entities[entity[e]['room']]['climate'] += 1;\n    }\n\n    // Temperature\n    if (entity[e]['type'] === 'sensor' && entity[e]['element'] === 'temperature') {\n        if (typeof entities[entity[e]['room']]['temperature'] === 'undefined') {\n            entities[entity[e]['room']]['temperature'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['temperature'] = (parseInt(entities[entity[e]['room']]['temperature'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n\n    // Humidity\n    if (entity[e]['type'] === 'sensor' && entity[e]['element'] === 'humidity') {\n        if (typeof entities[entity[e]['room']]['humidity'] === 'undefined') {\n            entities[entity[e]['room']]['humidity'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['humidity'] = (parseInt(entities[entity[e]['room']]['humidity'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n}\n\n\n// Group by room\nfor (const r in rooms) {\n    if ([ 'system', 'home' ].includes(r)\n    || typeof rooms[r] !== 'object' \n    || (rooms[r]['w'] || 0) < 5 \n    || (rooms[r]['h'] || 0) < 5\n    ) {\n\n        continue;\n    }\n\n    let t = 0;\n    let text = [];\n    \n    for (const o in options) {\n        if (typeof entities[r] !== 'object') {\n\n            continue;\n        }\n\n        if (typeof entities[r][o] !== 'undefined' && entities[r][o] > 0) {\n            text[t++] = entities[r][o] + options[o]\n        }\n    };\n\n    msg.payload[r] = {\n        'id': r,\n        'title': (rooms[r]['s'] || '') === '' ? (global.get('rooms.base[\"' + r + '\"][\"name\"]') || r) : rooms[r]['s'],\n        'text': text.join('  '),\n        'x': Number(rooms[r]['x']),\n        'y': Number(rooms[r]['y']),\n        'w': Number(rooms[r]['w']),\n        'h': Number(rooms[r]['h']),\n        'c': 'rgba(var(--v-theme-group-background), 0.2)',\n        'light': (entities[r]['light'] || 0) > 0 ? 1 : 0,\n        'motion': (entities[r]['motion'] || 0) > 0 ? 1 : 0,\n        'aperture': (entities[r]['door'] || 0) > 0 || (entities[r]['window'] || 0) > 0 ? 1 : 0,\n        'climate': (entities[r]['climate'] || 0) > 0 ? 1 : 0,\n    };\n}\n\nreturn msg;",
+        "func": "// Get plant map\n\nmsg.plant = msg.payload;\n\n// Reset UI\nif (msg.enabled !== true || msg.plant === '') {\n    // page is disabled\n    msg.class = 'remove';\n    msg.enabled = false;\n    msg.payload = { };\n    msg.room = 'none';\n\n    return msg;\n}\n\n//await new Promise(resolve => setTimeout(resolve, 500));\nmsg = await node.linkcall('common - ui - latency', msg);\n\n\nconst colors = { ...(global.get('describe.colors') || { }) };\nconst elements = { ...(global.get('describe.elements') || { }) };\nconst rooms = { ...(global.get('rooms.location') || { }) };\nconst entity = { ...(global.get('entity') || { }) };\n\nmsg.room = 'home';\nmsg.class = '';\nmsg.enabled = true;\nmsg.payload = { };\n\nlet options = {\n//    'motion': '',\n    'temperature': '°C',\n    'humidity': '%',\n//    'door': '',\n//    'window': '',\n//    'light': ''\n};\n\nlet entities = {};\nlet e_num = 0;\n\n// Get entities interesting data\nfor (const e in entity) {\n    if (entity[e]['hidden'] !== 0 || \n        entity[e]['room'] === '' || \n        entity[e]['value'] === ''\n    ) {\n\n        continue;\n    }\n\n    if (typeof entities[entity[e]['room']] !== 'object') {\n        entities[entity[e]['room']] = { };\n    }\n\n    // Motion\n    if (entity[e]['type'] === 'sensor' && typeof entities[entity[e]['room']]['motion'] !== 'number') {\n        entities[entity[e]['room']]['motion'] = 0;\n    }\n    if (entity[e]['element'] === 'motion' && entity[e]['value'] > 0) {\n        entities[entity[e]['room']]['motion'] += 1;\n    }\n\n    // Door\n    if (entity[e]['type'] === 'sensor' && typeof entities[entity[e]['room']]['door'] !== 'number') {\n        entities[entity[e]['room']]['door'] = 0;\n    }\n    if (['door', 'slider'].includes(entity[e]['element']) && !entity[e]['value']) {\n        entities[entity[e]['room']]['door'] += 1;\n    }\n\n    // Window\n    if (entity[e]['type'] === 'sensor' && typeof entities[entity[e]['room']]['window'] !== 'number') {\n        entities[entity[e]['room']]['window'] = 0;\n    }\n    if (entity[e]['element'] === 'window' && !entity[e]['value']) {\n        entities[entity[e]['room']]['window'] += 1;\n    }\n\n    // Light\n    if (typeof entities[entity[e]['room']]['light'] !== 'number') {\n        entities[entity[e]['room']]['light'] = 0;\n    }\n    if ([ 'light', 'spot' ].includes(entity[e]['element']) && entity[e]['value'] > 0) {\n        entities[entity[e]['room']]['light'] += 1;\n    }\n\n    // Climate\n    if (typeof entities[entity[e]['room']]['climate'] !== 'number') {\n        entities[entity[e]['room']]['climate'] = 0;\n    }\n    if (entity[e]['type'] === 'command' && entity[e]['element'] === 'temperature' && entity[e]['value'] > 0 && entity[e]['value'] < 2) { // skip consigne\n        entities[entity[e]['room']]['climate'] += 1;\n    }\n\n    // Temperature\n    if (entity[e]['type'] === 'sensor' && entity[e]['element'] === 'temperature') {\n        if (typeof entities[entity[e]['room']]['temperature'] === 'undefined') {\n            entities[entity[e]['room']]['temperature'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['temperature'] = (parseInt(entities[entity[e]['room']]['temperature'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n\n    // Humidity\n    if (entity[e]['type'] === 'sensor' && entity[e]['element'] === 'humidity') {\n        if (typeof entities[entity[e]['room']]['humidity'] === 'undefined') {\n            entities[entity[e]['room']]['humidity'] = entity[e]['value'];\n        }\n        entities[entity[e]['room']]['humidity'] = (parseInt(entities[entity[e]['room']]['humidity'] * 10) + parseInt(entity[e]['value'] * 10)) / 20;\n    }\n}\n\n\n// Group by room\nfor (const r in rooms) {\n    if ([ 'system', 'home' ].includes(r)\n    || typeof rooms[r] !== 'object' \n    || (rooms[r]['w'] || 0) < 5 \n    || (rooms[r]['h'] || 0) < 5\n    ) {\n\n        continue;\n    }\n\n    let t = 0;\n    let text = [];\n    \n    for (const o in options) {\n        if (typeof entities[r] !== 'object') {\n\n            continue;\n        }\n\n        if (typeof entities[r][o] !== 'undefined' && entities[r][o] > 0) {\n            text[t++] = entities[r][o] + options[o]\n        }\n    };\n\n    msg.payload[r] = {\n        'id': r,\n        'title': (rooms[r]['s'] || '') === '' ? (global.get('rooms.base[\"' + r + '\"][\"name\"]') || r) : rooms[r]['s'],\n        'text': text.join('  '),\n        'x': Number(rooms[r]['x']),\n        'y': Number(rooms[r]['y']),\n        'w': Number(rooms[r]['w']),\n        'h': Number(rooms[r]['h']),\n        'c': 'rgba(var(--v-theme-group-background), 0.2)',\n        'light': (entities[r]['light'] || 0) > 0 ? 1 : 0,\n        'motion': (entities[r]['motion'] || 0) > 0 ? 1 : 0,\n        'aperture': (entities[r]['door'] || 0) > 0 || (entities[r]['window'] || 0) > 0 ? 1 : 0,\n        'climate': (entities[r]['climate'] || 0) > 0 ? 1 : 0,\n    };\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -11419,6 +11433,7 @@
         "id": "96cc3da1f3e135dd",
         "type": "function",
         "z": "77269fd32cdb1638",
+        "g": "d464589332746418",
         "name": "data",
         "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (!msg.enabled) {\n    node.send([msg, msg]);\n\n    return;\n}\n\nconst units = ['mW', 'W', 'kW'];\nconst entity = { ...(global.get('entity') || { }) };\nconst parent = { ...(global.get('parent') || { }) };\nconst room = { ...(global.get('rooms.base') || { }) };\n\nlet d = 0;\nlet dropdownOptions = [];\nfor (const e in entity) {\n    if (entity[e]['hidden'] === 0 && units.includes(entity[e]['unit'])) {\n        let entity_name = entity[e]['name'];\n        if (entity_name === '') {\n            entity_name = parent[entity[e]['parent']]['name'] || e;\n        }\n        let room_name = room[entity[e]['room']]['name'] || entity[e]['room'];\n        let element_name = msg.dictionary.option_element[entity[e]['element']] || entity[e]['element']\n\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'grid_power'\n        };\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'solar_power'\n        };\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'battery_power'\n        };\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'waterboiler_power'\n        };\n    }\n\n    if (entity[e]['hidden'] === 0 && entity[e]['element'] === 'battery') {\n        let entity_name = entity[e]['name'];\n        if (entity_name === '') {\n            entity_name = parent[entity[e]['parent']]['name'] || e;\n        }\n        let room_name = room[entity[e]['room']]['name'] || entity[e]['room'];\n        let element_name = msg.dictionary.option_element[entity[e]['element']] || entity[e]['element']\n\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'battery_level'\n        };\n    }\n\n    if (entity[e]['hidden'] === 0 && entity[e]['element'] === 'tariff') {\n        let entity_name = entity[e]['name'];\n        if (entity_name === '') {\n            entity_name = parent[entity[e]['parent']]['name'] || e;\n        }\n        let room_name = room[entity[e]['room']]['name'] || entity[e]['room'];\n        let element_name = msg.dictionary.option_element[entity[e]['element']] || entity[e]['element']\n\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'preferred_tariff'\n        };\n    }\n\n    if (entity[e]['hidden'] === 0 && entity[e]['element'] === 'energy') {\n        let entity_name = entity[e]['name'];\n        if (entity_name === '') {\n            entity_name = parent[entity[e]['parent']]['name'] || e;\n        }\n        let room_name = room[entity[e]['room']]['name'] || entity[e]['room'];\n        let element_name = msg.dictionary.option_element[entity[e]['element']] || entity[e]['element']\n\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'favorable_energy_meter'\n        };\n        dropdownOptions[d++] = {\n            'label': room_name + ' / ' + element_name + ' / ' + entity_name + ' (' + e + ')',\n            'value': e,\n            'dropdown': 'unfavorable_energy_meter'\n        };\n    }\n}\n\ndropdownOptions.sort((a, b) => a.label.localeCompare(b.label));\n\n// entity - energy - title\nmsg.payload = msg.dictionary.energy.entity_title || 'Energy';\n\nnode.send([msg, null]);\n\n// entity - energy - form\nmsg.payload = {};\nmsg.ui_update = {\n    'label': '',\n    'options': [\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.energy.grid_power || 'Grid power',\n            \"key\": \"grid_power\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.energy.solar_power || 'Solar power',\n            \"key\": \"solar_power\"\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.energy.battery_power || 'Battery power',\n            \"key\": \"battery_power\",\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.energy.battery_level || 'Battery level',\n            \"key\": \"battery_level\",\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.energy.preferred_tariff || 'Preferred tariff in progress',\n            \"key\": \"preferred_tariff\",\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.energy.favorable_energy_meter || 'Favorable energy meter',\n            \"key\": \"favorable_energy_meter\",\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.energy.unfavorable_energy_meter || 'Unfavorable energy meter',\n            \"key\": \"unfavorable_energy_meter\",\n        },\n        {\n            \"type\": \"dropdown\",\n            \"label\": msg.dictionary.energy.waterboiler_power || 'Waterboiler power',\n            \"key\": \"waterboiler_power\",\n        },\n        {\n            \"type\": \"text\",\n            \"label\": msg.dictionary.energy.openweathermap_key || 'OpenWeatherMap API key',\n            \"key\": \"openweathermap\",\n        }\n    ],\n    'dropdownOptions': dropdownOptions\n};\n\nmsg.payload = { ...(global.get('energy') || { }) };\n\nnode.send([null, msg]);\n\nreturn;",
         "outputs": 2,
@@ -11427,8 +11442,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 390,
-        "y": 1340,
+        "x": 330,
+        "y": 1100,
         "wires": [
             [
                 "453a5521de9c43f0"
@@ -11442,6 +11457,7 @@
         "id": "088f2fca643818c2",
         "type": "ui-form",
         "z": "77269fd32cdb1638",
+        "g": "d464589332746418",
         "name": "energy - entity - form",
         "group": "a6601e1fe5c357e9",
         "label": "",
@@ -11534,8 +11550,8 @@
         "className": "",
         "passthru": false,
         "dropdownOptions": [],
-        "x": 600,
-        "y": 1400,
+        "x": 540,
+        "y": 1160,
         "wires": [
             [
                 "9d9be3102bf89bf0"
@@ -11546,6 +11562,7 @@
         "id": "453a5521de9c43f0",
         "type": "ui-text",
         "z": "77269fd32cdb1638",
+        "g": "d464589332746418",
         "group": "a6601e1fe5c357e9",
         "order": 1,
         "width": "6",
@@ -11562,24 +11579,25 @@
         "className": "ui-title",
         "value": "payload",
         "valueType": "msg",
-        "x": 590,
-        "y": 1340,
+        "x": 530,
+        "y": 1100,
         "wires": []
     },
     {
         "id": "9d9be3102bf89bf0",
         "type": "function",
         "z": "77269fd32cdb1638",
+        "g": "d464589332746418",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nglobal.set('energy', msg.payload);\n\nlet dialog = global.get('form[\"' + msg.hmi.id + '\"][\"dialog\"]') || '';\nif (dialog !== '') {\n    msg.hide = ['energy - entity - dialog'];\n    msg = await node.linkcall('common - ui - group', msg);\n}\n\nmsg.payload = '';\nmsg.enabled = true;\nmsg.payload = msg.dictionary.notice.save_success;\n\nreturn msg;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nglobal.set('energy', msg.payload);\n\nlet dialog = global.get('form[\"' + msg.hmi.id + '\"][\"dialog\"]') || '';\nif (dialog !== '') {\n    msg.hide = ['energy - entity - dialog'];\n    msg = await node.linkcall('common - ui - group', msg);\n}\n\nmsg.payload = '';\nmsg.enabled = true;\n\n// Notice\nmsg.notice = msg.dictionary.notice.save_success;\nmsg = await node.linkcall('common - ui - notice', msg);\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 810,
-        "y": 1400,
+        "x": 750,
+        "y": 1160,
         "wires": [
             [
                 "20c33d6d50aa3ee3"
@@ -11590,16 +11608,15 @@
         "id": "20c33d6d50aa3ee3",
         "type": "link out",
         "z": "77269fd32cdb1638",
-        "name": "energy - entity",
+        "g": "d464589332746418",
+        "name": "energy - menu",
         "mode": "link",
         "links": [
-            "3790dfc240bc5f6d",
-            "f4a2353e5f92576c",
-            "9551b24f428cde28",
-            "5397038e1b8466e2"
+            "5397038e1b8466e2",
+            "9551b24f428cde28"
         ],
-        "x": 935,
-        "y": 1400,
+        "x": 875,
+        "y": 1160,
         "wires": []
     },
     {
@@ -11807,6 +11824,7 @@
         "id": "e3bdb379a041899a",
         "type": "function",
         "z": "77269fd32cdb1638",
+        "g": "d464589332746418",
         "name": "data",
         "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nmsg.payload = [];\n\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\nmsg.class = '';\nmsg.enabled = true;\nmsg.ui_update = {\n    'label': '',\n    'options': [{\n        'label': msg.dictionary.energy.energy_title || 'Energy',\n        'value': 'energy',\n        'icon': 'lightning-bolt'\n    }],\n    'class': ''\n};\nmsg.payload = '';\n\nreturn msg;",
         "outputs": 1,
@@ -11815,8 +11833,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 390,
-        "y": 1280,
+        "x": 330,
+        "y": 1040,
         "wires": [
             [
                 "a4fb8643d4ad9504"
@@ -11827,6 +11845,7 @@
         "id": "4ca1ee7f1c4d23a4",
         "type": "function",
         "z": "77269fd32cdb1638",
+        "g": "d464589332746418",
         "name": "data",
         "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (msg.payload !== '') {\n    msg.show = ['energy - entity - dialog'];\n    msg = await node.linkcall('common - ui - group', msg);\n    msg = await node.linkcall('common - ui - latency', msg);\n\n    // Fix flowfuse dashboard msg.topic fail\n    global.set('form[\"' + msg.hmi.id + '\"][\"dialog\"]', msg.payload);\n\n    msg.enabled = true;\n    node.send([msg, null]);\n}\n\nmsg.enabled = true;\nmsg.payload = '';\n\nreturn [null, msg];",
         "outputs": 2,
@@ -11835,8 +11854,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 230,
-        "y": 1340,
+        "x": 170,
+        "y": 1100,
         "wires": [
             [
                 "96cc3da1f3e135dd"
@@ -11850,6 +11869,7 @@
         "id": "a4fb8643d4ad9504",
         "type": "ui-button-group",
         "z": "77269fd32cdb1638",
+        "g": "d464589332746418",
         "name": "energy - menu - select",
         "group": "1d386a3f3c7c03b4",
         "order": 1,
@@ -11878,8 +11898,8 @@
         ],
         "topic": "topic",
         "topicType": "msg",
-        "x": 600,
-        "y": 1280,
+        "x": 540,
+        "y": 1040,
         "wires": [
             [
                 "4ca1ee7f1c4d23a4"
@@ -11890,12 +11910,13 @@
         "id": "a9ccaa6f01788c83",
         "type": "link in",
         "z": "77269fd32cdb1638",
-        "name": "link in 1",
+        "g": "d464589332746418",
+        "name": "energy - menu",
         "links": [
             "66048b5b43cc0248"
         ],
-        "x": 265,
-        "y": 1280,
+        "x": 205,
+        "y": 1040,
         "wires": [
             [
                 "e3bdb379a041899a"
@@ -12094,7 +12115,7 @@
         "z": "c84dae3356e4a4bc",
         "g": "192c9d61b22bea8d",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nconst now = Date.now();\nconst calendar = { ...(global.get('calendar') || { }) };\n\nlet dt = new Date();\nlet date_split = msg.payload.date.split('-');\nlet time_split = msg.payload.time.split(':');\ndt.setFullYear(date_split[0]);\ndt.setMonth(date_split[1] - 1);\ndt.setDate(date_split[2]);\ndt.setHours(time_split[0], time_split[1], 0);\n\nmsg.payload.id = now;\nmsg.payload.ts = dt.getTime();\ncalendar[now]= msg.payload;\n\nglobal.set('calendar', calendar);\n\n// Hide UI group\nmsg.hide = ['calendar - add - dialog'];\nmsg = await node.linkcall('common - ui - group', msg);\n\nmsg.enabled = true;\nmsg.payload = msg.dictionary.notice.save_success;\n\nreturn msg;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nconst now = Date.now();\nconst calendar = { ...(global.get('calendar') || { }) };\n\nlet dt = new Date();\nlet date_split = msg.payload.date.split('-');\nlet time_split = msg.payload.time.split(':');\ndt.setFullYear(date_split[0]);\ndt.setMonth(date_split[1] - 1);\ndt.setDate(date_split[2]);\ndt.setHours(time_split[0], time_split[1], 0);\n\nmsg.payload.id = now;\nmsg.payload.ts = dt.getTime();\ncalendar[now]= msg.payload;\n\nglobal.set('calendar', calendar);\n\n// Hide UI group\nmsg.hide = ['calendar - add - dialog'];\nmsg = await node.linkcall('common - ui - group', msg);\n\n// Notice\nmsg.notice = msg.dictionary.notice.save_success;\nmsg = await node.linkcall('common - ui - notice', msg);\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -12104,24 +12125,8 @@
         "x": 1090,
         "y": 320,
         "wires": [
-            [
-                "26d8d3d7bc111e9a"
-            ]
+            []
         ]
-    },
-    {
-        "id": "26d8d3d7bc111e9a",
-        "type": "link out",
-        "z": "c84dae3356e4a4bc",
-        "g": "192c9d61b22bea8d",
-        "name": "calendar - list - notice",
-        "mode": "link",
-        "links": [
-            "f4a2353e5f92576c"
-        ],
-        "x": 1215,
-        "y": 320,
-        "wires": []
     },
     {
         "id": "ca73fe66b198a5b0",
@@ -14405,7 +14410,7 @@
         "z": "560376d6bba621ec",
         "g": "32fd2df8e6be1ebb",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\n// Get memories\nlet scenes = global.get('scene'); // autoupdate\n\nif (typeof scenes[msg.payload.target] !== 'object') {\n    return;\n}\n\n// Update scene\nscenes[msg.payload.target]['enabled'] = msg.payload.enabled ? 0 : 1;\n\n// Wait ui update\nmsg = await node.linkcall('common - ui - wait', msg);\n\n// Notice\nmsg.enabled = true;\nmsg.payload = msg.dictionary.notice.save_success;\n\nreturn msg;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\n// Get memories\nlet scenes = global.get('scene'); // autoupdate\n\nif (typeof scenes[msg.payload.target] !== 'object') {\n    return;\n}\n\n// Update scene\nscenes[msg.payload.target]['enabled'] = msg.payload.enabled ? 0 : 1;\n\n// Wait ui update\nmsg = await node.linkcall('common - ui - wait', msg);\n\n// Notice\nmsg.notice = msg.dictionary.notice.save_success;\nmsg = await node.linkcall('common - ui - notice', msg);\n\nmsg.enabled = true;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -14428,7 +14433,6 @@
         "name": "room - scene",
         "mode": "link",
         "links": [
-            "f4a2353e5f92576c",
             "217d334d78a1a033"
         ],
         "x": 815,
@@ -15123,7 +15127,7 @@
         "z": "560376d6bba621ec",
         "g": "05ee7cc55127486b",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nlet room = flow.get('room[\"' + msg.hmi.id + '\"]') || '';\nif (room === '' || msg.payload.start === '' || msg.payload.stop === '') {\n\n    return;\n}\n\n// Check time\nlet start = Number(msg.payload.start.split(':').join(''));\nlet stop = Number(msg.payload.start.split(':').join(''));\nif (start < 1 || stop < 1 || start > stop) {\n\n    return;\n}\nnode.status({ 'text': start + ', ' + stop });\n\nconst confort = { ...(global.get('rooms.confort') || { }) };\nif (!Array.isArray(confort[room])) {\n    confort[room] = [];\n}\n\nconfort[room].push(msg.payload);\nglobal.set('rooms.confort', confort);\n\n// Wait ui update\nmsg = await node.linkcall('common - ui - wait', msg);\n\n// notice\nmsg.enabled = true;\nmsg.payload = msg.dictionary.notice.save_success;\n\nreturn msg;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nlet room = flow.get('room[\"' + msg.hmi.id + '\"]') || '';\nif (room === '' || msg.payload.start === '' || msg.payload.stop === '') {\n\n    return;\n}\n\n// Check time\nlet start = Number(msg.payload.start.split(':').join(''));\nlet stop = Number(msg.payload.start.split(':').join(''));\nif (start < 1 || stop < 1 || start > stop) {\n\n    return;\n}\nnode.status({ 'text': start + ', ' + stop });\n\nconst confort = { ...(global.get('rooms.confort') || { }) };\nif (!Array.isArray(confort[room])) {\n    confort[room] = [];\n}\n\nconfort[room].push(msg.payload);\nglobal.set('rooms.confort', confort);\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -15203,7 +15207,7 @@
         "z": "560376d6bba621ec",
         "g": "05ee7cc55127486b",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nlet room = flow.get('room[\"' + msg.hmi.id + '\"]') || '';\nif (room === '') {\n\n    return;\n}\n\nconst location = { ...(global.get('rooms.location') || { }) };\nif (typeof location[room] !== 'object') {\n    location[room] = { };\n}\n\nlocation[room] = msg.payload;\nglobal.set('rooms.location', location);\n\n// Wait ui update\nmsg = await node.linkcall('common - ui - wait', msg);\n\n// notice\nmsg.enabled = true;\nmsg.payload = msg.dictionary.notice.save_success;\n\nreturn msg;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nlet room = flow.get('room[\"' + msg.hmi.id + '\"]') || '';\nif (room === '') {\n\n    return;\n}\n\nconst location = { ...(global.get('rooms.location') || { }) };\nif (typeof location[room] !== 'object') {\n    location[room] = { };\n}\n\nlocation[room] = msg.payload;\nglobal.set('rooms.location', location);\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -15444,7 +15448,7 @@
         "z": "560376d6bba621ec",
         "g": "05ee7cc55127486b",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nlet room = flow.get('room[\"' + msg.hmi.id + '\"]') || '';\nif (room === '') {\n\n    return;\n}\n\nconst camera = { ...(global.get('rooms.camera') || { }) };\nif (typeof camera[room] !== 'object') {\n    camera[room] = { };\n}\n\ncamera[room] = msg.payload;\nglobal.set('rooms.camera', camera);\n\nawait new Promise(resolve => setTimeout(resolve, 50));\n\n// notice\nmsg.enabled = true;\nmsg.payload = msg.dictionary.notice.save_success;\n\nreturn msg;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nlet room = flow.get('room[\"' + msg.hmi.id + '\"]') || '';\nif (room === '') {\n\n    return;\n}\n\nconst camera = { ...(global.get('rooms.camera') || { }) };\nif (typeof camera[room] !== 'object') {\n    camera[room] = { };\n}\n\ncamera[room] = msg.payload;\nglobal.set('rooms.camera', camera);\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -15467,10 +15471,9 @@
         "name": "room - camera",
         "mode": "link",
         "links": [
-            "f4a2353e5f92576c",
-            "fb7da4dbb76c9223",
+            "217d334d78a1a033",
             "e1b27683f79ca387",
-            "217d334d78a1a033"
+            "fb7da4dbb76c9223"
         ],
         "x": 1375,
         "y": 2360,
@@ -15596,7 +15599,7 @@
         "z": "560376d6bba621ec",
         "g": "05ee7cc55127486b",
         "name": "data",
-        "func": "let room = flow.get('room[\"' + msg.hmi.id + '\"]') || '';\n\nif (room === '') {\n\n    return;\n}\n\nglobal.set('rooms.map[\"' + room + '\"]', msg.payload);\n\n// Wait ui update\nmsg = await node.linkcall('common - ui - wait', msg);\n\nmsg.payload = '';\nmsg.enabled = true;\nmsg.payload = msg.dictionary.notice.save_success;\n\nreturn msg;",
+        "func": "let room = flow.get('room[\"' + msg.hmi.id + '\"]') || '';\n\nif (room === '') {\n\n    return;\n}\n\nglobal.set('rooms.map[\"' + room + '\"]', msg.payload);\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -15715,7 +15718,7 @@
         "z": "560376d6bba621ec",
         "g": "05ee7cc55127486b",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nlet room = flow.get('room[\"' + msg.hmi.id + '\"]') || '';\nif (room === '' || msg.payload.name === '') {\n\n    return;\n}\n\nconst base = { ...(global.get('rooms.base') || { }) };\nif (typeof base[room] !== 'object') {\n    base[room] = { };\n}\n\nbase[room] = msg.payload;\nbase[room]['id'] = room;\nglobal.set('rooms.base', base);\n\nawait new Promise(resolve => setTimeout(resolve, 50));\n\n// notice\nmsg.enabled = true;\nmsg.payload = msg.dictionary.notice.save_success;\n\nreturn msg;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nlet room = flow.get('room[\"' + msg.hmi.id + '\"]') || '';\nif (room === '' || msg.payload.name === '') {\n\n    return;\n}\n\nconst base = { ...(global.get('rooms.base') || { }) };\nif (typeof base[room] !== 'object') {\n    base[room] = { };\n}\n\nbase[room] = msg.payload;\nbase[room]['id'] = room;\nglobal.set('rooms.base', base);\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -15874,7 +15877,7 @@
         "z": "560376d6bba621ec",
         "g": "05ee7cc55127486b",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nlet room = flow.get('room[\"' + msg.hmi.id + '\"]') || '';\nif (room === '') {\n\n    return;\n}\n\nconst workday = { ...(global.get('rooms.workday') || { }) };\nif (typeof workday[room] !== 'object') {\n    workday[room] = { };\n}\n\nworkday[room] = msg.payload.map((v) => v === 0 ? 0 : 1);\nglobal.set('rooms.workday', workday);\n\n// Wait ui update\nmsg = await node.linkcall('common - ui - wait', msg);\n\n// notice\nmsg.enabled = true;\nmsg.payload = msg.dictionary.notice.save_success;\n\nreturn msg;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nlet room = flow.get('room[\"' + msg.hmi.id + '\"]') || '';\nif (room === '') {\n\n    return;\n}\n\nconst workday = { ...(global.get('rooms.workday') || { }) };\nif (typeof workday[room] !== 'object') {\n    workday[room] = { };\n}\n\nworkday[room] = msg.payload.map((v) => v === 0 ? 0 : 1);\nglobal.set('rooms.workday', workday);\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -15935,7 +15938,7 @@
         "z": "560376d6bba621ec",
         "g": "05ee7cc55127486b",
         "name": "data",
-        "func": "let room = flow.get('room[\"' + msg.hmi.id + '\"]') || '';\n\nif (room === '') {\n\n    return;\n}\n\nglobal.set('rooms.map[\"' + room + '\"]', '');\n\n// Wait ui update\nmsg = await node.linkcall('common - ui - wait', msg);\n\nmsg.payload = '';\nmsg.enabled = true;\nmsg.payload = msg.dictionary.notice.save_success;\n\nreturn msg;",
+        "func": "let room = flow.get('room[\"' + msg.hmi.id + '\"]') || '';\n\nif (room === '') {\n\n    return;\n}\n\nglobal.set('rooms.map[\"' + room + '\"]', '');\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -16114,7 +16117,7 @@
         "z": "560376d6bba621ec",
         "g": "05ee7cc55127486b",
         "name": "data",
-        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nmsg.payload = [];\n\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\nlet room = flow.get('room[\"' + msg.hmi.id + '\"]') || '';\nif (room === '') {\n\n    return;\n}\n\nlet enums = {\n    'camera': 'camera',\n    'room': 'rename',\n    'confort': 'hours-24',\n    'workday': 'calendar-range',\n    'location': 'image-size-select-small',\n    'map': 'map'\n};\n\nif (room !== 'home') {\n    delete enums['map'];\n}\nif (room === 'system') {\n    delete enums['camera'];\n    delete enums['confort'];\n    delete enums['workday'];\n    delete enums['location'];\n    delete enums['map'];\n}\n\nlet options = [];\nfor (const k in enums) {\n    options.push({\n        'label': msg.dictionary.room[k] || k,\n        'value': k,\n        'icon': enums[k]\n    });\n}\nmsg.class = '';\nmsg.enabled = true;\nmsg.ui_update = {\n    'label': '',\n    'options': options,\n    'class': ''\n};\nmsg.payload = '';\n\nreturn msg;",
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nmsg.payload = [];\n\nif (!msg.enabled) {\n\n    node.send([msg, msg]);\n    return;\n}\n\nlet room = flow.get('room[\"' + msg.hmi.id + '\"]') || '';\nif (room === '') {\n\n    return;\n}\n\nlet enums = {\n    'camera': 'camera',\n    'room': 'rename',\n    'confort': 'hours-24',\n    'workday': 'calendar-range',\n    'location': 'image-size-select-small',\n    'map': 'map'\n};\n\nif (room === 'home') {\n    delete enums['location'];\n}\nelse {\n    delete enums['map'];\n}\nif (room === 'system') {\n    delete enums['camera'];\n    delete enums['confort'];\n    delete enums['workday'];\n    delete enums['location'];\n    delete enums['map'];\n}\n\nlet options = [];\nfor (const k in enums) {\n    options.push({\n        'label': msg.dictionary.room[k] || k,\n        'value': k,\n        'icon': enums[k]\n    });\n}\nmsg.class = '';\nmsg.enabled = true;\nmsg.ui_update = {\n    'label': '',\n    'options': options,\n    'class': ''\n};\nmsg.payload = '';\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -16229,7 +16232,7 @@
         "z": "560376d6bba621ec",
         "g": "05ee7cc55127486b",
         "name": "data",
-        "func": "let dialog = global.get('form[\"' + msg.hmi.id + '\"][\"dialog\"]') || '';\nif (dialog !== '') {\n    msg.hide = ['room - ' + dialog + ' - dialog'];\n    msg = await node.linkcall('common - ui - group', msg);\n}\n\nreturn msg;",
+        "func": "\n// Wait ui update\nmsg = await node.linkcall('common - ui - wait', msg);\n\n// Notice\nmsg.notice = msg.dictionary.notice.save_success;\nmsg = await node.linkcall('common - ui - notice', msg);\n\nmsg.payload = '';\nmsg.enabled = true;\n\nlet dialog = global.get('form[\"' + msg.hmi.id + '\"][\"dialog\"]') || '';\nif (dialog !== '') {\n    msg.hide = ['room - ' + dialog + ' - dialog'];\n    msg = await node.linkcall('common - ui - group', msg);\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -18129,7 +18132,7 @@
         "z": "56c0b44ca387382c",
         "g": "82df6aae63bd1422",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nnode.status({ 'text': '' });\n\n// Get form\nconst form = { ...(global.get('form') || {}) };\nif (typeof form[msg.hmi.id]['scene']['sceneadd'] !== 'object') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\n\n// Get scenes\nconst scene = { ...(global.get('scene') || {}) };\n\n// Check form fields\nconst e = form[msg.hmi.id]['scene']['sceneadd']['target'] || '';\nif (e === '') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\n\n// Delete scene\ndelete scene[e];\n\n// Save scenes\nglobal.set('scene', scene);\n\n//Clear from\nform[msg.hmi.id]['scene']['sceneadd'] = {};\nform[msg.hmi.id]['scene']['triggeradd'] = {};\n\n// Save form\nglobal.set('form', form);\n\n// Notice and refresh\nmsg.enabled = true;\nmsg.payload = msg.dictionary.scene.sceneadd_delete_success || 'Successfully deleted';\n\nnode.status({ 'fill': 'green', 'text': e });\n\nreturn msg;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nnode.status({ 'text': '' });\n\n// Get form\nconst form = { ...(global.get('form') || {}) };\nif (typeof form[msg.hmi.id]['scene']['sceneadd'] !== 'object') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\n\n// Get scenes\nconst scene = { ...(global.get('scene') || {}) };\n\n// Check form fields\nconst e = form[msg.hmi.id]['scene']['sceneadd']['target'] || '';\nif (e === '') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\n\n// Delete scene\ndelete scene[e];\n\n// Save scenes\nglobal.set('scene', scene);\n\n//Clear from\nform[msg.hmi.id]['scene']['sceneadd'] = {};\nform[msg.hmi.id]['scene']['triggeradd'] = {};\n\n// Save form\nglobal.set('form', form);\n\n// Notice\nmsg.notice = msg.dictionary.notice.save_success;\nmsg = await node.linkcall('common - ui - notice', msg);\n\nmsg.enabled = true;\n\nnode.status({ 'fill': 'green', 'text': e });\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -18150,7 +18153,7 @@
         "z": "56c0b44ca387382c",
         "g": "82df6aae63bd1422",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nnode.status({ 'text': '' });\n\n// Get form\nconst form = { ...(global.get('form') || {}) };\nif (typeof form[msg.hmi.id]['scene']['sceneadd'] !== 'object') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\n\n// Get scenes\nconst scene = { ...(global.get('scene') || {}) };\n\n// Check fields\nconst e = form[msg.hmi.id]['scene']['sceneadd']['target'] || '';\nif (e === '') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\n\nif (typeof scene[e] !== 'object') {\n    scene[e] = { };\n}\n\n// Update scene\n// Clean up\nlet clean = { };\n\nconst type = global.get('entity[\"' + e + '\"][\"element\"]') || '';\nif (type === '') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\nconst fields = [ ...(global.get('describe[\"scenes\"][\"' + type + '\"]') || []) ];\nif (fields.length === 0) {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\nconst template = { ...(global.get('describe.template.scene') || {}) };\n\nfor (const field in template) {\n    if (fields.includes(field)) {\n        clean[field] = form[msg.hmi.id]['scene']['sceneadd'][field] || template[field];\n    }\n    else {\n        clean[field] = template[field];\n    }\n}\n\nif ((form[msg.hmi.id]['scene']['sceneadd']['resetdaily'] || 0) === 1) {\n    clean['today'] = 0;\n}\n\nclean['target'] = e;\nclean['trigger'] = scene[e]['trigger'] || {};\nclean['today'] = scene[e]['today'] || 0;\nclean['timer'] = scene[e]['timer'] || 0;\n\nscene[e] = clean;\n\n// Save scenes\nglobal.set('scene', scene);\n\n// Notice and refresh\nmsg.enabled = true;\nmsg.payload = msg.dictionary.scene.sceneadd_save_success || 'Successfully saved';\n\nnode.status({ 'fill': 'green', 'text': e });\n\nreturn msg;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nnode.status({ 'text': '' });\n\n// Get form\nconst form = { ...(global.get('form') || {}) };\nif (typeof form[msg.hmi.id]['scene']['sceneadd'] !== 'object') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\n\n// Get scenes\nconst scene = { ...(global.get('scene') || {}) };\n\n// Check fields\nconst e = form[msg.hmi.id]['scene']['sceneadd']['target'] || '';\nif (e === '') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\n\nif (typeof scene[e] !== 'object') {\n    scene[e] = { };\n}\n\n// Update scene\n// Clean up\nlet clean = { };\n\nconst type = global.get('entity[\"' + e + '\"][\"element\"]') || '';\nif (type === '') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\nconst fields = [ ...(global.get('describe[\"scenes\"][\"' + type + '\"]') || []) ];\nif (fields.length === 0) {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\nconst template = { ...(global.get('describe.template.scene') || {}) };\n\nfor (const field in template) {\n    if (fields.includes(field)) {\n        clean[field] = form[msg.hmi.id]['scene']['sceneadd'][field] || template[field];\n    }\n    else {\n        clean[field] = template[field];\n    }\n}\n\nif ((form[msg.hmi.id]['scene']['sceneadd']['resetdaily'] || 0) === 1) {\n    clean['today'] = 0;\n}\n\nclean['target'] = e;\nclean['trigger'] = scene[e]['trigger'] || {};\nclean['today'] = scene[e]['today'] || 0;\nclean['timer'] = scene[e]['timer'] || 0;\n\nscene[e] = clean;\n\n// Save scenes\nglobal.set('scene', scene);\n\n// Notice\nmsg.notice = msg.dictionary.notice.save_success;\nmsg = await node.linkcall('common - ui - notice', msg);\n\nmsg.enabled = true;\n\nnode.status({ 'fill': 'green', 'text': e });\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -18356,7 +18359,7 @@
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nnode.status({ 'text': '' });\n\n// Get form\nconst form = { ...(global.get('form') || {}) };\nif (typeof form[msg.hmi.id]['scene']['triggeradd'] !== 'object') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\n\n// Get scenes\nconst scene = { ...(global.get('scene') || {}) };\n\n// Check form fields\nconst e = form[msg.hmi.id]['scene']['triggeradd']['target'] || '';\nconst t = form[msg.hmi.id]['scene']['triggeradd']['trigger'] || '';\nif (e === '' || t === '') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\n\n// Add scene trigger\nif (typeof scene[e]['trigger'] !== 'object') {\n    scene[e]['trigger'] = {};\n}\nscene[e]['trigger'][t] = form[msg.hmi.id]['scene']['triggeradd'];\n\ndelete scene[e]['trigger'][t]['trigger'];\ndelete scene[e]['trigger'][t]['target'];\n\n// Save scenes\nglobal.set('scene', scene);\n\n// Hide UI group\nmsg.hide = ['scene - trigger - dialog'];\nmsg = await node.linkcall('common - ui - group', msg);\n\n// Notice and refresh\nmsg.enabled = true;\nmsg.payload = msg.dictionary.scene.triggeradd_save_success || 'Successfully saved';\n\nnode.status({ 'fill': 'green', 'text': e + ' / ' + t });\n\nreturn msg;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nnode.status({ 'text': '' });\n\n// Get form\nconst form = { ...(global.get('form') || {}) };\nif (typeof form[msg.hmi.id]['scene']['triggeradd'] !== 'object') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\n\n// Get scenes\nconst scene = { ...(global.get('scene') || {}) };\n\n// Check form fields\nconst e = form[msg.hmi.id]['scene']['triggeradd']['target'] || '';\nconst t = form[msg.hmi.id]['scene']['triggeradd']['trigger'] || '';\nif (e === '' || t === '') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\n\n// Add scene trigger\nif (typeof scene[e]['trigger'] !== 'object') {\n    scene[e]['trigger'] = {};\n}\nscene[e]['trigger'][t] = form[msg.hmi.id]['scene']['triggeradd'];\n\ndelete scene[e]['trigger'][t]['trigger'];\ndelete scene[e]['trigger'][t]['target'];\n\n// Save scenes\nglobal.set('scene', scene);\n\n// Hide UI group\nmsg.hide = ['scene - trigger - dialog'];\nmsg = await node.linkcall('common - ui - group', msg);\n\n// Notice\nmsg.notice = msg.dictionary.notice.save_success;\nmsg = await node.linkcall('common - ui - notice', msg);\n\nmsg.enabled = true;\n\nnode.status({ 'fill': 'green', 'text': e + ' / ' + t });\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -18419,7 +18422,6 @@
         "name": "link out 1",
         "mode": "link",
         "links": [
-            "f4a2353e5f92576c",
             "825c2d70a0eda50b"
         ],
         "x": 2155,
@@ -18849,7 +18851,7 @@
         "z": "56c0b44ca387382c",
         "g": "0a9a5f5f4e641599",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nnode.status({ 'text': '' });\n\n// Get form\nconst form = { ...(global.get('form') || {}) };\nif (typeof form[msg.hmi.id]['scene']['triggeradd'] !== 'object') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\n\n// Get scenes\nconst scene = { ...(global.get('scene') || {}) };\n\n// Check form fields\nconst e = form[msg.hmi.id]['scene']['triggeradd']['target'] || '';\nconst t = form[msg.hmi.id]['scene']['triggeradd']['trigger'] || '';\nif (e === '' || t === '') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\n\n// Delete scene trigger\ndelete scene[e]['trigger'][t];\n\n// Save scenes\nglobal.set('scene', scene);\n\n// Clear form\nform[msg.hmi.id]['scene']['triggeradd'] = {};\n\n// save form\nglobal.set('form', form);\n\n// Hide UI group\nmsg.hide = ['scene - trigger - dialog'];\nmsg = await node.linkcall('common - ui - group', msg);\n\n// Notice and refresh\nmsg.enabled = true;\nmsg.payload = msg.dictionary.scene.triggeradd_delete_success || 'Successfully deleted';\n\nnode.status({ 'fill': 'green', 'text': e + ' / ' + t });\n\nreturn msg;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nnode.status({ 'text': '' });\n\n// Get form\nconst form = { ...(global.get('form') || {}) };\nif (typeof form[msg.hmi.id]['scene']['triggeradd'] !== 'object') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\n\n// Get scenes\nconst scene = { ...(global.get('scene') || {}) };\n\n// Check form fields\nconst e = form[msg.hmi.id]['scene']['triggeradd']['target'] || '';\nconst t = form[msg.hmi.id]['scene']['triggeradd']['trigger'] || '';\nif (e === '' || t === '') {\n    node.status({ 'fill': 'red' });\n\n    return;\n}\n\n// Delete scene trigger\ndelete scene[e]['trigger'][t];\n\n// Save scenes\nglobal.set('scene', scene);\n\n// Clear form\nform[msg.hmi.id]['scene']['triggeradd'] = {};\n\n// save form\nglobal.set('form', form);\n\n// Hide UI group\nmsg.hide = ['scene - trigger - dialog'];\nmsg = await node.linkcall('common - ui - group', msg);\n\n// Notice\nmsg.notice = msg.dictionary.notice.save_success;\nmsg = await node.linkcall('common - ui - notice', msg);\n\nmsg.enabled = true;\n\nnode.status({ 'fill': 'green', 'text': e + ' / ' + t });\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -19028,8 +19030,8 @@
         "z": "56c0b44ca387382c",
         "g": "690005b9a6f433cf",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nmsg = await node.linkcall('scene - scenelist - list2detail', msg);\n\nif (msg.action === 'button_click') {\n    if (msg.column === 'delete') {\n\n        const scene = { ...(global.get('scene') || {}) };\n        delete scene[msg.payload.target];\n        global.set('scene', scene);\n\n        msg.enabled = true;\n        msg.payload = msg.dictionary.scene.scenelist_delete_success || 'Successfully deleted';\n\n        node.send([msg, null]);\n\n        msg.payload = msg.payload.target;    \n        await new Promise(resolve => setTimeout(resolve, 50));\n\n        node.send([null, msg]);\n    }\n    else if (msg.column === 'disable') {\n\n        const scene = { ...(global.get('scene') || {}) };\n        scene[msg.payload.target]['enabled'] = msg.payload.enabled ? 0 : 1;\n        global.set('scene', scene);\n\n        msg.enabled = true;\n        msg.payload = msg.dictionary.scene.scenelist_update_success || 'Successfully updated';\n\n        node.send([msg, null]);\n\n        msg.payload = msg.payload.target;    \n        await new Promise(resolve => setTimeout(resolve, 50));\n\n        node.send([null, msg]);\n\n    }\n}\n\nreturn;",
-        "outputs": 2,
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nmsg = await node.linkcall('scene - scenelist - list2detail', msg);\n\nif (msg.action === 'button_click') {\n    if (msg.column === 'delete') {\n\n        const scene = { ...(global.get('scene') || {}) };\n        delete scene[msg.payload.target];\n        global.set('scene', scene);\n\n        // Notice\n        msg.notice = msg.dictionary.notice.save_success;\n        msg = await node.linkcall('common - ui - notice', msg);\n\n        msg.enabled = true;\n\n        msg.payload = msg.payload.target;    \n        await new Promise(resolve => setTimeout(resolve, 50));\n\n        node.send([msg]);\n    }\n    else if (msg.column === 'disable') {\n\n        const scene = { ...(global.get('scene') || {}) };\n        scene[msg.payload.target]['enabled'] = msg.payload.enabled ? 0 : 1;\n        global.set('scene', scene);\n\n        // Notice\n        msg.notice = msg.dictionary.notice.save_success;\n        msg = await node.linkcall('common - ui - notice', msg);\n\n        msg.enabled = true;\n\n        msg.payload = msg.payload.target;    \n        await new Promise(resolve => setTimeout(resolve, 50));\n\n        node.send([msg]);\n\n    }\n}\n\nreturn;",
+        "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
@@ -19039,26 +19041,9 @@
         "y": 3740,
         "wires": [
             [
-                "7482fbd3b4a1a5ae"
-            ],
-            [
                 "329710fd6a91787d"
             ]
         ]
-    },
-    {
-        "id": "7482fbd3b4a1a5ae",
-        "type": "link out",
-        "z": "56c0b44ca387382c",
-        "g": "690005b9a6f433cf",
-        "name": "scene - scenelist - notice",
-        "mode": "link",
-        "links": [
-            "f4a2353e5f92576c"
-        ],
-        "x": 835,
-        "y": 3740,
-        "wires": []
     },
     {
         "id": "46bfd2b0460b2723",
@@ -19216,8 +19201,8 @@
         "z": "56c0b44ca387382c",
         "g": "5d38062b01fae17a",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nmsg = await node.linkcall('scene - scenelist - list2detail', msg);\n\nif (msg.action === 'button_click' && msg.column === 'delete') {\n\n    const scene = { ...(global.get('scene') || {}) };\n    delete scene[msg.payload.target]['trigger'][msg.payload.trigger];\n    global.set('scene', scene);\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.scene.triggerlist_delete_success || 'Successfully deleted';\n\n    node.send([msg, null]);\n\n    msg.payload = '';    \n    await new Promise(resolve => setTimeout(resolve, 50));\n\n    node.send([null, msg]);\n}",
-        "outputs": 2,
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nmsg = await node.linkcall('scene - scenelist - list2detail', msg);\n\nif (msg.action === 'button_click' && msg.column === 'delete') {\n\n    const scene = { ...(global.get('scene') || {}) };\n    delete scene[msg.payload.target]['trigger'][msg.payload.trigger];\n    global.set('scene', scene);\n\n    // Notice\n    msg.notice = msg.dictionary.notice.save_success;\n    msg = await node.linkcall('common - ui - notice', msg);\n\n    msg.enabled = true;\n\n    msg.payload = '';    \n    await new Promise(resolve => setTimeout(resolve, 50));\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
@@ -19227,26 +19212,9 @@
         "y": 3860,
         "wires": [
             [
-                "f32e8939b64dd232"
-            ],
-            [
                 "1c0bfc84dadda4b4"
             ]
         ]
-    },
-    {
-        "id": "f32e8939b64dd232",
-        "type": "link out",
-        "z": "56c0b44ca387382c",
-        "g": "5d38062b01fae17a",
-        "name": "scene - triggerlist",
-        "mode": "link",
-        "links": [
-            "f4a2353e5f92576c"
-        ],
-        "x": 835,
-        "y": 3860,
-        "wires": []
     },
     {
         "id": "9f06d30ea766a8fe",
@@ -19294,8 +19262,8 @@
         "z": "56c0b44ca387382c",
         "g": "5ee9c437401835c9",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nmsg = await node.linkcall('scene - scenelist - list2detail', msg);\n\nif (msg.action === 'button_click' && msg.column === 'delete') {\n\n    const scene = {...(global.get('scene') || {}) };\n    scene[msg.payload.target]['timer'] = 0;\n    global.set('scene', scene);\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.scene.scenelist_delete_success || 'Successfully deleted';\n\n    node.send([msg, null]);\n\n    msg.payload = '';    \n    await new Promise(resolve => setTimeout(resolve, 50));\n\n    node.send([null, msg]);\n}",
-        "outputs": 2,
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nmsg = await node.linkcall('scene - scenelist - list2detail', msg);\n\nif (msg.action === 'button_click' && msg.column === 'delete') {\n\n    const scene = {...(global.get('scene') || {}) };\n    scene[msg.payload.target]['timer'] = 0;\n    global.set('scene', scene);\n\n    // Notice\n    msg.notice = msg.dictionary.notice.save_success;\n    msg = await node.linkcall('common - ui - notice', msg);\n\n    msg.enabled = true;\n\n    msg.payload = '';    \n    await new Promise(resolve => setTimeout(resolve, 50));\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
@@ -19304,9 +19272,6 @@
         "x": 850,
         "y": 3980,
         "wires": [
-            [
-                "80e3952b8f56d1da"
-            ],
             [
                 "7a4670c83b542f34"
             ]
@@ -19390,20 +19355,6 @@
                 "50bc4392adff795e"
             ]
         ]
-    },
-    {
-        "id": "80e3952b8f56d1da",
-        "type": "link out",
-        "z": "56c0b44ca387382c",
-        "g": "5ee9c437401835c9",
-        "name": "scene - timerlist",
-        "mode": "link",
-        "links": [
-            "f4a2353e5f92576c"
-        ],
-        "x": 975,
-        "y": 3980,
-        "wires": []
     },
     {
         "id": "29c55fe4490b508d",
@@ -19519,7 +19470,7 @@
         "z": "56c0b44ca387382c",
         "g": "82df6aae63bd1422",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nnode.status({ 'text': '' });\n\n// Check form fields\nconst loop = msg.payload.loop;\nconst e = msg.payload.target || '';\nconst t = msg.payload.trigger || '';\nif (e === '' || t === '') {\n    node.status({ 'fill': 'red','text': 'field' });\n\n    return;\n}\n\nif (msg.action == 'button_click' && msg.column === 'delete') {\n\n    // Get scenes\n    const scene = { ...(global.get('scene') || {}) };\n\n    // Delete scene trigger\n    delete scene[e]['trigger'][t];\n\n    //Save scenes\n    global.set('scene', scene);\n\n    // Notice\n    msg.enabled = true;\n    msg.payload = msg.dictionary.scene.triggerlist_delete_success || 'Successfully deleted';\n    \n    await new Promise(resolve => setTimeout(resolve, 150));\n\n    node.send([msg, null, null]);\n\n\n    // Refresh\n    msg.payload = '';\n    msg.scene = loop;\n\n    node.send([null, msg, null]);\n\n}\nelse if (msg.action === 'row_click') {\n    // Get form\n    const form = { ...(global.get('form') || {}) };\n    if (typeof form[msg.hmi.id]['scene']['triggeradd'] !== 'object') {\n        node.status({ 'fill': 'red', 'text': 'form' });\n\n        return;\n    }\n\n    // Update trigger form\n    form[msg.hmi.id]['scene']['triggeradd'] = {\n        'target': e,\n        'trigger': t\n    }\n\n    // Save form\n    global.set('form', form);\n\n    // Prepare next form\n    msg.class = '';\n    msg.enabled = true;\n    msg.payload = '';\n\n    node.send([null, null, msg]);\n}\nelse {\n    node.status({ 'fill': 'red', 'text': 'action' });\n\n    return;\n}\n\nnode.status({ 'fill': 'green', 'text': e + ' / ' + t });\n\nreturn;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nnode.status({ 'text': '' });\n\n// Check form fields\nconst loop = msg.payload.loop;\nconst e = msg.payload.target || '';\nconst t = msg.payload.trigger || '';\nif (e === '' || t === '') {\n    node.status({ 'fill': 'red','text': 'field' });\n\n    return;\n}\n\nif (msg.action == 'button_click' && msg.column === 'delete') {\n\n    // Get scenes\n    const scene = { ...(global.get('scene') || {}) };\n\n    // Delete scene trigger\n    delete scene[e]['trigger'][t];\n\n    //Save scenes\n    global.set('scene', scene);\n\n    // Notice\n    msg.notice = msg.dictionary.notice.save_success;\n    msg = await node.linkcall('common - ui - notice', msg);\n\n    msg.enabled = true;\n    \n    await new Promise(resolve => setTimeout(resolve, 150));\n\n    node.send([msg, null, null]);\n\n\n    // Refresh\n    msg.payload = '';\n    msg.scene = loop;\n\n    node.send([null, msg, null]);\n\n}\nelse if (msg.action === 'row_click') {\n    // Get form\n    const form = { ...(global.get('form') || {}) };\n    if (typeof form[msg.hmi.id]['scene']['triggeradd'] !== 'object') {\n        node.status({ 'fill': 'red', 'text': 'form' });\n\n        return;\n    }\n\n    // Update trigger form\n    form[msg.hmi.id]['scene']['triggeradd'] = {\n        'target': e,\n        'trigger': t\n    }\n\n    // Save form\n    global.set('form', form);\n\n    // Prepare next form\n    msg.class = '';\n    msg.enabled = true;\n    msg.payload = '';\n\n    node.send([null, null, msg]);\n}\nelse {\n    node.status({ 'fill': 'red', 'text': 'action' });\n\n    return;\n}\n\nnode.status({ 'fill': 'green', 'text': e + ' / ' + t });\n\nreturn;",
         "outputs": 3,
         "timeout": 0,
         "noerr": 0,
@@ -19549,8 +19500,7 @@
         "name": "scene - sceneadd - notice",
         "mode": "link",
         "links": [
-            "825c2d70a0eda50b",
-            "f4a2353e5f92576c"
+            "825c2d70a0eda50b"
         ],
         "x": 1055,
         "y": 440,
@@ -22663,7 +22613,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "check",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (msg.hmi.level !== 'admin') {\n\n    return;\n}\n\n// Multiseletion, just retain selection\nif (msg.action === 'multi-select') {\n    flow.set('multiselect[\"' + msg.hmi.id + '\"]', msg.payload);\n\n    return;\n}\n\n// delete entity data\nif (msg.action === 'button_click') {\n    msg.payload = { ...global.get('entity[\"' + msg.payload.uid + '\"]') || {} };\n    if (msg.column === 'delete') {\n        let entity = global.get('entity') || {};\n        delete entity[msg.payload.uid];\n        global.set('entity', entity);\n\n        msg.enabled = true;\n        msg.payload = msg.dictionary.notice.save_success;\n        node.send([msg, null, null]);\n    }\n    else if (msg.column === 'name') {\n        // Swho UI group\n        msg.show = ['entity - entity - dialog'];\n        msg = await node.linkcall('common - ui - group', msg);\n\n        node.send([null, msg, null]);\n    }\n    else if (msg.column === 'parent_name') {\n        // Show UI group\n        msg.show = ['entity - parent - dialog'];\n        msg = await node.linkcall('common - ui - group', msg);\n\n        node.send([null, null, msg]);\n    }\n}\n\nreturn;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (msg.hmi.level !== 'admin') {\n\n    return;\n}\n\n// Multiseletion, just retain selection\nif (msg.action === 'multi-select') {\n    flow.set('multiselect[\"' + msg.hmi.id + '\"]', msg.payload);\n\n    return;\n}\n\n// delete entity data\nif (msg.action === 'button_click') {\n    msg.payload = { ...global.get('entity[\"' + msg.payload.uid + '\"]') || {} };\n    if (msg.column === 'delete') {\n        let entity = global.get('entity') || {};\n        delete entity[msg.payload.uid];\n        global.set('entity', entity);\n\n        node.send([msg, null, null]);\n    }\n    else if (msg.column === 'name') {\n        // Swho UI group\n        msg.show = ['entity - entity - dialog'];\n        msg = await node.linkcall('common - ui - group', msg);\n\n        node.send([null, msg, null]);\n    }\n    else if (msg.column === 'parent_name') {\n        // Show UI group\n        msg.show = ['entity - parent - dialog'];\n        msg = await node.linkcall('common - ui - group', msg);\n\n        node.send([null, null, msg]);\n    }\n}\n\nreturn;",
         "outputs": 3,
         "timeout": 0,
         "noerr": 0,
@@ -22674,7 +22624,7 @@
         "y": 320,
         "wires": [
             [
-                "8efcf9aa67ba9375"
+                "35819cb805cdb20a"
             ],
             [
                 "5d27310454b9dc88"
@@ -22692,38 +22642,11 @@
         "name": "entity - list",
         "mode": "link",
         "links": [
-            "c6104f486096a92f",
-            "f4a2353e5f92576c"
+            "c6104f486096a92f"
         ],
-        "x": 1555,
+        "x": 1515,
         "y": 320,
         "wires": []
-    },
-    {
-        "id": "8efcf9aa67ba9375",
-        "type": "delay",
-        "z": "3d7897ba0ee14173",
-        "g": "5cf193e5430d3bde",
-        "name": "50ms",
-        "pauseType": "delay",
-        "timeout": "50",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 1390,
-        "y": 320,
-        "wires": [
-            [
-                "43b439d13979544c"
-            ]
-        ]
     },
     {
         "id": "4a65b8428bc02868",
@@ -22867,7 +22790,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "save",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nnode.status({text: ''});\n\nif (msg.hmi.level !== 'admin') {\n    \n    return;\n}\n\n// Hide UI group\nmsg.hide = ['entity - entity - dialog'];\nmsg = await node.linkcall('common - ui - group', msg);\n\nlet todo = msg.payload.todo;\ndelete msg.payload.todo;\n\n// node-red 5.0.4 has bug with dropdown topic\nlet topic = flow.get('entity[\"' + msg.hmi.id + '\"]') || '-';\n\nif (todo === 'forgetentity') {\n    // Delete entity\n    let entity = global.get('entity') || {};\n    delete entity[topic];\n    global.set('entity', entity);\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.notice.save_success;\n\n    return msg;\n} else if (todo === 'blockentity') {\n    // Block entity\n    let entity = global.get('entity') || {};\n    let block = global.get('block') || {};\n    delete entity[topic];\n    block[topic] = true;\n    global.set('entity', entity);\n    global.set('block', block);\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.notice.save_success;\n\n    return msg;\n} else if (todo === 'forgetparent') {\n    // Delete parent chidren entities\n    let i = 0;\n    let parent = global.get('entity[\"' + topic + '\"][\"parent\"]') || '';\n    let entity = global.get('entity') || {};\n    for (const e in entity) {\n        if (parent !== '' && entity[e]['parent'] === parent) {\n            delete entity[e];\n            i++;\n        }\n    }\n    global.set('entity', entity);\n    node.status({text: todo + ' - ' + i});\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.notice.save_success;\n\n    return msg;\n} else if (todo === 'blockparent') {\n    // Block parent chidren entities\n    let i = 0;\n    let parent = global.get('entity[\"' + topic + '\"][\"parent\"]') || '';\n    let entity = global.get('entity') || {};\n    let block = global.get('block') || {};\n    for (const e in entity) {\n        if (parent !== '' && entity[e]['parent'] === parent) {\n            delete entity[e];\n            block[e] = true;\n            i++;\n        }\n    }\n    global.set('entity', entity);\n    global.set('block', block);\n    node.status({ text: todo + ' - ' + i });\n\n    //...\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.notice.save_success;\n\n    return msg;\n} else {\n    // Update entity\n    let entity = global.get('entity[\"' + topic + '\"]');\n    if (typeof entity === 'object') {\n        entity['name'] = msg.payload.name;\n        entity['room'] = msg.payload.room;\n        entity['type'] = msg.payload.type;\n        entity['element'] = msg.payload.element;\n        entity['unit'] = msg.payload.unit;\n        entity['hidden'] = todo === 'hide' ? 1 : 0;\n        global.set('entity[\"' + topic + '\"]', entity);\n\n        msg.enabled = true;\n        msg.payload = msg.dictionary.notice.save_success;\n\n        return msg;\n    }\n}\n\nreturn;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nnode.status({text: ''});\n\nif (msg.hmi.level !== 'admin') {\n    \n    return;\n}\n\n// Hide UI group\nmsg.hide = ['entity - entity - dialog'];\nmsg = await node.linkcall('common - ui - group', msg);\n\nlet todo = msg.payload.todo;\ndelete msg.payload.todo;\n\n// node-red 5.0.4 has bug with dropdown topic\nlet topic = flow.get('entity[\"' + msg.hmi.id + '\"]') || '-';\n\nif (todo === 'forgetentity') {\n    // Delete entity\n    let entity = global.get('entity') || {};\n    delete entity[topic];\n    global.set('entity', entity);\n\n    return msg;\n} else if (todo === 'blockentity') {\n    // Block entity\n    let entity = global.get('entity') || {};\n    let block = global.get('block') || {};\n    delete entity[topic];\n    block[topic] = true;\n    global.set('entity', entity);\n    global.set('block', block);\n\n    return msg;\n} else if (todo === 'forgetparent') {\n    // Delete parent chidren entities\n    let i = 0;\n    let parent = global.get('entity[\"' + topic + '\"][\"parent\"]') || '';\n    let entity = global.get('entity') || {};\n    for (const e in entity) {\n        if (parent !== '' && entity[e]['parent'] === parent) {\n            delete entity[e];\n            i++;\n        }\n    }\n    global.set('entity', entity);\n    node.status({text: todo + ' - ' + i});\n\n    return msg;\n} else if (todo === 'blockparent') {\n    // Block parent chidren entities\n    let i = 0;\n    let parent = global.get('entity[\"' + topic + '\"][\"parent\"]') || '';\n    let entity = global.get('entity') || {};\n    let block = global.get('block') || {};\n    for (const e in entity) {\n        if (parent !== '' && entity[e]['parent'] === parent) {\n            delete entity[e];\n            block[e] = true;\n            i++;\n        }\n    }\n    global.set('entity', entity);\n    global.set('block', block);\n    node.status({ text: todo + ' - ' + i });\n\n    //...\n\n    return msg;\n} else {\n    // Update entity\n    let entity = global.get('entity[\"' + topic + '\"]');\n    if (typeof entity === 'object') {\n        entity['name'] = msg.payload.name;\n        entity['room'] = msg.payload.room;\n        entity['type'] = msg.payload.type;\n        entity['element'] = msg.payload.element;\n        entity['unit'] = msg.payload.unit;\n        entity['hidden'] = todo === 'hide' ? 1 : 0;\n        global.set('entity[\"' + topic + '\"]', entity);\n\n        return msg;\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -22878,8 +22801,8 @@
         "y": 440,
         "wires": [
             [
-                "8efcf9aa67ba9375",
-                "ae5b3d86abec7b5a"
+                "ae5b3d86abec7b5a",
+                "35819cb805cdb20a"
             ]
         ]
     },
@@ -22897,8 +22820,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1430,
-        "y": 620,
+        "x": 1450,
+        "y": 440,
         "wires": []
     },
     {
@@ -23047,7 +22970,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "save",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\n// node-red 5.0.4 has bug with dropdown topic\nlet topic = flow.get('parent[\"' + msg.hmi.id + '\"]') || '-';\n\n// Hide UI group\nmsg.hide = ['entity - parent - dialog'];\nmsg = await node.linkcall('common - ui - group', msg);\n\nif (msg.hmi.level === 'admin') {\n    const template = { ...(global.get('describe.template.parent') || {}) };\n    const parent = { ...(global.get('parent') || {}) };\n    \n    if (typeof parent[topic] !== 'object') {\n        parent[topic] = {...template };\n    }\n\n    parent[topic]['name'] = msg.payload.parent_name;\n\n    global.set('parent', parent);\n\n    msg.enabled = true;\n    msg.payload = msg.dictionary.notice.save_success;\n    return msg;\n}\n\nreturn;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\n// node-red 5.0.4 has bug with dropdown topic\nlet topic = flow.get('parent[\"' + msg.hmi.id + '\"]') || '-';\n\n// Hide UI group\nmsg.hide = ['entity - parent - dialog'];\nmsg = await node.linkcall('common - ui - group', msg);\n\nif (msg.hmi.level === 'admin') {\n    const template = { ...(global.get('describe.template.parent') || {}) };\n    const parent = { ...(global.get('parent') || {}) };\n    \n    if (typeof parent[topic] !== 'object') {\n        parent[topic] = {...template };\n    }\n\n    parent[topic]['name'] = msg.payload.parent_name;\n\n    global.set('parent', parent);\n\n    return msg;\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -23058,7 +22981,7 @@
         "y": 620,
         "wires": [
             [
-                "8efcf9aa67ba9375"
+                "35819cb805cdb20a"
             ]
         ]
     },
@@ -23214,7 +23137,7 @@
         "z": "3d7897ba0ee14173",
         "g": "5cf193e5430d3bde",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (msg.hmi.level !== 'admin') {\n\n    return;\n}\n\nlet multiselect = flow.get('multiselect[\"' + msg.hmi.id + '\"]') || [];\nlet entity = global.get('entity') || {};\nlet block = global.get('block') || {};\nlet i = 0;\nmultiselect.forEach(function(current) {\n    if (['forget', 'block'].includes(msg.topic)) {\n        delete entity[current.uid];\n        i++\n    }\n    \n    if (msg.topic === 'block') {\n        block[current.uid] = true;\n    }\n});\nglobal.set('entity', entity);\nglobal.set('block', block);\nnode.status({text: msg.topic + ' - ' + i});\n\ndelete msg.ui_update;\nmsg.enabled = true;\nmsg.payload = msg.dictionary.notice.save_success;\n\nreturn msg;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (msg.hmi.level !== 'admin') {\n\n    return;\n}\n\nlet multiselect = flow.get('multiselect[\"' + msg.hmi.id + '\"]') || [];\nlet entity = global.get('entity') || {};\nlet block = global.get('block') || {};\nlet i = 0;\nmultiselect.forEach(function(current) {\n    if (['forget', 'block'].includes(msg.topic)) {\n        delete entity[current.uid];\n        i++\n    }\n    \n    if (msg.topic === 'block') {\n        block[current.uid] = true;\n    }\n});\nglobal.set('entity', entity);\nglobal.set('block', block);\nnode.status({text: msg.topic + ' - ' + i});\n\ndelete msg.ui_update;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -23225,7 +23148,7 @@
         "y": 740,
         "wires": [
             [
-                "8efcf9aa67ba9375"
+                "35819cb805cdb20a"
             ]
         ]
     },
@@ -23314,6 +23237,27 @@
         "y": 680,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "35819cb805cdb20a",
+        "type": "function",
+        "z": "3d7897ba0ee14173",
+        "g": "5cf193e5430d3bde",
+        "name": "data",
+        "func": "\n// Notice\nmsg.notice = msg.dictionary.notice.save_success;\nmsg = await node.linkcall('common - ui - notice', msg);\n\nmsg.enabled = true;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 320,
+        "wires": [
+            [
+                "43b439d13979544c"
+            ]
         ]
     },
     {
@@ -23759,7 +23703,7 @@
         "z": "d90937c9d5b88b24",
         "g": "5175d903a670b8a9",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (msg.hmi.level !== 'admin' || msg.payload === '') {\n\n    return;\n}\n\nlet backup = {};\ntry {\n    backup = JSON.parse(msg.payload);\n\n} catch (error) {\n\n    return;\n}\n\nif (typeof backup['auth'] === 'object') {\n    let auth = global.get('auth') || {};\n    for (const k in backup['auth']) {\n        if (typeof auth[k] !== 'object') {\n            auth[k] = backup['auth'][k];\n        }\n    }\n    global.set('auth', auth);\n}\n\nif (typeof backup['block'] === 'object') {\n    let block = global.get('block') || {};\n    for (const k in backup['block']) {\n        if (typeof block[k] !== 'object') {\n            block[k] = true;\n        }\n    }\n    global.set('block', block);\n}\n\nif (typeof backup['calendar'] === 'object') {\n    let calendar = global.get('calendar') || {};\n    for (const k in backup['calendar']) {\n        if (typeof calendar[k] !== 'object') {\n            calendar[k] = backup['calendar'][k];\n        }\n    }\n    global.set('calendar', calendar);\n}\n\nif (typeof backup['energy'] === 'object') {\n    let energy = global.get('energy') || {};\n    for (const k in backup['energy']) {\n        if (typeof energy[k] !== 'object') {\n            energy[k] = backup['energy'][k];\n        }\n    }\n    global.set('energy', energy);\n}\n\nif (typeof backup['entity'] === 'object') {\n    let entity = global.get('entity') || {};\n    for (const k in backup['entity']) {\n        if (typeof entity[k] !== 'object') {\n            entity[k] = backup['entity'][k];\n        }\n    }\n    global.set('entity', entity);\n}\n\nif (typeof backup['mqtt'] === 'object') {\n    let mqtt = global.get('mqtt') || {};\n    for (const k in backup['mqtt']) {\n        if (typeof mqtt[k] !== 'undefined') {\n            mqtt[k] = backup['mqtt'][k];\n        }\n    }\n    global.set('mqtt', backup['mqtt']);\n}\n\nif (typeof backup['name'] === 'object') {\n    let name = global.get('name') || {};\n    for (const k in name) {\n        if (typeof backup['name'][k] === 'object') {\n            for (const l in backup['name'][k]) {\n                if (typeof name[k][l] !== 'string') {\n                    name[k][l] = backup['name'][k][l];\n                }\n            }\n        }\n    }\n    global.set('name', name);\n}\n\nif (typeof backup['parent'] === 'object') {\n    let parent = global.get('parent') || {};\n    for (const k in backup['parent']) {\n        if (typeof parent[k] !== 'object') {\n            parent[k] = backup['parent'][k];\n        }\n    }\n    global.set('parent', parent);\n}\n\nif (typeof backup['rooms'] === 'object') {\n    let rooms = global.get('rooms') || {};\n    for (const k in backup['rooms']) {\n        if (typeof rooms[k] !== 'object') {\n            rooms[k] = backup['rooms'][k];\n        }\n        else {\n            for (const l in backup['rooms'][k]) {\n                if (typeof rooms[k][l] !== 'object') {\n                    rooms[k][l] = backup['rooms'][k][l];\n                }\n            }\n        }\n    }\n    global.set('rooms', rooms);\n}\n\nif (typeof backup['scene'] === 'object') {\n    let scene = global.get('scene') || {};\n    for (const k in backup['scene']) {\n        if (typeof scene[k] !== 'object') {\n            scene[k] = {};\n        }\n\n        for (const l in backup['scene'][k]) {\n            if (typeof scene[k][l] !== 'object') {\n                scene[k][l] = {};\n            }\n\n            scene[k][l] = backup['scene'][k][l];\n        }\n    }\n    global.set('scene', scene);\n}\n\nmsg.payload = msg.dictionary.config.import_success || 'Updoaded successfully';\n\nreturn msg;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (msg.hmi.level !== 'admin' || msg.payload === '') {\n\n    return;\n}\n\nlet backup = {};\ntry {\n    backup = JSON.parse(msg.payload);\n\n} catch (error) {\n\n    return;\n}\n\nif (typeof backup['auth'] === 'object') {\n    let auth = global.get('auth') || {};\n    for (const k in backup['auth']) {\n        if (typeof auth[k] !== 'object') {\n            auth[k] = backup['auth'][k];\n        }\n    }\n    global.set('auth', auth);\n}\n\nif (typeof backup['block'] === 'object') {\n    let block = global.get('block') || {};\n    for (const k in backup['block']) {\n        if (typeof block[k] !== 'object') {\n            block[k] = true;\n        }\n    }\n    global.set('block', block);\n}\n\nif (typeof backup['calendar'] === 'object') {\n    let calendar = global.get('calendar') || {};\n    for (const k in backup['calendar']) {\n        if (typeof calendar[k] !== 'object') {\n            calendar[k] = backup['calendar'][k];\n        }\n    }\n    global.set('calendar', calendar);\n}\n\nif (typeof backup['energy'] === 'object') {\n    let energy = global.get('energy') || {};\n    for (const k in backup['energy']) {\n        if (typeof energy[k] !== 'object') {\n            energy[k] = backup['energy'][k];\n        }\n    }\n    global.set('energy', energy);\n}\n\nif (typeof backup['entity'] === 'object') {\n    let entity = global.get('entity') || {};\n    for (const k in backup['entity']) {\n        if (typeof entity[k] !== 'object') {\n            entity[k] = backup['entity'][k];\n        }\n    }\n    global.set('entity', entity);\n}\n\nif (typeof backup['mqtt'] === 'object') {\n    let mqtt = global.get('mqtt') || {};\n    for (const k in backup['mqtt']) {\n        if (typeof mqtt[k] !== 'undefined') {\n            mqtt[k] = backup['mqtt'][k];\n        }\n    }\n    global.set('mqtt', backup['mqtt']);\n}\n\nif (typeof backup['name'] === 'object') {\n    let name = global.get('name') || {};\n    for (const k in name) {\n        if (typeof backup['name'][k] === 'object') {\n            for (const l in backup['name'][k]) {\n                if (typeof name[k][l] !== 'string') {\n                    name[k][l] = backup['name'][k][l];\n                }\n            }\n        }\n    }\n    global.set('name', name);\n}\n\nif (typeof backup['parent'] === 'object') {\n    let parent = global.get('parent') || {};\n    for (const k in backup['parent']) {\n        if (typeof parent[k] !== 'object') {\n            parent[k] = backup['parent'][k];\n        }\n    }\n    global.set('parent', parent);\n}\n\nif (typeof backup['rooms'] === 'object') {\n    let rooms = global.get('rooms') || {};\n    for (const k in backup['rooms']) {\n        if (typeof rooms[k] !== 'object') {\n            rooms[k] = backup['rooms'][k];\n        }\n        else {\n            for (const l in backup['rooms'][k]) {\n                if (typeof rooms[k][l] !== 'object') {\n                    rooms[k][l] = backup['rooms'][k][l];\n                }\n            }\n        }\n    }\n    global.set('rooms', rooms);\n}\n\nif (typeof backup['scene'] === 'object') {\n    let scene = global.get('scene') || {};\n    for (const k in backup['scene']) {\n        if (typeof scene[k] !== 'object') {\n            scene[k] = {};\n        }\n\n        for (const l in backup['scene'][k]) {\n            if (typeof scene[k][l] !== 'object') {\n                scene[k][l] = {};\n            }\n\n            scene[k][l] = backup['scene'][k][l];\n        }\n    }\n    global.set('scene', scene);\n}\n\n// Notice\nmsg.notice = msg.dictionary.notice.save_success;\nmsg = await node.linkcall('common - ui - notice', msg);\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -23769,24 +23713,8 @@
         "x": 730,
         "y": 560,
         "wires": [
-            [
-                "6336047780e57ccc"
-            ]
+            []
         ]
-    },
-    {
-        "id": "6336047780e57ccc",
-        "type": "link out",
-        "z": "d90937c9d5b88b24",
-        "g": "5175d903a670b8a9",
-        "name": "config - backup - upload",
-        "mode": "link",
-        "links": [
-            "f4a2353e5f92576c"
-        ],
-        "x": 855,
-        "y": 560,
-        "wires": []
     },
     {
         "id": "22138aef9be04d5a",
@@ -24054,20 +23982,6 @@
         ]
     },
     {
-        "id": "0cf63361a578f787",
-        "type": "link out",
-        "z": "22abd94e2980c094",
-        "g": "90f47fc795048184",
-        "name": "auth - form - notice",
-        "mode": "link",
-        "links": [
-            "f4a2353e5f92576c"
-        ],
-        "x": 915,
-        "y": 260,
-        "wires": []
-    },
-    {
         "id": "3361a6a4765bfb11",
         "type": "ui-form",
         "z": "22abd94e2980c094",
@@ -24206,8 +24120,8 @@
         "z": "22abd94e2980c094",
         "g": "90f47fc795048184",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - user - check', msg);\n\nnode.status({});\nif (msg.payload === true) {\n    // Login success\n    msg.payload = global.get('describe.pages.home.name') || 'auth';\n    node.status({fill: 'green'});\n    node.send([msg, null]);\n} else {\n    // Login fail\n    msg.payload = msg.dictionary.notice.login_fail;\n    node.status({fill: 'red'});\n    node.send([null, msg]);\n}\n\nreturn;",
-        "outputs": 2,
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - user - check', msg);\n\nnode.status({});\nif (msg.payload === true) {\n    // Login success\n    msg.payload = global.get('describe.pages.home.name') || 'auth';\n    node.status({fill: 'green'});\n\n    return msg;\n} else {\n    // Login fail\n    // Notice\n    msg.notice = msg.dictionary.notice.login_fail;\n    msg = await node.linkcall('common - ui - notice', msg);\n\n    node.status({fill: 'red'});\n}\n\nreturn;",
+        "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
@@ -24218,9 +24132,6 @@
         "wires": [
             [
                 "6ab34b3b3d64905e"
-            ],
-            [
-                "0cf63361a578f787"
             ]
         ]
     },
