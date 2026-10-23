@@ -2440,7 +2440,7 @@
     {
         "id": "addbd6502a1ad56e",
         "type": "ui-theme",
-        "name": "Theme 2",
+        "name": "dknr - theme - dark",
         "colors": {
             "surface": "#3b4252",
             "primary": "#88c0d0",
@@ -2538,6 +2538,7 @@
                 "cols": "12"
             }
         ],
+        "tabs": [],
         "order": 1,
         "className": "",
         "visible": "true",
@@ -2925,6 +2926,7 @@
                 "cols": "12"
             }
         ],
+        "tabs": [],
         "order": 2,
         "className": "",
         "visible": "true",
@@ -12176,7 +12178,7 @@
         "height": 1,
         "label": "",
         "className": "ui-center",
-        "rounded": true,
+        "rounded": false,
         "useThemeColors": true,
         "passthru": false,
         "options": [
@@ -12716,7 +12718,7 @@
         "height": 1,
         "label": "",
         "className": "ui-center",
-        "rounded": true,
+        "rounded": false,
         "useThemeColors": true,
         "passthru": false,
         "options": [
@@ -22706,7 +22708,7 @@
         "height": 1,
         "label": "",
         "className": "ui-center",
-        "rounded": true,
+        "rounded": false,
         "useThemeColors": true,
         "passthru": true,
         "options": [
@@ -24095,7 +24097,7 @@
         "height": "0",
         "label": "",
         "className": "ui-center",
-        "rounded": true,
+        "rounded": false,
         "useThemeColors": true,
         "passthru": false,
         "options": [
