@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="96" height="96">
+  <title>dknr</title>
+  <!-- Contour hexagonal (bleu clair) -->
+  <polygon points="256,40 443,148 443,364 256,472 69,364 69,148"
+           fill="none" stroke="#A2CBE9" stroke-width="36" stroke-linejoin="round"/>
+  <!-- Monogramme D (vert) -->
+  <path d="M176 160 V352 H240 A96 96 0 0 0 240 160 Z"
+        fill="none" stroke="#9AC123" stroke-width="44" stroke-linejoin="round"/>
+  <!-- Point (bleu foncé) -->
+  <circle cx="254" cy="256" r="32" fill="#137BBB"/>
+</svg>
