@@ -9502,10 +9502,8 @@
             "d545bd465be22ecc",
             "afbd8bf525171357",
             "0422442a8e7248e8",
-            "f960619b3cce8963",
             "19ba39cf5c4ae89e",
-            "e41067e156320212",
-            "c0d25d22ddcd4b9c"
+            "5c1d7e2a9b0f4d31"
         ],
         "x": 1354,
         "y": 459,
@@ -11847,8 +11845,8 @@
         "z": "560376d6bba621ec",
         "g": "a2828ff4910e05b9",
         "name": "data",
-        "func": "// Get historic\n\nmsg.query = \n'from(bucket: \"domotic\")' +\n'|> range(start: -1d, stop:now())' +\n'|> filter(fn: (r) => r[\"_field\"] == \"' + msg.payload.uid + '\")' +\n'|> aggregateWindow(every: 1m, fn: last, createEmpty: false)' +\n'|> yield(name: \"last\")';\n\nmsg.payload = [];\n\nreturn msg;",
-        "outputs": 1,
+        "func": "// Get history of last 24 hours\n\nconst textuals = [ ...(global.get('describe.texts') || []) ];\nconst binary = ['b', 'rb'].includes(msg.payload.unit);\nconst numeric = !binary && !textuals.includes(msg.payload.unit);\n\n// Numbers are averaged every 5 minutes, other values keep their changes\nmsg.query =\n'from(bucket: \"domotic\")' +\n'|> range(start: -1d, stop: now())' +\n'|> filter(fn: (r) => r[\"_field\"] == \"' + msg.payload.uid + '\")' +\n(numeric ? '|> aggregateWindow(every: 5m, fn: mean, createEmpty: false)' : '|> aggregateWindow(every: 1m, fn: last, createEmpty: false)') +\n'|> yield(name: \"history\")';\n\n// Reset chart while loading\nnode.send([null, {\n    'topic': msg.topic,\n    'payload': {\n        'kind': 'loading',\n        'texts': { 'loading': msg.dictionary.room.history_loading || 'Loading…' }\n    }\n}]);\n\nmsg.payload = [];\n\nreturn [msg, null];\n",
+        "outputs": 2,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
@@ -11859,70 +11857,10 @@
         "wires": [
             [
                 "afbd8bf525171357"
+            ],
+            [
+                "5c1d7e2a9b0f4d31"
             ]
-        ]
-    },
-    {
-        "id": "f960619b3cce8963",
-        "type": "ui-chart",
-        "z": "560376d6bba621ec",
-        "g": "a2828ff4910e05b9",
-        "group": "9dca42b48aec683d",
-        "name": "room - detail - chart smooth",
-        "label": "",
-        "order": 11,
-        "chartType": "line",
-        "category": "_field",
-        "categoryType": "property",
-        "xAxisLabel": "",
-        "xAxisProperty": "_time",
-        "xAxisPropertyType": "property",
-        "xAxisType": "time",
-        "xAxisFormat": "",
-        "xAxisFormatType": "{HH}:{mm}",
-        "xmin": "",
-        "xmax": "",
-        "yAxisLabel": "",
-        "yAxisProperty": "_value",
-        "yAxisPropertyType": "property",
-        "ymin": "",
-        "ymax": "",
-        "bins": 10,
-        "action": "replace",
-        "stackSeries": false,
-        "pointShape": "false",
-        "pointRadius": "2",
-        "showLegend": false,
-        "removeOlder": 1,
-        "removeOlderUnit": "86400",
-        "removeOlderPoints": "1440",
-        "colors": [
-            "#0095ff",
-            "#ff0000",
-            "#ff7f0e",
-            "#2ca02c",
-            "#a347e1",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "textColor": [
-            "#666666"
-        ],
-        "textColorDefault": true,
-        "gridColor": [
-            "#e5e5e5"
-        ],
-        "gridColorDefault": true,
-        "width": "6",
-        "height": "5",
-        "className": "",
-        "interpolation": "smooth",
-        "x": 2300,
-        "y": 1160,
-        "wires": [
-            []
         ]
     },
     {
@@ -11931,8 +11869,8 @@
         "z": "560376d6bba621ec",
         "g": "a2828ff4910e05b9",
         "name": "data",
-        "func": "\nlet newMsg = {\n    'topic' : '',\n    'class': 'remove',\n    'enabled': false,\n    'payload': []\n};\n\nconst entity = global.get('entity[\"' + msg.topic + '\"]');\n\nif (msg.payload.length < 2) {\n\n    return [newMsg, newMsg, newMsg];\n}\nelse if (['enum', 'text'].includes(entity.unit)) {\n    // sort by time for table\n    msg.payload.sort((a, b) => b._time.localeCompare(a._time));\n\n    return [newMsg, newMsg, msg ];\n}\nelse if (['b', 'rb'].includes(entity.unit)) {\n\n    return [msg, newMsg, newMsg ];\n}\nelse if (entity.unit !== '') {\n\n    return [ newMsg, msg, newMsg ];\n}\nelse {\n\n    return [ newMsg, newMsg, newMsg ];\n}\nreturn;",
-        "outputs": 3,
+        "func": "// Prepare last 24 hours history for chart\n\nconst entity = global.get('entity[\"' + msg.topic + '\"]') || {};\nconst textuals = [ ...(global.get('describe.texts') || []) ];\nconst reverts = [ ...(global.get('describe.reverts') || []) ];\nconst dict = msg.dictionary.room || {};\n\nconst end = Date.now();\nconst start = end - 24 * 3600000;\nconst rows = (Array.isArray(msg.payload) ? msg.payload : [])\n    .map(r => [new Date(r._time).getTime(), r._value])\n    .filter(r => !isNaN(r[0]) && r[1] !== null && r[1] !== undefined)\n    .sort((a, b) => a[0] - b[0]);\n\nlet res = {\n    'kind': 'empty',\n    'unit': entity.unit || '',\n    'locale': msg.dictionary.common.locales || 'fr',\n    'start': start,\n    'end': end,\n    'points': [],\n    'current': entity.value,\n    'texts': {\n        'empty': dict.history_empty || 'No history for the last 24 hours',\n        'now': dict.history_now || 'Now',\n        'min': dict.history_min || 'Minimum',\n        'max': dict.history_max || 'Maximum'\n    }\n};\n\nif (rows.length > 0 && ['b', 'rb'].includes(entity.unit)) {\n    // Binary: 1 means active (on, opened...)\n    const revert = (entity.unit === 'rb') !== (reverts.includes(entity.element));\n    const active = v => (Number(v) ? 1 : 0) ^ (revert ? 1 : 0);\n    const aperture = ['aperture', 'door', 'window', 'lock', 'shutter', 'slider'].includes(entity.element);\n\n    res.kind = 'binary';\n    res.points = rows.map(r => [r[0], active(r[1])]);\n    res.current = active(entity.value);\n    res.texts.on = aperture ? (dict.open || 'Opened') : (dict.on || 'On');\n    res.texts.off = aperture ? (dict.close || 'Closed') : (dict.off || 'Off');\n}\nelse if (rows.length > 0 && !textuals.includes(entity.unit)) {\n    // Number\n    res.kind = 'line';\n    res.points = rows.map(r => [r[0], Number(r[1])]).filter(r => !isNaN(r[1]));\n    res.current = Number(entity.value);\n    if (entity.unit === '8b') {\n        // 8 bits value as percent\n        res.points = res.points.map(r => [r[0], Math.round(r[1] * 100 / 255)]);\n        res.current = Math.round(res.current * 100 / 255);\n        res.unit = '%';\n    }\n}\nelse if (rows.length > 0) {\n    // Text and enum: last changes, newest first\n    const options = entity.options || {};\n    const enums = global.get('describe[\"enum\"][\"' + entity.source + '\"][\"' + entity.id + '\"]') || {};\n    const label = v => Array.isArray(enums[v]) ? enums[v][1] : (options[v] || v);\n    let changes = [];\n    for (const r of rows) {\n        if (changes.length === 0 || changes[changes.length - 1][1] !== label(r[1])) {\n            changes.push([r[0], label(r[1])]);\n        }\n    }\n    res.kind = 'list';\n    res.points = changes.reverse().slice(0, 12);\n}\n\nif (res.points.length === 0) {\n    res.kind = 'empty';\n}\n\nmsg.payload = res;\n\nreturn msg;\n",
+        "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
@@ -11942,122 +11880,8 @@
         "y": 1160,
         "wires": [
             [
-                "e41067e156320212"
-            ],
-            [
-                "f960619b3cce8963"
-            ],
-            [
-                "c0d25d22ddcd4b9c"
+                "5c1d7e2a9b0f4d31"
             ]
-        ]
-    },
-    {
-        "id": "e41067e156320212",
-        "type": "ui-chart",
-        "z": "560376d6bba621ec",
-        "g": "a2828ff4910e05b9",
-        "group": "9dca42b48aec683d",
-        "name": "room - detail - chart step",
-        "label": "",
-        "order": 12,
-        "chartType": "line",
-        "category": "_field",
-        "categoryType": "property",
-        "xAxisLabel": "",
-        "xAxisProperty": "_time",
-        "xAxisPropertyType": "property",
-        "xAxisType": "time",
-        "xAxisFormat": "",
-        "xAxisFormatType": "{HH}:{mm}",
-        "xmin": "",
-        "xmax": "",
-        "yAxisLabel": "",
-        "yAxisProperty": "_value",
-        "yAxisPropertyType": "property",
-        "ymin": "",
-        "ymax": "",
-        "bins": 10,
-        "action": "replace",
-        "stackSeries": false,
-        "pointShape": "false",
-        "pointRadius": "2",
-        "showLegend": false,
-        "removeOlder": 1,
-        "removeOlderUnit": "86400",
-        "removeOlderPoints": "1440",
-        "colors": [
-            "#0095ff",
-            "#ff0000",
-            "#ff7f0e",
-            "#2ca02c",
-            "#a347e1",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "textColor": [
-            "#666666"
-        ],
-        "textColorDefault": true,
-        "gridColor": [
-            "#e5e5e5"
-        ],
-        "gridColorDefault": true,
-        "width": "6",
-        "height": "5",
-        "className": "",
-        "interpolation": "step",
-        "x": 2290,
-        "y": 1100,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c0d25d22ddcd4b9c",
-        "type": "ui-table",
-        "z": "560376d6bba621ec",
-        "g": "a2828ff4910e05b9",
-        "group": "9dca42b48aec683d",
-        "name": "room - detail - chart table",
-        "label": "",
-        "order": 13,
-        "width": 0,
-        "height": 0,
-        "maxrows": 0,
-        "passthru": false,
-        "autocols": false,
-        "showSearch": false,
-        "deselect": true,
-        "selectionType": "none",
-        "columns": [
-            {
-                "title": "",
-                "key": "_time",
-                "keyType": "key",
-                "type": "datetime",
-                "width": "50%",
-                "align": "end"
-            },
-            {
-                "title": "",
-                "key": "_value",
-                "keyType": "key",
-                "type": "text",
-                "width": "",
-                "align": "start"
-            }
-        ],
-        "mobileBreakpoint": "sm",
-        "mobileBreakpointType": "defaults",
-        "action": "append",
-        "className": "",
-        "x": 2290,
-        "y": 1220,
-        "wires": [
-            []
         ]
     },
     {
@@ -22208,7 +22032,7 @@
         "type": "function",
         "z": "560376d6bba621ec",
         "name": "dictionary",
-        "func": "// Register dictionary\n\nmsg.payload = {\n    'flow': env.get('NR_FLOW_NAME'),\n    'en': {\n        'page_title': 'Rooms'\n    },\n    'fr': {\n        'page_title': 'Pièces',\n        'room_select': 'Sélectionner une pièce',\n        'open': 'Ouvert',\n        'close': 'Fermé',\n        'on': 'Allumé',\n        'off': 'Eteint',\n        'active': 'Actif',\n        'inactive': 'Inactif',\n        'selector': 'Sélecteur',\n        'various': 'Divers',\n        'unknown': 'Inconnu',\n        'list_title': 'Eléments',\n        'detail_title': \"Détail d'un élément\",\n        'switch': 'Interrupteurs',\n        'aperture': 'Ouvertures',\n        'climate': 'Climat',\n        'energy': 'Energie',\n        'battery': 'Batteries',\n        'security': 'Sécurité',\n        'scene_title': 'Scènes',\n        'confort_title': 'Heures de confort',\n        'confort_delete': 'Supprimer',\n        'workday': 'Jours travaillés',\n        'restday': 'Jour de repos',\n        'camera': 'Caméra',\n        'room': 'Pièce',\n        'confort': 'Heures de confort',\n        'location': 'Emplacement',\n        'map': 'Plan'\n    }\n};\n\nmsg = await node.linkcall('common - register - dictionary', msg);\n\nreturn;\n",
+        "func": "// Register dictionary\n\nmsg.payload = {\n    'flow': env.get('NR_FLOW_NAME'),\n    'en': {\n        'page_title': 'Rooms'\n    },\n    'fr': {\n        'page_title': 'Pièces',\n        'room_select': 'Sélectionner une pièce',\n        'open': 'Ouvert',\n        'close': 'Fermé',\n        'on': 'Allumé',\n        'off': 'Eteint',\n        'active': 'Actif',\n        'inactive': 'Inactif',\n        'selector': 'Sélecteur',\n        'various': 'Divers',\n        'unknown': 'Inconnu',\n        'list_title': 'Eléments',\n        'detail_title': \"Détail d'un élément\",\n        'switch': 'Interrupteurs',\n        'aperture': 'Ouvertures',\n        'climate': 'Climat',\n        'energy': 'Energie',\n        'battery': 'Batteries',\n        'security': 'Sécurité',\n        'scene_title': 'Scènes',\n        'confort_title': 'Heures de confort',\n        'confort_delete': 'Supprimer',\n        'workday': 'Jours travaillés',\n        'restday': 'Jour de repos',\n        'camera': 'Caméra',\n        'room': 'Pièce',\n        'confort': 'Heures de confort',\n        'location': 'Emplacement',\n        'map': 'Plan',\n        'history_loading': 'Chargement…',\n        'history_empty': 'Aucun historique sur les dernières 24 heures',\n        'history_now': 'Actuellement',\n        'history_min': 'Minimum',\n        'history_max': 'Maximum'\n    }\n};\n\nmsg = await node.linkcall('common - register - dictionary', msg);\n\nreturn;\n",
         "outputs": 0,
         "timeout": 0,
         "noerr": 0,
@@ -22311,5 +22135,30 @@
         "y": 39,
         "w": 310,
         "h": 142
+    },
+    {
+        "id": "5c1d7e2a9b0f4d31",
+        "type": "ui-template",
+        "z": "560376d6bba621ec",
+        "g": "a2828ff4910e05b9",
+        "group": "9dca42b48aec683d",
+        "page": "",
+        "ui": "",
+        "name": "room - detail - history",
+        "order": 11,
+        "width": "6",
+        "height": "1",
+        "head": "",
+        "format": "<template>\n    <div class=\"dkr\">\n        <div v-if=\"d.kind === 'loading'\" class=\"dkr-empty\">{{ t.loading }}</div>\n        <div v-else-if=\"!d.kind || d.kind === 'empty'\" class=\"dkr-empty\">{{ t.empty }}</div>\n\n        <template v-else-if=\"d.kind === 'line'\">\n            <div class=\"dkr-stats\">\n                <span><small>{{ t.min }}</small>{{ num(stats.min) }}</span>\n                <span><small>{{ t.max }}</small>{{ num(stats.max) }}</span>\n                <span class=\"dkr-hl\"><small>{{ hover !== null ? time(d.points[hover][0]) : t.now }}</small>{{ num(hover !== null ? d.points[hover][1] : d.current) }}</span>\n            </div>\n            <div class=\"dkr-plot\" ref=\"plot\">\n                <svg v-if=\"W > 0\" :width=\"W\" :height=\"H\" class=\"dkr-svg\" @mousemove=\"move\" @mouseleave=\"hover = null\" @click=\"move\">\n                    <g v-for=\"k in geo.ticks\" :key=\"'y' + k.v\">\n                        <line :x1=\"PL\" :x2=\"W - PR\" :y1=\"k.y\" :y2=\"k.y\" class=\"dkr-grid\"></line>\n                        <text :x=\"PL - 6\" :y=\"k.y + 4\" text-anchor=\"end\" class=\"dkr-tick\">{{ num(k.v, true) }}</text>\n                    </g>\n                    <text v-for=\"k in xticks\" :key=\"'x' + k.t\" :x=\"k.x\" :y=\"H - 6\" text-anchor=\"middle\" class=\"dkr-tick\">{{ k.label }}</text>\n                    <path :d=\"geo.area\" class=\"dkr-area\"></path>\n                    <path :d=\"geo.line\" class=\"dkr-line\"></path>\n                    <g v-if=\"hover !== null\">\n                        <line :x1=\"x(d.points[hover][0])\" :x2=\"x(d.points[hover][0])\" :y1=\"PT\" :y2=\"H - PB\" class=\"dkr-cross\"></line>\n                        <circle :cx=\"x(d.points[hover][0])\" :cy=\"geo.y(d.points[hover][1])\" r=\"4\" class=\"dkr-dot\"></circle>\n                    </g>\n                </svg>\n            </div>\n        </template>\n\n        <template v-else-if=\"d.kind === 'binary'\">\n            <div class=\"dkr-stats\">\n                <span><small>{{ d.texts.on }}</small>{{ duration(stats.active) }}</span>\n                <span class=\"dkr-hl\"><small>{{ hover !== null ? time(bands[hover].from) + ' - ' + time(bands[hover].to) : t.now }}</small>{{ hover !== null ? (bands[hover].v ? d.texts.on : d.texts.off) : (d.current ? d.texts.on : d.texts.off) }}</span>\n            </div>\n            <div class=\"dkr-plot\" ref=\"plot\">\n                <svg v-if=\"W > 0\" :width=\"W\" height=\"62\" class=\"dkr-svg\" @mouseleave=\"hover = null\">\n                    <rect :x=\"PL\" y=\"6\" :width=\"W - PL - PR\" height=\"28\" rx=\"4\" class=\"dkr-off\"></rect>\n                    <rect v-for=\"(b, i) in bands\" :key=\"i\" :x=\"x(b.from)\" y=\"6\" :width=\"Math.max(1, x(b.to) - x(b.from))\" height=\"28\"\n                        :class=\"[b.v ? 'dkr-on' : 'dkr-hit', { 'dkr-sel': hover === i }]\" @mouseenter=\"hover = i\" @click=\"hover = i\"></rect>\n                    <text v-for=\"k in xticks\" :key=\"'x' + k.t\" :x=\"k.x\" y=\"54\" text-anchor=\"middle\" class=\"dkr-tick\">{{ k.label }}</text>\n                </svg>\n            </div>\n        </template>\n\n        <div v-else-if=\"d.kind === 'list'\" class=\"dkr-list\">\n            <div v-for=\"(p, i) in d.points\" :key=\"i\" class=\"dkr-row\">\n                <span class=\"dkr-time\">{{ time(p[0], true) }}</span>\n                <span :class=\"{ 'dkr-hl': i === 0 }\">{{ p[1] }}</span>\n            </div>\n        </div>\n    </div>\n</template>\n\n<script>\nexport default {\n    data() {\n        return { W: 0, H: 190, PL: 44, PR: 8, PT: 10, PB: 22, hover: null, observer: null };\n    },\n    computed: {\n        d() { return (this.msg && typeof this.msg.payload === 'object' && this.msg.payload) || {}; },\n        t() { return this.d.texts || { empty: '', loading: '' }; },\n        stats() {\n            const p = this.d.points || [];\n            if (this.d.kind === 'binary') {\n                return { active: this.bands.filter(b => b.v).reduce((s, b) => s + b.to - b.from, 0) };\n            }\n            const v = p.map(x => x[1]);\n            return { min: v.length ? Math.min(...v) : 0, max: v.length ? Math.max(...v) : 0 };\n        },\n        // binary: consecutive points with same state merged into bands\n        bands() {\n            const p = this.d.points || [];\n            let res = [];\n            p.forEach((x, i) => {\n                const to = i < p.length - 1 ? p[i + 1][0] : this.d.end;\n                if (res.length && res[res.length - 1].v === x[1]) res[res.length - 1].to = to;\n                else res.push({ from: x[0], to: to, v: x[1] });\n            });\n            return res;\n        },\n        // line: nice y scale, line and area paths\n        geo() {\n            const p = this.d.points || [];\n            let lo = this.stats.min, hi = this.stats.max;\n            if (hi - lo < 1e-9) { lo -= 1; hi += 1; }\n            const raw = (hi - lo) / 4;\n            const mag = Math.pow(10, Math.floor(Math.log10(raw)));\n            const step = [1, 2, 2.5, 5, 10].map(m => m * mag).find(s => s >= raw);\n            const bottom = Math.floor(lo / step) * step, top = Math.ceil(hi / step) * step;\n            const ph = this.H - this.PT - this.PB;\n            const y = v => this.PT + ph - (v - bottom) / (top - bottom) * ph;\n            let ticks = [];\n            for (let v = bottom; v <= top + step / 2; v += step) ticks.push({ v: +v.toFixed(6), y: y(v) });\n            const pts = p.map(q => this.x(q[0]).toFixed(1) + ',' + y(q[1]).toFixed(1));\n            const line = pts.length ? 'M' + pts.join('L') : '';\n            const area = pts.length ? line + 'L' + this.x(p[p.length - 1][0]).toFixed(1) + ',' + (this.H - this.PB) + 'L' + this.x(p[0][0]).toFixed(1) + ',' + (this.H - this.PB) + 'Z' : '';\n            return { y: y, ticks: ticks, line: line, area: area };\n        },\n        // a label every 6 hours, on round hours\n        xticks() {\n            if (!this.d.start || this.W <= 0) return [];\n            const h = 3600000, every = this.W < 360 ? 12 : 6;\n            let res = [];\n            let t = Math.ceil(this.d.start / h) * h;\n            for (; t <= this.d.end; t += h) {\n                const dt = new Date(t);\n                if (dt.getHours() % every === 0) res.push({ t: t, x: this.x(t), label: String(dt.getHours()).padStart(2, '0') + ':00' });\n            }\n            return res;\n        }\n    },\n    watch: {\n        msg() { this.hover = null; this.$nextTick(this.resize); }\n    },\n    mounted() {\n        // the dashboard lowercases svg attributes (viewBox is lost), so draw in pixels at the real width\n        if (window.ResizeObserver) {\n            this.observer = new ResizeObserver(() => this.resize());\n            this.observer.observe(this.$el);\n        }\n        this.resize();\n    },\n    unmounted() {\n        if (this.observer) this.observer.disconnect();\n    },\n    methods: {\n        resize() {\n            const w = this.$el && this.$el.clientWidth ? Math.floor(this.$el.clientWidth) : 0;\n            if (w > 0 && w !== this.W) this.W = w;\n        },\n        x(t) {\n            return this.PL + (t - this.d.start) / Math.max(1, this.d.end - this.d.start) * (this.W - this.PL - this.PR);\n        },\n        move(e) {\n            const p = this.d.points || [];\n            if (!p.length) return;\n            const r = e.currentTarget.getBoundingClientRect();\n            const t = this.d.start + (e.clientX - r.left - this.PL) / (this.W - this.PL - this.PR) * (this.d.end - this.d.start);\n            let best = 0;\n            p.forEach((q, i) => { if (Math.abs(q[0] - t) < Math.abs(p[best][0] - t)) best = i; });\n            this.hover = best;\n        },\n        num(v, short) {\n            if (typeof v !== 'number' || isNaN(v)) return '-';\n            const a = Math.abs(v);\n            const dec = a >= 100 ? 0 : (a >= 10 ? 1 : 2);\n            return v.toLocaleString(this.d.locale || 'fr', { maximumFractionDigits: short ? Math.min(dec, 1) : dec }) + (short || !this.d.unit ? '' : ' ' + this.d.unit);\n        },\n        time(ts, day) {\n            const o = { hour: '2-digit', minute: '2-digit' };\n            if (day) { o.day = '2-digit'; o.month = '2-digit'; }\n            return new Date(ts).toLocaleString(this.d.locale || 'fr', o);\n        },\n        duration(ms) {\n            const m = Math.round(ms / 60000);\n            return m < 60 ? m + ' min' : Math.floor(m / 60) + ' h ' + String(m % 60).padStart(2, '0');\n        }\n    }\n}\n</script>\n\n<style>\n.dkr { width: 100%; min-width: 0; color: rgb(var(--v-theme-on-surface)); }\n.dkr-empty { padding: 10px 12px; border-radius: 4px; background: rgba(var(--v-theme-on-surface), 0.05); color: rgba(var(--v-theme-on-surface), 0.6); font-size: 0.9rem; }\n.dkr-stats { display: flex; gap: 6px 18px; flex-wrap: wrap; margin-bottom: 4px; font-size: 0.95rem; }\n.dkr-stats span { display: flex; flex-direction: column; }\n.dkr-stats small { font-size: 0.75rem; color: rgba(var(--v-theme-on-surface), 0.6); }\n.dkr-stats .dkr-hl { margin-left: auto; text-align: right; }\n.dkr-hl { color: rgb(var(--v-theme-primary)); font-weight: 600; }\n.dkr-plot { width: 100%; overflow: hidden; }\n.dkr-svg { display: block; touch-action: manipulation; }\n.dkr-grid { stroke: rgba(var(--v-theme-on-surface), 0.08); stroke-width: 1; }\n.dkr-tick { font-size: 11px; fill: rgba(var(--v-theme-on-surface), 0.55); }\n.dkr-line { fill: none; stroke: rgb(var(--v-theme-primary)); stroke-width: 2; stroke-linejoin: round; }\n.dkr-area { fill: rgba(var(--v-theme-primary), 0.12); stroke: none; }\n.dkr-cross { stroke: rgba(var(--v-theme-on-surface), 0.3); stroke-dasharray: 3 3; }\n.dkr-dot { fill: rgb(var(--v-theme-primary)); stroke: rgb(var(--v-theme-surface)); stroke-width: 2; }\n.dkr-off { fill: rgba(var(--v-theme-on-surface), 0.08); }\n.dkr-on { fill: rgb(var(--v-theme-primary)); cursor: pointer; }\n.dkr-hit { fill: transparent; cursor: pointer; }\n.dkr-sel { stroke: rgb(var(--v-theme-on-surface)); stroke-width: 1.5; }\n.dkr-list { display: flex; flex-direction: column; font-size: 0.9rem; }\n.dkr-row { display: flex; gap: 12px; padding: 3px 0; border-bottom: 1px solid rgba(var(--v-theme-on-surface), 0.06); }\n.dkr-time { min-width: 92px; color: rgba(var(--v-theme-on-surface), 0.6); }\n</style>\n",
+        "storeOutMessages": false,
+        "passthru": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 2300,
+        "y": 1160,
+        "wires": [
+            []
+        ]
     }
 ]
