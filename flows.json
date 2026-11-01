@@ -374,13 +374,13 @@
         },
         "nodes": [
             "17fbda7c7b72d170",
-            "a40e8d7931c80727",
-            "15cbf75763d561ac"
+            "15cbf75763d561ac",
+            "382f031049d3a6b8"
         ],
         "x": 78,
         "y": 2533,
-        "w": 1194,
-        "h": 454
+        "w": 1374,
+        "h": 494
     },
     {
         "id": "d509ef3b5101effa",
@@ -1345,7 +1345,7 @@
             "f82cf8ab4c808c75"
         ],
         "x": 104,
-        "y": 4659,
+        "y": 3179,
         "w": 832,
         "h": 382
     },
@@ -1353,6 +1353,7 @@
         "id": "382f031049d3a6b8",
         "type": "group",
         "z": "4bc72a1112cb448c",
+        "g": "b5f12dc5815ecabe",
         "name": "common - entity - set",
         "style": {
             "fill": "#ff0000",
@@ -1363,33 +1364,15 @@
             "35bded8380dee43f",
             "b9500bf1ddabdd36",
             "3fe521ed8f2ebe7c",
-            "31ce49bdf1af861d"
+            "3b9eb116f7796358",
+            "89516a4720e1e863",
+            "b053dee460766806",
+            "47f7e793bdab992b"
         ],
-        "x": 119,
-        "y": 5119,
-        "w": 562,
-        "h": 122
-    },
-    {
-        "id": "ec0c0d33b87321e5",
-        "type": "group",
-        "z": "4bc72a1112cb448c",
-        "name": "common - entity - event",
-        "style": {
-            "fill": "#ff0000",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "b5c25ab9a253a15c",
-            "f9bec52ad4f5f68d",
-            "63d83924d744eac4",
-            "b9c625940061cf0f"
-        ],
-        "x": 119,
-        "y": 5279,
-        "w": 697,
-        "h": 122
+        "x": 104,
+        "y": 2739,
+        "w": 887,
+        "h": 142
     },
     {
         "id": "ec2f8e34924572e0",
@@ -1886,7 +1869,7 @@
             "b9c86bae8c17d770"
         ],
         "x": 104,
-        "y": 2879,
+        "y": 2919,
         "w": 332,
         "h": 82
     },
@@ -1895,7 +1878,7 @@
         "type": "group",
         "z": "4bc72a1112cb448c",
         "g": "b5f12dc5815ecabe",
-        "name": "common - mqtt - in",
+        "name": "common - entity - get",
         "style": {
             "fill": "#ff0000",
             "fill-opacity": "0.05",
@@ -1908,35 +1891,15 @@
             "6facde51e61886e6",
             "52927df0aa115bc5",
             "c6d982fb5fa2ad57",
-            "9186fa487a5150ca",
-            "7c38bbae3c839c35"
+            "f9bec52ad4f5f68d",
+            "63d83924d744eac4",
+            "b9c625940061cf0f",
+            "ecc79f72405ae3d5"
         ],
         "x": 104,
         "y": 2559,
-        "w": 1142,
+        "w": 1322,
         "h": 142
-    },
-    {
-        "id": "a40e8d7931c80727",
-        "type": "group",
-        "z": "4bc72a1112cb448c",
-        "g": "b5f12dc5815ecabe",
-        "name": "common - mqtt - out",
-        "style": {
-            "fill": "#ff0000",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "990afe4d9d755fb6",
-            "3b9eb116f7796358",
-            "89516a4720e1e863",
-            "b053dee460766806"
-        ],
-        "x": 104,
-        "y": 2759,
-        "w": 562,
-        "h": 82
     },
     {
         "id": "b9c606401bb8c37c",
@@ -2124,11 +2087,11 @@
         "type": "ui-theme",
         "name": "ui - theme",
         "colors": {
-            "surface": "#fcfcfd",
-            "primary": "#0d74ce",
-            "bgPage": "#f9f9fb",
-            "groupBg": "#ffffff",
-            "groupOutline": "#d9d9e0"
+            "surface": "#3b4252",
+            "primary": "#88c0d0",
+            "bgPage": "#2e3440",
+            "groupBg": "#3b4252",
+            "groupOutline": "#4c566a"
         },
         "sizes": {
             "density": "default",
@@ -2259,7 +2222,7 @@
             }
         ],
         "tabs": [],
-        "order": 3,
+        "order": 8,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -2386,7 +2349,7 @@
             }
         ],
         "tabs": [],
-        "order": 4,
+        "order": 7,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -2422,7 +2385,7 @@
                 "cols": "12"
             }
         ],
-        "order": 3,
+        "order": 4,
         "className": "",
         "visible": true,
         "disabled": false
@@ -2472,7 +2435,7 @@
                 "cols": "12"
             }
         ],
-        "order": 5,
+        "order": 6,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -2553,7 +2516,7 @@
             }
         ],
         "tabs": [],
-        "order": 2,
+        "order": 3,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -2719,7 +2682,7 @@
                 "cols": "12"
             }
         ],
-        "order": 4,
+        "order": 5,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -4891,7 +4854,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 2600,
+        "y": 2660,
         "wires": [
             [
                 "c6f0bfa74495563e"
@@ -4909,7 +4872,7 @@
             "c109171373a64bf6"
         ],
         "x": 145,
-        "y": 2600,
+        "y": 2660,
         "wires": [
             [
                 "e6272a0635e42141"
@@ -4931,7 +4894,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 430,
-        "y": 2600,
+        "y": 2660,
         "wires": [
             [
                 "c6d982fb5fa2ad57"
@@ -4952,11 +4915,10 @@
         "finalize": "",
         "libs": [],
         "x": 910,
-        "y": 2600,
+        "y": 2660,
         "wires": [
             [
-                "7c38bbae3c839c35",
-                "9186fa487a5150ca"
+                "f9bec52ad4f5f68d"
             ]
         ]
     },
@@ -4979,7 +4941,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 750,
-        "y": 2600,
+        "y": 2660,
         "wires": [
             [
                 "6facde51e61886e6"
@@ -5000,7 +4962,7 @@
         "finalize": "",
         "libs": [],
         "x": 590,
-        "y": 2600,
+        "y": 2660,
         "wires": [
             [
                 "52927df0aa115bc5"
@@ -5056,7 +5018,7 @@
         "z": "4bc72a1112cb448c",
         "g": "15cbf75763d561ac",
         "name": "data",
-        "func": "if (typeof msg.uid !== 'string') {\n\n    return;\n}\n\n// Get memories\nconst template = global.get('describe.template'); // read\nconst source = global.get('source'); // read\nconst discovery = global.get('discovery'); // read\nlet entity = global.get('entity'); // autoupdate\n\n// Parse uid\nlet uid = msg.uid;\nlet path = uid.split('/');\n\n// Parse entity\nlet create = false;\nif (typeof entity[uid] !== 'object') {\n    entity[uid] = {};\n    create = true;\n}\n\nentity[uid] = { ...template.entity, ...entity[uid], ...{\n    'uid': uid,\n    'source': path[0],\n    'parent': path[1],\n    'id': path[2],\n    'seen': Date.now()\n} };\n\n// Parse discovery\nif (typeof discovery[uid] !== 'object') {\n\n    return msg;\n}\n\n// Discovery can be received after first value\nif (entity[uid]['group'] === '') {\n    entity[uid]['group'] = discovery[uid]['group'];\n}\nif (entity[uid]['unit'] === '') {\n    // Domotic units for DKNR types without unit\n    const units = {\n        'binary': 'b',\n        'enum': 'enum',\n        'text': 'text'\n    };\n    entity[uid]['unit'] = discovery[uid]['unit'] !== '' ? discovery[uid]['unit'] : (units[discovery[uid]['type']] || '');\n}\nif (create) {\n    entity[uid]['value'] = discovery[uid]['type'] === 'binary' ? (discovery[uid]['value'] === 'ON' ? 1 : 0) : discovery[uid]['value'];\n}\n\nif (entity[uid]['name'] === '') {\n    entity[uid]['name'] = discovery[uid]['name'];\n}\n\nfor (const k in discovery[uid]['options']) {\n    if (!entity[uid]['options'].hasOwnProperty(k) || entity[uid]['options'][k] === '') {\n        entity[uid]['options'][k] = discovery[uid]['options'][k];\n    }\n}\n\nreturn msg;",
+        "func": "if (typeof msg.uid !== 'string') {\n\n    return;\n}\n\n// Get memories\nconst template = global.get('describe.template'); // read\nconst source = global.get('source'); // read\nconst discovery = global.get('discovery'); // read\nlet entity = global.get('entity'); // autoupdate\n\n// Parse uid\nlet uid = msg.uid;\nlet path = uid.split('/');\n\n// Parse entity\nlet create = false;\nif (typeof entity[uid] !== 'object') {\n    entity[uid] = {};\n    create = true;\n}\n\nentity[uid] = { ...template.entity, ...entity[uid], ...{\n    'uid': uid,\n    'source': path[0],\n    'parent': path[1],\n    'id': path[2],\n    'seen': Date.now()\n} };\n\n// Parse discovery\nif (typeof discovery[uid] !== 'object') {\n\n    return msg;\n}\n\n// Discovery can be received after first value\nif (entity[uid]['group'] === '') {\n    entity[uid]['group'] = discovery[uid]['group'];\n}\nif (entity[uid]['unit'] === '') {\n    // Domotic units for DKNR types without unit\n    const units = {\n        'binary': 'b',\n        'enum': 'enum',\n        'text': 'text'\n    };\n    entity[uid]['unit'] = discovery[uid]['unit'] !== '' ? discovery[uid]['unit'] : (units[discovery[uid]['type']] || '');\n}\nif (create) {\n    entity[uid]['value'] = discovery[uid]['type'] === 'binary' ? (discovery[uid]['value'] === 'ON' ? 1 : 0) : discovery[uid]['value'];\n}\n\nif (create && entity[uid]['name'] === '') {\n    entity[uid]['name'] = discovery[uid]['name'];\n}\n\nfor (const k in discovery[uid]['options']) {\n    if (!entity[uid]['options'].hasOwnProperty(k) || entity[uid]['options'][k] === '') {\n        entity[uid]['options'][k] = discovery[uid]['options'][k];\n    }\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5064,7 +5026,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 2920,
+        "y": 2960,
         "wires": [
             [
                 "b9c86bae8c17d770"
@@ -5079,7 +5041,7 @@
         "name": "common - entity - merge",
         "links": [],
         "x": 145,
-        "y": 2920,
+        "y": 2960,
         "wires": [
             [
                 "2d19ef3f5683869c"
@@ -5095,73 +5057,24 @@
         "mode": "return",
         "links": [],
         "x": 395,
-        "y": 2920,
+        "y": 2960,
         "wires": []
-    },
-    {
-        "id": "7c38bbae3c839c35",
-        "type": "debug",
-        "z": "4bc72a1112cb448c",
-        "g": "17fbda7c7b72d170",
-        "name": "common - mqtt - in",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1110,
-        "y": 2660,
-        "wires": []
-    },
-    {
-        "id": "9186fa487a5150ca",
-        "type": "link out",
-        "z": "4bc72a1112cb448c",
-        "g": "17fbda7c7b72d170",
-        "name": "common - mqtt - in",
-        "mode": "link",
-        "links": [
-            "b5c25ab9a253a15c"
-        ],
-        "x": 1035,
-        "y": 2600,
-        "wires": []
-    },
-    {
-        "id": "990afe4d9d755fb6",
-        "type": "link in",
-        "z": "4bc72a1112cb448c",
-        "g": "a40e8d7931c80727",
-        "name": "common - mqtt - out",
-        "links": [
-            "31ce49bdf1af861d"
-        ],
-        "x": 145,
-        "y": 2800,
-        "wires": [
-            [
-                "3b9eb116f7796358"
-            ]
-        ]
     },
     {
         "id": "3b9eb116f7796358",
         "type": "function",
         "z": "4bc72a1112cb448c",
-        "g": "a40e8d7931c80727",
+        "g": "382f031049d3a6b8",
         "name": "data",
-        "func": "if (msg.topic === '' || global.get('stop')) {\n\n    return;\n}\n\nconst entity = global.get('entity');\nif (typeof entity[msg.topic] !== 'object') {\n\n    return;\n}\n\nconst mqtt = global.get('mqtt');\nif (!mqtt.enabled || mqtt.topic === '') {\n\n    return;\n}\n\n// DKNR binary values are ON / OFF\nconst discovery = global.get('discovery[\"' + msg.topic + '\"]') || {};\nif (discovery.type === 'binary' && !['ON', 'OFF', 'TOGGLE'].includes(msg.payload)) {\n    msg.payload = [true, 1, '1'].includes(msg.payload) ? 'ON' : 'OFF';\n}\n\nmsg.topic = mqtt.topic + '/set/' + msg.topic;\nmsg.qos = 0;\nmsg.retain = false;\n\nreturn msg;",
+        "func": "let boot = global.get('boot');\nnode.status({\n    'fill': boot ? 'red': 'green'\n});\n\nif (msg.topic === '' || global.get('stop')) {\n\n    return;\n}\n\nconst entity = global.get('entity');\nif (typeof entity[msg.topic] !== 'object') {\n\n    return;\n}\n\nconst mqtt = global.get('mqtt');\nif (!mqtt.enabled || mqtt.topic === '') {\n\n    return;\n}\n\n// DKNR binary values are ON / OFF\nconst discovery = global.get('discovery[\"' + msg.topic + '\"]') || {};\nif (discovery.type === 'binary' && !['ON', 'OFF', 'TOGGLE'].includes(msg.payload)) {\n    msg.payload = [true, 1, '1'].includes(msg.payload) ? 'ON' : 'OFF';\n}\n\nmsg.topic = mqtt.topic + '/set/' + msg.topic;\nmsg.qos = 0;\nmsg.retain = false;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 270,
-        "y": 2800,
+        "x": 595,
+        "y": 2840,
         "wires": [
             [
                 "b053dee460766806"
@@ -5172,7 +5085,7 @@
         "id": "89516a4720e1e863",
         "type": "mqtt out",
         "z": "4bc72a1112cb448c",
-        "g": "a40e8d7931c80727",
+        "g": "382f031049d3a6b8",
         "name": "",
         "topic": "",
         "qos": "",
@@ -5183,15 +5096,15 @@
         "correl": "",
         "expiry": "",
         "broker": "2c5e094fee5ae877",
-        "x": 590,
-        "y": 2800,
+        "x": 915,
+        "y": 2840,
         "wires": []
     },
     {
         "id": "b053dee460766806",
         "type": "delay",
         "z": "4bc72a1112cb448c",
-        "g": "a40e8d7931c80727",
+        "g": "382f031049d3a6b8",
         "name": "20/s",
         "pauseType": "rate",
         "timeout": "5",
@@ -5205,8 +5118,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 430,
-        "y": 2800,
+        "x": 755,
+        "y": 2840,
         "wires": [
             [
                 "89516a4720e1e863"
@@ -6614,7 +6527,7 @@
         "payload": "",
         "payloadType": "str",
         "x": 270,
-        "y": 4820,
+        "y": 3340,
         "wires": [
             [
                 "29c782ee02094a7a"
@@ -6635,7 +6548,7 @@
         "finalize": "",
         "libs": [],
         "x": 610,
-        "y": 4820,
+        "y": 3340,
         "wires": [
             [
                 "938e2afe4f3b8170"
@@ -6653,7 +6566,7 @@
             "35bded8380dee43f"
         ],
         "x": 895,
-        "y": 4760,
+        "y": 3280,
         "wires": []
     },
     {
@@ -6670,7 +6583,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 4700,
+        "y": 3220,
         "wires": [
             []
         ]
@@ -6685,7 +6598,7 @@
             "71f58f96971c0613"
         ],
         "x": 145,
-        "y": 4700,
+        "y": 3220,
         "wires": [
             [
                 "89a4eac22d6b866f",
@@ -6703,7 +6616,7 @@
             "5c094bd512b44876"
         ],
         "x": 145,
-        "y": 4760,
+        "y": 3280,
         "wires": [
             [
                 "99c17f445801b029"
@@ -6724,7 +6637,7 @@
         "finalize": "",
         "libs": [],
         "x": 610,
-        "y": 4760,
+        "y": 3280,
         "wires": [
             []
         ]
@@ -6737,7 +6650,7 @@
         "name": "common - dknr - data",
         "links": [],
         "x": 645,
-        "y": 4700,
+        "y": 3220,
         "wires": [
             [
                 "7fc016215b15f119"
@@ -6758,7 +6671,7 @@
         "finalize": "",
         "libs": [],
         "x": 770,
-        "y": 4700,
+        "y": 3220,
         "wires": [
             [
                 "aff998eaeca88c3a"
@@ -6774,7 +6687,7 @@
         "mode": "return",
         "links": [],
         "x": 895,
-        "y": 4700,
+        "y": 3220,
         "wires": []
     },
     {
@@ -6792,7 +6705,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 800,
-        "y": 4880,
+        "y": 3400,
         "wires": []
     },
     {
@@ -6814,7 +6727,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 770,
-        "y": 4760,
+        "y": 3280,
         "wires": [
             [
                 "1b6ec87a498d3297",
@@ -6836,7 +6749,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 4880,
+        "y": 3400,
         "wires": [
             [
                 "57d4182cc0e85388"
@@ -6858,7 +6771,7 @@
         "outputs": 1,
         "options": [],
         "x": 440,
-        "y": 4880,
+        "y": 3400,
         "wires": [
             [
                 "34ed32e6a87f128a"
@@ -6879,7 +6792,7 @@
         "finalize": "",
         "libs": [],
         "x": 610,
-        "y": 4880,
+        "y": 3400,
         "wires": [
             [
                 "938e2afe4f3b8170"
@@ -6909,7 +6822,7 @@
         "payload": "sunrise",
         "payloadType": "str",
         "x": 260,
-        "y": 4940,
+        "y": 3460,
         "wires": [
             [
                 "57d4182cc0e85388"
@@ -6939,7 +6852,7 @@
         "payload": "sunset",
         "payloadType": "str",
         "x": 260,
-        "y": 5000,
+        "y": 3520,
         "wires": [
             [
                 "57d4182cc0e85388"
@@ -6954,7 +6867,7 @@
         "name": "TOD: do not replace existing settings",
         "info": "",
         "x": 680,
-        "y": 4960,
+        "y": 3480,
         "wires": []
     },
     {
@@ -6969,8 +6882,8 @@
             "1b6ec87a498d3297",
             "9d415c5d88aaac86"
         ],
-        "x": 160,
-        "y": 5160,
+        "x": 145,
+        "y": 2780,
         "wires": [
             [
                 "b9500bf1ddabdd36"
@@ -6990,30 +6903,16 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 440,
-        "y": 5160,
+        "x": 435,
+        "y": 2780,
         "wires": [
             [
-                "f9bec52ad4f5f68d"
+                "47f7e793bdab992b"
             ],
             [
-                "31ce49bdf1af861d"
+                "3b9eb116f7796358"
             ]
         ]
-    },
-    {
-        "id": "31ce49bdf1af861d",
-        "type": "link out",
-        "z": "4bc72a1112cb448c",
-        "g": "382f031049d3a6b8",
-        "name": "common - entity - set - mqtt",
-        "mode": "link",
-        "links": [
-            "990afe4d9d755fb6"
-        ],
-        "x": 640,
-        "y": 5200,
-        "wires": []
     },
     {
         "id": "b9500bf1ddabdd36",
@@ -7033,8 +6932,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 270,
-        "y": 5160,
+        "x": 265,
+        "y": 2780,
         "wires": [
             [
                 "3fe521ed8f2ebe7c"
@@ -7042,37 +6941,20 @@
         ]
     },
     {
-        "id": "b5c25ab9a253a15c",
-        "type": "link in",
-        "z": "4bc72a1112cb448c",
-        "g": "ec0c0d33b87321e5",
-        "name": "common - entity - event",
-        "links": [
-            "9186fa487a5150ca"
-        ],
-        "x": 160,
-        "y": 5320,
-        "wires": [
-            [
-                "f9bec52ad4f5f68d"
-            ]
-        ]
-    },
-    {
         "id": "f9bec52ad4f5f68d",
         "type": "function",
         "z": "4bc72a1112cb448c",
-        "g": "ec0c0d33b87321e5",
+        "g": "17fbda7c7b72d170",
         "name": "data",
-        "func": "/*\nEntity event: an entity value was received or set.\nmsg.topic is the entity uid, msg.repeat is true if value does not change.\nSend entity to scenes, energy, influxdb...\n*/\n\nif (global.get('stop') === true || typeof msg.topic !== 'string') {\n\n    return;\n}\n\nconst entity = global.get('entity[\"' + msg.topic + '\"]');\nif (typeof entity !== 'object') {\n\n    return;\n}\n\nconst template = global.get('describe.template.entity') || {}; // read\n\nnode.status({ 'fill': msg.repeat ? 'blue' : 'green', 'shape': 'ring', 'text': msg.topic + ' : ' + entity.value });\n\nreturn {\n    'topic': '',\n    'payload': { ...template, ...entity },\n    'repeat': msg.repeat === true\n};\n",
+        "func": "/*\nEntity event: an entity value was received or set.\nmsg.topic is the entity uid, msg.repeat is true if value does not change.\nSend entity to scenes, energy, influxdb...\n*/\n\nif (global.get('stop') === true || typeof msg.topic !== 'string') {\n\n    return;\n}\n\nconst entity = global.get('entity[\"' + msg.topic + '\"]');\nif (typeof entity !== 'object') {\n\n    return;\n}\n\nconst template = global.get('describe.template.entity') || {}; // read\n\nnode.status({\n    'fill': msg.repeat ? 'blue' : 'green',\n    'text': msg.topic + ' : ' + entity.value\n});\n\nreturn {\n    'topic': '',\n    'payload': { ...template, ...entity },\n    'repeat': msg.repeat === true\n};\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 400,
-        "y": 5320,
+        "x": 1070,
+        "y": 2600,
         "wires": [
             [
                 "63d83924d744eac4",
@@ -7084,24 +6966,24 @@
         "id": "63d83924d744eac4",
         "type": "link out",
         "z": "4bc72a1112cb448c",
-        "g": "ec0c0d33b87321e5",
-        "name": "common - entity - event",
+        "g": "17fbda7c7b72d170",
+        "name": "common - entity - get",
         "mode": "link",
         "links": [
-            "dc45776ae2f10ba7",
+            "83ee9be1aa2cf49f",
             "cdcf8ab31b9723f0",
-            "83ee9be1aa2cf49f"
+            "dc45776ae2f10ba7"
         ],
-        "x": 640,
-        "y": 5320,
+        "x": 1195,
+        "y": 2600,
         "wires": []
     },
     {
         "id": "b9c625940061cf0f",
         "type": "debug",
         "z": "4bc72a1112cb448c",
-        "g": "ec0c0d33b87321e5",
-        "name": "common - entity - event",
+        "g": "17fbda7c7b72d170",
+        "name": "common - entity - get",
         "active": false,
         "tosidebar": true,
         "console": false,
@@ -7110,9 +6992,40 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 660,
-        "y": 5360,
+        "x": 1280,
+        "y": 2660,
         "wires": []
+    },
+    {
+        "id": "47f7e793bdab992b",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "382f031049d3a6b8",
+        "name": "common - entity - loop",
+        "mode": "link",
+        "links": [
+            "ecc79f72405ae3d5"
+        ],
+        "x": 560,
+        "y": 2780,
+        "wires": []
+    },
+    {
+        "id": "ecc79f72405ae3d5",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "17fbda7c7b72d170",
+        "name": "common - entity - loop",
+        "links": [
+            "47f7e793bdab992b"
+        ],
+        "x": 945,
+        "y": 2600,
+        "wires": [
+            [
+                "f9bec52ad4f5f68d"
+            ]
+        ]
     },
     {
         "id": "a3f3e6fe9fc31fdc",
@@ -10261,7 +10174,7 @@
         "z": "560376d6bba621ec",
         "g": "b9c606401bb8c37c",
         "name": "data",
-        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (!msg.enabled) {\n\n    return;\n}\n\nconst room = flow.get('room[\"' + msg.hmi.id + '\"]') || '--';\nconst entity = { ...(global.get('entity') || {}) };\nconst colors = { ...(global.get('describe.color') || {}) };\nconst icons = { ...(global.get('describe.elements') || {}) };\nconst enums = { ...(global.get('describe.enum') || {}) };\nconst sources = { ...(global.get('source') || {}) };\nconst reverts = [ ...(global.get('describe.reverts') || []) ];\n\nconst groups = {\n    'switch': [\n        'light',\n        'switch',\n        'plug',\n        'mode',\n        'fan',\n        'direction',\n        'heater',\n        'waterboiler',\n        'sound',\n        'shield'\n    ],\n    'enum': [],\n    'aperture': [\n        'aperture',\n        'door',\n        'window',\n        'lock',\n        'shutter',\n        'slider'\n    ],\n    'climate': [\n        'humidity',\n        'temperature',\n        'illuminance',\n        'pressure',\n        'location'\n    ],\n    'security': [\n        'alert',\n        'motion'\n    ],\n    'energy': [\n        'current',\n        'energy',\n        'power',\n        'voltage',\n        'frequency',\n        'tariff'\n    ],\n    'battery': [\n        'battery',\n    ],\n    'various': [\n        'remote',\n        'text',\n        'time',\n        'color'\n    ]\n};\n\nconst labels = {\n    'switch': msg.dictionary.room.switch || 'Switch',\n    'enum': msg.dictionary.room.selector || 'Selector',\n    'aperture': msg.dictionary.room.aperture || 'Aperture',\n    'climate': msg.dictionary.room.climate || 'Climate',\n    'energy': msg.dictionary.room.energy || 'Energy',\n    'battery': msg.dictionary.room.battery || 'Battery',\n    'security': msg.dictionary.room.security || 'Security',\n    'various': msg.dictionary.room.various || 'Various'\n};\n\nlet inc = {\n    'switch': 0,\n    'enum': 0,\n    'aperture': 0,\n    'climate': 0,\n    'security': 0,\n    'energy': 0,\n    'battery': 0,\n    'various': 0\n};\nlet res = {\n    'switch': [],\n    'enum': [],\n    'aperture': [],\n    'climate': [],\n    'security': [],\n    'energy': [],\n    'battery': [],\n    'various': []\n};\n\nlet exists = false;\n\nfor (const uid in entity) {\n    if (entity[uid]['room'] === room && \n        entity[uid]['hidden'] === 0\n    ) {\n        let group = 'various';\n        for (const g in groups) {\n            if (groups[g].includes(entity[uid]['element'])) {\n                group = g;\n            }\n        }\n\n        let value = entity[uid]['value'] || 0;\n        let unit = entity[uid]['unit'];\n        //let type = entity[uid]['group'];\n        let name = entity[uid]['name'] || '';\n        let parent = global.get('parent[\"' + entity[uid]['parent'] + '\"][\"name\"]') || entity[uid]['parent'];\n        let icon = '';\n        let color = 'empty';\n        let element = entity[uid]['element'];\n        let element_name = msg.dictionary.option_element[element] || 'unknown';\n        let element_icon = '';\n        let source = typeof sources[entity[uid]['source']] === 'object' ? [sources[entity[uid]['source']]['mdi'] || 'help', sources[entity[uid]['source']]['title'] || entity[uid]['source']] : ['help', entity[uid]['source']];\n\n        // Revert value for some \"rb\" unit\n        if (unit === 'rb') {\n            value = value === 0 ? 1 : 0;\n        }\n        // Revert text for some elements (see describe.reverts)\n        if (reverts.includes(element) && unit !== 'enum') {\n            value = value === 0 ? 1 : 0;\n        }\n        // Get icon from value\n        if (typeof icons[element] !== 'undefined') {\n            if (value) {\n                icon = icons[element][1];\n                color = colors.theme;\n            } else {\n                icon = icons[element][0];\n                color = colors.empty;\n            }\n            element_icon = icons[element][1];\n        }\n\n        // Battery alert color\n        if (element === 'battery' && value < 15) {\n            color = colors.off;\n        }\n\n        // Get special enum value\n        if (unit === 'enum') {// && type === 'command') {\n            // Enum values come from dknr source definitions, or from entity discovery options\n                let src_enum = (enums[entity[uid]['source']] || {})[entity[uid]['id']];\n                if (typeof src_enum !== 'object') {\n                    src_enum = {};\n                    for (const o in (entity[uid]['options'] || {})) {\n                        src_enum[o] = ['format-list-bulleted', entity[uid]['options'][o]];\n                    }\n                }\n                let cur_enum = src_enum[value] || [icon, value];\n            icon = cur_enum[0];\n            value = cur_enum[1];\n            group = 'enum';\n        }\n\n        // Format value\n        if (!['8b', 'rb', 'b', 'enum', 'ts', 'time', 'text', 'chex'].includes(unit) && unit !== '') {\n            // Add unit text\n            value = value + ' ' + unit;\n        }\n        else if (unit === '8b') {\n            // Convert 8b in %\n            value = Math.ceil(Number(value) * 100 / 255) + '%'\n        }\n        else if (unit === 'ts') {\n            // Convert to date\n            value = new Date(value).toLocaleString(msg.dictionary.common.locales);\n        }\n        else if (['b', 'rb'].includes(unit)) {\n            // Convert to text\n            if (group === 'aperture') {\n                value = value === 0 ? (msg.dictionary.room.close || 'Closed') : (msg.dictionary.room.open || 'Opened');\n            }\n            else if (group === 'switch') {\n                if (element === 'shield') {\n                    value = value === 0 ? (msg.dictionary.room.inactive || 'Inactiv') : (msg.dictionary.room.active || 'Activ');\n                } else {\n                    value = value === 0 ? (msg.dictionary.room.off || 'Off'): (msg.dictionary.room.on || 'On');\n                }\n            }\n        }\n\n        // Get name from parent if none or default is set\n        if (name === '' || name === entity[uid]['id']) {\n            name = parent;\n        }\n\n        // Colorize unresponsive entity\n        let type_icon = entity[uid]['group'] === 'sensor' ? 'leak': 'button-pointer';\n        let type_color = entity[uid]['group'] === 'sensor' ? colors.empty : colors.none;\n        if ((entity[uid]['seen'] + (48 * 60 * 60 * 1000)) < Date.now()) { // 48h\n            type_color = colors.median;\n        }\n        let seen = global.get('parent[\"' + entity[uid]['parent'] + '\"][\"seen\"]') || 0;\n        if (seen > 0 && (seen + (48 * 60 * 60 * 1000)) < Date.now()) {\n            type_color = colors.off;\n        }\n\n        res[group][inc[group]] = {\n            'uid': uid,\n            'name': name,\n            'value': value,\n            'icon': '<i class=\"dknr-row-icon mdi mdi-' + icon + '\" style=\"color:' + color + '; font-size: 2em;\" title=\"' + uid + '\"></i>',\n            'icons': '<span style=\"white-space: nowrap;\">' +\n                '<i class=\"dknr-row-icon mdi mdi-' + source[0] + '\" style=\"color:' + colors.empty + '\" title=\"' + source[1] + '\"></i> ' +\n                '<i class=\"dknr-row-icon mdi mdi-' + element_icon + '\" style=\"color:' + colors.empty + '\" title=\"' + element_name + '\"></i> ' +\n                '<i class=\"dknr-row-icon mdi mdi-' + type_icon + '\" style=\"color:' + type_color + '\" title=\"' + msg.dictionary.option_group[entity[uid]['group']] + '\"></i>' +\n                '</span>'\n        };\n\n        inc[group] = inc[group] + 1;\n        exists = true;\n    }\n}\n\nlet rres = {};\nfor (const k in res) {\n    if (res[k].length > 0) {\n        res[k].sort((a, b) => a.name.localeCompare(b.name));\n        rres[k] = {...msg, ...{\n            'label': labels[k],\n            'payload': res[k]\n        }};\n    } else {\n        rres[k] = {...msg, ...{\n            'topic': '',\n            'class': 'remove',\n            'enabled': false,\n            'payload': {}\n        }};\n    }\n}\n\nif (exists) {\n\n    node.send([rres['energy'], rres['aperture'], rres['switch'], rres['climate'], rres['enum'], rres['various'], rres['security'], rres['battery']]);\n}\n\nreturn;",
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (!msg.enabled) {\n\n    return;\n}\n\nconst room = flow.get('room[\"' + msg.hmi.id + '\"]') || '--';\nconst entity = { ...(global.get('entity') || {}) };\nconst colors = { ...(global.get('describe.color') || {}) };\nconst icons = { ...(global.get('describe.elements') || {}) };\nconst enums = { ...(global.get('describe.enum') || {}) };\nconst sources = { ...(global.get('source') || {}) };\nconst reverts = [ ...(global.get('describe.reverts') || []) ];\n\nconst groups = {\n    'switch': [\n        'light',\n        'switch',\n        'plug',\n        'mode',\n        'fan',\n        'direction',\n        'heater',\n        'waterboiler',\n        'sound',\n        'shield'\n    ],\n    'enum': [],\n    'aperture': [\n        'aperture',\n        'door',\n        'window',\n        'lock',\n        'shutter',\n        'slider'\n    ],\n    'climate': [\n        'humidity',\n        'temperature',\n        'illuminance',\n        'pressure',\n        'location'\n    ],\n    'security': [\n        'alert',\n        'motion'\n    ],\n    'energy': [\n        'current',\n        'energy',\n        'power',\n        'voltage',\n        'frequency',\n        'tariff'\n    ],\n    'battery': [\n        'battery',\n    ],\n    'various': [\n        'remote',\n        'text',\n        'time',\n        'color'\n    ]\n};\n\nconst labels = {\n    'switch': msg.dictionary.room.switch || 'Switch',\n    'enum': msg.dictionary.room.selector || 'Selector',\n    'aperture': msg.dictionary.room.aperture || 'Aperture',\n    'climate': msg.dictionary.room.climate || 'Climate',\n    'energy': msg.dictionary.room.energy || 'Energy',\n    'battery': msg.dictionary.room.battery || 'Battery',\n    'security': msg.dictionary.room.security || 'Security',\n    'various': msg.dictionary.room.various || 'Various'\n};\n\nlet inc = {\n    'switch': 0,\n    'enum': 0,\n    'aperture': 0,\n    'climate': 0,\n    'security': 0,\n    'energy': 0,\n    'battery': 0,\n    'various': 0\n};\nlet res = {\n    'switch': [],\n    'enum': [],\n    'aperture': [],\n    'climate': [],\n    'security': [],\n    'energy': [],\n    'battery': [],\n    'various': []\n};\n\nlet exists = false;\n\nfor (const uid in entity) {\n    if (entity[uid]['room'] === room && \n        entity[uid]['hidden'] === 0\n    ) {\n        let group = 'various';\n        for (const g in groups) {\n            if (groups[g].includes(entity[uid]['element'])) {\n                group = g;\n            }\n        }\n\n        let brut = entity[uid]['value'] || 0;\n        let value = brut;\n        let unit = entity[uid]['unit'];\n        //let type = entity[uid]['group'];\n        let name = entity[uid]['name'] || '';\n        let parent = global.get('parent[\"' + entity[uid]['parent'] + '\"][\"name\"]') || entity[uid]['parent'];\n        let icon = '';\n        let color = 'empty';\n        let element = entity[uid]['element'];\n        let element_name = msg.dictionary.option_element[element] || 'unknown';\n        let element_icon = '';\n        let source = typeof sources[entity[uid]['source']] === 'object' ? [sources[entity[uid]['source']]['mdi'] || 'help', sources[entity[uid]['source']]['title'] || entity[uid]['source']] : ['help', entity[uid]['source']];\n\n        // Revert value for some \"rb\" unit\n        if (unit === 'rb') {\n            value = value === 0 ? 1 : 0;\n        }\n        // Revert text for some elements (see describe.reverts)\n        if (reverts.includes(element) && unit !== 'enum') {\n            value = value === 0 ? 1 : 0;\n        }\n        // Get icon from value\n        if (typeof icons[element] !== 'undefined') {\n            if (value) {\n                icon = icons[element][1];\n                color = colors.theme;\n            } else {\n                icon = icons[element][0];\n                color = colors.empty;\n            }\n            element_icon = icons[element][1];\n        }\n\n        // Battery alert color\n        if (element === 'battery' && value < 15) {\n            color = colors.off;\n        }\n\n        // Get special enum value\n        if (unit === 'enum') {// && type === 'command') {\n            // Enum values come from dknr source definitions, or from entity discovery options\n                let src_enum = (enums[entity[uid]['source']] || {})[entity[uid]['id']];\n                if (typeof src_enum !== 'object') {\n                    src_enum = {};\n                    for (const o in (entity[uid]['options'] || {})) {\n                        src_enum[o] = ['format-list-bulleted', entity[uid]['options'][o]];\n                    }\n                }\n                let cur_enum = src_enum[value] || [icon, value];\n            icon = cur_enum[0];\n            value = cur_enum[1];\n            group = 'enum';\n        }\n\n        // Format value\n        if (!['8b', 'rb', 'b', 'enum', 'ts', 'time', 'text', 'chex'].includes(unit) && unit !== '') {\n            // Add unit text\n            value = value + ' ' + unit;\n        }\n        else if (unit === '8b') {\n            // Convert 8b in %\n            value = Math.ceil(Number(value) * 100 / 255) + '%'\n        }\n        else if (unit === 'ts') {\n            // Convert to date\n            value = new Date(value).toLocaleString(msg.dictionary.common.locales);\n        }\n        else if (['b', 'rb'].includes(unit)) {\n            // Convert to text\n            if (group === 'aperture') {\n                value = value === 0 ? (msg.dictionary.room.close || 'Closed') : (msg.dictionary.room.open || 'Opened');\n            }\n            else if (group === 'switch') {\n                if (element === 'shield') {\n                    value = value === 0 ? (msg.dictionary.room.inactive || 'Inactiv') : (msg.dictionary.room.active || 'Activ');\n                } else {\n                    value = value === 0 ? (msg.dictionary.room.off || 'Off'): (msg.dictionary.room.on || 'On');\n                }\n            }\n        }\n\n        // Get name from parent if none or default is set\n        if (name === '' || name === entity[uid]['id']) {\n            name = parent;\n        }\n\n        // Colorize unresponsive entity\n        let type_icon = entity[uid]['group'] === 'sensor' ? 'leak': 'button-pointer';\n        let type_color = entity[uid]['group'] === 'sensor' ? colors.empty : colors.none;\n        if ((entity[uid]['seen'] + (48 * 60 * 60 * 1000)) < Date.now()) { // 48h\n            type_color = colors.median;\n        }\n        let seen = global.get('parent[\"' + entity[uid]['parent'] + '\"][\"seen\"]') || 0;\n        if (seen > 0 && (seen + (48 * 60 * 60 * 1000)) < Date.now()) {\n            type_color = colors.off;\n        }\n\n        res[group][inc[group]] = {\n            'uid': uid,\n            'name': name,\n            'value': value,\n            'icon': '<i class=\"dknr-row-icon mdi mdi-' + icon + '\" style=\"color:' + color + '; font-size: 2em;\" title=\"' + uid + ' : ' + brut + '\"></i>',\n            'icons': '<span style=\"white-space: nowrap;\">' +\n                '<i class=\"dknr-row-icon mdi mdi-' + source[0] + '\" style=\"color:' + colors.empty + '\" title=\"' + source[1] + '\"></i> ' +\n                '<i class=\"dknr-row-icon mdi mdi-' + element_icon + '\" style=\"color:' + colors.empty + '\" title=\"' + element_name + '\"></i> ' +\n                '<i class=\"dknr-row-icon mdi mdi-' + type_icon + '\" style=\"color:' + type_color + '\" title=\"' + msg.dictionary.option_group[entity[uid]['group']] + '\"></i>' +\n                '</span>'\n        };\n\n        inc[group] = inc[group] + 1;\n        exists = true;\n    }\n}\n\nlet rres = {};\nfor (const k in res) {\n    if (res[k].length > 0) {\n        res[k].sort((a, b) => a.name.localeCompare(b.name));\n        rres[k] = {...msg, ...{\n            'label': labels[k],\n            'payload': res[k]\n        }};\n    } else {\n        rres[k] = {...msg, ...{\n            'topic': '',\n            'class': 'remove',\n            'enabled': false,\n            'payload': {}\n        }};\n    }\n}\n\nif (exists) {\n\n    node.send([rres['energy'], rres['aperture'], rres['switch'], rres['climate'], rres['enum'], rres['various'], rres['security'], rres['battery']]);\n}\n\nreturn;",
         "outputs": 8,
         "timeout": 0,
         "noerr": 0,
@@ -10848,7 +10761,7 @@
         "min": 0,
         "max": "100",
         "step": 1,
-        "className": "dknr-center",
+        "className": "",
         "iconPrepend": "",
         "iconAppend": "",
         "color": "",
