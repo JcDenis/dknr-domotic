@@ -513,7 +513,7 @@
             "ed2ba7fbd238280f",
             "d03b469d9ba955c9",
             "a447bfbc1cc0509d",
-            "a8c5090ac8e20652",
+            "4d81b7c2e6a95f03",
             "b8c212c065fb656c",
             "3cc949b1dce97a7f",
             "1de2d406744746ce",
@@ -530,7 +530,7 @@
             "e59e2099bc7e7b65",
             "8411c9fe3b3253d0",
             "41ef625016579d56",
-            "df87de4673cea93c",
+            "9b2e5f17c4d36a80",
             "44a2420accab1d01"
         ],
         "x": 104,
@@ -8273,75 +8273,12 @@
         ]
     },
     {
-        "id": "a8c5090ac8e20652",
-        "type": "ui-chart",
-        "z": "77269fd32cdb1638",
-        "g": "b828708d51f09ccc",
-        "group": "f871c246adaba03b",
-        "name": "energy - power - chart",
-        "label": "",
-        "order": 2,
-        "chartType": "line",
-        "category": "_field",
-        "categoryType": "property",
-        "xAxisLabel": "",
-        "xAxisProperty": "_time",
-        "xAxisPropertyType": "property",
-        "xAxisType": "time",
-        "xAxisFormat": "",
-        "xAxisFormatType": "{HH}:{mm}",
-        "xmin": "",
-        "xmax": "",
-        "yAxisLabel": "",
-        "yAxisProperty": "_value",
-        "yAxisPropertyType": "property",
-        "ymin": "",
-        "ymax": "",
-        "bins": 10,
-        "action": "replace",
-        "stackSeries": false,
-        "pointShape": "false",
-        "pointRadius": "2",
-        "showLegend": true,
-        "removeOlder": 1,
-        "removeOlderUnit": "86400",
-        "removeOlderPoints": "150",
-        "colors": [
-            "#0095ff",
-            "#ff0000",
-            "#ff7f0e",
-            "#2ca02c",
-            "#a347e1",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "textColor": [
-            "#666666"
-        ],
-        "textColorDefault": true,
-        "gridColor": [
-            "#e5e5e5"
-        ],
-        "gridColorDefault": true,
-        "width": "6",
-        "height": "5",
-        "className": "",
-        "interpolation": "smooth",
-        "x": 960,
-        "y": 320,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "b8c212c065fb656c",
         "type": "function",
         "z": "77269fd32cdb1638",
         "g": "b828708d51f09ccc",
         "name": "data",
-        "func": "const entity = { ...(global.get('entity') || { }) };\n\nfor (let i = 0; i < msg.payload.length; i++) {\n    msg.payload[i]['_field'] = entity[msg.payload[i]['_field']]['name'] || msg.payload[i]['_field'];\n}\n\nreturn msg;",
+        "func": "// Chart data: power by source, colors are fixed\n// grid red, solar orange, battery green, home blue\n\nconst dict = msg.dictionary.energy || {};\nconst rows = Array.isArray(msg.payload) ? msg.payload : [];\nconst end = Date.now();\n\nlet series = {\n    'grid_power': { 'key': 'grid', 'label': dict.grid_power || 'Grid power', 'color': '#e34948', 'points': [] },\n    'solar_power': { 'key': 'solar', 'label': dict.solar_power || 'Solar power', 'color': '#eda100', 'points': [] },\n    'battery_power': { 'key': 'battery', 'label': dict.battery_power || 'Battery power', 'color': '#2ca02c', 'points': [] },\n    'home_power': { 'key': 'home', 'label': dict.home_power || 'Home power', 'color': '#2a78d6', 'points': [] }\n};\n\nfor (const r of rows) {\n    const key = (msg.fields || {})[r['_field']];\n    const ts = new Date(r['_time']).getTime();\n    const value = Number(r['_value']);\n    if (typeof series[key] === 'object' && !isNaN(ts) && !isNaN(value)) {\n        series[key].points.push([ts, Math.round(value)]);\n    }\n}\n\nconst res = Object.values(series);\nres.forEach(s => s.points.sort((a, b) => a[0] - b[0]));\nnode.status({ 'text': res.reduce((t, s) => t + s.points.length, 0) + ' points' });\n\ndelete msg.fields;\ndelete msg.query;\nmsg.payload = {\n    'unit': msg.unit || 'W',\n    'locale': (msg.dictionary.common || {}).locales || 'fr',\n    'period': dict.power_period || 'Last 24 hours',\n    'empty': dict.power_empty || 'No power history',\n    'start': end - 24 * 3600000,\n    'end': end,\n    'step': 15 * 60000,\n    'series': res\n};\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -8352,7 +8289,7 @@
         "y": 320,
         "wires": [
             [
-                "a8c5090ac8e20652"
+                "4d81b7c2e6a95f03"
             ]
         ]
     },
@@ -8362,7 +8299,7 @@
         "z": "77269fd32cdb1638",
         "g": "b828708d51f09ccc",
         "name": "data",
-        "func": "\nconst entity = { ...(global.get('entity') || { }) };\nconst energy = { ...(global.get('energy') || { }) };\nlet or = '';\nfor (const e in energy) {\n    if (['grid_power', 'solar_power', 'battery_power'].includes(e) \n        && typeof entity[energy[e]] === 'object'\n        && entity[energy[e]]['hidden'] === 0\n    ) {\n        or = or + ' or r[\"_field\"] == \"' + energy[e] + '\"';\n    }\n}\n\nmsg.query = \n'from(bucket: \"domotic\")' +\n'|> range(start: -1d, stop:now())' +\n'|> filter(fn: (r) => r[\"_measurement\"] == \"power\")' +\n'|> filter(fn: (r) => r[\"_field\"] == \"dknr/sensor/home_power\"' + or + ')' +\n'|> aggregateWindow(every: 15m, fn: mean, createEmpty: false)' +\n'|> yield(name: \"mean\")';\n\nreturn msg;",
+        "func": "// Power of the last 24 hours: grid, solar, battery and home (15 minutes average)\n\nconst entity = { ...(global.get('entity') || { }) };\nconst energy = { ...(global.get('energy') || { }) };\n\nmsg.fields = { 'dknr/sensor/home_power': 'home_power' };\nmsg.unit = (entity['dknr/sensor/home_power'] || {}).unit || 'W';\nfor (const e of ['grid_power', 'solar_power', 'battery_power']) {\n    const uid = energy[e] || '';\n    if (uid !== '' && typeof entity[uid] === 'object' && entity[uid]['hidden'] === 0) {\n        msg.fields[uid] = e;\n    }\n}\n\nmsg.query =\n'from(bucket: \"domotic\")' +\n'|> range(start: -1d, stop: now())' +\n'|> filter(fn: (r) => ' + Object.keys(msg.fields).map(u => 'r[\"_field\"] == \"' + u + '\"').join(' or ') + ')' +\n'|> toFloat()' +\n'|> aggregateWindow(every: 15m, fn: mean, createEmpty: false)' +\n'|> yield(name: \"power\")';\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -9021,8 +8958,8 @@
         "z": "77269fd32cdb1638",
         "g": "b828708d51f09ccc",
         "name": "data",
-        "func": "\nconst entity = { ...(global.get('entity') || { }) };\nconst energy = { ...(global.get('energy') || { }) };\nlet field = '';\nfor (const e in energy) {\n    if ([ 'battery_level' ].includes(e) \n        && typeof entity[energy[e]] === 'object'\n        && entity[energy[e]]['hidden'] === 0\n    ) {\n        msg.unit = entity[energy[e]]['unit'];\n        msg.query =\n        'from(bucket: \"domotic\")' +\n        '|> range(start: -168h, stop: now())' +\n        '|> filter(fn: (r) => r[\"_measurement\"] == \"battery\")' +\n        '|> filter(fn: (r) => r[\"_field\"] == \"' + energy[e] + '\")' +\n        '|> sort(columns: [\"_time\"])' +\n        '|> aggregateWindow(every: 1h, fn: last, createEmpty: false)' +\n        '|> yield(name: \"last\")';\n\n        return msg;\n    }\n}\n\nreturn;",
-        "outputs": 1,
+        "func": "// Battery level of the last 7 days (hourly)\n\nconst entity = { ...(global.get('entity') || { }) };\nconst energy = { ...(global.get('energy') || { }) };\nconst uid = energy['battery_level'] || '';\n\nif (uid === '' || typeof entity[uid] !== 'object' || entity[uid]['hidden'] !== 0) {\n    node.status({ 'fill': 'red', 'text': 'no battery level' });\n\n    // Clear chart\n    return [null, { 'topic': msg.topic, 'payload': [], 'fields': {}, 'dictionary': msg.dictionary }];\n}\n\nmsg.fields = { [uid]: 'battery_level' };\nmsg.unit = entity[uid]['unit'];\nmsg.query =\n'from(bucket: \"domotic\")' +\n'|> range(start: -7d, stop: now())' +\n'|> filter(fn: (r) => r[\"_field\"] == \"' + uid + '\")' +\n'|> toFloat()' +\n'|> aggregateWindow(every: 1h, fn: last, createEmpty: false)' +\n'|> yield(name: \"battery\")';\n\nreturn [msg, null];\n",
+        "outputs": 2,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
@@ -9033,6 +8970,9 @@
         "wires": [
             [
                 "41ef625016579d56"
+            ],
+            [
+                "44a2420accab1d01"
             ]
         ]
     },
@@ -9086,75 +9026,12 @@
         ]
     },
     {
-        "id": "df87de4673cea93c",
-        "type": "ui-chart",
-        "z": "77269fd32cdb1638",
-        "g": "b828708d51f09ccc",
-        "group": "f871c246adaba03b",
-        "name": "energy - battery - chart",
-        "label": "",
-        "order": 6,
-        "chartType": "line",
-        "category": "_field",
-        "categoryType": "property",
-        "xAxisLabel": "",
-        "xAxisProperty": "_time",
-        "xAxisPropertyType": "property",
-        "xAxisType": "time",
-        "xAxisFormat": "",
-        "xAxisFormatType": "{d}/{M}",
-        "xmin": "",
-        "xmax": "",
-        "yAxisLabel": "",
-        "yAxisProperty": "_value",
-        "yAxisPropertyType": "property",
-        "ymin": "0",
-        "ymax": "100",
-        "bins": 10,
-        "action": "replace",
-        "stackSeries": false,
-        "pointShape": "circle",
-        "pointRadius": 4,
-        "showLegend": false,
-        "removeOlder": "8",
-        "removeOlderUnit": "86400",
-        "removeOlderPoints": "192",
-        "colors": [
-            "#2ca02c",
-            "#ff0000",
-            "#0095ff",
-            "#2ca02c",
-            "#a347e1",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "textColor": [
-            "#666666"
-        ],
-        "textColorDefault": true,
-        "gridColor": [
-            "#e5e5e5"
-        ],
-        "gridColorDefault": true,
-        "width": "6",
-        "height": "4",
-        "className": "",
-        "interpolation": "smooth",
-        "x": 980,
-        "y": 560,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "44a2420accab1d01",
         "type": "function",
         "z": "77269fd32cdb1638",
         "g": "b828708d51f09ccc",
         "name": "data",
-        "func": "/*\nconst entity = { ...(global.get('entity') || { }) };\n\nfor (let i = 0; i < msg.payload.length; i++) {\n    msg.payload[i]['_field'] = entity[msg.payload[i]['_field']]['name'] || msg.payload[i]['_field'];\n}\n*/\nreturn msg;",
+        "func": "// Chart data: battery level\n\nconst dict = msg.dictionary.energy || {};\nconst rows = Array.isArray(msg.payload) ? msg.payload : [];\nconst end = Date.now();\nconst unit = msg.unit || '%';\n\nlet serie = { 'key': 'battery', 'label': dict.battery_level || 'Battery level', 'color': '#2ca02c', 'points': [] };\nfor (const r of rows) {\n    const ts = new Date(r['_time']).getTime();\n    const value = Number(r['_value']);\n    if (typeof (msg.fields || {})[r['_field']] === 'string' && !isNaN(ts) && !isNaN(value)) {\n        serie.points.push([ts, Math.round(value * 10) / 10]);\n    }\n}\nserie.points.sort((a, b) => a[0] - b[0]);\nnode.status({ 'text': serie.points.length + ' points' });\n\ndelete msg.fields;\ndelete msg.query;\nmsg.payload = {\n    'unit': unit,\n    'locale': (msg.dictionary.common || {}).locales || 'fr',\n    'period': dict.battery_period || 'Last 7 days',\n    'empty': dict.battery_empty || 'No battery history',\n    'start': end - 7 * 24 * 3600000,\n    'end': end,\n    'step': 3600000,\n    'ymin': unit === '%' ? 0 : undefined,\n    'ymax': unit === '%' ? 100 : undefined,\n    'series': [serie]\n};\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -9165,7 +9042,7 @@
         "y": 560,
         "wires": [
             [
-                "df87de4673cea93c"
+                "9b2e5f17c4d36a80"
             ]
         ]
     },
@@ -9313,7 +9190,7 @@
         "z": "77269fd32cdb1638",
         "g": "ec2f8e34924572e0",
         "name": "dictionary",
-        "func": "// Register dictionary\n\nmsg.payload = {\n    'flow': env.get('NR_FLOW_NAME'),\n    'en': {\n        'page_title': 'Energy',\n        'energy_period': 'Last 31 days'\n    },\n    'fr': {\n        'page_title': 'Energie',\n        'power': 'Puissance',\n        'energy': 'Energie',\n        'battery': 'Batterie',\n        'entity': 'Entités',\n        'grid_power': 'Puissance réseau',\n        'solar_power': 'Puissance solaire',\n        'battery_power': 'Puissance batterie',\n        'battery_level': 'Niveau batterie',\n        'preferred_tariff': 'Tarif préférentiel en cours',\n        'favorable_energy_meter': 'Compteur tarif favorable',\n        'unfavorable_energy_meter': 'Compteur tarif défavorable',\n        'waterboiler_power': 'Puissance chauffe-eau',\n        'openweathermap_key': 'Clé API OpenWeatherMap',\n        'map': 'Plan',\n        'favorable': 'Tarif favorable',\n        'unfavorable': 'Tarif défavorable',\n        'total': 'Total',\n        'energy_period': '31 derniers jours',\n        'energy_empty': \"Aucun historique d'énergie\"\n    }\n};\n\nmsg = await node.linkcall('common - register - dictionary', msg);\n\nreturn;\n",
+        "func": "// Register dictionary\n\nmsg.payload = {\n    'flow': env.get('NR_FLOW_NAME'),\n    'en': {\n        'page_title': 'Energy',\n        'energy_period': 'Last 31 days'\n    },\n    'fr': {\n        'page_title': 'Energie',\n        'power': 'Puissance',\n        'energy': 'Energie',\n        'battery': 'Batterie',\n        'entity': 'Entités',\n        'grid_power': 'Puissance réseau',\n        'solar_power': 'Puissance solaire',\n        'battery_power': 'Puissance batterie',\n        'battery_level': 'Niveau batterie',\n        'preferred_tariff': 'Tarif préférentiel en cours',\n        'favorable_energy_meter': 'Compteur tarif favorable',\n        'unfavorable_energy_meter': 'Compteur tarif défavorable',\n        'waterboiler_power': 'Puissance chauffe-eau',\n        'openweathermap_key': 'Clé API OpenWeatherMap',\n        'map': 'Plan',\n        'favorable': 'Tarif favorable',\n        'unfavorable': 'Tarif défavorable',\n        'total': 'Total',\n        'energy_period': '31 derniers jours',\n        'energy_empty': \"Aucun historique d'énergie\",\n        'home_power': 'Puissance maison',\n        'power_period': '24 dernières heures',\n        'power_empty': 'Aucun historique de puissance',\n        'battery_period': '7 derniers jours',\n        'battery_empty': 'Aucun historique de batterie'\n    }\n};\n\nmsg = await node.linkcall('common - register - dictionary', msg);\n\nreturn;\n",
         "outputs": 0,
         "timeout": 0,
         "noerr": 0,
@@ -22137,6 +22014,56 @@
         "className": "",
         "x": 1280,
         "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4d81b7c2e6a95f03",
+        "type": "ui-template",
+        "z": "77269fd32cdb1638",
+        "g": "b828708d51f09ccc",
+        "group": "f871c246adaba03b",
+        "page": "",
+        "ui": "",
+        "name": "energy - power - chart",
+        "order": 2,
+        "width": "6",
+        "height": "1",
+        "head": "",
+        "format": "<template>\n    <div class=\"dkl\">\n        <div v-if=\"!series.length\" class=\"dkl-empty\">{{ d.empty || '' }}</div>\n        <template v-else>\n            <div class=\"dkl-head\">\n                <span v-for=\"s in series\" :key=\"s.key\" class=\"dkl-key\">\n                    <i :style=\"{ background: s.color }\"></i>{{ s.label }}\n                    <b>{{ num(sel !== null ? near(s, sel) : last(s)) }}</b>\n                </span>\n                <span class=\"dkl-when\">{{ sel !== null ? time(sel, true) : d.period }}</span>\n            </div>\n            <div class=\"dkl-plot\">\n                <svg v-if=\"W > 0\" :width=\"W\" :height=\"H\" class=\"dkl-svg\" @mousemove=\"move\" @click=\"move\" @mouseleave=\"sel = null\">\n                    <g v-for=\"t in geo.ticks\" :key=\"'y' + t.v\">\n                        <line :x1=\"PL\" :x2=\"W - PR\" :y1=\"t.y\" :y2=\"t.y\" class=\"dkl-grid\" :class=\"{ 'dkl-zero': t.v === 0 }\"></line>\n                        <text :x=\"PL - 6\" :y=\"t.y + 4\" text-anchor=\"end\" class=\"dkl-tick\">{{ num(t.v, true) }}</text>\n                    </g>\n                    <text v-for=\"t in xticks\" :key=\"'x' + t.t\" :x=\"x(t.t)\" :y=\"H - 6\" text-anchor=\"middle\" class=\"dkl-tick\">{{ t.label }}</text>\n                    <line v-if=\"sel !== null\" :x1=\"x(sel)\" :x2=\"x(sel)\" :y1=\"PT\" :y2=\"H - PB\" class=\"dkl-cross\"></line>\n                    <g v-for=\"s in series\" :key=\"s.key\">\n                        <path :d=\"path(s)\" class=\"dkl-line\" :style=\"{ stroke: s.color }\"></path>\n                        <circle v-if=\"sel !== null && near(s, sel) !== null\" :cx=\"x(nearPoint(s, sel)[0])\" :cy=\"geo.y(nearPoint(s, sel)[1])\" r=\"4\"\n                            :style=\"{ fill: s.color }\" class=\"dkl-dot\"></circle>\n                    </g>\n                </svg>\n            </div>\n        </template>\n    </div>\n</template>\n\n<script>\nexport default {\n    data() {\n        return { W: 0, H: 220, PL: 48, PR: 12, PT: 10, PB: 22, sel: null, observer: null };\n    },\n    computed: {\n        d() { return (this.msg && typeof this.msg.payload === 'object' && this.msg.payload) || {}; },\n        series() { return Array.isArray(this.d.series) ? this.d.series.filter(s => s.points && s.points.length) : []; },\n        // y scale, negative values allowed, optional fixed min / max\n        geo() {\n            let lo = Infinity, hi = -Infinity;\n            this.series.forEach(s => s.points.forEach(p => { lo = Math.min(lo, p[1]); hi = Math.max(hi, p[1]); }));\n            lo = typeof this.d.ymin === 'number' ? this.d.ymin : Math.min(0, lo);\n            hi = typeof this.d.ymax === 'number' ? this.d.ymax : Math.max(0, hi);\n            if (hi - lo < 1e-9) hi = lo + 1;\n            const raw = (hi - lo) / 4;\n            const mag = Math.pow(10, Math.floor(Math.log10(raw)));\n            const step = [1, 2, 2.5, 5, 10].map(m => m * mag).find(s => s >= raw);\n            const bottom = Math.floor(lo / step) * step, top = Math.ceil(hi / step) * step;\n            const ph = this.H - this.PT - this.PB;\n            const y = v => this.PT + ph - (v - bottom) / (top - bottom) * ph;\n            let ticks = [];\n            for (let v = bottom; v <= top + step / 2; v += step) ticks.push({ v: +v.toFixed(6), y: y(v) });\n            return { y: y, ticks: ticks };\n        },\n        // labels on round hours (24 h) or at midnight (several days)\n        xticks() {\n            if (!this.d.start || this.W <= 0) return [];\n            const h = 3600000, span = this.d.end - this.d.start;\n            const days = span > 2 * 24 * h;\n            const room = Math.max(1, Math.floor((this.W - this.PL - this.PR) / 52));\n            let every = days ? Math.max(1, Math.ceil(span / 24 / h / room)) : [1, 2, 3, 4, 6, 12].find(e => span / h / e <= room) || 24;\n            let res = [];\n            for (let t = Math.ceil(this.d.start / h) * h; t <= this.d.end; t += h) {\n                const dt = new Date(t);\n                if (days ? (dt.getHours() === 0 && Math.round((t - this.d.start) / 24 / h) % every === 0) : dt.getHours() % every === 0) {\n                    res.push({ t: t, label: days ? this.day(t) : String(dt.getHours()).padStart(2, '0') + ':00' });\n                }\n            }\n            return res;\n        }\n    },\n    watch: {\n        msg() { this.sel = null; this.$nextTick(this.resize); }\n    },\n    mounted() {\n        // the dashboard lowercases svg attributes (viewBox is lost), so draw in pixels at the real width\n        if (window.ResizeObserver) {\n            this.observer = new ResizeObserver(() => this.resize());\n            this.observer.observe(this.$el);\n        }\n        this.resize();\n    },\n    unmounted() {\n        if (this.observer) this.observer.disconnect();\n    },\n    methods: {\n        resize() {\n            const w = this.$el && this.$el.clientWidth ? Math.floor(this.$el.clientWidth) : 0;\n            if (w > 0 && w !== this.W) this.W = w;\n        },\n        x(t) {\n            return this.PL + (t - this.d.start) / Math.max(1, this.d.end - this.d.start) * (this.W - this.PL - this.PR);\n        },\n        path(s) {\n            return s.points.map((p, i) => (i ? 'L' : 'M') + this.x(p[0]).toFixed(1) + ',' + this.geo.y(p[1]).toFixed(1)).join('');\n        },\n        move(e) {\n            const r = e.currentTarget.getBoundingClientRect();\n            const t = this.d.start + (e.clientX - r.left - this.PL) / (this.W - this.PL - this.PR) * (this.d.end - this.d.start);\n            this.sel = Math.max(this.d.start, Math.min(this.d.end, t));\n        },\n        // nearest point of a serie, if close enough to the cursor time\n        nearPoint(s, t) {\n            let best = null;\n            s.points.forEach(p => { if (best === null || Math.abs(p[0] - t) < Math.abs(best[0] - t)) best = p; });\n            return best !== null && Math.abs(best[0] - t) <= (this.d.step || 3600000) ? best : null;\n        },\n        near(s, t) {\n            const p = this.nearPoint(s, t);\n            return p ? p[1] : null;\n        },\n        last(s) {\n            return s.points[s.points.length - 1][1];\n        },\n        num(v, short) {\n            if (typeof v !== 'number' || isNaN(v)) return '-';\n            const a = Math.abs(v);\n            const dec = a >= 100 ? 0 : (a >= 10 ? 1 : 2);\n            return v.toLocaleString(this.d.locale || 'fr', { maximumFractionDigits: short ? Math.min(dec, 1) : dec }) + (short || !this.d.unit ? '' : ' ' + this.d.unit);\n        },\n        day(ts) {\n            return new Date(ts).toLocaleDateString(this.d.locale || 'fr', { day: '2-digit', month: '2-digit' });\n        },\n        time(ts) {\n            const o = { hour: '2-digit', minute: '2-digit' };\n            if (this.d.end - this.d.start > 24 * 3600000) { o.weekday = 'short'; o.day = 'numeric'; }\n            return new Date(ts).toLocaleString(this.d.locale || 'fr', o);\n        }\n    }\n}\n</script>\n\n<style>\n.dkl { width: 100%; min-width: 0; color: rgb(var(--v-theme-on-surface)); }\n.dkl-empty { padding: 10px 12px; border-radius: 4px; background: rgba(var(--v-theme-on-surface), 0.05); color: rgba(var(--v-theme-on-surface), 0.6); font-size: 0.9rem; }\n.dkl-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; margin-bottom: 4px; font-size: 0.85rem; color: rgba(var(--v-theme-on-surface), 0.7); }\n.dkl-key i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }\n.dkl-key b { margin-left: 6px; color: rgb(var(--v-theme-on-surface)); font-weight: 600; }\n.dkl-when { margin-left: auto; color: rgba(var(--v-theme-on-surface), 0.6); }\n.dkl-plot { width: 100%; overflow: hidden; }\n.dkl-svg { display: block; touch-action: manipulation; }\n.dkl-grid { stroke: rgba(var(--v-theme-on-surface), 0.08); stroke-width: 1; }\n.dkl-zero { stroke: rgba(var(--v-theme-on-surface), 0.35); }\n.dkl-tick { font-size: 11px; fill: rgba(var(--v-theme-on-surface), 0.55); }\n.dkl-line { fill: none; stroke-width: 2; stroke-linejoin: round; }\n.dkl-dot { stroke: rgb(var(--v-theme-surface)); stroke-width: 1.5; }\n.dkl-cross { stroke: rgba(var(--v-theme-on-surface), 0.3); stroke-dasharray: 3 3; }\n</style>\n",
+        "storeOutMessages": false,
+        "passthru": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 960,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9b2e5f17c4d36a80",
+        "type": "ui-template",
+        "z": "77269fd32cdb1638",
+        "g": "b828708d51f09ccc",
+        "group": "f871c246adaba03b",
+        "page": "",
+        "ui": "",
+        "name": "energy - battery - chart",
+        "order": 6,
+        "width": "6",
+        "height": "1",
+        "head": "",
+        "format": "<template>\n    <div class=\"dkl\">\n        <div v-if=\"!series.length\" class=\"dkl-empty\">{{ d.empty || '' }}</div>\n        <template v-else>\n            <div class=\"dkl-head\">\n                <span v-for=\"s in series\" :key=\"s.key\" class=\"dkl-key\">\n                    <i :style=\"{ background: s.color }\"></i>{{ s.label }}\n                    <b>{{ num(sel !== null ? near(s, sel) : last(s)) }}</b>\n                </span>\n                <span class=\"dkl-when\">{{ sel !== null ? time(sel, true) : d.period }}</span>\n            </div>\n            <div class=\"dkl-plot\">\n                <svg v-if=\"W > 0\" :width=\"W\" :height=\"H\" class=\"dkl-svg\" @mousemove=\"move\" @click=\"move\" @mouseleave=\"sel = null\">\n                    <g v-for=\"t in geo.ticks\" :key=\"'y' + t.v\">\n                        <line :x1=\"PL\" :x2=\"W - PR\" :y1=\"t.y\" :y2=\"t.y\" class=\"dkl-grid\" :class=\"{ 'dkl-zero': t.v === 0 }\"></line>\n                        <text :x=\"PL - 6\" :y=\"t.y + 4\" text-anchor=\"end\" class=\"dkl-tick\">{{ num(t.v, true) }}</text>\n                    </g>\n                    <text v-for=\"t in xticks\" :key=\"'x' + t.t\" :x=\"x(t.t)\" :y=\"H - 6\" text-anchor=\"middle\" class=\"dkl-tick\">{{ t.label }}</text>\n                    <line v-if=\"sel !== null\" :x1=\"x(sel)\" :x2=\"x(sel)\" :y1=\"PT\" :y2=\"H - PB\" class=\"dkl-cross\"></line>\n                    <g v-for=\"s in series\" :key=\"s.key\">\n                        <path :d=\"path(s)\" class=\"dkl-line\" :style=\"{ stroke: s.color }\"></path>\n                        <circle v-if=\"sel !== null && near(s, sel) !== null\" :cx=\"x(nearPoint(s, sel)[0])\" :cy=\"geo.y(nearPoint(s, sel)[1])\" r=\"4\"\n                            :style=\"{ fill: s.color }\" class=\"dkl-dot\"></circle>\n                    </g>\n                </svg>\n            </div>\n        </template>\n    </div>\n</template>\n\n<script>\nexport default {\n    data() {\n        return { W: 0, H: 220, PL: 48, PR: 12, PT: 10, PB: 22, sel: null, observer: null };\n    },\n    computed: {\n        d() { return (this.msg && typeof this.msg.payload === 'object' && this.msg.payload) || {}; },\n        series() { return Array.isArray(this.d.series) ? this.d.series.filter(s => s.points && s.points.length) : []; },\n        // y scale, negative values allowed, optional fixed min / max\n        geo() {\n            let lo = Infinity, hi = -Infinity;\n            this.series.forEach(s => s.points.forEach(p => { lo = Math.min(lo, p[1]); hi = Math.max(hi, p[1]); }));\n            lo = typeof this.d.ymin === 'number' ? this.d.ymin : Math.min(0, lo);\n            hi = typeof this.d.ymax === 'number' ? this.d.ymax : Math.max(0, hi);\n            if (hi - lo < 1e-9) hi = lo + 1;\n            const raw = (hi - lo) / 4;\n            const mag = Math.pow(10, Math.floor(Math.log10(raw)));\n            const step = [1, 2, 2.5, 5, 10].map(m => m * mag).find(s => s >= raw);\n            const bottom = Math.floor(lo / step) * step, top = Math.ceil(hi / step) * step;\n            const ph = this.H - this.PT - this.PB;\n            const y = v => this.PT + ph - (v - bottom) / (top - bottom) * ph;\n            let ticks = [];\n            for (let v = bottom; v <= top + step / 2; v += step) ticks.push({ v: +v.toFixed(6), y: y(v) });\n            return { y: y, ticks: ticks };\n        },\n        // labels on round hours (24 h) or at midnight (several days)\n        xticks() {\n            if (!this.d.start || this.W <= 0) return [];\n            const h = 3600000, span = this.d.end - this.d.start;\n            const days = span > 2 * 24 * h;\n            const room = Math.max(1, Math.floor((this.W - this.PL - this.PR) / 52));\n            let every = days ? Math.max(1, Math.ceil(span / 24 / h / room)) : [1, 2, 3, 4, 6, 12].find(e => span / h / e <= room) || 24;\n            let res = [];\n            for (let t = Math.ceil(this.d.start / h) * h; t <= this.d.end; t += h) {\n                const dt = new Date(t);\n                if (days ? (dt.getHours() === 0 && Math.round((t - this.d.start) / 24 / h) % every === 0) : dt.getHours() % every === 0) {\n                    res.push({ t: t, label: days ? this.day(t) : String(dt.getHours()).padStart(2, '0') + ':00' });\n                }\n            }\n            return res;\n        }\n    },\n    watch: {\n        msg() { this.sel = null; this.$nextTick(this.resize); }\n    },\n    mounted() {\n        // the dashboard lowercases svg attributes (viewBox is lost), so draw in pixels at the real width\n        if (window.ResizeObserver) {\n            this.observer = new ResizeObserver(() => this.resize());\n            this.observer.observe(this.$el);\n        }\n        this.resize();\n    },\n    unmounted() {\n        if (this.observer) this.observer.disconnect();\n    },\n    methods: {\n        resize() {\n            const w = this.$el && this.$el.clientWidth ? Math.floor(this.$el.clientWidth) : 0;\n            if (w > 0 && w !== this.W) this.W = w;\n        },\n        x(t) {\n            return this.PL + (t - this.d.start) / Math.max(1, this.d.end - this.d.start) * (this.W - this.PL - this.PR);\n        },\n        path(s) {\n            return s.points.map((p, i) => (i ? 'L' : 'M') + this.x(p[0]).toFixed(1) + ',' + this.geo.y(p[1]).toFixed(1)).join('');\n        },\n        move(e) {\n            const r = e.currentTarget.getBoundingClientRect();\n            const t = this.d.start + (e.clientX - r.left - this.PL) / (this.W - this.PL - this.PR) * (this.d.end - this.d.start);\n            this.sel = Math.max(this.d.start, Math.min(this.d.end, t));\n        },\n        // nearest point of a serie, if close enough to the cursor time\n        nearPoint(s, t) {\n            let best = null;\n            s.points.forEach(p => { if (best === null || Math.abs(p[0] - t) < Math.abs(best[0] - t)) best = p; });\n            return best !== null && Math.abs(best[0] - t) <= (this.d.step || 3600000) ? best : null;\n        },\n        near(s, t) {\n            const p = this.nearPoint(s, t);\n            return p ? p[1] : null;\n        },\n        last(s) {\n            return s.points[s.points.length - 1][1];\n        },\n        num(v, short) {\n            if (typeof v !== 'number' || isNaN(v)) return '-';\n            const a = Math.abs(v);\n            const dec = a >= 100 ? 0 : (a >= 10 ? 1 : 2);\n            return v.toLocaleString(this.d.locale || 'fr', { maximumFractionDigits: short ? Math.min(dec, 1) : dec }) + (short || !this.d.unit ? '' : ' ' + this.d.unit);\n        },\n        day(ts) {\n            return new Date(ts).toLocaleDateString(this.d.locale || 'fr', { day: '2-digit', month: '2-digit' });\n        },\n        time(ts) {\n            const o = { hour: '2-digit', minute: '2-digit' };\n            if (this.d.end - this.d.start > 24 * 3600000) { o.weekday = 'short'; o.day = 'numeric'; }\n            return new Date(ts).toLocaleString(this.d.locale || 'fr', o);\n        }\n    }\n}\n</script>\n\n<style>\n.dkl { width: 100%; min-width: 0; color: rgb(var(--v-theme-on-surface)); }\n.dkl-empty { padding: 10px 12px; border-radius: 4px; background: rgba(var(--v-theme-on-surface), 0.05); color: rgba(var(--v-theme-on-surface), 0.6); font-size: 0.9rem; }\n.dkl-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; margin-bottom: 4px; font-size: 0.85rem; color: rgba(var(--v-theme-on-surface), 0.7); }\n.dkl-key i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }\n.dkl-key b { margin-left: 6px; color: rgb(var(--v-theme-on-surface)); font-weight: 600; }\n.dkl-when { margin-left: auto; color: rgba(var(--v-theme-on-surface), 0.6); }\n.dkl-plot { width: 100%; overflow: hidden; }\n.dkl-svg { display: block; touch-action: manipulation; }\n.dkl-grid { stroke: rgba(var(--v-theme-on-surface), 0.08); stroke-width: 1; }\n.dkl-zero { stroke: rgba(var(--v-theme-on-surface), 0.35); }\n.dkl-tick { font-size: 11px; fill: rgba(var(--v-theme-on-surface), 0.55); }\n.dkl-line { fill: none; stroke-width: 2; stroke-linejoin: round; }\n.dkl-dot { stroke: rgb(var(--v-theme-surface)); stroke-width: 1.5; }\n.dkl-cross { stroke: rgba(var(--v-theme-on-surface), 0.3); stroke-dasharray: 3 3; }\n</style>\n",
+        "storeOutMessages": false,
+        "passthru": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 980,
+        "y": 560,
         "wires": [
             []
         ]
