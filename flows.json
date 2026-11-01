@@ -1327,27 +1327,31 @@
         "nodes": [
             "4accbc2f42fda36a",
             "29c782ee02094a7a",
-            "1b6ec87a498d3297",
             "09cef86fee94df17",
             "5068dedeb37745ea",
-            "d3cc94988c84bfdc",
-            "99c17f445801b029",
             "e1196cc4776b2137",
             "7fc016215b15f119",
             "aff998eaeca88c3a",
             "aeb13f5cf98d1ed2",
-            "938e2afe4f3b8170",
             "89a4eac22d6b866f",
             "57d4182cc0e85388",
             "34ed32e6a87f128a",
             "b02cfc942571e058",
             "5ef4528ceedec868",
-            "f82cf8ab4c808c75"
+            "aff6b2a1d5f18057",
+            "5a174a1fda5964be",
+            "75fbe80882b8d252",
+            "dcfc01b8a89a7dc2",
+            "eea756fba5f3ad44",
+            "c25026e109d31e38",
+            "444ad600059797ee",
+            "a3489e9322d08b72",
+            "2d843796936d9e83"
         ],
         "x": 104,
         "y": 3179,
         "w": 832,
-        "h": 382
+        "h": 662
     },
     {
         "id": "382f031049d3a6b8",
@@ -1367,7 +1371,8 @@
             "3b9eb116f7796358",
             "89516a4720e1e863",
             "b053dee460766806",
-            "47f7e793bdab992b"
+            "47f7e793bdab992b",
+            "e209e82374afadce"
         ],
         "x": 104,
         "y": 2739,
@@ -1894,7 +1899,8 @@
             "f9bec52ad4f5f68d",
             "63d83924d744eac4",
             "b9c625940061cf0f",
-            "ecc79f72405ae3d5"
+            "ecc79f72405ae3d5",
+            "932008e716a91194"
         ],
         "x": 104,
         "y": 2559,
@@ -3033,7 +3039,7 @@
         "z": "4bc72a1112cb448c",
         "g": "22d16135f27f9975",
         "name": "memory",
-        "func": "// Execute some task on boot\n\n// First announce we boot, (stop scene)\nif (msg.payload === true) {\n    global.set('boot', true);\n}\n\n// Annonce to stop activity\nglobal.set('stop', true);\n\n// Memory source and destination\nconst places = ['file', 'default'];\nconst place = msg.payload === true ? places : [places[1], places[0]];\n\nnode.status({text: place[0] + ' to ' + place[1]});\n\n// Memories to manage\nconst persistent = {\n    'auth': { },\n    'mqtt': { },\n    'room': { },\n    'source': { },\n    'parent': { },\n    'discovery': { },\n    'entity': { },\n    'block': { },\n    'calendar': { },\n    'energy': { },\n    'scene': { }\n}\n\n// Copy backup or at least init\nfor (const key in persistent) {\n    let src = global.get(key, place[0]);\n    if (typeof src !== 'object') {\n        src = persistent[key];\n    }\n    global.set(key, src, place[1]);\n}\n\n// Stop here on backup process\nif (msg.payload === false) {\n\n    // Annonce to stop activity\n    global.set('stop', false);\n\n    return;\n}\n\n// Check initial memories\nconst room = global.get('room'); //autoupdate\nif (typeof room.base !== 'object') {\n    room.base = {};\n}\nif (typeof room.base.home !== 'object') {\n    room.base.home = {\n        'id': 'home',\n        'name': '> Home',\n        'outdoor': 0\n    };\n}\nif (typeof room.base.system !== 'object') {\n    room.base.system = {\n        'id': 'system',\n        'name': '> System',\n        'outdoor': 0\n    };\n}\n\n// Reset non persistent memories\nconst versatile = {\n    'auth': {},\n    'browser': {},\n    'describe': {\n        'app': {\n            'project': '',\n            'title': '',\n            'version': '',\n            'mdi': '',\n            'login': false // auto login \n        },\n        'hmi': {\n            'id': '',\n            'login': '',\n            'level': 'visitor',\n            'lang': 'en',\n            'page': 'ui - page - auth',\n            'room': '',\n            'time': 0\n        },\n        'template': {\n            'hmi': {\n                'id': '',\n                'login': '',\n                'level': 'visitor',\n                'lang': 'en',\n                'page': 'ui - page - auth',\n                'room': '',\n                'time': 0\n            },\n            'room': {\n                'id': '',\n                'name': '',\n                'outdoor': 0\n            },\n            'parent': {\n                'id': '',\n                'name': '',\n                'seen': 0\n            },\n            'source': {\n                'title': '',\n                'version': '',\n                'git': '',\n                'mdi': ''\n            },\n            'discovery': {\n                'name': '',\n                'group': '',\n                'type': '',\n                'unit': '',\n                'value': 0,\n                'options': {}\n            },\n            'entity': {\n                'uid': '',\n                'source': '',\n                'id': '',\n                'name': '',\n                'parent': '',\n                'value': '',\n                'group': '',\n                'room': '',\n                'element': '',\n                'unit': '',\n                'seen': 0,\n                'enabled': 0,\n                'hidden': 1,\n                'options': { }\n            },\n            'scene': {\n                'target': '',\n                'enabled': 0,\n                'on': 1,\n                'off': 0,\n                'motion': 0,\n                'aperture': 0,\n                'nocturnal': 0,\n                'diurnal': 0,\n                'confort': 0,\n                'eco': 0,\n                'nightlight': 0,\n                'retention': 0,\n                'duration': 60, //minutes\n                'high': '70',\n                'low': '30',\n                'illuminance': 0, //2000\n                'darkness': 0, //200\n                'humidity': 0,\n                'daily': 0,\n                'openwork': 0,\n                'tariff': 0, // limit to a given tariff (see energy preferred tariff)\n                'power': 0, // to check if target is really off\n                'timer': 0, // for duration routine\n                'today': 0, // for daily routine, 1=executed today else 0\n\n                'temperature_setpoint_eco': 19,\n                'temperature_setpoint_confort': 21,\n                'temperature_setpoint_cold': 18,\n                'temperature_coefficient_indoor': 100,\n                'temperature_coefficient_outdoor': 10,\n                'temperature_duration_aperture': 5,\n                'temperature_duration_preheat': 10,\n                'temperature_duration_cycle': 60,\n                'temperature_duration_offloading': 60,\n                'temperature_power_consumption': 1000,\n                'temperature_energy_free': 0,\n\n                'temperature_aperture_opened': 0,\n                'temperature_aperture_timer': 0,\n                'temperature_pilot_state': 'stopped',\n                'temperature_pilot_last': 0\n            },\n            'trigger': {\n                'inputhigh': 1, // Minimal input level for high level\n                'inputlow': 0, // Maximal input level for low high level\n                'outputhigh': 'high', // Output level on high input level. [none,high,low,toggle]\n                'outputlow': 'low' // output level for low input level [none, high, low, toggle]\n            },\n            'routine': {\n                'topic': '',\n                'payload': false,\n                'replay': false,\n                'rsp': true,\n                'iam': false,\n                'scene': {},\n                'param': {},\n                'trigger': {},\n                'target': {},\n                'routines': []\n            }\n        },\n        // Enumerators by source and entity id (see common - dknr)\n        'enum': { },\n        // Binary element with revert value\n        'reverts': ['aperture', 'door', 'window', 'lock'],\n        // Non numeric units\n        'texts': ['', 'chex', 'enum', 'text', 'time'],\n        // Elements icons\n        'elements': {\n            'switch': ['toggle-switch-off-outline', 'toggle-switch-outline', 'Switch'],\n            'plug': ['power-plug-off', 'power-plug', 'Plug'],\n            'power': ['flash-outline', 'flash', 'Power'],\n            'current': ['current-ac', 'current-ac', 'Current'],\n            'frequency': ['sine-wave', 'sine-wave', 'Frequency'],\n            'voltage': ['current-dc', 'current-dc', 'Frequency'],\n            'energy': ['meter-electric-outline', 'meter-electric', 'Energy'],\n            'light': ['lightbulb-off', 'lightbulb', 'Light'],\n            'remote': ['remote-off', 'remote', 'Remote'],\n            'door': ['door-closed', 'door-open', 'Door'], // 0=open\n            'window': ['window-closed-variant', 'window-open-variant', 'Window'], //0=open\n            'lock': ['lock-off', 'lock', 'Lock'], //0=open\n            'shutter': ['window-shutter', 'window-shutter-open', 'Shutter'],\n            'slider': ['door-sliding', 'door-sliding-open', 'Slider'],\n            'waterboiler': ['water-boiler-off', 'water-boiler', 'Waterboiler'],\n            'alert': ['bell-off', 'bell', 'Alert'],\n            'sound': ['volume-off', 'volume-high', 'Sound'],\n            'motion': ['motion-sensor-off', 'motion-sensor', 'Motion'],\n            'temperature': ['thermometer-off', 'thermometer', 'Temperature'],\n            'humidity': ['water-percent-alert', 'water-percent', 'Humidity'],\n            'illuminance': ['sun-wireless-outline', 'sun-wireless', 'Illuminance'],\n            'pressure': ['gauge', 'gauge', 'Pressure'],\n            'fan': ['fan-off', 'fan', 'Fan'],\n            'direction': ['swap-horizontal', 'swap-horizontal-bold', 'Direction'],\n            'time': ['clock-outline', 'clock', 'Time'],\n            'battery': ['battery-low', 'battery', 'Battery'],\n            'mode': ['home-switch-outline', 'home-switch', 'Mode'],\n            'text': ['clipboard-text-off', 'clipboard-text', 'Text'],\n            'location': ['map-marker-off-outline', 'map-marker', 'Location'],\n            'color': ['palette', 'palette', 'Color'],\n            'tariff': ['currency-eur-off', 'currency-eur', 'Tariff']\n        },\n        // Calendar event type\n        'calendar': {\n            'birthday': [ 'cake-variant-outline', 'cake-variant' ],\n            'rendezvous': [ 'alarm-off', 'alarm' ],\n            'trashbin': [ 'trash-can-outline', 'trash-can' ],\n            'recyclebin': [ 'recycle-vairant', 'recycle' ]\n        },\n        // Scene elements fields\n        'scenes': {\n            'humidity': ['enabled', 'on', 'off', 'duration', 'humidity'],\n            'light': ['enabled', 'on', 'off', 'high', 'low', 'motion', 'retention', 'duration', 'diurnal', 'nocturnal', 'nightlight', 'illuminance', 'darkness'],\n            'shutter': ['enabled', 'on', 'off', 'aperture', 'diurnal', 'nocturnal', 'illuminance', 'darkness', 'openwork', 'daily'],\n            'lock': ['enabled', 'on', 'off', 'aperture', 'diurnal', 'nocturnal', 'confort', 'eco'],\n            'waterboiler': ['enabled', 'on', 'off', 'duration', 'power', 'tariff', 'daily'],\n            'temperature': [\n                'enabled',\n                'on',\n                'off',\n                'temperature_setpoint_eco',\n                'temperature_setpoint_confort',\n                'temperature_setpoint_cold',\n                'temperature_coefficient_indoor',\n                'temperature_coefficient_outdoor',\n                'temperature_duration_aperture',\n                'temperature_duration_preheat',\n                'temperature_duration_cycle',\n                'temperature_duration_offloading',\n                'temperature_power_consumption',\n                'temperature_energy_free'\n            ]\n        },\n        // Scene routines fields\n        'routines': {\n            'motion': ['motion-sensor-off', 'motion-sensor'],\n            'aperture': ['door-closed', 'door-open'],\n            'nocturnal': ['shield-moon-outline', 'shield-moon'],\n            'diurnal': ['shield-sun-outline', 'shield-sun'],\n            'confort': ['sofa-single', 'sofa-single-outline'],\n            'eco': ['sprout-outline', 'sprout'],\n            'nightlight': ['lightbulb-night-outline', 'lightbulb-night'],\n            'retention': ['timeline-clock-outline', 'timeline-clock'],\n            'daily': ['calendar-remove', 'calendar-check'],\n            'openwork': ['storefront-remove-outline', 'storefront-check'],\n            'duration': ['timer-remove-outline', 'timer-check'],\n            'illuminance': ['sun-wireless-outline', 'sun-wireless'],\n            'darkness': ['brightness-5', 'brightness-4'],\n            'humidity': ['water-percent-alert', 'water-percent'],\n            'temperature_energy_free': ['lightning-bolt-outline', 'lightning-bolt']\n        },\n        'color': {\n            'on': '#008000',\n            'off': '#FF0000',\n            'median': '#F08000',\n            'none': '#808000',\n            'theme': '#0094CE',\n            'empty': '#CCCCCC'\n        },\n        'page': {\n            \n        }\n    },\n    'dictionary': {},\n    'form': {},\n    'user': {}\n};\nfor (const key in versatile) {\n    global.set(key, versatile[key]);\n}\n\n// Register page and more\nnode.send([msg, null]);\n\n// Wait registrations\nawait new Promise(resolve => setTimeout(resolve, 1000));\n\n// Continue boot\nreturn [null, msg];",
+        "func": "// Execute some task on boot\n\n// First announce we boot, (stop scene)\nif (msg.payload === true) {\n    global.set('boot', true);\n}\n\n// Annonce to stop activity\nglobal.set('stop', true);\n\n// Memory source and destination\nconst places = ['file', 'default'];\nconst place = msg.payload === true ? places : [places[1], places[0]];\n\nnode.status({text: place[0] + ' to ' + place[1]});\n\n// Memories to manage\nconst persistent = {\n    'auth': { },\n    'mqtt': { },\n    'room': { },\n    'source': { },\n    'parent': { },\n    'discovery': { },\n    'entity': { },\n    'block': { },\n    'calendar': { },\n    'energy': { },\n    'scene': { },\n    'dknr': { }\n}\n\n// Copy backup or at least init\nfor (const key in persistent) {\n    let src = global.get(key, place[0]);\n    if (typeof src !== 'object') {\n        src = persistent[key];\n    }\n    global.set(key, src, place[1]);\n}\n\n// Stop here on backup process\nif (msg.payload === false) {\n\n    // Annonce to stop activity\n    global.set('stop', false);\n\n    return;\n}\n\n// Check initial memories\nconst room = global.get('room'); //autoupdate\nif (typeof room.base !== 'object') {\n    room.base = {};\n}\nif (typeof room.base.home !== 'object') {\n    room.base.home = {\n        'id': 'home',\n        'name': '> Home',\n        'outdoor': 0\n    };\n}\nif (typeof room.base.system !== 'object') {\n    room.base.system = {\n        'id': 'system',\n        'name': '> System',\n        'outdoor': 0\n    };\n}\n\n// Reset non persistent memories\nconst versatile = {\n    'auth': {},\n    'browser': {},\n    'describe': {\n        'app': {\n            'project': '',\n            'title': '',\n            'version': '',\n            'mdi': '',\n            'login': false // auto login \n        },\n        'hmi': {\n            'id': '',\n            'login': '',\n            'level': 'visitor',\n            'lang': 'en',\n            'page': 'ui - page - auth',\n            'room': '',\n            'time': 0\n        },\n        'template': {\n            'hmi': {\n                'id': '',\n                'login': '',\n                'level': 'visitor',\n                'lang': 'en',\n                'page': 'ui - page - auth',\n                'room': '',\n                'time': 0\n            },\n            'room': {\n                'id': '',\n                'name': '',\n                'outdoor': 0\n            },\n            'parent': {\n                'id': '',\n                'name': '',\n                'seen': 0\n            },\n            'source': {\n                'title': '',\n                'version': '',\n                'git': '',\n                'mdi': ''\n            },\n            'discovery': {\n                'name': '',\n                'group': '',\n                'type': '',\n                'unit': '',\n                'value': 0,\n                'options': {}\n            },\n            'entity': {\n                'uid': '',\n                'source': '',\n                'id': '',\n                'name': '',\n                'parent': '',\n                'value': '',\n                'group': '',\n                'room': '',\n                'element': '',\n                'unit': '',\n                'seen': 0,\n                'enabled': 0,\n                'hidden': 1,\n                'options': { }\n            },\n            'scene': {\n                'target': '',\n                'enabled': 0,\n                'on': 1,\n                'off': 0,\n                'motion': 0,\n                'aperture': 0,\n                'nocturnal': 0,\n                'diurnal': 0,\n                'confort': 0,\n                'eco': 0,\n                'nightlight': 0,\n                'retention': 0,\n                'duration': 60, //minutes\n                'high': '70',\n                'low': '30',\n                'illuminance': 0, //2000\n                'darkness': 0, //200\n                'humidity': 0,\n                'daily': 0,\n                'openwork': 0,\n                'tariff': 0, // limit to a given tariff (see energy preferred tariff)\n                'power': 0, // to check if target is really off\n                'timer': 0, // for duration routine\n                'today': 0, // for daily routine, 1=executed today else 0\n\n                'temperature_setpoint_eco': 19,\n                'temperature_setpoint_confort': 21,\n                'temperature_setpoint_cold': 18,\n                'temperature_coefficient_indoor': 100,\n                'temperature_coefficient_outdoor': 10,\n                'temperature_duration_aperture': 5,\n                'temperature_duration_preheat': 10,\n                'temperature_duration_cycle': 60,\n                'temperature_duration_offloading': 60,\n                'temperature_power_consumption': 1000,\n                'temperature_energy_free': 0,\n\n                'temperature_aperture_opened': 0,\n                'temperature_aperture_timer': 0,\n                'temperature_pilot_state': 'stopped',\n                'temperature_pilot_last': 0\n            },\n            'trigger': {\n                'inputhigh': 1, // Minimal input level for high level\n                'inputlow': 0, // Maximal input level for low high level\n                'outputhigh': 'high', // Output level on high input level. [none,high,low,toggle]\n                'outputlow': 'low' // output level for low input level [none, high, low, toggle]\n            },\n            'routine': {\n                'topic': '',\n                'payload': false,\n                'replay': false,\n                'rsp': true,\n                'iam': false,\n                'scene': {},\n                'param': {},\n                'trigger': {},\n                'target': {},\n                'routines': []\n            }\n        },\n        // Enumerators by source and entity id (see common - dknr)\n        'enum': { },\n        // Binary element with revert value\n        'reverts': ['aperture', 'door', 'window', 'lock'],\n        // Non numeric units\n        'texts': ['', 'chex', 'enum', 'text', 'time'],\n        // Elements icons\n        'elements': {\n            'switch': ['toggle-switch-off-outline', 'toggle-switch-outline', 'Switch'],\n            'plug': ['power-plug-off', 'power-plug', 'Plug'],\n            'power': ['flash-outline', 'flash', 'Power'],\n            'current': ['current-ac', 'current-ac', 'Current'],\n            'frequency': ['sine-wave', 'sine-wave', 'Frequency'],\n            'voltage': ['current-dc', 'current-dc', 'Frequency'],\n            'energy': ['meter-electric-outline', 'meter-electric', 'Energy'],\n            'light': ['lightbulb-off', 'lightbulb', 'Light'],\n            'remote': ['remote-off', 'remote', 'Remote'],\n            'door': ['door-closed', 'door-open', 'Door'], // 0=open\n            'window': ['window-closed-variant', 'window-open-variant', 'Window'], //0=open\n            'lock': ['lock-off', 'lock', 'Lock'], //0=open\n            'shutter': ['window-shutter', 'window-shutter-open', 'Shutter'],\n            'slider': ['door-sliding', 'door-sliding-open', 'Slider'],\n            'waterboiler': ['water-boiler-off', 'water-boiler', 'Waterboiler'],\n            'alert': ['bell-off', 'bell', 'Alert'],\n            'sound': ['volume-off', 'volume-high', 'Sound'],\n            'motion': ['motion-sensor-off', 'motion-sensor', 'Motion'],\n            'temperature': ['thermometer-off', 'thermometer', 'Temperature'],\n            'humidity': ['water-percent-alert', 'water-percent', 'Humidity'],\n            'illuminance': ['sun-wireless-outline', 'sun-wireless', 'Illuminance'],\n            'pressure': ['gauge', 'gauge', 'Pressure'],\n            'fan': ['fan-off', 'fan', 'Fan'],\n            'direction': ['swap-horizontal', 'swap-horizontal-bold', 'Direction'],\n            'time': ['clock-outline', 'clock', 'Time'],\n            'battery': ['battery-low', 'battery', 'Battery'],\n            'mode': ['home-switch-outline', 'home-switch', 'Mode'],\n            'text': ['clipboard-text-off', 'clipboard-text', 'Text'],\n            'location': ['map-marker-off-outline', 'map-marker', 'Location'],\n            'color': ['palette', 'palette', 'Color'],\n            'tariff': ['currency-eur-off', 'currency-eur', 'Tariff']\n        },\n        // Calendar event type\n        'calendar': {\n            'birthday': [ 'cake-variant-outline', 'cake-variant' ],\n            'rendezvous': [ 'alarm-off', 'alarm' ],\n            'trashbin': [ 'trash-can-outline', 'trash-can' ],\n            'recyclebin': [ 'recycle-vairant', 'recycle' ]\n        },\n        // Scene elements fields\n        'scenes': {\n            'humidity': ['enabled', 'on', 'off', 'duration', 'humidity'],\n            'light': ['enabled', 'on', 'off', 'high', 'low', 'motion', 'retention', 'duration', 'diurnal', 'nocturnal', 'nightlight', 'illuminance', 'darkness'],\n            'shutter': ['enabled', 'on', 'off', 'aperture', 'diurnal', 'nocturnal', 'illuminance', 'darkness', 'openwork', 'daily'],\n            'lock': ['enabled', 'on', 'off', 'aperture', 'diurnal', 'nocturnal', 'confort', 'eco'],\n            'waterboiler': ['enabled', 'on', 'off', 'duration', 'power', 'tariff', 'daily'],\n            'temperature': [\n                'enabled',\n                'on',\n                'off',\n                'temperature_setpoint_eco',\n                'temperature_setpoint_confort',\n                'temperature_setpoint_cold',\n                'temperature_coefficient_indoor',\n                'temperature_coefficient_outdoor',\n                'temperature_duration_aperture',\n                'temperature_duration_preheat',\n                'temperature_duration_cycle',\n                'temperature_duration_offloading',\n                'temperature_power_consumption',\n                'temperature_energy_free'\n            ]\n        },\n        // Scene routines fields\n        'routines': {\n            'motion': ['motion-sensor-off', 'motion-sensor'],\n            'aperture': ['door-closed', 'door-open'],\n            'nocturnal': ['shield-moon-outline', 'shield-moon'],\n            'diurnal': ['shield-sun-outline', 'shield-sun'],\n            'confort': ['sofa-single', 'sofa-single-outline'],\n            'eco': ['sprout-outline', 'sprout'],\n            'nightlight': ['lightbulb-night-outline', 'lightbulb-night'],\n            'retention': ['timeline-clock-outline', 'timeline-clock'],\n            'daily': ['calendar-remove', 'calendar-check'],\n            'openwork': ['storefront-remove-outline', 'storefront-check'],\n            'duration': ['timer-remove-outline', 'timer-check'],\n            'illuminance': ['sun-wireless-outline', 'sun-wireless'],\n            'darkness': ['brightness-5', 'brightness-4'],\n            'humidity': ['water-percent-alert', 'water-percent'],\n            'temperature_energy_free': ['lightning-bolt-outline', 'lightning-bolt']\n        },\n        'color': {\n            'on': '#008000',\n            'off': '#FF0000',\n            'median': '#F08000',\n            'none': '#808000',\n            'theme': '#0094CE',\n            'empty': '#CCCCCC'\n        },\n        'page': {\n            \n        }\n    },\n    'dictionary': {},\n    'form': {},\n    'user': {}\n};\nfor (const key in versatile) {\n    global.set(key, versatile[key]);\n}\n\n// Register page and more\nnode.send([msg, null]);\n\n// Wait registrations\nawait new Promise(resolve => setTimeout(resolve, 1000));\n\n// Continue boot\nreturn [null, msg];",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -3229,8 +3235,7 @@
         "mode": "link",
         "links": [
             "3b80cd5cae7c3642",
-            "91dead0e9a4f77d2",
-            "d3cc94988c84bfdc"
+            "91dead0e9a4f77d2"
         ],
         "x": 1715,
         "y": 140,
@@ -4907,8 +4912,8 @@
         "z": "4bc72a1112cb448c",
         "g": "17fbda7c7b72d170",
         "name": "data",
-        "func": "const mqtt = global.get('mqtt');\n\nif (global.get('stop') || !mqtt.enabled) {\n\n    return;\n}\n\nlet source = global.get('source'); // autoupdate\nlet parent = global.get('parent'); // autoupdate\nlet discovery = global.get('discovery'); // autoupdate\nlet entity = global.get('entity'); // autoupdate\nconst block = global.get('block'); // read\nconst template = global.get('describe.template'); // read\n\nmsg.topic = msg.topic.slice(mqtt.topic.length + 1);\nlet path = msg.topic.split('/');\nlet action = path.shift();\nmsg.uid = path.join('/');\n\nif (action === 'discovery') {\n    // discovery source\n    if (path.length === 1) {\n        if (typeof msg.payload === 'string' && msg.payload === '') {\n            // delete source[path[0]];\n        }\n        else if (typeof msg.payload === 'object') {\n            if (typeof source[path[0]] !== 'object') {\n                source[path[0]] = { ...template.source };\n            }\n            for (const k in template.source) {\n                if (msg.payload.hasOwnProperty(k)) {\n                    source[path[0]][k] = msg.payload[k];\n                }\n            }\n        }\n    }\n    // discovery parent\n    else if (path.length === 2) {\n        if (typeof msg.payload === 'string' && msg.payload === '') {\n            // delete parent[path[1]];\n        }\n        else if (typeof msg.payload === 'object' && (msg.payload.name || '') !== '' && typeof parent[path[1]] !== 'object') {\n            parent[path[1]] = { ...template.parent, ...{ 'id': path[1], 'name': msg.payload.name.replace('_', ' ') } };\n        }\n    }\n    // discovery entity\n    else if (path.length === 3) {\n        node.status({\n            'fill': 'blue',\n            'text': action + ': ' + msg.uid\n        });\n\n        if (typeof msg.payload === 'string' && msg.payload === '') {\n            // delete discovery[uid];\n        }\n        else if (typeof msg.payload === 'object') {\n            if (typeof discovery[msg.uid] !== 'object') {\n                discovery[msg.uid] = { ...template.discovery };\n            }\n            for (const k in template.discovery) {\n                if (msg.payload.hasOwnProperty(k)) {\n                    if (typeof msg.payload[k] === 'object') {\n                        discovery[msg.uid][k] = { ...msg.payload[k] };\n                    }\n                    else {\n                        discovery[msg.uid][k] = msg.payload[k];\n                    }\n                }\n            }\n            \n            // Create entity if it does not exist, or complete it from discovery\n            if (block[msg.uid] !== true) {\n                const exists = typeof entity[msg.uid] === 'object';\n                const seen = exists ? entity[msg.uid]['seen'] : Date.now();\n\n                msg = await node.linkcall('common - entity - merge', msg);\n\n                // Discovery is not a value: keep last seen time of existing entity\n                entity[msg.uid]['seen'] = seen;\n\n                if (!exists) {\n                    node.status({\n                        'fill': 'green',\n                        'text': 'new entity: ' + msg.uid\n                    });\n                }\n            }\n        }\n    }\n}\nelse if (action === 'get' && path.length === 3) {\n\n    // Ignore blocked entity\n    if (block[msg.uid] === true) {\n\n        return;\n    }\n\n    // update entity\n    msg = await node.linkcall('common - entity - merge', msg);\n\n    // DKNR binary values are ON / OFF, domotic uses 1 / 0\n    let value = msg.payload;\n    if (typeof discovery[msg.uid] === 'object' && discovery[msg.uid]['type'] === 'binary') {\n        value = [true, 1, '1', 'ON', 'on', 'true'].includes(value) ? 1 : 0;\n    }\n\n    const old_value = entity[msg.uid]['value'];\n    entity[msg.uid]['value'] = value;\n\n    node.status({\n        'fill': old_value !== value ? 'green' : 'yellow',\n        'text': action + ' : ' + msg.uid + ' : ' + value\n    });\n\n    // Send entity event (even if value is unchanged, see msg.repeat)\n    msg.topic = msg.uid;\n    msg.payload = value;\n    msg.repeat = entity[msg.uid]['element'] !== 'remote' && old_value === value;\n\n    delete msg.qos;\n    delete msg.retain;\n    delete msg.uid;\n\n    node.send([msg]);\n}\n\nreturn;",
-        "outputs": 1,
+        "func": "const mqtt = global.get('mqtt');\n\nif (global.get('stop') || !mqtt.enabled) {\n\n    return;\n}\n\nlet source = global.get('source'); // autoupdate\nlet parent = global.get('parent'); // autoupdate\nlet discovery = global.get('discovery'); // autoupdate\nlet entity = global.get('entity'); // autoupdate\nconst block = global.get('block'); // read\nconst template = global.get('describe.template'); // read\n\nmsg.topic = msg.topic.slice(mqtt.topic.length + 1);\nlet path = msg.topic.split('/');\nlet action = path.shift();\nmsg.uid = path.join('/');\n\nif (action === 'discovery') {\n    // discovery source\n    if (path.length === 1) {\n        if (typeof msg.payload === 'string' && msg.payload === '') {\n            // delete source[path[0]];\n        }\n        else if (typeof msg.payload === 'object') {\n            if (typeof source[path[0]] !== 'object') {\n                source[path[0]] = { ...template.source };\n            }\n            for (const k in template.source) {\n                if (msg.payload.hasOwnProperty(k)) {\n                    source[path[0]][k] = msg.payload[k];\n                }\n            }\n        }\n    }\n    // discovery parent\n    else if (path.length === 2) {\n        if (typeof msg.payload === 'string' && msg.payload === '') {\n            // delete parent[path[1]];\n        }\n        else if (typeof msg.payload === 'object' && (msg.payload.name || '') !== '' && typeof parent[path[1]] !== 'object') {\n            parent[path[1]] = { ...template.parent, ...{ 'id': path[1], 'name': msg.payload.name.replace('_', ' ') } };\n        }\n    }\n    // discovery entity\n    else if (path.length === 3) {\n        node.status({\n            'fill': 'blue',\n            'text': action + ': ' + msg.uid\n        });\n\n        if (typeof msg.payload === 'string' && msg.payload === '') {\n            // delete discovery[uid];\n        }\n        else if (typeof msg.payload === 'object') {\n            if (typeof discovery[msg.uid] !== 'object') {\n                discovery[msg.uid] = { ...template.discovery };\n            }\n            for (const k in template.discovery) {\n                if (msg.payload.hasOwnProperty(k)) {\n                    if (typeof msg.payload[k] === 'object') {\n                        discovery[msg.uid][k] = { ...msg.payload[k] };\n                    }\n                    else {\n                        discovery[msg.uid][k] = msg.payload[k];\n                    }\n                }\n            }\n            \n            // Create entity if it does not exist, or complete it from discovery\n            if (block[msg.uid] !== true) {\n                const exists = typeof entity[msg.uid] === 'object';\n                const seen = exists ? entity[msg.uid]['seen'] : Date.now();\n\n                msg = await node.linkcall('common - entity - merge', msg);\n\n                // Discovery is not a value: keep last seen time of existing entity\n                entity[msg.uid]['seen'] = seen;\n\n                if (!exists) {\n                    node.status({\n                        'fill': 'green',\n                        'text': 'new entity: ' + msg.uid\n                    });\n                }\n            }\n        }\n    }\n}\nelse if (action === 'get' && path.length === 3) {\n\n    // Ignore blocked entity\n    if (block[msg.uid] === true) {\n\n        return;\n    }\n\n    // update entity\n    msg = await node.linkcall('common - entity - merge', msg);\n\n    // DKNR binary values are ON / OFF, domotic uses 1 / 0\n    let value = msg.payload;\n    if (typeof discovery[msg.uid] === 'object' && discovery[msg.uid]['type'] === 'binary') {\n        value = [true, 1, '1', 'ON', 'on', 'true'].includes(value) ? 1 : 0;\n    }\n\n    const old_value = entity[msg.uid]['value'];\n    entity[msg.uid]['value'] = value;\n\n    node.status({\n        'fill': old_value !== value ? 'green' : 'yellow',\n        'text': action + ' : ' + msg.uid + ' : ' + value\n    });\n\n    // Send entity event (even if value is unchanged, see msg.repeat)\n    msg.topic = msg.uid;\n    msg.payload = value;\n    msg.repeat = entity[msg.uid]['element'] !== 'remote' && old_value === value;\n\n    delete msg.qos;\n    delete msg.retain;\n    delete msg.uid;\n\n    node.send([msg, null]);\n}\n// Command for the local dknr source (see common - dknr)\nelse if (action === 'set' && path.length === 3 && path[0] === 'dknr') {\n    msg.topic = msg.uid;\n\n    delete msg.qos;\n    delete msg.retain;\n    delete msg.uid;\n\n    node.send([null, msg]);\n}\n\nreturn;",
+        "outputs": 2,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
@@ -4919,6 +4924,9 @@
         "wires": [
             [
                 "f9bec52ad4f5f68d"
+            ],
+            [
+                "932008e716a91194"
             ]
         ]
     },
@@ -6344,7 +6352,7 @@
         "z": "4bc72a1112cb448c",
         "g": "8aae9bef01ec071c",
         "name": "data",
-        "func": "// Ear energy entity and update home energy power value\n\nconst entity = { ...(global.get('entity') || { }) };\n\nlet value = 0;\nlet exists = false;\nfor (const e in msg.energy) {\n    if (msg.ids.includes(e) && typeof entity[msg.energy[e]] === 'object' && entity[msg.energy[e]]['hidden'] === 0) {\n        value += Math.round(Number(entity[msg.energy[e]]['value']) || 0);\n        exists = true;\n    }\n}\n\nif (exists) {\n    node.status({ 'text': value });\n\n    return {\n        'topic': '',\n        'payload': {\n            'uid': 'dknr/sensor/home_power',\n            'value': value\n        }\n    };\n}\n\nreturn;\n",
+        "func": "// Ear energy entity and update home energy power value\n\nconst entity = { ...(global.get('entity') || { }) };\n\nlet value = 0;\nlet exists = false;\nfor (const e in msg.energy) {\n    if (msg.ids.includes(e) && typeof entity[msg.energy[e]] === 'object' && entity[msg.energy[e]]['hidden'] === 0) {\n        value += Math.round(Number(entity[msg.energy[e]]['value']) || 0);\n        exists = true;\n    }\n}\n\nif (exists) {\n    node.status({ 'text': value });\n\n    return {\n        'topic': '',\n        'payload': {\n            'parent': 'sensor',\n            'id': 'home_power',\n            'value': value\n        }\n    };\n}\n\nreturn;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6368,7 +6376,7 @@
         "name": "common - energy",
         "mode": "link",
         "links": [
-            "35bded8380dee43f"
+            "75fbe80882b8d252"
         ],
         "x": 3695,
         "y": 100,
@@ -6540,7 +6548,7 @@
         "z": "4bc72a1112cb448c",
         "g": "aa28e51660bead4f",
         "name": "parse",
-        "func": "// Compute DKNR local sensors from commands, sun and rooms settings\n\n// Get memories\nconst entity = global.get('entity'); // read\n\nfunction get(uid, def) {\n    return typeof entity[uid] === 'object' && entity[uid]['value'] !== '' ? entity[uid]['value'] : def;\n}\nfunction set(id, value) {\n    if (typeof entity['dknr/sensor/' + id] === 'object') {\n        node.send([{ 'topic': '', 'payload': { 'uid': 'dknr/sensor/' + id, 'value': value } }]);\n    }\n}\n\nlet sensor_sunrise = get('dknr/sensor/sunrise', '07:00');\nlet sensor_sunset = get('dknr/sensor/sunset', '19:00');\n\nlet command_nycthemer = get('dknr/command/nycthemer', 'auto');\nlet command_light = get('dknr/command/light', 'auto');\nlet command_sound = get('dknr/command/sound', 'auto');\nlet command_shutter = get('dknr/command/shutter', 'auto');\nlet command_waterboiler = get('dknr/command/waterboiler', 'auto');\nlet workday_morning_limit = get('dknr/command/workday_morning_limit', '07:15');\nlet workday_evening_limit = get('dknr/command/workday_evening_limit', '19:15');\n// TODO: restday\n\nlet current = new Date().toTimeString().slice(0, 5);\n\n// Automate, humidity, temperature: sensor = command\nconst same = ['automate', 'humidity', 'temperature'];\nfor (const s of same) {\n    if (typeof entity['dknr/command/' + s] === 'object') {\n        set(s, entity['dknr/command/' + s]['value']);\n    }\n}\n\n// \"scene related\"\n// TODO: airflow\n\n// Nycthemer related\nlet tcurrent = Number(current.split(':').join(''));\nlet tsunrise = Number(sensor_sunrise.split(':').join(''));\nlet tsunset = Number(sensor_sunset.split(':').join(''));\nlet tworkday_morning_limit = Number(workday_morning_limit.split(':').join(''));\nlet tworkday_evening_limit = Number(workday_evening_limit.split(':').join(''));\n\n// morning limit\nlet tmorning = tsunrise > tworkday_morning_limit ? tsunrise : tworkday_morning_limit;\nlet sensor_morning = tsunrise > tworkday_morning_limit ? sensor_sunrise : workday_morning_limit;\nset('morning_limit', sensor_morning);\n\n// evening limit\nlet tevening = tsunset < tworkday_evening_limit ? tsunset : tworkday_evening_limit;\nlet sensor_evening = tsunset < tworkday_evening_limit ? sensor_sunset : workday_evening_limit;\nset('evening_limit', sensor_evening);\n\n// nycthemer\nlet sensor_nycthemer = get('dknr/sensor/nycthemer', '');\nif (command_nycthemer === 'auto') {\n    sensor_nycthemer = tcurrent > tmorning && tcurrent < tevening ? 'high' : 'low';\n} else if (['high', 'low'].includes(command_nycthemer)) {\n    sensor_nycthemer = command_nycthemer;\n}\nset('nycthemer', sensor_nycthemer);\n\n// light\nif (command_light === 'auto') {\n    // By default follow Nycthemer\n    let sensor_light = sensor_nycthemer === 'high' ? 'high' : 'low';\n\n    // Check if Confort hours and Workday were configured for Home\n    let workday = global.get('room.workday.home') || false;\n    let confort = global.get('room.confort.home') || false;\n    if (typeof workday === 'object' && Array.isArray(confort)) {\n        let l_day = !!(workday['d' + new Date().getDay()] || 0);\n        let l_time = Number(new Date().toLocaleString('fr', { 'hour': '2-digit', 'minute': '2-digit' }).split(':').join(''));\n\n        sensor_light = 'low';\n        for (let i = 0; i < confort.length; i++) {\n            if (confort[i]['workday'] === l_day) {\n                let start = Number(confort[i].start.split(':').join(''));\n                let stop = Number(confort[i].stop.split(':').join(''));\n\n                if (start < l_time && l_time < stop) {\n                    sensor_light = 'high';\n                }\n            }\n        }\n    }\n    set('light', sensor_light);\n} else if (['high', 'low'].includes(command_light)) {\n    set('light', command_light);\n}\n\n// sound\nif (command_sound == 'auto') {\n    set('sound', sensor_nycthemer === 'high' ? 'high' : 'low');\n} else if (['high', 'low'].includes(command_sound)) {\n    set('sound', command_sound);\n}\n\n// shutter\nif (command_shutter === 'auto') {\n    set('shutter', sensor_nycthemer === 'high' ? 'high' : 'low');\n} else if (['high', 'low'].includes(command_shutter)) {\n    set('shutter', command_shutter);\n}\n\n// waterboiler\nif (command_waterboiler === 'auto') {\n    set('waterboiler', sensor_nycthemer === 'high' ? 'low' : 'high');\n} else if (['high', 'low'].includes(command_waterboiler)) {\n    set('waterboiler', command_waterboiler);\n}\n\nnode.status({ text: sensor_nycthemer + ', ' + sensor_morning + ', ' + sensor_evening });\n\nreturn;\n",
+        "func": "// Compute DKNR local sensors from commands, sun and rooms settings\n\n// Get memories\nconst state = global.get('dknr') || {}; // read\nconst sensors = state.sensor || {};\nconst commands = state.command || {};\n\nfunction get(uid, def) {\n    const p = uid.split('/');\n    const v = (p[1] === 'sensor' ? sensors : commands)[p[2]];\n    return typeof v !== 'undefined' && v !== '' ? v : def;\n}\nfunction set(id, value) {\n    node.send([{ 'topic': '', 'payload': { 'parent': 'sensor', 'id': id, 'value': value } }]);\n}\n\nlet sensor_sunrise = get('dknr/sensor/sunrise', '07:00');\nlet sensor_sunset = get('dknr/sensor/sunset', '19:00');\n\nlet command_nycthemer = get('dknr/command/nycthemer', 'auto');\nlet command_light = get('dknr/command/light', 'auto');\nlet command_sound = get('dknr/command/sound', 'auto');\nlet command_shutter = get('dknr/command/shutter', 'auto');\nlet command_waterboiler = get('dknr/command/waterboiler', 'auto');\nlet workday_morning_limit = get('dknr/command/workday_morning_limit', '07:15');\nlet workday_evening_limit = get('dknr/command/workday_evening_limit', '19:15');\n// TODO: restday\n\nlet current = new Date().toTimeString().slice(0, 5);\n\n// Automate, humidity, temperature: sensor = command\nconst same = ['automate', 'humidity', 'temperature'];\nfor (const s of same) {\n    if (typeof commands[s] !== 'undefined') {\n        set(s, commands[s]);\n    }\n}\n\n// \"scene related\"\n// TODO: airflow\n\n// Nycthemer related\nlet tcurrent = Number(current.split(':').join(''));\nlet tsunrise = Number(sensor_sunrise.split(':').join(''));\nlet tsunset = Number(sensor_sunset.split(':').join(''));\nlet tworkday_morning_limit = Number(workday_morning_limit.split(':').join(''));\nlet tworkday_evening_limit = Number(workday_evening_limit.split(':').join(''));\n\n// morning limit\nlet tmorning = tsunrise > tworkday_morning_limit ? tsunrise : tworkday_morning_limit;\nlet sensor_morning = tsunrise > tworkday_morning_limit ? sensor_sunrise : workday_morning_limit;\nset('morning_limit', sensor_morning);\n\n// evening limit\nlet tevening = tsunset < tworkday_evening_limit ? tsunset : tworkday_evening_limit;\nlet sensor_evening = tsunset < tworkday_evening_limit ? sensor_sunset : workday_evening_limit;\nset('evening_limit', sensor_evening);\n\n// nycthemer\nlet sensor_nycthemer = get('dknr/sensor/nycthemer', '');\nif (command_nycthemer === 'auto') {\n    sensor_nycthemer = tcurrent > tmorning && tcurrent < tevening ? 'high' : 'low';\n} else if (['high', 'low'].includes(command_nycthemer)) {\n    sensor_nycthemer = command_nycthemer;\n}\nset('nycthemer', sensor_nycthemer);\n\n// light\nif (command_light === 'auto') {\n    // By default follow Nycthemer\n    let sensor_light = sensor_nycthemer === 'high' ? 'high' : 'low';\n\n    // Check if Confort hours and Workday were configured for Home\n    let workday = global.get('room.workday.home') || false;\n    let confort = global.get('room.confort.home') || false;\n    if (typeof workday === 'object' && Array.isArray(confort)) {\n        let l_day = !!(workday['d' + new Date().getDay()] || 0);\n        let l_time = Number(new Date().toLocaleString('fr', { 'hour': '2-digit', 'minute': '2-digit' }).split(':').join(''));\n\n        sensor_light = 'low';\n        for (let i = 0; i < confort.length; i++) {\n            if (confort[i]['workday'] === l_day) {\n                let start = Number(confort[i].start.split(':').join(''));\n                let stop = Number(confort[i].stop.split(':').join(''));\n\n                if (start < l_time && l_time < stop) {\n                    sensor_light = 'high';\n                }\n            }\n        }\n    }\n    set('light', sensor_light);\n} else if (['high', 'low'].includes(command_light)) {\n    set('light', command_light);\n}\n\n// sound\nif (command_sound == 'auto') {\n    set('sound', sensor_nycthemer === 'high' ? 'high' : 'low');\n} else if (['high', 'low'].includes(command_sound)) {\n    set('sound', command_sound);\n}\n\n// shutter\nif (command_shutter === 'auto') {\n    set('shutter', sensor_nycthemer === 'high' ? 'high' : 'low');\n} else if (['high', 'low'].includes(command_shutter)) {\n    set('shutter', command_shutter);\n}\n\n// waterboiler\nif (command_waterboiler === 'auto') {\n    set('waterboiler', sensor_nycthemer === 'high' ? 'low' : 'high');\n} else if (['high', 'low'].includes(command_waterboiler)) {\n    set('waterboiler', command_waterboiler);\n}\n\nnode.status({ text: sensor_nycthemer + ', ' + sensor_morning + ', ' + sensor_evening });\n\nreturn;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6551,23 +6559,9 @@
         "y": 3340,
         "wires": [
             [
-                "938e2afe4f3b8170"
+                "dcfc01b8a89a7dc2"
             ]
         ]
-    },
-    {
-        "id": "1b6ec87a498d3297",
-        "type": "link out",
-        "z": "4bc72a1112cb448c",
-        "g": "aa28e51660bead4f",
-        "name": "common - dknr",
-        "mode": "link",
-        "links": [
-            "35bded8380dee43f"
-        ],
-        "x": 895,
-        "y": 3280,
-        "wires": []
     },
     {
         "id": "09cef86fee94df17",
@@ -6575,7 +6569,7 @@
         "z": "4bc72a1112cb448c",
         "g": "aa28e51660bead4f",
         "name": "init",
-        "func": "// Register DKNR local source (sensors and commands computed by domotic itself)\n\n// Get dknr data\nmsg = await node.linkcall('common - dknr - data', msg);\n\n// Get memories\nlet describe = global.get('describe'); // autoupdate\nlet source = global.get('source'); // autoupdate\n\ndescribe.enum.dknr = msg.dknr_enum;\n\nsource.dknr = { ...describe.template.source, ...{\n    'title': 'Domotic',\n    'version': describe.app.version || '',\n    'git': '',\n    'mdi': 'eye'\n} };\n\ndelete msg.dknr_enum;\ndelete msg.dknr_entity;\n\nreturn;\n",
+        "func": "// Register DKNR local source enumerators (icons used by the dashboard)\n\n// Get dknr data\nmsg = await node.linkcall('common - dknr - data', msg);\n\n// Get memories\nlet describe = global.get('describe'); // autoupdate\n\n// Enums icons for the dashboard\ndescribe.enum.dknr = msg.dknr_enum;\n\ndelete msg.dknr_enum;\ndelete msg.dknr_entity;\n\nreturn;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6604,42 +6598,6 @@
                 "89a4eac22d6b866f",
                 "09cef86fee94df17"
             ]
-        ]
-    },
-    {
-        "id": "d3cc94988c84bfdc",
-        "type": "link in",
-        "z": "4bc72a1112cb448c",
-        "g": "aa28e51660bead4f",
-        "name": "common - local - dknr",
-        "links": [
-            "5c094bd512b44876"
-        ],
-        "x": 145,
-        "y": 3280,
-        "wires": [
-            [
-                "99c17f445801b029"
-            ]
-        ]
-    },
-    {
-        "id": "99c17f445801b029",
-        "type": "function",
-        "z": "4bc72a1112cb448c",
-        "g": "aa28e51660bead4f",
-        "name": "parse",
-        "func": "// Create DKNR local entities\n\n// Get dknr data\nmsg = await node.linkcall('common - dknr - data', msg);\n\nlet entities = { ...(msg.dknr_entity || {}) };\ndelete msg.dknr_enum;\ndelete msg.dknr_entity;\n\n// Get memories\nconst template = global.get('describe.template'); // read\nlet parent = global.get('parent'); // autoupdate\nlet entity = global.get('entity'); // autoupdate\n\n// Force parent creation\nif (typeof parent['sensor'] !== 'object') {\n    parent['sensor'] = { ...template.parent, ...{ 'id': 'sensor', 'name': 'Configuration' } };\n}\nif (typeof parent['command'] !== 'object') {\n    parent['command'] = { ...template.parent, ...{ 'id': 'command', 'name': 'Domotic' } };\n}\n\nconst s = 'dknr';\nlet i = 0;\n\nfor (const t in entities) {\n    for (const k in entities[t]) {\n        let uid = [s, t, k].join('/');\n        let exists = typeof entity[uid] === 'object';\n\n        // Do not overwrite existing value and user settings\n        entity[uid] = { ...template.entity, ...{\n            'uid': uid,\n            'source': s,\n            'parent': t,\n            'id': k,\n            'group': t,\n            'value': entities[t][k][0],\n            'unit': entities[t][k][1],\n            'element': entities[t][k][2],\n            'name': entities[t][k][3],\n            'room': t === 'sensor' ? 'home' : 'system',\n            'hidden': 0\n        }, ...(exists ? entity[uid] : {}), ...{\n            'seen': Date.now()\n        } };\n\n        i++;\n    }\n}\n\nnode.status({ text: i });\n\nreturn;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 610,
-        "y": 3280,
-        "wires": [
-            []
         ]
     },
     {
@@ -6709,39 +6667,12 @@
         "wires": []
     },
     {
-        "id": "938e2afe4f3b8170",
-        "type": "delay",
-        "z": "4bc72a1112cb448c",
-        "g": "aa28e51660bead4f",
-        "name": "25/s",
-        "pauseType": "rate",
-        "timeout": "20",
-        "timeoutUnits": "milliseconds",
-        "rate": "25",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 770,
-        "y": 3280,
-        "wires": [
-            [
-                "1b6ec87a498d3297",
-                "aeb13f5cf98d1ed2"
-            ]
-        ]
-    },
-    {
         "id": "89a4eac22d6b866f",
         "type": "function",
         "z": "4bc72a1112cb448c",
         "g": "aa28e51660bead4f",
         "name": "init",
-        "func": "// Home location\nconst latitude = global.get('entity[\"dknr/command/latitude\"][\"value\"]') || '45.9385545061656';\nconst longitude = global.get('entity[\"dknr/command/longitude\"][\"value\"]') || '5.38116016257227';\nconst location = latitude + ' ' + longitude;\n\nmsg.payload = [\n  {\n    \"command\": \"add\",\n    \"name\": \"sunrise\",\n    \"expressionType\": \"solar\",\n    \"solarType\": \"selected\",\n    \"solarEvents\": \"civilDawn\",\n    \"location\": location,\n    \"offset\": \"0\",\n    \"payloadType\": \"default\",\n    \"limit\": null\n  },\n  {\n    \"command\": \"add\",\n    \"name\": \"sunset\",\n    \"expressionType\": \"solar\",\n    \"solarType\": \"selected\",\n    \"solarEvents\": \"civilDusk\",\n    \"location\": location,\n    \"offset\": \"0\",\n    \"payloadType\": \"default\",\n    \"limit\": null\n  }\n];\n\n// Init on boot\nnode.send([msg]);\n\n// Wait\nmsg = await node.linkcall('common - wait', msg);\n\n// get value on boot\nmsg.topic = 'trigger';\nmsg.payload = 'sunrise';\nnode.send([msg]);\n\nmsg.topic = 'trigger';\nmsg.payload = 'sunset';\nnode.send([msg]);\n\nreturn;",
+        "func": "// Home location\nconst latitude = global.get('dknr.command.latitude') || '45.9385545061656';\nconst longitude = global.get('dknr.command.longitude') || '5.38116016257227';\nconst location = latitude + ' ' + longitude;\n\nmsg.payload = [\n  {\n    \"command\": \"add\",\n    \"name\": \"sunrise\",\n    \"expressionType\": \"solar\",\n    \"solarType\": \"selected\",\n    \"solarEvents\": \"civilDawn\",\n    \"location\": location,\n    \"offset\": \"0\",\n    \"payloadType\": \"default\",\n    \"limit\": null\n  },\n  {\n    \"command\": \"add\",\n    \"name\": \"sunset\",\n    \"expressionType\": \"solar\",\n    \"solarType\": \"selected\",\n    \"solarEvents\": \"civilDusk\",\n    \"location\": location,\n    \"offset\": \"0\",\n    \"payloadType\": \"default\",\n    \"limit\": null\n  }\n];\n\n// Init on boot\nnode.send([msg]);\n\n// Wait\nmsg = await node.linkcall('common - wait', msg);\n\n// get value on boot\nmsg.topic = 'trigger';\nmsg.payload = 'sunrise';\nnode.send([msg]);\n\nmsg.topic = 'trigger';\nmsg.payload = 'sunset';\nnode.send([msg]);\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6784,7 +6715,7 @@
         "z": "4bc72a1112cb448c",
         "g": "aa28e51660bead4f",
         "name": "parse",
-        "func": "// Sunrise / sunset time\nmsg.payload = {\n    'uid': 'dknr/sensor/' + msg.topic,\n    'value': new Date(msg.payload.status.nextDate).toTimeString().slice(0, 5)\n};\n\nreturn msg;\n",
+        "func": "// Sunrise / sunset time\nmsg.payload = {\n    'parent': 'sensor',\n    'id': msg.topic,\n    'value': new Date(msg.payload.status.nextDate).toTimeString().slice(0, 5)\n};\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6795,7 +6726,7 @@
         "y": 3400,
         "wires": [
             [
-                "938e2afe4f3b8170"
+                "dcfc01b8a89a7dc2"
             ]
         ]
     },
@@ -6860,17 +6791,6 @@
         ]
     },
     {
-        "id": "f82cf8ab4c808c75",
-        "type": "comment",
-        "z": "4bc72a1112cb448c",
-        "g": "aa28e51660bead4f",
-        "name": "TOD: do not replace existing settings",
-        "info": "",
-        "x": 680,
-        "y": 3480,
-        "wires": []
-    },
-    {
         "id": "35bded8380dee43f",
         "type": "link in",
         "z": "4bc72a1112cb448c",
@@ -6878,8 +6798,6 @@
         "name": "common - entity - set",
         "links": [
             "e5777951d9eac0fa",
-            "45cf0be2427364c5",
-            "1b6ec87a498d3297",
             "9d415c5d88aaac86"
         ],
         "x": 145,
@@ -6896,7 +6814,7 @@
         "z": "4bc72a1112cb448c",
         "g": "382f031049d3a6b8",
         "name": "data",
-        "func": "/*\nSet an entity value from domotic (scenes, rooms page, local sources).\nLocal source (dknr) entities are updated here,\nothers are updated here and sent to their source through MQTT (command only).\nOutput 1: entity event, output 2: MQTT command\n*/\n\nif (global.get('stop') === true || global.get('boot') === true) {\n\n    return;\n}\n\nif (typeof msg.payload !== 'object' || typeof msg.payload.uid !== 'string') {\n\n    return;\n}\n\n// Get memories\nlet entity = global.get('entity'); // autoupdate\n\nconst uid = msg.payload.uid;\nif (typeof entity[uid] !== 'object') {\n    node.status({ 'fill': 'red', 'text': 'unknown ' + uid });\n\n    return;\n}\n\nlet value = msg.payload.value;\n\n// Always convert boolean to int\nif (typeof value === 'boolean') {\n    value = value ? 1 : 0;\n}\n// Binary values are 0 or 1\nif (['b', 'rb'].includes(entity[uid]['unit'])) {\n    value = value === 0 || value === '0' ? 0 : 1;\n}\n\nconst old_value = entity[uid]['value'];\n\n// Remote source: only commands can be sent\nif (entity[uid]['source'] !== 'dknr') {\n    if (entity[uid]['group'] !== 'command') {\n        node.status({ 'fill': 'red', 'text': 'not a command ' + uid });\n\n        return;\n    }\n\n    node.send([null, { 'topic': uid, 'payload': value }]);\n}\n\n// Update entity\nentity[uid]['value'] = value;\nentity[uid]['seen'] = Date.now();\n\nnode.status({ 'fill': old_value === value ? 'blue' : 'green', 'shape': 'ring', 'text': uid + ' : ' + value });\n\nreturn [{\n    'topic': uid,\n    'payload': value,\n    'repeat': entity[uid]['element'] !== 'remote' && old_value === value\n}, null];\n",
+        "func": "/*\nSet an entity value from domotic (scenes, rooms page).\nEntity is updated here and the value is sent to its source through MQTT (command only).\nOutput 1: entity event, output 2: MQTT command\n*/\n\nif (global.get('stop') === true || global.get('boot') === true) {\n\n    return;\n}\n\nif (typeof msg.payload !== 'object' || typeof msg.payload.uid !== 'string') {\n\n    return;\n}\n\n// Get memories\nlet entity = global.get('entity'); // autoupdate\n\nconst uid = msg.payload.uid;\nif (typeof entity[uid] !== 'object') {\n    node.status({ 'fill': 'red', 'text': 'unknown ' + uid });\n\n    return;\n}\n\nlet value = msg.payload.value;\n\n// Always convert boolean to int\nif (typeof value === 'boolean') {\n    value = value ? 1 : 0;\n}\n// Binary values are 0 or 1\nif (['b', 'rb'].includes(entity[uid]['unit'])) {\n    value = value === 0 || value === '0' ? 0 : 1;\n}\n\nconst old_value = entity[uid]['value'];\n\n// Only commands can be sent\nif (entity[uid]['group'] !== 'command') {\n    node.status({ 'fill': 'red', 'text': 'not a command ' + uid });\n\n    return;\n}\n\nnode.send([null, { 'topic': uid, 'payload': value }]);\n\n// Update entity\nentity[uid]['value'] = value;\nentity[uid]['seen'] = Date.now();\n\nnode.status({ 'fill': old_value === value ? 'blue' : 'green', 'shape': 'ring', 'text': uid + ' : ' + value });\n\nreturn [{\n    'topic': uid,\n    'payload': value,\n    'repeat': entity[uid]['element'] !== 'remote' && old_value === value\n}, null];\n",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -19927,7 +19845,6 @@
         "g": "dd5d7b2cbad07676",
         "name": "entity - list",
         "links": [
-            "655b6104e129a0c1",
             "a20f607f4c9e0282"
         ],
         "x": 145,
@@ -20946,7 +20863,8 @@
         "name": "config - mqtt",
         "mode": "link",
         "links": [
-            "91dead0e9a4f77d2"
+            "91dead0e9a4f77d2",
+            "444ad600059797ee"
         ],
         "x": 1015,
         "y": 500,
@@ -22081,5 +21999,224 @@
                 "44b7bc464b8cb1d2"
             ]
         ]
+    },
+    {
+        "id": "932008e716a91194",
+        "type": "link out",
+        "name": "common - dknr - set",
+        "mode": "link",
+        "links": [
+            "aff6b2a1d5f18057"
+        ],
+        "x": 1110,
+        "y": 2700,
+        "wires": [],
+        "z": "4bc72a1112cb448c",
+        "g": "17fbda7c7b72d170"
+    },
+    {
+        "id": "e209e82374afadce",
+        "type": "link in",
+        "name": "common - mqtt - publish",
+        "links": [
+            "eea756fba5f3ad44"
+        ],
+        "x": 595,
+        "y": 2890,
+        "wires": [
+            [
+                "b053dee460766806"
+            ]
+        ],
+        "z": "4bc72a1112cb448c",
+        "g": "382f031049d3a6b8"
+    },
+    {
+        "id": "aff6b2a1d5f18057",
+        "type": "link in",
+        "name": "common - dknr - set",
+        "links": [
+            "932008e716a91194"
+        ],
+        "x": 145,
+        "y": 3600,
+        "wires": [
+            [
+                "5a174a1fda5964be"
+            ]
+        ],
+        "z": "4bc72a1112cb448c",
+        "g": "aa28e51660bead4f"
+    },
+    {
+        "id": "5a174a1fda5964be",
+        "type": "function",
+        "name": "set",
+        "func": "/*\nCommand received on <topic>/set/dknr/command/<id>.\nmsg.topic is the entity uid.\n*/\n\n// Get dknr data\nmsg = await node.linkcall('common - dknr - data', msg);\n\nconst path = msg.topic.split('/');\nconst def = (msg.dknr_entity.command || {})[path[2]];\nconst enums = msg.dknr_enum[path[2]] || {};\n\ndelete msg.dknr_enum;\ndelete msg.dknr_entity;\n\nif (path[1] !== 'command' || !Array.isArray(def)) {\n    node.status({ 'fill': 'red', 'text': 'unknown ' + msg.topic });\n\n    return;\n}\n\nlet value = msg.payload;\nif (typeof value === 'number') {\n    value = value.toString();\n}\n\n// Check value\nif (typeof value !== 'string'\n    || def[1] === 'enum' && !enums.hasOwnProperty(value)\n    || def[1] === 'time' && !/^\\d{2}:\\d{2}$/.test(value)\n) {\n    node.status({ 'fill': 'red', 'text': 'bad value ' + msg.topic + ' : ' + value });\n\n    return;\n}\n\nnode.status({ 'fill': 'green', 'text': msg.topic + ' : ' + value });\n\nreturn {\n    'topic': '',\n    'payload': {\n        'parent': 'command',\n        'id': path[2],\n        'value': value\n    },\n    'compute': true\n};\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 3600,
+        "wires": [
+            [
+                "dcfc01b8a89a7dc2"
+            ]
+        ],
+        "z": "4bc72a1112cb448c",
+        "g": "aa28e51660bead4f"
+    },
+    {
+        "id": "75fbe80882b8d252",
+        "type": "link in",
+        "name": "common - dknr - value",
+        "links": [
+            "45cf0be2427364c5"
+        ],
+        "x": 145,
+        "y": 3660,
+        "wires": [
+            [
+                "dcfc01b8a89a7dc2"
+            ]
+        ],
+        "z": "4bc72a1112cb448c",
+        "g": "aa28e51660bead4f"
+    },
+    {
+        "id": "dcfc01b8a89a7dc2",
+        "type": "function",
+        "name": "state",
+        "func": "/*\nUpdate a DKNR local value and publish it on <topic>/get/dknr/<parent>/<id>.\nmsg.payload: { parent, id, value }\nOutput 1: MQTT, output 2: compute sensors after a command\n*/\n\n// Get dknr data\nmsg = await node.linkcall('common - dknr - data', msg);\nconst defs = msg.dknr_entity;\ndelete msg.dknr_enum;\ndelete msg.dknr_entity;\n\nconst p = msg.payload.parent;\nconst id = msg.payload.id;\nif (typeof defs[p] !== 'object' || !Array.isArray(defs[p][id])) {\n    node.status({ 'fill': 'red', 'text': 'unknown ' + p + '/' + id });\n\n    return;\n}\n\n// Get memories\nlet state = global.get('dknr'); // autoupdate\nif (typeof state[p] !== 'object') {\n    state[p] = {};\n}\n\nconst compute = msg.compute === true ? { 'topic': '', 'payload': '' } : null;\n\n// Publish only changes\nif (state[p][id] === msg.payload.value) {\n    node.status({ 'fill': 'blue', 'text': p + '/' + id + ' : ' + msg.payload.value });\n\n    return [null, compute];\n}\n\nstate[p][id] = msg.payload.value;\nnode.status({ 'fill': 'green', 'text': p + '/' + id + ' : ' + msg.payload.value });\n\nconst mqtt = global.get('mqtt') || {};\nif (!mqtt.enabled || (mqtt.topic || '') === '') {\n\n    return [null, compute];\n}\n\nreturn [{\n    'topic': [mqtt.topic, 'get', 'dknr', p, id].join('/'),\n    'payload': msg.payload.value,\n    'qos': 0,\n    'retain': true\n}, compute];\n",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 3630,
+        "wires": [
+            [
+                "eea756fba5f3ad44",
+                "aeb13f5cf98d1ed2"
+            ],
+            [
+                "29c782ee02094a7a"
+            ]
+        ],
+        "z": "4bc72a1112cb448c",
+        "g": "aa28e51660bead4f"
+    },
+    {
+        "id": "eea756fba5f3ad44",
+        "type": "link out",
+        "name": "common - dknr - mqtt",
+        "mode": "link",
+        "links": [
+            "e209e82374afadce"
+        ],
+        "x": 895,
+        "y": 3630,
+        "wires": [],
+        "z": "4bc72a1112cb448c",
+        "g": "aa28e51660bead4f"
+    },
+    {
+        "id": "c25026e109d31e38",
+        "type": "inject",
+        "name": "after boot",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "20",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 260,
+        "y": 3740,
+        "wires": [
+            [
+                "2d843796936d9e83"
+            ]
+        ],
+        "z": "4bc72a1112cb448c",
+        "g": "aa28e51660bead4f"
+    },
+    {
+        "id": "444ad600059797ee",
+        "type": "link in",
+        "name": "common - dknr - publish",
+        "links": [
+            "c109171373a64bf6"
+        ],
+        "x": 145,
+        "y": 3800,
+        "wires": [
+            [
+                "a3489e9322d08b72"
+            ]
+        ],
+        "z": "4bc72a1112cb448c",
+        "g": "aa28e51660bead4f"
+    },
+    {
+        "id": "a3489e9322d08b72",
+        "type": "delay",
+        "name": "5s",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 270,
+        "y": 3800,
+        "wires": [
+            [
+                "2d843796936d9e83"
+            ]
+        ],
+        "z": "4bc72a1112cb448c",
+        "g": "aa28e51660bead4f"
+    },
+    {
+        "id": "2d843796936d9e83",
+        "type": "function",
+        "name": "publish",
+        "func": "/*\nPublish DKNR local source like other DKNR sources:\ndiscovery of source, parents and entities, then all values (retained).\n*/\n\nconst mqtt = global.get('mqtt') || {};\nif (!mqtt.enabled || (mqtt.topic || '') === '') {\n\n    return;\n}\n\n// Get dknr data\nmsg = await node.linkcall('common - dknr - data', msg);\nconst defs = msg.dknr_entity;\nconst enums = msg.dknr_enum;\n\n// Get memories\nlet state = global.get('dknr'); // autoupdate\nconst entity = global.get('entity') || {}; // read\nconst app = global.get('describe.app') || {}; // read\n\nconst topic = mqtt.topic;\nconst source = 'dknr';\nconst parents = {\n    'sensor': 'Configuration',\n    'command': 'Domotic'\n};\nconst pub = (t, p) => node.send({ 'topic': t, 'payload': p, 'qos': 0, 'retain': true });\n\n// Source\npub([topic, 'discovery', source].join('/'), {\n    'title': 'Domotic',\n    'version': app.version || '',\n    'git': '',\n    'mdi': 'eye'\n});\n\nlet i = 0;\nfor (const p in defs) {\n    if (typeof state[p] !== 'object') {\n        state[p] = {};\n    }\n\n    // Parent\n    pub([topic, 'discovery', source, p].join('/'), { 'name': parents[p] || p });\n\n    for (const id in defs[p]) {\n        const def = defs[p][id];\n\n        // Default value, or value of an existing entity (previous version)\n        if (typeof state[p][id] === 'undefined') {\n            const old = entity[[source, p, id].join('/')];\n            state[p][id] = typeof old === 'object' && old.value !== '' ? old.value : def[0];\n        }\n\n        // DKNR type and unit\n        let type = 'number';\n        let unit = def[1];\n        let options = {};\n        if (def[1] === 'enum') {\n            type = 'enum';\n            unit = '';\n            for (const k in (enums[id] || {})) {\n                options[k] = enums[id][k][1];\n            }\n        }\n        else if (['time', 'text'].includes(def[1])) {\n            type = 'text';\n            unit = def[1] === 'time' ? 'time' : '';\n        }\n\n        pub([topic, 'discovery', source, p, id].join('/'), {\n            'name': def[3],\n            'group': p,\n            'type': type,\n            'unit': unit,\n            'value': def[0],\n            'options': options\n        });\n\n        pub([topic, 'get', source, p, id].join('/'), state[p][id]);\n        i++;\n    }\n}\n\nnode.status({ 'fill': 'green', 'text': i + ' entities' });\n\nreturn;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 3770,
+        "wires": [
+            [
+                "eea756fba5f3ad44"
+            ]
+        ],
+        "z": "4bc72a1112cb448c",
+        "g": "aa28e51660bead4f"
     }
 ]
