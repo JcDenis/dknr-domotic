@@ -524,7 +524,7 @@
             "5397038e1b8466e2",
             "fe4f08e6fb5e72b4",
             "0b72d65e0990815b",
-            "40cee7992ff2a035",
+            "7e3a9c51d2b84f60",
             "4b14adf3ddba4649",
             "cc7078fce98e673e",
             "e59e2099bc7e7b65",
@@ -8425,8 +8425,8 @@
         "z": "77269fd32cdb1638",
         "g": "b828708d51f09ccc",
         "name": "data",
-        "func": "// Daily energy of favorable and unfavorable tariff meters (last 31 days, today included)\n\nconst entity = { ...(global.get('entity') || { }) };\nconst energy = { ...(global.get('energy') || { }) };\n\n// Meters are indexes: daily energy is the spread (max - min) of each day\nmsg.fields = {};\nfor (const e of [ 'favorable_energy_meter', 'unfavorable_energy_meter' ]) {\n    const uid = energy[e] || '';\n    if (uid !== '' && typeof entity[uid] === 'object' && entity[uid]['hidden'] === 0) {\n        msg.fields[uid] = e;\n        msg.unit = entity[uid]['unit'];\n    }\n}\n\nconst uids = Object.keys(msg.fields);\nif (uids.length === 0) {\n    node.status({ 'fill': 'red', 'text': 'no energy meter' });\n\n    return;\n}\n\n// Days follow local time\nlet tz = env.get('TZ') || '';\nif (!/^[A-Za-z_]+\\/[A-Za-z_\\/]+$/.test(tz)) {\n    tz = 'Europe/Paris';\n}\n\nmsg.query =\n'import \"timezone\"\\n' +\n'option location = timezone.location(name: \"' + tz + '\")\\n' +\n'from(bucket: \"domotic\")' +\n'|> range(start: -31d, stop: now())' +\n'|> filter(fn: (r) => r[\"_measurement\"] == \"energy\")' +\n'|> filter(fn: (r) => ' + uids.map(u => 'r[\"_field\"] == \"' + u + '\"').join(' or ') + ')' +\n'|> toFloat()' +\n'|> aggregateWindow(every: 1d, fn: spread, createEmpty: false, timeSrc: \"_start\")' +\n'|> yield(name: \"daily\")';\n\nnode.status({ 'text': uids.length + ' meter(s)' });\n\nreturn msg;\n",
-        "outputs": 1,
+        "func": "// Daily energy of favorable and unfavorable tariff meters (last 31 days, today included)\n\nconst entity = { ...(global.get('entity') || { }) };\nconst energy = { ...(global.get('energy') || { }) };\n\n// Meters are indexes: daily energy is the spread (max - min) of each day\nmsg.fields = {};\nfor (const e of [ 'favorable_energy_meter', 'unfavorable_energy_meter' ]) {\n    const uid = energy[e] || '';\n    if (uid !== '' && typeof entity[uid] === 'object' && entity[uid]['hidden'] === 0) {\n        msg.fields[uid] = e;\n        msg.unit = entity[uid]['unit'];\n    }\n}\n\nconst uids = Object.keys(msg.fields);\nif (uids.length === 0) {\n    node.status({ 'fill': 'red', 'text': 'no energy meter' });\n\n    // Clear chart\n    node.send([null, { 'topic': msg.topic, 'payload': [], 'fields': {}, 'dictionary': msg.dictionary }]);\n\n    return;\n}\n\n// Days follow local time\nlet tz = env.get('TZ') || '';\nif (!/^[A-Za-z_]+\\/[A-Za-z_\\/]+$/.test(tz)) {\n    tz = 'Europe/Paris';\n}\n\nmsg.query =\n'import \"timezone\"\\n' +\n'option location = timezone.location(name: \"' + tz + '\")\\n' +\n'from(bucket: \"domotic\")' +\n'|> range(start: -31d, stop: now())' +\n'|> filter(fn: (r) => r[\"_measurement\"] == \"energy\")' +\n'|> filter(fn: (r) => ' + uids.map(u => 'r[\"_field\"] == \"' + u + '\"').join(' or ') + ')' +\n'|> toFloat()' +\n'|> aggregateWindow(every: 1d, fn: spread, createEmpty: false, timeSrc: \"_start\")' +\n'|> yield(name: \"daily\")';\n\nnode.status({ 'text': uids.length + ' meter(s)' });\n\nreturn [msg, null];\n",
+        "outputs": 2,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
@@ -8437,6 +8437,9 @@
         "wires": [
             [
                 "71c7640e718ec808"
+            ],
+            [
+                "c5405938a9a7095b"
             ]
         ]
     },
@@ -8475,7 +8478,7 @@
         "z": "77269fd32cdb1638",
         "g": "b828708d51f09ccc",
         "name": "data",
-        "func": "// Chart data: daily energy by meter, and total when both meters are set\n\nconst labels = {\n    'favorable_energy_meter': msg.dictionary.energy.favorable || 'Favorable',\n    'unfavorable_energy_meter': msg.dictionary.energy.unfavorable || 'Unfavorable'\n};\nconst rows = Array.isArray(msg.payload) ? msg.payload : [];\n\nlet data = [];\nlet total = {};\nfor (const r of rows) {\n    const field = msg.fields[r['_field']];\n    const value = Math.round(Number(r['_value']) * 100) / 100;\n    if (typeof field !== 'string' || isNaN(value)) {\n\n        continue;\n    }\n\n    data.push({\n        'field': labels[field],\n        'date': r['_time'],\n        'value': value\n    });\n\n    if (typeof total[r['_time']] !== 'object') {\n        total[r['_time']] = {\n            'field': msg.dictionary.energy.total || 'Total',\n            'date': r['_time'],\n            'value': 0\n        };\n    }\n    total[r['_time']]['value'] = Math.round((total[r['_time']]['value'] + value) * 100) / 100;\n}\n\nif (Object.keys(msg.fields).length > 1) {\n    data.push(...Object.values(total));\n}\n\ndata.sort((a, b) => String(a.date).localeCompare(String(b.date)));\n\nnode.status({ 'text': data.length + ' points' });\n\ndelete msg.fields;\ndelete msg.query;\nmsg.payload = data;\n\nreturn msg;\n",
+        "func": "// Chart data: daily energy by meter, and total when both meters are set\n// Colors: favorable green, unfavorable red, total blue\n\nconst dict = msg.dictionary.energy || {};\nconst rows = Array.isArray(msg.payload) ? msg.payload : [];\n\n// Wh are shown in kWh\nlet unit = msg.unit || '';\nlet factor = 1;\nif (unit === 'Wh') {\n    unit = 'kWh';\n    factor = 1000;\n}\n\nlet series = {\n    'favorable_energy_meter': { 'key': 'favorable', 'label': dict.favorable || 'Favorable', 'color': '#2ca02c', 'points': [] },\n    'unfavorable_energy_meter': { 'key': 'unfavorable', 'label': dict.unfavorable || 'Unfavorable', 'color': '#e34948', 'points': [] }\n};\nlet total = {};\n\nfor (const r of rows) {\n    const field = msg.fields[r['_field']];\n    const ts = new Date(r['_time']).getTime();\n    const value = Number(r['_value']) / factor;\n    if (typeof series[field] !== 'object' || isNaN(ts) || isNaN(value)) {\n\n        continue;\n    }\n\n    series[field].points.push([ts, Math.round(value * 100) / 100]);\n    total[ts] = (total[ts] || 0) + value;\n}\n\nlet res = [series.favorable_energy_meter, series.unfavorable_energy_meter];\nif (Object.keys(msg.fields).length > 1) {\n    res.push({\n        'key': 'total',\n        'label': dict.total || 'Total',\n        'color': '#2a78d6',\n        'points': Object.keys(total).map(ts => [Number(ts), Math.round(total[ts] * 100) / 100])\n    });\n}\nres.forEach(s => s.points.sort((a, b) => a[0] - b[0]));\n\nconst count = res.reduce((t, s) => t + s.points.length, 0);\nnode.status({ 'text': count + ' points' });\n\ndelete msg.fields;\ndelete msg.query;\nmsg.payload = {\n    'unit': unit,\n    'locale': (msg.dictionary.common || {}).locales || 'fr',\n    'period': dict.energy_period || '31 derniers jours',\n    'empty': dict.energy_empty || 'No energy history',\n    'series': res\n};\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -8486,7 +8489,7 @@
         "y": 440,
         "wires": [
             [
-                "40cee7992ff2a035"
+                "7e3a9c51d2b84f60"
             ]
         ]
     },
@@ -8613,69 +8616,6 @@
         "x": 480,
         "y": 380,
         "wires": []
-    },
-    {
-        "id": "40cee7992ff2a035",
-        "type": "ui-chart",
-        "z": "77269fd32cdb1638",
-        "g": "b828708d51f09ccc",
-        "group": "f871c246adaba03b",
-        "name": "energy - energy - chart",
-        "label": "",
-        "order": 4,
-        "chartType": "line",
-        "category": "field",
-        "categoryType": "property",
-        "xAxisLabel": "",
-        "xAxisProperty": "date",
-        "xAxisPropertyType": "property",
-        "xAxisType": "time",
-        "xAxisFormat": "",
-        "xAxisFormatType": "{d}/{M}",
-        "xmin": "",
-        "xmax": "",
-        "yAxisLabel": "",
-        "yAxisProperty": "value",
-        "yAxisPropertyType": "property",
-        "ymin": "0",
-        "ymax": "",
-        "bins": 10,
-        "action": "replace",
-        "stackSeries": false,
-        "pointShape": "circle",
-        "pointRadius": 4,
-        "showLegend": true,
-        "removeOlder": "30",
-        "removeOlderUnit": "86400",
-        "removeOlderPoints": "31",
-        "colors": [
-            "#2ca02c",
-            "#ff0000",
-            "#0095ff",
-            "#2ca02c",
-            "#a347e1",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "textColor": [
-            "#666666"
-        ],
-        "textColorDefault": true,
-        "gridColor": [
-            "#e5e5e5"
-        ],
-        "gridColorDefault": true,
-        "width": "6",
-        "height": "5",
-        "className": "",
-        "interpolation": "smooth",
-        "x": 1280,
-        "y": 440,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "b35a5fd3d85ca00a",
@@ -9373,7 +9313,7 @@
         "z": "77269fd32cdb1638",
         "g": "ec2f8e34924572e0",
         "name": "dictionary",
-        "func": "// Register dictionary\n\nmsg.payload = {\n    'flow': env.get('NR_FLOW_NAME'),\n    'en': {\n        'page_title': 'Energy'\n    },\n    'fr': {\n        'page_title': 'Energie',\n        'power': 'Puissance',\n        'energy': 'Energie',\n        'battery': 'Batterie',\n        'entity': 'Entités',\n        'grid_power': 'Puissance réseau',\n        'solar_power': 'Puissance solaire',\n        'battery_power': 'Puissance batterie',\n        'battery_level': 'Niveau batterie',\n        'preferred_tariff': 'Tarif préférentiel en cours',\n        'favorable_energy_meter': 'Compteur tarif favorable',\n        'unfavorable_energy_meter': 'Compteur tarif défavorable',\n        'waterboiler_power': 'Puissance chauffe-eau',\n        'openweathermap_key': 'Clé API OpenWeatherMap',\n        'map': 'Plan',\n        'favorable': 'Tarif favorable',\n        'unfavorable': 'Tarif défavorable',\n        'total': 'Total'\n    }\n};\n\nmsg = await node.linkcall('common - register - dictionary', msg);\n\nreturn;\n",
+        "func": "// Register dictionary\n\nmsg.payload = {\n    'flow': env.get('NR_FLOW_NAME'),\n    'en': {\n        'page_title': 'Energy',\n        'energy_period': 'Last 31 days'\n    },\n    'fr': {\n        'page_title': 'Energie',\n        'power': 'Puissance',\n        'energy': 'Energie',\n        'battery': 'Batterie',\n        'entity': 'Entités',\n        'grid_power': 'Puissance réseau',\n        'solar_power': 'Puissance solaire',\n        'battery_power': 'Puissance batterie',\n        'battery_level': 'Niveau batterie',\n        'preferred_tariff': 'Tarif préférentiel en cours',\n        'favorable_energy_meter': 'Compteur tarif favorable',\n        'unfavorable_energy_meter': 'Compteur tarif défavorable',\n        'waterboiler_power': 'Puissance chauffe-eau',\n        'openweathermap_key': 'Clé API OpenWeatherMap',\n        'map': 'Plan',\n        'favorable': 'Tarif favorable',\n        'unfavorable': 'Tarif défavorable',\n        'total': 'Total',\n        'energy_period': '31 derniers jours',\n        'energy_empty': \"Aucun historique d'énergie\"\n    }\n};\n\nmsg = await node.linkcall('common - register - dictionary', msg);\n\nreturn;\n",
         "outputs": 0,
         "timeout": 0,
         "noerr": 0,
@@ -22174,6 +22114,31 @@
             [
                 "44b7bc464b8cb1d2"
             ]
+        ]
+    },
+    {
+        "id": "7e3a9c51d2b84f60",
+        "type": "ui-template",
+        "z": "77269fd32cdb1638",
+        "g": "b828708d51f09ccc",
+        "group": "f871c246adaba03b",
+        "page": "",
+        "ui": "",
+        "name": "energy - energy - chart",
+        "order": 4,
+        "width": "6",
+        "height": "1",
+        "head": "",
+        "format": "<template>\n    <div class=\"dke\">\n        <div v-if=\"!series.length\" class=\"dke-empty\">{{ d.empty || '' }}</div>\n        <template v-else>\n            <div class=\"dke-head\">\n                <span v-for=\"s in series\" :key=\"s.key\" class=\"dke-key\">\n                    <i :style=\"{ background: s.color }\"></i>{{ s.label }}\n                    <b>{{ num(sel !== null ? valueAt(s, sel) : sum(s)) }}</b>\n                </span>\n                <span class=\"dke-when\">{{ sel !== null ? day(days[sel], true) : d.period }}</span>\n            </div>\n            <div class=\"dke-plot\">\n                <svg v-if=\"W > 0\" :width=\"W\" :height=\"H\" class=\"dke-svg\" @mousemove=\"move\" @click=\"move\" @mouseleave=\"sel = null\">\n                    <g v-for=\"t in geo.ticks\" :key=\"'y' + t.v\">\n                        <line :x1=\"PL\" :x2=\"W - PR\" :y1=\"t.y\" :y2=\"t.y\" class=\"dke-grid\" :class=\"{ 'dke-base': t.v === 0 }\"></line>\n                        <text :x=\"PL - 6\" :y=\"t.y + 4\" text-anchor=\"end\" class=\"dke-tick\">{{ num(t.v, true) }}</text>\n                    </g>\n                    <text v-for=\"(t, i) in days\" :key=\"'x' + t\" v-show=\"label(i)\" :x=\"x(i)\" :y=\"H - 6\" text-anchor=\"middle\" class=\"dke-tick\">{{ day(t) }}</text>\n                    <line v-if=\"sel !== null\" :x1=\"x(sel)\" :x2=\"x(sel)\" :y1=\"PT\" :y2=\"H - PB\" class=\"dke-cross\"></line>\n                    <g v-for=\"s in series\" :key=\"s.key\">\n                        <path :d=\"path(s)\" class=\"dke-line\" :style=\"{ stroke: s.color }\"></path>\n                        <circle v-for=\"p in s.points\" :key=\"p[0]\" :cx=\"x(days.indexOf(p[0]))\" :cy=\"geo.y(p[1])\"\n                            :r=\"sel === days.indexOf(p[0]) ? 5 : 3\" :style=\"{ fill: s.color }\" class=\"dke-dot\"></circle>\n                    </g>\n                </svg>\n            </div>\n        </template>\n    </div>\n</template>\n\n<script>\nexport default {\n    data() {\n        return { W: 0, H: 220, PL: 48, PR: 12, PT: 10, PB: 22, sel: null, observer: null };\n    },\n    computed: {\n        d() { return (this.msg && typeof this.msg.payload === 'object' && this.msg.payload) || {}; },\n        series() { return Array.isArray(this.d.series) ? this.d.series.filter(s => s.points && s.points.length) : []; },\n        // all days with a value, in time order\n        days() {\n            const set = new Set();\n            this.series.forEach(s => s.points.forEach(p => set.add(p[0])));\n            return [...set].sort((a, b) => a - b);\n        },\n        geo() {\n            let max = 0;\n            this.series.forEach(s => s.points.forEach(p => { if (p[1] > max) max = p[1]; }));\n            let step = 1;\n            if (max > 0) {\n                const raw = max / 4;\n                const mag = Math.pow(10, Math.floor(Math.log10(raw)));\n                step = [1, 2, 2.5, 5, 10].map(m => m * mag).find(s => s >= raw);\n            }\n            const top = Math.max(step, Math.ceil(max / step) * step);\n            const ph = this.H - this.PT - this.PB;\n            const y = v => this.PT + ph - v / top * ph;\n            let ticks = [];\n            for (let v = 0; v <= top + step / 2; v += step) ticks.push({ v: +v.toFixed(6), y: y(v) });\n            return { y: y, ticks: ticks };\n        }\n    },\n    watch: {\n        msg() { this.sel = null; this.$nextTick(this.resize); }\n    },\n    mounted() {\n        // the dashboard lowercases svg attributes (viewBox is lost), so draw in pixels at the real width\n        if (window.ResizeObserver) {\n            this.observer = new ResizeObserver(() => this.resize());\n            this.observer.observe(this.$el);\n        }\n        this.resize();\n    },\n    unmounted() {\n        if (this.observer) this.observer.disconnect();\n    },\n    methods: {\n        resize() {\n            const w = this.$el && this.$el.clientWidth ? Math.floor(this.$el.clientWidth) : 0;\n            if (w > 0 && w !== this.W) this.W = w;\n        },\n        x(i) {\n            const n = this.days.length;\n            const w = this.W - this.PL - this.PR;\n            return n < 2 ? this.PL + w / 2 : this.PL + i * w / (n - 1);\n        },\n        path(s) {\n            return s.points.map((p, i) => (i ? 'L' : 'M') + this.x(this.days.indexOf(p[0])).toFixed(1) + ',' + this.geo.y(p[1]).toFixed(1)).join('');\n        },\n        move(e) {\n            const n = this.days.length;\n            if (!n) return;\n            const r = e.currentTarget.getBoundingClientRect();\n            const w = this.W - this.PL - this.PR;\n            const i = n < 2 ? 0 : Math.round((e.clientX - r.left - this.PL) / w * (n - 1));\n            this.sel = Math.max(0, Math.min(n - 1, i));\n        },\n        valueAt(s, i) {\n            const p = s.points.find(p => p[0] === this.days[i]);\n            return p ? p[1] : null;\n        },\n        sum(s) {\n            return s.points.reduce((t, p) => t + p[1], 0);\n        },\n        // a label every few days, always on the last one\n        label(i) {\n            const n = this.days.length;\n            const every = Math.max(1, Math.ceil(n * 44 / Math.max(1, this.W - this.PL - this.PR)));\n            return (n - 1 - i) % every === 0;\n        },\n        num(v, short) {\n            if (typeof v !== 'number' || isNaN(v)) return '-';\n            const a = Math.abs(v);\n            const dec = a >= 100 ? 0 : (a >= 10 ? 1 : 2);\n            return v.toLocaleString(this.d.locale || 'fr', { maximumFractionDigits: short ? Math.min(dec, 1) : dec }) + (short || !this.d.unit ? '' : ' ' + this.d.unit);\n        },\n        day(ts, long) {\n            const o = long ? { weekday: 'long', day: 'numeric', month: 'long' } : { day: '2-digit', month: '2-digit' };\n            return new Date(ts).toLocaleDateString(this.d.locale || 'fr', o);\n        }\n    }\n}\n</script>\n\n<style>\n.dke { width: 100%; min-width: 0; color: rgb(var(--v-theme-on-surface)); }\n.dke-empty { padding: 10px 12px; border-radius: 4px; background: rgba(var(--v-theme-on-surface), 0.05); color: rgba(var(--v-theme-on-surface), 0.6); font-size: 0.9rem; }\n.dke-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; margin-bottom: 4px; font-size: 0.85rem; color: rgba(var(--v-theme-on-surface), 0.7); }\n.dke-key i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }\n.dke-key b { margin-left: 6px; color: rgb(var(--v-theme-on-surface)); font-weight: 600; }\n.dke-when { margin-left: auto; color: rgba(var(--v-theme-on-surface), 0.6); }\n.dke-plot { width: 100%; overflow: hidden; }\n.dke-svg { display: block; touch-action: manipulation; }\n.dke-grid { stroke: rgba(var(--v-theme-on-surface), 0.08); stroke-width: 1; }\n.dke-base { stroke: rgba(var(--v-theme-on-surface), 0.3); }\n.dke-tick { font-size: 11px; fill: rgba(var(--v-theme-on-surface), 0.55); }\n.dke-line { fill: none; stroke-width: 2; stroke-linejoin: round; }\n.dke-dot { stroke: rgb(var(--v-theme-surface)); stroke-width: 1.5; }\n.dke-cross { stroke: rgba(var(--v-theme-on-surface), 0.3); stroke-dasharray: 3 3; }\n</style>\n",
+        "storeOutMessages": false,
+        "passthru": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 1280,
+        "y": 440,
+        "wires": [
+            []
         ]
     }
 ]
