@@ -521,8 +521,6 @@
             "d0e7cf5b630e14bb",
             "0c7695b73246298b",
             "c5405938a9a7095b",
-            "64bf4ecc57a1f540",
-            "450ea29bbe944daa",
             "5397038e1b8466e2",
             "fe4f08e6fb5e72b4",
             "0b72d65e0990815b",
@@ -8385,7 +8383,7 @@
         "z": "77269fd32cdb1638",
         "g": "b828708d51f09ccc",
         "name": "data",
-        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (msg.hmi.id === '' || typeof global.get('user[\"' + msg.hmi.id + '\"]') !== 'object') {\n    msg.enabled = false;\n}\n\nif (!msg.enabled) {\n    msg.reset = true;\n\n    return msg;\n}\n\nmsg.payload = [ ];\nmsg.topic = msg.hmi.id;\nmsg.title = msg.dictionary.energy.energy || 'Energy';\nmsg.data = [ ];\n\nlet start = new Date();\nstart.setDate(start.getDate() - 31);\nmsg.start = start.toISOString().split('T')[0];\nlet end = new Date();\nend.setDate(end.getDate());\nmsg.end = end.toISOString().split('T')[0];\n\nreturn msg;",
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (msg.hmi.id === '' || typeof global.get('user[\"' + msg.hmi.id + '\"]') !== 'object') {\n    msg.enabled = false;\n}\n\nif (!msg.enabled) {\n    msg.reset = true;\n\n    return msg;\n}\n\nmsg.payload = [ ];\nmsg.topic = msg.hmi.id;\nmsg.title = msg.dictionary.energy.energy || 'Energy';\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -8427,7 +8425,7 @@
         "z": "77269fd32cdb1638",
         "g": "b828708d51f09ccc",
         "name": "data",
-        "func": "\nconst entity = { ...(global.get('entity') || { }) };\nconst energy = { ...(global.get('energy') || { }) };\nlet field = '';\nfor (const e in energy) {\n    if ([ 'favorable_energy_meter' ].includes(e) \n        && typeof entity[energy[e]] === 'object'\n        && entity[energy[e]]['hidden'] === 0\n    ) {\n        msg.unit = entity[energy[e]]['unit'];\n        msg.query =\n        'from(bucket: \"domotic\")' +\n        '|> range(start: ' + msg.start + ', stop: ' + msg.end + ')' +\n        '|> filter(fn: (r) => r[\"_measurement\"] == \"energy\")' +\n        '|> filter(fn: (r) => r[\"_field\"] == \"' + energy[e] + '\")' +\n        '|> sort(columns: [\"_time\"])' +\n        '|> aggregateWindow(every: 1d, fn: last, createEmpty: false)' +\n        '|> yield(name: \"last\")';\n\n        return msg;\n    }\n}\n\nreturn;",
+        "func": "// Daily energy of favorable and unfavorable tariff meters (last 31 days, today included)\n\nconst entity = { ...(global.get('entity') || { }) };\nconst energy = { ...(global.get('energy') || { }) };\n\n// Meters are indexes: daily energy is the spread (max - min) of each day\nmsg.fields = {};\nfor (const e of [ 'favorable_energy_meter', 'unfavorable_energy_meter' ]) {\n    const uid = energy[e] || '';\n    if (uid !== '' && typeof entity[uid] === 'object' && entity[uid]['hidden'] === 0) {\n        msg.fields[uid] = e;\n        msg.unit = entity[uid]['unit'];\n    }\n}\n\nconst uids = Object.keys(msg.fields);\nif (uids.length === 0) {\n    node.status({ 'fill': 'red', 'text': 'no energy meter' });\n\n    return;\n}\n\n// Days follow local time\nlet tz = env.get('TZ') || '';\nif (!/^[A-Za-z_]+\\/[A-Za-z_\\/]+$/.test(tz)) {\n    tz = 'Europe/Paris';\n}\n\nmsg.query =\n'import \"timezone\"\\n' +\n'option location = timezone.location(name: \"' + tz + '\")\\n' +\n'from(bucket: \"domotic\")' +\n'|> range(start: -31d, stop: now())' +\n'|> filter(fn: (r) => r[\"_measurement\"] == \"energy\")' +\n'|> filter(fn: (r) => ' + uids.map(u => 'r[\"_field\"] == \"' + u + '\"').join(' or ') + ')' +\n'|> toFloat()' +\n'|> aggregateWindow(every: 1d, fn: spread, createEmpty: false, timeSrc: \"_start\")' +\n'|> yield(name: \"daily\")';\n\nnode.status({ 'text': uids.length + ' meter(s)' });\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -8477,7 +8475,7 @@
         "z": "77269fd32cdb1638",
         "g": "b828708d51f09ccc",
         "name": "data",
-        "func": "if (msg.payload.length < 1) {\n\n    return;\n}\n\nmsg.payload.reverse\n\nconst start = msg.data.length;\nlet i = start;\nfor (const r in msg.payload) {\n    msg.data[i++] = {\n        'field': 'Favorable',\n        'date': msg.payload[r]['_time'],\n        'value': msg.payload[r]['_value']\n    };\n}\n\nfor (let j = start; j < i - 1; j++) {\n    if (typeof msg.data[j + 1] === 'object') {\n        msg.data[j]['value'] = msg.data[j + 1]['value'] - msg.data[j]['value'];\n    }\n    else {\n        msg.data[j]['value'] = 0;\n    }\n}\n\n//msg.data.shift();\nmsg.data.pop();\n\nnode.status({ 'text': i - start });\n\nconst entity = global.get('entity');\nconst energy = global.get('energy');\n\nlet field = '';\nfor (const e in energy) {\n    if ([ 'unfavorable_energy_meter' ].includes(e) \n        && typeof entity[energy[e]] === 'object'\n        && entity[energy[e]]['hidden'] === 0\n    ) {\n        msg.unit = entity[energy[e]]['unit'];\n        msg.query =\n            'from(bucket: \"domotic\")' +\n            '|> range(start: ' + msg.start + ', stop: ' + msg.end + ')' +\n        '|> filter(fn: (r) => r[\"_measurement\"] == \"energy\")' +\n        '|> filter(fn: (r) => r[\"_field\"] == \"' + energy[e] + '\")' +\n        '|> sort(columns: [\"_time\"])' +\n        '|> aggregateWindow(every: 1d, fn: last, createEmpty: false)' +\n        '|> yield(name: \"last\")';\n\n        return msg;\n    }\n}\n\nreturn;",
+        "func": "// Chart data: daily energy by meter, and total when both meters are set\n\nconst labels = {\n    'favorable_energy_meter': msg.dictionary.energy.favorable || 'Favorable',\n    'unfavorable_energy_meter': msg.dictionary.energy.unfavorable || 'Unfavorable'\n};\nconst rows = Array.isArray(msg.payload) ? msg.payload : [];\n\nlet data = [];\nlet total = {};\nfor (const r of rows) {\n    const field = msg.fields[r['_field']];\n    const value = Math.round(Number(r['_value']) * 100) / 100;\n    if (typeof field !== 'string' || isNaN(value)) {\n\n        continue;\n    }\n\n    data.push({\n        'field': labels[field],\n        'date': r['_time'],\n        'value': value\n    });\n\n    if (typeof total[r['_time']] !== 'object') {\n        total[r['_time']] = {\n            'field': msg.dictionary.energy.total || 'Total',\n            'date': r['_time'],\n            'value': 0\n        };\n    }\n    total[r['_time']]['value'] = Math.round((total[r['_time']]['value'] + value) * 100) / 100;\n}\n\nif (Object.keys(msg.fields).length > 1) {\n    data.push(...Object.values(total));\n}\n\ndata.sort((a, b) => String(a.date).localeCompare(String(b.date)));\n\nnode.status({ 'text': data.length + ' points' });\n\ndelete msg.fields;\ndelete msg.query;\nmsg.payload = data;\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -8485,47 +8483,6 @@
         "finalize": "",
         "libs": [],
         "x": 750,
-        "y": 440,
-        "wires": [
-            [
-                "64bf4ecc57a1f540"
-            ]
-        ]
-    },
-    {
-        "id": "64bf4ecc57a1f540",
-        "type": "influxdb in",
-        "z": "77269fd32cdb1638",
-        "g": "b828708d51f09ccc",
-        "influxdb": "cf56c7fff4df45c2",
-        "name": "db",
-        "query": "",
-        "rawOutput": false,
-        "precision": "",
-        "retentionPolicy": "",
-        "org": "dknr",
-        "x": 910,
-        "y": 440,
-        "wires": [
-            [
-                "450ea29bbe944daa"
-            ]
-        ]
-    },
-    {
-        "id": "450ea29bbe944daa",
-        "type": "function",
-        "z": "77269fd32cdb1638",
-        "g": "b828708d51f09ccc",
-        "name": "data",
-        "func": "if (msg.payload.length < 1) {\n\n    return;\n}\n\nmsg.payload.reverse\n\nconst start = msg.data.length;\nlet i = start;\nfor (const r in msg.payload) {\n    msg.data[i++] = {\n        'field': 'Unfavorable',\n        'date': msg.payload[r]['_time'],\n        'value': msg.payload[r]['_value']\n    };\n}\n\nfor (let j = start; j < i - 1; j++) {\n    if (typeof msg.data[j + 1] === 'object') {\n        msg.data[j]['value'] = msg.data[j + 1]['value'] - msg.data[j]['value'];\n    }\n    else {\n        msg.data[j]['value'] = 0;\n    }\n}\n\nmsg.data.pop();\n\nnode.status({ 'text': i - start });\n\nlet sum = {};\nfor (let i = 0; i < msg.data.length; i++) {\n    if (typeof sum[msg.data[i]['date']] !== 'object') {\n        sum[msg.data[i]['date']] = {\n            'field': 'Total',\n            'date': msg.data[i]['date'],\n            'value': msg.data[i]['value']\n        };\n    }\n    else {\n        sum[msg.data[i]['date']]['value'] += msg.data[i]['value'];\n    }\n}\n\nmsg.data.push(...Object.values(sum));\n\nmsg.payload = msg.data;\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1070,
         "y": 440,
         "wires": [
             [
@@ -9416,7 +9373,7 @@
         "z": "77269fd32cdb1638",
         "g": "ec2f8e34924572e0",
         "name": "dictionary",
-        "func": "// Register dictionary\n\nmsg.payload = {\n    'flow': env.get('NR_FLOW_NAME'),\n    'en': {\n        'page_title': 'Energy'\n    },\n    'fr': {\n        'page_title': 'Energie',\n        'power': 'Puissance',\n        'energy': 'Energie',\n        'battery': 'Batterie',\n        'entity': 'Entités',\n        'grid_power': 'Puissance réseau',\n        'solar_power': 'Puissance solaire',\n        'battery_power': 'Puissance batterie',\n        'battery_level': 'Niveau batterie',\n        'preferred_tariff': 'Tarif préférentiel en cours',\n        'favorable_energy_meter': 'Compteur tarif favorable',\n        'unfavorable_energy_meter': 'Compteur tarif défavorable',\n        'waterboiler_power': 'Puissance chauffe-eau',\n        'openweathermap_key': 'Clé API OpenWeatherMap',\n        'map': 'Plan'\n    }\n};\n\nmsg = await node.linkcall('common - register - dictionary', msg);\n\nreturn;\n",
+        "func": "// Register dictionary\n\nmsg.payload = {\n    'flow': env.get('NR_FLOW_NAME'),\n    'en': {\n        'page_title': 'Energy'\n    },\n    'fr': {\n        'page_title': 'Energie',\n        'power': 'Puissance',\n        'energy': 'Energie',\n        'battery': 'Batterie',\n        'entity': 'Entités',\n        'grid_power': 'Puissance réseau',\n        'solar_power': 'Puissance solaire',\n        'battery_power': 'Puissance batterie',\n        'battery_level': 'Niveau batterie',\n        'preferred_tariff': 'Tarif préférentiel en cours',\n        'favorable_energy_meter': 'Compteur tarif favorable',\n        'unfavorable_energy_meter': 'Compteur tarif défavorable',\n        'waterboiler_power': 'Puissance chauffe-eau',\n        'openweathermap_key': 'Clé API OpenWeatherMap',\n        'map': 'Plan',\n        'favorable': 'Tarif favorable',\n        'unfavorable': 'Tarif défavorable',\n        'total': 'Total'\n    }\n};\n\nmsg = await node.linkcall('common - register - dictionary', msg);\n\nreturn;\n",
         "outputs": 0,
         "timeout": 0,
         "noerr": 0,
