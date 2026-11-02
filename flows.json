@@ -269,7 +269,9 @@
             "8dfab3a0cbccc279",
             "506166892bab6a7b",
             "8adb158625cd7b77",
-            "fe39d55b1d2b2fa5"
+            "fe39d55b1d2b2fa5",
+            "ca76a51dc84e5307",
+            "851f742182959e67"
         ],
         "x": 104,
         "y": 339,
@@ -4757,7 +4759,7 @@
         "z": "4bc72a1112cb448c",
         "g": "c708afe030400e2d",
         "name": "data",
-        "func": "const rnd = global.get('random') || '--';\nif (typeof rnd !== 'number' || \n    typeof msg.req.params.rnd !== 'string' || \n    rnd !== Number(msg.req.params.rnd)\n) {\n\n    node.send([null, msg]);\n}\n\nmsg.payload = JSON.stringify({\n    'auth': global.get('auth'),\n    'mqtt': global.get('mqtt'),\n    'room': global.get('room'),\n    'parent': global.get('parent'),\n    'entity': global.get('entity'),\n    'block': global.get('block'),\n    'calendar': global.get('calendar'),\n    'energy': global.get('energy'),\n    'scene': global.get('scene')\n}, null, 4);\n\nmsg.headers = {\n    'Content-Type':'application/json',\n    'Content-Disposition':'attachment; filename=\"dknr-backup.json\"',\n    'Content-Length': msg.payload.length,\n    'Connection':'close'\t\n};\n\nnode.send([msg, null]);\n\nreturn;",
+        "func": "const rnd = global.get('random') || '--';\nif (typeof rnd !== 'number' || \n    typeof msg.req.params.rnd !== 'string' || \n    rnd !== Number(msg.req.params.rnd)\n) {\n\n    node.send([null, msg]);\n\n    return;\n}\n\n// One time link\nglobal.set('random', '--');\n\n// Selected parts only\nconst keys = ['auth', 'mqtt', 'room', 'parent', 'entity', 'block', 'calendar', 'energy', 'scene'];\nconst selected = Array.isArray(global.get('random_export')) ? global.get('random_export') : keys;\nlet backup = {};\nfor (const k of keys) {\n    if (selected.includes(k)) {\n        backup[k] = global.get(k);\n    }\n}\n\nmsg.payload = JSON.stringify(backup, null, 4);\n\nmsg.headers = {\n    'Content-Type':'application/json',\n    'Content-Disposition':'attachment; filename=\"dknr-backup.json\"',\n    'Content-Length': Buffer.byteLength(msg.payload),\n    'Connection':'close'\t\n};\n\nnode.send([msg, null]);\n\nreturn;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -20981,7 +20983,7 @@
         "z": "d90937c9d5b88b24",
         "g": "74e3eb9607fef02f",
         "name": "dictionary",
-        "func": "// Register page\n\nmsg.payload = {\n    'flow': env.get('NR_FLOW_NAME'),\n    'en': {\n        'page_title': 'Settings'\n    },\n    'fr': {\n        'page_title': 'Configuration',\n        'backup': 'Import/Exoprt',\n        'room': 'Pièce',\n        'user': 'Utilisateur',\n        'various': 'Divers',\n\n        'mqtt': 'MQTT',\n        'mqtt_host': 'Adresse',\n        'mqtt_port': 'Port',\n        'mqtt_topic': 'DKNR Topic',\n        'mqtt_username': 'Identifiant',\n        'mqtt_password': 'Mot de passe',\n        'mqtt_homeassistant': 'Topic découverte Home assistant',\n        'mqtt_enabled': 'Activé',\n\n        'user_login': 'Ientifiant',\n        'user_pass': 'Mote de passe',\n        'user_level': 'Niveau',\n        'user_lang': 'Langue',\n        'user_telegram': 'Telegram'\n    }\n};\n\nmsg = await node.linkcall('common - register - dictionary', msg);\n\nreturn;",
+        "func": "// Register page\n\nmsg.payload = {\n    'flow': env.get('NR_FLOW_NAME'),\n    'en': {\n        'page_title': 'Settings'\n    },\n    'fr': {\n        'page_title': 'Configuration',\n        'backup_select': 'Données à exporter',\n        'backup_empty': 'Aucune donnée sélectionnée',\n        'backup_auth': 'Utilisateurs',\n        'backup_mqtt': 'MQTT',\n        'backup_room': 'Pièces',\n        'backup_parent': 'Appareils',\n        'backup_entity': 'Entités',\n        'backup_block': 'Entités bloquées',\n        'backup_calendar': 'Calendrier',\n        'backup_energy': 'Energie',\n        'backup_scene': 'Scènes',\n        'backup': 'Import/Exoprt',\n        'room': 'Pièce',\n        'user': 'Utilisateur',\n        'various': 'Divers',\n\n        'mqtt': 'MQTT',\n        'mqtt_host': 'Adresse',\n        'mqtt_port': 'Port',\n        'mqtt_topic': 'DKNR Topic',\n        'mqtt_username': 'Identifiant',\n        'mqtt_password': 'Mot de passe',\n        'mqtt_homeassistant': 'Topic découverte Home assistant',\n        'mqtt_enabled': 'Activé',\n\n        'user_login': 'Ientifiant',\n        'user_pass': 'Mote de passe',\n        'user_level': 'Niveau',\n        'user_lang': 'Langue',\n        'user_telegram': 'Telegram'\n    }\n};\n\nmsg = await node.linkcall('common - register - dictionary', msg);\n\nreturn;",
         "outputs": 0,
         "timeout": 0,
         "noerr": 0,
@@ -21434,7 +21436,7 @@
         "group": "a9185f3da37cc3c4",
         "name": "config - backup - download",
         "label": "",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "emulateClick": false,
@@ -21472,8 +21474,8 @@
         "z": "d90937c9d5b88b24",
         "g": "8455e62e4f171015",
         "name": "data",
-        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (!msg.enabled) {\n\n    return [ msg, msg, msg ];\n}\n\nmsg.payload = msg.dictionary.config.backup || 'Backup and restore';\nmsg.ui_update = {\n    'label': ''\n};\nnode.send([msg, null, null]);\n\nmsg.payload = ''\nmsg.ui_update = {\n    'label': msg.dictionary.config.backup_download || 'Download backup'\n};\nnode.send([null, msg, null]);\n\nmsg.ui_update = {\n    'label': msg.dictionary.config.backup_upload || 'Updoad backup'\n};\nnode.send([null, null, msg]);\n\nreturn;",
-        "outputs": 3,
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (!msg.enabled) {\n\n    return [ msg, msg, msg, msg ];\n}\n\nmsg.payload = msg.dictionary.config.backup || 'Backup and restore';\nmsg.ui_update = {\n    'label': ''\n};\nnode.send([msg, null, null, null]);\n\n// Parts to export, all by default\nconst keys = ['auth', 'mqtt', 'room', 'parent', 'entity', 'block', 'calendar', 'energy', 'scene'];\nlet selected = global.get('form[\"' + msg.hmi.id + '\"][\"export\"]');\nif (!Array.isArray(selected)) {\n    selected = [ ...keys ];\n    global.set('form[\"' + msg.hmi.id + '\"][\"export\"]', selected);\n}\nmsg.payload = selected;\nmsg.ui_update = {\n    'label': msg.dictionary.config.backup_select || 'Data to export',\n    'options': keys.map(k => ({ 'label': msg.dictionary.config['backup_' + k] || k, 'value': k }))\n};\nnode.send([null, null, null, msg]);\n\nmsg.payload = ''\nmsg.ui_update = {\n    'label': msg.dictionary.config.backup_download || 'Download backup'\n};\nnode.send([null, msg, null, null]);\n\nmsg.ui_update = {\n    'label': msg.dictionary.config.backup_upload || 'Updoad backup'\n};\nnode.send([null, null, msg, null]);\n\nreturn;",
+        "outputs": 4,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
@@ -21490,6 +21492,9 @@
             ],
             [
                 "71e1894654caadd6"
+            ],
+            [
+                "ca76a51dc84e5307"
             ]
         ]
     },
@@ -21499,7 +21504,7 @@
         "z": "d90937c9d5b88b24",
         "g": "8455e62e4f171015",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (msg.hmi.level !== 'admin') {\n\n    return;\n}\n\nlet rnd = Math.ceil(Math.random() * 1000000);\nglobal.set('random', rnd);\n\nmsg.payload = {\n    'url': '/' + rnd + '/export.json'\n};\n\nreturn msg;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (msg.hmi.level !== 'admin') {\n\n    return;\n}\n\n// Parts to export\nconst keys = ['auth', 'mqtt', 'room', 'parent', 'entity', 'block', 'calendar', 'energy', 'scene'];\nlet selected = global.get('form[\"' + msg.hmi.id + '\"][\"export\"]');\nselected = Array.isArray(selected) ? selected.filter(k => keys.includes(k)) : [ ...keys ];\nif (selected.length === 0) {\n    msg.notice = msg.dictionary.config.backup_empty || 'Nothing to export';\n    msg = await node.linkcall('common - ui - notice', msg);\n\n    return;\n}\n\nlet rnd = Math.ceil(Math.random() * 1000000);\nglobal.set('random', rnd);\nglobal.set('random_export', selected);\n\nmsg.payload = {\n    'url': '/' + rnd + '/export.json'\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -21535,7 +21540,7 @@
         "g": "8455e62e4f171015",
         "group": "a9185f3da37cc3c4",
         "name": "config - backup - updoad",
-        "order": 3,
+        "order": 4,
         "width": 0,
         "height": 0,
         "topic": "topic",
@@ -22241,6 +22246,62 @@
             [
                 "44b7bc464b8cb1d2"
             ]
+        ]
+    },
+    {
+        "id": "ca76a51dc84e5307",
+        "type": "ui-dropdown",
+        "z": "d90937c9d5b88b24",
+        "g": "8455e62e4f171015",
+        "group": "a9185f3da37cc3c4",
+        "name": "config - backup - select",
+        "label": "",
+        "tooltip": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": true,
+        "chips": true,
+        "clearable": true,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": false,
+        "msgTrigger": "onChange",
+        "x": 910,
+        "y": 590,
+        "wires": [
+            [
+                "851f742182959e67"
+            ]
+        ]
+    },
+    {
+        "id": "851f742182959e67",
+        "type": "function",
+        "z": "d90937c9d5b88b24",
+        "g": "8455e62e4f171015",
+        "name": "data",
+        "func": "// Keep backup parts selected by this user\n\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (msg.hmi.id === '' || msg.hmi.level !== 'admin') {\n\n    return;\n}\n\nconst keys = ['auth', 'mqtt', 'room', 'parent', 'entity', 'block', 'calendar', 'energy', 'scene'];\nconst selected = (Array.isArray(msg.payload) ? msg.payload : [msg.payload]).filter(k => keys.includes(k));\n\nglobal.set('form[\"' + msg.hmi.id + '\"][\"export\"]', selected);\n\nnode.status({ 'text': selected.join(', ') });\n\nreturn;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 590,
+        "wires": [
+            []
         ]
     }
 ]
