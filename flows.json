@@ -332,7 +332,8 @@
             "127fe2b5b9d5d09c",
             "68d4f16b96bc7856",
             "e558ab5e597ab46d",
-            "e00009d382f36c0a"
+            "e00009d382f36c0a",
+            "d571ee4f20c4c993"
         ],
         "x": 104,
         "y": 219,
@@ -2814,7 +2815,7 @@
         "page": "3d7cbc9ccffb5711",
         "width": 6,
         "height": 1,
-        "order": 1,
+        "order": 2,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -2829,7 +2830,7 @@
         "page": "3d7cbc9ccffb5711",
         "width": "6",
         "height": 1,
-        "order": 2,
+        "order": 3,
         "showTitle": false,
         "className": "",
         "visible": "false",
@@ -2844,7 +2845,7 @@
         "page": "3d7cbc9ccffb5711",
         "width": 6,
         "height": 1,
-        "order": 3,
+        "order": 4,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -8585,7 +8586,7 @@
         "z": "77269fd32cdb1638",
         "g": "9fa1ab99e50ebaa3",
         "name": "data",
-        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (msg.hmi.id === '' || typeof global.get('user[\"' + msg.hmi.id + '\"]') !== 'object') {\n    msg.enabled = false;\n}\n\nif (!msg.enabled) {\n    msg.reset = true;\n\n    return msg;\n}\n\nmsg.payload = { \n    'grid_power': -0.1,\n    'solar_power': -0.1,\n    'battery_power': -0.1,\n    'battery_level': -0.1,\n    'waterboiler_power': -0.1,\n    'home_power': -0.1,\n    'lights_power': -0.1,\n    'preferred_tariff': -0.1\n};\n\nconst energies = {\n    'grid_power': '',\n    'solar_power': '',\n    'battery_power': '',\n    'battery_level': '',\n    'waterboiler_power': '',\n    'preferred_tariff': ''\n}\n\nconst energy = { ...(global.get('energy') || {}) };\nif (typeof energy['grid_power'] !== 'string') {\n\n    return;\n}\n\nfor (const k in energies) {\n    if (typeof energy[k] === 'string' && energy[k] !== '' && typeof global.get('entity[\"' + energy[k] + '\"][\"value\"]') === 'number') {\n        msg.payload[k] = Math.round(Number(global.get('entity[\"' + energy[k] + '\"][\"value\"]')));\n    }\n}\n\nmsg.payload['home_power'] = Math.round(Number(global.get('entity[\"dknr/sensor/home_power\"][\"value\"]') || -0.1));\n\n// Lights power: sum of power entities of each parent that has a light or spot entity\nconst entity = global.get('entity') || {}; // read\nlet parents = {};\nfor (const e in entity) {\n    const p = entity[e]['source'] + '/' + entity[e]['parent'];\n    if (typeof parents[p] !== 'object') {\n        parents[p] = { 'light': false, 'power': [] };\n    }\n    if (['light', 'spot'].includes(entity[e]['element'])) {\n        parents[p]['light'] = true;\n    }\n    const value = entity[e]['value'];\n    if (entity[e]['element'] === 'power' && value !== '' && value !== null && typeof value !== 'boolean' && !isNaN(Number(value))) {\n        // Convert to W\n        const factor = { 'mW': 0.001, 'W': 1, 'kW': 1000, 'MW': 1000000 }[entity[e]['unit']] || 1;\n        parents[p]['power'].push(Number(value) * factor);\n    }\n}\nlet lights_power = 0;\nlet lights_found = false;\nlet lights = 0;\nlet debug = [];\nfor (const p in parents) {\n    if (parents[p]['light']) {\n        lights++;\n    }\n    if (parents[p]['light'] && parents[p]['power'].length > 0) {\n        const sum = parents[p]['power'].reduce((t, v) => t + v, 0);\n        lights_power += sum;\n        lights_found = true;\n        debug.push(p + ' = ' + Math.round(sum * 10) / 10 + 'W');\n    }\n}\n\n// Status: parents with a light, parents with a light and a power, total\nnode.status({ 'fill': lights_found ? 'green' : 'yellow', 'text': lights + ' lights, ' + debug.length + ' with power: ' + Math.round(lights_power) + 'W' });\nmsg.lights = debug;\nif (lights_found) {\n    msg.payload['lights_power'] = Math.round(lights_power);\n}\n\nreturn msg;",
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (msg.hmi.id === '' || typeof global.get('user[\"' + msg.hmi.id + '\"]') !== 'object') {\n    msg.enabled = false;\n}\n\nif (!msg.enabled) {\n    msg.reset = true;\n\n    return msg;\n}\n\nmsg.payload = { \n    'grid_power': -0.1,\n    'solar_power': -0.1,\n    'battery_power': -0.1,\n    'battery_level': -0.1,\n    'waterboiler_power': -0.1,\n    'home_power': -0.1,\n    'lights_power': -0.1,\n    'preferred_tariff': -0.1\n};\n\nconst energies = {\n    'grid_power': '',\n    'solar_power': '',\n    'battery_power': '',\n    'battery_level': '',\n    'waterboiler_power': '',\n    'preferred_tariff': ''\n}\n\nconst energy = { ...(global.get('energy') || {}) };\nif (typeof energy['grid_power'] !== 'string') {\n\n    return;\n}\n\nfor (const k in energies) {\n    if (typeof energy[k] === 'string' && energy[k] !== '' && typeof global.get('entity[\"' + energy[k] + '\"][\"value\"]') === 'number') {\n        msg.payload[k] = Math.round(Number(global.get('entity[\"' + energy[k] + '\"][\"value\"]')));\n    }\n}\n\nmsg.payload['home_power'] = Math.round(Number(global.get('entity[\"dknr/sensor/home_power\"][\"value\"]') || -0.1));\n\n// Lights power: sum of visible power entities of each parent that has a visible light or spot entity\nconst entity = global.get('entity') || {}; // read\nlet parents = {};\nfor (const e in entity) {\n    // Hidden entities are ignored\n    if (entity[e]['hidden'] !== 0) {\n\n        continue;\n    }\n\n    const p = entity[e]['source'] + '/' + entity[e]['parent'];\n    if (typeof parents[p] !== 'object') {\n        parents[p] = { 'light': false, 'power': [] };\n    }\n    if (['light', 'spot'].includes(entity[e]['element'])) {\n        parents[p]['light'] = true;\n    }\n    const value = entity[e]['value'];\n    if (entity[e]['element'] === 'power' && value !== '' && value !== null && typeof value !== 'boolean' && !isNaN(Number(value))) {\n        // Convert to W\n        const factor = { 'mW': 0.001, 'W': 1, 'kW': 1000, 'MW': 1000000 }[entity[e]['unit']] || 1;\n        parents[p]['power'].push(Number(value) * factor);\n    }\n}\nlet lights_power = 0;\nlet lights_found = false;\nlet lights = 0;\nlet debug = [];\nfor (const p in parents) {\n    if (parents[p]['light']) {\n        lights++;\n    }\n    if (parents[p]['light'] && parents[p]['power'].length > 0) {\n        const sum = parents[p]['power'].reduce((t, v) => t + v, 0);\n        lights_power += sum;\n        lights_found = true;\n        debug.push(p + ' = ' + Math.round(sum * 10) / 10 + 'W');\n    }\n}\n\n// Status: parents with a light, parents with a light and a power, total\nnode.status({ 'fill': lights_found ? 'green' : 'yellow', 'text': lights + ' lights, ' + debug.length + ' with power: ' + Math.round(lights_power) + 'W' });\nmsg.lights = debug;\nif (lights_found) {\n    msg.payload['lights_power'] = Math.round(lights_power);\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -19976,7 +19977,7 @@
         "z": "3d7897ba0ee14173",
         "g": "dd5d7b2cbad07676",
         "name": "data",
-        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\n// Clear selection\nif (typeof msg.hmi === 'object' && msg.hmi.id !== '') {\n    flow.set('multiselect[\"' + msg.hmi.id + '\"]', []);\n}\n\nif (!msg.enabled) {\n\n    node.send([msg, msg, msg, msg]);\n    return;\n}\n\nmsg.payload = msg.dictionary.entity.list_title || 'Entities';\n    \nnode.send([msg, null, null, null, null]);\n\nmsg.payload = [];\nmsg.ui_update = {\n    'label': ''\n};\n\n// Get memories\nlet colors = global.get('describe.color');\nlet sources = global.get('source');\nlet parents = global.get('parent');\nlet entities = global.get('entity');\nlet rooms = global.get('room');\n\nfor (const uid in entities) {\n    let name = entities[uid]['name'] !== '' ? entities[uid]['name'] : entities[uid]['id'] + ' *';\n\n    let parent_name = typeof parents[entities[uid]['parent']] === 'object' ? parents[entities[uid]['parent']]['name'] : '';\n    if (parent_name === '') {\n        parent_name = entities[uid]['parent'];\n    }\n\n    let room_name = entities[uid]['room'];\n    if (room_name !== '') {\n        room_name = rooms['base'][room_name]['name'] || room_name;\n    }\n\n    let color = colors.on;\n    let dead = (entities[uid]['seen'] + (18 * 60 * 60 * 1000)) < Date.now() ? true : false; //48h\n    if (entities[uid]['hidden'] > 0) {\n        color = dead ? colors.median : colors.empty;\n    } else {\n        color = dead ? colors.off : colors.on;\n    }\n    let source = ['help', entities[uid]['source']];\n    if (typeof sources[entities[uid]['source']] === 'object') {\n        source = [sources[entities[uid]['source']]['mdi'], sources[entities[uid]['source']]['title']];\n     }\n\n    msg.payload.push({ ...entities[uid], ...{\n        'uid': uid,\n        'name': name,\n        'room_name': room_name,\n        'parent_name': parent_name,\n        'source_icon': '<i class=\"dknr-row-icon mdi mdi-' + source[0] + '\" style=\"color:' + colors.empty + '\" title=\"' + source[1] + '\"></i>',\n        'delete': msg.dictionary.entity.list_delete || 'Delete',\n        'hidden_color': color\n    } });\n}\n\n//msg.payload.sort((a, b) => a.id.localeCompare(b.id));\n//msg.payload.sort((a, b) => a.parent.localeCompare(b.parent));\nnode.send([null, msg, null, null]);\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.entity.forget_entity || 'Forget entity'\n}\nnode.send([null, null, msg, null]);\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.entity.block_entity || 'Block entity'\n}\nnode.send([null, null, null, msg]);\n\nreturn;",
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\n// Clear selection\nif (typeof msg.hmi === 'object' && msg.hmi.id !== '') {\n    flow.set('multiselect[\"' + msg.hmi.id + '\"]', []);\n}\n\nif (!msg.enabled) {\n\n    node.send([msg, msg, msg, msg]);\n    return;\n}\n\nmsg.payload = msg.dictionary.entity.list_title || 'Entities';\n    \nnode.send([msg, null, null, null, null]);\n\nmsg.payload = [];\nmsg.ui_update = {\n    'label': ''\n};\n\n// Get memories\nlet colors = global.get('describe.color');\nlet sources = global.get('source');\nlet parents = global.get('parent');\nlet entities = global.get('entity');\nlet rooms = global.get('room');\n\n// Only entities of the selected source\nconst selected = flow.get('source[\"' + msg.hmi.id + '\"]') || '';\n\nfor (const uid in entities) {\n    if (entities[uid]['source'] !== selected) {\n\n        continue;\n    }\n\n    let name = entities[uid]['name'] !== '' ? entities[uid]['name'] : entities[uid]['id'] + ' *';\n\n    let parent_name = typeof parents[entities[uid]['parent']] === 'object' ? parents[entities[uid]['parent']]['name'] : '';\n    if (parent_name === '') {\n        parent_name = entities[uid]['parent'];\n    }\n\n    let room_name = entities[uid]['room'];\n    if (room_name !== '') {\n        room_name = rooms['base'][room_name]['name'] || room_name;\n    }\n\n    let color = colors.on;\n    let dead = (entities[uid]['seen'] + (18 * 60 * 60 * 1000)) < Date.now() ? true : false; //48h\n    if (entities[uid]['hidden'] > 0) {\n        color = dead ? colors.median : colors.empty;\n    } else {\n        color = dead ? colors.off : colors.on;\n    }\n    let source = ['help', entities[uid]['source']];\n    if (typeof sources[entities[uid]['source']] === 'object') {\n        source = [sources[entities[uid]['source']]['mdi'], sources[entities[uid]['source']]['title']];\n     }\n\n    msg.payload.push({ ...entities[uid], ...{\n        'uid': uid,\n        'name': name,\n        'room_name': room_name,\n        'parent_name': parent_name,\n        'source_icon': '<i class=\"dknr-row-icon mdi mdi-' + source[0] + '\" style=\"color:' + colors.empty + '\" title=\"' + source[1] + '\"></i>',\n        'delete': msg.dictionary.entity.list_delete || 'Delete',\n        'hidden_color': color\n    } });\n}\n\n//msg.payload.sort((a, b) => a.id.localeCompare(b.id));\n//msg.payload.sort((a, b) => a.parent.localeCompare(b.parent));\nnode.send([null, msg, null, null]);\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.entity.forget_entity || 'Forget entity'\n}\nnode.send([null, null, msg, null]);\n\nmsg.payload = '';\nmsg.ui_update = {\n    'label': msg.dictionary.entity.block_entity || 'Block entity'\n}\nnode.send([null, null, null, msg]);\n\nreturn;",
         "outputs": 4,
         "timeout": 0,
         "noerr": 0,
@@ -20754,7 +20755,7 @@
         "z": "3d7897ba0ee14173",
         "g": "b145803f327d235b",
         "name": "dictionary",
-        "func": "// Register page\n\nmsg.payload = {\n    'flow': env.get('NR_FLOW_NAME'),\n    'en': {\n        'page_title': 'Entities',\n        'entity_edit_title': 'Edit entity',\n        'parent_edit_title': 'Edit device'\n    },\n    'fr': {\n        'page_title': 'Entités',\n        'entity_title': 'Modifier une entité',\n        'parent_title': 'Modifier un appareil',\n        'forget_entity': \"Oublier l'entité\",\n        'foget_parent': \"Oublier l'appareil\",\n        'block_entity': \"Bloquer l'entité\",\n        'show_entity': \"Afficher l'entité\",\n        'hide_entity': \"Cacher l'entité\",\n        'name': 'Nom',\n        'room': 'Pièce',\n        'element': 'Elément',\n        'group': 'Groupe',\n        'unit': 'Unité',\n        'action': 'Action',\n        'source': 'Source',\n        'uid': 'UID',\n        'parent': 'Parent',\n        'id': 'ID',\n        'value': 'Valeur',\n        'sister': 'Soeurs',\n        'seen': 'Vue le',\n        'children': 'Enfants'\n    }\n};\n\nmsg = await node.linkcall('common - register - dictionary', msg);\n\nreturn;",
+        "func": "// Register page\n\nmsg.payload = {\n    'flow': env.get('NR_FLOW_NAME'),\n    'en': {\n        'page_title': 'Entities',\n        'entity_edit_title': 'Edit entity',\n        'parent_edit_title': 'Edit device',\n        'source_select': 'Select a source'\n    },\n    'fr': {\n        'page_title': 'Entités',\n        'source_select': 'Sélectionner une source',\n        'entity_title': 'Modifier une entité',\n        'parent_title': 'Modifier un appareil',\n        'forget_entity': \"Oublier l'entité\",\n        'foget_parent': \"Oublier l'appareil\",\n        'block_entity': \"Bloquer l'entité\",\n        'show_entity': \"Afficher l'entité\",\n        'hide_entity': \"Cacher l'entité\",\n        'name': 'Nom',\n        'room': 'Pièce',\n        'element': 'Elément',\n        'group': 'Groupe',\n        'unit': 'Unité',\n        'action': 'Action',\n        'source': 'Source',\n        'uid': 'UID',\n        'parent': 'Parent',\n        'id': 'ID',\n        'value': 'Valeur',\n        'sister': 'Soeurs',\n        'seen': 'Vue le',\n        'children': 'Enfants'\n    }\n};\n\nmsg = await node.linkcall('common - register - dictionary', msg);\n\nreturn;",
         "outputs": 0,
         "timeout": 0,
         "noerr": 0,
@@ -20782,7 +20783,7 @@
         "y": 320,
         "wires": [
             [
-                "3eed05e7d44f2676"
+                "d571ee4f20c4c993"
             ]
         ]
     },
@@ -22088,5 +22089,176 @@
                 "44b7bc464b8cb1d2"
             ]
         ]
+    },
+    {
+        "id": "ab0dd5b93712bfec",
+        "type": "ui-group",
+        "name": "ui - group - entity - select",
+        "page": "3d7cbc9ccffb5711",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default",
+        "tab": ""
+    },
+    {
+        "id": "6697bb9b660f4109",
+        "type": "link in",
+        "z": "3d7897ba0ee14173",
+        "g": "ed4435a4e28a8149",
+        "name": "entity - select",
+        "links": [
+            "d571ee4f20c4c993"
+        ],
+        "x": 145,
+        "y": 920,
+        "wires": [
+            [
+                "60d95e48fe8dedb6"
+            ]
+        ]
+    },
+    {
+        "id": "60d95e48fe8dedb6",
+        "type": "function",
+        "z": "3d7897ba0ee14173",
+        "g": "ed4435a4e28a8149",
+        "name": "data",
+        "func": "// Source selector: sources of known entities, with entities count\n\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (!msg.enabled) {\n\n    return [msg, null];\n}\n\n// Get memories\nconst sources = global.get('source') || {}; // read\nconst entities = global.get('entity') || {}; // read\n\nlet count = {};\nfor (const uid in entities) {\n    const s = entities[uid]['source'] || '';\n    if (s !== '') {\n        count[s] = (count[s] || 0) + 1;\n    }\n}\n\nlet options = [];\nfor (const s in count) {\n    const title = typeof sources[s] === 'object' && (sources[s]['title'] || '') !== '' ? sources[s]['title'] : s;\n    options.push({\n        'label': title + ' (' + count[s] + ')',\n        'value': s\n    });\n}\noptions.sort((a, b) => a.label.localeCompare(b.label));\n\n// Keep previous selection of this browser\nlet selected = flow.get('source[\"' + msg.hmi.id + '\"]') || '';\nif (typeof count[selected] !== 'number') {\n    selected = '';\n}\n\nmsg.payload = selected;\nmsg.ui_update = {\n    'label': msg.dictionary.entity.source_select || 'Select a source',\n    'options': options\n};\n\n// List is shown only when a source is selected\nlet list = { ...msg, 'payload': selected };\n\nreturn [msg, list];\n",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 920,
+        "wires": [
+            [
+                "deec46316a527c29"
+            ],
+            [
+                "c733e1aa3d5b08b8"
+            ]
+        ]
+    },
+    {
+        "id": "deec46316a527c29",
+        "type": "ui-dropdown",
+        "z": "3d7897ba0ee14173",
+        "g": "ed4435a4e28a8149",
+        "group": "ab0dd5b93712bfec",
+        "name": "entity - select - form",
+        "label": "",
+        "tooltip": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": false,
+        "msgTrigger": "onChange",
+        "x": 660,
+        "y": 920,
+        "wires": [
+            [
+                "259b646fef2a4b28"
+            ]
+        ]
+    },
+    {
+        "id": "259b646fef2a4b28",
+        "type": "function",
+        "z": "3d7897ba0ee14173",
+        "g": "ed4435a4e28a8149",
+        "name": "data",
+        "func": "// Source selected\n\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (msg.hmi.id === '' || msg.hmi.level !== 'admin') {\n\n    return;\n}\n\nflow.set('source[\"' + msg.hmi.id + '\"]', typeof msg.payload === 'string' ? msg.payload : '');\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 920,
+        "wires": [
+            [
+                "c733e1aa3d5b08b8"
+            ]
+        ]
+    },
+    {
+        "id": "c733e1aa3d5b08b8",
+        "type": "function",
+        "z": "3d7897ba0ee14173",
+        "g": "ed4435a4e28a8149",
+        "name": "data",
+        "func": "// Show entities list group only when a source is selected\n\nconst selected = typeof msg.payload === 'string' ? msg.payload : '';\n\nif (selected === '') {\n    msg.hide = ['ui - group - entity - list'];\n    msg = await node.linkcall('common - ui - group', msg);\n    msg.enabled = false;\n}\nelse {\n    msg.show = ['ui - group - entity - list'];\n    msg = await node.linkcall('common - ui - group', msg);\n    msg = await node.linkcall('common - ui - latency', msg);\n    msg.enabled = true;\n}\n\nmsg.payload = '';\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 980,
+        "wires": [
+            [
+                "3eed05e7d44f2676"
+            ]
+        ]
+    },
+    {
+        "id": "ed4435a4e28a8149",
+        "type": "group",
+        "z": "3d7897ba0ee14173",
+        "name": "entity - select",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "6697bb9b660f4109",
+            "60d95e48fe8dedb6",
+            "deec46316a527c29",
+            "259b646fef2a4b28",
+            "c733e1aa3d5b08b8"
+        ],
+        "x": 55,
+        "y": 879,
+        "w": 915,
+        "h": 142
+    },
+    {
+        "id": "d571ee4f20c4c993",
+        "type": "link out",
+        "z": "3d7897ba0ee14173",
+        "g": "dd5d7b2cbad07676",
+        "name": "entity - select",
+        "mode": "link",
+        "links": [
+            "6697bb9b660f4109"
+        ],
+        "x": 390,
+        "y": 370,
+        "wires": []
     }
 ]
