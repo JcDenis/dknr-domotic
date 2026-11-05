@@ -2644,7 +2644,7 @@
         "page": "34a13cfdebc90220",
         "width": 6,
         "height": 1,
-        "order": 4,
+        "order": 5,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -2674,6 +2674,20 @@
         "width": 6,
         "height": 1,
         "order": 1,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "04390815c6e12c26",
+        "type": "ui-group",
+        "name": "ui - group - energy - summary",
+        "page": "34a13cfdebc90220",
+        "width": 6,
+        "height": 1,
+        "order": 2,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -2825,7 +2839,7 @@
         "page": "34a13cfdebc90220",
         "width": 6,
         "height": "4",
-        "order": 2,
+        "order": 3,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -2899,7 +2913,7 @@
         "page": "34a13cfdebc90220",
         "width": 6,
         "height": 1,
-        "order": 3,
+        "order": 4,
         "showTitle": false,
         "className": "",
         "visible": "true",
@@ -8521,7 +8535,8 @@
         "links": [
             "5397038e1b8466e2",
             "9551b24f428cde28",
-            "a9ccaa6f01788c83"
+            "a9ccaa6f01788c83",
+            "5195a439fd132eee"
         ],
         "x": 395,
         "y": 240,
@@ -8939,7 +8954,8 @@
         "mode": "link",
         "links": [
             "5397038e1b8466e2",
-            "9551b24f428cde28"
+            "9551b24f428cde28",
+            "5195a439fd132eee"
         ],
         "x": 875,
         "y": 1140,
@@ -9230,7 +9246,7 @@
         "z": "77269fd32cdb1638",
         "g": "ec2f8e34924572e0",
         "name": "dictionary",
-        "func": "// Register dictionary\n\nmsg.payload = {\n    'flow': env.get('NR_FLOW_NAME'),\n    'en': {\n        'page_title': 'Energy',\n        'energy_period': 'Last 31 days'\n    },\n    'fr': {\n        'page_title': 'Energie',\n        'power': 'Puissance',\n        'energy': 'Energie',\n        'battery': 'Batterie',\n        'entity': 'Entités',\n        'grid_power': 'Puissance réseau',\n        'solar_power': 'Puissance solaire',\n        'battery_power': 'Puissance batterie',\n        'battery_level': 'Niveau batterie',\n        'preferred_tariff': 'Tarif préférentiel en cours',\n        'favorable_energy_meter': 'Compteur tarif favorable',\n        'unfavorable_energy_meter': 'Compteur tarif défavorable',\n        'waterboiler_power': 'Puissance chauffe-eau',\n        'openweathermap_key': 'Clé API OpenWeatherMap',\n        'map': 'Plan',\n        'favorable': 'Tarif favorable',\n        'unfavorable': 'Tarif défavorable',\n        'total': 'Total',\n        'energy_period': '31 derniers jours',\n        'energy_empty': \"Aucun historique d'énergie\",\n        'home_power': 'Puissance maison',\n        'power_period': '24 dernières heures',\n        'power_empty': 'Aucun historique de puissance',\n        'battery_period': '7 derniers jours',\n        'battery_empty': 'Aucun historique de batterie'\n    }\n};\n\nmsg = await node.linkcall('common - register - dictionary', msg);\n\nreturn;\n",
+        "func": "// Register dictionary\n\nmsg.payload = {\n    'flow': env.get('NR_FLOW_NAME'),\n    'en': {\n        'page_title': 'Energy',\n        'energy_period': 'Last 31 days'\n    },\n    'fr': {\n        'page_title': 'Energie',\n        'power': 'Puissance',\n        'energy': 'Energie',\n        'battery': 'Batterie',\n        'entity': 'Entités',\n        'grid_power': 'Puissance réseau',\n        'solar_power': 'Puissance solaire',\n        'battery_power': 'Puissance batterie',\n        'battery_level': 'Niveau batterie',\n        'preferred_tariff': 'Tarif préférentiel en cours',\n        'favorable_energy_meter': 'Compteur tarif favorable',\n        'unfavorable_energy_meter': 'Compteur tarif défavorable',\n        'waterboiler_power': 'Puissance chauffe-eau',\n        'openweathermap_key': 'Clé API OpenWeatherMap',\n        'map': 'Plan',\n        'favorable': 'Tarif favorable',\n        'unfavorable': 'Tarif défavorable',\n        'total': 'Total',\n        'energy_period': '31 derniers jours',\n        'energy_empty': \"Aucun historique d'énergie\",\n        'home_power': 'Puissance maison',\n        'power_period': '24 dernières heures',\n        'power_empty': 'Aucun historique de puissance',\n        'battery_period': '7 derniers jours',\n        'battery_empty': 'Aucun historique de batterie',\n        'summary': 'Bilan',\n        'yesterday': 'Hier',\n        'today': \"Aujourd'hui\",\n        'home_energy': 'Total maison',\n        'solar_energy': 'Production solaire',\n        'battery_charge': 'Charge batterie',\n        'battery_discharge': 'Décharge batterie',\n        'selfsufficiency': 'Autosuffisance',\n        'summary_empty': \"Aucune donnée d'énergie\"\n    }\n};\n\nmsg = await node.linkcall('common - register - dictionary', msg);\n\nreturn;\n",
         "outputs": 0,
         "timeout": 0,
         "noerr": 0,
@@ -9315,6 +9331,216 @@
         "className": "",
         "x": 960,
         "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5db9bfd12c441ded",
+        "type": "group",
+        "z": "77269fd32cdb1638",
+        "name": "energy - summary",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "5195a439fd132eee",
+            "65543cf1dc7d3fa9",
+            "79496a4ad5ecd54e",
+            "143d84fb671b2165",
+            "5548b0e73792b395",
+            "77b84039cfe9c26b",
+            "1bd1f7f3822e061a",
+            "fc655f1b25e01fb5"
+        ],
+        "x": 104,
+        "y": 1219,
+        "w": 982,
+        "h": 142
+    },
+    {
+        "id": "5195a439fd132eee",
+        "type": "link in",
+        "z": "77269fd32cdb1638",
+        "g": "5db9bfd12c441ded",
+        "name": "energy - summary",
+        "links": [
+            "66048b5b43cc0248",
+            "20c33d6d50aa3ee3"
+        ],
+        "x": 145,
+        "y": 1260,
+        "wires": [
+            [
+                "65543cf1dc7d3fa9"
+            ]
+        ]
+    },
+    {
+        "id": "65543cf1dc7d3fa9",
+        "type": "function",
+        "z": "77269fd32cdb1638",
+        "g": "5db9bfd12c441ded",
+        "name": "data",
+        "func": "\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (msg.hmi.id === '' || typeof global.get('user[\"' + msg.hmi.id + '\"]') !== 'object') {\n    msg.enabled = false;\n}\n\nif (!msg.enabled) {\n    msg.reset = true;\n\n    return msg;\n}\n\nmsg.payload = [ ];\nmsg.topic = msg.hmi.id;\nmsg.title = msg.dictionary.energy.summary || 'Summary';\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 1260,
+        "wires": [
+            [
+                "79496a4ad5ecd54e",
+                "1bd1f7f3822e061a"
+            ]
+        ]
+    },
+    {
+        "id": "79496a4ad5ecd54e",
+        "type": "trigger",
+        "z": "77269fd32cdb1638",
+        "g": "5db9bfd12c441ded",
+        "name": "1min",
+        "op1": "",
+        "op2": "",
+        "op1type": "pay",
+        "op2type": "payl",
+        "duration": "1",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "topic",
+        "topic": "hmi.id",
+        "outputs": 2,
+        "x": 270,
+        "y": 1320,
+        "wires": [
+            [
+                "143d84fb671b2165"
+            ],
+            [
+                "65543cf1dc7d3fa9"
+            ]
+        ]
+    },
+    {
+        "id": "143d84fb671b2165",
+        "type": "function",
+        "z": "77269fd32cdb1638",
+        "g": "5db9bfd12c441ded",
+        "name": "data",
+        "func": "// Energy summary of yesterday and today: meters spread and power integrals\n\nconst entity = { ...(global.get('entity') || { }) };\nconst energy = { ...(global.get('energy') || { }) };\n\nconst visible = (uid) => uid !== '' && typeof entity[uid] === 'object' && entity[uid]['hidden'] === 0;\n\n// Meters are indexes: daily energy is the spread (max - min) of each day\nmsg.meters = {};\nfor (const e of [ 'favorable_energy_meter', 'unfavorable_energy_meter' ]) {\n    const uid = energy[e] || '';\n    if (visible(uid)) {\n        msg.meters[uid] = { 'key': e, 'unit': entity[uid]['unit'] };\n    }\n}\n\n// Powers are integrated to get energy\nmsg.powers = {};\nif (visible('dknr/sensor/home_power')) {\n    msg.powers['dknr/sensor/home_power'] = { 'key': 'home_power', 'unit': entity['dknr/sensor/home_power']['unit'] || 'W' };\n}\nfor (const e of [ 'grid_power', 'solar_power', 'battery_power' ]) {\n    const uid = energy[e] || '';\n    if (visible(uid)) {\n        msg.powers[uid] = { 'key': e, 'unit': entity[uid]['unit'] || 'W' };\n    }\n}\n\nconst meters = Object.keys(msg.meters);\nconst powers = Object.keys(msg.powers);\nif (meters.length === 0 && powers.length === 0) {\n    node.status({ 'fill': 'red', 'text': 'no energy entity' });\n\n    // Clear summary\n    node.send([null, { 'topic': msg.topic, 'payload': [], 'meters': {}, 'powers': {}, 'dictionary': msg.dictionary }]);\n\n    return;\n}\n\n// Days follow local time\nlet tz = env.get('TZ') || '';\nif (!/^[A-Za-z_]+\\/[A-Za-z_\\/]+$/.test(tz)) {\n    tz = 'Europe/Paris';\n}\n\n// Yesterday midnight (local time of the server)\nlet start = new Date();\nstart.setHours(0, 0, 0, 0);\nstart.setDate(start.getDate() - 1);\nmsg.start = start.getTime();\n\nconst filter = (uids) => '|> filter(fn: (r) => ' + uids.map(u => 'r[\"_field\"] == \"' + u + '\"').join(' or ') + ')';\n\nmsg.query =\n'import \"timezone\"\\n' +\n'option location = timezone.location(name: \"' + tz + '\")\\n';\n\nif (meters.length > 0) {\n    msg.query +=\n    'from(bucket: \"domotic\")' +\n    '|> range(start: ' + new Date(msg.start).toISOString() + ', stop: now())' +\n    '|> filter(fn: (r) => r[\"_measurement\"] == \"energy\")' +\n    filter(meters) +\n    '|> toFloat()' +\n    '|> aggregateWindow(every: 1d, fn: spread, createEmpty: false, timeSrc: \"_start\")' +\n    '|> yield(name: \"meter\")\\n';\n}\n\n// One hour before yesterday midnight to get the power at midnight\nif (powers.length > 0) {\n    msg.query +=\n    'from(bucket: \"domotic\")' +\n    '|> range(start: ' + new Date(msg.start - 3600000).toISOString() + ', stop: now())' +\n    filter(powers) +\n    '|> toFloat()' +\n    '|> aggregateWindow(every: 1m, fn: mean, createEmpty: false, timeSrc: \"_start\")' +\n    '|> yield(name: \"power\")\\n';\n}\n\nnode.status({ 'text': meters.length + ' meter(s), ' + powers.length + ' power(s)' });\n\nreturn [msg, null];\n",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 1320,
+        "wires": [
+            [
+                "5548b0e73792b395"
+            ],
+            [
+                "fc655f1b25e01fb5"
+            ]
+        ]
+    },
+    {
+        "id": "5548b0e73792b395",
+        "type": "influxdb in",
+        "z": "77269fd32cdb1638",
+        "g": "5db9bfd12c441ded",
+        "influxdb": "cf56c7fff4df45c2",
+        "name": "db",
+        "query": "",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "dknr",
+        "x": 590,
+        "y": 1320,
+        "wires": [
+            [
+                "77b84039cfe9c26b"
+            ]
+        ]
+    },
+    {
+        "id": "77b84039cfe9c26b",
+        "type": "function",
+        "z": "77269fd32cdb1638",
+        "g": "5db9bfd12c441ded",
+        "name": "data",
+        "func": "// Summary data: energy of yesterday and today by type, and self-sufficiency\n// Powers sign: grid > 0 import, solar > 0 production, battery > 0 discharge / < 0 charge\n\nconst dict = msg.dictionary.energy || {};\nconst rows = Array.isArray(msg.payload) ? msg.payload : [];\nconst meters = msg.meters || {};\nconst powers = msg.powers || {};\n\n// Day boundaries: yesterday, today, now\nconst d0 = msg.start;\nlet d1 = new Date(d0);\nd1.setDate(d1.getDate() + 1);\nd1 = d1.getTime();\nconst d2 = Date.now();\nconst day = (ts) => ts >= d1 ? 1 : (ts >= d0 ? 0 : -1);\n\n// Energy in kWh, [yesterday, today]\nlet sums = {};\nconst add = (key, i, value) => {\n    if (typeof sums[key] !== 'object') {\n        sums[key] = [0, 0];\n    }\n    if (i >= 0) {\n        sums[key][i] += value;\n    }\n};\nconst factor = { 'mW': 0.001, 'W': 1, 'kW': 1000, 'MW': 1000000, 'mWh': 0.001, 'Wh': 1, 'kWh': 1000, 'MWh': 1000000 };\n\n// Meters: one spread per day\nfor (const r of rows) {\n    const m = meters[r['_field']];\n    const ts = new Date(r['_time']).getTime();\n    const value = Number(r['_value']);\n    if (typeof m !== 'object' || isNaN(ts) || isNaN(value)) {\n\n        continue;\n    }\n    // Window start is local midnight, allow one hour for daylight saving time changes\n    add(m['key'], day(ts + 3600000), value * (factor[m['unit']] || 1) / 1000);\n}\n\n// Powers: each value is held until the next one (one hour at most), split by day\nlet points = {};\nfor (const r of rows) {\n    const p = powers[r['_field']];\n    const ts = new Date(r['_time']).getTime();\n    const value = Number(r['_value']);\n    if (typeof p !== 'object' || isNaN(ts) || isNaN(value)) {\n\n        continue;\n    }\n    if (!Array.isArray(points[r['_field']])) {\n        points[r['_field']] = [];\n    }\n    points[r['_field']].push([ts, value * (factor[p['unit']] || 1)]);\n}\nfor (const uid in points) {\n    const key = powers[uid]['key'];\n    const pts = points[uid].sort((a, b) => a[0] - b[0]);\n    for (let i = 0; i < pts.length; i++) {\n        const from = pts[i][0];\n        const to = Math.min(i + 1 < pts.length ? pts[i + 1][0] : d2, from + 3600000, d2);\n        const w = pts[i][1];\n        // Cut the interval at day boundaries\n        for (const [a, b] of [[Math.max(from, d0), Math.min(to, d1)], [Math.max(from, d1), Math.min(to, d2)]]) {\n            if (b <= a) {\n\n                continue;\n            }\n            const kwh = w * (b - a) / 3600000 / 1000;\n            const k = a >= d1 ? 1 : 0;\n            if (key === 'battery_power') {\n                add('battery_discharge', k, Math.max(kwh, 0));\n                add('battery_charge', k, Math.max(-kwh, 0));\n            }\n            else {\n                add(key, k, Math.max(kwh, 0));\n            }\n        }\n    }\n}\n\nconst round = (v) => Math.round(v * 100) / 100;\nconst lines = [\n    ['favorable_energy_meter', dict.favorable || 'Favorable tariff', '#2ca02c'],\n    ['unfavorable_energy_meter', dict.unfavorable || 'Unfavorable tariff', '#e34948'],\n    ['home_power', dict.home_energy || 'Home total', '#2a78d6'],\n    ['solar_power', dict.solar_energy || 'Solar production', '#eda100'],\n    ['battery_charge', dict.battery_charge || 'Battery charge', '#2ca02c'],\n    ['battery_discharge', dict.battery_discharge || 'Battery discharge', '#98d98e']\n];\nlet res = [];\nfor (const [key, label, color] of lines) {\n    if (typeof sums[key] === 'object') {\n        res.push({ 'key': key, 'label': label, 'color': color, 'values': sums[key].map(round) });\n    }\n}\n\n// Self-sufficiency: part of the home consumption not taken from the grid\nlet ratio = [null, null];\nif (typeof sums['home_power'] === 'object' && typeof sums['grid_power'] === 'object') {\n    for (const i of [0, 1]) {\n        const home = sums['home_power'][i];\n        if (home > 0) {\n            ratio[i] = Math.round(Math.max(0, Math.min(1, 1 - sums['grid_power'][i] / home)) * 100);\n        }\n    }\n}\n\nnode.status({ 'text': res.length + ' lines, ' + ratio.map(r => r === null ? '-' : r + '%').join(' / ') });\n\ndelete msg.meters;\ndelete msg.powers;\ndelete msg.query;\ndelete msg.start;\nmsg.payload = {\n    'unit': 'kWh',\n    'locale': (msg.dictionary.common || {}).locales || 'fr',\n    'columns': [dict.yesterday || 'Yesterday', dict.today || 'Today'],\n    'empty': dict.summary_empty || 'No energy data',\n    'ratio_label': dict.selfsufficiency || 'Self-sufficiency',\n    'lines': res,\n    'ratio': ratio\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 1320,
+        "wires": [
+            [
+                "fc655f1b25e01fb5"
+            ]
+        ]
+    },
+    {
+        "id": "1bd1f7f3822e061a",
+        "type": "ui-text",
+        "z": "77269fd32cdb1638",
+        "g": "5db9bfd12c441ded",
+        "group": "04390815c6e12c26",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "energy - summary - title",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "dknr-title",
+        "value": "title",
+        "valueType": "msg",
+        "x": 480,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "fc655f1b25e01fb5",
+        "type": "ui-template",
+        "z": "77269fd32cdb1638",
+        "g": "5db9bfd12c441ded",
+        "group": "04390815c6e12c26",
+        "page": "",
+        "ui": "",
+        "name": "energy - summary - table",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "head": "",
+        "format": "<template>\n    <div class=\"dks\">\n        <div v-if=\"!lines.length\" class=\"dks-empty\">{{ d.empty || '' }}</div>\n        <div v-else class=\"dks-body\">\n            <table class=\"dks-table\">\n                <thead>\n                    <tr>\n                        <th></th>\n                        <th v-for=\"c in columns\" :key=\"c\">{{ c }}</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr v-for=\"l in lines\" :key=\"l.key\">\n                        <td class=\"dks-label\"><i :style=\"{ background: l.color }\"></i>{{ l.label }}</td>\n                        <td v-for=\"(v, i) in l.values\" :key=\"i\" class=\"dks-value\">{{ num(v) }}</td>\n                    </tr>\n                </tbody>\n            </table>\n            <div v-if=\"ratio[1] !== null || ratio[0] !== null\" class=\"dks-ratio\">\n                <svg width=\"150\" height=\"92\" class=\"dks-svg\">\n                    <path :d=\"arc(1)\" class=\"dks-track\"></path>\n                    <path v-if=\"ratio[1] > 0\" :d=\"arc(ratio[1] / 100)\" class=\"dks-fill\" :style=\"{ stroke: color(ratio[1]) }\"></path>\n                    <text x=\"75\" y=\"72\" text-anchor=\"middle\" class=\"dks-pct\">{{ ratio[1] === null ? '-' : ratio[1] + ' %' }}</text>\n                </svg>\n                <div class=\"dks-name\">{{ d.ratio_label }}</div>\n                <div class=\"dks-prev\">{{ columns[0] }} : {{ ratio[0] === null ? '-' : ratio[0] + ' %' }}</div>\n            </div>\n        </div>\n    </div>\n</template>\n\n<script>\nexport default {\n    computed: {\n        d() { return (this.msg && typeof this.msg.payload === 'object' && this.msg.payload) || {}; },\n        lines() { return Array.isArray(this.d.lines) ? this.d.lines : []; },\n        columns() { return Array.isArray(this.d.columns) ? this.d.columns : ['', '']; },\n        ratio() { return Array.isArray(this.d.ratio) ? this.d.ratio : [null, null]; }\n    },\n    methods: {\n        // half circle from the left (0 %) to the right (100 %), drawn in pixels (svg attributes are lowercased)\n        arc(f) {\n            const cx = 75, cy = 78, r = 62;\n            const a = Math.PI * (1 - Math.max(0, Math.min(1, f)));\n            const x = cx + r * Math.cos(a), y = cy - r * Math.sin(a);\n            return 'M' + (cx - r) + ',' + cy + ' A' + r + ',' + r + ' 0 0 1 ' + x.toFixed(1) + ',' + y.toFixed(1);\n        },\n        color(v) {\n            return v >= 66 ? '#2ca02c' : (v >= 33 ? '#eda100' : '#e34948');\n        },\n        num(v) {\n            if (typeof v !== 'number' || isNaN(v)) return '-';\n            const a = Math.abs(v);\n            const dec = a >= 100 ? 0 : (a >= 10 ? 1 : 2);\n            return v.toLocaleString(this.d.locale || 'fr', { maximumFractionDigits: dec }) + (this.d.unit ? ' ' + this.d.unit : '');\n        }\n    }\n}\n</script>\n\n<style>\n.dks { width: 100%; min-width: 0; color: rgb(var(--v-theme-on-surface)); }\n.dks-empty { padding: 10px 12px; border-radius: 4px; background: rgba(var(--v-theme-on-surface), 0.05); color: rgba(var(--v-theme-on-surface), 0.6); font-size: 0.9rem; }\n.dks-body { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-around; gap: 12px 24px; }\n.dks-table { border-collapse: collapse; font-size: 0.9rem; flex: 1 1 260px; max-width: 420px; }\n.dks-table th { font-weight: 600; font-size: 0.8rem; color: rgba(var(--v-theme-on-surface), 0.6); text-align: right; padding: 0 0 4px 12px; }\n.dks-table td { padding: 3px 0; border-top: 1px solid rgba(var(--v-theme-on-surface), 0.08); }\n.dks-label { color: rgba(var(--v-theme-on-surface), 0.75); white-space: nowrap; }\n.dks-label i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }\n.dks-value { text-align: right; padding-left: 12px !important; font-weight: 600; white-space: nowrap; font-variant-numeric: tabular-nums; }\n.dks-ratio { display: flex; flex-direction: column; align-items: center; }\n.dks-svg { display: block; }\n.dks-track { fill: none; stroke: rgba(var(--v-theme-on-surface), 0.1); stroke-width: 12; stroke-linecap: round; }\n.dks-fill { fill: none; stroke-width: 12; stroke-linecap: round; }\n.dks-pct { font-size: 20px; font-weight: 600; fill: rgb(var(--v-theme-on-surface)); }\n.dks-name { font-size: 0.85rem; color: rgba(var(--v-theme-on-surface), 0.7); margin-top: -4px; }\n.dks-prev { font-size: 0.8rem; color: rgba(var(--v-theme-on-surface), 0.55); }\n</style>\n",
+        "noerr": 0,
+        "storeOutMessages": false,
+        "passthru": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 960,
+        "y": 1320,
         "wires": [
             []
         ]
