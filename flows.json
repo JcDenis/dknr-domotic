@@ -13374,7 +13374,7 @@
         "z": "560376d6bba621ec",
         "g": "05ee7cc55127486b",
         "name": "data",
-        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nlet room = flow.get('room[\"' + msg.hmi.id + '\"]') || '';\nif (room === '') {\n\n    return;\n}\n\nObject.keys(msg.payload).forEach(function(key, index) {\n  msg.payload[key] = Number(msg.payload[key]);\n});\n\nlet workday = global.get('room.workday'); // autoupdate\nif (typeof workday[room] !== 'object') {\n    workday[room] = { };\n}\n\nworkday[room] = msg.payload;\n\nreturn msg;",
+        "func": "\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nlet room = flow.get('room[\"' + msg.hmi.id + '\"]') || '';\nif (room === '') {\n\n    return;\n}\n\n// Days d0 (sunday) to d6 as 1 / 0\nlet days = {};\nfor (let d = 0; d < 7; d++) {\n    days['d' + d] = msg.payload['d' + d] ? 1 : 0;\n}\n\n// room.workday may not exist yet (old data or import)\nlet workday = global.get('room.workday');\nif (typeof workday !== 'object' || workday === null || Array.isArray(workday)) {\n    workday = {};\n}\nworkday[room] = days;\nglobal.set('room.workday', workday);\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
