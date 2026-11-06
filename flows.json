@@ -310,7 +310,6 @@
             "label": true
         },
         "nodes": [
-            "0a33963833f23f83",
             "e199ce49d4e88841",
             "3eed05e7d44f2676",
             "5b787fc02a82558f",
@@ -334,12 +333,11 @@
             "127fe2b5b9d5d09c",
             "68d4f16b96bc7856",
             "e558ab5e597ab46d",
-            "e00009d382f36c0a",
-            "d571ee4f20c4c993"
+            "886ed21ca895af47"
         ],
         "x": 104,
-        "y": 219,
-        "w": 1642,
+        "y": 399,
+        "w": 1482,
         "h": 622
     },
     {
@@ -1442,15 +1440,41 @@
             "label": true
         },
         "nodes": [
-            "6697bb9b660f4109",
             "60d95e48fe8dedb6",
-            "deec46316a527c29",
             "259b646fef2a4b28",
-            "c733e1aa3d5b08b8"
+            "c733e1aa3d5b08b8",
+            "0a33963833f23f83",
+            "84ac741c9654c7ec",
+            "fb3209a38a594b2b"
         ],
         "x": 104,
-        "y": 879,
+        "y": 219,
         "w": 852,
+        "h": 142
+    },
+    {
+        "id": "5db9bfd12c441ded",
+        "type": "group",
+        "z": "77269fd32cdb1638",
+        "name": "energy - summary",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "5195a439fd132eee",
+            "65543cf1dc7d3fa9",
+            "79496a4ad5ecd54e",
+            "143d84fb671b2165",
+            "5548b0e73792b395",
+            "77b84039cfe9c26b",
+            "1bd1f7f3822e061a",
+            "fc655f1b25e01fb5"
+        ],
+        "x": 104,
+        "y": 1219,
+        "w": 982,
         "h": 142
     },
     {
@@ -9265,31 +9289,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "5db9bfd12c441ded",
-        "type": "group",
-        "z": "77269fd32cdb1638",
-        "name": "energy - summary",
-        "style": {
-            "fill": "#6f2fa0",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "5195a439fd132eee",
-            "65543cf1dc7d3fa9",
-            "79496a4ad5ecd54e",
-            "143d84fb671b2165",
-            "5548b0e73792b395",
-            "77b84039cfe9c26b",
-            "1bd1f7f3822e061a",
-            "fc655f1b25e01fb5"
-        ],
-        "x": 104,
-        "y": 1219,
-        "w": 982,
-        "h": 142
     },
     {
         "id": "5195a439fd132eee",
@@ -20110,8 +20109,8 @@
         "id": "0a33963833f23f83",
         "type": "link in",
         "z": "3d7897ba0ee14173",
-        "g": "dd5d7b2cbad07676",
-        "name": "entity - list",
+        "g": "ed4435a4e28a8149",
+        "name": "entity - select",
         "links": [
             "a20f607f4c9e0282"
         ],
@@ -20119,7 +20118,7 @@
         "y": 320,
         "wires": [
             [
-                "e00009d382f36c0a"
+                "60d95e48fe8dedb6"
             ]
         ]
     },
@@ -20145,8 +20144,8 @@
         "className": "dknr-title",
         "value": "payload",
         "valueType": "msg",
-        "x": 620,
-        "y": 260,
+        "x": 460,
+        "y": 440,
         "wires": []
     },
     {
@@ -20162,8 +20161,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
-        "y": 320,
+        "x": 270,
+        "y": 500,
         "wires": [
             [
                 "e199ce49d4e88841"
@@ -20266,8 +20265,8 @@
         "mobileBreakpointType": "defaults",
         "action": "replace",
         "className": "",
-        "x": 630,
-        "y": 320,
+        "x": 470,
+        "y": 500,
         "wires": [
             [
                 "18c0f285fe1df65b"
@@ -20287,8 +20286,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 810,
-        "y": 320,
+        "x": 650,
+        "y": 500,
         "wires": [
             [
                 "e558ab5e597ab46d"
@@ -20380,8 +20379,8 @@
                 "label": ""
             }
         ],
-        "x": 1170,
-        "y": 440,
+        "x": 1010,
+        "y": 620,
         "wires": [
             [
                 "8fe92dd64df6a1fd"
@@ -20401,8 +20400,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 970,
-        "y": 440,
+        "x": 810,
+        "y": 620,
         "wires": [
             [
                 "eb71160dfeaf575e"
@@ -20427,8 +20426,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 970,
-        "y": 380,
+        "x": 810,
+        "y": 560,
         "wires": [
             [
                 "f8a6ee592b900670",
@@ -20450,8 +20449,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1390,
-        "y": 440,
+        "x": 1230,
+        "y": 620,
         "wires": [
             [
                 "3ddef20a09ab4f20",
@@ -20473,8 +20472,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1610,
-        "y": 440,
+        "x": 1450,
+        "y": 620,
         "wires": []
     },
     {
@@ -20495,8 +20494,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 970,
-        "y": 560,
+        "x": 810,
+        "y": 740,
         "wires": [
             [
                 "5457c138d17e4e02",
@@ -20518,8 +20517,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 970,
-        "y": 620,
+        "x": 810,
+        "y": 800,
         "wires": [
             [
                 "b02b08f580a00904"
@@ -20547,8 +20546,8 @@
         "className": "dknr-title",
         "value": "dictionary.entity.entity_edit_title",
         "valueType": "msg",
-        "x": 1170,
-        "y": 380,
+        "x": 1010,
+        "y": 560,
         "wires": []
     },
     {
@@ -20572,8 +20571,8 @@
         "className": "dknr-title",
         "value": "dictionary.entity.parent_edit_title",
         "valueType": "msg",
-        "x": 1170,
-        "y": 560,
+        "x": 1010,
+        "y": 740,
         "wires": []
     },
     {
@@ -20609,8 +20608,8 @@
         "className": "",
         "passthru": false,
         "dropdownOptions": [],
-        "x": 1180,
-        "y": 620,
+        "x": 1020,
+        "y": 800,
         "wires": [
             [
                 "427e42cc0c284f98"
@@ -20630,8 +20629,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1390,
-        "y": 620,
+        "x": 1230,
+        "y": 800,
         "wires": [
             [
                 "e558ab5e597ab46d"
@@ -20677,8 +20676,8 @@
         "mobileBreakpointType": "defaults",
         "action": "replace",
         "className": "",
-        "x": 1170,
-        "y": 500,
+        "x": 1010,
+        "y": 680,
         "wires": [
             []
         ]
@@ -20696,8 +20695,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 970,
-        "y": 500,
+        "x": 810,
+        "y": 680,
         "wires": [
             [
                 "e5ac85f3a7139fb9"
@@ -20736,8 +20735,8 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 630,
-        "y": 740,
+        "x": 470,
+        "y": 920,
         "wires": [
             [
                 "bec3f2f807e9230f"
@@ -20776,8 +20775,8 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 630,
-        "y": 800,
+        "x": 470,
+        "y": 980,
         "wires": [
             [
                 "bec3f2f807e9230f"
@@ -20797,8 +20796,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1390,
-        "y": 740,
+        "x": 1230,
+        "y": 920,
         "wires": [
             [
                 "e558ab5e597ab46d"
@@ -20844,8 +20843,8 @@
         "mobileBreakpointType": "defaults",
         "action": "replace",
         "className": "",
-        "x": 1180,
-        "y": 680,
+        "x": 1020,
+        "y": 860,
         "wires": [
             []
         ]
@@ -20863,8 +20862,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 970,
-        "y": 680,
+        "x": 810,
+        "y": 860,
         "wires": [
             [
                 "127fe2b5b9d5d09c"
@@ -20884,8 +20883,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1550,
-        "y": 320,
+        "x": 1390,
+        "y": 500,
         "wires": [
             [
                 "3eed05e7d44f2676"
@@ -20945,13 +20944,13 @@
         "wires": []
     },
     {
-        "id": "e00009d382f36c0a",
+        "id": "60d95e48fe8dedb6",
         "type": "function",
         "z": "3d7897ba0ee14173",
-        "g": "dd5d7b2cbad07676",
+        "g": "ed4435a4e28a8149",
         "name": "data",
-        "func": "// Check page\nmsg.check = env.get('NR_FLOW_NAME');\nmsg = await node.linkcall('common - ui - tab', msg);\n\nreturn msg;",
-        "outputs": 1,
+        "func": "// Source selector: sources of known entities, with entities count\n\n// Check page\nmsg.check = env.get('NR_FLOW_NAME');\nmsg = await node.linkcall('common - ui - tab', msg);\n\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (!msg.enabled) {\n\n    return [msg, null];\n}\n\n// Get memories\nconst sources = global.get('source') || {}; // read\nconst entities = global.get('entity') || {}; // read\n\nlet count = {};\nfor (const uid in entities) {\n    const s = entities[uid]['source'] || '';\n    if (s !== '') {\n        count[s] = (count[s] || 0) + 1;\n    }\n}\n\nlet options = [];\nfor (const s in count) {\n    const title = typeof sources[s] === 'object' && (sources[s]['title'] || '') !== '' ? sources[s]['title'] : s;\n    options.push({\n        'icon': 'mdi-' + sources[s]['mdi'],\n        'label': title + ' (' + count[s] + ')',\n        'value': s\n    });\n}\noptions.sort((a, b) => a.label.localeCompare(b.label));\n\n// Keep previous selection of this browser\nlet selected = flow.get('source[\"' + msg.hmi.id + '\"]') || '';\nif (typeof count[selected] !== 'number') {\n    selected = '';\n}\n\nmsg.payload = selected;\nmsg.ui_update = {\n    'label': msg.dictionary.entity.source_select || 'Select a source',\n    'options': options\n};\n\n// List is shown only when a source is selected\nlet list = { ...msg, 'payload': selected };\n\nreturn [msg, list];\n",
+        "outputs": 2,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
@@ -20961,85 +20960,10 @@
         "y": 320,
         "wires": [
             [
-                "d571ee4f20c4c993"
-            ]
-        ]
-    },
-    {
-        "id": "6697bb9b660f4109",
-        "type": "link in",
-        "z": "3d7897ba0ee14173",
-        "g": "ed4435a4e28a8149",
-        "name": "entity - select",
-        "links": [
-            "d571ee4f20c4c993"
-        ],
-        "x": 145,
-        "y": 920,
-        "wires": [
-            [
-                "60d95e48fe8dedb6"
-            ]
-        ]
-    },
-    {
-        "id": "60d95e48fe8dedb6",
-        "type": "function",
-        "z": "3d7897ba0ee14173",
-        "g": "ed4435a4e28a8149",
-        "name": "data",
-        "func": "// Source selector: sources of known entities, with entities count\n\n// Check display\nmsg = await node.linkcall('common - ui - enable', msg);\n\nif (!msg.enabled) {\n\n    return [msg, null];\n}\n\n// Get memories\nconst sources = global.get('source') || {}; // read\nconst entities = global.get('entity') || {}; // read\n\nlet count = {};\nfor (const uid in entities) {\n    const s = entities[uid]['source'] || '';\n    if (s !== '') {\n        count[s] = (count[s] || 0) + 1;\n    }\n}\n\nlet options = [];\nfor (const s in count) {\n    const title = typeof sources[s] === 'object' && (sources[s]['title'] || '') !== '' ? sources[s]['title'] : s;\n    options.push({\n        'label': title + ' (' + count[s] + ')',\n        'value': s\n    });\n}\noptions.sort((a, b) => a.label.localeCompare(b.label));\n\n// Keep previous selection of this browser\nlet selected = flow.get('source[\"' + msg.hmi.id + '\"]') || '';\nif (typeof count[selected] !== 'number') {\n    selected = '';\n}\n\nmsg.payload = selected;\nmsg.ui_update = {\n    'label': msg.dictionary.entity.source_select || 'Select a source',\n    'options': options\n};\n\n// List is shown only when a source is selected\nlet list = { ...msg, 'payload': selected };\n\nreturn [msg, list];\n",
-        "outputs": 2,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 420,
-        "y": 920,
-        "wires": [
-            [
-                "deec46316a527c29"
+                "84ac741c9654c7ec"
             ],
             [
                 "c733e1aa3d5b08b8"
-            ]
-        ]
-    },
-    {
-        "id": "deec46316a527c29",
-        "type": "ui-dropdown",
-        "z": "3d7897ba0ee14173",
-        "g": "ed4435a4e28a8149",
-        "group": "ab0dd5b93712bfec",
-        "name": "entity - select - form",
-        "label": "",
-        "tooltip": "",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "multiple": false,
-        "chips": false,
-        "clearable": false,
-        "options": [
-            {
-                "label": "",
-                "value": "",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "typeIsComboBox": false,
-        "msgTrigger": "onChange",
-        "x": 660,
-        "y": 920,
-        "wires": [
-            [
-                "259b646fef2a4b28"
             ]
         ]
     },
@@ -21056,8 +20980,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 880,
-        "y": 920,
+        "x": 630,
+        "y": 260,
         "wires": [
             [
                 "c733e1aa3d5b08b8"
@@ -21077,8 +21001,66 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 880,
-        "y": 980,
+        "x": 790,
+        "y": 320,
+        "wires": [
+            [
+                "fb3209a38a594b2b"
+            ]
+        ]
+    },
+    {
+        "id": "84ac741c9654c7ec",
+        "type": "ui-button-group",
+        "z": "3d7897ba0ee14173",
+        "g": "ed4435a4e28a8149",
+        "name": "",
+        "group": "ab0dd5b93712bfec",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "label": "",
+        "className": "dknr-center",
+        "rounded": false,
+        "useThemeColors": true,
+        "passthru": false,
+        "options": [
+            {
+                "label": "",
+                "icon": "",
+                "value": "option_0",
+                "valueType": "str",
+                "color": "#009933"
+            },
+            {
+                "label": "",
+                "icon": "",
+                "value": "option_1",
+                "valueType": "str",
+                "color": "#999999"
+            }
+        ],
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 450,
+        "y": 260,
+        "wires": [
+            [
+                "259b646fef2a4b28"
+            ]
+        ]
+    },
+    {
+        "id": "886ed21ca895af47",
+        "type": "link in",
+        "z": "3d7897ba0ee14173",
+        "g": "dd5d7b2cbad07676",
+        "name": "entity - list",
+        "links": [
+            "fb3209a38a594b2b"
+        ],
+        "x": 145,
+        "y": 500,
         "wires": [
             [
                 "3eed05e7d44f2676"
@@ -21086,17 +21068,17 @@
         ]
     },
     {
-        "id": "d571ee4f20c4c993",
+        "id": "fb3209a38a594b2b",
         "type": "link out",
         "z": "3d7897ba0ee14173",
-        "g": "dd5d7b2cbad07676",
+        "g": "ed4435a4e28a8149",
         "name": "entity - select",
         "mode": "link",
         "links": [
-            "6697bb9b660f4109"
+            "886ed21ca895af47"
         ],
-        "x": 390,
-        "y": 370,
+        "x": 915,
+        "y": 320,
         "wires": []
     },
     {
@@ -22112,6 +22094,62 @@
         "wires": []
     },
     {
+        "id": "ca76a51dc84e5307",
+        "type": "ui-dropdown",
+        "z": "d90937c9d5b88b24",
+        "g": "8455e62e4f171015",
+        "group": "a9185f3da37cc3c4",
+        "name": "config - backup - select",
+        "label": "",
+        "tooltip": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": true,
+        "chips": true,
+        "clearable": true,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": false,
+        "msgTrigger": "onChange",
+        "x": 910,
+        "y": 590,
+        "wires": [
+            [
+                "851f742182959e67"
+            ]
+        ]
+    },
+    {
+        "id": "851f742182959e67",
+        "type": "function",
+        "z": "d90937c9d5b88b24",
+        "g": "8455e62e4f171015",
+        "name": "data",
+        "func": "// Keep backup parts selected by this user\n\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (msg.hmi.id === '' || msg.hmi.level !== 'admin') {\n\n    return;\n}\n\nconst keys = ['auth', 'mqtt', 'room', 'parent', 'entity', 'block', 'calendar', 'energy', 'scene'];\nconst selected = (Array.isArray(msg.payload) ? msg.payload : [msg.payload]).filter(k => keys.includes(k));\n\nglobal.set('form[\"' + msg.hmi.id + '\"][\"export\"]', selected);\n\nnode.status({ 'text': selected.join(', ') });\n\nreturn;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 590,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "85a6028250f92107",
         "type": "link in",
         "z": "22abd94e2980c094",
@@ -22403,62 +22441,6 @@
             [
                 "44b7bc464b8cb1d2"
             ]
-        ]
-    },
-    {
-        "id": "ca76a51dc84e5307",
-        "type": "ui-dropdown",
-        "z": "d90937c9d5b88b24",
-        "g": "8455e62e4f171015",
-        "group": "a9185f3da37cc3c4",
-        "name": "config - backup - select",
-        "label": "",
-        "tooltip": "",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "multiple": true,
-        "chips": true,
-        "clearable": true,
-        "options": [
-            {
-                "label": "",
-                "value": "",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "typeIsComboBox": false,
-        "msgTrigger": "onChange",
-        "x": 910,
-        "y": 590,
-        "wires": [
-            [
-                "851f742182959e67"
-            ]
-        ]
-    },
-    {
-        "id": "851f742182959e67",
-        "type": "function",
-        "z": "d90937c9d5b88b24",
-        "g": "8455e62e4f171015",
-        "name": "data",
-        "func": "// Keep backup parts selected by this user\n\n// Get ui data\nmsg = await node.linkcall('common - ui - hmi', msg);\n\nif (msg.hmi.id === '' || msg.hmi.level !== 'admin') {\n\n    return;\n}\n\nconst keys = ['auth', 'mqtt', 'room', 'parent', 'entity', 'block', 'calendar', 'energy', 'scene'];\nconst selected = (Array.isArray(msg.payload) ? msg.payload : [msg.payload]).filter(k => keys.includes(k));\n\nglobal.set('form[\"' + msg.hmi.id + '\"][\"export\"]', selected);\n\nnode.status({ 'text': selected.join(', ') });\n\nreturn;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1120,
-        "y": 590,
-        "wires": [
-            []
         ]
     }
 ]
