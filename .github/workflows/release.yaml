@@ -8,6 +8,10 @@ on:
         type: string
         required: true
 
+env:
+  DKNR_NAMESPACE: jcpd
+  DKNR_IMAGE: dknr-domotic
+
 jobs:
   do_image:
     name: Build and push docker image release
@@ -58,6 +62,12 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v4
 
+      - name: Login to Docker Hub
+        uses: docker/login-action@v4
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_TOKEN }}
+
       - name: Log in to Github registry
         uses: docker/login-action@v4
         with:
@@ -78,10 +88,22 @@ jobs:
           sbom: true
           push: true
           tags: |
+            ${{ env.DKNR_NAMESPACE }}/${{ env.DKNR_IMAGE }}:${{ github.event.inputs.version }}
+            ${{ env.DKNR_NAMESPACE }}/${{ env.DKNR_IMAGE }}:latest
             ghcr.io/${{ env.GITHUB_REPOSITORY }}:${{ github.event.inputs.version }}
             ghcr.io/${{ env.GITHUB_REPOSITORY }}:latest
           platforms: linux/amd64,linux/arm64
           cache-from: type=gha
           no-cache: true
 
+      - name: Docker Scout stable
+        id: docker-scout
+        uses: docker/scout-action@v1.27.0
+        with:
+          command: environment,quickview,cves
+          image: ${{ env.DKNR_NAMESPACE }}/${{ env.DKNR_IMAGE }}:${{ github.event.inputs.version }}
+          environment: stable
+          organization: ${{ env.DKNR_NAMESPACE }}
+          write-comment: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
